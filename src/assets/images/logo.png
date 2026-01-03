@@ -1,0 +1,19 @@
+✅ ACT CREATIVE LOGO
+====================
+
+This is the main company logo image.
+
+USAGE IN CODE:
+- Import: import logo from "figma:asset/9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png"
+- Used in: Header, Footer, Hero sections
+
+FIGMA ASSET ID: 9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png
+
+DESIGN DETAILS:
+- Text: "ACT" in white with neon green arrow
+- Tagline: "ARTFUL CONCEPT TO REALITY"
+- Background: Black
+- Brand colors: Black, White, #CCFF00
+
+NOTE: In Figma Make environment, use figma:asset path.
+For production deployment, replace this file with the actual PNG image.

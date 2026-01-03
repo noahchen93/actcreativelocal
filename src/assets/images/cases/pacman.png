@@ -1,0 +1,17 @@
+CASE STUDY: PACMAN & FRIENDS
+==============================
+
+Project: Sentosa Theme Event
+Client: Apex Infinite Entertainment Global
+Location: Singapore
+Record: Largest Human PAC-MAN Game (Singapore Book of Records)
+
+FIGMA ASSET ID: b24cf62a1dacab87d8adfc51e494355881e2ebd8.png
+
+USAGE:
+- Import: import pacmanImage from "figma:asset/b24cf62a1dacab87d8adfc51e494355881e2ebd8.png"
+- Component: CaseStudies
+
+PLACEHOLDER: Replace with actual project photo
+Recommended size: 1200x900px (4:3 aspect ratio)
+Content: Show the PAC-MAN game setup or participants

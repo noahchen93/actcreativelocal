@@ -1,0 +1,14 @@
+TEAM MEMBER: Daisy
+===================
+
+Position: Designer
+Location: China HQ
+
+FIGMA ASSET ID: 7582ec62f07c47830049bf1681f8cfcd9e219d4e.png
+
+USAGE:
+- Import: import daisyImage from "figma:asset/7582ec62f07c47830049bf1681f8cfcd9e219d4e.png"
+- Component: TeamSection
+
+PLACEHOLDER: Replace with actual team photo (professional headshot recommended)
+Recommended size: 400x400px or larger, square aspect ratio

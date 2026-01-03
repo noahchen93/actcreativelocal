@@ -1,0 +1,16 @@
+CASE STUDY: CRAIG & KARL
+==========================
+
+Project: Solo Museum Show
+Client: Beijing, China
+Achievement: First solo touring exhibition in China
+
+FIGMA ASSET ID: f8ae069f17a75c4bb35568fc55aa9c42b28b80e6.png
+
+USAGE:
+- Import: import craigKarlImage from "figma:asset/f8ae069f17a75c4bb35568fc55aa9c42b28b80e6.png"
+- Component: CaseStudies
+
+PLACEHOLDER: Replace with actual project photo
+Recommended size: 1200x900px (4:3 aspect ratio)
+Content: Show Craig & Karl's colorful artwork installation

@@ -1,0 +1,16 @@
+CASE STUDY: FLORENTIJN HOFMAN
+===============================
+
+Project: Solo Museum Show
+Client: Shanghai, China
+Achievement: First solo touring exhibition in China
+
+FIGMA ASSET ID: 26e483ed6154d773d2210e3142c24d5a30471e92.png
+
+USAGE:
+- Import: import hofmanImage from "figma:asset/26e483ed6154d773d2210e3142c24d5a30471e92.png"
+- Component: CaseStudies
+
+PLACEHOLDER: Replace with actual project photo
+Recommended size: 1200x900px (4:3 aspect ratio)
+Content: Show Hofman's artwork installation (e.g., rubber duck or other sculptures)
