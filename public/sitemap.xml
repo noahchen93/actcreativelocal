@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+  <!--
+    The current site is a single-page React app. All sections live under /
+    (Hero, Services, Cases, Products, Team, Contact).
+    hreflang tags signal regional coverage:
+    - en-SG (primary)
+    - en-HK, en-MY, en-TH, en-ID, en-PH, en-VN (Southeast Asia + HK)
+    - zh-CN, zh-HK (Greater China)
+  -->
+  <url>
+    <loc>https://actcreative.net/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-my" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-th" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-id" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-ph" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-vn" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/" />
+  </url>
+</urlset>
