@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+  <!--
+    All URLs are tagged with hreflang to signal regional coverage:
+    - en-SG (primary)
+    - en-HK, en-MY, en-TH, en-ID, en-PH, en-VN (Southeast Asia + HK)
+    - zh-CN, zh-HK (Greater China)
+    Single English content, multiple regional signals.
+  -->
+  <url>
+    <loc>https://actcreative.net/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-my" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-th" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-id" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-ph" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="en-vn" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/services" />
+    <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/services" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/services" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/services" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/services" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/services/event-fabrication-singapore</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/services/event-fabrication-singapore" />
+    <xhtml:link rel="alternate" hreflang="en-my" href="https://actcreative.net/services/event-fabrication-singapore" />
+    <xhtml:link rel="alternate" hreflang="en-id" href="https://actcreative.net/services/event-fabrication-singapore" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/services/event-fabrication-singapore" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/services/china-production-support-for-event-agencies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/services/china-production-support-for-event-agencies" />
+    <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/services/china-production-support-for-event-agencies" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/services/china-production-support-for-event-agencies" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/services/china-production-support-for-event-agencies" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/services/china-production-support-for-event-agencies" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/services/custom-props-display-fabrication</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/services/custom-props-display-fabrication" />
+    <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/services/custom-props-display-fabrication" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/services/custom-props-display-fabrication" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/services/frp-sculpture-installation-fabrication</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/services/frp-sculpture-installation-fabrication" />
+    <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/services/frp-sculpture-installation-fabrication" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/services/frp-sculpture-installation-fabrication" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/services/frp-sculpture-installation-fabrication" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/services/event-merchandise-sourcing-from-china</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/services/event-merchandise-sourcing-from-china" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/services/event-merchandise-sourcing-from-china" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/services/event-merchandise-sourcing-from-china" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/services/exhibition-booth-production-support</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/services/exhibition-booth-production-support" />
+    <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/services/exhibition-booth-production-support" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/services/exhibition-booth-production-support" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/services/brand-activation-production-partner-singapore</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/services/brand-activation-production-partner-singapore" />
+    <xhtml:link rel="alternate" hreflang="en-my" href="https://actcreative.net/services/brand-activation-production-partner-singapore" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/services/brand-activation-production-partner-singapore" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/projects</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/projects" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/projects" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/insights</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/insights" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/insights" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/about" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/contact" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/contact" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/request-a-quote</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/request-a-quote" />
+    <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/request-a-quote" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/request-a-quote" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/request-a-quote" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/request-a-quote" />
+  </url>
+</urlset>
