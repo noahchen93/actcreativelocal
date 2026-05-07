@@ -1,10 +1,38 @@
 
-  import { defineConfig } from 'vite';
+  import { defineConfig, loadEnv, type Plugin } from 'vite';
   import react from '@vitejs/plugin-react-swc';
   import path from 'path';
 
-  export default defineConfig({
-    plugins: [react()],
+  const escapeHtmlAttribute = (value: string) =>
+    value
+      .replace(/&/g, '&amp;')
+      .replace(/"/g, '&quot;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;');
+
+  const googleSiteVerificationPlugin = (token?: string): Plugin => ({
+    name: 'google-site-verification',
+    transformIndexHtml(html) {
+      const marker = '<!-- GOOGLE_SITE_VERIFICATION -->';
+
+      if (!token) {
+        return html.replace(marker, '');
+      }
+
+      return html.replace(
+        marker,
+        `<meta name="google-site-verification" content="${escapeHtmlAttribute(token)}" />`
+      );
+    },
+  });
+
+  const getGoogleSiteVerificationToken = (mode: string) => {
+    const env = loadEnv(mode, process.cwd(), '');
+    return env.GOOGLE_SITE_VERIFICATION || env.VITE_GOOGLE_SITE_VERIFICATION;
+  };
+
+  export default defineConfig(({ mode }) => ({
+    plugins: [react(), googleSiteVerificationPlugin(getGoogleSiteVerificationToken(mode))],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -78,4 +106,4 @@
       port: 3000,
       open: true,
     },
-  });
+  }));

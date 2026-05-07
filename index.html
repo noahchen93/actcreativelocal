@@ -60,16 +60,17 @@
     <meta name="twitter:description" content="ACT Creative helps event agencies and brands manage custom fabrication, props, exhibition components, FRP/sculpture works and event merchandise from China, with local coordination in Singapore and Southeast Asia." />
     <meta name="twitter:image" content="https://actcreative.net/og-default.png" />
 
-    <!-- Google Search Console verification — replace content with the token Google gives you -->
-    <!-- <meta name="google-site-verification" content="REPLACE_WITH_TOKEN" /> -->
+    <!-- Google Search Console verification is injected during build when the env token is set. -->
+    <!-- GOOGLE_SITE_VERIFICATION -->
 
     <!-- Structured data: LocalBusiness / ProfessionalService -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://actcreative.net/#business",
       "name": "ACT Creative Pte. Ltd.",
+      "legalName": "ACT CREATIVE PTE. LTD.",
       "alternateName": "ACT Creative",
       "url": "https://actcreative.net",
       "logo": "https://actcreative.net/logo.png",
@@ -78,11 +79,29 @@
       "email": "contact@actcreative.net",
       "telephone": "+65 84515268",
       "priceRange": "$$-$$$",
+      "foundingDate": "2026-01-02",
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Singapore Unique Entity Number",
+        "propertyID": "UEN",
+        "value": "202600226K"
+      },
       "knowsLanguage": ["en", "zh-Hans", "zh-Hant"],
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "SG",
-        "addressLocality": "Singapore"
+        "streetAddress": "65 Chulia Street #25-03 OCBC Centre",
+        "addressLocality": "Singapore",
+        "addressRegion": "Singapore",
+        "postalCode": "049513",
+        "addressCountry": "SG"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+65 84515268",
+        "email": "contact@actcreative.net",
+        "areaServed": ["SG", "MY", "ID", "TH", "VN", "PH", "HK", "MO", "CN"],
+        "availableLanguage": ["English", "Mandarin Chinese"]
       },
       "geo": {
         "@type": "GeoCoordinates",
