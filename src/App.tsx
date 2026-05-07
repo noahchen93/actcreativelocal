@@ -16,9 +16,9 @@ export default function App() {
       <div className="min-h-screen bg-black">
         <Header />
         <main>
+          <Hero />
           <CaseStudies />
           <ProductCategories />
-          <Hero />
           <WhyActCreative />
           <Services />
           <TeamSection />
