@@ -24,14 +24,64 @@
     <xhtml:link rel="alternate" hreflang="en-id" href="https://actcreative.net/" />
     <xhtml:link rel="alternate" hreflang="en-ph" href="https://actcreative.net/" />
     <xhtml:link rel="alternate" hreflang="en-vn" href="https://actcreative.net/" />
-    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/" />
-    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/" />
     <image:image>
       <image:loc>https://actcreative.net/og-default.png</image:loc>
       <image:title>ACT Creative — Cross-border event fabrication and production partner in Singapore</image:title>
       <image:caption>ACT Creative connects China manufacturing with Singapore event delivery for agencies and brands.</image:caption>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actcreative.net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/" />
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/event-fabrication-singapore/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/event-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actcreative.net/event-fabrication-singapore/" />
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/china-event-production-support/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/china-event-production-support/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://actcreative.net/china-event-production-support/" />
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/blog/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/blog/singapore-event-production-cost-guide-2026/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/blog/sourcing-frp-sculptures-from-china/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 
   <url>
@@ -74,6 +124,36 @@
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/trade-show-booth-singapore/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/event-fabrication-hong-kong/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/event-fabrication-hong-kong/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/event-fabrication-singapore/" />
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/roadshow-production-singapore/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/retail-mall-activation-singapore/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <url>
