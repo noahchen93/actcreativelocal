@@ -70,6 +70,26 @@ li {
   font-size: 21px;
 }
 
+.hero-media {
+  margin: 30px 0 8px;
+}
+
+.hero-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #d8d8d0;
+  background: #e7e7df;
+}
+
+.hero-media figcaption {
+  margin-top: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
