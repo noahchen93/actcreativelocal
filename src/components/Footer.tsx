@@ -74,12 +74,36 @@ export function Footer() {
           >
             <h4 className="text-white mb-4">{t("核心服务", "Core Services")}</h4>
             <ul className="space-y-2 text-sm">
-              <li className="text-gray-400">{t("道具定制", "Props Customization")}</li>
-              <li className="text-gray-400">{t("运输物流", "Logistics")}</li>
-              <li className="text-gray-400">{t("质量把控", "Quality Control")}</li>
-              <li className="text-gray-400">{t("成本控制", "Cost Control")}</li>
-              <li className="text-gray-400">{t("3D打印", "3D Printing")}</li>
-              <li className="text-gray-400">{t("租赁调配", "Rental Service")}</li>
+              <li>
+                <a href="/event-fabrication-singapore/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("活动制作", "Event Fabrication Singapore")}
+                </a>
+              </li>
+              <li>
+                <a href="/custom-props-singapore/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("道具定制", "Custom Props Singapore")}
+                </a>
+              </li>
+              <li>
+                <a href="/frp-sculpture-fabrication-singapore/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("FRP雕塑制作", "FRP Sculpture Fabrication")}
+                </a>
+              </li>
+              <li>
+                <a href="/exhibition-booth-production-singapore/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("展会展台制作", "Exhibition Booth Production")}
+                </a>
+              </li>
+              <li>
+                <a href="/china-event-production-support/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("中国生产支持", "China Production Support")}
+                </a>
+              </li>
+              <li>
+                <a href="/event-merchandise-sourcing/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("活动周边采购", "Event Merchandise Sourcing")}
+                </a>
+              </li>
             </ul>
           </motion.div>
 

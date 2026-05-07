@@ -16,6 +16,7 @@ export function CaseStudies() {
       title: t("A BIG BIG WORLD", "A BIG BIG WORLD"),
       subtitle: t("圣淘沙跨年灯光秀", "Sentosa New Year Light Show"),
       image: bigWorldImage1,
+      href: "/case-studies/sentosa-big-big-world-event-fabrication/",
       client: t("圣淘沙发展局", "Sentosa Development Corporation"),
       participants: "10,000+",
       highlights: [
@@ -27,6 +28,7 @@ export function CaseStudies() {
       title: t("WINGS OF ART", "WINGS OF ART"),
       subtitle: t("芭比主题慈善艺术展", "Barbie Charity Art Exhibition"),
       image: wingsArtImage1,
+      href: "/case-studies/wings-of-art-barbie-runway-singapore/",
       client: t("Peace of Art SG", "Peace of Art SG"),
       fundsRaised: "S$161,621.77",
       fundsLabel: t("为困境儿童筹款", "Raised For Children in Need"),
@@ -38,6 +40,7 @@ export function CaseStudies() {
       title: t("PACMAN & FRIENDS", "PACMAN & FRIENDS"),
       subtitle: t("圣淘沙主题活动", "Sentosa Theme Event"),
       image: pacmanImage,
+      href: "/case-studies/sentosa-pacman-human-game/",
       client: t("Apex Infinite Entertainment Global", "Apex Infinite Entertainment Global"),
       record: t("最大规模真人吃豆人游戏", "Largest Human PAC-MAN Game"),
       recordBy: t("新加坡纪录大全认证", "Recorded by Singapore Book of Records"),
@@ -204,6 +207,15 @@ export function CaseStudies() {
                           </div>
                         ))}
                       </div>
+
+                      {project.href && (
+                        <a
+                          href={project.href}
+                          className="inline-block mt-4 text-xs text-[#CCFF00] hover:text-white transition-colors"
+                        >
+                          {t("鏌ョ湅妗堜緥璇︽儏", "View case details")}
+                        </a>
+                      )}
                     </div>
                   )}
                 </div>

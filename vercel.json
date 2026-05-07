@@ -12,6 +12,12 @@
     { "source": "/china-event-production-support/", "destination": "/china-event-production-support/index.html" },
     { "source": "/event-merchandise-sourcing", "destination": "/event-merchandise-sourcing/index.html" },
     { "source": "/event-merchandise-sourcing/", "destination": "/event-merchandise-sourcing/index.html" },
+    { "source": "/case-studies/sentosa-big-big-world-event-fabrication", "destination": "/case-studies/sentosa-big-big-world-event-fabrication/index.html" },
+    { "source": "/case-studies/sentosa-big-big-world-event-fabrication/", "destination": "/case-studies/sentosa-big-big-world-event-fabrication/index.html" },
+    { "source": "/case-studies/wings-of-art-barbie-runway-singapore", "destination": "/case-studies/wings-of-art-barbie-runway-singapore/index.html" },
+    { "source": "/case-studies/wings-of-art-barbie-runway-singapore/", "destination": "/case-studies/wings-of-art-barbie-runway-singapore/index.html" },
+    { "source": "/case-studies/sentosa-pacman-human-game", "destination": "/case-studies/sentosa-pacman-human-game/index.html" },
+    { "source": "/case-studies/sentosa-pacman-human-game/", "destination": "/case-studies/sentosa-pacman-human-game/index.html" },
     { "source": "/((?!.*\\..*|api/).*)", "destination": "/index.html" }
   ],
   "headers": [
