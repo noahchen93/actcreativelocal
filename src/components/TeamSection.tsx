@@ -82,7 +82,7 @@ export function TeamSection() {
                 <div className="aspect-square overflow-hidden bg-[#1a1a1a] flex items-center justify-center p-6">
                   <img
                     src={member.image}
-                    alt={member.name}
+                    alt={`${member.name} — ACT Creative Singapore team member portrait`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 rounded-full"
                   />
                 </div>

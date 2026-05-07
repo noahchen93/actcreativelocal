@@ -28,7 +28,7 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <img src={logo} alt="ACT CREATIVE" className="h-12 w-auto mb-4" />
+            <img src={logo} alt="ACT Creative — Singapore event fabrication and China production partner" className="h-12 w-auto mb-4" />
             <p className="text-sm mb-4 text-gray-400">
               {t(
                 "专注为新加坡活动行业提供中国定制采购解决方案，让跨境采购变得简单高效。",

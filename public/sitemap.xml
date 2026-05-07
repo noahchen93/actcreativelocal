@@ -2,10 +2,11 @@
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 >
   <!--
-    The current site is a single-page React app. All sections live under /
-    (Hero, Services, Cases, Products, Team, Contact).
+    The current site is a single-page React app served at /. All sections
+    (Hero, Services, Cases, Products, Team, Contact) live there.
     hreflang tags signal regional coverage:
     - en-SG (primary)
     - en-HK, en-MY, en-TH, en-ID, en-PH, en-VN (Southeast Asia + HK)
@@ -26,59 +27,88 @@
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/" />
     <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/" />
+    <image:image>
+      <image:loc>https://actcreative.net/og-default.png</image:loc>
+      <image:title>ACT Creative — Cross-border event fabrication and production partner in Singapore</image:title>
+      <image:caption>ACT Creative connects China manufacturing with Singapore event delivery for agencies and brands.</image:caption>
+    </image:image>
   </url>
+
   <url>
     <loc>https://actcreative.net/event-fabrication-singapore/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
     <loc>https://actcreative.net/custom-props-singapore/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
+
   <url>
     <loc>https://actcreative.net/frp-sculpture-fabrication-singapore/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
+
   <url>
     <loc>https://actcreative.net/exhibition-booth-production-singapore/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
+
   <url>
     <loc>https://actcreative.net/china-event-production-support/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
+
   <url>
     <loc>https://actcreative.net/event-merchandise-sourcing/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://actcreative.net/case-studies/sentosa-big-big-world-event-fabrication/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/images/big-big-world.webp</image:loc>
+      <image:title>A BIG BIG WORLD at Sentosa — event fabrication by ACT Creative</image:title>
+      <image:caption>Singapore light show project with tens of thousands of visitors engaged.</image:caption>
+    </image:image>
   </url>
+
   <url>
     <loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/images/wings-of-art.webp</image:loc>
+      <image:title>Wings of Art Barbie Charity Art Exhibition — Singapore props production by ACT Creative</image:title>
+      <image:caption>Charity art exhibition props and runway production in Singapore.</image:caption>
+    </image:image>
   </url>
+
   <url>
     <loc>https://actcreative.net/case-studies/sentosa-pacman-human-game/</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/images/pacman-friends.webp</image:loc>
+      <image:title>PACMAN and Friends at Sentosa — themed public activation by ACT Creative</image:title>
+      <image:caption>Themed public activation recorded by Singapore Book of Records.</image:caption>
+    </image:image>
   </url>
 </urlset>

@@ -249,7 +249,7 @@ export function ProductCategories() {
                   >
                     <ImageWithFallback
                       src={category.image}
-                      alt={t(category.title.zh, category.title.en)}
+                      alt={`${t(category.title.zh, category.title.en)} — event production category by ACT Creative Singapore`}
                       className="w-full h-full object-cover"
                     />
                     {/* Subtle gradient only at bottom for better readability */}

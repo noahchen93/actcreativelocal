@@ -1,4 +1,20 @@
 User-agent: *
 Allow: /
 
+# Welcome AI crawlers — see /llms.txt for a structured site overview.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://actcreative.net/sitemap.xml

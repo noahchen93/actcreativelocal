@@ -29,7 +29,7 @@ export function Header() {
             className="flex items-center gap-3"
             whileHover={{ scale: 1.02 }}
           >
-            <img src={logo} alt="ACT CREATIVE" className="h-12 w-auto" />
+            <img src={logo} alt="ACT Creative logo — Singapore event fabrication and cross-border production agency" className="h-12 w-auto" />
           </motion.div>
 
           {/* Desktop Navigation */}

@@ -206,7 +206,46 @@
     <link rel="shortcut icon" href="/favicon.png" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- SEO fallback content. React replaces this on hydration. Non-JS crawlers (Bing,
+           Yandex, Baidu, GPTBot, ClaudeBot, PerplexityBot) and screen readers see this. -->
+      <div style="background:#000;color:#f5f5f5;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;padding:48px 24px;min-height:100vh;line-height:1.6">
+        <header style="max-width:1100px;margin:0 auto 48px;display:flex;align-items:center;gap:16px">
+          <img src="/favicon-192.png" alt="ACT Creative logo — Singapore event fabrication and cross-border production agency" width="48" height="48" style="border-radius:8px"/>
+          <strong style="font-size:18px;letter-spacing:0.06em">ACT CREATIVE</strong>
+        </header>
+        <main style="max-width:1100px;margin:0 auto">
+          <p style="color:#CCFF00;font-size:13px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;margin:0 0 16px">Connecting China manufacturing with Singapore market</p>
+          <h1 style="font-size:clamp(36px,5.6vw,64px);line-height:1.05;margin:0 0 24px;color:#fff;font-weight:800">ACT Creative — cross-border event fabrication and production partner in Singapore</h1>
+          <p style="font-size:20px;color:#d4d4d4;max-width:820px;margin:0 0 24px">ACT Creative Pte. Ltd. helps event agencies and brands manage custom fabrication, props, exhibition booth components, FRP/sculpture works and event merchandise from China, with local coordination in Singapore and across Southeast Asia, Hong Kong, Macau and Greater China.</p>
+          <p style="font-size:18px;color:#d4d4d4;max-width:820px;margin:0 0 32px">We guide bold concepts from earliest spark to extraordinary creative expressions — bespoke events and art installations, innovative sculptures and amusement experiences, IP collaborations, exhibitions, and cross-cultural exchanges. Bilingual team (Mandarin + English).</p>
+
+          <h2 style="font-size:28px;color:#fff;margin:48px 0 16px;font-weight:700">Core services</h2>
+          <ul style="font-size:17px;color:#d4d4d4;padding-left:0;list-style:none">
+            <li style="padding:10px 0 10px 24px;border-bottom:1px solid #262626;position:relative"><span style="color:#CCFF00;position:absolute;left:0">→</span> <a href="/event-fabrication-singapore/" style="color:#CCFF00">Event fabrication Singapore</a> — Custom fabrication for brand activations, exhibitions, launches and scenic displays.</li>
+            <li style="padding:10px 0 10px 24px;border-bottom:1px solid #262626;position:relative"><span style="color:#CCFF00;position:absolute;left:0">→</span> <a href="/custom-props-singapore/" style="color:#CCFF00">Custom props Singapore</a> — Bespoke props, oversized objects, themed decor and stage dressing.</li>
+            <li style="padding:10px 0 10px 24px;border-bottom:1px solid #262626;position:relative"><span style="color:#CCFF00;position:absolute;left:0">→</span> <a href="/frp-sculpture-fabrication-singapore/" style="color:#CCFF00">FRP sculpture fabrication Singapore</a> — Fiberglass sculptures and installation pieces for retail, public art and themed environments.</li>
+            <li style="padding:10px 0 10px 24px;border-bottom:1px solid #262626;position:relative"><span style="color:#CCFF00;position:absolute;left:0">→</span> <a href="/exhibition-booth-production-singapore/" style="color:#CCFF00">Exhibition booth production Singapore</a> — Booth structures, counters, signage, plinths, modular components.</li>
+            <li style="padding:10px 0 10px 24px;border-bottom:1px solid #262626;position:relative"><span style="color:#CCFF00;position:absolute;left:0">→</span> <a href="/china-event-production-support/" style="color:#CCFF00">China event production support</a> — Supplier matching, factory coordination, sampling, QC and shipping.</li>
+            <li style="padding:10px 0 10px 24px;position:relative"><span style="color:#CCFF00;position:absolute;left:0">→</span> <a href="/event-merchandise-sourcing/" style="color:#CCFF00">Event merchandise sourcing</a> — Branded campaign giveaways, launch kits, press boxes and event utilities.</li>
+          </ul>
+
+          <h2 style="font-size:28px;color:#fff;margin:48px 0 16px;font-weight:700">Recent case studies</h2>
+          <ul style="font-size:17px;color:#d4d4d4;padding-left:0;list-style:none">
+            <li style="padding:10px 0 10px 24px;border-bottom:1px solid #262626;position:relative"><span style="color:#CCFF00;position:absolute;left:0">→</span> <a href="/case-studies/sentosa-big-big-world-event-fabrication/" style="color:#CCFF00">A BIG BIG WORLD at Sentosa</a> — Singapore light show with tens of thousands of visitors engaged. One of Singapore's largest floating balloon stage productions.</li>
+            <li style="padding:10px 0 10px 24px;border-bottom:1px solid #262626;position:relative"><span style="color:#CCFF00;position:absolute;left:0">→</span> <a href="/case-studies/sentosa-pacman-human-game/" style="color:#CCFF00">PACMAN and Friends at Sentosa</a> — Themed public activation recorded by Singapore Book of Records.</li>
+            <li style="padding:10px 0 10px 24px;position:relative"><span style="color:#CCFF00;position:absolute;left:0">→</span> <a href="/case-studies/wings-of-art-barbie-runway-singapore/" style="color:#CCFF00">Wings of Art Barbie Charity Art Exhibition</a> — Singapore props and runway production for a charity art exhibition.</li>
+          </ul>
+
+          <h2 style="font-size:28px;color:#fff;margin:48px 0 16px;font-weight:700">Contact ACT Creative</h2>
+          <p style="font-size:17px;color:#d4d4d4">Email: <a href="mailto:contact@actcreative.net" style="color:#CCFF00">contact@actcreative.net</a> &middot; WhatsApp: <a href="https://wa.me/6584515268" style="color:#CCFF00">+65 8451 5268</a><br/>Address: 65 Chulia Street #25-03 OCBC Centre, Singapore 049513<br/>Singapore UEN: 202600226K</p>
+
+          <noscript>
+            <p style="margin-top:48px;padding:20px;background:#0d0d0d;border:1px solid #262626;border-radius:8px;color:#a3a3a3">JavaScript is disabled. The full interactive site requires JavaScript, but the key information above and the linked landing pages are fully readable without it. Email <a href="mailto:contact@actcreative.net" style="color:#CCFF00">contact@actcreative.net</a> to get in touch.</p>
+          </noscript>
+        </main>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

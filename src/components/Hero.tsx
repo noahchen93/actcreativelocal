@@ -72,7 +72,7 @@ export function Hero() {
             {/* Logo */}
             <motion.img 
               src={logo} 
-              alt="ACT CREATIVE" 
+              alt="ACT Creative — cross-border event fabrication and production partner in Singapore"
               className="h-20 md:h-28 w-auto"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
