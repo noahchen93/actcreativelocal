@@ -16,11 +16,11 @@ export default function App() {
       <div className="min-h-screen bg-black">
         <Header />
         <main>
+          <CaseStudies />
+          <ProductCategories />
           <Hero />
           <WhyActCreative />
           <Services />
-          <CaseStudies />
-          <ProductCategories />
           <TeamSection />
           <Contact />
         </main>
