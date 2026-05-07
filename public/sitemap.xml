@@ -13,6 +13,7 @@
   -->
   <url>
     <loc>https://actcreative.net/</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/" />
@@ -25,5 +26,41 @@
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/" />
     <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/" />
+  </url>
+  <url>
+    <loc>https://actcreative.net/event-fabrication-singapore/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://actcreative.net/custom-props-singapore/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://actcreative.net/frp-sculpture-fabrication-singapore/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://actcreative.net/exhibition-booth-production-singapore/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://actcreative.net/china-event-production-support/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://actcreative.net/event-merchandise-sourcing/</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

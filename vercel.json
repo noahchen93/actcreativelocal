@@ -1,5 +1,17 @@
 {
   "rewrites": [
+    { "source": "/event-fabrication-singapore", "destination": "/event-fabrication-singapore/index.html" },
+    { "source": "/event-fabrication-singapore/", "destination": "/event-fabrication-singapore/index.html" },
+    { "source": "/custom-props-singapore", "destination": "/custom-props-singapore/index.html" },
+    { "source": "/custom-props-singapore/", "destination": "/custom-props-singapore/index.html" },
+    { "source": "/frp-sculpture-fabrication-singapore", "destination": "/frp-sculpture-fabrication-singapore/index.html" },
+    { "source": "/frp-sculpture-fabrication-singapore/", "destination": "/frp-sculpture-fabrication-singapore/index.html" },
+    { "source": "/exhibition-booth-production-singapore", "destination": "/exhibition-booth-production-singapore/index.html" },
+    { "source": "/exhibition-booth-production-singapore/", "destination": "/exhibition-booth-production-singapore/index.html" },
+    { "source": "/china-event-production-support", "destination": "/china-event-production-support/index.html" },
+    { "source": "/china-event-production-support/", "destination": "/china-event-production-support/index.html" },
+    { "source": "/event-merchandise-sourcing", "destination": "/event-merchandise-sourcing/index.html" },
+    { "source": "/event-merchandise-sourcing/", "destination": "/event-merchandise-sourcing/index.html" },
     { "source": "/((?!.*\\..*|api/).*)", "destination": "/index.html" }
   ],
   "headers": [
