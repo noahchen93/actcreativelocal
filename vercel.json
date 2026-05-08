@@ -1,5 +1,7 @@
 {
   "rewrites": [
+    { "source": "/about", "destination": "/about/index.html" },
+    { "source": "/about/", "destination": "/about/index.html" },
     { "source": "/event-fabrication-singapore", "destination": "/event-fabrication-singapore/index.html" },
     { "source": "/event-fabrication-singapore/", "destination": "/event-fabrication-singapore/index.html" },
     { "source": "/custom-props-singapore", "destination": "/custom-props-singapore/index.html" },

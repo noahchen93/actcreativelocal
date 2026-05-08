@@ -47,6 +47,9 @@ export function Footer() {
           >
             <h4 className="text-white mb-4">{t("快速链接", "Quick Links")}</h4>
             <nav className="space-y-2">
+              <a href="/about/" className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
+                {t("关于我们", "About")}
+              </a>
               <button onClick={() => scrollToSection("home")} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {t("首页", "Home")}
               </button>

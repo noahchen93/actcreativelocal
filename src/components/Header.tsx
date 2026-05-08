@@ -34,15 +34,22 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection("home")} 
+            <a
+              href="/about/"
+              className="text-white hover:text-[#CCFF00] transition-colors relative group"
+            >
+              {t("关于我们", "About")}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#CCFF00] group-hover:w-full transition-all"></span>
+            </a>
+            <button
+              onClick={() => scrollToSection("home")}
               className="text-white hover:text-[#CCFF00] transition-colors relative group"
             >
               {t("首页", "Home")}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#CCFF00] group-hover:w-full transition-all"></span>
             </button>
-            <button 
-              onClick={() => scrollToSection("solutions")} 
+            <button
+              onClick={() => scrollToSection("solutions")}
               className="text-white hover:text-[#CCFF00] transition-colors relative group"
             >
               {t("解决方案", "Solutions")}
@@ -136,8 +143,14 @@ export function Header() {
               exit={{ opacity: 0, height: 0 }}
             >
               <div className="flex flex-col space-y-4">
-                <button 
-                  onClick={() => scrollToSection("home")} 
+                <a
+                  href="/about/"
+                  className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
+                >
+                  {t("关于我们", "About")}
+                </a>
+                <button
+                  onClick={() => scrollToSection("home")}
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
                 >
                   {t("首页", "Home")}
