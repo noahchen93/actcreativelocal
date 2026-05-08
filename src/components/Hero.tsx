@@ -17,7 +17,7 @@ export function Hero() {
     <section
       id="home"
       className="relative overflow-hidden bg-black"
-      style={{ paddingTop: "7rem", paddingBottom: "5rem" }}
+      style={{ paddingTop: "6.5rem", paddingBottom: "4rem" }}
     >
       {/* Hero-scoped CSS */}
       <style>{`
@@ -69,22 +69,22 @@ export function Hero() {
         .hero-stats {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          gap: 1.5rem;
-          padding-top: 1.75rem;
+          gap: 1.25rem;
+          padding-top: 1.5rem;
           border-top: 1px solid rgba(204,255,0,0.12);
         }
         .hero-stat-num {
           color: #CCFF00;
-          font-size: 1.5rem;
+          font-size: 1rem;
           font-weight: 700;
-          letter-spacing: -0.01em;
+          letter-spacing: 0.08em;
           line-height: 1;
-          margin-bottom: 0.4rem;
+          margin-bottom: 0.35rem;
         }
         .hero-stat-label {
-          color: rgba(255,255,255,0.55);
-          font-size: 0.75rem;
-          letter-spacing: 0.05em;
+          color: rgba(255,255,255,0.5);
+          font-size: 0.7rem;
+          letter-spacing: 0.04em;
           line-height: 1.4;
         }
       `}</style>
@@ -121,20 +121,20 @@ export function Hero() {
             <h1
               className="text-white"
               style={{
-                fontSize: "clamp(2.25rem, 4.4vw, 3.75rem)",
-                lineHeight: 1.08,
+                fontSize: "clamp(2rem, 3.6vw, 3.125rem)",
+                lineHeight: 1.1,
                 fontWeight: 700,
                 letterSpacing: "-0.025em",
                 marginBottom: "1.5rem",
               }}
             >
               <span style={{ color: "#CCFF00" }}>
-                {t("让灵感", "Where inspiration")}
+                {t("让灵感，", "Where inspiration finds")}
               </span>
               <br />
               {t(
                 "找到最艺术的形态",
-                "finds its most artful form",
+                "its most artful form",
               )}
             </h1>
 
@@ -142,14 +142,14 @@ export function Hero() {
             <p
               className="text-gray-300"
               style={{
-                fontSize: "clamp(0.95rem, 1.1vw, 1.0625rem)",
-                lineHeight: 1.7,
+                fontSize: "clamp(0.95rem, 1.05vw, 1.0625rem)",
+                lineHeight: 1.65,
                 maxWidth: "520px",
-                marginBottom: "2.25rem",
+                marginBottom: "1.75rem",
               }}
             >
               {t(
-                "立足新加坡，连接中国供应链。我们陪伴活动机构、品牌团队与艺术项目，把创意从概念落地为可交付的实物制作。",
+                "立足新加坡，连接中国供应链。我们陪伴活动机构、品牌团队与艺术项目，把创意落地为可交付的实物制作。",
                 "Singapore-based, China-connected production partner for event agencies, brand teams and art projects — turning creative concepts into delivered physical work.",
               )}
             </p>
@@ -157,7 +157,7 @@ export function Hero() {
             {/* CTAs */}
             <div
               className="flex flex-col sm:flex-row gap-3"
-              style={{ marginBottom: "2.5rem" }}
+              style={{ marginBottom: "2rem" }}
             >
               <Button
                 size="lg"
