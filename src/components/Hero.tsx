@@ -1,7 +1,6 @@
 import { Button } from "./ui/button";
 import { ArrowRight, Globe, Award, Zap } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
-import logo from "figma:asset/9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png";
 import { HeroSlideshow } from "./HeroSlideshow";
 
 export function Hero() {
@@ -18,7 +17,7 @@ export function Hero() {
     <section
       id="home"
       className="relative overflow-hidden bg-black"
-      style={{ paddingTop: "6rem", paddingBottom: "5rem" }}
+      style={{ paddingTop: "7rem", paddingBottom: "5rem" }}
     >
       {/* Hero-scoped CSS — bypasses Tailwind JIT issues with lg: utilities */}
       <style>{`
@@ -26,19 +25,21 @@ export function Hero() {
           display: grid;
           grid-template-columns: 1fr;
           gap: 2.5rem;
-          align-items: center;
+          align-items: stretch;
         }
         @media (min-width: 1024px) {
           .hero-grid {
-            grid-template-columns: minmax(0, 1.35fr) minmax(320px, 460px);
-            gap: 4rem;
+            grid-template-columns: minmax(0, 1.25fr) minmax(360px, 540px);
+            gap: 3.5rem;
           }
         }
-        .hero-text { min-width: 0; }
+        .hero-text { min-width: 0; display: flex; flex-direction: column; justify-content: center; }
         .hero-slideshow-wrap {
           width: 100%;
-          max-width: 460px;
+          max-width: 560px;
           margin: 0 auto;
+          align-self: stretch;
+          display: flex;
         }
         @media (min-width: 1024px) {
           .hero-slideshow-wrap { margin: 0; }
@@ -62,38 +63,6 @@ export function Hero() {
         className="container mx-auto px-4 md:px-6 relative z-10"
         style={{ maxWidth: "1280px" }}
       >
-        {/* Brand strip — compact, single line */}
-        <div
-          className="flex items-center gap-4"
-          style={{ marginBottom: "2.5rem" }}
-        >
-          <img
-            src={logo}
-            alt="ACT Creative — cross-border event fabrication and production partner in Singapore"
-            className="w-auto"
-            style={{ height: "44px" }}
-          />
-          <div
-            style={{
-              height: "1px",
-              flex: 1,
-              maxWidth: "120px",
-              background:
-                "linear-gradient(to right, rgba(204,255,0,0.4), transparent)",
-            }}
-          />
-          <p
-            className="text-gray-500"
-            style={{
-              fontSize: "0.75rem",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-            }}
-          >
-            {t("艺术化的概念创意表达", "Artful Concept · Creative Expression")}
-          </p>
-        </div>
-
         {/* 2-column grid */}
         <div className="hero-grid">
           {/* Left: text */}

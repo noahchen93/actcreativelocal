@@ -62,7 +62,8 @@ export function HeroSlideshow() {
       style={{
         position: "relative",
         width: "100%",
-        aspectRatio: "4 / 3",
+        flex: 1,
+        minHeight: "480px",
         overflow: "hidden",
         borderRadius: "1rem",
         background: "#0a0a0a",
