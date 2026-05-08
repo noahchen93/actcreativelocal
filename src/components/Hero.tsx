@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { ArrowRight, Globe, Award, Zap } from "lucide-react";
+import { ArrowRight, Award, Zap } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { HeroSlideshow } from "./HeroSlideshow";
 
@@ -19,7 +19,7 @@ export function Hero() {
       className="relative overflow-hidden bg-black"
       style={{ paddingTop: "7rem", paddingBottom: "5rem" }}
     >
-      {/* Hero-scoped CSS — bypasses Tailwind JIT issues with lg: utilities */}
+      {/* Hero-scoped CSS */}
       <style>{`
         .hero-grid {
           display: grid;
@@ -33,7 +33,12 @@ export function Hero() {
             gap: 3.5rem;
           }
         }
-        .hero-text { min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+        .hero-text {
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+        }
         .hero-slideshow-wrap {
           width: 100%;
           max-width: 560px;
@@ -43,6 +48,44 @@ export function Hero() {
         }
         @media (min-width: 1024px) {
           .hero-slideshow-wrap { margin: 0; }
+        }
+        .hero-eyebrow {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.875rem;
+          color: #CCFF00;
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.22em;
+          text-transform: uppercase;
+        }
+        .hero-eyebrow::after {
+          content: "";
+          display: block;
+          width: 56px;
+          height: 1px;
+          background: linear-gradient(to right, rgba(204,255,0,0.6), transparent);
+        }
+        .hero-stats {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5rem;
+          padding-top: 1.75rem;
+          border-top: 1px solid rgba(204,255,0,0.12);
+        }
+        .hero-stat-num {
+          color: #CCFF00;
+          font-size: 1.5rem;
+          font-weight: 700;
+          letter-spacing: -0.01em;
+          line-height: 1;
+          margin-bottom: 0.4rem;
+        }
+        .hero-stat-label {
+          color: rgba(255,255,255,0.55);
+          font-size: 0.75rem;
+          letter-spacing: 0.05em;
+          line-height: 1.4;
         }
       `}</style>
 
@@ -63,56 +106,59 @@ export function Hero() {
         className="container mx-auto px-4 md:px-6 relative z-10"
         style={{ maxWidth: "1280px" }}
       >
-        {/* 2-column grid */}
         <div className="hero-grid">
           {/* Left: text */}
           <div className="hero-text">
+            {/* Eyebrow with accent line */}
             <div
-              className="inline-flex items-center gap-3 px-5 py-2.5 bg-[#1a1a1a]/90 backdrop-blur-xl rounded-full border border-[#CCFF00]/30"
-              style={{ marginBottom: "1.75rem" }}
+              className="hero-eyebrow"
+              style={{ marginBottom: "1.25rem" }}
             >
-              <div className="w-2 h-2 bg-[#CCFF00] rounded-full animate-pulse" />
-              <Globe className="w-4 h-4 text-[#CCFF00]" />
-              <span className="text-white text-sm">
-                {t(
-                  "连接中国制造与新加坡市场",
-                  "China Manufacturing × Singapore Market",
-                )}
-              </span>
+              {t("中国制造 × 新加坡市场", "China Manufacturing × Singapore Market")}
             </div>
 
+            {/* H1 */}
             <h1
-              className="text-[#CCFF00]"
+              className="text-white"
               style={{
-                fontSize: "clamp(2rem, 4vw, 3.5rem)",
-                lineHeight: 1.1,
+                fontSize: "clamp(2.25rem, 4.4vw, 3.75rem)",
+                lineHeight: 1.08,
                 fontWeight: 700,
-                letterSpacing: "-0.02em",
+                letterSpacing: "-0.025em",
                 marginBottom: "1.5rem",
               }}
             >
+              <span style={{ color: "#CCFF00" }}>
+                {t("让灵感", "Where inspiration")}
+              </span>
+              <br />
               {t(
-                "让灵感，找到最艺术的形态",
-                "Where inspiration finds its most artful form",
+                "找到最艺术的形态",
+                "finds its most artful form",
               )}
             </h1>
 
+            {/* Description */}
             <p
               className="text-gray-300"
               style={{
                 fontSize: "clamp(0.95rem, 1.1vw, 1.0625rem)",
-                lineHeight: 1.65,
+                lineHeight: 1.7,
                 maxWidth: "520px",
-                marginBottom: "2rem",
+                marginBottom: "2.25rem",
               }}
             >
               {t(
-                "立足新加坡，连接中国供应链。我们陪伴活动机构、品牌团队与艺术项目，将创意从概念落地为可交付的实物制作。",
-                "Singapore-based, China-connected. We help event agencies, brand teams and art projects turn concepts into delivered physical work.",
+                "立足新加坡，连接中国供应链。我们陪伴活动机构、品牌团队与艺术项目，把创意从概念落地为可交付的实物制作。",
+                "Singapore-based, China-connected production partner for event agencies, brand teams and art projects — turning creative concepts into delivered physical work.",
               )}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            {/* CTAs */}
+            <div
+              className="flex flex-col sm:flex-row gap-3"
+              style={{ marginBottom: "2.5rem" }}
+            >
               <Button
                 size="lg"
                 onClick={() => scrollToSection("contact")}
@@ -133,6 +179,28 @@ export function Hero() {
                 <Award className="w-4 h-4 mr-2" />
                 {t("探索案例", "Explore Cases")}
               </Button>
+            </div>
+
+            {/* Trust stats */}
+            <div className="hero-stats">
+              <div>
+                <div className="hero-stat-num">SG</div>
+                <div className="hero-stat-label">
+                  {t("新加坡本地团队", "Local Singapore team")}
+                </div>
+              </div>
+              <div>
+                <div className="hero-stat-num">CN</div>
+                <div className="hero-stat-label">
+                  {t("中国供应链网络", "China supply network")}
+                </div>
+              </div>
+              <div>
+                <div className="hero-stat-num">SEA</div>
+                <div className="hero-stat-label">
+                  {t("覆盖东南亚 + 港澳", "SEA + HK / Macau delivery")}
+                </div>
+              </div>
             </div>
           </div>
 
