@@ -21,6 +21,16 @@ const slides = [
 const INTERVAL_MS = 5000;
 const FADE_MS = 900;
 
+const ABSOLUTE_FILL = {
+  position: "absolute" as const,
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  width: "100%",
+  height: "100%",
+};
+
 export function HeroSlideshow() {
   const [idx, setIdx] = useState(0);
 
@@ -34,36 +44,61 @@ export function HeroSlideshow() {
 
   return (
     <div
-      className="relative w-full overflow-hidden rounded-2xl bg-[#0a0a0a] border border-[#CCFF00]/15 shadow-2xl shadow-black/50"
-      style={{ aspectRatio: "4 / 3" }}
+      style={{
+        position: "relative",
+        width: "100%",
+        aspectRatio: "4 / 3",
+        overflow: "hidden",
+        borderRadius: "1rem",
+        background: "#0a0a0a",
+        border: "1px solid rgba(204,255,0,0.18)",
+        boxShadow: "0 25px 50px -12px rgba(0,0,0,0.6)",
+      }}
     >
-      {/* All slides stacked; only the current one is opaque */}
       {slides.map((s, i) => (
         <img
           key={s.src}
           src={s.src}
           alt={s.alt}
-          loading={i === 0 ? "eager" : "lazy"}
+          loading="eager"
           decoding="async"
-          className="absolute inset-0 w-full h-full object-cover"
           style={{
+            ...ABSOLUTE_FILL,
+            objectFit: "cover",
             opacity: i === idx ? 1 : 0,
             transition: `opacity ${FADE_MS}ms ease-in-out`,
           }}
         />
       ))}
 
-      {/* gradient bottom for label legibility */}
-      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
-
-      {/* current slide label */}
+      {/* gradient at bottom for label legibility */}
       <div
-        className="absolute bottom-4 left-5 right-20 text-white"
-        style={{ pointerEvents: "none" }}
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          height: "55%",
+          background:
+            "linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%)",
+          pointerEvents: "none",
+        }}
+      />
+
+      {/* label */}
+      <div
+        style={{
+          position: "absolute",
+          left: "1.25rem",
+          right: "5rem",
+          bottom: "1rem",
+          color: "white",
+          pointerEvents: "none",
+        }}
       >
         <p
-          className="text-[#CCFF00]"
           style={{
+            color: "#CCFF00",
             fontSize: "0.6875rem",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
@@ -72,27 +107,36 @@ export function HeroSlideshow() {
         >
           Selected work
         </p>
-        <p
-          className="text-white"
-          style={{ fontSize: "0.875rem", fontWeight: 500 }}
-          key={`label-${idx}`}
-        >
+        <p style={{ color: "white", fontSize: "0.875rem", fontWeight: 500 }}>
           {slides[idx].label}
         </p>
       </div>
 
       {/* dots */}
-      <div className="absolute bottom-4 right-4 flex items-center gap-1.5">
+      <div
+        style={{
+          position: "absolute",
+          right: "1rem",
+          bottom: "1rem",
+          display: "flex",
+          alignItems: "center",
+          gap: "0.375rem",
+        }}
+      >
         {slides.map((_, i) => (
           <button
             key={i}
             onClick={() => setIdx(i)}
             aria-label={`Show slide ${i + 1}`}
-            className="rounded-full transition-all"
             style={{
               width: i === idx ? "20px" : "6px",
               height: "6px",
+              borderRadius: "9999px",
               background: i === idx ? "#CCFF00" : "rgba(255,255,255,0.5)",
+              border: "none",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+              padding: 0,
             }}
           />
         ))}
