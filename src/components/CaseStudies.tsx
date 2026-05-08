@@ -55,6 +55,7 @@ export function CaseStudies() {
       title: t("FLORENTIJN HOFMAN", "FLORENTIJN HOFMAN"),
       subtitle: t("个人博物馆展览", "SOLO MUSEUM SHOW"),
       image: hofmanImage,
+      href: "/case-studies/florentijn-hofman-shanghai-museum-show/",
       client: t("上海，中国", "Shanghai, China"),
       achievement: t("首次", "First"),
       achievementDesc: t("在中国的个人巡回展览", "solo touring exhibition in China"),
@@ -66,6 +67,7 @@ export function CaseStudies() {
       title: t("CRAIG & KARL", "CRAIG & KARL"),
       subtitle: t("个人博物馆展览", "SOLO MUSEUM SHOW"),
       image: craigKarlImage,
+      href: "/case-studies/craig-and-karl-beijing-museum-show/",
       client: t("北京，中国", "Beijing, China"),
       achievement: t("首次", "First"),
       achievementDesc: t("在中国的个人巡回展览", "solo touring exhibition in China"),
@@ -77,6 +79,7 @@ export function CaseStudies() {
       title: t("K11 SHENYANG", "K11 SHENYANG"),
       subtitle: t("艺术作品收藏", "ARTWORKS COLLECTION"),
       image: k11Image,
+      href: "/case-studies/k11-shenyang-public-art-collection/",
       client: t("沈阳，中国", "Shenyang, China"),
       achievement: "30+",
       achievementDesc: t("大型公共艺术作品", "large-scale public artworks"),
@@ -129,7 +132,7 @@ export function CaseStudies() {
                 <div className="absolute inset-0 bg-[#CCFF00] rounded-lg blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 
                 {/* Card content */}
-                <div className="relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg overflow-hidden transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl cursor-pointer">
+                <a href={project.href} className="block relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg overflow-hidden transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl cursor-pointer">
                   {/* Project Image */}
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <ImageWithFallback
@@ -208,17 +211,12 @@ export function CaseStudies() {
                         ))}
                       </div>
 
-                      {project.href && (
-                        <a
-                          href={project.href}
-                          className="inline-block mt-4 text-xs text-[#CCFF00] hover:text-white transition-colors"
-                        >
-                          {t("鏌ョ湅妗堜緥璇︽儏", "View case details")}
-                        </a>
-                      )}
+                      <span className="inline-block mt-4 text-xs text-[#CCFF00] group-hover:text-white transition-colors">
+                        {t("查看案例详情 →", "View case details →")}
+                      </span>
                     </div>
                   )}
-                </div>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -254,7 +252,7 @@ export function CaseStudies() {
                 <div className="absolute inset-0 bg-[#CCFF00] rounded-lg blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 
                 {/* Card content */}
-                <div className="relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg overflow-hidden transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl cursor-pointer">
+                <a href={project.href} className="block relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg overflow-hidden transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl cursor-pointer">
                   {/* Project Image */}
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <ImageWithFallback
@@ -332,9 +330,13 @@ export function CaseStudies() {
                           </div>
                         ))}
                       </div>
+
+                      <span className="inline-block mt-4 text-xs text-[#CCFF00] group-hover:text-white transition-colors">
+                        {t("查看案例详情 →", "View case details →")}
+                      </span>
                     </div>
                   )}
-                </div>
+                </a>
               </motion.div>
             ))}
           </div>

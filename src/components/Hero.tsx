@@ -15,7 +15,7 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative pt-16 min-h-screen flex items-center overflow-hidden bg-black">
+    <section id="home" className="relative pt-24 pb-16 flex items-center overflow-hidden bg-black">
       {/* Premium Animated Background */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs with neon green */}
@@ -60,13 +60,13 @@ export function Hero() {
       </motion.div>
 
       {/* Hero Content */}
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="container mx-auto px-4 py-8 relative z-10">
         {/* Company Tagline */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-          className="text-center mb-12"
+          className="text-center mb-8"
         >
           <div className="inline-flex items-center gap-6">
             {/* Logo */}
@@ -112,7 +112,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-center mb-16 max-w-4xl mx-auto"
+          className="text-center mb-10 max-w-4xl mx-auto"
         >
           <h2 className="text-xl md:text-2xl text-white mb-4">
             {t("我们是能让创意落地的炼金术士", "We transform visionary ideas into artful reality")}
@@ -126,8 +126,8 @@ export function Hero() {
         </motion.div>
 
         <div className="max-w-5xl mx-auto">
-          <motion.div 
-            className="space-y-10"
+          <motion.div
+            className="space-y-6"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
@@ -206,30 +206,6 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
-
-      {/* Premium Scroll Indicator */}
-      <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center gap-2 cursor-pointer"
-          onClick={() => scrollToSection("services")}
-        >
-          <div className="text-gray-400 text-sm">{t("探索更多", "Explore More")}</div>
-          <div className="w-6 h-10 border-2 border-[#CCFF00]/30 rounded-full flex items-start justify-center p-2">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1.5 h-1.5 bg-[#CCFF00] rounded-full"
-            />
-          </div>
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

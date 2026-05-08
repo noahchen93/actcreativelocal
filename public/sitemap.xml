@@ -191,4 +191,25 @@
       <image:caption>Themed public activation recorded by Singapore Book of Records.</image:caption>
     </image:image>
   </url>
+
+  <url>
+    <loc>https://actcreative.net/case-studies/florentijn-hofman-shanghai-museum-show/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/case-studies/craig-and-karl-beijing-museum-show/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/case-studies/k11-shenyang-public-art-collection/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
