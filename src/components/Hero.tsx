@@ -112,12 +112,32 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-center mb-10 max-w-4xl mx-auto"
+          className="text-center max-w-5xl mx-auto"
+          style={{ marginTop: "3.5rem", marginBottom: "4rem" }}
         >
-          <h2 className="text-xl md:text-2xl text-white mb-4">
-            {t("我们是能让创意落地的炼金术士", "We transform visionary ideas into artful reality")}
+          <h2
+            className="text-white"
+            style={{
+              fontSize: "clamp(1.75rem, 3.6vw, 3rem)",
+              lineHeight: 1.2,
+              fontWeight: 600,
+              letterSpacing: "-0.01em",
+              marginBottom: "1.75rem",
+            }}
+          >
+            {t(
+              "我们是能让创意落地的炼金术士",
+              "We transform visionary ideas into artful reality"
+            )}
           </h2>
-          <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+          <p
+            className="text-gray-400 mx-auto"
+            style={{
+              fontSize: "clamp(1rem, 1.25vw, 1.125rem)",
+              lineHeight: 1.7,
+              maxWidth: "780px",
+            }}
+          >
             {t(
               "立足新加坡，服务东南亚地区的卓越客户，我们与愿景家携手，共同创造沉浸式、有意义且令人难忘的创意现实。",
               "Based in Singapore and serving ambitious clients across Southeast Asia, we partner with visionaries to craft immersive, meaningful, and unforgettable creative realities."
