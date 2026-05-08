@@ -19,19 +19,19 @@ export function TeamSection() {
     {
       name: "Daisy",
       title: t("设计师", "Designer"),
-      location: t("中国总部", "CN HQ"),
+      location: t("制作团队", "Production Studio"),
       image: daisyImage
     },
     {
       name: "Jimmy Tang",
       title: t("供应链专家", "Supply Chain Expert"),
-      location: t("中国总部", "CN HQ"),
+      location: t("制作团队", "Production Studio"),
       image: jimmyTangImage
     },
     {
       name: "Steve Yang",
       title: t("技术总监", "Technical Director"),
-      location: t("中国总部", "CN HQ"),
+      location: t("制作团队", "Production Studio"),
       image: steveYangImage
     }
   ];

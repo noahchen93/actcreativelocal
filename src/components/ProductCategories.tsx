@@ -94,9 +94,9 @@ const productCategories = [
   {
     icon: FileImage,
     title: { zh: "各类印刷品", en: "Printing Materials" },
-    description: { 
-      zh: "各种材料的印刷制品。如时间允许，从中国定制更加高效实惠，包括横幅、展板、宣传册等。",
-      en: "Printing on various materials. When time permits, customizing from China is more efficient and cost-effective, including banners, display boards, brochures, etc."
+    description: {
+      zh: "各种材料的印刷制品，包括横幅、展板、宣传册等。如时间允许，定制路径更加高效实惠。",
+      en: "Printing on various materials including banners, display boards, brochures and more. Custom routes available when timeline allows for cost-effective delivery."
     },
     features: [
       { zh: "PVC横幅、X展架、易拉宝", en: "PVC banners, X-stands, roll-ups" },

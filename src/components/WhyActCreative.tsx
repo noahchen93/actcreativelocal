@@ -11,7 +11,7 @@ export function WhyActCreative() {
       icon: TrendingDown,
       title: t("30%+", "30%+"),
       subtitle: t("成本节省", "Cost Efficiency"),
-      description: t("直接对接中国供应商，省去中间环节", "Direct connection with Chinese suppliers, eliminating intermediaries")
+      description: t("直接对接生产网络，省去中间环节", "Direct production network access, eliminating intermediaries")
     },
     {
       icon: Palette,
@@ -53,8 +53,8 @@ export function WhyActCreative() {
           <div className="w-32 h-1 bg-[#CCFF00] mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-2xl mx-auto">
             {t(
-              "连接中国制造实力与新加坡创意产业，为您提供无可比拟的价值",
-              "Connecting China's manufacturing power with Singapore's creative industry, delivering unmatched value"
+              "整合定制制作能力与新加坡创意产业，为您提供无可比拟的价值",
+              "Pairing custom fabrication capability with Singapore's creative industry, delivering unmatched value"
             )}
           </p>
         </motion.div>

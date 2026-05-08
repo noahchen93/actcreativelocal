@@ -222,7 +222,7 @@ export function CaseStudies() {
           </div>
         </motion.div>
 
-        {/* China Projects Section */}
+        {/* Regional Projects Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -232,7 +232,7 @@ export function CaseStudies() {
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-4xl text-white mb-4 tracking-wide">
-              {t("中国精选项目", "SELECTED PROJECTS IN CHINA")}
+              {t("精选区域项目", "SELECTED REGIONAL PROJECTS")}
             </h2>
             <div className="w-32 h-1 bg-[#CCFF00] mx-auto"></div>
           </div>

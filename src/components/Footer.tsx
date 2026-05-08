@@ -28,11 +28,11 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <img src={logo} alt="ACT Creative — Singapore event fabrication and China production partner" className="h-12 w-auto mb-4" />
+            <img src={logo} alt="ACT Creative — Singapore-based creative production and event fabrication partner" className="h-12 w-auto mb-4" />
             <p className="text-sm mb-4 text-gray-400">
               {t(
-                "专注为新加坡活动行业提供中国定制采购解决方案，让跨境采购变得简单高效。",
-                "Focused on providing China custom procurement solutions for Singapore event industry, making cross-border procurement simple and efficient."
+                "立足新加坡的创意制作伙伴，为活动机构与品牌团队提供定制制作与项目落地支持。",
+                "Singapore-based creative production partner — custom fabrication and project delivery for event agencies and brand teams."
               )}
             </p>
             {/* Social media links removed - will be added when accounts are ready */}
@@ -99,7 +99,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="/china-event-production-support/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("中国生产支持", "China Production Support")}
+                  {t("跨境制作支持", "Cross-Border Production Support")}
                 </a>
               </li>
               <li>

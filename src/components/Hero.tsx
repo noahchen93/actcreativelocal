@@ -114,7 +114,7 @@ export function Hero() {
               className="hero-eyebrow"
               style={{ marginBottom: "1.25rem" }}
             >
-              {t("中国制造 × 新加坡市场", "China Manufacturing × Singapore Market")}
+              {t("创意制作 · 艺术呈现", "Creative Production · Artful Execution")}
             </div>
 
             {/* H1 */}
@@ -149,8 +149,8 @@ export function Hero() {
               }}
             >
               {t(
-                "立足新加坡，连接中国供应链。我们陪伴活动机构、品牌团队与艺术项目，把创意落地为可交付的实物制作。",
-                "Singapore-based, China-connected production partner for event agencies, brand teams and art projects — turning creative concepts into delivered physical work.",
+                "立足新加坡的创意制作伙伴。陪伴活动机构、品牌团队与艺术项目，把创意从概念落地为可交付的实物呈现。",
+                "Singapore-based creative production partner for event agencies, brand teams and art projects — turning visionary concepts into delivered physical work.",
               )}
             </p>
 
@@ -181,24 +181,24 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Trust stats */}
+            {/* Workflow stats */}
             <div className="hero-stats">
               <div>
-                <div className="hero-stat-num">SG</div>
+                <div className="hero-stat-num">IDEA</div>
                 <div className="hero-stat-label">
-                  {t("新加坡本地团队", "Local Singapore team")}
+                  {t("概念与创意方向", "Concept & creative direction")}
                 </div>
               </div>
               <div>
-                <div className="hero-stat-num">CN</div>
+                <div className="hero-stat-num">BUILD</div>
                 <div className="hero-stat-label">
-                  {t("中国供应链网络", "China supply network")}
+                  {t("定制制作与生产", "Custom fabrication & production")}
                 </div>
               </div>
               <div>
-                <div className="hero-stat-num">SEA</div>
+                <div className="hero-stat-num">LIVE</div>
                 <div className="hero-stat-label">
-                  {t("覆盖东南亚 + 港澳", "SEA + HK / Macau delivery")}
+                  {t("现场协调与呈现", "On-site coordination & delivery")}
                 </div>
               </div>
             </div>
