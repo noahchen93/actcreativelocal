@@ -4,6 +4,8 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import bigWorldImage1 from "figma:asset/50a15c0d86a008b03137d5f66091522ea2e22af0.png";
 import wingsArtImage1 from "figma:asset/ce1fae3f9d7c9c86cee5a57f78785bd01887f88b.png";
 import pacmanImage from "figma:asset/b24cf62a1dacab87d8adfc51e494355881e2ebd8.png";
+// TODO: replace this placeholder with a real Artbox project photo when available
+import artboxPlaceholderImage from "figma:asset/1436808f505f19492ee82879766d0c80dc0901a9.png";
 import hofmanImage from "figma:asset/26e483ed6154d773d2210e3142c24d5a30471e92.png";
 import craigKarlImage from "figma:asset/f8ae069f17a75c4bb35568fc55aa9c42b28b80e6.png";
 import k11Image from "figma:asset/9d25bfe44e81512703910c57ed786148c93dcb9b.png";
@@ -46,6 +48,25 @@ export function CaseStudies() {
       recordBy: t("新加坡纪录大全认证", "Recorded by Singapore Book of Records"),
       highlights: [
         t("高观众参与度与完美技术表现", "High audience engagement and flawless technical performance at Sentosa")
+      ]
+    },
+    {
+      title: t("ARTBOX SINGAPORE", "ARTBOX SINGAPORE"),
+      subtitle: t("活动衍生品与物料支持", "Event Merchandise & Materials Support"),
+      image: artboxPlaceholderImage,
+      href: "/case-studies/artbox-singapore-merchandise-materials/",
+      client: t("Artbox Singapore", "Artbox Singapore"),
+      achievement: t("一条龙", "End-to-end"),
+      achievementDesc: t("采购 · 定制 · 物流", "procurement · customization · logistics"),
+      highlights: [
+        t(
+          "定制衍生品采购、打样与生产",
+          "Custom merchandise items sourced, sampled and produced"
+        ),
+        t(
+          "活动物料、包装与物流协调",
+          "Coordinated event materials, packaging and shipment"
+        )
       ]
     }
   ];
@@ -117,8 +138,14 @@ export function CaseStudies() {
             <div className="w-32 h-1 bg-[#CCFF00] mx-auto"></div>
           </div>
 
-          {/* Projects Grid */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Projects Grid — 4 cards: 2x2 on tablet, 1x4 on desktop */}
+          <div
+            className="grid gap-6 mx-auto"
+            style={{
+              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+              maxWidth: "1240px",
+            }}
+          >
             {singaporeProjects.map((project, index) => (
               <motion.div
                 key={index}
