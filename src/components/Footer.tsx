@@ -19,8 +19,8 @@ export function Footer() {
       <div className="absolute top-0 left-0 w-96 h-96 bg-[#CCFF00] rounded-full mix-blend-screen filter blur-3xl opacity-5"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#CCFF00] rounded-full mix-blend-screen filter blur-3xl opacity-5"></div>
 
-      <div className="container mx-auto px-4 py-12 relative z-10">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div className="container mx-auto px-4 py-10 md:py-12 relative z-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-8">
           {/* 公司信息 */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ export function Footer() {
             transition={{ duration: 0.5 }}
           >
             <img src={logo} alt="ACT Creative — Singapore-based creative production and event fabrication partner" className="h-12 w-auto mb-4" />
-            <p className="text-sm mb-4 text-gray-400">
+            <p className="text-sm mb-4 text-gray-400 max-w-sm">
               {t(
                 "立足新加坡的创意制作伙伴，为活动机构与品牌团队提供定制制作与项目落地支持。",
                 "Singapore-based creative production partner — custom fabrication and project delivery for event agencies and brand teams."
@@ -46,7 +46,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h4 className="text-white mb-4">{t("快速链接", "Quick Links")}</h4>
-            <nav className="space-y-2">
+            <nav className="space-y-2 text-sm">
               <a href="/about/" className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {t("关于我们", "About")}
               </a>
@@ -64,6 +64,9 @@ export function Footer() {
               </button>
               <a href="/case-studies/" className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {t("案例总览", "Case Studies")}
+              </a>
+              <a href="/zh/" className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
+                中文
               </a>
               <button onClick={() => scrollToSection("contact")} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {t("联系我们", "Contact")}
@@ -124,11 +127,11 @@ export function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 text-[#CCFF00] mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">contact@actcreative.net</span>
+                <a href="mailto:contact@actcreative.net" className="text-gray-400 hover:text-[#CCFF00] transition-colors">contact@actcreative.net</a>
               </li>
               <li className="flex items-start gap-2">
                 <Phone className="w-4 h-4 text-[#CCFF00] mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">+65 84515268</span>
+                <a href="https://wa.me/6584515268" className="text-gray-400 hover:text-[#CCFF00] transition-colors">+65 84515268</a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#CCFF00] mt-0.5 flex-shrink-0" />

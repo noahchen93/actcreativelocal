@@ -139,28 +139,32 @@ export function Services() {
   const { t } = useLanguage();
   const [hoveredStep, setHoveredStep] = useState<number | null>(null);
   const [expandedStep, setExpandedStep] = useState<number | null>(null);
+  const [showAllSteps, setShowAllSteps] = useState(false);
+  const visibleMobileSteps = showAllSteps
+    ? serviceFlowData
+    : serviceFlowData.slice(0, 4);
 
   return (
-    <section id="services" className="py-20 bg-black relative overflow-hidden">
+    <section id="services" className="py-14 md:py-20 bg-black relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#CCFF00] rounded-full mix-blend-screen filter blur-3xl opacity-5 animate-float"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#CCFF00] rounded-full mix-blend-screen filter blur-3xl opacity-5 animate-float" style={{ animationDelay: '1s' }}></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
-          className="text-center max-w-3xl mx-auto mb-12"
+          className="text-center max-w-3xl mx-auto mb-10 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="inline-block px-6 py-3 bg-[#CCFF00] text-black rounded-full mb-4 shadow-lg">
+          <div className="inline-block px-5 py-2.5 bg-[#CCFF00] text-black rounded-lg mb-4 shadow-lg">
             {t("一条龙服务流程 🎪", "End-to-End Service Flow 🎪")}
           </div>
-          <h2 className="text-white mb-4">
+          <h2 className="text-3xl md:text-4xl text-white mb-4">
             {t("您只需等待收货，其他交给我们", "You Just Wait for Delivery, We Handle the Rest")}
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-400 text-base md:text-lg">
             {t(
               "从咨询到维护，8个环节无缝衔接，让跨境采购变得像网购一样简单 ✨",
               "From consultation to maintenance, 8 seamless steps make cross-border procurement as easy as online shopping ✨"
@@ -467,65 +471,88 @@ export function Services() {
           </motion.div>
         </div>
 
-        {/* Mobile & Tablet Flow - Vertical Layout */}
-        <div className="lg:hidden grid gap-6 mb-12">
-          {serviceFlowData.map((service, index) => (
+        {/* Mobile & Tablet Flow - Compact Vertical Layout */}
+        <div className="lg:hidden grid gap-4 mb-8">
+          {visibleMobileSteps.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.06 }}
             >
-              <Card className="bg-[#1a1a1a] backdrop-blur-sm border-2 border-transparent hover:border-[#CCFF00]/50 shadow-lg hover:shadow-2xl transition-all relative">
-                <CardContent className="p-6">
+              <Card
+                className={`bg-[#1a1a1a] backdrop-blur-sm border transition-all relative ${
+                  expandedStep === index
+                    ? "border-[#CCFF00]/70"
+                    : "border-[#CCFF00]/20"
+                }`}
+                onClick={() => setExpandedStep(expandedStep === index ? null : index)}
+              >
+                <CardContent className="p-5">
                   {/* Step Number Badge */}
-                  <div className={`absolute -top-3 -left-3 w-10 h-10 bg-gradient-to-br ${service.gradient} rounded-full flex items-center justify-center text-black shadow-lg z-10 border-2 border-black`}>
+                  <div className={`absolute -top-2 -left-2 w-8 h-8 bg-gradient-to-br ${service.gradient} rounded-lg flex items-center justify-center text-black shadow-lg z-10 border border-black`}>
                     <span className="font-bold">{service.step}</span>
                   </div>
 
-                  <div className="flex items-start gap-4 mt-2">
+                  <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
-                      <div className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-lg relative`}>
-                        <service.icon className="w-8 h-8 text-black" />
-                        <span className="absolute -top-2 -right-2 text-2xl">{service.emoji}</span>
+                      <div className={`w-12 h-12 bg-gradient-to-br ${service.gradient} rounded-lg flex items-center justify-center shadow-lg relative`}>
+                        <service.icon className="w-6 h-6 text-black" />
                       </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="mb-2 text-white">{t(service.title.zh, service.title.en)}</h3>
-                      <p className="text-sm text-gray-400 mb-3">
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start justify-between gap-3">
+                        <h3 className="mb-1 text-white">{t(service.title.zh, service.title.en)}</h3>
+                        <span className="text-xs text-[#CCFF00] whitespace-nowrap">
+                          {expandedStep === index ? t("收起", "Close") : t("详情", "Details")}
+                        </span>
+                      </div>
+                      <p className="text-sm text-gray-400">
                         {t(service.description.zh, service.description.en)}
                       </p>
-                      <ul className="space-y-2">
-                        {service.details.map((detail, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm text-gray-400">
-                            <div className={`w-1.5 h-1.5 bg-gradient-to-r ${service.gradient} rounded-full mt-2 flex-shrink-0`} />
-                            <span>{t(detail.zh, detail.en)}</span>
-                          </li>
-                        ))}
-                      </ul>
                     </div>
                   </div>
-                  {index < serviceFlowData.length - 1 && (
-                    <div className="mt-4 flex justify-center">
-                      <motion.div
-                        animate={{ y: [0, 5, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.5 }}
-                        className={`w-8 h-8 bg-gradient-to-b ${service.gradient} rounded-full flex items-center justify-center`}
-                      >
-                        <ArrowDown className="w-5 h-5 text-black" />
-                      </motion.div>
-                    </div>
-                  )}
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: expandedStep === index ? "auto" : 0,
+                      opacity: expandedStep === index ? 1 : 0,
+                    }}
+                    transition={{ duration: 0.25 }}
+                    className="overflow-hidden"
+                  >
+                    <ul className="space-y-2 mt-4 pt-4 border-t border-[#CCFF00]/20">
+                      {service.details.map((detail, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-400">
+                          <CheckCircle2 className="w-4 h-4 flex-shrink-0 mt-0.5 text-[#CCFF00]" />
+                          <span>{t(detail.zh, detail.en)}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
 
+        {!showAllSteps && (
+          <div className="lg:hidden mb-10 text-center">
+            <button
+              type="button"
+              onClick={() => setShowAllSteps(true)}
+              className="inline-flex items-center gap-2 rounded-lg border border-[#CCFF00]/40 px-5 py-3 text-sm text-[#CCFF00] transition-all hover:bg-[#CCFF00] hover:text-black"
+            >
+              <ArrowDown className="w-4 h-4" />
+              {t("查看完整交付流程", "View full delivery flow")}
+            </button>
+          </div>
+        )}
+
         {/* Final Outcome - You Just Receive */}
         <motion.div
-          className="bg-gradient-to-r from-[#CCFF00] to-[#b8e600] text-black rounded-3xl p-6 lg:p-8 shadow-2xl relative overflow-hidden"
+          className="bg-gradient-to-r from-[#CCFF00] to-[#b8e600] text-black rounded-lg p-5 md:p-8 shadow-2xl relative overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -537,16 +564,16 @@ export function Services() {
 
           <div className="relative z-10 text-center">
             <motion.div
-              className="text-5xl mb-6"
+              className="hidden md:block text-5xl mb-6"
               animate={{ rotate: [0, 10, -10, 10, 0] }}
               transition={{ repeat: Infinity, duration: 2, repeatDelay: 3 }}
             >
               📦
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-3 md:gap-6 max-w-4xl mx-auto">
               <motion.div
-                className="bg-black/10 backdrop-blur-sm rounded-2xl p-6 border border-black/20"
+                className="bg-black/10 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-black/20"
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.15)" }}
               >
                 <div className="text-4xl mb-3">⏱️</div>
@@ -557,7 +584,7 @@ export function Services() {
               </motion.div>
 
               <motion.div
-                className="bg-black/10 backdrop-blur-sm rounded-2xl p-6 border border-black/20"
+                className="bg-black/10 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-black/20"
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.15)" }}
               >
                 <div className="text-4xl mb-3">💰</div>
@@ -568,7 +595,7 @@ export function Services() {
               </motion.div>
 
               <motion.div
-                className="bg-black/10 backdrop-blur-sm rounded-2xl p-6 border border-black/20"
+                className="bg-black/10 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-black/20"
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.15)" }}
               >
                 <div className="text-4xl mb-3">😌</div>
@@ -580,7 +607,7 @@ export function Services() {
             </div>
 
             <motion.div
-              className="mt-8 inline-flex items-center gap-3 bg-black text-[#CCFF00] px-8 py-4 rounded-full shadow-lg cursor-pointer"
+              className="mt-6 md:mt-8 inline-flex items-center justify-center gap-3 bg-black text-[#CCFF00] px-5 md:px-8 py-3 md:py-4 rounded-lg shadow-lg cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {

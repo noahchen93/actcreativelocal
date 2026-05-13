@@ -54,7 +54,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-[#0a0a0a] relative overflow-hidden"
+      className="py-14 md:py-20 bg-[#0a0a0a] relative overflow-hidden"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
@@ -67,9 +67,9 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-4xl text-white mb-4 tracking-wide">
+          <h2 className="text-3xl md:text-4xl text-white mb-4 tracking-wide">
             {t(
               "让我们将您的愿景变为现实",
               "LET'S TURN YOUR VISION INTO REALITY"
@@ -79,7 +79,7 @@ export function Contact() {
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-5 md:gap-8">
             {/* WhatsApp */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -90,10 +90,10 @@ export function Contact() {
             >
               <div className="absolute inset-0 bg-[#CCFF00] rounded-lg blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
 
-              <div className="relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg p-8 text-center h-full transform transition-transform duration-300 group-hover:-translate-y-2 flex flex-col">
-                <div className="flex justify-center mb-6">
-                  <div className="w-20 h-20 rounded-full bg-[#CCFF00] flex items-center justify-center">
-                    <MessageCircle className="w-10 h-10 text-black" />
+              <div className="relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg p-6 md:p-8 text-center h-full transform transition-transform duration-300 group-hover:-translate-y-2 flex flex-col">
+                <div className="flex justify-center mb-4 md:mb-6">
+                  <div className="w-14 h-14 md:w-20 md:h-20 rounded-lg bg-[#CCFF00] flex items-center justify-center">
+                    <MessageCircle className="w-7 h-7 md:w-10 md:h-10 text-black" />
                   </div>
                 </div>
 
@@ -101,7 +101,7 @@ export function Contact() {
                   {t("WhatsApp 咨询", "WhatsApp Consultation")}
                 </h3>
 
-                <p className="text-gray-400 text-sm mb-6">
+                <p className="text-gray-400 text-sm mb-4 md:mb-6">
                   {t(
                     "快速响应，即时沟通",
                     "Quick response, instant communication"
@@ -110,7 +110,7 @@ export function Contact() {
 
                 {/* Visible WhatsApp number */}
                 <p
-                  className="text-white text-base mb-6"
+                  className="text-white text-base mb-4 md:mb-6"
                   style={{ fontWeight: 500, letterSpacing: "0.02em" }}
                 >
                   +65 8451 5268
@@ -135,10 +135,10 @@ export function Contact() {
             >
               <div className="absolute inset-0 bg-[#CCFF00] rounded-lg blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
 
-              <div className="relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg p-8 text-center h-full transform transition-transform duration-300 group-hover:-translate-y-2 flex flex-col">
-                <div className="flex justify-center mb-6">
-                  <div className="w-20 h-20 rounded-full bg-[#CCFF00] flex items-center justify-center">
-                    <Mail className="w-10 h-10 text-black" />
+              <div className="relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg p-6 md:p-8 text-center h-full transform transition-transform duration-300 group-hover:-translate-y-2 flex flex-col">
+                <div className="flex justify-center mb-4 md:mb-6">
+                  <div className="w-14 h-14 md:w-20 md:h-20 rounded-lg bg-[#CCFF00] flex items-center justify-center">
+                    <Mail className="w-7 h-7 md:w-10 md:h-10 text-black" />
                   </div>
                 </div>
 
@@ -146,7 +146,7 @@ export function Contact() {
                   {t("邮件咨询", "Email Consultation")}
                 </h3>
 
-                <p className="text-gray-400 text-sm mb-6">
+                <p className="text-gray-400 text-sm mb-4 md:mb-6">
                   {t(
                     "详细方案，专业回复",
                     "Detailed solutions, professional response"
@@ -156,7 +156,7 @@ export function Contact() {
                 {/* Visible email address — clickable + copyable */}
                 <button
                   onClick={copyEmail}
-                  className="text-white text-base mb-6 inline-flex items-center justify-center gap-2 hover:text-[#CCFF00] transition-colors group/email"
+                  className="text-white text-base mb-4 md:mb-6 inline-flex items-center justify-center gap-2 hover:text-[#CCFF00] transition-colors group/email"
                   style={{ fontWeight: 500 }}
                   aria-label={t("复制邮箱", "Copy email address")}
                   title={t("点击复制", "Click to copy")}
@@ -184,16 +184,16 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mt-12 text-center"
+            className="mt-8 md:mt-12 text-center"
           >
-            <div className="bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg p-8">
-              <p className="text-gray-300 mb-4">
+            <div className="bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg p-6 md:p-8">
+              <p className="text-gray-300 mb-4 text-sm md:text-base">
                 {t(
                   "我们的团队随时待命，为您提供专业的咨询服务。无论是大型活动还是小型项目，我们都能为您量身定制解决方案。",
                   "Our team is always ready to provide professional consultation services. Whether it's a large-scale event or small project, we can tailor solutions for you."
                 )}
               </p>
-              <div className="flex items-center justify-center gap-8 text-sm text-gray-400 flex-wrap">
+              <div className="flex items-center justify-center gap-4 md:gap-8 text-sm text-gray-400 flex-wrap">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-[#CCFF00] rounded-full animate-pulse"></div>
                   <span>{t("24小时响应", "24h Response")}</span>

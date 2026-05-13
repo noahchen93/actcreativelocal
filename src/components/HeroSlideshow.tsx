@@ -63,7 +63,7 @@ export function HeroSlideshow() {
         position: "relative",
         width: "100%",
         flex: 1,
-        minHeight: "480px",
+        minHeight: "clamp(260px, 42vw, 480px)",
         overflow: "hidden",
         borderRadius: "1rem",
         background: "#0a0a0a",

@@ -28,7 +28,7 @@ export function WhyActCreative() {
   ];
 
   return (
-    <section id="solutions" className="py-20 bg-black relative overflow-hidden">
+    <section id="solutions" className="py-14 md:py-20 bg-black relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(204,255,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(204,255,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -45,9 +45,9 @@ export function WhyActCreative() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-4xl text-white mb-4 tracking-wide">
+          <h2 className="text-3xl md:text-4xl text-white mb-4 tracking-wide">
             {t("为什么选择 ACT CREATIVE", "WHY ACT CREATIVE")}
           </h2>
           <div className="w-32 h-1 bg-[#CCFF00] mx-auto mb-6"></div>
@@ -60,7 +60,7 @@ export function WhyActCreative() {
         </motion.div>
 
         {/* Core Value Propositions - 3大核心价值 */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
+        <div className="grid md:grid-cols-3 gap-5 md:gap-8 max-w-6xl mx-auto">
           {coreValues.map((value, index) => {
             const Icon = value.icon;
             return (
@@ -76,18 +76,18 @@ export function WhyActCreative() {
                 <div className="absolute inset-0 bg-[#CCFF00] rounded-lg blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 
                 {/* Card content */}
-                <div className="relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg p-8 text-center h-full transform transition-transform duration-300 group-hover:-translate-y-2">
-                  <div className="flex justify-center mb-6">
-                    <div className="w-20 h-20 rounded-full bg-[#CCFF00] flex items-center justify-center">
-                      <Icon className="w-10 h-10 text-black" />
+                <div className="relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg p-6 md:p-8 text-center h-full transform transition-transform duration-300 group-hover:-translate-y-2">
+                  <div className="flex justify-center mb-4 md:mb-6">
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg bg-[#CCFF00] flex items-center justify-center">
+                      <Icon className="w-8 h-8 md:w-10 md:h-10 text-black" />
                     </div>
                   </div>
                   
-                  <div className="text-5xl text-[#CCFF00] mb-2">
+                  <div className="text-4xl md:text-5xl text-[#CCFF00] mb-2">
                     {value.title}
                   </div>
                   
-                  <div className="text-xl text-white mb-4">
+                  <div className="text-lg md:text-xl text-white mb-3 md:mb-4">
                     {value.subtitle}
                   </div>
                   

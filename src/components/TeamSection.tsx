@@ -37,7 +37,46 @@ export function TeamSection() {
   ];
 
   return (
-    <section id="team" className="py-20 bg-black relative overflow-hidden">
+    <section id="team" className="py-14 md:py-20 bg-black relative overflow-hidden">
+      <style>{`
+        .team-grid-card {
+          display: flex;
+          align-items: center;
+        }
+        .team-photo {
+          width: 5rem;
+          height: 5rem;
+          flex-shrink: 0;
+          padding: 0.75rem;
+        }
+        .team-info {
+          min-width: 0;
+          padding: 1rem;
+          text-align: left;
+        }
+        .team-info-row {
+          justify-content: flex-start;
+        }
+        @media (min-width: 768px) {
+          .team-grid-card {
+            display: block;
+          }
+          .team-photo {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            padding: 1.5rem;
+          }
+          .team-info {
+            padding: 1.5rem;
+            text-align: center;
+          }
+          .team-info-row {
+            justify-content: center;
+          }
+        }
+      `}</style>
+
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(204,255,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(204,255,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -54,16 +93,16 @@ export function TeamSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-4xl text-white mb-4 tracking-wide">
+          <h2 className="text-3xl md:text-4xl text-white mb-4 tracking-wide">
             {t("核心团队与全球网络", "Core Team & Global Network")}
           </h2>
           <div className="w-32 h-1 bg-[#CCFF00] mx-auto"></div>
         </motion.div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -77,9 +116,9 @@ export function TeamSection() {
               <div className="absolute inset-0 bg-[#CCFF00] rounded-lg blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
               
               {/* Card content */}
-              <div className="relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg overflow-hidden transform transition-transform duration-300 group-hover:-translate-y-2">
+              <div className="team-grid-card relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg overflow-hidden transform transition-transform duration-300 group-hover:-translate-y-2">
                 {/* Member Image */}
-                <div className="aspect-square overflow-hidden bg-[#1a1a1a] flex items-center justify-center p-6">
+                <div className="team-photo overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
                   <img
                     src={member.image}
                     alt={`${member.name} — ACT Creative Singapore team member portrait`}
@@ -88,17 +127,17 @@ export function TeamSection() {
                 </div>
                 
                 {/* Member Info */}
-                <div className="p-6 text-center">
-                  <h3 className="text-xl text-white mb-2">
+                <div className="team-info">
+                  <h3 className="text-lg md:text-xl text-white mb-2">
                     {member.name}
                   </h3>
                   
-                  <div className="flex items-center justify-center gap-2 text-[#CCFF00] mb-2">
+                  <div className="team-info-row flex items-center gap-2 text-[#CCFF00] mb-2">
                     <Briefcase className="w-4 h-4" />
                     <span className="text-sm">{member.title}</span>
                   </div>
                   
-                  <div className="flex items-center justify-center gap-2 text-gray-400">
+                  <div className="team-info-row flex items-center gap-2 text-gray-400">
                     <MapPin className="w-4 h-4" />
                     <span className="text-sm">{member.location}</span>
                   </div>

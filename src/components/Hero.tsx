@@ -149,8 +149,8 @@ export function Hero() {
               }}
             >
               {t(
-                "立足新加坡的创意制作伙伴。陪伴活动机构、品牌团队与艺术项目，把创意从概念落地为可交付的实物呈现。",
-                "Singapore-based creative production partner for event agencies, brand teams and art projects — turning visionary concepts into delivered physical work.",
+                "立足新加坡的创意制作伙伴。为活动机构、品牌团队与艺术项目交付定制道具、展陈装置、活动搭建与跨境生产支持。",
+                "Singapore-based creative production partner for event agencies and brand teams, covering custom props, installations, event buildouts and China-side production support.",
               )}
             </p>
 
@@ -166,7 +166,7 @@ export function Hero() {
                 style={{ paddingInline: "1.75rem", paddingBlock: "0.95rem" }}
               >
                 <Zap className="w-4 h-4 mr-2" />
-                {t("立即获取方案", "Get Solution Now")}
+                {t("发送项目需求", "Send a Brief")}
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
@@ -177,7 +177,7 @@ export function Hero() {
                 style={{ paddingInline: "1.75rem", paddingBlock: "0.95rem" }}
               >
                 <Award className="w-4 h-4 mr-2" />
-                {t("探索案例", "Explore Cases")}
+                {t("查看案例", "View Work")}
               </Button>
             </div>
 

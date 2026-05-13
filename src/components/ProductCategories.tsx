@@ -186,9 +186,13 @@ const productCategories = [
 export function ProductCategories() {
   const { t } = useLanguage();
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+  const [showAllCategories, setShowAllCategories] = useState(false);
+  const visibleCategories = showAllCategories
+    ? productCategories
+    : productCategories.slice(0, 6);
 
   return (
-    <section id="products" className="py-20 bg-[#0a0a0a] relative overflow-hidden">
+    <section id="products" className="py-14 md:py-20 bg-[#0a0a0a] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(204,255,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(204,255,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -200,13 +204,13 @@ export function ProductCategories() {
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl text-white mb-4 tracking-wide">
+          <h2 className="text-3xl md:text-4xl text-white mb-4 tracking-wide">
             {t("或许你正在寻找这些", "Perhaps You're Looking for These")}
           </h2>
           <div className="w-32 h-1 bg-[#CCFF00] mx-auto mb-6"></div>
@@ -218,8 +222,8 @@ export function ProductCategories() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 max-w-7xl mx-auto">
-          {productCategories.map((category, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 md:mb-12 max-w-7xl mx-auto">
+          {visibleCategories.map((category, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -321,9 +325,28 @@ export function ProductCategories() {
           ))}
         </div>
 
+        {!showAllCategories && (
+          <motion.div
+            className="mb-12 text-center"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+          >
+            <button
+              type="button"
+              onClick={() => setShowAllCategories(true)}
+              className="inline-flex items-center gap-2 rounded-lg border border-[#CCFF00]/40 px-5 py-3 text-sm text-[#CCFF00] transition-all hover:bg-[#CCFF00] hover:text-black"
+            >
+              <ChevronDown className="w-4 h-4" />
+              {t("查看更多产品类别", "View more categories")}
+            </button>
+          </motion.div>
+        )}
+
         {/* Bottom CTA */}
         <motion.div 
-          className="mt-16 text-center max-w-3xl mx-auto"
+          className="mt-12 md:mt-16 text-center max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -331,10 +354,10 @@ export function ProductCategories() {
         >
           <div className="relative group">
             {/* Glow effect */}
-            <div className="absolute inset-0 bg-[#CCFF00] rounded-2xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+            <div className="absolute inset-0 bg-[#CCFF00] rounded-lg blur-2xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
             
             {/* Content */}
-            <div className="relative bg-[#1a1a1a] border border-[#CCFF00]/30 rounded-2xl p-8">
+            <div className="relative bg-[#1a1a1a] border border-[#CCFF00]/30 rounded-lg p-6 md:p-8">
               <div className="flex flex-col items-center gap-4">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-[#CCFF00] rounded-full flex items-center justify-center">
@@ -351,7 +374,7 @@ export function ProductCategories() {
                   )}
                 </p>
                 <motion.button
-                  className="mt-2 px-8 py-3 bg-[#CCFF00] text-black rounded-full shadow-lg hover:shadow-xl transition-all"
+                  className="mt-2 rounded-lg bg-[#CCFF00] px-8 py-3 text-black shadow-lg transition-all hover:bg-[#b8e600] hover:shadow-xl"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => {

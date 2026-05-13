@@ -111,7 +111,7 @@ export function CaseStudies() {
   ];
 
   return (
-    <section id="cases" className="py-20 bg-[#0a0a0a] relative overflow-hidden">
+    <section id="cases" className="py-14 md:py-20 bg-[#0a0a0a] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(204,255,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(204,255,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -128,11 +128,11 @@ export function CaseStudies() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-20"
+          className="mb-14 md:mb-20"
         >
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl text-white mb-4 tracking-wide">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl text-white mb-4 tracking-wide">
               {t("新加坡精选项目", "SELECTED PROJECTS IN SINGAPORE")}
             </h2>
             <div className="w-32 h-1 bg-[#CCFF00] mx-auto"></div>
@@ -140,7 +140,7 @@ export function CaseStudies() {
 
           {/* Projects Grid — 4 cards: 2x2 on tablet, 1x4 on desktop */}
           <div
-            className="grid gap-6 mx-auto"
+            className="grid gap-5 md:gap-6 mx-auto"
             style={{
               gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
               maxWidth: "1240px",
@@ -170,8 +170,8 @@ export function CaseStudies() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     
                     {/* Project Title Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-2xl text-white mb-1">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+                      <h3 className="text-xl md:text-2xl text-white mb-1">
                         {project.title}
                       </h3>
                       <p className="text-sm text-gray-300">
@@ -180,9 +180,9 @@ export function CaseStudies() {
                     </div>
                   </div>
 
-                  {/* Project Details (only for A BIG BIG WORLD) */}
+                  {/* Project Details */}
                   {project.client && (
-                    <div className="p-6 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
+                    <div className="hidden md:block p-6 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
                       {/* Client */}
                       <div className="mb-4">
                         <p className="text-xs text-gray-500 mb-1">
@@ -243,6 +243,18 @@ export function CaseStudies() {
                       </span>
                     </div>
                   )}
+                  {project.client && (
+                    <div className="md:hidden p-4 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="min-w-0 text-xs text-gray-400 truncate">
+                          {project.client}
+                        </span>
+                        <span className="text-xs text-[#CCFF00] whitespace-nowrap">
+                          {t("查看详情 →", "View details →")}
+                        </span>
+                      </div>
+                    </div>
+                  )}
                 </a>
               </motion.div>
             ))}
@@ -257,15 +269,15 @@ export function CaseStudies() {
           transition={{ duration: 0.8 }}
         >
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-4xl text-white mb-4 tracking-wide">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-3xl md:text-4xl text-white mb-4 tracking-wide">
               {t("精选区域项目", "SELECTED REGIONAL PROJECTS")}
             </h2>
             <div className="w-32 h-1 bg-[#CCFF00] mx-auto"></div>
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
             {chinaProjects.map((project, index) => (
               <motion.div
                 key={index}
@@ -290,8 +302,8 @@ export function CaseStudies() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                     
                     {/* Project Title Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-2xl text-white mb-1">
+                    <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+                      <h3 className="text-xl md:text-2xl text-white mb-1">
                         {project.title}
                       </h3>
                       <p className="text-sm text-gray-300">
@@ -300,9 +312,9 @@ export function CaseStudies() {
                     </div>
                   </div>
 
-                  {/* Project Details (only for A BIG BIG WORLD) */}
+                  {/* Project Details */}
                   {project.client && (
-                    <div className="p-6 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
+                    <div className="hidden md:block p-6 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
                       {/* Client */}
                       <div className="mb-4">
                         <p className="text-xs text-gray-500 mb-1">
@@ -361,6 +373,18 @@ export function CaseStudies() {
                       <span className="inline-block mt-4 text-xs text-[#CCFF00] group-hover:text-white transition-colors">
                         {t("查看案例详情 →", "View case details →")}
                       </span>
+                    </div>
+                  )}
+                  {project.client && (
+                    <div className="md:hidden p-4 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
+                      <div className="flex items-center justify-between gap-3">
+                        <span className="min-w-0 text-xs text-gray-400 truncate">
+                          {project.client}
+                        </span>
+                        <span className="text-xs text-[#CCFF00] whitespace-nowrap">
+                          {t("查看详情 →", "View details →")}
+                        </span>
+                      </div>
                     </div>
                   )}
                 </a>
