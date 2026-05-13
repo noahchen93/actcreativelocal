@@ -25,7 +25,7 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#CCFF00]/20">
       <style>{`
         .act-header-row {
-          min-height: 86px;
+          min-height: 82px;
         }
         .act-desktop-nav {
           display: none;
@@ -35,25 +35,18 @@ export function Header() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 40px;
-          padding: 0.6rem 1rem;
-          border: 1px solid rgba(204, 255, 0, 0.18);
-          border-radius: 0.65rem;
-          background: rgba(26, 26, 26, 0.72);
-          color: rgba(255, 255, 255, 0.88);
+          min-height: 38px;
+          padding: 0.55rem 0.1rem;
+          color: rgba(255, 255, 255, 0.74);
           font-size: 0.9rem;
-          font-weight: 650;
-          line-height: 1;
+          font-weight: 600;
+          line-height: 1.1;
           white-space: nowrap;
-          transition: transform 180ms ease, color 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+          transition: color 180ms ease, opacity 180ms ease;
         }
         .act-nav-pill:hover,
         .act-nav-pill:focus-visible {
           color: #CCFF00;
-          border-color: rgba(204, 255, 0, 0.58);
-          background: rgba(204, 255, 0, 0.09);
-          box-shadow: 0 10px 30px -18px rgba(204, 255, 0, 0.75);
-          transform: translateY(-1px);
           outline: none;
         }
         .act-nav-pill::after {
@@ -61,11 +54,11 @@ export function Header() {
           position: absolute;
           left: 1rem;
           right: 1rem;
-          bottom: 0.38rem;
-          height: 1px;
+          bottom: 0.25rem;
+          height: 2px;
           background: #CCFF00;
           opacity: 0;
-          transform: scaleX(0.35);
+          transform: scaleX(0.2);
           transition: opacity 180ms ease, transform 180ms ease;
         }
         .act-nav-pill:hover::after,
@@ -83,11 +76,12 @@ export function Header() {
           .act-desktop-nav {
             display: flex;
             align-items: center;
-            gap: 0.7rem;
-            padding: 0.35rem;
+            gap: 1.35rem;
+            padding: 0.35rem 0;
             border: 1px solid rgba(204, 255, 0, 0.16);
-            border-radius: 0.9rem;
-            background: rgba(10, 10, 10, 0.58);
+            border-left: 0;
+            border-right: 0;
+            background: transparent;
           }
           .act-header-actions {
             display: flex;
@@ -100,10 +94,10 @@ export function Header() {
         }
         @media (min-width: 1200px) {
           .act-desktop-nav {
-            gap: 0.85rem;
+            gap: 1.65rem;
           }
           .act-nav-pill {
-            padding-inline: 1.15rem;
+            padding-inline: 0.2rem;
           }
         }
       `}</style>

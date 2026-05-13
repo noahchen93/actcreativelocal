@@ -112,6 +112,50 @@ export function CaseStudies() {
 
   return (
     <section id="cases" className="py-14 md:py-20 bg-[#0a0a0a] relative overflow-hidden">
+      <style>{`
+        .case-study-block {
+          position: relative;
+        }
+        .case-study-block + .case-study-block {
+          margin-top: clamp(5rem, 8vw, 7rem);
+          padding-top: clamp(4rem, 6vw, 5.5rem);
+          border-top: 1px solid rgba(204, 255, 0, 0.14);
+        }
+        .case-section-heading {
+          margin-bottom: clamp(2.25rem, 3.6vw, 3.25rem);
+        }
+        .case-section-heading h2 {
+          max-width: 980px;
+        }
+        .case-grid {
+          display: grid;
+          gap: clamp(1.5rem, 2.1vw, 2rem);
+          margin-inline: auto;
+        }
+        .case-grid--singapore {
+          grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+          max-width: 1240px;
+        }
+        .case-grid--regional {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          max-width: 1160px;
+        }
+        .case-card {
+          height: 100%;
+        }
+        .case-card-detail {
+          padding: 1.5rem;
+        }
+        @media (max-width: 767px) {
+          .case-study-block + .case-study-block {
+            margin-top: 4rem;
+            padding-top: 3.25rem;
+          }
+          .case-grid--regional {
+            grid-template-columns: 1fr;
+          }
+        }
+      `}</style>
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(204,255,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(204,255,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -128,10 +172,10 @@ export function CaseStudies() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-14 md:mb-20"
+          className="case-study-block"
         >
           {/* Section Header */}
-          <div className="text-center mb-8 md:mb-12">
+          <div className="case-section-heading text-center">
             <h2 className="text-3xl md:text-4xl text-white mb-4 tracking-wide">
               {t("新加坡精选项目", "SELECTED PROJECTS IN SINGAPORE")}
             </h2>
@@ -139,13 +183,7 @@ export function CaseStudies() {
           </div>
 
           {/* Projects Grid — 4 cards: 2x2 on tablet, 1x4 on desktop */}
-          <div
-            className="grid gap-5 md:gap-6 mx-auto"
-            style={{
-              gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-              maxWidth: "1240px",
-            }}
-          >
+          <div className="case-grid case-grid--singapore">
             {singaporeProjects.map((project, index) => (
               <motion.div
                 key={index}
@@ -159,7 +197,7 @@ export function CaseStudies() {
                 <div className="absolute inset-0 bg-[#CCFF00] rounded-lg blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 
                 {/* Card content */}
-                <a href={project.href} className="block relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg overflow-hidden transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl cursor-pointer">
+                <a href={project.href} className="case-card block relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg overflow-hidden transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl cursor-pointer">
                   {/* Project Image */}
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <ImageWithFallback
@@ -182,7 +220,7 @@ export function CaseStudies() {
 
                   {/* Project Details */}
                   {project.client && (
-                    <div className="hidden md:block p-6 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
+                    <div className="case-card-detail hidden md:block bg-[#0a0a0a] border-t border-[#CCFF00]/10">
                       {/* Client */}
                       <div className="mb-4">
                         <p className="text-xs text-gray-500 mb-1">
@@ -267,9 +305,10 @@ export function CaseStudies() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          className="case-study-block"
         >
           {/* Section Header */}
-          <div className="text-center mb-8 md:mb-12">
+          <div className="case-section-heading text-center">
             <h2 className="text-3xl md:text-4xl text-white mb-4 tracking-wide">
               {t("精选区域项目", "SELECTED REGIONAL PROJECTS")}
             </h2>
@@ -277,7 +316,7 @@ export function CaseStudies() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
+          <div className="case-grid case-grid--regional">
             {chinaProjects.map((project, index) => (
               <motion.div
                 key={index}
@@ -291,7 +330,7 @@ export function CaseStudies() {
                 <div className="absolute inset-0 bg-[#CCFF00] rounded-lg blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 
                 {/* Card content */}
-                <a href={project.href} className="block relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg overflow-hidden transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl cursor-pointer">
+                <a href={project.href} className="case-card block relative bg-[#1a1a1a] border border-[#CCFF00]/20 rounded-lg overflow-hidden transform transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl cursor-pointer">
                   {/* Project Image */}
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <ImageWithFallback
@@ -314,7 +353,7 @@ export function CaseStudies() {
 
                   {/* Project Details */}
                   {project.client && (
-                    <div className="hidden md:block p-6 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
+                    <div className="case-card-detail hidden md:block bg-[#0a0a0a] border-t border-[#CCFF00]/10">
                       {/* Client */}
                       <div className="mb-4">
                         <p className="text-xs text-gray-500 mb-1">
