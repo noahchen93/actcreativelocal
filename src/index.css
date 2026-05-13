@@ -2726,3 +2726,103 @@ html {
 html, body, button, input, select, textarea {
   font-family: var(--font-sans);
 }
+
+/* ========== ACT homepage layout corrections ========== */
+#cases,
+#products,
+#solutions,
+#services,
+#team,
+#contact {
+  scroll-margin-top: 104px;
+  padding-top: 4.75rem !important;
+  padding-bottom: 4.75rem !important;
+}
+
+#products,
+#solutions,
+#services,
+#team,
+#contact {
+  border-top: 1px solid rgba(204, 255, 0, 0.12);
+}
+
+#cases h2,
+#products h2,
+#solutions h2,
+#services h2,
+#team h2,
+#contact h2 {
+  max-width: 1120px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  color: #ffffff !important;
+  font-size: clamp(2.6rem, 9vw, 3.75rem) !important;
+  line-height: 0.98 !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  text-wrap: balance;
+}
+
+#cases h2 + div,
+#products h2 + div,
+#solutions h2 + div,
+#team h2 + div,
+#contact h2 + div {
+  width: clamp(7rem, 24vw, 12rem) !important;
+  height: 5px !important;
+  margin-top: 1.35rem !important;
+  margin-bottom: 2.25rem !important;
+  border-radius: 999px;
+  box-shadow: 0 0 24px rgba(204, 255, 0, 0.35);
+}
+
+#products h2 + div + p,
+#solutions h2 + div + p,
+#services h2 + p {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.35rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+@media (min-width: 1024px) {
+  #cases,
+  #products,
+  #solutions,
+  #services,
+  #team,
+  #contact {
+    padding-top: 7.5rem !important;
+    padding-bottom: 7.75rem !important;
+  }
+
+  #cases h2,
+  #products h2,
+  #solutions h2,
+  #services h2,
+  #team h2,
+  #contact h2 {
+    font-size: clamp(3.8rem, 5.2vw, 5.6rem) !important;
+    line-height: 0.92 !important;
+  }
+
+  #services h2,
+  #contact h2 {
+    max-width: 980px;
+    font-size: clamp(3.25rem, 4.3vw, 4.8rem) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  #cases h2,
+  #products h2,
+  #solutions h2,
+  #services h2,
+  #team h2,
+  #contact h2 {
+    font-size: clamp(2.2rem, 10vw, 3rem) !important;
+  }
+}

@@ -23,8 +23,92 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#CCFF00]/20">
+      <style>{`
+        .act-header-row {
+          min-height: 86px;
+        }
+        .act-desktop-nav {
+          display: none;
+        }
+        .act-nav-pill {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 40px;
+          padding: 0.6rem 1rem;
+          border: 1px solid rgba(204, 255, 0, 0.18);
+          border-radius: 0.65rem;
+          background: rgba(26, 26, 26, 0.72);
+          color: rgba(255, 255, 255, 0.88);
+          font-size: 0.9rem;
+          font-weight: 650;
+          line-height: 1;
+          white-space: nowrap;
+          transition: transform 180ms ease, color 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+        }
+        .act-nav-pill:hover,
+        .act-nav-pill:focus-visible {
+          color: #CCFF00;
+          border-color: rgba(204, 255, 0, 0.58);
+          background: rgba(204, 255, 0, 0.09);
+          box-shadow: 0 10px 30px -18px rgba(204, 255, 0, 0.75);
+          transform: translateY(-1px);
+          outline: none;
+        }
+        .act-nav-pill::after {
+          content: "";
+          position: absolute;
+          left: 1rem;
+          right: 1rem;
+          bottom: 0.38rem;
+          height: 1px;
+          background: #CCFF00;
+          opacity: 0;
+          transform: scaleX(0.35);
+          transition: opacity 180ms ease, transform 180ms ease;
+        }
+        .act-nav-pill:hover::after,
+        .act-nav-pill:focus-visible::after {
+          opacity: 1;
+          transform: scaleX(1);
+        }
+        .act-header-actions {
+          display: none;
+        }
+        .act-mobile-actions {
+          display: flex;
+        }
+        @media (min-width: 1024px) {
+          .act-desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            padding: 0.35rem;
+            border: 1px solid rgba(204, 255, 0, 0.16);
+            border-radius: 0.9rem;
+            background: rgba(10, 10, 10, 0.58);
+          }
+          .act-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+          }
+          .act-mobile-actions {
+            display: none;
+          }
+        }
+        @media (min-width: 1200px) {
+          .act-desktop-nav {
+            gap: 0.85rem;
+          }
+          .act-nav-pill {
+            padding-inline: 1.15rem;
+          }
+        }
+      `}</style>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="act-header-row flex items-center justify-between">
           <motion.div 
             className="flex items-center gap-3"
             whileHover={{ scale: 1.02 }}
@@ -33,45 +117,40 @@ export function Header() {
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-7">
+          <nav className="act-desktop-nav" aria-label="Primary navigation">
             <button
               onClick={() => scrollToSection("cases")}
-              className="text-white hover:text-[#CCFF00] transition-colors relative group"
+              className="act-nav-pill"
             >
               {t("案例", "Work")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#CCFF00] group-hover:w-full transition-all"></span>
             </button>
             <button 
               onClick={() => scrollToSection("services")} 
-              className="text-white hover:text-[#CCFF00] transition-colors relative group"
+              className="act-nav-pill"
             >
               {t("服务", "Services")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#CCFF00] group-hover:w-full transition-all"></span>
             </button>
             <button 
               onClick={() => scrollToSection("products")} 
-              className="text-white hover:text-[#CCFF00] transition-colors relative group"
+              className="act-nav-pill"
             >
               {t("产品", "Products")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#CCFF00] group-hover:w-full transition-all"></span>
             </button>
             <a
               href="/about/"
-              className="text-white hover:text-[#CCFF00] transition-colors relative group"
+              className="act-nav-pill"
             >
               {t("关于", "About")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#CCFF00] group-hover:w-full transition-all"></span>
             </a>
             <button 
               onClick={() => scrollToSection("contact")} 
-              className="text-white hover:text-[#CCFF00] transition-colors relative group"
+              className="act-nav-pill"
             >
               {t("联系我们", "Contact")}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#CCFF00] group-hover:w-full transition-all"></span>
             </button>
           </nav>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="act-header-actions">
             {/* Language Toggle Button */}
             <motion.button
               onClick={goToChineseSite}
@@ -93,7 +172,7 @@ export function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center gap-2">
+          <div className="act-mobile-actions items-center gap-2">
             {/* Mobile Language Toggle */}
             <motion.button
               onClick={goToChineseSite}
