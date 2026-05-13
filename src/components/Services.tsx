@@ -552,7 +552,7 @@ export function Services() {
                 <div className="text-4xl mb-3">⏱️</div>
                 <div className="mb-2">{t("节省时间", "Save Time")}</div>
                 <div className="text-sm text-black/60">
-                  {t("无需自己对接供应���", "No need to contact suppliers")}
+                  {t("无需自己对接供应商", "No need to contact suppliers")}
                 </div>
               </motion.div>
 

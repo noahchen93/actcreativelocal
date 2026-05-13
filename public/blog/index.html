@@ -24,12 +24,23 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Blog",
-      "@id": "https://actcreative.net/blog/#blog",
-      "name": "ACT Creative Blog",
-      "url": "https://actcreative.net/blog/",
-      "description": "Practical guides on Singapore event production, China sourcing, FRP fabrication and cross-border project planning.",
-      "publisher": { "@type": "Organization", "name": "ACT Creative Pte. Ltd.", "url": "https://actcreative.net/" }
+      "@graph": [
+        {
+          "@type": "Blog",
+          "@id": "https://actcreative.net/blog/#blog",
+          "name": "ACT Creative Blog",
+          "url": "https://actcreative.net/blog/",
+          "description": "Practical guides on Singapore event production, China sourcing, FRP fabrication and cross-border project planning.",
+          "publisher": { "@type": "Organization", "name": "ACT Creative Pte. Ltd.", "url": "https://actcreative.net/" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://actcreative.net/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://actcreative.net/blog/" }
+          ]
+        }
+      ]
     }
     </script>
   </head>

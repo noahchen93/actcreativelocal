@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram, Heart } from "lucide-react";
+import { Mail, Phone, MapPin, Heart } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
 import logo from "figma:asset/9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png";
@@ -62,6 +62,9 @@ export function Footer() {
               <button onClick={() => scrollToSection("cases")} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {t("案例", "Cases")}
               </button>
+              <a href="/case-studies/" className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
+                {t("案例总览", "Case Studies")}
+              </a>
               <button onClick={() => scrollToSection("contact")} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {t("联系我们", "Contact")}
               </button>
@@ -129,7 +132,15 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#CCFF00] mt-0.5 flex-shrink-0" />
-                <span className="text-gray-400">{t("新加坡 • 全球供应链", "Singapore • Global Supply Chain")}</span>
+                <span className="text-gray-400">
+                  {t(
+                    "65 Chulia Street #25-03 OCBC Centre, Singapore 049513",
+                    "65 Chulia Street #25-03 OCBC Centre, Singapore 049513"
+                  )}
+                </span>
+              </li>
+              <li className="text-gray-500 pl-6">
+                ACT CREATIVE PTE. LTD. · UEN 202600226K
               </li>
             </ul>
           </motion.div>

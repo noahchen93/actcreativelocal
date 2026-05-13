@@ -14,7 +14,7 @@
   -->
   <url>
     <loc>https://actcreative.net/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/" />
@@ -72,7 +72,7 @@
 
   <url>
     <loc>https://actcreative.net/blog/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -164,15 +164,22 @@
   </url>
 
   <url>
+    <loc>https://actcreative.net/case-studies/</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
 
   <url>
     <loc>https://actcreative.net/case-studies/sentosa-big-big-world-event-fabrication/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
@@ -184,7 +191,7 @@
 
   <url>
     <loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
@@ -196,7 +203,7 @@
 
   <url>
     <loc>https://actcreative.net/case-studies/sentosa-pacman-human-game/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
@@ -208,22 +215,37 @@
 
   <url>
     <loc>https://actcreative.net/case-studies/florentijn-hofman-shanghai-museum-show/</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/images/florentijn-hofman.webp</image:loc>
+      <image:title>Florentijn Hofman China solo touring exhibition production by ACT Creative</image:title>
+      <image:caption>End-to-end museum touring exhibition production across Chinese venues.</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://actcreative.net/case-studies/craig-and-karl-beijing-museum-show/</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/images/craig-karl.webp</image:loc>
+      <image:title>Craig and Karl China solo touring exhibition production by ACT Creative</image:title>
+      <image:caption>Concept-to-install exhibition fabrication with colour-matched finishing.</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://actcreative.net/case-studies/k11-shenyang-public-art-collection/</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/images/k11-shenyang.webp</image:loc>
+      <image:title>K11 Shenyang public artworks collection installed by ACT Creative</image:title>
+      <image:caption>30+ large-scale public artworks installed in a live mall environment.</image:caption>
+    </image:image>
   </url>
 </urlset>
