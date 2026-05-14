@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from "react";
+import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 
 type Language = "zh" | "en";
 
@@ -9,9 +9,51 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const META_COPY = {
+  en: {
+    title: "ACT Creative | Cross-Border Event Fabrication & Production Partner in Singapore",
+    description:
+      "ACT Creative helps event agencies and brands manage custom fabrication, props, exhibition components, FRP/sculpture works and event merchandise from China, with local coordination in Singapore and Southeast Asia.",
+  },
+  zh: {
+    title: "及物创意 ACT Creative | 新加坡跨境活动制作与中国生产支持伙伴",
+    description:
+      "及物创意（ACT Creative）为活动公司与品牌团队提供定制制作、道具、展览组件、FRP 雕塑和活动周边跨境生产支持，覆盖新加坡、东南亚与中国供应链。",
+  },
+};
+
+function isLanguage(value: string | null): value is Language {
+  return value === "zh" || value === "en";
+}
+
+function getInitialLanguage(): Language {
+  if (typeof window === "undefined") {
+    return "en";
+  }
+
+  const urlLanguage = new URLSearchParams(window.location.search).get("lang");
+  if (isLanguage(urlLanguage)) {
+    return urlLanguage;
+  }
+
+  if (window.location.pathname === "/zh" || window.location.pathname.startsWith("/zh/")) {
+    return "zh";
+  }
+
+  return "en";
+}
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+  const [language, setLanguage] = useState<Language>(getInitialLanguage);
+
+  useEffect(() => {
+    const meta = META_COPY[language];
+    const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+
+    document.documentElement.lang = language === "zh" ? "zh-Hans-SG" : "en-SG";
+    document.title = meta.title;
+    description?.setAttribute("content", meta.description);
+  }, [language]);
 
   const t = (zh: string, en: string) => {
     return language === "zh" ? zh : en;

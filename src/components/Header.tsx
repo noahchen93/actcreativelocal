@@ -7,7 +7,7 @@ import logo from "figma:asset/9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -17,9 +17,17 @@ export function Header() {
     }
   };
 
-  const goToChineseSite = () => {
-    window.location.href = "/zh/";
+  const switchLanguage = () => {
+    const nextLanguage = language === "zh" ? "en" : "zh";
+    const nextPath = nextLanguage === "zh" ? "/zh/" : "/";
+    const nextUrl = `${nextPath}${window.location.hash}`;
+
+    setLanguage(nextLanguage);
+    window.history.replaceState(null, "", nextUrl);
+    setIsMenuOpen(false);
   };
+
+  const languageLabel = language === "zh" ? "EN" : "中文";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#CCFF00]/20">
@@ -147,14 +155,14 @@ export function Header() {
           <div className="act-header-actions">
             {/* Language Toggle Button */}
             <motion.button
-              onClick={goToChineseSite}
-              aria-label="Open Chinese site"
+              onClick={switchLanguage}
+              aria-label={language === "zh" ? "Switch to English" : "切换到中文"}
               className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1a1a1a] hover:bg-[#2a2a2a] transition-all border border-[#CCFF00]/20"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Globe className="w-4 h-4 text-[#CCFF00]" />
-              <span className="text-white">中文</span>
+              <span className="text-white">{languageLabel}</span>
             </motion.button>
 
             <Button 
@@ -169,12 +177,12 @@ export function Header() {
           <div className="act-mobile-actions items-center gap-2">
             {/* Mobile Language Toggle */}
             <motion.button
-              onClick={goToChineseSite}
-              aria-label="Open Chinese site"
+              onClick={switchLanguage}
+              aria-label={language === "zh" ? "Switch to English" : "切换到中文"}
               className="p-2 rounded-lg bg-[#1a1a1a] border border-[#CCFF00]/20"
               whileTap={{ scale: 0.9 }}
             >
-              <span className="text-sm text-[#CCFF00]">中文</span>
+              <span className="text-sm text-[#CCFF00]">{languageLabel}</span>
             </motion.button>
 
             <motion.button

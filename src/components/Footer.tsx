@@ -4,13 +4,21 @@ import { useLanguage } from "../contexts/LanguageContext";
 import logo from "figma:asset/9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png";
 
 export function Footer() {
-  const { t } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const switchLanguage = () => {
+    const nextLanguage = language === "zh" ? "en" : "zh";
+    const nextPath = nextLanguage === "zh" ? "/zh/" : "/";
+
+    setLanguage(nextLanguage);
+    window.history.replaceState(null, "", `${nextPath}${window.location.hash}`);
   };
 
   return (
@@ -65,9 +73,9 @@ export function Footer() {
               <a href="/case-studies/" className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {t("案例总览", "Case Studies")}
               </a>
-              <a href="/zh/" className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
-                中文
-              </a>
+              <button onClick={switchLanguage} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
+                {language === "zh" ? "English" : "中文"}
+              </button>
               <button onClick={() => scrollToSection("contact")} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {t("联系我们", "Contact")}
               </button>

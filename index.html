@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
+    <script>
+      document.documentElement.lang =
+        location.pathname === "/zh" || location.pathname.startsWith("/zh/")
+          ? "zh-Hans-SG"
+          : "en-SG";
+    </script>
 
     <!-- Brand font: Inter (Latin), with system CJK fallback -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
