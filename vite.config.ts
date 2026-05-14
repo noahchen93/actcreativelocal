@@ -1,6 +1,7 @@
 
   import { defineConfig, loadEnv, type Plugin } from 'vite';
   import react from '@vitejs/plugin-react-swc';
+  import fs from 'node:fs/promises';
   import path from 'path';
 
   const escapeHtmlAttribute = (value: string) =>
@@ -31,8 +32,59 @@
     return env.GOOGLE_SITE_VERIFICATION || env.VITE_GOOGLE_SITE_VERIFICATION;
   };
 
+  const localizedHomepagePlugin = (): Plugin => ({
+    name: 'localized-homepage',
+    async closeBundle() {
+      const outDir = path.resolve(__dirname, 'build');
+      const indexPath = path.join(outDir, 'index.html');
+      const zhDir = path.join(outDir, 'zh');
+      const zhIndexPath = path.join(zhDir, 'index.html');
+      const zhTitle = '及物创意 ACT Creative | 新加坡跨境活动制作与中国生产支持伙伴';
+      const zhDescription =
+        '及物创意 ACT Creative 为活动机构、品牌团队与艺术项目提供定制道具、展陈装置、活动搭建与中国端生产支持，服务新加坡、东南亚、香港、澳门与中国市场。';
+      const zhKeywords =
+        '新加坡活动制作, 新加坡道具定制, 中国端生产支持, 活动搭建, 展会展台制作, FRP雕塑制作, 活动周边采购, 东南亚活动制作';
+
+      const replaceMeta = (html: string, name: string, content: string) =>
+        html.replace(
+          new RegExp(`(<meta\\s+name="${name}"\\s+content=")[^"]*("\\s*/?>)`, 'i'),
+          `$1${escapeHtmlAttribute(content)}$2`
+        );
+
+      const replaceProperty = (html: string, property: string, content: string) =>
+        html.replace(
+          new RegExp(`(<meta\\s+property="${property}"\\s+content=")[^"]*("\\s*/?>)`, 'i'),
+          `$1${escapeHtmlAttribute(content)}$2`
+        );
+
+      let html = await fs.readFile(indexPath, 'utf8');
+      html = html
+        .replace('<html lang="en">', '<html lang="zh-Hans-SG">')
+        .replace(/<title>.*?<\/title>/i, `<title>${escapeHtmlAttribute(zhTitle)}</title>`)
+        .replace(
+          /(<link\s+rel="canonical"\s+href=")[^"]*("\s*\/>)/i,
+          '$1https://actcreative.net/zh/$2'
+        );
+      html = replaceMeta(html, 'description', zhDescription);
+      html = replaceMeta(html, 'keywords', zhKeywords);
+      html = replaceProperty(html, 'og:title', zhTitle);
+      html = replaceProperty(html, 'og:description', zhDescription);
+      html = replaceProperty(html, 'og:url', 'https://actcreative.net/zh/');
+      html = replaceProperty(html, 'og:locale', 'zh_CN');
+      html = replaceMeta(html, 'twitter:title', zhTitle);
+      html = replaceMeta(html, 'twitter:description', zhDescription);
+
+      await fs.mkdir(zhDir, { recursive: true });
+      await fs.writeFile(zhIndexPath, html, 'utf8');
+    },
+  });
+
   export default defineConfig(({ mode }) => ({
-    plugins: [react(), googleSiteVerificationPlugin(getGoogleSiteVerificationToken(mode))],
+    plugins: [
+      react(),
+      googleSiteVerificationPlugin(getGoogleSiteVerificationToken(mode)),
+      localizedHomepagePlugin(),
+    ],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {

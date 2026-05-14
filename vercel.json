@@ -2,6 +2,8 @@
   "rewrites": [
     { "source": "/about", "destination": "/about/index.html" },
     { "source": "/about/", "destination": "/about/index.html" },
+    { "source": "/zh", "destination": "/zh/index.html" },
+    { "source": "/zh/", "destination": "/zh/index.html" },
     { "source": "/zh/event-fabrication-singapore", "destination": "/zh/event-fabrication-singapore/index.html" },
     { "source": "/zh/event-fabrication-singapore/", "destination": "/zh/event-fabrication-singapore/index.html" },
     { "source": "/zh/china-event-production-support", "destination": "/zh/china-event-production-support/index.html" },
