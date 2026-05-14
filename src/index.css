@@ -2727,6 +2727,35 @@ html, body, button, input, select, textarea {
   font-family: var(--font-sans);
 }
 
+/* ========== Large screen responsive shell ========== */
+@media (min-width: 1536px) {
+  .container {
+    max-width: min(92vw, 1760px) !important;
+  }
+
+  .max-w-7xl {
+    max-width: 92rem !important;
+  }
+
+  .max-w-6xl {
+    max-width: 84rem !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1840px !important;
+  }
+
+  .max-w-7xl {
+    max-width: 100rem !important;
+  }
+
+  .max-w-6xl {
+    max-width: 90rem !important;
+  }
+}
+
 /* ========== ACT homepage layout corrections ========== */
 #cases,
 #products,

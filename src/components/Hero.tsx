@@ -23,8 +23,14 @@ export function Hero() {
         }
         @media (min-width: 1024px) {
           .hero-grid {
-            grid-template-columns: minmax(0, 1.25fr) minmax(360px, 540px);
-            gap: 3.5rem;
+            grid-template-columns: minmax(0, 1.15fr) minmax(420px, 46vw);
+            gap: clamp(3.5rem, 4.2vw, 5.5rem);
+          }
+        }
+        @media (min-width: 1536px) {
+          .hero-grid {
+            grid-template-columns: minmax(0, 1fr) minmax(560px, 760px);
+            gap: clamp(4.5rem, 5.4vw, 6.5rem);
           }
         }
         .hero-text {
@@ -35,7 +41,7 @@ export function Hero() {
         }
         .hero-slideshow-wrap {
           width: 100%;
-          max-width: 560px;
+          max-width: clamp(560px, 42vw, 760px);
           margin: 0 auto;
           align-self: stretch;
           display: flex;
@@ -98,7 +104,7 @@ export function Hero() {
 
       <div
         className="container mx-auto px-4 md:px-6 relative z-10"
-        style={{ maxWidth: "1280px" }}
+        style={{ maxWidth: "min(92vw, 1760px)" }}
       >
         <div className="hero-grid">
           {/* Left: text */}

@@ -1,4 +1,6 @@
 import { motion } from "motion/react";
+import { useRef, type RefObject } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import bigWorldImage1 from "figma:asset/50a15c0d86a008b03137d5f66091522ea2e22af0.png";
@@ -12,6 +14,30 @@ import k11Image from "figma:asset/9d25bfe44e81512703910c57ed786148c93dcb9b.png";
 
 export function CaseStudies() {
   const { t } = useLanguage();
+  const singaporeRailRef = useRef<HTMLDivElement>(null);
+  const regionalRailRef = useRef<HTMLDivElement>(null);
+
+  const scrollCaseRail = (
+    railRef: RefObject<HTMLDivElement>,
+    direction: -1 | 1,
+  ) => {
+    const rail = railRef.current;
+    if (!rail) return;
+
+    const firstCard = rail.querySelector<HTMLElement>(".case-item");
+    const styles = window.getComputedStyle(rail);
+    const parseSize = (value: string) => {
+      const parsed = Number.parseFloat(value);
+      return Number.isFinite(parsed) ? parsed : 0;
+    };
+    const gap = parseSize(styles.columnGap) || parseSize(styles.gap);
+    const cardStep = firstCard ? firstCard.offsetWidth + gap : rail.clientWidth * 0.86;
+
+    rail.scrollBy({
+      left: direction * cardStep,
+      behavior: "auto",
+    });
+  };
 
   const singaporeProjects = [
     {
@@ -128,31 +154,94 @@ export function CaseStudies() {
           max-width: 980px;
         }
         .case-grid {
-          display: grid;
-          gap: clamp(1.5rem, 2.1vw, 2rem);
+          display: flex;
+          gap: var(--case-rail-gap);
           margin-inline: auto;
         }
-        .case-grid--singapore {
-          grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-          max-width: 1240px;
+        .case-rail-shell {
+          --case-card-width: clamp(22rem, 24vw, 24rem);
+          --case-rail-gap: clamp(1.5rem, 2vw, 2rem);
+          position: relative;
+          max-width: min(100%, 1760px);
+          margin-inline: auto;
         }
-        .case-grid--regional {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          max-width: 1160px;
+        .case-rail {
+          overflow-x: auto;
+          overflow-y: visible;
+          overscroll-behavior-inline: contain;
+          scroll-padding-inline: clamp(1rem, 3vw, 2rem);
+          padding: 0.75rem clamp(0.15rem, 0.6vw, 0.5rem) 1.25rem;
+          scrollbar-width: none;
+        }
+        .case-rail::-webkit-scrollbar {
+          display: none;
+        }
+        .case-item {
+          flex: 0 0 var(--case-card-width);
+          min-width: var(--case-card-width);
         }
         .case-card {
           height: 100%;
+          display: flex;
+          flex-direction: column;
         }
         .case-card-detail {
           padding: 1.5rem;
+          flex: 1;
+        }
+        .case-rail-nav {
+          display: flex;
+          justify-content: center;
+          gap: 0.8rem;
+          margin-top: 0.75rem;
+        }
+        .case-rail-arrow {
+          width: 2.9rem;
+          height: 2.9rem;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 999px;
+          border: 1px solid rgba(204, 255, 0, 0.36);
+          background: rgba(20, 20, 20, 0.88);
+          color: #CCFF00;
+          box-shadow: 0 14px 34px -24px rgba(204, 255, 0, 0.8);
+          transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+        }
+        .case-rail-arrow:hover,
+        .case-rail-arrow:focus-visible {
+          transform: translateY(-1px);
+          border-color: rgba(204, 255, 0, 0.72);
+          background: rgba(34, 34, 34, 0.96);
+          outline: none;
+        }
+        @media (min-width: 1536px) {
+          .case-rail-shell {
+            --case-card-width: clamp(23.5rem, 20vw, 25.5rem);
+          }
+          .case-rail-nav {
+            justify-content: flex-end;
+            padding-right: clamp(0.15rem, 0.6vw, 0.5rem);
+          }
+        }
+        @media (min-width: 768px) {
+          .case-grid--regional + .case-rail-nav {
+            display: none;
+          }
+        }
+        @media (min-width: 1760px) {
+          .case-grid--singapore + .case-rail-nav {
+            display: none;
+          }
         }
         @media (max-width: 767px) {
           .case-study-block + .case-study-block {
             margin-top: 4rem;
             padding-top: 3.25rem;
           }
-          .case-grid--regional {
-            grid-template-columns: 1fr;
+          .case-rail-shell {
+            --case-card-width: min(84vw, 22rem);
+            --case-rail-gap: 1rem;
           }
         }
       `}</style>
@@ -183,7 +272,12 @@ export function CaseStudies() {
           </div>
 
           {/* Projects Grid — 4 cards: 2x2 on tablet, 1x4 on desktop */}
-          <div className="case-grid case-grid--singapore">
+          <div className="case-rail-shell">
+          <div
+            ref={singaporeRailRef}
+            className="case-grid case-rail case-grid--singapore"
+            aria-label="Singapore case studies"
+          >
             {singaporeProjects.map((project, index) => (
               <motion.div
                 key={index}
@@ -191,7 +285,7 @@ export function CaseStudies() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="group relative"
+                className="case-item group relative"
               >
                 {/* Card background glow */}
                 <div className="absolute inset-0 bg-[#CCFF00] rounded-lg blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
@@ -297,6 +391,25 @@ export function CaseStudies() {
               </motion.div>
             ))}
           </div>
+          <div className="case-rail-nav">
+            <button
+              type="button"
+              className="case-rail-arrow"
+              aria-label="Scroll Singapore cases left"
+              onClick={() => scrollCaseRail(singaporeRailRef, -1)}
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              className="case-rail-arrow"
+              aria-label="Scroll Singapore cases right"
+              onClick={() => scrollCaseRail(singaporeRailRef, 1)}
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </div>
+          </div>
         </motion.div>
 
         {/* Regional Projects Section */}
@@ -316,7 +429,12 @@ export function CaseStudies() {
           </div>
 
           {/* Projects Grid */}
-          <div className="case-grid case-grid--regional">
+          <div className="case-rail-shell">
+          <div
+            ref={regionalRailRef}
+            className="case-grid case-rail case-grid--regional"
+            aria-label="Regional case studies"
+          >
             {chinaProjects.map((project, index) => (
               <motion.div
                 key={index}
@@ -324,7 +442,7 @@ export function CaseStudies() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="group relative"
+                className="case-item group relative"
               >
                 {/* Card background glow */}
                 <div className="absolute inset-0 bg-[#CCFF00] rounded-lg blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
@@ -429,6 +547,25 @@ export function CaseStudies() {
                 </a>
               </motion.div>
             ))}
+          </div>
+          <div className="case-rail-nav">
+            <button
+              type="button"
+              className="case-rail-arrow"
+              aria-label="Scroll regional cases left"
+              onClick={() => scrollCaseRail(regionalRailRef, -1)}
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              className="case-rail-arrow"
+              aria-label="Scroll regional cases right"
+              onClick={() => scrollCaseRail(regionalRailRef, 1)}
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </div>
           </div>
         </motion.div>
       </div>
