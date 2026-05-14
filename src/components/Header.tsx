@@ -33,7 +33,7 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#CCFF00]/20">
       <style>{`
         .act-header-row {
-          min-height: 82px;
+          min-height: 86px;
         }
         .act-desktop-nav {
           display: none;
@@ -43,11 +43,11 @@ export function Header() {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          min-height: 38px;
-          padding: 0.55rem 0.1rem;
-          color: rgba(255, 255, 255, 0.74);
-          font-size: 0.9rem;
-          font-weight: 600;
+          min-height: 44px;
+          padding: 0.68rem 0.28rem;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 0.98rem;
+          font-weight: 650;
           line-height: 1.1;
           white-space: nowrap;
           transition: color 180ms ease, opacity 180ms ease;
@@ -80,12 +80,15 @@ export function Header() {
         .act-mobile-actions {
           display: flex;
         }
-        @media (min-width: 1024px) {
+        .act-mobile-nav {
+          display: block;
+        }
+        @media (min-width: 1120px) {
           .act-desktop-nav {
             display: flex;
             align-items: center;
-            gap: 1.35rem;
-            padding: 0.35rem 0;
+            gap: 1.55rem;
+            padding: 0.42rem 0;
             border: 1px solid rgba(204, 255, 0, 0.16);
             border-left: 0;
             border-right: 0;
@@ -94,18 +97,26 @@ export function Header() {
           .act-header-actions {
             display: flex;
             align-items: center;
-            gap: 0.85rem;
+            gap: 1rem;
           }
           .act-mobile-actions {
+            display: none;
+          }
+          .act-mobile-nav {
             display: none;
           }
         }
         @media (min-width: 1200px) {
           .act-desktop-nav {
-            gap: 1.65rem;
+            gap: 2rem;
           }
           .act-nav-pill {
-            padding-inline: 0.2rem;
+            padding-inline: 0.35rem;
+          }
+        }
+        @media (min-width: 1360px) {
+          .act-desktop-nav {
+            gap: 2.35rem;
           }
         }
       `}</style>
@@ -157,7 +168,7 @@ export function Header() {
             <motion.button
               onClick={switchLanguage}
               aria-label={language === "zh" ? "Switch to English" : "切换到中文"}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#1a1a1a] hover:bg-[#2a2a2a] transition-all border border-[#CCFF00]/20"
+              className="flex min-h-11 items-center gap-2 rounded-lg border border-[#CCFF00]/20 bg-[#1a1a1a] px-4 py-2.5 transition-all hover:bg-[#2a2a2a]"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -167,7 +178,7 @@ export function Header() {
 
             <Button 
               onClick={() => scrollToSection("contact")}
-              className="bg-[#CCFF00] hover:bg-[#b8e600] text-black shadow-lg hover:shadow-[#CCFF00]/50 transition-all"
+              className="min-h-11 bg-[#CCFF00] px-5 text-[0.95rem] text-black shadow-lg transition-all hover:bg-[#b8e600] hover:shadow-[#CCFF00]/50"
             >
               {t("发送需求", "Send Brief")}
             </Button>
@@ -199,7 +210,7 @@ export function Header() {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.nav 
-              className="md:hidden py-4 border-t border-[#CCFF00]/20"
+              className="act-mobile-nav py-4 border-t border-[#CCFF00]/20"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
