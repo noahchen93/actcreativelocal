@@ -2,7 +2,6 @@ import { Card, CardContent } from "./ui/card";
 import { Package, Truck, DollarSign, ShieldCheck, Scale, MessageSquare, CheckCircle2, ArrowRight, ArrowDown, Settings, Headphones } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
-import { useState } from "react";
 
 const serviceFlowData = [
   {
@@ -135,17 +134,248 @@ const serviceFlowData = [
   }
 ];
 
+const desktopFlowLayout = [
+  { column: 1, row: 1, arrow: "right" },
+  { column: 2, row: 1, arrow: "right" },
+  { column: 3, row: 1, arrow: "right" },
+  { column: 4, row: 1, arrow: "down" },
+  { column: 4, row: 2, arrow: "left" },
+  { column: 3, row: 2, arrow: "left" },
+  { column: 2, row: 2, arrow: "left" },
+  { column: 1, row: 2, arrow: null },
+] as const;
+
 export function Services() {
   const { t } = useLanguage();
-  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
-  const [expandedStep, setExpandedStep] = useState<number | null>(null);
-  const [showAllSteps, setShowAllSteps] = useState(false);
-  const visibleMobileSteps = showAllSteps
-    ? serviceFlowData
-    : serviceFlowData.slice(0, 4);
 
   return (
     <section id="services" className="py-14 md:py-20 bg-black relative overflow-hidden">
+      <style>{`
+        .service-flow-shell {
+          max-width: 1180px;
+          margin: 0 auto 4rem;
+          padding: clamp(1.1rem, 2.4vw, 2rem);
+          border: 1px solid rgba(204, 255, 0, 0.14);
+          border-radius: 8px;
+          background:
+            linear-gradient(135deg, rgba(204, 255, 0, 0.08), rgba(204, 255, 0, 0) 34%),
+            linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0.01));
+        }
+        .service-flow-map {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: clamp(4rem, 5vw, 5.25rem) clamp(3.75rem, 4.4vw, 5rem);
+          position: relative;
+        }
+        .service-flow-node {
+          position: relative;
+          min-width: 0;
+        }
+        .service-flow-card {
+          height: 100%;
+          min-height: 254px;
+          border-radius: 8px;
+          border-color: rgba(204, 255, 0, 0.22);
+          background: rgba(18, 18, 18, 0.92);
+          box-shadow: 0 20px 55px -46px rgba(204, 255, 0, 0.7);
+          transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+        }
+        .service-flow-card:hover {
+          transform: translateY(-3px);
+          border-color: rgba(204, 255, 0, 0.62);
+          background: rgba(24, 24, 24, 0.96);
+        }
+        .service-flow-card-content {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          padding: 1.25rem !important;
+        }
+        .service-flow-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 1rem;
+          margin-bottom: 1rem;
+        }
+        .service-flow-step {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.55rem;
+          color: #ccff00;
+          font-size: 0.78rem;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+        }
+        .service-flow-step-number {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 999px;
+          background: #ccff00;
+          color: #000;
+          font-size: 0.82rem;
+          letter-spacing: 0;
+        }
+        .service-flow-icon {
+          display: inline-flex;
+          width: 2.75rem;
+          height: 2.75rem;
+          align-items: center;
+          justify-content: center;
+          border-radius: 8px;
+          background: rgba(204, 255, 0, 0.1);
+          color: #ccff00;
+          border: 1px solid rgba(204, 255, 0, 0.22);
+        }
+        .service-flow-card h3 {
+          margin-bottom: 0.55rem;
+          color: #fff;
+          font-size: 1.08rem;
+          line-height: 1.22;
+        }
+        .service-flow-card p {
+          color: rgba(255, 255, 255, 0.62);
+          font-size: 0.9rem;
+          line-height: 1.52;
+        }
+        .service-flow-list {
+          display: grid;
+          gap: 0.55rem;
+          margin-top: 1rem;
+          padding-top: 1rem;
+          color: rgba(255, 255, 255, 0.62);
+          font-size: 0.8rem;
+          line-height: 1.4;
+        }
+        .service-flow-list li {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.45rem;
+        }
+        .service-flow-arrow {
+          position: absolute;
+          z-index: 5;
+          display: inline-flex;
+          width: 2.6rem;
+          height: 2.6rem;
+          align-items: center;
+          justify-content: center;
+          border-radius: 999px;
+          border: 1px solid rgba(204, 255, 0, 0.55);
+          background: #ccff00;
+          color: #000;
+          box-shadow: 0 0 0 8px rgba(204, 255, 0, 0.055), 0 12px 28px -18px rgba(204, 255, 0, 0.9);
+        }
+        .service-flow-arrow::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          background: linear-gradient(90deg, rgba(204, 255, 0, 0.32), rgba(204, 255, 0, 0.06));
+        }
+        .service-flow-arrow--right {
+          right: calc(clamp(3.75rem, 4.4vw, 5rem) / -2);
+          top: 50%;
+          transform: translate(50%, -50%);
+        }
+        .service-flow-arrow--right::before {
+          width: clamp(2.5rem, 3vw, 3.5rem);
+          height: 1px;
+          left: -2.25rem;
+          top: 50%;
+        }
+        .service-flow-arrow--left {
+          left: calc(clamp(3.75rem, 4.4vw, 5rem) / -2);
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .service-flow-arrow--left svg {
+          transform: rotate(180deg);
+        }
+        .service-flow-arrow--left::before {
+          width: clamp(2.5rem, 3vw, 3.5rem);
+          height: 1px;
+          right: -2.25rem;
+          top: 50%;
+        }
+        .service-flow-arrow--down {
+          left: 50%;
+          bottom: calc(clamp(4rem, 5vw, 5.25rem) / -2);
+          transform: translate(-50%, 50%);
+        }
+        .service-flow-arrow--down::before {
+          width: 1px;
+          height: clamp(2.6rem, 3.2vw, 3.8rem);
+          left: 50%;
+          top: -2.4rem;
+          background: linear-gradient(180deg, rgba(204, 255, 0, 0.32), rgba(204, 255, 0, 0.06));
+        }
+        .service-flow-mobile {
+          gap: 0;
+          max-width: 680px;
+          margin: 0 auto 3rem;
+        }
+        .service-flow-mobile-node {
+          position: relative;
+          display: flow-root;
+          padding-bottom: 4.7rem;
+        }
+        .service-flow-mobile-node:last-child {
+          padding-bottom: 0;
+        }
+        .service-flow-mobile-node + .service-flow-mobile-node {
+          margin-top: 0;
+        }
+        .service-flow-mobile-arrow {
+          position: absolute;
+          left: 50%;
+          bottom: 1.15rem;
+          transform: translateX(-50%);
+          display: flex;
+          width: 2.25rem;
+          height: 2.25rem;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+          border-radius: 999px;
+          background: #ccff00;
+          color: #000;
+          box-shadow: 0 0 0 7px rgba(204, 255, 0, 0.06);
+        }
+        @media (min-width: 1024px) {
+          .service-flow-map {
+            display: grid !important;
+          }
+          .service-flow-mobile {
+            display: none !important;
+          }
+        }
+        @media (max-width: 1023px) {
+          .service-flow-map {
+            display: none !important;
+          }
+          .service-flow-mobile {
+            display: grid !important;
+          }
+          .service-flow-shell {
+            margin-bottom: 3rem;
+            padding: 0;
+            border: 0;
+            background: transparent;
+          }
+          .service-flow-card {
+            min-height: auto;
+          }
+          .service-flow-card-content {
+            padding: 1.15rem !important;
+          }
+          .service-flow-list {
+            margin-top: 0;
+          }
+        }
+      `}</style>
       {/* Decorative Background */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#CCFF00] rounded-full mix-blend-screen filter blur-3xl opacity-5 animate-float"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#CCFF00] rounded-full mix-blend-screen filter blur-3xl opacity-5 animate-float" style={{ animationDelay: '1s' }}></div>
@@ -159,396 +389,122 @@ export function Services() {
           transition={{ duration: 0.6 }}
         >
           <div className="inline-block px-5 py-2.5 bg-[#CCFF00] text-black rounded-lg mb-4 shadow-lg">
-            {t("一条龙服务流程 🎪", "End-to-End Service Flow 🎪")}
+            {t("一条龙服务流程", "End-to-End Service Flow")}
           </div>
           <h2 className="text-3xl md:text-4xl text-white mb-4">
             {t("您只需等待收货，其他交给我们", "You Just Wait for Delivery, We Handle the Rest")}
           </h2>
           <p className="text-gray-400 text-base md:text-lg">
             {t(
-              "从咨询到维护，8个环节无缝衔接，让跨境采购变得像网购一样简单 ✨",
-              "From consultation to maintenance, 8 seamless steps make cross-border procurement as easy as online shopping ✨"
+              "从咨询到维护，8个环节无缝衔接，让跨境采购变得像网购一样简单。",
+              "From consultation to maintenance, 8 seamless steps make cross-border procurement as easy as online shopping."
             )}
           </p>
         </motion.div>
 
-        {/* Desktop Flow - Compact Zigzag Layout */}
-        <div className="hidden lg:block mb-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Row 1: Steps 1-3 */}
-            <div className="grid grid-cols-3 gap-6 mb-8">
-              {serviceFlowData.slice(0, 3).map((service, index) => (
+        <div className="service-flow-shell">
+          {/* Desktop Flow */}
+          <div className="service-flow-map hidden lg:grid" aria-label={t("一条龙服务流程", "End-to-end service flow")}>
+            {serviceFlowData.map((service, index) => {
+              const position = desktopFlowLayout[index];
+              const arrowClass = position.arrow ? `service-flow-arrow service-flow-arrow--${position.arrow}` : "";
+
+              return (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
+                  key={service.step}
+                  className="service-flow-node"
+                  style={{ gridColumn: position.column, gridRow: position.row }}
+                  initial={{ opacity: 0, y: 26 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  onHoverStart={() => setHoveredStep(index)}
-                  onHoverEnd={() => setHoveredStep(null)}
-                  onClick={() => setExpandedStep(expandedStep === index ? null : index)}
-                  className="relative cursor-pointer"
+                  viewport={{ once: true, amount: 0.35 }}
+                  transition={{ duration: 0.38, delay: index * 0.06 }}
                 >
-                  <Card className={`bg-[#1a1a1a] backdrop-blur-sm border-2 transition-all ${
-                    hoveredStep === index || expandedStep === index
-                      ? 'border-[#CCFF00] shadow-xl shadow-[#CCFF00]/20' 
-                      : 'border-[#CCFF00]/20 shadow-md'
-                  }`}>
-                    <CardContent className="p-5">
-                      {/* Compact Header */}
-                      <div className="flex items-center gap-3 mb-3">
-                        {/* Step Number + Icon */}
-                        <div className={`w-12 h-12 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center shadow-lg relative flex-shrink-0`}>
-                          <service.icon className="w-6 h-6 text-black" />
-                          <div className="absolute -top-1.5 -left-1.5 w-6 h-6 bg-white rounded-full flex items-center justify-center border-2 border-[#CCFF00] shadow-md">
-                            <span className="text-xs font-bold text-black">{service.step}</span>
-                          </div>
-                          <span className="absolute -bottom-1 -right-1 text-lg">{service.emoji}</span>
+                  <Card className="service-flow-card">
+                    <CardContent className="service-flow-card-content">
+                      <div className="service-flow-top">
+                        <div className="service-flow-step">
+                          <span className="service-flow-step-number">{String(service.step).padStart(2, "0")}</span>
+                          <span>{t("步骤", "Step")}</span>
                         </div>
-                        
-                        {/* Title */}
-                        <div className="flex-1">
-                          <h3 className="text-white mb-0.5">{t(service.title.zh, service.title.en)}</h3>
-                          <p className="text-xs text-gray-500">
-                            {t("点击查看详情", "Click for details")}
-                          </p>
+                        <div className="service-flow-icon">
+                          <service.icon className="w-5 h-5" />
                         </div>
                       </div>
-                      
-                      {/* Brief Description - Always Visible */}
-                      <p className="text-sm text-gray-400 leading-relaxed">
-                        {t(service.description.zh, service.description.en)}
-                      </p>
-                      
-                      {/* Expandable Details */}
-                      <motion.div
-                        initial={false}
-                        animate={{ 
-                          height: expandedStep === index ? 'auto' : 0,
-                          opacity: expandedStep === index ? 1 : 0
-                        }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <ul className="space-y-2 mt-3 pt-3 border-t border-[#CCFF00]/20">
-                          {service.details.map((detail, idx) => (
-                            <li key={idx} className="flex items-start gap-2 text-xs text-gray-400 leading-relaxed">
-                              <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-[#CCFF00]" />
-                              <span>{t(detail.zh, detail.en)}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </motion.div>
+
+                      <h3>{t(service.title.zh, service.title.en)}</h3>
+                      <p>{t(service.description.zh, service.description.en)}</p>
+
+                      <ul className="service-flow-list">
+                        {service.details.map((detail, detailIndex) => (
+                          <li key={detailIndex}>
+                            <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-[#CCFF00]" />
+                            <span>{t(detail.zh, detail.en)}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </CardContent>
                   </Card>
 
-                  {/* Arrow to next step (horizontal) */}
-                  {index < 2 && (
-                    <motion.div
-                      className="absolute -right-3 top-1/2 -translate-y-1/2 z-20"
-                      animate={{ x: [0, 4, 0] }}
-                      transition={{ repeat: Infinity, duration: 1.5 }}
-                    >
-                      <div className={`w-6 h-6 bg-gradient-to-r ${service.gradient} rounded-full flex items-center justify-center shadow-md`}>
-                        <ArrowRight className="w-4 h-4 text-black" />
-                      </div>
-                    </motion.div>
+                  {position.arrow && (
+                    <div className={arrowClass} aria-hidden="true">
+                      {position.arrow === "down" ? (
+                        <ArrowDown className="h-5 w-5" />
+                      ) : (
+                        <ArrowRight className="h-5 w-5" />
+                      )}
+                    </div>
                   )}
                 </motion.div>
-              ))}
-            </div>
-
-            {/* Connecting Arrow Down (from step 3 to step 4) */}
-            <div className="flex justify-end mb-8 pr-8">
-              <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
-                className="flex flex-col items-center"
-              >
-                <div className="w-10 h-10 bg-gradient-to-br from-[#CCFF00] to-[#b8e600] rounded-full flex items-center justify-center shadow-md">
-                  <ArrowDown className="w-5 h-5 text-black" />
-                </div>
-                <div className="w-0.5 h-12 bg-gradient-to-b from-[#CCFF00] to-[#b8e600] opacity-40"></div>
-              </motion.div>
-            </div>
-
-            {/* Row 2: Steps 4-6 (Reversed order for zigzag) */}
-            <div className="grid grid-cols-3 gap-6 mb-8">
-              {serviceFlowData.slice(3, 6).reverse().map((service, index) => {
-                const actualIndex = 5 - index;
-                return (
-                  <motion.div
-                    key={actualIndex}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 + 0.4 }}
-                    onHoverStart={() => setHoveredStep(actualIndex)}
-                    onHoverEnd={() => setHoveredStep(null)}
-                    onClick={() => setExpandedStep(expandedStep === actualIndex ? null : actualIndex)}
-                    className="relative cursor-pointer"
-                  >
-                    <Card className={`bg-[#1a1a1a] backdrop-blur-sm border-2 transition-all ${
-                      hoveredStep === actualIndex || expandedStep === actualIndex
-                        ? 'border-[#CCFF00] shadow-xl shadow-[#CCFF00]/20' 
-                        : 'border-[#CCFF00]/20 shadow-md'
-                    }`}>
-                      <CardContent className="p-5">
-                        {/* Compact Header */}
-                        <div className="flex items-center gap-3 mb-3">
-                          {/* Step Number + Icon */}
-                          <div className={`w-12 h-12 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center shadow-lg relative flex-shrink-0`}>
-                            <service.icon className="w-6 h-6 text-black" />
-                            <div className="absolute -top-1.5 -left-1.5 w-6 h-6 bg-white rounded-full flex items-center justify-center border-2 border-[#CCFF00] shadow-md">
-                              <span className="text-xs font-bold text-black">{service.step}</span>
-                            </div>
-                            <span className="absolute -bottom-1 -right-1 text-lg">{service.emoji}</span>
-                          </div>
-                          
-                          {/* Title */}
-                          <div className="flex-1">
-                            <h3 className="text-white mb-0.5">{t(service.title.zh, service.title.en)}</h3>
-                            <p className="text-xs text-gray-500">
-                              {t("点击查看详情", "Click for details")}
-                            </p>
-                          </div>
-                        </div>
-                        
-                        {/* Brief Description - Always Visible */}
-                        <p className="text-sm text-gray-400 leading-relaxed">
-                          {t(service.description.zh, service.description.en)}
-                        </p>
-                        
-                        {/* Expandable Details */}
-                        <motion.div
-                          initial={false}
-                          animate={{ 
-                            height: expandedStep === actualIndex ? 'auto' : 0,
-                            opacity: expandedStep === actualIndex ? 1 : 0
-                          }}
-                          transition={{ duration: 0.3 }}
-                          className="overflow-hidden"
-                        >
-                          <ul className="space-y-2 mt-3 pt-3 border-t border-[#CCFF00]/20">
-                            {service.details.map((detail, idx) => (
-                              <li key={idx} className="flex items-start gap-2 text-xs text-gray-400 leading-relaxed">
-                                <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-[#CCFF00]" />
-                                <span>{t(detail.zh, detail.en)}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </motion.div>
-                      </CardContent>
-                    </Card>
-
-                    {/* Arrow to next step (horizontal, left direction) */}
-                    {index < 2 && (
-                      <motion.div
-                        className="absolute -left-3 top-1/2 -translate-y-1/2 z-20 rotate-180"
-                        animate={{ x: [0, -4, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.5 }}
-                      >
-                        <div className={`w-6 h-6 bg-gradient-to-r ${service.gradient} rounded-full flex items-center justify-center shadow-md`}>
-                          <ArrowRight className="w-4 h-4 text-black" />
-                        </div>
-                      </motion.div>
-                    )}
-                  </motion.div>
-                );
-              })}
-            </div>
-
-            {/* Connecting Arrow Down (from step 6 to step 7) */}
-            <div className="flex justify-start mb-8 pl-8">
-              <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ repeat: Infinity, duration: 1.5 }}
-                className="flex flex-col items-center"
-              >
-                <div className="w-10 h-10 bg-gradient-to-br from-[#CCFF00] to-[#b8e600] rounded-full flex items-center justify-center shadow-md">
-                  <ArrowDown className="w-5 h-5 text-black" />
-                </div>
-                <div className="w-0.5 h-12 bg-gradient-to-b from-[#CCFF00] to-[#b8e600] opacity-40"></div>
-              </motion.div>
-            </div>
-
-            {/* Row 3: Steps 7-8 */}
-            <div className="grid grid-cols-3 gap-6">
-              {serviceFlowData.slice(6, 8).map((service, index) => {
-                const actualIndex = 6 + index;
-                return (
-                  <motion.div
-                    key={actualIndex}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: index * 0.1 + 0.8 }}
-                    onHoverStart={() => setHoveredStep(actualIndex)}
-                    onHoverEnd={() => setHoveredStep(null)}
-                    onClick={() => setExpandedStep(expandedStep === actualIndex ? null : actualIndex)}
-                    className="relative cursor-pointer"
-                  >
-                    <Card className={`bg-[#1a1a1a] backdrop-blur-sm border-2 transition-all ${
-                      hoveredStep === actualIndex || expandedStep === actualIndex
-                        ? 'border-[#CCFF00] shadow-xl shadow-[#CCFF00]/20' 
-                        : 'border-[#CCFF00]/20 shadow-md'
-                    }`}>
-                      <CardContent className="p-5">
-                        {/* Compact Header */}
-                        <div className="flex items-center gap-3 mb-3">
-                          {/* Step Number + Icon */}
-                          <div className={`w-12 h-12 bg-gradient-to-br ${service.gradient} rounded-xl flex items-center justify-center shadow-lg relative flex-shrink-0`}>
-                            <service.icon className="w-6 h-6 text-black" />
-                            <div className="absolute -top-1.5 -left-1.5 w-6 h-6 bg-white rounded-full flex items-center justify-center border-2 border-[#CCFF00] shadow-md">
-                              <span className="text-xs font-bold text-black">{service.step}</span>
-                            </div>
-                            <span className="absolute -bottom-1 -right-1 text-lg">{service.emoji}</span>
-                          </div>
-                          
-                          {/* Title */}
-                          <div className="flex-1">
-                            <h3 className="text-white mb-0.5">{t(service.title.zh, service.title.en)}</h3>
-                            <p className="text-xs text-gray-500">
-                              {t("点击查看详情", "Click for details")}
-                            </p>
-                          </div>
-                        </div>
-                        
-                        {/* Brief Description - Always Visible */}
-                        <p className="text-sm text-gray-400 leading-relaxed">
-                          {t(service.description.zh, service.description.en)}
-                        </p>
-                        
-                        {/* Expandable Details */}
-                        <motion.div
-                          initial={false}
-                          animate={{ 
-                            height: expandedStep === actualIndex ? 'auto' : 0,
-                            opacity: expandedStep === actualIndex ? 1 : 0
-                          }}
-                          transition={{ duration: 0.3 }}
-                          className="overflow-hidden"
-                        >
-                          <ul className="space-y-2 mt-3 pt-3 border-t border-[#CCFF00]/20">
-                            {service.details.map((detail, idx) => (
-                              <li key={idx} className="flex items-start gap-2 text-xs text-gray-400 leading-relaxed">
-                                <CheckCircle2 className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-[#CCFF00]" />
-                                <span>{t(detail.zh, detail.en)}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </motion.div>
-                      </CardContent>
-                    </Card>
-
-                    {/* Arrow to next step (horizontal) */}
-                    {index < 1 && (
-                      <motion.div
-                        className="absolute -right-3 top-1/2 -translate-y-1/2 z-20"
-                        animate={{ x: [0, 4, 0] }}
-                        transition={{ repeat: Infinity, duration: 1.5 }}
-                      >
-                        <div className={`w-6 h-6 bg-gradient-to-r ${service.gradient} rounded-full flex items-center justify-center shadow-md`}>
-                          <ArrowRight className="w-4 h-4 text-black" />
-                        </div>
-                      </motion.div>
-                    )}
-                  </motion.div>
-                );
-              })}
-            </div>
+              );
+            })}
           </div>
 
-          {/* Flow Path Hint */}
-          <motion.div
-            className="text-center mt-8 text-sm text-gray-500"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 1 }}
-          >
-            {t("💡 点击任意卡片查看详细信息", "💡 Click any card to view details")}
-          </motion.div>
-        </div>
-
-        {/* Mobile & Tablet Flow - Compact Vertical Layout */}
-        <div className="lg:hidden grid gap-4 mb-8">
-          {visibleMobileSteps.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.06 }}
-            >
-              <Card
-                className={`bg-[#1a1a1a] backdrop-blur-sm border transition-all relative ${
-                  expandedStep === index
-                    ? "border-[#CCFF00]/70"
-                    : "border-[#CCFF00]/20"
-                }`}
-                onClick={() => setExpandedStep(expandedStep === index ? null : index)}
+          {/* Mobile & Tablet Flow */}
+          <div className="service-flow-mobile lg:hidden" aria-label={t("一条龙服务流程", "End-to-end service flow")}>
+            {serviceFlowData.map((service, index) => (
+              <motion.div
+                key={service.step}
+                className="service-flow-mobile-node"
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.35 }}
+                transition={{ duration: 0.34, delay: index * 0.04 }}
               >
-                <CardContent className="p-5">
-                  {/* Step Number Badge */}
-                  <div className={`absolute -top-2 -left-2 w-8 h-8 bg-gradient-to-br ${service.gradient} rounded-lg flex items-center justify-center text-black shadow-lg z-10 border border-black`}>
-                    <span className="font-bold">{service.step}</span>
-                  </div>
+                <Card className="service-flow-card">
+                  <CardContent className="service-flow-card-content">
+                    <div className="service-flow-top">
+                      <div className="service-flow-step">
+                        <span className="service-flow-step-number">{String(service.step).padStart(2, "0")}</span>
+                        <span>{t("步骤", "Step")}</span>
+                      </div>
+                      <div className="service-flow-icon">
+                        <service.icon className="w-5 h-5" />
+                      </div>
+                    </div>
 
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      <div className={`w-12 h-12 bg-gradient-to-br ${service.gradient} rounded-lg flex items-center justify-center shadow-lg relative`}>
-                        <service.icon className="w-6 h-6 text-black" />
-                      </div>
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between gap-3">
-                        <h3 className="mb-1 text-white">{t(service.title.zh, service.title.en)}</h3>
-                        <span className="text-xs text-[#CCFF00] whitespace-nowrap">
-                          {expandedStep === index ? t("收起", "Close") : t("详情", "Details")}
-                        </span>
-                      </div>
-                      <p className="text-sm text-gray-400">
-                        {t(service.description.zh, service.description.en)}
-                      </p>
-                    </div>
-                  </div>
-                  <motion.div
-                    initial={false}
-                    animate={{
-                      height: expandedStep === index ? "auto" : 0,
-                      opacity: expandedStep === index ? 1 : 0,
-                    }}
-                    transition={{ duration: 0.25 }}
-                    className="overflow-hidden"
-                  >
-                    <ul className="space-y-2 mt-4 pt-4 border-t border-[#CCFF00]/20">
-                      {service.details.map((detail, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-400">
-                          <CheckCircle2 className="w-4 h-4 flex-shrink-0 mt-0.5 text-[#CCFF00]" />
+                    <h3>{t(service.title.zh, service.title.en)}</h3>
+                    <p>{t(service.description.zh, service.description.en)}</p>
+
+                    <ul className="service-flow-list">
+                      {service.details.map((detail, detailIndex) => (
+                        <li key={detailIndex}>
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#CCFF00]" />
                           <span>{t(detail.zh, detail.en)}</span>
                         </li>
                       ))}
                     </ul>
-                  </motion.div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+                  </CardContent>
+                </Card>
 
-        {!showAllSteps && (
-          <div className="lg:hidden mb-10 text-center">
-            <button
-              type="button"
-              onClick={() => setShowAllSteps(true)}
-              className="inline-flex items-center gap-2 rounded-lg border border-[#CCFF00]/40 px-5 py-3 text-sm text-[#CCFF00] transition-all hover:bg-[#CCFF00] hover:text-black"
-            >
-              <ArrowDown className="w-4 h-4" />
-              {t("查看完整交付流程", "View full delivery flow")}
-            </button>
+                {index < serviceFlowData.length - 1 && (
+                  <div className="service-flow-mobile-arrow" aria-hidden="true">
+                    <ArrowDown className="h-4 w-4" />
+                  </div>
+                )}
+              </motion.div>
+            ))}
           </div>
-        )}
+        </div>
 
         {/* Final Outcome - You Just Receive */}
         <motion.div
