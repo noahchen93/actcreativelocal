@@ -344,6 +344,28 @@ export function Services() {
           color: #000;
           box-shadow: 0 0 0 7px rgba(204, 255, 0, 0.06);
         }
+        .service-outcome-grid {
+          margin-bottom: clamp(1.75rem, 2.4vw, 2.25rem);
+        }
+        .service-outcome-card {
+          min-height: 150px;
+          padding: 1.25rem !important;
+        }
+        .service-outcome-cta {
+          display: inline-flex;
+          width: fit-content;
+          max-width: min(100%, 32rem);
+          margin: 0 auto;
+          text-align: center;
+        }
+        .service-outcome-cta-icon {
+          width: 1.25rem;
+          height: 1.25rem;
+          flex-shrink: 0;
+        }
+        .service-outcome-cta-text {
+          line-height: 1.25;
+        }
         @media (min-width: 1024px) {
           .service-flow-map {
             display: grid !important;
@@ -373,6 +395,26 @@ export function Services() {
           }
           .service-flow-list {
             margin-top: 0;
+          }
+        }
+        @media (min-width: 768px) {
+          .service-outcome-card {
+            padding: 1.5rem !important;
+          }
+          .service-outcome-cta-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+        @media (max-width: 767px) {
+          .service-outcome-grid {
+            margin-bottom: 2.25rem;
+          }
+          .service-outcome-card {
+            min-height: auto;
+          }
+          .service-outcome-cta {
+            width: 100%;
           }
         }
       `}</style>
@@ -527,9 +569,9 @@ export function Services() {
               📦
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-3 md:gap-6 max-w-4xl mx-auto">
+            <div className="service-outcome-grid grid md:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto">
               <motion.div
-                className="bg-black/10 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-black/20"
+                className="service-outcome-card bg-black/10 backdrop-blur-sm rounded-lg border border-black/20"
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.15)" }}
               >
                 <div className="text-4xl mb-3">⏱️</div>
@@ -540,7 +582,7 @@ export function Services() {
               </motion.div>
 
               <motion.div
-                className="bg-black/10 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-black/20"
+                className="service-outcome-card bg-black/10 backdrop-blur-sm rounded-lg border border-black/20"
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.15)" }}
               >
                 <div className="text-4xl mb-3">💰</div>
@@ -551,7 +593,7 @@ export function Services() {
               </motion.div>
 
               <motion.div
-                className="bg-black/10 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-black/20"
+                className="service-outcome-card bg-black/10 backdrop-blur-sm rounded-lg border border-black/20"
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(0,0,0,0.15)" }}
               >
                 <div className="text-4xl mb-3">😌</div>
@@ -563,7 +605,7 @@ export function Services() {
             </div>
 
             <motion.div
-              className="mt-6 md:mt-8 inline-flex items-center justify-center gap-3 bg-black text-[#CCFF00] px-5 md:px-8 py-3 md:py-4 rounded-lg shadow-lg cursor-pointer"
+              className="service-outcome-cta items-center justify-center gap-3 bg-black text-[#CCFF00] px-5 md:px-8 py-3 md:py-4 rounded-lg shadow-lg cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
@@ -573,8 +615,8 @@ export function Services() {
                 }
               }}
             >
-              <CheckCircle2 className="w-6 h-6" />
-              <span className="font-bold">{t("立即开始您的无忧采购之旅", "Start Your Hassle-Free Procurement Journey")}</span>
+              <CheckCircle2 className="service-outcome-cta-icon" />
+              <span className="service-outcome-cta-text font-bold">{t("立即开始您的无忧采购之旅", "Start Your Hassle-Free Procurement Journey")}</span>
             </motion.div>
           </div>
         </motion.div>
