@@ -1,0 +1,28 @@
+Priority,URL,Page type,Live status,Indexability,Last sitemap lastmod,Search Console status,Last submitted,Indexed date,Next action,Notes
+P0,https://actcreative.net/,Homepage,200,Indexable,2026-05-13,To check,,,Submit sitemap and inspect homepage,Primary entity page
+P0,https://actcreative.net/sitemap.xml,Sitemap,200,Submit manually,2026-05-13,To submit,,,Submit sitemap,Use Search Console sitemap submission
+P0,https://actcreative.net/case-studies/,Case index,200,Indexable,2026-05-13,To request,,,Request indexing,New case index page
+P0,https://actcreative.net/case-studies/florentijn-hofman-shanghai-museum-show/,Case study,200,Indexable,2026-05-13,To request,,,Request indexing,Updated with real image and image schema
+P0,https://actcreative.net/case-studies/craig-and-karl-beijing-museum-show/,Case study,200,Indexable,2026-05-13,To request,,,Request indexing,Updated with real image and image schema
+P0,https://actcreative.net/case-studies/k11-shenyang-public-art-collection/,Case study,200,Indexable,2026-05-13,To request,,,Request indexing,Updated with real image and image schema
+P1,https://actcreative.net/event-fabrication-singapore/,Service page,200,Indexable,2026-05-07,To check,,,Inspect after P0 pages,Core commercial page
+P1,https://actcreative.net/custom-props-singapore/,Service page,200,Indexable,2026-05-07,To check,,,Inspect after P0 pages,Core commercial page
+P1,https://actcreative.net/frp-sculpture-fabrication-singapore/,Service page,200,Indexable,2026-05-07,To check,,,Inspect after P0 pages,Core commercial page
+P1,https://actcreative.net/exhibition-booth-production-singapore/,Service page,200,Indexable,2026-05-07,To check,,,Inspect after P0 pages,Core commercial page
+P1,https://actcreative.net/china-event-production-support/,Service page,200,Indexable,2026-05-07,To check,,,Inspect after P0 pages,Core commercial page
+P1,https://actcreative.net/event-merchandise-sourcing/,Service page,200,Indexable,2026-05-07,To check,,,Inspect after P0 pages,Core commercial page
+P1,https://actcreative.net/trade-show-booth-singapore/,Service page,200,Indexable,2026-05-07,To check,,,Inspect after P0 pages,Secondary commercial page
+P1,https://actcreative.net/roadshow-production-singapore/,Service page,200,Indexable,2026-05-07,To check,,,Inspect after P0 pages,Secondary commercial page
+P1,https://actcreative.net/retail-mall-activation-singapore/,Service page,200,Indexable,2026-05-07,To check,,,Inspect after P0 pages,Secondary commercial page
+P1,https://actcreative.net/case-studies/sentosa-big-big-world-event-fabrication/,Case study,200,Indexable,2026-05-13,To check,,,Inspect after P0 pages,Updated lastmod
+P1,https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/,Case study,200,Indexable,2026-05-13,To check,,,Inspect after P0 pages,Updated lastmod
+P1,https://actcreative.net/case-studies/sentosa-pacman-human-game/,Case study,200,Indexable,2026-05-13,To check,,,Inspect after P0 pages,Updated lastmod
+P2,https://actcreative.net/about/,About page,200,Indexable,2026-05-08,To check,,,Inspect later,Long meta description
+P2,https://actcreative.net/blog/,Blog index,200,Indexable,2026-05-13,To check,,,Inspect later,Updated breadcrumb schema
+P2,https://actcreative.net/blog/singapore-event-production-cost-guide-2026/,Blog post,200,Indexable,2026-05-07,To check,,,Inspect later,Long meta description
+P2,https://actcreative.net/blog/sourcing-frp-sculptures-from-china/,Blog post,200,Indexable,2026-05-07,To check,,,Inspect later,Long meta description
+P2,https://actcreative.net/event-fabrication-hong-kong/,Regional service page,200,Indexable,2026-05-07,To check,,,Inspect later,Regional page
+P2,https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/,Case study,200,Indexable,2026-05-13,To check,,,Inspect later,Needs verified real image when available
+P3,https://actcreative.net/zh/,Chinese homepage,200,Indexable,2026-05-07,To check,,,Inspect if targeting Chinese search,Chinese-language page
+P3,https://actcreative.net/zh/event-fabrication-singapore/,Chinese service page,200,Indexable,2026-05-07,To check,,,Improve meta description then inspect,Description short
+P3,https://actcreative.net/zh/china-event-production-support/,Chinese service page,200,Indexable,2026-05-07,To check,,,Improve meta description then inspect,Description short
