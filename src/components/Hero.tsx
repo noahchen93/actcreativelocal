@@ -2,16 +2,10 @@ import { Button } from "./ui/button";
 import { ArrowRight, Award, Zap } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { HeroSlideshow } from "./HeroSlideshow";
+import { scrollToSection } from "../lib/scrollToSection";
 
 export function Hero() {
   const { t } = useLanguage();
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section
@@ -184,19 +178,19 @@ export function Hero() {
             {/* Workflow stats */}
             <div className="hero-stats">
               <div>
-                <div className="hero-stat-num">IDEA</div>
+                <div className="hero-stat-num">{t("构思", "IDEA")}</div>
                 <div className="hero-stat-label">
                   {t("概念与创意方向", "Concept & creative direction")}
                 </div>
               </div>
               <div>
-                <div className="hero-stat-num">BUILD</div>
+                <div className="hero-stat-num">{t("制作", "BUILD")}</div>
                 <div className="hero-stat-label">
                   {t("定制制作与生产", "Custom fabrication & production")}
                 </div>
               </div>
               <div>
-                <div className="hero-stat-num">LIVE</div>
+                <div className="hero-stat-num">{t("落地", "LIVE")}</div>
                 <div className="hero-stat-label">
                   {t("现场协调与呈现", "On-site coordination & delivery")}
                 </div>

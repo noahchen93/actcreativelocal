@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useState } from "react";
+import { scrollToSection } from "../lib/scrollToSection";
 import gazeboImage from "figma:asset/1caf9ac9a9d0d7f9cad8ed51a98bb55b8d03990a.png";
 import foodTruckImage from "figma:asset/31c3a94b1e29c068a2f34e21f880665e070fc631.png";
 import ledDisplayImage from "figma:asset/9895e54c650c91e8620205b506be0a07797290ab.png";
@@ -377,12 +378,7 @@ export function ProductCategories() {
                   className="mt-2 rounded-lg bg-[#CCFF00] px-8 py-3 text-black shadow-lg transition-all hover:bg-[#b8e600] hover:shadow-xl"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => {
-                    const element = document.getElementById("contact");
-                    if (element) {
-                      element.scrollIntoView({ behavior: "smooth" });
-                    }
-                  }}
+                  onClick={() => scrollToSection("contact")}
                 >
                   {t("立即咨询", "Contact Us Now")}
                 </motion.button>

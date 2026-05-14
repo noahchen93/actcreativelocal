@@ -1,17 +1,11 @@
 import { Mail, Phone, MapPin, Heart } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { scrollToSection } from "../lib/scrollToSection";
 import logo from "figma:asset/9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png";
 
 export function Footer() {
   const { language, setLanguage, t } = useLanguage();
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   const switchLanguage = () => {
     const nextLanguage = language === "zh" ? "en" : "zh";

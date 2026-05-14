@@ -2,6 +2,7 @@ import { Card, CardContent } from "./ui/card";
 import { Package, Truck, DollarSign, ShieldCheck, Scale, MessageSquare, CheckCircle2, ArrowRight, ArrowDown, Settings, Headphones } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { scrollToSection } from "../lib/scrollToSection";
 
 const serviceFlowData = [
   {
@@ -604,20 +605,16 @@ export function Services() {
               </motion.div>
             </div>
 
-            <motion.div
+            <motion.button
+              type="button"
               className="service-outcome-cta items-center justify-center gap-3 bg-black text-[#CCFF00] px-5 md:px-8 py-3 md:py-4 rounded-lg shadow-lg cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-              }}
+              onClick={() => scrollToSection("contact")}
             >
               <CheckCircle2 className="service-outcome-cta-icon" />
               <span className="service-outcome-cta-text font-bold">{t("立即开始您的无忧采购之旅", "Start Your Hassle-Free Procurement Journey")}</span>
-            </motion.div>
+            </motion.button>
           </div>
         </motion.div>
       </div>

@@ -3,18 +3,16 @@ import { Menu, Globe } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { scrollToSection } from "../lib/scrollToSection";
 import logo from "figma:asset/9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-    }
+  const handleSectionLink = (id: string) => {
+    scrollToSection(id);
+    setIsMenuOpen(false);
   };
 
   const switchLanguage = () => {
@@ -192,19 +190,19 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="act-desktop-nav" aria-label="Primary navigation">
             <button
-              onClick={() => scrollToSection("cases")}
+              onClick={() => handleSectionLink("cases")}
               className="act-nav-pill"
             >
               {t("案例", "Work")}
             </button>
             <button
-              onClick={() => scrollToSection("services")}
+              onClick={() => handleSectionLink("services")}
               className="act-nav-pill"
             >
               {t("服务", "Services")}
             </button>
             <button
-              onClick={() => scrollToSection("products")}
+              onClick={() => handleSectionLink("products")}
               className="act-nav-pill"
             >
               {t("产品", "Products")}
@@ -216,7 +214,7 @@ export function Header() {
               {t("关于", "About")}
             </a>
             <button
-              onClick={() => scrollToSection("contact")}
+              onClick={() => handleSectionLink("contact")}
               className="act-nav-pill"
             >
               {t("联系我们", "Contact")}
@@ -236,7 +234,7 @@ export function Header() {
 
             <button
               type="button"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => handleSectionLink("contact")}
               className="act-action-button act-brief-button"
             >
               {t("发送需求", "Send Brief")}
@@ -257,6 +255,8 @@ export function Header() {
 
             <motion.button
               className="p-2 rounded-lg bg-[#1a1a1a]"
+              aria-label={isMenuOpen ? t("关闭菜单", "Close menu") : t("打开菜单", "Open menu")}
+              aria-expanded={isMenuOpen}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               whileTap={{ scale: 0.9 }}
             >
@@ -276,19 +276,19 @@ export function Header() {
             >
               <div className="flex flex-col space-y-4">
                 <button
-                  onClick={() => scrollToSection("cases")}
+                  onClick={() => handleSectionLink("cases")}
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
                 >
                   {t("案例", "Work")}
                 </button>
                 <button
-                  onClick={() => scrollToSection("services")}
+                  onClick={() => handleSectionLink("services")}
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
                 >
                   {t("服务", "Services")}
                 </button>
                 <button
-                  onClick={() => scrollToSection("products")}
+                  onClick={() => handleSectionLink("products")}
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
                 >
                   {t("产品", "Products")}
@@ -300,13 +300,13 @@ export function Header() {
                   {t("关于", "About")}
                 </a>
                 <button
-                  onClick={() => scrollToSection("contact")}
+                  onClick={() => handleSectionLink("contact")}
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
                 >
                   {t("联系我们", "Contact")}
                 </button>
                 <Button
-                  onClick={() => scrollToSection("contact")}
+                  onClick={() => handleSectionLink("contact")}
                   className="w-full bg-[#CCFF00] hover:bg-[#b8e600] text-black"
                 >
                   {t("发送需求", "Send Brief")}
