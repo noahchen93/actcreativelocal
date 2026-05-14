@@ -35,6 +35,10 @@ export function Header() {
         .act-header-row {
           min-height: 86px;
         }
+        .act-header-container {
+          padding-left: 1rem;
+          padding-right: 1.25rem;
+        }
         .act-desktop-nav {
           display: none;
         }
@@ -77,6 +81,55 @@ export function Header() {
         .act-header-actions {
           display: none;
         }
+        .act-action-cluster {
+          align-items: center;
+          gap: 0.4rem;
+          padding: 0.25rem;
+          border: 1px solid rgba(204, 255, 0, 0.16);
+          border-radius: 0.9rem;
+          background: rgba(10, 10, 10, 0.74);
+          flex-shrink: 0;
+        }
+        .act-action-button {
+          display: inline-flex;
+          height: 44px;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          border-radius: 0.7rem;
+          font-size: 0.92rem;
+          font-weight: 650;
+          line-height: 1;
+          white-space: nowrap;
+          transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
+        }
+        .act-language-button {
+          min-width: 126px;
+          padding: 0 0.95rem;
+          border: 1px solid rgba(204, 255, 0, 0.22);
+          background: rgba(26, 26, 26, 0.9);
+          color: #fff;
+        }
+        .act-language-button:hover,
+        .act-language-button:focus-visible {
+          border-color: rgba(204, 255, 0, 0.48);
+          background: rgba(34, 34, 34, 0.95);
+          outline: none;
+        }
+        .act-brief-button {
+          min-width: 126px;
+          padding: 0 1rem;
+          border: 1px solid #CCFF00;
+          background: #CCFF00;
+          color: #000;
+          box-shadow: 0 10px 26px -22px rgba(204, 255, 0, 0.9);
+        }
+        .act-brief-button:hover,
+        .act-brief-button:focus-visible {
+          background: #b8e600;
+          border-color: #b8e600;
+          outline: none;
+        }
         .act-mobile-actions {
           display: flex;
         }
@@ -97,7 +150,7 @@ export function Header() {
           .act-header-actions {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            margin-left: 1rem;
           }
           .act-mobile-actions {
             display: none;
@@ -107,6 +160,10 @@ export function Header() {
           }
         }
         @media (min-width: 1200px) {
+          .act-header-container {
+            padding-left: 1.5rem;
+            padding-right: 1.75rem;
+          }
           .act-desktop-nav {
             gap: 2rem;
           }
@@ -118,11 +175,14 @@ export function Header() {
           .act-desktop-nav {
             gap: 2.35rem;
           }
+          .act-header-container {
+            padding-right: 2rem;
+          }
         }
       `}</style>
-      <div className="container mx-auto px-4">
+      <div className="act-header-container container mx-auto">
         <div className="act-header-row flex items-center justify-between">
-          <motion.div 
+          <motion.div
             className="flex items-center gap-3"
             whileHover={{ scale: 1.02 }}
           >
@@ -137,14 +197,14 @@ export function Header() {
             >
               {t("案例", "Work")}
             </button>
-            <button 
-              onClick={() => scrollToSection("services")} 
+            <button
+              onClick={() => scrollToSection("services")}
               className="act-nav-pill"
             >
               {t("服务", "Services")}
             </button>
-            <button 
-              onClick={() => scrollToSection("products")} 
+            <button
+              onClick={() => scrollToSection("products")}
               className="act-nav-pill"
             >
               {t("产品", "Products")}
@@ -155,33 +215,32 @@ export function Header() {
             >
               {t("关于", "About")}
             </a>
-            <button 
-              onClick={() => scrollToSection("contact")} 
+            <button
+              onClick={() => scrollToSection("contact")}
               className="act-nav-pill"
             >
               {t("联系我们", "Contact")}
             </button>
           </nav>
 
-          <div className="act-header-actions">
+          <div className="act-header-actions act-action-cluster">
             {/* Language Toggle Button */}
-            <motion.button
+            <button
               onClick={switchLanguage}
               aria-label={language === "zh" ? "Switch to English" : "切换到中文"}
-              className="flex min-h-11 items-center gap-2 rounded-lg border border-[#CCFF00]/20 bg-[#1a1a1a] px-4 py-2.5 transition-all hover:bg-[#2a2a2a]"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="act-action-button act-language-button"
             >
-              <Globe className="w-4 h-4 text-[#CCFF00]" />
-              <span className="text-white">{languageLabel}</span>
-            </motion.button>
+              <Globe className="h-4.5 w-4.5 text-[#CCFF00]" />
+              <span>{languageLabel}</span>
+            </button>
 
-            <Button 
+            <button
+              type="button"
               onClick={() => scrollToSection("contact")}
-              className="min-h-11 bg-[#CCFF00] px-5 text-[0.95rem] text-black shadow-lg transition-all hover:bg-[#b8e600] hover:shadow-[#CCFF00]/50"
+              className="act-action-button act-brief-button"
             >
               {t("发送需求", "Send Brief")}
-            </Button>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -209,27 +268,27 @@ export function Header() {
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.nav 
+            <motion.nav
               className="act-mobile-nav py-4 border-t border-[#CCFF00]/20"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
             >
               <div className="flex flex-col space-y-4">
-                <button 
+                <button
                   onClick={() => scrollToSection("cases")}
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
                 >
                   {t("案例", "Work")}
                 </button>
-                <button 
-                  onClick={() => scrollToSection("services")} 
+                <button
+                  onClick={() => scrollToSection("services")}
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
                 >
                   {t("服务", "Services")}
                 </button>
-                <button 
-                  onClick={() => scrollToSection("products")} 
+                <button
+                  onClick={() => scrollToSection("products")}
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
                 >
                   {t("产品", "Products")}
@@ -240,14 +299,14 @@ export function Header() {
                 >
                   {t("关于", "About")}
                 </a>
-                <button 
-                  onClick={() => scrollToSection("contact")} 
+                <button
+                  onClick={() => scrollToSection("contact")}
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
                 >
                   {t("联系我们", "Contact")}
                 </button>
-                <Button 
-                  onClick={() => scrollToSection("contact")} 
+                <Button
+                  onClick={() => scrollToSection("contact")}
                   className="w-full bg-[#CCFF00] hover:bg-[#b8e600] text-black"
                 >
                   {t("发送需求", "Send Brief")}
