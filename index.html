@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
+    <style>
+      html,
+      body,
+      #root {
+        min-height: 100%;
+        margin: 0;
+        background: #000;
+      }
+
+      .seo-fallback {
+        display: none;
+      }
+    </style>
+    <noscript>
+      <style>
+        .seo-fallback {
+          display: block;
+        }
+      </style>
+    </noscript>
     <script>
       document.documentElement.lang =
         location.pathname === "/zh" || location.pathname.startsWith("/zh/")
@@ -213,9 +233,9 @@
   </head>
   <body>
     <div id="root">
-      <!-- SEO fallback content. React replaces this on hydration. Non-JS crawlers (Bing,
-           Yandex, Baidu, GPTBot, ClaudeBot, PerplexityBot) and screen readers see this. -->
-      <div style="background:#000;color:#f5f5f5;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;padding:48px 24px;min-height:100vh;line-height:1.6">
+      <!-- SEO fallback content. Hidden for normal JS users to avoid a first-paint flash.
+           It is shown only when JavaScript is disabled. React replaces this on render. -->
+      <div class="seo-fallback" style="background:#000;color:#f5f5f5;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;padding:48px 24px;min-height:100vh;line-height:1.6">
         <header style="max-width:1100px;margin:0 auto 48px;display:flex;align-items:center;gap:16px">
           <img src="/favicon-192.png" alt="ACT Creative logo — Singapore event fabrication and cross-border production agency" width="48" height="48" style="border-radius:8px"/>
           <strong style="font-size:18px;letter-spacing:0.06em">ACT CREATIVE</strong>

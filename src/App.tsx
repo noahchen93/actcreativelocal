@@ -1,6 +1,5 @@
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
-import { WhyActCreative } from "./components/WhyActCreative";
 import { Services } from "./components/Services";
 import { ProductCategories } from "./components/ProductCategories";
 import { CaseStudies } from "./components/CaseStudies";
@@ -19,7 +18,6 @@ export default function App() {
           <Hero />
           <CaseStudies />
           <ProductCategories />
-          <WhyActCreative />
           <Services />
           <TeamSection />
           <Contact />

@@ -2759,7 +2759,6 @@ html, body, button, input, select, textarea {
 /* ========== ACT homepage layout corrections ========== */
 #cases,
 #products,
-#solutions,
 #services,
 #team,
 #contact {
@@ -2769,7 +2768,6 @@ html, body, button, input, select, textarea {
 }
 
 #products,
-#solutions,
 #services,
 #team,
 #contact {
@@ -2778,7 +2776,6 @@ html, body, button, input, select, textarea {
 
 #cases h2,
 #products h2,
-#solutions h2,
 #services h2,
 #team h2,
 #contact h2 {
@@ -2795,7 +2792,6 @@ html, body, button, input, select, textarea {
 
 #cases h2 + div,
 #products h2 + div,
-#solutions h2 + div,
 #team h2 + div,
 #contact h2 + div {
   width: clamp(7rem, 24vw, 12rem) !important;
@@ -2807,7 +2803,6 @@ html, body, button, input, select, textarea {
 }
 
 #products h2 + div + p,
-#solutions h2 + div + p,
 #services h2 + p {
   max-width: 760px;
   margin-left: auto;
@@ -2820,7 +2815,6 @@ html, body, button, input, select, textarea {
 @media (min-width: 1024px) {
   #cases,
   #products,
-  #solutions,
   #services,
   #team,
   #contact {
@@ -2830,7 +2824,6 @@ html, body, button, input, select, textarea {
 
   #cases h2,
   #products h2,
-  #solutions h2,
   #services h2,
   #team h2,
   #contact h2 {
@@ -2848,7 +2841,6 @@ html, body, button, input, select, textarea {
 @media (max-width: 640px) {
   #cases h2,
   #products h2,
-  #solutions h2,
   #services h2,
   #team h2,
   #contact h2 {

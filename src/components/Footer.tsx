@@ -55,9 +55,6 @@ export function Footer() {
               <button onClick={() => scrollToSection("home")} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {t("首页", "Home")}
               </button>
-              <button onClick={() => scrollToSection("solutions")} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
-                {t("解决方案", "Solutions")}
-              </button>
               <button onClick={() => scrollToSection("services")} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {t("服务", "Services")}
               </button>
