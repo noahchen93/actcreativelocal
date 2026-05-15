@@ -29,8 +29,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/" />
     <image:image>
       <image:loc>https://actcreative.net/og-default.png</image:loc>
-      <image:title>ACT Creative — Cross-border event fabrication and production partner in Singapore</image:title>
-      <image:caption>ACT Creative connects China manufacturing with Singapore event delivery for agencies and brands.</image:caption>
     </image:image>
   </url>
 
@@ -72,23 +70,18 @@
 
   <url>
     <loc>https://actcreative.net/blog/</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://actcreative.net/blog/singapore-event-production-cost-guide-2026/</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <url>
-    <loc>https://actcreative.net/blog/sourcing-frp-sculptures-from-china/</loc>
-    <lastmod>2026-05-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/blog/assets/linkedin-sourcing-solutions.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/blog/assets/linkedin-giant-inflatables.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/blog/assets/linkedin-pacman-maze.jpg</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -184,8 +177,6 @@
     <priority>0.75</priority>
     <image:image>
       <image:loc>https://actcreative.net/case-studies/images/big-big-world.webp</image:loc>
-      <image:title>A BIG BIG WORLD at Sentosa — event fabrication by ACT Creative</image:title>
-      <image:caption>Singapore light show project with tens of thousands of visitors engaged.</image:caption>
     </image:image>
   </url>
 
@@ -196,8 +187,6 @@
     <priority>0.75</priority>
     <image:image>
       <image:loc>https://actcreative.net/case-studies/images/wings-of-art.webp</image:loc>
-      <image:title>Wings of Art Barbie Charity Art Exhibition — Singapore props production by ACT Creative</image:title>
-      <image:caption>Charity art exhibition props and runway production in Singapore.</image:caption>
     </image:image>
   </url>
 
@@ -208,8 +197,6 @@
     <priority>0.75</priority>
     <image:image>
       <image:loc>https://actcreative.net/case-studies/images/pacman-friends.webp</image:loc>
-      <image:title>PACMAN and Friends at Sentosa — themed public activation by ACT Creative</image:title>
-      <image:caption>Themed public activation recorded by Singapore Book of Records.</image:caption>
     </image:image>
   </url>
 
@@ -220,8 +207,6 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://actcreative.net/case-studies/images/florentijn-hofman.webp</image:loc>
-      <image:title>Florentijn Hofman China solo touring exhibition production by ACT Creative</image:title>
-      <image:caption>End-to-end museum touring exhibition production across Chinese venues.</image:caption>
     </image:image>
   </url>
 
@@ -232,8 +217,6 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://actcreative.net/case-studies/images/craig-karl.webp</image:loc>
-      <image:title>Craig and Karl China solo touring exhibition production by ACT Creative</image:title>
-      <image:caption>Concept-to-install exhibition fabrication with colour-matched finishing.</image:caption>
     </image:image>
   </url>
 
@@ -244,8 +227,6 @@
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://actcreative.net/case-studies/images/k11-shenyang.webp</image:loc>
-      <image:title>K11 Shenyang public artworks collection installed by ACT Creative</image:title>
-      <image:caption>30+ large-scale public artworks installed in a live mall environment.</image:caption>
     </image:image>
   </url>
 </urlset>

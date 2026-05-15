@@ -67,6 +67,9 @@ export function Footer() {
               <a href="/case-studies/" className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {t("案例总览", "Case Studies")}
               </a>
+              <a href="/blog/" className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
+                {t("博客", "Blog")}
+              </a>
               <button onClick={switchLanguage} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {language === "zh" ? "English" : "中文"}
               </button>
