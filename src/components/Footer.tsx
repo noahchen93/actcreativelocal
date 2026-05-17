@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Heart } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Heart } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { scrollToSection } from "../lib/scrollToSection";
@@ -37,7 +37,28 @@ export function Footer() {
                 "Singapore-based creative production partner — custom fabrication and project delivery for event agencies and brand teams."
               )}
             </p>
-            {/* Social media links removed - will be added when accounts are ready */}
+            <div className="flex items-center gap-3" aria-label="ACT Creative Singapore official social media">
+              <a
+                href="https://www.facebook.com/profile.php?id=61590057715328"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ACT Creative Singapore official Facebook page"
+                title="ACT Creative Singapore official Facebook page"
+                className="w-9 h-9 rounded-full border border-[#CCFF00]/30 flex items-center justify-center text-gray-400 hover:text-[#CCFF00] hover:border-[#CCFF00] transition-colors"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/act_creative_official/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="ACT Creative Singapore official Instagram account"
+                title="ACT Creative Singapore official Instagram account"
+                className="w-9 h-9 rounded-full border border-[#CCFF00]/30 flex items-center justify-center text-gray-400 hover:text-[#CCFF00] hover:border-[#CCFF00] transition-colors"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+            </div>
           </motion.div>
 
           {/* 快速链接 */}

@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { ArrowRight, Award, Zap } from "lucide-react";
+import { ArrowRight, Award, Facebook, Instagram, Zap } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { HeroSlideshow } from "./HeroSlideshow";
 import { scrollToSection } from "../lib/scrollToSection";
@@ -87,6 +87,46 @@ export function Hero() {
           letter-spacing: 0.04em;
           line-height: 1.4;
         }
+        .hero-social-row {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 0.65rem;
+          margin-bottom: 2rem;
+        }
+        .hero-social-label {
+          flex-basis: 100%;
+          color: rgba(255,255,255,0.48);
+          font-size: 0.78rem;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+        .hero-social-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.45rem;
+          min-height: 36px;
+          padding: 0 0.85rem;
+          border: 1px solid rgba(204,255,0,0.3);
+          border-radius: 999px;
+          color: rgba(255,255,255,0.82);
+          background: rgba(26,26,26,0.58);
+          font-size: 0.84rem;
+          font-weight: 650;
+          transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+        }
+        .hero-social-link:hover,
+        .hero-social-link:focus-visible {
+          border-color: rgba(204,255,0,0.7);
+          color: #CCFF00;
+          background: rgba(204,255,0,0.08);
+          outline: none;
+        }
+        @media (max-width: 639px) {
+          .hero-social-link {
+            min-width: calc(50% - 0.4rem);
+          }
+        }
       `}</style>
 
       {/* Subtle background */}
@@ -157,7 +197,7 @@ export function Hero() {
             {/* CTAs */}
             <div
               className="flex flex-col sm:flex-row gap-3"
-              style={{ marginBottom: "2rem" }}
+              style={{ marginBottom: "1rem" }}
             >
               <Button
                 size="lg"
@@ -179,6 +219,32 @@ export function Hero() {
                 <Award className="w-4 h-4 mr-2" />
                 {t("查看案例", "View Work")}
               </Button>
+            </div>
+
+            <div className="hero-social-row" aria-label="Follow ACT Creative">
+              <span className="hero-social-label">
+                {t("关注 ACT Creative 新加坡项目动态", "Follow ACT Creative Singapore builds")}
+              </span>
+              <a
+                href="https://www.instagram.com/act_creative_official/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-social-link"
+                aria-label="Follow ACT Creative Singapore on Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+                ACT Creative SG Instagram
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61590057715328"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-social-link"
+                aria-label="Follow ACT Creative Singapore on Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+                ACT Creative SG Facebook
+              </a>
             </div>
 
             {/* Workflow stats */}

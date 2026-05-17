@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
-import { MessageCircle, Mail, Copy, Check } from "lucide-react";
+import { MessageCircle, Mail, Copy, Check, Facebook, Instagram } from "lucide-react";
 import { Button } from "./ui/button";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -56,6 +56,37 @@ export function Contact() {
       id="contact"
       className="py-14 md:py-20 bg-[#0a0a0a] relative overflow-hidden"
     >
+      <style>{`
+        .contact-social-link {
+          display: inline-flex;
+          min-height: 44px;
+          min-width: 150px;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          border: 1px solid rgba(204,255,0,0.35);
+          border-radius: 0.5rem;
+          padding: 0 1rem;
+          color: #fff;
+          font-size: 0.92rem;
+          font-weight: 650;
+          line-height: 1;
+          transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+        }
+        .contact-social-link:hover,
+        .contact-social-link:focus-visible {
+          border-color: #CCFF00;
+          color: #CCFF00;
+          background: rgba(204,255,0,0.1);
+          outline: none;
+        }
+        @media (max-width: 639px) {
+          .contact-social-link {
+            width: 100%;
+          }
+        }
+      `}</style>
+
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(204,255,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(204,255,0,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -205,6 +236,33 @@ export function Contact() {
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-[#CCFF00] rounded-full animate-pulse"></div>
                   <span>{t("专业团队", "Expert Team")}</span>
+                </div>
+              </div>
+              <div className="mt-6 pt-6 border-t border-[#CCFF00]/10">
+                <p className="text-gray-400 text-sm mb-3">
+                  {t("也可以关注 ACT Creative 新加坡官方项目动态", "You can also follow ACT Creative Singapore official project updates")}
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                  <a
+                    href="https://www.instagram.com/act_creative_official/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-social-link"
+                    aria-label="Follow ACT Creative Singapore on Instagram"
+                  >
+                    <Instagram className="w-4 h-4" />
+                    ACT Creative SG Instagram
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61590057715328"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-social-link"
+                    aria-label="Follow ACT Creative Singapore on Facebook"
+                  >
+                    <Facebook className="w-4 h-4" />
+                    ACT Creative SG Facebook
+                  </a>
                 </div>
               </div>
             </div>
