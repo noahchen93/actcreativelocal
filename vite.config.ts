@@ -153,6 +153,40 @@
     build: {
       target: 'esnext',
       outDir: 'build',
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            const normalizedId = id.replace(/\\/g, '/');
+
+            if (
+              normalizedId.includes('/node_modules/react/') ||
+              normalizedId.includes('/node_modules/react-dom/') ||
+              normalizedId.includes('/node_modules/scheduler/')
+            ) {
+              return 'react-vendor';
+            }
+
+            if (normalizedId.includes('/node_modules/motion/')) {
+              return 'motion-vendor';
+            }
+
+            if (normalizedId.includes('/node_modules/lucide-react/')) {
+              return 'icons-vendor';
+            }
+
+            if (normalizedId.includes('/node_modules/@radix-ui/')) {
+              return 'radix-vendor';
+            }
+
+            if (
+              normalizedId.includes('/node_modules/sonner/') ||
+              normalizedId.includes('/node_modules/next-themes/')
+            ) {
+              return 'feedback-vendor';
+            }
+          },
+        },
+      },
     },
     server: {
       port: 3000,
