@@ -85,6 +85,11 @@
       googleSiteVerificationPlugin(getGoogleSiteVerificationToken(mode)),
       localizedHomepagePlugin(),
     ],
+    define: mode === 'production'
+      ? {
+          'process.env.NODE_ENV': JSON.stringify('production'),
+        }
+      : undefined,
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
