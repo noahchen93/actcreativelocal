@@ -48,14 +48,29 @@ const ABSOLUTE_FILL = {
 
 export function HeroSlideshow() {
   const [idx, setIdx] = useState(0);
+  const [loadedIndexes, setLoadedIndexes] = useState<Set<number>>(
+    () => new Set([0, 1]),
+  );
 
   useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reduceMotion.matches) return;
+
     const id = window.setInterval(
       () => setIdx((i) => (i + 1) % slides.length),
       INTERVAL_MS,
     );
     return () => window.clearInterval(id);
   }, []);
+
+  useEffect(() => {
+    setLoadedIndexes((current) => {
+      const next = new Set(current);
+      next.add(idx);
+      next.add((idx + 1) % slides.length);
+      return next;
+    });
+  }, [idx]);
 
   return (
     <div
@@ -71,21 +86,28 @@ export function HeroSlideshow() {
         boxShadow: "0 25px 50px -12px rgba(0,0,0,0.6)",
       }}
     >
-      {slides.map((s, i) => (
-        <img
-          key={s.src}
-          src={s.src}
-          alt={s.alt}
-          loading={i < 3 ? "eager" : "lazy"}
-          decoding="async"
-          style={{
-            ...ABSOLUTE_FILL,
-            objectFit: "cover",
-            opacity: i === idx ? 1 : 0,
-            transition: `opacity ${FADE_MS}ms ease-in-out`,
-          }}
-        />
-      ))}
+      {slides.map((s, i) => {
+        if (!loadedIndexes.has(i)) return null;
+
+        const isActive = i === idx;
+
+        return (
+          <img
+            key={s.src}
+            src={s.src}
+            alt={isActive ? s.alt : ""}
+            aria-hidden={!isActive}
+            loading={i === 0 ? "eager" : "lazy"}
+            decoding="async"
+            style={{
+              ...ABSOLUTE_FILL,
+              objectFit: "cover",
+              opacity: isActive ? 1 : 0,
+              transition: `opacity ${FADE_MS}ms ease-in-out`,
+            }}
+          />
+        );
+      })}
     </div>
   );
 }

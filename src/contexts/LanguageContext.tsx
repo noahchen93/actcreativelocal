@@ -11,9 +11,9 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 const META_COPY = {
   en: {
-    title: "ACT Creative | Cross-Border Event Fabrication & Production Partner in Singapore",
+    title: "ACT Creative Singapore | Event Fabrication & Production Partner",
     description:
-      "ACT Creative helps event agencies and brands manage custom fabrication, props, exhibition components, FRP/sculpture works and event merchandise from China, with local coordination in Singapore and Southeast Asia.",
+      "ACT Creative Singapore (ACT Creative Pte. Ltd., UEN 202600226K) helps event agencies and brands manage custom fabrication, props, exhibition components, FRP/sculpture works and event merchandise with local coordination in Singapore and Southeast Asia.",
   },
   zh: {
     title: "及物创意 ACT Creative | 新加坡跨境活动制作与中国生产支持伙伴",
