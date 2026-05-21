@@ -13,7 +13,7 @@ const META_COPY = {
   en: {
     title: "ACT Creative Singapore | Event Fabrication & Production Partner",
     description:
-      "ACT Creative Singapore (ACT Creative Pte. Ltd., UEN 202600226K) helps event agencies and brands manage custom fabrication, props, exhibition components, FRP/sculpture works and event merchandise with local coordination in Singapore and Southeast Asia.",
+      "Singapore event fabrication and cross-border production partner for custom props, exhibition components, FRP/sculpture and event merchandise.",
   },
   zh: {
     title: "及物创意 ACT Creative | 新加坡跨境活动制作与中国生产支持伙伴",
