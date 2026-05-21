@@ -58,6 +58,9 @@
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/event-fabrication-singapore/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://actcreative.net/event-fabrication-singapore/" />
+    <image:image>
+      <image:loc>https://actcreative.net/og/zh-event-fabrication-singapore.png</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -67,6 +70,9 @@
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/china-event-production-support/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://actcreative.net/china-event-production-support/" />
+    <image:image>
+      <image:loc>https://actcreative.net/og/zh-china-event-production-support.png</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -87,44 +93,62 @@
 
   <url>
     <loc>https://actcreative.net/event-fabrication-singapore/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/event-fabrication-singapore.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://actcreative.net/custom-props-singapore/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/custom-props-singapore.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://actcreative.net/frp-sculpture-fabrication-singapore/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/frp-sculpture-fabrication-singapore.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://actcreative.net/exhibition-booth-production-singapore/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/exhibition-booth-production-singapore.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://actcreative.net/china-event-production-support/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/china-event-production-support.png</image:loc>
+    </image:image>
   </url>
 
   <url>
     <loc>https://actcreative.net/event-merchandise-sourcing/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/event-merchandise-sourcing.png</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -132,6 +156,9 @@
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/trade-show-booth-singapore.png</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -141,6 +168,9 @@
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/event-fabrication-hong-kong/" />
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/event-fabrication-singapore/" />
+    <image:image>
+      <image:loc>https://actcreative.net/og/event-fabrication-hong-kong.png</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -148,6 +178,9 @@
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/roadshow-production-singapore.png</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -155,6 +188,9 @@
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/retail-mall-activation-singapore.png</image:loc>
+    </image:image>
   </url>
 
   <url>
