@@ -90,6 +90,11 @@
           'process.env.NODE_ENV': JSON.stringify('production'),
         }
       : undefined,
+    esbuild: mode === 'production'
+      ? {
+          jsxDev: false,
+        }
+      : undefined,
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
