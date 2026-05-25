@@ -18,6 +18,17 @@ const EMAIL = "contact@actcreative.net";
 const WHATSAPP = "6584515268";
 const MAILTO_SUBJECT = "Project Inquiry - ACT Creative";
 
+type InquiryAttributionBridge = {
+  formatLines?: (channel: string) => string;
+  track?: (channel: string, label?: string) => void;
+};
+
+declare global {
+  interface Window {
+    ACTInquiryAttribution?: InquiryAttributionBridge;
+  }
+}
+
 type BriefOption = {
   id: string;
   zh: string;
@@ -55,6 +66,19 @@ const budgets: BriefOption[] = [
 
 const getOption = (options: BriefOption[], id: string) =>
   options.find((option) => option.id === id) ?? options[0];
+
+const getAttributionLines = (channel: string) =>
+  typeof window !== "undefined"
+    ? window.ACTInquiryAttribution?.formatLines?.(channel) ?? ""
+    : "";
+
+const trackInquiryIntent = (channel: string, label: string) => {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  window.ACTInquiryAttribution?.track?.(channel, label);
+};
 
 export function Contact() {
   const { t } = useLanguage();
@@ -101,8 +125,11 @@ export function Contact() {
   };
 
   const handleWhatsApp = () => {
+    trackInquiryIntent("whatsapp", "contact_brief_builder");
+    const message = `${briefMessage}${getAttributionLines("whatsapp")}`;
+
     window.open(
-      `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(briefMessage)}`,
+      `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,
       "_blank",
       "noopener",
     );
@@ -136,7 +163,10 @@ export function Contact() {
 
   const handleEmail = () => {
     const subject = encodeURIComponent(MAILTO_SUBJECT);
-    const body = encodeURIComponent(`${briefMessage}\n\nBest,\n`);
+    const body = encodeURIComponent(
+      `${briefMessage}${getAttributionLines("email")}\n\nBest,\n`,
+    );
+    trackInquiryIntent("email", "contact_brief_builder");
     window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
     copyEmail();
   };
