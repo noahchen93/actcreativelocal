@@ -93,27 +93,40 @@
 
   <url>
     <loc>https://actcreative.net/booth-design-build-singapore/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.86</priority>
+    <priority>0.92</priority>
     <image:image>
       <image:loc>https://actcreative.net/og/exhibition-booth-production-singapore.png</image:loc>
+      <image:title>Booth Design and Build Singapore</image:title>
+      <image:caption>Exhibition booth contractor support for Singapore trade shows, pop-ups and brand activations.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/002-china-moutai-booth-dbf2789e7d.webp</image:loc>
+      <image:title>Exhibition booth design reference case</image:title>
+      <image:caption>Booth design and build reference image from the ACT Creative portfolio.</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://actcreative.net/booth-design-build-portfolio/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.82</priority>
+    <priority>0.86</priority>
     <image:image>
       <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/002-china-moutai-booth-dbf2789e7d.webp</image:loc>
+      <image:title>Booth design portfolio image</image:title>
+      <image:caption>Exhibition booth display case reference in the ACT Creative booth design portfolio.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/241-chagee-andy-lau-concept-booth-39bd5f1fcf.webp</image:loc>
+      <image:title>Brand activation booth portfolio image</image:title>
+      <image:caption>Custom booth and brand display reference from the ACT Creative portfolio.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/061-huawei-tech-week-singapore-4f31292481.webp</image:loc>
+      <image:title>Conference environment production portfolio image</image:title>
+      <image:caption>Summit and conference production reference from the ACT Creative portfolio.</image:caption>
     </image:image>
   </url>
 
