@@ -8,7 +8,90 @@ import logo from "figma:asset/9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeProjectGroup, setActiveProjectGroup] = useState<"local" | "china">("local");
   const { language, setLanguage, t } = useLanguage();
+
+  const projectGroups = [
+    {
+      id: "local" as const,
+      label: t("本地 Projects", "Singapore Projects"),
+      description: t("新加坡活动、品牌快闪与公共体验", "Singapore events, brand activations and public experiences"),
+      projects: [
+        {
+          title: "A BIG BIG WORLD at Sentosa",
+          href: "/case-studies/sentosa-big-big-world-event-fabrication/",
+          meta: t("圣淘沙跨年灯光秀", "Sentosa light show"),
+        },
+        {
+          title: "PACMAN and Friends at Sentosa",
+          href: "/case-studies/sentosa-pacman-human-game/",
+          meta: t("主题公共互动活动", "Themed public activation"),
+        },
+        {
+          title: "Wings of Art Barbie Runway",
+          href: "/case-studies/wings-of-art-barbie-runway-singapore/",
+          meta: t("慈善艺术展与道具制作", "Charity art exhibition and props"),
+        },
+        {
+          title: "Artbox Singapore",
+          href: "/case-studies/artbox-singapore-merchandise-materials/",
+          meta: t("活动周边与物料支持", "Event merchandise and materials"),
+        },
+      ],
+    },
+    {
+      id: "china" as const,
+      label: t("中国国内 Projects", "China Projects"),
+      description: t("中国博物馆展览、公共艺术与商业空间项目", "China museum exhibitions, public art and retail installations"),
+      projects: [
+        {
+          title: "Florentijn Hofman Shanghai Museum Show",
+          href: "/case-studies/florentijn-hofman-shanghai-museum-show/",
+          meta: t("上海个人博物馆巡展", "Shanghai solo museum show"),
+        },
+        {
+          title: "Craig & Karl Beijing Museum Show",
+          href: "/case-studies/craig-and-karl-beijing-museum-show/",
+          meta: t("北京个人博物馆展览", "Beijing solo museum show"),
+        },
+        {
+          title: "K11 Shenyang Public Artworks",
+          href: "/case-studies/k11-shenyang-public-art-collection/",
+          meta: t("30+ 件大型公共艺术装置", "30+ large-scale public artworks"),
+        },
+      ],
+    },
+  ];
+
+  const activeProjects = projectGroups.find((group) => group.id === activeProjectGroup) ?? projectGroups[0];
+
+  const serviceItems = [
+    {
+      title: t("展位设计和搭建", "Booth Design & Build"),
+      href: "/booth-design-build-singapore/",
+      meta: t("展会、快闪与品牌活动空间", "Exhibition, pop-up and activation spaces"),
+    },
+    {
+      title: t("中国采购代理", "China Sourcing Agent"),
+      href: "/china-sourcing-agent/",
+      meta: t("供应商筛选、比价、打样与定制跟进", "Supplier search, price comparison, samples and custom production"),
+    },
+    {
+      title: t("文创礼品与道具咨询", "Merchandise & Props Consulting"),
+      href: "/custom-merchandise-props-consulting/",
+      meta: t("定制咨询、报价参考与生产建议", "Quote reference, specs and production direction"),
+    },
+    {
+      title: t("中国与东南亚运输协调", "China & SEA Logistics"),
+      href: "/china-southeast-asia-logistics/",
+      meta: t("运输代理、装箱、交付与现场协调", "Packing, shipment planning and delivery coordination"),
+    },
+    {
+      title: t("艺术展览策划与布展", "Art Exhibition Planning & Installation"),
+      href: "/art-exhibition-planning-installation/",
+      meta: t("展陈策划、制作协调、运输与布展", "Display planning, fabrication, logistics and installation"),
+    },
+  ];
 
   const handleSectionLink = (id: string) => {
     scrollToSection(id);
@@ -75,6 +158,234 @@ export function Header() {
         .act-nav-pill:focus-visible::after {
           opacity: 1;
           transform: scaleX(1);
+        }
+        .act-project-menu {
+          position: relative;
+          display: inline-flex;
+        }
+        .act-project-trigger {
+          gap: 0.42rem;
+        }
+        .act-project-trigger-icon {
+          display: inline-block;
+          width: 0.42rem;
+          height: 0.42rem;
+          border-right: 1.5px solid currentColor;
+          border-bottom: 1.5px solid currentColor;
+          transform: rotate(45deg) translateY(-1px);
+          transition: transform 180ms ease;
+        }
+        .act-project-menu:hover .act-project-trigger-icon,
+        .act-project-menu:focus-within .act-project-trigger-icon {
+          transform: rotate(225deg) translateY(-1px);
+        }
+        .act-project-dropdown {
+          position: absolute;
+          top: calc(100% + 0.85rem);
+          left: 0;
+          display: grid;
+          grid-template-columns: minmax(14.5rem, 0.85fr) minmax(23rem, 1.35fr);
+          gap: 1rem;
+          width: min(46rem, calc(100vw - 2rem));
+          padding: 0.85rem;
+          border: 1px solid rgba(204, 255, 0, 0.26);
+          border-radius: 0.5rem;
+          background: rgba(5, 5, 5, 0.98);
+          box-shadow: 0 24px 70px -38px rgba(204, 255, 0, 0.72), 0 18px 60px rgba(0, 0, 0, 0.46);
+          opacity: 0;
+          pointer-events: none;
+          transform: translateY(-0.35rem);
+          transition: opacity 160ms ease, transform 160ms ease;
+        }
+        .act-project-dropdown::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -0.9rem;
+          height: 0.9rem;
+        }
+        .act-project-menu:hover .act-project-dropdown,
+        .act-project-menu:focus-within .act-project-dropdown {
+          opacity: 1;
+          pointer-events: auto;
+          transform: translateY(0);
+        }
+        .act-project-groups,
+        .act-project-list {
+          min-width: 0;
+          border: 1px solid rgba(204, 255, 0, 0.14);
+          border-radius: 0.5rem;
+          background: rgba(18, 18, 18, 0.88);
+          padding: 0.5rem;
+        }
+        .act-project-group-button {
+          display: block;
+          width: 100%;
+          padding: 0.85rem 0.9rem;
+          border-radius: 0.5rem;
+          text-align: left;
+          transition: background 160ms ease;
+        }
+        .act-project-group-button strong {
+          display: block;
+          color: #fff;
+          font-size: 0.92rem;
+          line-height: 1.2;
+        }
+        .act-project-group-button span {
+          display: block;
+          margin-top: 0.25rem;
+          color: rgba(255, 255, 255, 0.52);
+          font-size: 0.76rem;
+          line-height: 1.35;
+        }
+        .act-project-group-button:hover,
+        .act-project-group-button:focus-visible,
+        .act-project-group-button[data-active="true"] {
+          background: rgba(204, 255, 0, 0.1);
+          outline: none;
+        }
+        .act-project-group-button:hover strong,
+        .act-project-group-button:focus-visible strong,
+        .act-project-group-button[data-active="true"] strong {
+          color: #CCFF00;
+        }
+        .act-project-list-header {
+          padding: 0.55rem 0.65rem 0.45rem;
+          color: rgba(255, 255, 255, 0.52);
+          font-size: 0.72rem;
+          font-weight: 750;
+          letter-spacing: 0;
+          text-transform: uppercase;
+        }
+        .act-project-link {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          gap: 0.85rem;
+          align-items: center;
+          padding: 0.82rem 0.75rem;
+          border-radius: 0.5rem;
+          color: #fff;
+          transition: background 160ms ease, color 160ms ease;
+        }
+        .act-project-link:hover,
+        .act-project-link:focus-visible {
+          background: rgba(204, 255, 0, 0.1);
+          color: #CCFF00;
+          outline: none;
+        }
+        .act-project-link-title {
+          display: block;
+          font-size: 0.92rem;
+          font-weight: 700;
+          line-height: 1.22;
+        }
+        .act-project-link-meta {
+          display: block;
+          margin-top: 0.2rem;
+          color: rgba(255, 255, 255, 0.52);
+          font-size: 0.76rem;
+          line-height: 1.35;
+        }
+        .act-project-link-arrow {
+          color: #CCFF00;
+          font-size: 1rem;
+        }
+        .act-service-menu {
+          position: relative;
+          display: inline-flex;
+        }
+        .act-service-dropdown {
+          position: absolute;
+          top: calc(100% + 0.85rem);
+          left: 50%;
+          z-index: 2;
+          width: min(29rem, calc(100vw - 2rem));
+          padding: 0.65rem;
+          border: 1px solid rgba(204, 255, 0, 0.26);
+          border-radius: 0.5rem;
+          background: rgba(5, 5, 5, 0.98);
+          box-shadow: 0 24px 70px -38px rgba(204, 255, 0, 0.72), 0 18px 60px rgba(0, 0, 0, 0.46);
+          opacity: 0;
+          pointer-events: none;
+          transform: translate(-50%, -0.35rem);
+          transition: opacity 160ms ease, transform 160ms ease;
+        }
+        .act-service-dropdown::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: -0.9rem;
+          height: 0.9rem;
+        }
+        .act-service-menu:hover .act-service-dropdown,
+        .act-service-menu:focus-within .act-service-dropdown {
+          opacity: 1;
+          pointer-events: auto;
+          transform: translate(-50%, 0);
+        }
+        .act-service-menu:hover .act-project-trigger-icon,
+        .act-service-menu:focus-within .act-project-trigger-icon {
+          transform: rotate(225deg) translateY(-1px);
+        }
+        .act-service-link {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          gap: 0.8rem;
+          align-items: center;
+          padding: 0.82rem 0.8rem;
+          border-radius: 0.5rem;
+          color: #fff;
+          transition: background 160ms ease, color 160ms ease;
+        }
+        .act-service-link:hover,
+        .act-service-link:focus-visible {
+          background: rgba(204, 255, 0, 0.1);
+          color: #CCFF00;
+          outline: none;
+        }
+        .act-service-link-title {
+          display: block;
+          font-size: 0.92rem;
+          font-weight: 750;
+          line-height: 1.22;
+        }
+        .act-service-link-meta {
+          display: block;
+          margin-top: 0.2rem;
+          color: rgba(255, 255, 255, 0.52);
+          font-size: 0.76rem;
+          line-height: 1.35;
+        }
+        .act-mobile-project-block {
+          padding: 0.7rem 1rem 0.85rem;
+          border: 1px solid rgba(204, 255, 0, 0.16);
+          border-radius: 0.5rem;
+          background: rgba(26, 26, 26, 0.68);
+        }
+        .act-mobile-project-heading {
+          display: block;
+          color: #CCFF00;
+          font-size: 0.78rem;
+          font-weight: 800;
+          letter-spacing: 0;
+          text-transform: uppercase;
+          margin-bottom: 0.45rem;
+        }
+        .act-mobile-project-link {
+          display: block;
+          padding: 0.55rem 0;
+          color: #fff;
+          font-size: 0.92rem;
+          line-height: 1.25;
+        }
+        .act-mobile-project-link span {
+          display: block;
+          margin-top: 0.12rem;
+          color: rgba(255, 255, 255, 0.52);
+          font-size: 0.75rem;
         }
         .act-header-actions {
           display: none;
@@ -189,18 +500,66 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="act-desktop-nav" aria-label="Primary navigation">
-            <button
-              onClick={() => handleSectionLink("cases")}
-              className="act-nav-pill"
-            >
-              {t("案例", "Work")}
-            </button>
-            <button
-              onClick={() => handleSectionLink("services")}
-              className="act-nav-pill"
-            >
-              {t("服务", "Services")}
-            </button>
+            <div className="act-project-menu">
+              <button
+                type="button"
+                onMouseEnter={() => setActiveProjectGroup("local")}
+                onFocus={() => setActiveProjectGroup("local")}
+                className="act-nav-pill act-project-trigger"
+              >
+                {t("精选项目", "Selected Projects")}
+                <span className="act-project-trigger-icon" aria-hidden="true" />
+              </button>
+              <div className="act-project-dropdown" role="menu" aria-label="Selected projects">
+                <div className="act-project-groups" aria-label="Project regions">
+                  {projectGroups.map((group) => (
+                    <button
+                      key={group.id}
+                      type="button"
+                      className="act-project-group-button"
+                      data-active={activeProjectGroup === group.id}
+                      onMouseEnter={() => setActiveProjectGroup(group.id)}
+                      onFocus={() => setActiveProjectGroup(group.id)}
+                    >
+                      <strong>{group.label}</strong>
+                      <span>{group.description}</span>
+                    </button>
+                  ))}
+                </div>
+                <div className="act-project-list">
+                  <div className="act-project-list-header">{activeProjects.label}</div>
+                  {activeProjects.projects.map((project) => (
+                    <a key={project.href} href={project.href} className="act-project-link" role="menuitem">
+                      <span>
+                        <span className="act-project-link-title">{project.title}</span>
+                        <span className="act-project-link-meta">{project.meta}</span>
+                      </span>
+                      <span className="act-project-link-arrow" aria-hidden="true">→</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <div className="act-service-menu">
+              <button
+                type="button"
+                className="act-nav-pill act-project-trigger"
+              >
+                {t("服务", "Services")}
+                <span className="act-project-trigger-icon" aria-hidden="true" />
+              </button>
+              <div className="act-service-dropdown" role="menu" aria-label="Services">
+                {serviceItems.map((service) => (
+                  <a key={service.href} href={service.href} className="act-service-link" role="menuitem">
+                    <span>
+                      <span className="act-service-link-title">{service.title}</span>
+                      <span className="act-service-link-meta">{service.meta}</span>
+                    </span>
+                    <span className="act-project-link-arrow" aria-hidden="true">→</span>
+                  </a>
+                ))}
+              </div>
+            </div>
             <button
               onClick={() => handleSectionLink("products")}
               className="act-nav-pill"
@@ -275,18 +634,45 @@ export function Header() {
               exit={{ opacity: 0, height: 0 }}
             >
               <div className="flex flex-col space-y-4">
-                <button
-                  onClick={() => handleSectionLink("cases")}
-                  className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
-                >
-                  {t("案例", "Work")}
-                </button>
-                <button
-                  onClick={() => handleSectionLink("services")}
-                  className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
-                >
-                  {t("服务", "Services")}
-                </button>
+                <div className="act-mobile-project-block">
+                  <span className="act-mobile-project-heading">{t("精选项目", "Selected Projects")}</span>
+                  <div className="space-y-3">
+                    {projectGroups.map((group) => (
+                      <div key={group.id}>
+                        <span className="block text-xs font-semibold text-white/60">{group.label}</span>
+                        <div className="mt-1">
+                          {group.projects.map((project) => (
+                            <a
+                              key={project.href}
+                              href={project.href}
+                              className="act-mobile-project-link"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              {project.title}
+                              <span>{project.meta}</span>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="act-mobile-project-block">
+                  <span className="act-mobile-project-heading">{t("服务", "Services")}</span>
+                  <div>
+                    {serviceItems.map((service) => (
+                      <a
+                        key={service.href}
+                        href={service.href}
+                        className="act-mobile-project-link"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {service.title}
+                        <span>{service.meta}</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
                 <button
                   onClick={() => handleSectionLink("products")}
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"

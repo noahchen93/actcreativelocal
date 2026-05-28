@@ -5,6 +5,15 @@ dist
 *.log
 .env
 .env.local
+.env.*
+!.env.example
 .vercel
 _originals/
 output/
+.playwright-mcp/
+tmp/
+docs/search-console-exports/
+.secrets/
+*service-account*.json
+client_secret*.json
+application_default_credentials.json

@@ -52,12 +52,17 @@
       "devDependencies": {
             "@types/node": "^20.10.0",
             "@vitejs/plugin-react-swc": "^3.10.2",
+            "dotenv": "^17.4.2",
+            "googleapis": "^172.0.0",
             "sharp": "^0.34.5",
             "vite": "6.4.2"
       },
       "scripts": {
             "dev": "vite",
             "build": "vite build",
-            "og": "node scripts/generate-og-images.mjs"
+            "og": "node scripts/generate-og-images.mjs",
+            "gsc": "node scripts/fetch-search-console.mjs",
+            "gsc:auth": "node scripts/create-google-oauth-token.mjs",
+            "gsc:sheet": "node scripts/update-gsc-google-sheet.mjs"
       }
 }

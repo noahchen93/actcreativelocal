@@ -107,33 +107,28 @@ export function Footer() {
             <h4 className="text-white mb-4">{t("核心服务", "Core Services")}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/event-fabrication-singapore/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("活动制作", "Event Fabrication Singapore")}
+                <a href="/booth-design-build-singapore/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("展位设计和搭建", "Booth Design & Build")}
                 </a>
               </li>
               <li>
-                <a href="/custom-props-singapore/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("道具定制", "Custom Props Singapore")}
+                <a href="/china-sourcing-agent/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("中国采购代理", "China Sourcing Agent")}
                 </a>
               </li>
               <li>
-                <a href="/frp-sculpture-fabrication-singapore/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("FRP雕塑制作", "FRP Sculpture Fabrication")}
+                <a href="/custom-merchandise-props-consulting/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("文创礼品与道具咨询", "Merchandise & Props Consulting")}
                 </a>
               </li>
               <li>
-                <a href="/exhibition-booth-production-singapore/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("展会展台制作", "Exhibition Booth Production")}
+                <a href="/china-southeast-asia-logistics/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("中国与东南亚运输协调", "China & SEA Logistics")}
                 </a>
               </li>
               <li>
-                <a href="/china-event-production-support/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("跨境制作支持", "Cross-Border Production Support")}
-                </a>
-              </li>
-              <li>
-                <a href="/event-merchandise-sourcing/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("活动周边采购", "Event Merchandise Sourcing")}
+                <a href="/art-exhibition-planning-installation/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("艺术展览策划与布展", "Art Exhibition Planning & Installation")}
                 </a>
               </li>
             </ul>
@@ -148,6 +143,21 @@ export function Footer() {
           >
             <h4 className="text-white mb-4">{t("联系我们", "Contact Us")}</h4>
             <ul className="space-y-3 text-sm">
+              <li>
+                <a href="/event-fabrication-hong-kong/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  Event Fabrication Hong Kong
+                </a>
+              </li>
+              <li>
+                <a href="/case-studies/sentosa-pacman-human-game/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  PACMAN Sentosa Case Study
+                </a>
+              </li>
+              <li>
+                <a href="/case-studies/k11-shenyang-public-art-collection/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  K11 Shenyang Public Art
+                </a>
+              </li>
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 text-[#CCFF00] mt-0.5 flex-shrink-0" />
                 <a href="mailto:contact@actcreative.net" className="text-gray-400 hover:text-[#CCFF00] transition-colors">contact@actcreative.net</a>

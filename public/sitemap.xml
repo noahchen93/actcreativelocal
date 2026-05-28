@@ -15,7 +15,7 @@
   -->
   <url>
     <loc>https://actcreative.net/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/" />
@@ -92,6 +92,72 @@
   </url>
 
   <url>
+    <loc>https://actcreative.net/booth-design-build-singapore/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/exhibition-booth-production-singapore.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/booth-design-build-portfolio/</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/002-china-moutai-booth-dbf2789e7d.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/241-chagee-andy-lau-concept-booth-39bd5f1fcf.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/061-huawei-tech-week-singapore-4f31292481.webp</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/china-sourcing-agent/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/china-event-production-support.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/custom-merchandise-props-consulting/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/event-merchandise-sourcing.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/china-southeast-asia-logistics/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/china-event-production-support.png</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/art-exhibition-planning-installation/</loc>
+    <lastmod>2026-05-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/images/k11-shenyang.webp</image:loc>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://actcreative.net/event-fabrication-singapore/</loc>
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -133,7 +199,7 @@
 
   <url>
     <loc>https://actcreative.net/china-event-production-support/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -163,7 +229,7 @@
 
   <url>
     <loc>https://actcreative.net/event-fabrication-hong-kong/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/event-fabrication-hong-kong/" />
@@ -229,7 +295,7 @@
 
   <url>
     <loc>https://actcreative.net/case-studies/sentosa-pacman-human-game/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
@@ -259,7 +325,7 @@
 
   <url>
     <loc>https://actcreative.net/case-studies/k11-shenyang-public-art-collection/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
