@@ -53,11 +53,13 @@
 
   <url>
     <loc>https://actcreative.net/zh/event-fabrication-singapore/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/event-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/event-fabrication-singapore/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://actcreative.net/event-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/event-fabrication-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/og/zh-event-fabrication-singapore.png</image:loc>
     </image:image>
@@ -65,19 +67,66 @@
 
   <url>
     <loc>https://actcreative.net/zh/china-event-production-support/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/china-event-production-support/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/china-event-production-support/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://actcreative.net/china-event-production-support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/china-event-production-support/" />
     <image:image>
       <image:loc>https://actcreative.net/og/zh-china-event-production-support.png</image:loc>
     </image:image>
   </url>
 
   <url>
+    <loc>https://actcreative.net/zh/china-sourcing-agent/</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/china-sourcing-agent/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/china-sourcing-agent/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/china-sourcing-agent/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/china-sourcing-agent/" />
+    <image:image>
+      <image:loc>https://actcreative.net/og/event-merchandise-sourcing.png</image:loc>
+      <image:title>新加坡活动中国采购代理</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/booth-design-build-singapore/</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/booth-design-build-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/booth-design-build-singapore/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/booth-design-build-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/booth-design-build-singapore/" />
+    <image:image>
+      <image:loc>https://actcreative.net/og/exhibition-booth-production-singapore.png</image:loc>
+      <image:title>新加坡展位设计与搭建</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/booth-design-build-portfolio/</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/booth-design-build-portfolio/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/booth-design-build-portfolio/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/booth-design-build-portfolio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/booth-design-build-portfolio/" />
+    <image:image>
+      <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/002-china-moutai-booth-dbf2789e7d.webp</image:loc>
+      <image:title>新加坡展位设计案例作品集</image:title>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://actcreative.net/blog/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -93,9 +142,13 @@
 
   <url>
     <loc>https://actcreative.net/booth-design-build-singapore/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/booth-design-build-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/booth-design-build-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/booth-design-build-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/booth-design-build-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/og/exhibition-booth-production-singapore.png</image:loc>
       <image:title>Booth Design and Build Singapore</image:title>
@@ -110,9 +163,13 @@
 
   <url>
     <loc>https://actcreative.net/booth-design-build-portfolio/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/booth-design-build-portfolio/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/booth-design-build-portfolio/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/booth-design-build-portfolio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/booth-design-build-portfolio/" />
     <image:image>
       <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/002-china-moutai-booth-dbf2789e7d.webp</image:loc>
       <image:title>Booth design portfolio image</image:title>
@@ -132,11 +189,37 @@
 
   <url>
     <loc>https://actcreative.net/china-sourcing-agent/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.86</priority>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/china-sourcing-agent/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/china-sourcing-agent/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/china-sourcing-agent/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/china-sourcing-agent/" />
     <image:image>
-      <image:loc>https://actcreative.net/og/china-event-production-support.png</image:loc>
+      <image:loc>https://actcreative.net/og/event-merchandise-sourcing.png</image:loc>
+      <image:title>China sourcing agent for event merchandise and production</image:title>
+      <image:caption>Supplier comparison, sampling, custom production and shipping planning for Singapore event teams sourcing from China.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/blog/assets/linkedin-sourcing-solutions.jpg</image:loc>
+      <image:title>More than sourcing for event projects</image:title>
+      <image:caption>China sourcing support that turns product references into project-ready supplier briefs and production routes.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-cushion-size-check.webp</image:loc>
+      <image:title>ARTBOX cushion sample size check</image:title>
+      <image:caption>Cushion sample measurement before bulk production approval.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-shopping-bag-colour-card.webp</image:loc>
+      <image:title>Shopping bag colour card comparison</image:title>
+      <image:caption>Shopping bag sample compared with colour cards before production.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-final-product-display.webp</image:loc>
+      <image:title>ARTBOX final product display on site</image:title>
+      <image:caption>Final event merchandise displayed at the Singapore event venue.</image:caption>
     </image:image>
   </url>
 
@@ -172,9 +255,13 @@
 
   <url>
     <loc>https://actcreative.net/event-fabrication-singapore/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/event-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/event-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/event-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/event-fabrication-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/og/event-fabrication-singapore.png</image:loc>
     </image:image>
@@ -212,9 +299,13 @@
 
   <url>
     <loc>https://actcreative.net/china-event-production-support/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/china-event-production-support/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/china-event-production-support/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/china-event-production-support/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/china-event-production-support/" />
     <image:image>
       <image:loc>https://actcreative.net/og/china-event-production-support.png</image:loc>
     </image:image>
@@ -281,9 +372,49 @@
 
   <url>
     <loc>https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/case-studies/artbox-singapore-merchandise-materials/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/case-studies/artbox-singapore-merchandise-materials/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/" />
+    <image:image>
+      <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-cushion-size-check.webp</image:loc>
+      <image:title>ARTBOX cushion sample size check</image:title>
+      <image:caption>Cushion sample measurement before bulk production approval.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-shopping-bag-colour-card.webp</image:loc>
+      <image:title>ARTBOX shopping bag colour comparison</image:title>
+      <image:caption>Shopping bag sample compared with colour cards before production.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-final-product-display.webp</image:loc>
+      <image:title>ARTBOX final product display</image:title>
+      <image:caption>Final event merchandise displayed at the Singapore event venue.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/case-studies/artbox-singapore-merchandise-materials/</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/case-studies/artbox-singapore-merchandise-materials/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/case-studies/artbox-singapore-merchandise-materials/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/" />
+    <image:image>
+      <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-final-product-display.webp</image:loc>
+      <image:title>ARTBOX Singapore 活动周边采购案例</image:title>
+      <image:caption>最终活动周边产品在新加坡活动现场陈列。</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-shopping-bag-colour-card.webp</image:loc>
+      <image:title>Shopping bag 色卡比对</image:title>
+      <image:caption>活动周边购物袋样品与色卡进行颜色对照。</image:caption>
+    </image:image>
   </url>
 
   <url>
