@@ -225,7 +225,7 @@
 
   <url>
     <loc>https://actcreative.net/custom-merchandise-props-consulting/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
     <image:image>
@@ -235,7 +235,7 @@
 
   <url>
     <loc>https://actcreative.net/china-southeast-asia-logistics/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
     <image:image>
@@ -245,7 +245,7 @@
 
   <url>
     <loc>https://actcreative.net/art-exhibition-planning-installation/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
     <image:image>
@@ -461,11 +461,55 @@
 
   <url>
     <loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-06-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/" />
     <image:image>
-      <image:loc>https://actcreative.net/case-studies/images/wings-of-art.webp</image:loc>
+      <image:loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/assets/final-butterfly-mbs.webp</image:loc>
+      <image:title>Wings of Art butterfly sculpture display</image:title>
+      <image:caption>Large butterfly sculpture from the Wings of Art project displayed at MBS in Singapore.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/assets/final-runway-overview.webp</image:loc>
+      <image:title>Wings of Art Barbie runway exhibition overview</image:title>
+      <image:caption>Overview of the Wings of Art Barbie runway art exhibition in Singapore.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/assets/procurement-collage.webp</image:loc>
+      <image:title>Wings of Art procurement support records</image:title>
+      <image:caption>Selected procurement records for exhibition materials, craft supplies, lighting and equipment.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/assets/final-exhibition-base.webp</image:loc>
+      <image:title>Wings of Art exhibition display bases</image:title>
+      <image:caption>Wooden crate display bases, decorative materials and exhibition environment details for the Wings of Art Barbie runway exhibition.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/assets/sculpture-co-creation.webp</image:loc>
+      <image:title>Wings of Art butterfly sculpture co-creation</image:title>
+      <image:caption>Artist and volunteer finishing process for the custom butterfly sculpture frame.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/assets/workshop-overview.webp</image:loc>
+      <image:title>Songhe rice DIY workshop setup</image:title>
+      <image:caption>Workshop setup for the Songhe rice butterfly activity inside the Wings of Art exhibition.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/assets/workshop-materials.webp</image:loc>
+      <image:title>Songhe rice butterfly workshop materials</image:title>
+      <image:caption>Craft and rice butterfly workshop materials prepared for children during the Wings of Art exhibition.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/assets/projection-wall-final.webp</image:loc>
+      <image:title>Wings of Art projection selfie wall</image:title>
+      <image:caption>Butterfly projection selfie wall implemented for the Wings of Art exhibition.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/assets/projection-selfie-live.webp</image:loc>
+      <image:title>Wings of Art projection selfie interaction</image:title>
+      <image:caption>Visitor interaction with the butterfly projection selfie wall inside the Wings of Art exhibition.</image:caption>
     </image:image>
   </url>
 

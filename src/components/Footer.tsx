@@ -6,6 +6,8 @@ import logo from "figma:asset/9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png";
 
 export function Footer() {
   const { language, setLanguage, t } = useLanguage();
+  const localizedHref = (englishHref: string, chineseHref?: string) =>
+    language === "zh" && chineseHref ? chineseHref : englishHref;
 
   const switchLanguage = () => {
     const nextLanguage = language === "zh" ? "en" : "zh";
@@ -107,12 +109,12 @@ export function Footer() {
             <h4 className="text-white mb-4">{t("核心服务", "Core Services")}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/booth-design-build-singapore/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                <a href={localizedHref("/booth-design-build-singapore/", "/zh/booth-design-build-singapore/")} className="text-gray-400 hover:text-[#CCFF00] transition-colors">
                   {t("展位设计和搭建", "Booth Design & Build")}
                 </a>
               </li>
               <li>
-                <a href="/china-sourcing-agent/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                <a href={localizedHref("/china-sourcing-agent/", "/zh/china-sourcing-agent/")} className="text-gray-400 hover:text-[#CCFF00] transition-colors">
                   {t("中国采购代理", "China Sourcing Agent")}
                 </a>
               </li>

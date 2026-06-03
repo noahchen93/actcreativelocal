@@ -10,6 +10,8 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeProjectGroup, setActiveProjectGroup] = useState<"local" | "china">("local");
   const { language, setLanguage, t } = useLanguage();
+  const localizedHref = (englishHref: string, chineseHref?: string) =>
+    language === "zh" && chineseHref ? chineseHref : englishHref;
 
   const projectGroups = [
     {
@@ -34,7 +36,10 @@ export function Header() {
         },
         {
           title: "Artbox Singapore",
-          href: "/case-studies/artbox-singapore-merchandise-materials/",
+          href: localizedHref(
+            "/case-studies/artbox-singapore-merchandise-materials/",
+            "/zh/case-studies/artbox-singapore-merchandise-materials/",
+          ),
           meta: t("活动周边与物料支持", "Event merchandise and materials"),
         },
       ],
@@ -68,12 +73,12 @@ export function Header() {
   const serviceItems = [
     {
       title: t("展位设计和搭建", "Booth Design & Build"),
-      href: "/booth-design-build-singapore/",
+      href: localizedHref("/booth-design-build-singapore/", "/zh/booth-design-build-singapore/"),
       meta: t("展会、快闪与品牌活动空间", "Exhibition, pop-up and activation spaces"),
     },
     {
       title: t("中国采购代理", "China Sourcing Agent"),
-      href: "/china-sourcing-agent/",
+      href: localizedHref("/china-sourcing-agent/", "/zh/china-sourcing-agent/"),
       meta: t("供应商筛选、比价、打样与定制跟进", "Supplier search, price comparison, samples and custom production"),
     },
     {
