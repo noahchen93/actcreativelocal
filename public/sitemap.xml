@@ -515,11 +515,35 @@
 
   <url>
     <loc>https://actcreative.net/case-studies/sentosa-pacman-human-game/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/case-studies/sentosa-pacman-human-game/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/case-studies/sentosa-pacman-human-game/" />
     <image:image>
-      <image:loc>https://actcreative.net/case-studies/images/pacman-friends.webp</image:loc>
+      <image:loc>https://actcreative.net/case-studies/sentosa-pacman-human-game/assets/final-maze-wide.webp</image:loc>
+      <image:title>PACMAN and Friends human game maze at Sentosa</image:title>
+      <image:caption>Final PACMAN and Friends maze environment with glowing paths and wearable inflatable ghost characters.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/sentosa-pacman-human-game/assets/final-live-character.webp</image:loc>
+      <image:title>PACMAN wearable character at Sentosa</image:title>
+      <image:caption>Public-facing PACMAN character costume used in the Sentosa activation environment.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/sentosa-pacman-human-game/assets/concept-character-set.webp</image:loc>
+      <image:title>PACMAN and ghost character concept development</image:title>
+      <image:caption>Concept reference used to translate game characters into human-scale event assets.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/sentosa-pacman-human-game/assets/wearable-backpack-system.webp</image:loc>
+      <image:title>Wearable inflatable internal support and wiring</image:title>
+      <image:caption>Internal harness, wiring and support system for a wearable illuminated inflatable character.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/sentosa-pacman-human-game/assets/factory-pacman-test.webp</image:loc>
+      <image:title>PACMAN wearable inflatable factory test</image:title>
+      <image:caption>Factory test of PACMAN wearable inflatable character before public event deployment.</image:caption>
     </image:image>
   </url>
 

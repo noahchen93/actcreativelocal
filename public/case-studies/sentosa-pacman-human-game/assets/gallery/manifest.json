@@ -1,0 +1,367 @@
+{
+  "concept": [
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-01.webp",
+      "width": 736,
+      "height": 569,
+      "caption": "Concept and model development",
+      "sourceName": "IMG-20251007-WA0001.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-02.webp",
+      "width": 720,
+      "height": 720,
+      "caption": "Concept and model development",
+      "sourceName": "IMG-20251007-WA0002.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-03.webp",
+      "width": 1024,
+      "height": 1024,
+      "caption": "Concept and model development",
+      "sourceName": "IMG-20251007-WA0004.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-04.webp",
+      "width": 970,
+      "height": 1094,
+      "caption": "Concept and model development",
+      "sourceName": "IMG-20251030-WA0007.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-05.webp",
+      "width": 1215,
+      "height": 1145,
+      "caption": "Concept and model development",
+      "sourceName": "IMG-20251030-WA0008.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-06.webp",
+      "width": 1200,
+      "height": 700,
+      "caption": "Concept and model development",
+      "sourceName": "IMG-20251103-WA0001.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-07.webp",
+      "width": 1280,
+      "height": 853,
+      "caption": "Concept and model development",
+      "sourceName": "IMG-20251103-WA0002.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-08.webp",
+      "width": 1280,
+      "height": 853,
+      "caption": "Concept and model development",
+      "sourceName": "IMG-20251104-WA0000.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-09.webp",
+      "width": 784,
+      "height": 766,
+      "caption": "Concept and model development",
+      "sourceName": "mmexport1760583354583.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-10.webp",
+      "width": 1300,
+      "height": 867,
+      "caption": "Concept and model development",
+      "sourceName": "mmexport1764056298914.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-11.webp",
+      "width": 709,
+      "height": 802,
+      "caption": "Concept and model development",
+      "sourceName": "mmexport1764056304172.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/concept-12.webp",
+      "width": 858,
+      "height": 883,
+      "caption": "Concept and model development",
+      "sourceName": "mmexport1764056319171.jpg"
+    }
+  ],
+  "wearable": [
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-01.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "IMG_20241204_162120.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-02.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "IMG_20251209_123642.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-03.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "IMG_20251210_161333.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-04.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "IMG_20251210_173130.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-05.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "IMG_20251210_173134.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-06.webp",
+      "width": 979,
+      "height": 1300,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "IMG_20251210_173142.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-07.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "IMG_20251210_173149.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-08.webp",
+      "width": 731,
+      "height": 1300,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "mmexport1764056295357.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-09.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "mmexport1764649136174.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-10.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "mmexport1764649137712.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-11.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "mmexport1764649139213.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-12.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "mmexport1764649140734.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-13.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "mmexport1764649142217.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-14.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "mmexport1764727910453.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/wearable-15.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Remote lighting and wearable structure implementation",
+      "sourceName": "mmexport1765383987520.jpg"
+    }
+  ],
+  "factory": [
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-01.webp",
+      "width": 487,
+      "height": 551,
+      "caption": "Factory testing and production checks",
+      "sourceName": "IMG-20251119-WA0001.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-02.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Factory testing and production checks",
+      "sourceName": "IMG-20251205-WA0011.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-03.webp",
+      "width": 731,
+      "height": 1300,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1763191143451.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-04.webp",
+      "width": 731,
+      "height": 1300,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1763191146990.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-05.webp",
+      "width": 731,
+      "height": 1300,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1763191152259.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-06.webp",
+      "width": 587,
+      "height": 1300,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1763191153944.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-07.webp",
+      "width": 731,
+      "height": 1300,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1763191155383.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-08.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1763212198186.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-09.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1763212201637.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-10.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1764303481863.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-11.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1764303483264.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-12.webp",
+      "width": 1300,
+      "height": 978,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1764649107342.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-13.webp",
+      "width": 1300,
+      "height": 976,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1764649124859.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/factory-14.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Factory testing and production checks",
+      "sourceName": "mmexport1764649130881.jpg"
+    }
+  ],
+  "final": [
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/final-01.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Final PACMAN and Friends activation at Sentosa",
+      "sourceName": "IMG-20251221-WA0001.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/final-02.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Final PACMAN and Friends activation at Sentosa",
+      "sourceName": "IMG_20251209_204154.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/final-03.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Final PACMAN and Friends activation at Sentosa",
+      "sourceName": "IMG_20251209_204257.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/final-04.webp",
+      "width": 979,
+      "height": 1300,
+      "caption": "Final PACMAN and Friends activation at Sentosa",
+      "sourceName": "IMG_20251209_204309.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/final-05.webp",
+      "width": 975,
+      "height": 1300,
+      "caption": "Final PACMAN and Friends activation at Sentosa",
+      "sourceName": "IMG_20251209_204316.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/final-06.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Final PACMAN and Friends activation at Sentosa",
+      "sourceName": "IMG_20251209_204359.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/final-07.webp",
+      "width": 1300,
+      "height": 979,
+      "caption": "Final PACMAN and Friends activation at Sentosa",
+      "sourceName": "IMG_20251210_150801.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/final-08.webp",
+      "width": 1300,
+      "height": 975,
+      "caption": "Final PACMAN and Friends activation at Sentosa",
+      "sourceName": "IMG_20251210_150805.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/final-09.webp",
+      "width": 979,
+      "height": 1300,
+      "caption": "Final PACMAN and Friends activation at Sentosa",
+      "sourceName": "IMG_20251210_150904.jpg"
+    },
+    {
+      "src": "/case-studies/sentosa-pacman-human-game/assets/gallery/final-10.webp",
+      "width": 1300,
+      "height": 979,
+      "caption": "Final PACMAN and Friends activation at Sentosa",
+      "sourceName": "Pacman Maze (small size).jpg"
+    }
+  ]
+}
