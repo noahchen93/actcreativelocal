@@ -994,6 +994,14 @@ p strong, li strong { color: var(--text); }
   font-size: 13px;
   line-height: 1.45;
 }
+.proof-mini-grid {
+  margin-top: 18px;
+}
+.proof-mini-grid .visual-proof img {
+  height: 138px;
+  aspect-ratio: auto;
+  object-fit: cover;
+}
 
 /* === China sourcing agent page === */
 .sourcing-page {

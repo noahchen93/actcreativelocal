@@ -70,10 +70,14 @@ node scripts/fetch-search-console.mjs --output docs/search-console-exports/lates
 
 ## Weekly Google Sheet tracker
 
-The tracker workbook contains four tabs:
+The tracker workbook contains eight tabs:
 
-- `Summary`: current 28-day totals and top query/page pairs.
+- `Summary`: current 28-day page-level totals, top landing pages, top query/page pairs, countries and devices.
 - `Latest 28d`: refreshed each run with current query/page rows.
+- `Page Summary`: page-level totals. Use this for accurate clicks and impressions because Google may hide low-volume queries in query/page exports.
+- `Date Trend`: date-level totals for daily trend checks.
+- `Country Summary`: country-level totals for market targeting checks.
+- `Device Summary`: device-level totals.
 - `Weekly History`: keeps one snapshot per date range to avoid duplicate reruns.
 - `Config`: local job settings and the last updated range.
 

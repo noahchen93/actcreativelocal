@@ -16,6 +16,10 @@ const MAX_ROW_LIMIT = 25000;
 const SHEET_NAMES = {
   summary: 'Summary',
   latest: 'Latest 28d',
+  pages: 'Page Summary',
+  dates: 'Date Trend',
+  countries: 'Country Summary',
+  devices: 'Device Summary',
   history: 'Weekly History',
   config: 'Config',
 };
@@ -147,9 +151,12 @@ async function fetchRows({ siteUrl, startDate, endDate, dimensions, rowLimit, ma
 }
 
 function normalizeRows(rows) {
+  return normalizeDimensionRows(rows, DEFAULT_DIMENSIONS);
+}
+
+function normalizeDimensionRows(rows, dimensions) {
   return rows.map((row) => ({
-    query: row.keys?.[0] ?? '',
-    page: row.keys?.[1] ?? '',
+    ...Object.fromEntries(dimensions.map((dimension, index) => [dimension, row.keys?.[index] ?? ''])),
     clicks: row.clicks ?? 0,
     impressions: row.impressions ?? 0,
     ctr: row.ctr ?? 0,
@@ -219,23 +226,62 @@ async function readValues(sheets, spreadsheetId, sheetName, range) {
   return response.data.values ?? [];
 }
 
-function makeSummaryValues({ rows, summary, dateRange, siteUrl }) {
-  const topRows = [...rows].sort((a, b) => b.impressions - a.impressions).slice(0, 10);
+function makeSummaryValues({
+  queryPageRows,
+  queryPageSummary,
+  pageRows,
+  pageSummary,
+  countryRows,
+  deviceRows,
+  dateRange,
+  siteUrl,
+}) {
+  const topPages = [...pageRows].sort((a, b) => b.impressions - a.impressions).slice(0, 10);
+  const topRows = [...queryPageRows].sort((a, b) => b.impressions - a.impressions).slice(0, 10);
+  const topCountries = [...countryRows].sort((a, b) => b.impressions - a.impressions).slice(0, 5);
+  const topDevices = [...deviceRows].sort((a, b) => b.impressions - a.impressions);
 
   return [
     ['ACT Creative Search Console Tracker'],
     [],
     ['Metric', 'Value', '', 'Metric', 'Value'],
-    ['Snapshot date', dateRange.snapshot, '', 'CTR', summary.ctr],
-    ['Date range', `${dateRange.start} to ${dateRange.end}`, '', 'Avg position', summary.avgPosition],
-    ['Rows', rows.length, '', 'Property', siteUrl],
-    ['Clicks', summary.totalClicks],
-    ['Impressions', summary.totalImpressions],
+    ['Snapshot date', dateRange.snapshot, '', 'Property', siteUrl],
+    ['Date range', `${dateRange.start} to ${dateRange.end}`, '', 'Source note', 'Totals use page-level GSC data; query/page rows may hide low-volume queries.'],
+    ['Clicks (page total)', pageSummary.totalClicks, '', 'CTR (page total)', pageSummary.ctr],
+    ['Impressions (page total)', pageSummary.totalImpressions, '', 'Avg position (page total)', pageSummary.avgPosition],
+    ['Visible query/page rows', queryPageRows.length, '', 'Visible query/page clicks', queryPageSummary.totalClicks],
+    [],
+    ['Top landing pages', 'Clicks', 'Impressions', 'CTR', 'Avg position'],
+    ...topPages.map((row) => [
+      row.page,
+      row.clicks,
+      row.impressions,
+      row.ctr,
+      row.avgPosition,
+    ]),
     [],
     ['Top query', 'Page', 'Clicks', 'Impressions', 'CTR', 'Avg position'],
     ...topRows.map((row) => [
       row.query,
       row.page,
+      row.clicks,
+      row.impressions,
+      row.ctr,
+      row.avgPosition,
+    ]),
+    [],
+    ['Top countries', 'Clicks', 'Impressions', 'CTR', 'Avg position'],
+    ...topCountries.map((row) => [
+      row.country,
+      row.clicks,
+      row.impressions,
+      row.ctr,
+      row.avgPosition,
+    ]),
+    [],
+    ['Devices', 'Clicks', 'Impressions', 'CTR', 'Avg position'],
+    ...topDevices.map((row) => [
+      row.device,
       row.clicks,
       row.impressions,
       row.ctr,
@@ -250,6 +296,19 @@ function makeLatestValues(rows) {
     ...rows.map((row) => [
       row.query,
       row.page,
+      row.clicks,
+      row.impressions,
+      row.ctr,
+      row.avgPosition,
+    ]),
+  ];
+}
+
+function makeDimensionValues(rows, dimensions) {
+  return [
+    [...dimensions, 'clicks', 'impressions', 'ctr', 'avg_position'],
+    ...rows.map((row) => [
+      ...dimensions.map((dimension) => row[dimension] ?? ''),
       row.clicks,
       row.impressions,
       row.ctr,
@@ -307,7 +366,7 @@ function makeConfigValues({ siteUrl, days, endLagDays, spreadsheetId, dateRange 
     ['source_script', 'scripts/update-gsc-google-sheet.mjs'],
     ['last_updated', dateRange.snapshot],
     ['latest_range', `${dateRange.start} to ${dateRange.end}`],
-    ['notes', 'Weekly History keeps one snapshot per date range; Latest 28d is refreshed each run.'],
+    ['notes', 'Summary totals use Page Summary because Google may hide low-volume query/page rows. Weekly History keeps visible query/page rows only; Latest 28d is refreshed each run.'],
   ];
 }
 
@@ -331,9 +390,16 @@ async function applyBasicFormatting(sheets, spreadsheetId, sheetMap) {
     },
     ...[
       [SHEET_NAMES.latest, 0],
+      [SHEET_NAMES.pages, 0],
+      [SHEET_NAMES.dates, 0],
+      [SHEET_NAMES.countries, 0],
+      [SHEET_NAMES.devices, 0],
       [SHEET_NAMES.history, 0],
       [SHEET_NAMES.config, 0],
       [SHEET_NAMES.summary, 9],
+      [SHEET_NAMES.summary, 21],
+      [SHEET_NAMES.summary, 33],
+      [SHEET_NAMES.summary, 40],
     ].map(([sheetName, rowIndex]) => ({
       repeatCell: {
         range: {
@@ -345,7 +411,14 @@ async function applyBasicFormatting(sheets, spreadsheetId, sheetMap) {
         fields: 'userEnteredFormat(backgroundColor,textFormat)',
       },
     })),
-    ...[SHEET_NAMES.latest, SHEET_NAMES.history].map((sheetName) => ({
+    ...[
+      SHEET_NAMES.latest,
+      SHEET_NAMES.pages,
+      SHEET_NAMES.dates,
+      SHEET_NAMES.countries,
+      SHEET_NAMES.devices,
+      SHEET_NAMES.history,
+    ].map((sheetName) => ({
       updateSheetProperties: {
         properties: {
           sheetId: sheetMap.get(sheetName),
@@ -357,6 +430,10 @@ async function applyBasicFormatting(sheets, spreadsheetId, sheetMap) {
     ...[
       [SHEET_NAMES.summary, 0, 8],
       [SHEET_NAMES.latest, 0, 6],
+      [SHEET_NAMES.pages, 0, 5],
+      [SHEET_NAMES.dates, 0, 5],
+      [SHEET_NAMES.countries, 0, 5],
+      [SHEET_NAMES.devices, 0, 5],
       [SHEET_NAMES.history, 0, 9],
       [SHEET_NAMES.config, 0, 2],
     ].map(([sheetName, startIndex, endIndex]) => ({
@@ -428,7 +505,44 @@ async function main() {
     maxRows,
     auth,
   }));
+  const pageRows = normalizeDimensionRows(await fetchRows({
+    siteUrl,
+    startDate,
+    endDate,
+    dimensions: ['page'],
+    rowLimit,
+    maxRows,
+    auth,
+  }), ['page']);
+  const dateRows = normalizeDimensionRows(await fetchRows({
+    siteUrl,
+    startDate,
+    endDate,
+    dimensions: ['date'],
+    rowLimit,
+    maxRows,
+    auth,
+  }), ['date']);
+  const countryRows = normalizeDimensionRows(await fetchRows({
+    siteUrl,
+    startDate,
+    endDate,
+    dimensions: ['country'],
+    rowLimit,
+    maxRows,
+    auth,
+  }), ['country']);
+  const deviceRows = normalizeDimensionRows(await fetchRows({
+    siteUrl,
+    startDate,
+    endDate,
+    dimensions: ['device'],
+    rowLimit,
+    maxRows,
+    auth,
+  }), ['device']);
   const summary = summarizeRows(rows);
+  const pageSummary = summarizeRows(pageRows);
   const dateRange = {
     snapshot: toIsoDate(new Date()),
     start: startDate,
@@ -439,12 +553,20 @@ async function main() {
   const sheetMap = await ensureSheets(sheets, spreadsheetId);
 
   await clearAndWrite(sheets, spreadsheetId, SHEET_NAMES.summary, makeSummaryValues({
-    rows,
-    summary,
+    queryPageRows: rows,
+    queryPageSummary: summary,
+    pageRows,
+    pageSummary,
+    countryRows,
+    deviceRows,
     dateRange,
     siteUrl,
   }));
   await clearAndWrite(sheets, spreadsheetId, SHEET_NAMES.latest, makeLatestValues(rows));
+  await clearAndWrite(sheets, spreadsheetId, SHEET_NAMES.pages, makeDimensionValues(pageRows, ['page']));
+  await clearAndWrite(sheets, spreadsheetId, SHEET_NAMES.dates, makeDimensionValues(dateRows, ['date']));
+  await clearAndWrite(sheets, spreadsheetId, SHEET_NAMES.countries, makeDimensionValues(countryRows, ['country']));
+  await clearAndWrite(sheets, spreadsheetId, SHEET_NAMES.devices, makeDimensionValues(deviceRows, ['device']));
   await rewriteHistory(sheets, spreadsheetId, rows, dateRange);
   await clearAndWrite(sheets, spreadsheetId, SHEET_NAMES.config, makeConfigValues({
     siteUrl,
@@ -458,8 +580,8 @@ async function main() {
   console.log(`Updated spreadsheet: https://docs.google.com/spreadsheets/d/${spreadsheetId}`);
   console.log(`Date range: ${startDate} to ${endDate}`);
   console.log(`Rows: ${rows.length}`);
-  console.log(`Clicks: ${summary.totalClicks}`);
-  console.log(`Impressions: ${summary.totalImpressions}`);
+  console.log(`Clicks: ${pageSummary.totalClicks} page total; ${summary.totalClicks} visible query/page`);
+  console.log(`Impressions: ${pageSummary.totalImpressions} page total; ${summary.totalImpressions} visible query/page`);
 }
 
 main().catch((error) => {
