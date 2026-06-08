@@ -142,7 +142,7 @@
 
   <url>
     <loc>https://actcreative.net/booth-design-build-singapore/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.92</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/booth-design-build-singapore/" />
@@ -189,7 +189,7 @@
 
   <url>
     <loc>https://actcreative.net/china-sourcing-agent/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/china-sourcing-agent/" />
@@ -372,7 +372,7 @@
 
   <url>
     <loc>https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/" />
@@ -388,6 +388,21 @@
       <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-shopping-bag-colour-card.webp</image:loc>
       <image:title>ARTBOX shopping bag colour comparison</image:title>
       <image:caption>Shopping bag sample compared with colour cards before production.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-side-label-sample-check.webp</image:loc>
+      <image:title>ARTBOX side label sample check</image:title>
+      <image:caption>Custom side label position and finish checked before production.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-foldable-bag-packing.webp</image:loc>
+      <image:title>ARTBOX foldable bag packing</image:title>
+      <image:caption>Foldable event bags packed before shipment to Singapore.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-sea-freight-tracking.webp</image:loc>
+      <image:title>ARTBOX sea freight tracking</image:title>
+      <image:caption>Freight milestones tracked from China warehouse to Singapore delivery.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-final-product-display.webp</image:loc>
