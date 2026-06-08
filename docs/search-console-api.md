@@ -86,3 +86,11 @@ The scheduled automation should run from this repository:
 ```bash
 node scripts/update-gsc-google-sheet.mjs --days 28
 ```
+
+Expected weekly automation output after the sheet refresh:
+
+- Update the Google Sheet tracker and keep the latest local export artifacts needed for comparison.
+- Compare the latest 28-day window against prior saved snapshots instead of reporting the latest totals in isolation.
+- Summarize the current trend across clicks, impressions, CTR, average position, major landing pages, key queries, countries, and devices.
+- Call out what changed week over week, especially new growth areas, ranking losses, and likely cannibalization between service pages.
+- End with concrete SEO recommendations prioritized by likely impact, with emphasis on pages and query clusters that are already showing impressions.
