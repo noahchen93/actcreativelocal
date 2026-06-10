@@ -36,6 +36,44 @@ const slides: { src: string; alt: string }[] = [
 const INTERVAL_MS = 4500;
 const FADE_MS = 900;
 
+function randomIndex(maxExclusive: number) {
+  if (maxExclusive <= 1) return 0;
+
+  const cryptoApi = globalThis.crypto;
+  if (cryptoApi?.getRandomValues) {
+    const range = 0x1_0000_0000;
+    const limit = range - (range % maxExclusive);
+    const values = new Uint32Array(1);
+
+    do {
+      cryptoApi.getRandomValues(values);
+    } while (values[0] >= limit);
+
+    return values[0] % maxExclusive;
+  }
+
+  return Math.floor(Math.random() * maxExclusive);
+}
+
+function shuffleSlides(
+  source: typeof slides,
+  avoidFirstSrc?: string,
+) {
+  const shuffled = [...source];
+
+  for (let i = shuffled.length - 1; i > 0; i -= 1) {
+    const swapIndex = randomIndex(i + 1);
+    [shuffled[i], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[i]];
+  }
+
+  if (avoidFirstSrc && shuffled.length > 1 && shuffled[0].src === avoidFirstSrc) {
+    const swapIndex = shuffled.findIndex((slide) => slide.src !== avoidFirstSrc);
+    [shuffled[0], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[0]];
+  }
+
+  return shuffled;
+}
+
 const ABSOLUTE_FILL = {
   position: "absolute" as const,
   top: 0,
@@ -47,6 +85,7 @@ const ABSOLUTE_FILL = {
 };
 
 export function HeroSlideshow() {
+  const [orderedSlides, setOrderedSlides] = useState(() => shuffleSlides(slides));
   const [idx, setIdx] = useState(0);
   const [loadedIndexes, setLoadedIndexes] = useState<Set<number>>(
     () => new Set([0, 1]),
@@ -57,20 +96,29 @@ export function HeroSlideshow() {
     if (reduceMotion.matches) return;
 
     const id = window.setInterval(
-      () => setIdx((i) => (i + 1) % slides.length),
+      () => setIdx((currentIdx) => {
+        if (currentIdx < orderedSlides.length - 1) {
+          return currentIdx + 1;
+        }
+
+        setOrderedSlides((currentSlides) =>
+          shuffleSlides(slides, currentSlides[currentSlides.length - 1]?.src),
+        );
+        return 0;
+      }),
       INTERVAL_MS,
     );
     return () => window.clearInterval(id);
-  }, []);
+  }, [orderedSlides.length]);
 
   useEffect(() => {
     setLoadedIndexes((current) => {
       const next = new Set(current);
       next.add(idx);
-      next.add((idx + 1) % slides.length);
+      next.add((idx + 1) % orderedSlides.length);
       return next;
     });
-  }, [idx]);
+  }, [idx, orderedSlides.length]);
 
   return (
     <div
@@ -86,7 +134,7 @@ export function HeroSlideshow() {
         boxShadow: "0 25px 50px -12px rgba(0,0,0,0.6)",
       }}
     >
-      {slides.map((s, i) => {
+      {orderedSlides.map((s, i) => {
         if (!loadedIndexes.has(i)) return null;
 
         const isActive = i === idx;

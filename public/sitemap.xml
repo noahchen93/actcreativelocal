@@ -279,11 +279,37 @@
 
   <url>
     <loc>https://actcreative.net/frp-sculpture-fabrication-singapore/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-06-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
     <image:image>
-      <image:loc>https://actcreative.net/og/frp-sculpture-fabrication-singapore.png</image:loc>
+      <image:loc>https://actcreative.net/frp-sculpture-fabrication-singapore/assets/images/slides/slide-08.webp</image:loc>
+      <image:title>Custom large-scale sculpture fabrication reference</image:title>
+      <image:caption>ACT Creative custom sculpture, public art and installation fabrication portfolio.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/frp-sculpture-fabrication-singapore/assets/images/slides/slide-05.webp</image:loc>
+      <image:title>Custom IP sculpture production reference</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/frp-sculpture-fabrication-singapore/assets/images/slides/slide-14.webp</image:loc>
+      <image:title>Public art and installation fabrication reference</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/custom-flying-inflatables-singapore/</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/custom-flying-inflatables-singapore/assets/flying-whales.webp</image:loc>
+      <image:title>Custom flying whale inflatable for events</image:title>
+      <image:caption>Custom flying helium inflatable coordinated by ACT Creative for event venues.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/custom-flying-inflatables-singapore/assets/flying-globe.webp</image:loc>
+      <image:title>Flying globe event installation</image:title>
     </image:image>
   </url>
 

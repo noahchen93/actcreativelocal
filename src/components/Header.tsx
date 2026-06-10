@@ -98,6 +98,29 @@ export function Header() {
     },
   ];
 
+  const productPortfolioItems = [
+    {
+      title: t("飞行气模与氦气装置", "Custom Flying Inflatables"),
+      href: "/custom-flying-inflatables-singapore/",
+      meta: t("飞行鲸鱼、地球、吉祥物与品牌造型", "Flying whales, globes, mascots and branded forms"),
+    },
+    {
+      title: t("雕塑与艺术装置", "Custom Sculptures & Art Installations"),
+      href: "/frp-sculpture-fabrication-singapore/",
+      meta: t("49个雕塑、公共艺术与装置制作参考项目", "49 sculpture, public art and installation references"),
+    },
+    {
+      title: t("活动道具定制", "Custom Event Props"),
+      href: "/custom-props-singapore/",
+      meta: t("大型道具、主题装饰与品牌展示物", "Oversized props, themed decor and branded displays"),
+    },
+    {
+      title: t("活动制作", "Event Fabrication"),
+      href: localizedHref("/event-fabrication-singapore/", "/zh/event-fabrication-singapore/"),
+      meta: t("活动场景、装置、展陈与现场交付", "Event environments, installations, displays and site delivery"),
+    },
+  ];
+
   const handleSectionLink = (id: string) => {
     scrollToSection(id);
     setIsMenuOpen(false);
@@ -565,6 +588,26 @@ export function Header() {
                 ))}
               </div>
             </div>
+            <div className="act-service-menu">
+              <button
+                type="button"
+                className="act-nav-pill act-project-trigger"
+              >
+                {t("产品作品集", "Product Portfolio")}
+                <span className="act-project-trigger-icon" aria-hidden="true" />
+              </button>
+              <div className="act-service-dropdown" role="menu" aria-label="Product portfolio">
+                {productPortfolioItems.map((product) => (
+                  <a key={product.href} href={product.href} className="act-service-link" role="menuitem">
+                    <span>
+                      <span className="act-service-link-title">{product.title}</span>
+                      <span className="act-service-link-meta">{product.meta}</span>
+                    </span>
+                    <span className="act-project-link-arrow" aria-hidden="true">→</span>
+                  </a>
+                ))}
+              </div>
+            </div>
             <button
               onClick={() => handleSectionLink("products")}
               className="act-nav-pill"
@@ -674,6 +717,22 @@ export function Header() {
                       >
                         {service.title}
                         <span>{service.meta}</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+                <div className="act-mobile-project-block">
+                  <span className="act-mobile-project-heading">{t("产品作品集", "Product Portfolio")}</span>
+                  <div>
+                    {productPortfolioItems.map((product) => (
+                      <a
+                        key={product.href}
+                        href={product.href}
+                        className="act-mobile-project-link"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {product.title}
+                        <span>{product.meta}</span>
                       </a>
                     ))}
                   </div>

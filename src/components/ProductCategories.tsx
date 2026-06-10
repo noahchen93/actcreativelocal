@@ -64,6 +64,8 @@ const productCategories = [
   },
   {
     icon: Wind,
+    href: "/custom-flying-inflatables-singapore/",
+    linkLabel: { zh: "查看飞行气模案例与技术", en: "View flying inflatable systems" },
     title: { zh: "充气气模装置", en: "Inflatable Structures" },
     description: { 
       zh: "各类充气气模定制，包括密闭式、开放式，多种尺寸和材料。可定制飘空气球、无人机广告气球等创意装置。",
@@ -154,6 +156,8 @@ const productCategories = [
   },
   {
     icon: Shapes,
+    href: "/frp-sculpture-fabrication-singapore/",
+    linkLabel: { zh: "查看雕塑案例", en: "View sculpture portfolio" },
     title: { zh: "雕塑与艺术装置定制", en: "Custom Sculptures & Art Installations" },
     description: { 
       zh: "从节庆圣诞树、生肖灯光装置到艺术雕塑、手办衍生品，我们拥有专业工厂提供高度定制化服务，将您的创意变为现实。",
@@ -318,6 +322,15 @@ export function ProductCategories() {
                           </li>
                         ))}
                       </ul>
+                      {"href" in category && category.href && (
+                        <a
+                          href={category.href}
+                          className="mt-5 inline-flex items-center justify-center rounded-lg border border-[#CCFF00] bg-[#CCFF00] px-4 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-[#d7ff57]"
+                          onClick={(event) => event.stopPropagation()}
+                        >
+                          {t(category.linkLabel.zh, category.linkLabel.en)}
+                        </a>
+                      )}
                     </div>
                   </motion.div>
                 </div>
