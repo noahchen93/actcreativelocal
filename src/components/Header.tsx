@@ -608,12 +608,6 @@ export function Header() {
                 ))}
               </div>
             </div>
-            <button
-              onClick={() => handleSectionLink("products")}
-              className="act-nav-pill"
-            >
-              {t("产品", "Products")}
-            </button>
             <a
               href="/about/"
               className="act-nav-pill"
@@ -737,12 +731,6 @@ export function Header() {
                     ))}
                   </div>
                 </div>
-                <button
-                  onClick={() => handleSectionLink("products")}
-                  className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
-                >
-                  {t("产品", "Products")}
-                </button>
                 <a
                   href="/about/"
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
