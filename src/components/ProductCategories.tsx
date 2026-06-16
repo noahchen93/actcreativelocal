@@ -34,15 +34,17 @@ const productCategories = [
   },
   {
     icon: Truck,
-    title: { zh: "餐饮移动卡车", en: "Food Trucks" },
+    href: "/custom-food-truck-rental-singapore/",
+    linkLabel: { zh: "餐车租赁与定制方案", en: "View food truck rental and custom-build options" },
+    title: { zh: "定制餐车与移动空间", en: "Food Trucks" },
     description: { 
-      zh: "助力F&B市集和美食节，定制化移动餐车。一次投资，长期收益，灵活机动，适配各类活动场景。",
-      en: "Empowering F&B markets and food festivals with customized mobile food trucks. One-time investment for long-term returns, flexible and adaptable to various event scenarios."
+      zh: "可租赁并定制新加坡样车，也可从零开发用于餐饮、零售或活动的移动空间，并提供生产、运输和本地支持。",
+      en: "Rent and customize a Singapore sample unit, or develop a purpose-built mobile food, retail or event platform with full production and delivery coordination."
     },
     features: [
-      { zh: "全套厨房设备配置", en: "Complete kitchen equipment setup" },
-      { zh: "符合新加坡NEA卫生标准", en: "Meets Singapore NEA standards" },
-      { zh: "可定制外观设计和内部布局", en: "Customizable exterior and interior layout" }
+      { zh: "两台新加坡样车可讨论租赁", en: "Two Singapore sample units for rental discussions" },
+      { zh: "外观、内部布局与设备可定制", en: "Exterior, interior and equipment customization" },
+      { zh: "支持定制制造、运输与本地落地", en: "Custom-build, freight and local support options" }
     ],
     emoji: "🚚",
     image: foodTruckImage

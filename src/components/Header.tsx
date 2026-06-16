@@ -100,6 +100,11 @@ export function Header() {
 
   const productPortfolioItems = [
     {
+      title: t("定制餐车与移动空间", "Custom Food Trucks & Mobile Units"),
+      href: "/custom-food-truck-rental-singapore/",
+      meta: t("新加坡租赁车、定制制造与移动活动系统", "Singapore rentals, custom builds and mobile activation platforms"),
+    },
+    {
       title: t("飞行气模与氦气装置", "Custom Flying Inflatables"),
       href: "/custom-flying-inflatables-singapore/",
       meta: t("飞行鲸鱼、地球、吉祥物与品牌造型", "Flying whales, globes, mascots and branded forms"),
