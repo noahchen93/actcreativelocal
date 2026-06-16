@@ -120,9 +120,9 @@ export function Header() {
       meta: t("大型道具、主题装饰与品牌展示物", "Oversized props, themed decor and branded displays"),
     },
     {
-      title: t("活动制作", "Event Fabrication"),
+      title: t("活动制作", "Event Fabrication Singapore"),
       href: localizedHref("/event-fabrication-singapore/", "/zh/event-fabrication-singapore/"),
-      meta: t("活动场景、装置、展陈与现场交付", "Event environments, installations, displays and site delivery"),
+      meta: t("活动场景、装置、展陈与现场交付", "Custom physical builds, branded experiences and site delivery"),
     },
   ];
 
