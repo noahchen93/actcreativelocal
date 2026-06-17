@@ -1,4 +1,5 @@
 import { lazy, Suspense, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { LanguageProvider } from "./contexts/LanguageContext";
@@ -99,6 +100,7 @@ export default function App() {
           <Toaster />
         </Suspense>
         <HashScrollRestorer />
+        <Analytics />
       </div>
     </LanguageProvider>
   );

@@ -15,7 +15,7 @@
   -->
   <url>
     <loc>https://actcreative.net/</loc>
-    <lastmod>2026-05-25</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/" />
@@ -142,7 +142,7 @@
 
   <url>
     <loc>https://actcreative.net/booth-design-build-singapore/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.92</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/booth-design-build-singapore/" />
@@ -261,25 +261,40 @@
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-sourcing/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/singapore-event-venue-sourcing/" />
     <image:image>
-      <image:loc>https://actcreative.net/og-default.png</image:loc>
-      <image:title>Singapore event venue sourcing service</image:title>
-      <image:caption>Venue matching, hotel quote direction, availability checks and site recap support for Singapore events.</image:caption>
+      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-ritz-interior.webp</image:loc>
+      <image:title>Singapore hotel event venue sourcing reference</image:title>
+      <image:caption>Hotel interior reference used for Singapore event venue sourcing, quote direction and site recap discussion.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-ritz-interior.webp</image:loc>
-      <image:title>Singapore hotel event venue reference</image:title>
-      <image:caption>Hotel interior reference used for Singapore event venue matching and site recap discussion.</image:caption>
+      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-clifford-pier-foyer.webp</image:loc>
+      <image:title>Singapore heritage event venue reference</image:title>
+      <image:caption>Heritage indoor venue reference used for Singapore venue fit, guest flow and production checks.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-fort-canning-green.webp</image:loc>
       <image:title>Singapore outdoor event venue reference</image:title>
       <image:caption>Outdoor lawn reference used for venue fit, guest flow and production constraint checks.</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-joaquim-hall.webp</image:loc>
+      <image:title>Singapore conference room venue reference</image:title>
+      <image:caption>Seminar and conference room reference for Singapore event venue shortlist discussion.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-clifford-pier-event-setup.webp</image:loc>
+      <image:title>Singapore venue site recap reference</image:title>
+      <image:caption>Venue setup reference used for lighting, cocktail table, access and production recap checks.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-sports-hub-waterfront.webp</image:loc>
+      <image:title>Singapore waterfront event venue reference</image:title>
+      <image:caption>Waterfront event area reference for outdoor venue and public event planning.</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://actcreative.net/event-fabrication-singapore/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/event-fabrication-singapore/" />
