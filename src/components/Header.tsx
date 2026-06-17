@@ -77,6 +77,11 @@ export function Header() {
       meta: t("展会、快闪与品牌活动空间", "Exhibition, pop-up and activation spaces"),
     },
     {
+      title: t("场地匹配与实地考察", "Venue Sourcing & Site Recap"),
+      href: "/singapore-event-venue-sourcing/",
+      meta: t("新加坡酒店、场地档期、初步报价与现场复核", "Singapore hotel options, availability, quotes and site recap"),
+    },
+    {
       title: t("中国采购代理", "China Sourcing Agent"),
       href: localizedHref("/china-sourcing-agent/", "/zh/china-sourcing-agent/"),
       meta: t("供应商筛选、比价、打样与定制跟进", "Supplier search, price comparison, samples and custom production"),

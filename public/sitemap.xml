@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
@@ -90,7 +90,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/china-sourcing-agent/" />
     <image:image>
       <image:loc>https://actcreative.net/og/event-merchandise-sourcing.png</image:loc>
-      <image:title>新加坡活动中国采购代理</image:title>
+      <image:title>China sourcing agent for Singapore event teams</image:title>
     </image:image>
   </url>
 
@@ -105,7 +105,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/booth-design-build-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/og/exhibition-booth-production-singapore.png</image:loc>
-      <image:title>新加坡展位设计与搭建</image:title>
+      <image:title>鏂板姞鍧″睍浣嶈璁′笌鎼缓</image:title>
     </image:image>
   </url>
 
@@ -120,7 +120,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/booth-design-build-portfolio/" />
     <image:image>
       <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/002-china-moutai-booth-dbf2789e7d.webp</image:loc>
-      <image:title>新加坡展位设计案例作品集</image:title>
+      <image:title>鏂板姞鍧″睍浣嶈璁℃渚嬩綔鍝侀泦</image:title>
     </image:image>
   </url>
 
@@ -250,6 +250,30 @@
     <priority>0.84</priority>
     <image:image>
       <image:loc>https://actcreative.net/case-studies/images/k11-shenyang.webp</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venue-sourcing/</loc>
+    <lastmod>2026-06-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-sourcing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/singapore-event-venue-sourcing/" />
+    <image:image>
+      <image:loc>https://actcreative.net/og-default.png</image:loc>
+      <image:title>Singapore event venue sourcing service</image:title>
+      <image:caption>Venue matching, hotel quote direction, availability checks and site recap support for Singapore events.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-ritz-interior.webp</image:loc>
+      <image:title>Singapore hotel event venue reference</image:title>
+      <image:caption>Hotel interior reference used for Singapore event venue matching and site recap discussion.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-fort-canning-green.webp</image:loc>
+      <image:title>Singapore outdoor event venue reference</image:title>
+      <image:caption>Outdoor lawn reference used for venue fit, guest flow and production constraint checks.</image:caption>
     </image:image>
   </url>
 
@@ -465,13 +489,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/" />
     <image:image>
       <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-final-product-display.webp</image:loc>
-      <image:title>ARTBOX Singapore 活动周边采购案例</image:title>
-      <image:caption>最终活动周边产品在新加坡活动现场陈列。</image:caption>
+      <image:title>ARTBOX Singapore 娲诲姩鍛ㄨ竟閲囪喘妗堜緥</image:title>
+      <image:caption>Final event merchandise displayed at the Singapore event venue.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-shopping-bag-colour-card.webp</image:loc>
-      <image:title>Shopping bag 色卡比对</image:title>
-      <image:caption>活动周边购物袋样品与色卡进行颜色对照。</image:caption>
+      <image:title>Shopping bag 鑹插崱姣斿</image:title>
+      <image:caption>Event shopping bag sample compared with colour cards before production.</image:caption>
     </image:image>
   </url>
 
