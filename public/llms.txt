@@ -25,6 +25,7 @@ ACT Creative serves clients across Singapore, Malaysia, Indonesia, Thailand, Vie
 - [China to Southeast Asia logistics coordination](https://actcreative.net/china-southeast-asia-logistics/): Packing, consolidation, shipment planning, delivery timing and event-site handover coordination.
 - [Art exhibition planning and installation](https://actcreative.net/art-exhibition-planning-installation/): Display planning, fabrication coordination, logistics and installation support for exhibitions and public art projects.
 - [Singapore event venue sourcing](https://actcreative.net/singapore-event-venue-sourcing/): Singapore event venue sourcing service for brands, agencies and overseas teams that need hotel, ballroom, conference room, gallery, outdoor venue or flexible event space shortlists, preliminary quote direction, date availability checks, local venue restrictions review and optional site recap photos or videos before choosing a venue.
+- [Singapore event venue finder](https://actcreative.net/singapore-event-venue-finder/): Public MVP venue map and shortlist tool with 122 public Singapore venue records and 122 mapped markers, filterable by venue type, area, event format and capacity before requesting local venue checks.
 
 ## Product and fabrication categories
 

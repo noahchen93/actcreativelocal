@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Singapore Event Venue Finder | Interactive Venue Map</title>
+    <meta name="description" content="Explore 120+ Singapore venue options on an interactive map. Filter overlapping venue types, indoor and outdoor settings, event formats, capacity and area." />
+    <link rel="canonical" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <link rel="alternate" hreflang="x-default" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta property="og:title" content="Singapore Event Venue Finder | ACT Creative" />
+    <meta property="og:description" content="Use an interactive Singapore venue map to search 120+ hotels, restaurants, outdoor spaces, galleries, waterfront venues and event spaces." />
+    <meta property="og:url" content="https://actcreative.net/singapore-event-venue-finder/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://actcreative.net/singapore-event-venue-sourcing/assets/venue-ritz-interior.webp" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="980" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Singapore Event Venue Finder | ACT Creative" />
+    <meta name="twitter:description" content="Filter Singapore venue options by venue type, area, event format and capacity, then send a shortlist for local venue checks." />
+    <meta name="twitter:image" content="https://actcreative.net/singapore-event-venue-sourcing/assets/venue-ritz-interior.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
+    <link rel="stylesheet" href="/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="/singapore-event-venue-finder/venue-finder.css" />
+    <link rel="preload" as="fetch" href="/singapore-event-venue-finder/venue-data.json" crossorigin="anonymous" />
+    <link rel="me" href="https://www.facebook.com/profile.php?id=61590057715328" />
+    <link rel="me" href="https://www.instagram.com/act_creative_official/" />
+    <meta name="publisher" content="ACT Creative Singapore - ACT Creative Pte. Ltd. (UEN 202600226K)" />
+    <meta name="brand" content="ACT Creative Singapore" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://actcreative.net/singapore-event-venue-finder/#webpage",
+          "url": "https://actcreative.net/singapore-event-venue-finder/",
+          "name": "Singapore Event Venue Finder | Interactive Venue Map",
+          "description": "A public MVP venue finder that helps event teams filter Singapore venue options by venue type, event format, area and capacity before requesting local venue checks.",
+          "inLanguage": "en-SG",
+          "isPartOf": { "@id": "https://actcreative.net/#website" },
+          "publisher": { "@id": "https://actcreative.net/#business" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://actcreative.net/singapore-event-venue-sourcing/assets/venue-ritz-interior.webp",
+            "width": 1400,
+            "height": 980
+          },
+          "mainEntity": { "@id": "https://actcreative.net/singapore-event-venue-finder/#webapp" }
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://actcreative.net/singapore-event-venue-finder/#webapp",
+          "name": "Singapore Event Venue Finder",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://actcreative.net/singapore-event-venue-finder/",
+          "description": "Interactive Singapore venue map and shortlist tool for filtering public venue options by type, capacity, area and event format.",
+          "provider": {
+            "@type": "Organization",
+            "@id": "https://actcreative.net/#business",
+            "name": "ACT Creative Pte. Ltd.",
+            "url": "https://actcreative.net/",
+            "telephone": "+65 84515268",
+            "email": "contact@actcreative.net"
+          },
+          "featureList": [
+            "Singapore venue map",
+            "Venue type filters",
+            "Event format filters",
+            "Capacity filter",
+            "Shortlist enquiry link"
+          ]
+        },
+        {
+          "@type": "Dataset",
+          "@id": "https://actcreative.net/singapore-event-venue-finder/#dataset",
+          "name": "Singapore event venue public MVP dataset",
+          "description": "A public-facing subset of ACT Creative's Singapore venue sourcing index with 122 venue records, overlapping venue tags and 122 mapped venue markers. Internal pricing, live availability, contacts and source documents are withheld.",
+          "creator": { "@id": "https://actcreative.net/#business" },
+          "spatialCoverage": { "@type": "Place", "name": "Singapore" },
+          "dateModified": "2026-06-18",
+          "license": "https://actcreative.net/singapore-event-venue-finder/",
+          "distribution": {
+            "@type": "DataDownload",
+            "encodingFormat": "application/json",
+            "contentUrl": "https://actcreative.net/singapore-event-venue-finder/venue-data.json"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://actcreative.net/singapore-event-venue-finder/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://actcreative.net/" },
+            { "@type": "ListItem", "position": 2, "name": "Singapore Event Venue Sourcing", "item": "https://actcreative.net/singapore-event-venue-sourcing/" },
+            { "@type": "ListItem", "position": 3, "name": "Venue Finder", "item": "https://actcreative.net/singapore-event-venue-finder/" }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://actcreative.net/singapore-event-venue-finder/#faq",
+          "mainEntity": [
+            { "@type": "Question", "name": "Is the venue finder a live booking platform?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is a public planning tool based on a curated Singapore venue index. Rates, holds and availability still need to be checked with venues before confirmation." } },
+            { "@type": "Question", "name": "What information is hidden from the public venue finder?", "acceptedAnswer": { "@type": "Answer", "text": "Internal source documents, venue contacts, detailed pricing and live availability notes are intentionally withheld. ACT Creative can check these manually after receiving a brief." } },
+            { "@type": "Question", "name": "Can ACT Creative help compare selected venues?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Use the shortlist tool to send selected venues, expected guest count, date range and production needs. ACT Creative can then review fit, restrictions, quote direction and next steps." } }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="ACT Creative home">
+          <img src="/favicon-192.png" alt="ACT Creative logo" width="36" height="36" />
+          <span>ACT Creative</span>
+        </a>
+        <nav aria-label="Primary navigation">
+          <a href="/singapore-event-venue-sourcing/">Venue sourcing</a>
+          <a href="/event-fabrication-singapore/">Event fabrication</a>
+          <a href="/booth-design-build-singapore/">Booth design</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="tool-hero" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow">Singapore venue finder MVP</p>
+            <h1 id="page-title">Singapore event venue finder</h1>
+            <p class="lede">Browse a broader Singapore venue index by area, property type, indoor or outdoor setting, event format and capacity. A venue can match several tags at the same time.</p>
+          </div>
+          <div class="hero-stats" aria-label="Venue finder dataset summary">
+            <div><strong data-stat-total>120+</strong><span>public records</span></div>
+            <div><strong data-stat-mapped>--</strong><span>mapped venues</span></div>
+            <div><strong data-stat-visible>--</strong><span>matching now</span></div>
+          </div>
+        </section>
+
+        <section class="planning-strip" aria-label="How to use this venue finder">
+          <div>
+            <span class="section-kicker">How to use it</span>
+            <h2>Choose an area, compare the map, then check reality</h2>
+          </div>
+          <div class="planning-steps">
+            <article>
+              <span>01</span>
+              <h3>Choose an area</h3>
+              <p>Start with the Singapore district that best fits your guests, schedule and production access.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Narrow the options</h3>
+              <p>Refine by property type, space setting, event format and minimum capacity.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Build a shortlist</h3>
+              <p>Open venue details, compare realistic options and send 3-5 choices for local checks.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="finder-grid" aria-label="Interactive Singapore venue finder">
+          <aside class="filter-panel" aria-label="Venue filters">
+            <div class="panel-heading">
+              <span>Filter venues</span>
+              <button type="button" data-clear-filters>Reset</button>
+            </div>
+            <label class="filter-field area-filter">
+              <span>Browse by area</span>
+              <select data-filter-area>
+                <option value="">All Singapore areas</option>
+              </select>
+            </label>
+            <label class="filter-field">
+              <span>Property type</span>
+              <select data-filter-kind>
+                <option value="">Any type</option>
+              </select>
+            </label>
+            <label class="filter-field">
+              <span>Space setting</span>
+              <select data-filter-setting>
+                <option value="">Any setting</option>
+              </select>
+            </label>
+            <label class="filter-field">
+              <span>Event format</span>
+              <select data-filter-event>
+                <option value="">Any format</option>
+              </select>
+            </label>
+            <label class="filter-field">
+              <span>Minimum capacity</span>
+              <select data-filter-capacity>
+                <option value="">Any capacity</option>
+                <option value="50">50+ pax</option>
+                <option value="100">100+ pax</option>
+                <option value="200">200+ pax</option>
+                <option value="500">500+ pax</option>
+                <option value="1000">1,000+ pax</option>
+                <option value="3000">3,000+ pax</option>
+              </select>
+            </label>
+
+            <div class="shortlist-panel">
+              <div class="panel-heading">
+                <span>Shortlist</span>
+                <small data-shortlist-count>0 selected</small>
+              </div>
+              <div class="shortlist-list" data-shortlist-list>
+                <p class="empty-note">Add venues from the result list to prepare an enquiry.</p>
+              </div>
+              <a class="button primary" data-shortlist-whatsapp href="https://wa.me/6584515268?text=Hi%20ACT%20Creative%2C%20I%20would%20like%20help%20shortlisting%20Singapore%20event%20venues." target="_blank" rel="noopener noreferrer">Send shortlist on WhatsApp</a>
+              <a class="button secondary" href="/singapore-event-venue-sourcing/#venue-brief-form">Send full venue brief</a>
+            </div>
+
+            <p class="data-note">Public MVP dataset only. Live rates, date holds, restrictions and site recap details are checked manually after a brief.</p>
+          </aside>
+
+          <section class="map-results" aria-label="Venue map and matching results">
+            <div class="map-card">
+              <div id="venue-map" aria-label="Map of filtered Singapore venue options"></div>
+              <div class="map-gesture-hint" aria-hidden="true">Scroll or pinch to zoom · drag to move</div>
+              <div class="map-footer">
+                <span data-map-summary>Loading venue markers...</span>
+                <span>Map data from OpenStreetMap</span>
+              </div>
+            </div>
+
+            <div class="result-header">
+              <div>
+                <span class="section-kicker">Matching venue options</span>
+                <h2><span data-result-count>0</span> venues match your filters</h2>
+              </div>
+              <a class="text-link" href="/singapore-event-venue-sourcing/">Need ACT Creative to check availability?</a>
+            </div>
+            <div class="result-list" data-result-list aria-live="polite"></div>
+          </section>
+        </section>
+
+        <section class="cta-panel">
+          <div>
+            <span class="section-kicker">Venue sourcing support</span>
+            <h2>Need more than a map?</h2>
+            <p>Send your event date, guest count, format, budget direction and production needs. We can turn the shortlist into quote requests, availability direction and a practical site recap plan.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="button primary" href="/singapore-event-venue-sourcing/#venue-brief-form">Send venue brief</a>
+            <a class="button secondary" href="mailto:contact@actcreative.net?subject=Singapore%20event%20venue%20shortlist">Email ACT Creative</a>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>&copy; 2026 ACT Creative Pte. Ltd. - Singapore</span>
+        <span><a href="/">Back to home</a> · <a href="mailto:contact@actcreative.net">contact@actcreative.net</a></span>
+      </footer>
+    </div>
+    <button class="back-to-top" type="button" data-back-to-top aria-label="Back to the top of the venue finder">↑<span>Top</span></button>
+    <script src="/vendor/leaflet/leaflet.js"></script>
+    <script src="/singapore-event-venue-finder/venue-finder.js" defer></script>
+  </body>
+</html>

@@ -82,6 +82,11 @@ export function Header() {
       meta: t("新加坡酒店、场地档期、初步报价与现场复核", "Singapore hotel options, availability, quotes and site recap"),
     },
     {
+      title: t("场地地图筛选工具", "Venue Finder Map"),
+      href: "/singapore-event-venue-finder/",
+      meta: t("按地区、类型、活动形式和容量筛选新加坡场地", "Filter Singapore venues by area, type, event format and capacity"),
+    },
+    {
       title: t("中国采购代理", "China Sourcing Agent"),
       href: localizedHref("/china-sourcing-agent/", "/zh/china-sourcing-agent/"),
       meta: t("供应商筛选、比价、打样与定制跟进", "Supplier search, price comparison, samples and custom production"),

@@ -55,12 +55,15 @@
             "@vitejs/plugin-react-swc": "^3.10.2",
             "dotenv": "^17.4.2",
             "googleapis": "^172.0.0",
+            "playwright": "^1.61.0",
             "sharp": "^0.34.5",
-            "vite": "6.4.2"
+            "vite": "^6.4.3"
       },
       "scripts": {
             "dev": "vite",
             "build": "vite build",
+            "validate:venue-finder": "python scripts/validate-venue-finder.py",
+            "smoke:venue-finder": "npm run build && node scripts/smoke-venue-finder.mjs",
             "og": "node scripts/generate-og-images.mjs",
             "gsc": "node scripts/fetch-search-console.mjs",
             "gsc:auth": "node scripts/create-google-oauth-token.mjs",

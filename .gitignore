@@ -11,6 +11,8 @@ dist
 _originals/
 output/
 .playwright-mcp/
+.playwright-cli/
+__pycache__/
 tmp/
 docs/search-console-exports/
 .secrets/

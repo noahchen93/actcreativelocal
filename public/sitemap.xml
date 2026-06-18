@@ -15,7 +15,7 @@
   -->
   <url>
     <loc>https://actcreative.net/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/" />
@@ -255,7 +255,7 @@
 
   <url>
     <loc>https://actcreative.net/singapore-event-venue-sourcing/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-sourcing/" />
@@ -289,6 +289,30 @@
       <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-sports-hub-waterfront.webp</image:loc>
       <image:title>Singapore waterfront event venue reference</image:title>
       <image:caption>Waterfront event area reference for outdoor venue and public event planning.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venue-finder/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-ritz-interior.webp</image:loc>
+      <image:title>Singapore event venue finder map</image:title>
+      <image:caption>Interactive public venue finder for filtering Singapore venues by area, type, event format and capacity.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-fort-canning-green.webp</image:loc>
+      <image:title>Outdoor Singapore venue finder reference</image:title>
+      <image:caption>Outdoor venue reference used in the Singapore venue finder MVP.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-joaquim-hall.webp</image:loc>
+      <image:title>Conference venue finder reference</image:title>
+      <image:caption>Conference room reference used in the Singapore venue finder MVP.</image:caption>
     </image:image>
   </url>
 
