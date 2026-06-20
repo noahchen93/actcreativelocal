@@ -257,7 +257,7 @@
       <article class="venue-card${activeClass}" data-venue-card="${escapeHtml(venue.id)}">
         <div class="venue-thumb">
           ${venue.image
-            ? `<img src="${escapeHtml(venue.image)}" alt="${escapeHtml(venue.name)} venue reference image for Singapore event planning" loading="lazy" width="280" height="220" />`
+            ? `<img src="${escapeHtml(venue.image)}" alt="${escapeHtml(venue.name)} in ${escapeHtml(venue.area)}, Singapore" loading="lazy" width="280" height="220" />`
             : `<div class="venue-location-card"><span>${escapeHtml(venue.area)}</span><strong>${escapeHtml(venue.name)}</strong><small>Location record</small></div>`}
         </div>
         <div class="venue-body">
@@ -271,7 +271,7 @@
             <p class="venue-facts">${facts.map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</p>
           </div>
           <details class="venue-details" data-venue-details="${escapeHtml(venue.id)}"${isExpanded ? " open" : ""}>
-            <summary><span>Venue details</span><small>Tags, planning notes${website ? " and website" : ""}</small></summary>
+            <summary><span>Venue details</span><small>Tags, venue overview${website ? " and website" : ""}</small></summary>
             <div class="venue-detail-content">
               <div class="venue-meta setting-tags">${settingTags.map((tag) => `<span class="tag setting">${escapeHtml(tag)}</span>`).join("")}</div>
               <div class="venue-meta">${eventTags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>

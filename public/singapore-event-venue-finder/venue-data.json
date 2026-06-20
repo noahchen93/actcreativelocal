@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-06-18",
+  "generatedAt": "2026-06-20",
   "source": "Internal Singapore venue index, public planning subset",
   "publicCount": 122,
   "mappedCount": 122,
-  "privacyNote": "Pricing, contacts, live availability and source documents are intentionally withheld from the public dataset.",
+  "privacyNote": "This public dataset contains venue identity, planning tags, capacity signals and map coordinates only.",
   "venues": [
     {
       "id": "singapore-sports-hub",
@@ -13,7 +13,6 @@
       "area": "Kallang / Sports Hub",
       "address": "1 Stadium Drive, Singapore 397629",
       "website": "kallangalive.com.sg",
-      "hours": "Event-based",
       "rawSuggestedTypes": "大型音乐会, 体育赛事, 国际展览, 颁奖典礼, 大型发布会, 电竞比赛",
       "spaces": [
         {
@@ -39,7 +38,7 @@
         {
           "name": "OCBC Arena Hall",
           "areaSqm": 4600,
-          "ceilingM": 12.0,
+          "ceilingM": 12,
           "banquet": 1500,
           "cocktail": 3000,
           "theatre": 3000,
@@ -49,7 +48,7 @@
         {
           "name": "Black Box Auditorium",
           "areaSqm": 380,
-          "ceilingM": 8.0,
+          "ceilingM": 8,
           "banquet": null,
           "cocktail": 200,
           "theatre": 200,
@@ -69,7 +68,6 @@
       ],
       "maxCapacity": 55000,
       "maxAreaSqm": 4600,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -107,7 +105,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/singapore-sports-hub.webp",
-      "publicNote": "Indoor + theatre / auditorium option for product / brand launch, awards ceremony, exhibition / immersive with a public capacity signal up to about 55,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + theatre / auditorium option for product / brand launch, awards ceremony, exhibition / immersive with a public capacity signal up to about 55,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3058186,
       "lng": 103.8719046,
@@ -123,7 +121,6 @@
       "area": "Marina Bay",
       "address": "18 Marina Gardens Drive, Singapore 018953",
       "website": "gardensbythebay.com.sg",
-      "hours": "09:00–21:00",
       "rawSuggestedTypes": "大型品牌发布, 晚宴, 婚礼, 音乐会, 颁奖典礼, 沉浸式展览",
       "spaces": [
         {
@@ -209,7 +206,6 @@
       ],
       "maxCapacity": 30000,
       "maxAreaSqm": 22000,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -279,8 +275,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/gardens-by-the-bay.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 30,000 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 30,000 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2832438,
       "lng": 103.8619344,
       "geocodeStatus": "matched",
@@ -295,7 +291,6 @@
       "area": "Marina Bay",
       "address": "10 Bayfront Avenue, Singapore 018956",
       "website": "marinabaysands.com",
-      "hours": "",
       "rawSuggestedTypes": "大型会议, 国际展览, 婚宴, 颁奖典礼, 产品发布, 音乐会, 艺术展",
       "spaces": [
         {
@@ -471,7 +466,7 @@
         {
           "name": "KOMA Restaurant",
           "areaSqm": 1180,
-          "ceilingM": 8.0,
+          "ceilingM": 8,
           "banquet": 230,
           "cocktail": 310,
           "theatre": null,
@@ -491,7 +486,6 @@
       ],
       "maxCapacity": 9225,
       "maxAreaSqm": 7672,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -575,7 +569,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/marina-bay-sands.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, conference / seminar, gala / dinner with a public capacity signal up to about 9,225 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, conference / seminar, gala / dinner with a public capacity signal up to about 9,225 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2836965,
       "lng": 103.8607226,
@@ -591,7 +585,6 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Singapore 098269",
       "website": "rwsentosa.com/en/attractions/universal-studios-singapore",
-      "hours": "11:00–19:00",
       "rawSuggestedTypes": "闭园私人包场, 电影首映, 大型品牌活动, 嘉年华",
       "spaces": [
         {
@@ -625,7 +618,7 @@
           "note": "湖边露天剧场（烟火 / 音乐会）"
         },
         {
-          "name": "Full Park After-Hours Buyout",
+          "name": "Full Park private Buyout",
           "areaSqm": null,
           "ceilingM": null,
           "banquet": null,
@@ -637,7 +630,6 @@
       ],
       "maxCapacity": 8000,
       "maxAreaSqm": 2000,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Performance / concert",
@@ -672,7 +664,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/universal-studios-singapore.webp",
-      "publicNote": "Outdoor + theatre / auditorium option for performance / concert, pop-up / market / activation, vip / private event with a public capacity signal up to about 8,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Outdoor + theatre / auditorium option for performance / concert, pop-up / market / activation, vip / private event with a public capacity signal up to about 8,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2556955,
       "lng": 103.8202156,
@@ -688,7 +680,6 @@
       "area": "Other Singapore",
       "address": "51 Canning Rise, Singapore 179872",
       "website": "eventbutler.sg/fort-canning-park",
-      "hours": "Event-based",
       "rawSuggestedTypes": "音乐节, 户外音乐会, 市集, 婚礼, 公司活动, 文化节",
       "spaces": [
         {
@@ -774,7 +765,6 @@
       ],
       "maxCapacity": 7000,
       "maxAreaSqm": 298,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Corporate event",
@@ -836,7 +826,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/fort-canning-park.webp",
-      "publicNote": "Indoor + outdoor option for corporate event, cocktail / reception, wedding with a public capacity signal up to about 7,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for corporate event, cocktail / reception, wedding with a public capacity signal up to about 7,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2931917,
       "lng": 103.848716,
@@ -852,7 +842,6 @@
       "area": "Marina Bay",
       "address": "61 Marina Coastal Drive, Singapore 018947",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -878,7 +867,6 @@
       ],
       "maxCapacity": 5000,
       "maxAreaSqm": 5000,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -927,7 +915,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/marina-bay-cruise-centre-singapore.webp",
-      "publicNote": "Indoor + outdoor option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 5,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 5,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2663024,
       "lng": 103.8604558,
@@ -943,13 +931,12 @@
       "area": "HarbourFront / South",
       "address": "27 Pasir Panjang Rd, Singapore 117537",
       "website": "24owls.sg",
-      "hours": "Event-based",
       "rawSuggestedTypes": "大型音乐会, 电音派对, 品牌发布, 时装秀, 沉浸式展览, 电影首映",
       "spaces": [
         {
           "name": "Turbine Hall A",
           "areaSqm": 5400,
-          "ceilingM": 25.0,
+          "ceilingM": 25,
           "banquet": 1200,
           "cocktail": 3500,
           "theatre": 3000,
@@ -959,7 +946,7 @@
         {
           "name": "Turbine Hall B",
           "areaSqm": 4200,
-          "ceilingM": 25.0,
+          "ceilingM": 25,
           "banquet": 900,
           "cocktail": 2800,
           "theatre": 2400,
@@ -969,7 +956,7 @@
         {
           "name": "Boiler House",
           "areaSqm": 2500,
-          "ceilingM": 20.0,
+          "ceilingM": 20,
           "banquet": 600,
           "cocktail": 1500,
           "theatre": 1300,
@@ -999,7 +986,6 @@
       ],
       "maxCapacity": 5000,
       "maxAreaSqm": 13500,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -1064,7 +1050,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/pasir-panjang-power-station.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, exhibition / immersive, performance / concert with a public capacity signal up to about 5,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, exhibition / immersive, performance / concert with a public capacity signal up to about 5,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.270551,
       "lng": 103.7985522,
@@ -1080,7 +1066,6 @@
       "area": "Sentosa",
       "address": "Siloso Beach, Sentosa, Singapore",
       "website": "sentosa.com.sg",
-      "hours": "全天",
       "rawSuggestedTypes": "海滩派对, 音乐节, 品牌发布, 团建, 体育赛事",
       "spaces": [
         {
@@ -1126,7 +1111,6 @@
       ],
       "maxCapacity": 5000,
       "maxAreaSqm": null,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -1164,7 +1148,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/siloso-beach.webp",
-      "publicNote": "Outdoor + beach option for product / brand launch, performance / concert, party / nightlife with a public capacity signal up to about 5,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Outdoor + beach option for product / brand launch, performance / concert, party / nightlife with a public capacity signal up to about 5,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2516169,
       "lng": 103.8191007,
@@ -1180,7 +1164,6 @@
       "area": "Changi / Expo",
       "address": "1 Expo Drive, Singapore 486150",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -1196,7 +1179,7 @@
         {
           "name": "Convention Hall",
           "areaSqm": 2000,
-          "ceilingM": 8.0,
+          "ceilingM": 8,
           "banquet": null,
           "cocktail": 2000,
           "theatre": 2500,
@@ -1226,7 +1209,6 @@
       ],
       "maxCapacity": 5000,
       "maxAreaSqm": 60000,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Conference / seminar",
@@ -1274,7 +1256,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/singapore-expo.webp",
-      "publicNote": "Indoor + outdoor option for conference / seminar, exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 5,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for conference / seminar, exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 5,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.334308,
       "lng": 103.959258,
@@ -1290,7 +1272,6 @@
       "area": "One-North / West",
       "address": "1 Vista Exchange Green, Singapore 138617",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -1336,7 +1317,6 @@
       ],
       "maxCapacity": 5000,
       "maxAreaSqm": 5000,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -1383,8 +1363,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/the-star-performing-arts-centre.webp",
-      "publicNote": "Indoor + theatre / auditorium option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 5,000 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + theatre / auditorium option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 5,000 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.3080015,
       "lng": 103.7883825,
       "geocodeStatus": "matched",
@@ -1399,13 +1379,12 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Singapore 098269",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
           "name": "Main Hall",
           "areaSqm": 2500,
-          "ceilingM": 9.0,
+          "ceilingM": 9,
           "banquet": 2000,
           "cocktail": 3600,
           "theatre": 3600,
@@ -1425,7 +1404,6 @@
       ],
       "maxCapacity": 3600,
       "maxAreaSqm": 2500,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -1469,8 +1447,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/resorts-world-ballroom.webp",
-      "publicNote": "Indoor + ballroom option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 3,600 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + ballroom option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 3,600 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2556955,
       "lng": 103.8202156,
       "geocodeStatus": "matched",
@@ -1485,7 +1463,6 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Singapore 098269",
       "website": "rwsentosa.com/en/attractions/adventure-cove-waterpark",
-      "hours": "10:00–17:00",
       "rawSuggestedTypes": "家庭日, 水上团建, 品牌活动, 夏日派对",
       "spaces": [
         {
@@ -1521,7 +1498,6 @@
       ],
       "maxCapacity": 3000,
       "maxAreaSqm": 1500,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Party / nightlife",
@@ -1556,7 +1532,7 @@
         "nightlife"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/adventure-cove-waterpark.webp",
-      "publicNote": "Outdoor + garden / lawn option for party / nightlife, team building / family day, vip / private event with a public capacity signal up to about 3,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Outdoor + garden / lawn option for party / nightlife, team building / family day, vip / private event with a public capacity signal up to about 3,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2556955,
       "lng": 103.8202156,
@@ -1572,7 +1548,6 @@
       "area": "Changi / Expo",
       "address": "78 Airport Boulevard, Jewel Changi L5, Singapore 819666",
       "website": "jewelchangiairport.com",
-      "hours": "10:00–19:00",
       "rawSuggestedTypes": "户外音乐会, 大型品牌发布, 露天派对, 展览",
       "spaces": [
         {
@@ -1608,7 +1583,6 @@
       ],
       "maxCapacity": 3000,
       "maxAreaSqm": 14000,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -1658,8 +1632,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/cloud-9-piazza.webp",
-      "publicNote": "Indoor + garden / lawn option for product / brand launch, exhibition / immersive, performance / concert with a public capacity signal up to about 3,000 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + garden / lawn option for product / brand launch, exhibition / immersive, performance / concert with a public capacity signal up to about 3,000 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.360208,
       "lng": 103.989759,
       "geocodeStatus": "manual_verified",
@@ -1674,7 +1648,6 @@
       "area": "Marina Bay",
       "address": "8 Marina Gardens Drive, Singapore 018951",
       "website": "pub.gov.sg/marinabarrage",
-      "hours": "09:00–21:00",
       "rawSuggestedTypes": "户外团建, 风筝节, 品牌发布, 家庭日, 音乐会",
       "spaces": [
         {
@@ -1710,7 +1683,7 @@
         {
           "name": "Multi-Purpose Hall",
           "areaSqm": 550,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 200,
           "cocktail": 400,
           "theatre": 350,
@@ -1720,7 +1693,6 @@
       ],
       "maxCapacity": 3000,
       "maxAreaSqm": 10000,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -1789,8 +1761,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/marina-barrage.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, exhibition / immersive, performance / concert with a public capacity signal up to about 3,000 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for product / brand launch, exhibition / immersive, performance / concert with a public capacity signal up to about 3,000 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2802762,
       "lng": 103.8657015,
       "geocodeStatus": "matched",
@@ -1805,7 +1777,6 @@
       "area": "Marina Bay",
       "address": "1 Raffles Boulevard, Singapore 039593",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -1851,7 +1822,6 @@
       ],
       "maxCapacity": 3000,
       "maxAreaSqm": 10000,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Conference / seminar",
@@ -1910,8 +1880,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/suntec-convention-centre.webp",
-      "publicNote": "Indoor + outdoor option for conference / seminar, exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 3,000 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for conference / seminar, exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 3,000 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2935792,
       "lng": 103.8566452,
       "geocodeStatus": "matched",
@@ -1926,13 +1896,12 @@
       "area": "Singapore River",
       "address": "3C The Cannery, River Valley Road, Singapore 179022",
       "website": "zoukgroup.com/singapore",
-      "hours": "Thu-Sat 10pm-4am",
       "rawSuggestedTypes": "DJ派对, Afterparty, 品牌发布, 夜店活动, 电音派对",
       "spaces": [
         {
           "name": "Main Room",
           "areaSqm": 900,
-          "ceilingM": 8.0,
+          "ceilingM": 8,
           "banquet": 400,
           "cocktail": 1500,
           "theatre": null,
@@ -1982,7 +1951,6 @@
       ],
       "maxCapacity": 2500,
       "maxAreaSqm": 1800,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -2020,8 +1988,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/zouk-singapore.webp",
-      "publicNote": "Indoor + restaurant / bar option for product / brand launch, party / nightlife with a public capacity signal up to about 2,500 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + restaurant / bar option for product / brand launch, party / nightlife with a public capacity signal up to about 2,500 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2905378,
       "lng": 103.8458375,
       "geocodeStatus": "matched",
@@ -2036,7 +2004,6 @@
       "area": "Marina Bay",
       "address": "10 Bayfront Avenue, Singapore 018956",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -2072,7 +2039,6 @@
       ],
       "maxCapacity": 2200,
       "maxAreaSqm": 2200,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -2120,7 +2086,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/sands-theatre-mbs.webp",
-      "publicNote": "Indoor + theatre / auditorium option for exhibition / immersive, pop-up / market / activation, vip / private event with a public capacity signal up to about 2,200 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + theatre / auditorium option for exhibition / immersive, pop-up / market / activation, vip / private event with a public capacity signal up to about 2,200 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2836965,
       "lng": 103.8607226,
@@ -2136,13 +2102,12 @@
       "area": "Kallang / Sports Hub",
       "address": "15 Stadium Walk, Singapore 397694",
       "website": "thekallang.com.sg/venues-facilities/ocbc-square",
-      "hours": "Event-based",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
           "name": "OCBC Square（全场）",
           "areaSqm": 1542,
-          "ceilingM": 16.0,
+          "ceilingM": 16,
           "banquet": null,
           "cocktail": 2000,
           "theatre": null,
@@ -2162,7 +2127,6 @@
       ],
       "maxCapacity": 2000,
       "maxAreaSqm": 1542,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -2201,7 +2165,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/ocbc-square.webp",
-      "publicNote": "Outdoor + theatre / auditorium option for product / brand launch, exhibition / immersive, performance / concert with a public capacity signal up to about 2,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Outdoor + theatre / auditorium option for product / brand launch, exhibition / immersive, performance / concert with a public capacity signal up to about 2,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3025469,
       "lng": 103.8781887,
@@ -2217,7 +2181,6 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Sentosa, Singapore 098269",
       "website": "rwsentosa.com/en/attractions/sea-aquarium",
-      "hours": "Event-based",
       "rawSuggestedTypes": "品牌发布, 沉浸式晚宴, 婚礼, 儿童活动, 颁奖典礼",
       "spaces": [
         {
@@ -2233,7 +2196,7 @@
         {
           "name": "Open Ocean Habitat Hall",
           "areaSqm": 900,
-          "ceilingM": 10.0,
+          "ceilingM": 10,
           "banquet": 300,
           "cocktail": 1000,
           "theatre": null,
@@ -2258,12 +2221,11 @@
           "cocktail": 2000,
           "theatre": null,
           "classroom": null,
-          "note": "After-hours private use"
+          "note": ""
         }
       ],
       "maxCapacity": 2000,
       "maxAreaSqm": 900,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -2318,7 +2280,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/s-e-a-aquarium.webp",
-      "publicNote": "Indoor + gallery / museum option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 2,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + gallery / museum option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 2,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2556955,
       "lng": 103.8202156,
@@ -2334,13 +2296,12 @@
       "area": "One-North / West",
       "address": "15 Science Centre Road, Singapore 609081",
       "website": "science.edu.sg",
-      "hours": "Thu-Sat 10pm-4am",
       "rawSuggestedTypes": "家庭日, 儿童活动, 科技品牌发布, 教育活动, 团建",
       "spaces": [
         {
           "name": "Atrium",
           "areaSqm": 800,
-          "ceilingM": 10.0,
+          "ceilingM": 10,
           "banquet": 300,
           "cocktail": 700,
           "theatre": null,
@@ -2385,12 +2346,11 @@
           "cocktail": 2000,
           "theatre": null,
           "classroom": null,
-          "note": "After-hours private"
+          "note": ""
         }
       ],
       "maxCapacity": 2000,
       "maxAreaSqm": 2000,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -2433,7 +2393,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/science-centre-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, team building / family day with a public capacity signal up to about 2,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, team building / family day with a public capacity signal up to about 2,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3328969,
       "lng": 103.7359933,
@@ -2449,7 +2409,6 @@
       "area": "Other Singapore",
       "address": "1 Esplanade Drive, Singapore 038981",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -2495,7 +2454,6 @@
       ],
       "maxCapacity": 1990,
       "maxAreaSqm": 1990,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -2545,8 +2503,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/esplanade-theatres-on-the-bay.webp",
-      "publicNote": "Indoor + outdoor option for exhibition / immersive, performance / concert, pop-up / market / activation with a public capacity signal up to about 1,990 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for exhibition / immersive, performance / concert, pop-up / market / activation with a public capacity signal up to about 1,990 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2900182,
       "lng": 103.8545878,
       "geocodeStatus": "matched",
@@ -2561,7 +2519,6 @@
       "area": "Sentosa",
       "address": "31 Ocean Way, Sentosa Cove, Singapore 098375",
       "website": "quaysideisle.com",
-      "hours": "All day",
       "rawSuggestedTypes": "海滨市集, 品牌路演, 户外音乐节, 社区活动",
       "spaces": [
         {
@@ -2597,7 +2554,6 @@
       ],
       "maxCapacity": 1800,
       "maxAreaSqm": 2500,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Performance / concert",
@@ -2649,7 +2605,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/quayside-isle.webp",
-      "publicNote": "Indoor + restaurant / bar option for performance / concert, pop-up / market / activation with a public capacity signal up to about 1,800 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + restaurant / bar option for performance / concert, pop-up / market / activation with a public capacity signal up to about 1,800 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2479779,
       "lng": 103.8416982,
@@ -2665,7 +2621,6 @@
       "area": "Orchard / Tanglin",
       "address": "333 Orchard Road, Singapore 238867",
       "website": "hilton.com/sinorhi",
-      "hours": "",
       "rawSuggestedTypes": "婚礼, 婚宴, 公司年会, 大型会议, 颁奖典礼, 产品发布",
       "spaces": [
         {
@@ -2711,7 +2666,7 @@
         {
           "name": "Junior Ballroom",
           "areaSqm": 280,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 180,
           "cocktail": 300,
           "theatre": 280,
@@ -2721,7 +2676,7 @@
         {
           "name": "Studio 1",
           "areaSqm": 70,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -2731,7 +2686,7 @@
         {
           "name": "Studio 2",
           "areaSqm": 70,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -2741,7 +2696,7 @@
         {
           "name": "Studio 3",
           "areaSqm": 70,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -2751,7 +2706,7 @@
         {
           "name": "Studio 4",
           "areaSqm": 70,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -2761,7 +2716,7 @@
         {
           "name": "Boardroom",
           "areaSqm": 55,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": null,
           "cocktail": null,
           "theatre": null,
@@ -2771,7 +2726,6 @@
       ],
       "maxCapacity": 1500,
       "maxAreaSqm": 1250,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -2815,7 +2769,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/hilton-singapore-orchard.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 1,500 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 1,500 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3019079,
       "lng": 103.8359161,
@@ -2831,13 +2785,12 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa, Singapore 098269",
       "website": "rwsentosa.com/en/hotels/hotel-michael",
-      "hours": "24/7",
       "rawSuggestedTypes": "大型会议, MICE, 颁奖典礼, 国际展览, 公司年会",
       "spaces": [
         {
           "name": "Crockfords Ballroom",
           "areaSqm": 1400,
-          "ceilingM": 7.0,
+          "ceilingM": 7,
           "banquet": 900,
           "cocktail": 1500,
           "theatre": 1300,
@@ -2847,7 +2800,7 @@
         {
           "name": "Function Rooms (x12)",
           "areaSqm": 80,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 70,
           "theatre": 70,
@@ -2867,7 +2820,6 @@
       ],
       "maxCapacity": 1500,
       "maxAreaSqm": 1400,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Corporate event",
@@ -2914,7 +2866,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/hotel-michael.webp",
-      "publicNote": "Indoor + ballroom option for corporate event, conference / seminar, gala / dinner with a public capacity signal up to about 1,500 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for corporate event, conference / seminar, gala / dinner with a public capacity signal up to about 1,500 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2551317,
       "lng": 103.8203679,
@@ -2930,7 +2882,6 @@
       "area": "Sentosa",
       "address": "Tanjong Beach, Sentosa, Singapore",
       "website": "sentosa.com.sg/en/things-to-do/attractions/tanjong-beach",
-      "hours": "24/7",
       "rawSuggestedTypes": "海滩婚礼, 音乐节(Sundown Festival), 品牌发布, Afterparty",
       "spaces": [
         {
@@ -2956,7 +2907,6 @@
       ],
       "maxCapacity": 1500,
       "maxAreaSqm": 3000,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -2997,8 +2947,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/tanjong-beach.webp",
-      "publicNote": "Outdoor + beach option for product / brand launch, wedding, performance / concert with a public capacity signal up to about 1,500 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Outdoor + beach option for product / brand launch, wedding, performance / concert with a public capacity signal up to about 1,500 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2439496,
       "lng": 103.8271204,
       "geocodeStatus": "matched",
@@ -3013,13 +2963,12 @@
       "area": "Marina Bay",
       "address": "7 Raffles Avenue, Singapore 039799",
       "website": "ritzcarlton.com/en/hotels/sinrz-the-ritz-carlton-millenia-singapore",
-      "hours": "24小时",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
           "name": "Grand Ballroom",
           "areaSqm": 1090,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 900,
           "cocktail": 1200,
           "theatre": 1400,
@@ -3089,7 +3038,6 @@
       ],
       "maxCapacity": 1400,
       "maxAreaSqm": 1090,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -3162,7 +3110,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/the-ritz-carlton-millenia-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 1,400 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 1,400 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2905344,
       "lng": 103.8600739,
@@ -3178,7 +3126,6 @@
       "area": "Marina Bay",
       "address": "6 Bayfront Avenue, Singapore 018974",
       "website": "marinabaysands.com/museum",
-      "hours": "10:00–19:00",
       "rawSuggestedTypes": "颁奖典礼, 艺术发布, 品牌发布, 鸡尾酒会, 沉浸式活动",
       "spaces": [
         {
@@ -3254,7 +3201,6 @@
       ],
       "maxCapacity": 1200,
       "maxAreaSqm": 6800,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -3302,7 +3248,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/artscience-museum.webp",
-      "publicNote": "Indoor + meeting rooms option for product / brand launch, conference / seminar, cocktail / reception with a public capacity signal up to about 1,200 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + meeting rooms option for product / brand launch, conference / seminar, cocktail / reception with a public capacity signal up to about 1,200 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2861382,
       "lng": 103.8592297,
@@ -3318,7 +3264,6 @@
       "area": "Singapore River",
       "address": "392 Havelock Road, Singapore 169663",
       "website": "millenniumhotels.com",
-      "hours": "",
       "rawSuggestedTypes": "婚宴, 公司年会, 会议, 团建, MICE",
       "spaces": [
         {
@@ -3334,7 +3279,7 @@
         {
           "name": "Waterfront Ballroom",
           "areaSqm": 448,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 300,
           "cocktail": 500,
           "theatre": 450,
@@ -3344,7 +3289,7 @@
         {
           "name": "Riverfront Ballroom",
           "areaSqm": 290,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 200,
           "cocktail": 300,
           "theatre": 300,
@@ -3354,7 +3299,7 @@
         {
           "name": "Waterfront Studio",
           "areaSqm": 80,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -3364,7 +3309,7 @@
         {
           "name": "Riverfront Studio",
           "areaSqm": 80,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -3374,7 +3319,7 @@
         {
           "name": "Meeting Suite 1",
           "areaSqm": 45,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 20,
           "cocktail": 30,
           "theatre": 40,
@@ -3384,7 +3329,7 @@
         {
           "name": "Meeting Suite 2",
           "areaSqm": 45,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 20,
           "cocktail": 30,
           "theatre": 40,
@@ -3394,7 +3339,7 @@
         {
           "name": "Meeting Suite 3",
           "areaSqm": 45,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 20,
           "cocktail": 30,
           "theatre": 40,
@@ -3404,7 +3349,6 @@
       ],
       "maxCapacity": 1200,
       "maxAreaSqm": 918,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Corporate event",
@@ -3449,7 +3393,7 @@
         "solemnisation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/grand-copthorne-waterfront.webp",
-      "publicNote": "Indoor + ballroom option for corporate event, conference / seminar, gala / dinner with a public capacity signal up to about 1,200 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for corporate event, conference / seminar, gala / dinner with a public capacity signal up to about 1,200 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2903275,
       "lng": 103.8350307,
@@ -3465,13 +3409,12 @@
       "area": "Orchard / Tanglin",
       "address": "10 Scotts Road, Singapore 228211",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
           "name": "Grand Ballroom",
           "areaSqm": 930,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 800,
           "cocktail": 1000,
           "theatre": 1200,
@@ -3511,7 +3454,6 @@
       ],
       "maxCapacity": 1200,
       "maxAreaSqm": 930,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -3557,7 +3499,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/grand-hyatt-singapore.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 1,200 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 1,200 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3064248,
       "lng": 103.8334719,
@@ -3573,13 +3515,12 @@
       "area": "City Hall / Civic District",
       "address": "93 Stamford Road, Singapore 178897",
       "website": "nhb.gov.sg/nationalmuseum",
-      "hours": "Event-based",
       "rawSuggestedTypes": "颁奖典礼, 品牌发布, 电影首映, 艺术晚宴, 外交活动, 音乐会",
       "spaces": [
         {
           "name": "Glass Rotunda",
           "areaSqm": 340,
-          "ceilingM": 15.0,
+          "ceilingM": 15,
           "banquet": 120,
           "cocktail": 300,
           "theatre": null,
@@ -3589,7 +3530,7 @@
         {
           "name": "The Salon",
           "areaSqm": 420,
-          "ceilingM": 8.0,
+          "ceilingM": 8,
           "banquet": 200,
           "cocktail": 400,
           "theatre": 350,
@@ -3634,12 +3575,11 @@
           "cocktail": 1200,
           "theatre": null,
           "classroom": null,
-          "note": "After-hours private"
+          "note": ""
         }
       ],
       "maxCapacity": 1200,
       "maxAreaSqm": 800,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -3690,7 +3630,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/national-museum-of-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, awards ceremony with a public capacity signal up to about 1,200 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, awards ceremony with a public capacity signal up to about 1,200 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2965476,
       "lng": 103.8483167,
@@ -3706,7 +3646,6 @@
       "area": "Orchard / Tanglin",
       "address": "22 Orange Grove Road, Singapore 258350",
       "website": "shangri-la.com/singapore",
-      "hours": "",
       "rawSuggestedTypes": "婚宴, 大型会议, 外交活动, 颁奖典礼, 产品发布",
       "spaces": [
         {
@@ -3732,7 +3671,7 @@
         {
           "name": "Shangri-La Room",
           "areaSqm": 510,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 340,
           "cocktail": 550,
           "theatre": 500,
@@ -3772,7 +3711,7 @@
         {
           "name": "Garden Suite 1",
           "areaSqm": 70,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -3782,7 +3721,7 @@
         {
           "name": "Garden Suite 2",
           "areaSqm": 70,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -3792,7 +3731,7 @@
         {
           "name": "Tower Ballroom",
           "areaSqm": 265,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 180,
           "cocktail": 280,
           "theatre": 250,
@@ -3812,7 +3751,6 @@
       ],
       "maxCapacity": 1200,
       "maxAreaSqm": 1044,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -3868,7 +3806,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/shangri-la-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, conference / seminar, gala / dinner with a public capacity signal up to about 1,200 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, conference / seminar, gala / dinner with a public capacity signal up to about 1,200 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.311479,
       "lng": 103.8264448,
@@ -3884,7 +3822,6 @@
       "area": "Marina Bay",
       "address": "1 Bayfront Avenue, Sands SkyPark Tower 3, Singapore 018971",
       "website": "celavi.com",
-      "hours": "12:00–深夜",
       "rawSuggestedTypes": "DJ派对, Afterparty, 高空鸡尾酒会, 品牌发布, 时装秀",
       "spaces": [
         {
@@ -3940,7 +3877,6 @@
       ],
       "maxCapacity": 1000,
       "maxAreaSqm": 1060,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -4005,7 +3941,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/ce-la-vi.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, party / nightlife with a public capacity signal up to about 1,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, party / nightlife with a public capacity signal up to about 1,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2846154,
       "lng": 103.860933,
@@ -4021,13 +3957,12 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa 098269",
       "website": "rwsentosa.com",
-      "hours": "",
       "rawSuggestedTypes": "大型婚宴, 公司年会, 颁奖典礼, 产品发布, 会议",
       "spaces": [
         {
           "name": "Equarius Ballroom",
           "areaSqm": 840,
-          "ceilingM": 8.0,
+          "ceilingM": 8,
           "banquet": 600,
           "cocktail": 1000,
           "theatre": 900,
@@ -4047,7 +3982,7 @@
         {
           "name": "Equarius Ballroom 1",
           "areaSqm": 280,
-          "ceilingM": 8.0,
+          "ceilingM": 8,
           "banquet": 180,
           "cocktail": 300,
           "theatre": 280,
@@ -4057,7 +3992,7 @@
         {
           "name": "Equarius Ballroom 2",
           "areaSqm": 280,
-          "ceilingM": 8.0,
+          "ceilingM": 8,
           "banquet": 180,
           "cocktail": 300,
           "theatre": 280,
@@ -4067,7 +4002,7 @@
         {
           "name": "Equarius Ballroom 3",
           "areaSqm": 280,
-          "ceilingM": 8.0,
+          "ceilingM": 8,
           "banquet": 180,
           "cocktail": 300,
           "theatre": 280,
@@ -4077,7 +4012,6 @@
       ],
       "maxCapacity": 1000,
       "maxAreaSqm": 840,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -4119,7 +4053,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/equarius-ballroom.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 1,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 1,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.256502,
       "lng": 103.8189,
@@ -4135,13 +4069,12 @@
       "area": "City Hall / Civic District",
       "address": "30 Beach Road, Singapore 189763",
       "website": "marriott.com/SINDT",
-      "hours": "",
       "rawSuggestedTypes": "婚礼, 婚宴, 时装秀, 产品发布, 艺术晚宴, 奢侈品活动",
       "spaces": [
         {
           "name": "The Grand Hall",
           "areaSqm": 880,
-          "ceilingM": 7.0,
+          "ceilingM": 7,
           "banquet": 600,
           "cocktail": 1000,
           "theatre": 950,
@@ -4221,7 +4154,6 @@
       ],
       "maxCapacity": 1000,
       "maxAreaSqm": 880,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -4270,7 +4202,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/jw-marriott-singapore-south-beach.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 1,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 1,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2942958,
       "lng": 103.8560812,
@@ -4286,7 +4218,6 @@
       "area": "Sentosa",
       "address": "120 Tanjong Beach Walk, Sentosa, Singapore 098942",
       "website": "tanjongbeachclub.com",
-      "hours": "Tue–Thu 11:00–22:00；Fri–Sun 10:30–22:00",
       "rawSuggestedTypes": "海滩婚礼, 日落派对, 品牌发布, DJ活动, 生日派对",
       "spaces": [
         {
@@ -4332,7 +4263,6 @@
       ],
       "maxCapacity": 1000,
       "maxAreaSqm": null,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -4382,8 +4312,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/tanjong-beach-club.webp",
-      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, wedding, party / nightlife with a public capacity signal up to about 1,000 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, wedding, party / nightlife with a public capacity signal up to about 1,000 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2446451,
       "lng": 103.82694,
       "geocodeStatus": "matched",
@@ -4398,7 +4328,6 @@
       "area": "Other Singapore",
       "address": "12 Marina View, Asia Square Tower 2, Singapore 018961",
       "website": "marriott.com/SINWI",
-      "hours": "",
       "rawSuggestedTypes": "婚宴, 公司年会, 会议, 颁奖典礼, 产品发布, 高空鸡尾酒会",
       "spaces": [
         {
@@ -4424,7 +4353,7 @@
         {
           "name": "Junior Ballroom",
           "areaSqm": 340,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 220,
           "cocktail": 350,
           "theatre": 320,
@@ -4434,7 +4363,7 @@
         {
           "name": "Meeting Room 1",
           "areaSqm": 55,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 45,
           "theatre": 45,
@@ -4444,7 +4373,7 @@
         {
           "name": "Meeting Room 2",
           "areaSqm": 55,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 45,
           "theatre": 45,
@@ -4454,7 +4383,7 @@
         {
           "name": "Meeting Room 3",
           "areaSqm": 55,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 45,
           "theatre": 45,
@@ -4464,7 +4393,7 @@
         {
           "name": "Meeting Room 4",
           "areaSqm": 55,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 45,
           "theatre": 45,
@@ -4474,7 +4403,7 @@
         {
           "name": "Meeting Room 5",
           "areaSqm": 55,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 45,
           "theatre": 45,
@@ -4484,7 +4413,6 @@
       ],
       "maxCapacity": 1000,
       "maxAreaSqm": 950,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -4542,7 +4470,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/the-westin-singapore.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 1,000 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 1,000 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2783073,
       "lng": 103.8507952,
@@ -4558,7 +4486,6 @@
       "area": "City Hall / Civic District",
       "address": "80 Bras Basah Road, Singapore 189560",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
@@ -4604,7 +4531,6 @@
       ],
       "maxCapacity": 900,
       "maxAreaSqm": 784,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -4649,7 +4575,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/fairmont-singapore.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 900 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 900 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2941133,
       "lng": 103.8539484,
@@ -4665,7 +4591,6 @@
       "area": "Marina Bay",
       "address": "7 Raffles Boulevard, Marina Square, Singapore 039595",
       "website": "panpacific.com/singapore",
-      "hours": "",
       "rawSuggestedTypes": "婚宴, 公司年会, 国际会议, 颁奖典礼, 产品发布",
       "spaces": [
         {
@@ -4691,7 +4616,7 @@
         {
           "name": "Ocean Ballroom",
           "areaSqm": 420,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 280,
           "cocktail": 450,
           "theatre": 400,
@@ -4701,7 +4626,7 @@
         {
           "name": "Pacific 1",
           "areaSqm": 85,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 70,
           "theatre": 70,
@@ -4711,7 +4636,7 @@
         {
           "name": "Pacific 2",
           "areaSqm": 85,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 70,
           "theatre": 70,
@@ -4721,7 +4646,7 @@
         {
           "name": "Pacific 3",
           "areaSqm": 85,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 70,
           "theatre": 70,
@@ -4731,7 +4656,7 @@
         {
           "name": "Pacific 4",
           "areaSqm": 85,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 70,
           "theatre": 70,
@@ -4741,7 +4666,7 @@
         {
           "name": "Pacific 5",
           "areaSqm": 85,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 70,
           "theatre": 70,
@@ -4751,7 +4676,6 @@
       ],
       "maxCapacity": 900,
       "maxAreaSqm": 853,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -4802,7 +4726,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/pan-pacific-singapore.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 900 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 900 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2923514,
       "lng": 103.8586837,
@@ -4818,13 +4742,12 @@
       "area": "City Hall / Civic District",
       "address": "15 Stamford Road, Singapore 178906",
       "website": "kempinski.com/en/the-capitol-singapore",
-      "hours": "Event-based",
       "rawSuggestedTypes": "电影首映, 音乐会, 颁奖典礼, 婚礼, 产品发布, 戏剧演出",
       "spaces": [
         {
           "name": "Capitol Theatre",
           "areaSqm": 960,
-          "ceilingM": 12.0,
+          "ceilingM": 12,
           "banquet": 300,
           "cocktail": 400,
           "theatre": 865,
@@ -4834,7 +4757,7 @@
         {
           "name": "The Atelier",
           "areaSqm": 310,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 120,
           "cocktail": 300,
           "theatre": 225,
@@ -4844,7 +4767,7 @@
         {
           "name": "Jewel Box",
           "areaSqm": 110,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 60,
           "cocktail": 120,
           "theatre": 100,
@@ -4854,7 +4777,7 @@
         {
           "name": "The Studios (x4)",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -4874,7 +4797,6 @@
       ],
       "maxCapacity": 865,
       "maxAreaSqm": 960,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -4920,8 +4842,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/the-capitol-kempinski.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, wedding, awards ceremony with a public capacity signal up to about 865 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for product / brand launch, wedding, awards ceremony with a public capacity signal up to about 865 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2925042,
       "lng": 103.8537716,
       "geocodeStatus": "matched",
@@ -4936,13 +4858,12 @@
       "area": "Marina Bay",
       "address": "2 Temasek Boulevard, Singapore 038982",
       "website": "hilton.com/conrad/sinci",
-      "hours": "",
       "rawSuggestedTypes": "婚宴, 公司年会, 国际会议, 颁奖典礼, 产品发布",
       "spaces": [
         {
           "name": "Grand Ballroom",
           "areaSqm": 720,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 500,
           "cocktail": 800,
           "theatre": 750,
@@ -4972,7 +4893,7 @@
         {
           "name": "Millenia 1",
           "areaSqm": 90,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 50,
           "cocktail": 80,
           "theatre": 80,
@@ -4982,7 +4903,7 @@
         {
           "name": "Millenia 2",
           "areaSqm": 90,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 50,
           "cocktail": 80,
           "theatre": 80,
@@ -4992,7 +4913,7 @@
         {
           "name": "Millenia 3",
           "areaSqm": 90,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 50,
           "cocktail": 80,
           "theatre": 80,
@@ -5002,7 +4923,7 @@
         {
           "name": "Topaz",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -5012,7 +4933,7 @@
         {
           "name": "Opal",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -5022,7 +4943,7 @@
         {
           "name": "Sapphire",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -5032,7 +4953,7 @@
         {
           "name": "Ruby",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -5042,7 +4963,6 @@
       ],
       "maxCapacity": 800,
       "maxAreaSqm": 720,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -5091,7 +5011,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/conrad-centennial-singapore.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 800 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 800 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.293525,
       "lng": 103.8587748,
@@ -5107,13 +5027,12 @@
       "area": "Orchard / Tanglin",
       "address": "1 Cuscaden Road, Singapore 249715",
       "website": "hilton.com/conrad/sinor",
-      "hours": "",
       "rawSuggestedTypes": "婚礼, 婚宴, 公司年会, 会议, 奢侈品发布, 颁奖典礼",
       "spaces": [
         {
           "name": "Grand Ballroom",
           "areaSqm": 686,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 450,
           "cocktail": 800,
           "theatre": 700,
@@ -5143,7 +5062,7 @@
         {
           "name": "Harmony",
           "areaSqm": 75,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -5153,7 +5072,7 @@
         {
           "name": "Melody",
           "areaSqm": 75,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -5163,7 +5082,7 @@
         {
           "name": "Rhythm",
           "areaSqm": 75,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -5173,7 +5092,7 @@
         {
           "name": "Sonata",
           "areaSqm": 75,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 60,
@@ -5193,7 +5112,6 @@
       ],
       "maxCapacity": 800,
       "maxAreaSqm": 686,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Corporate event",
@@ -5244,7 +5162,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/conrad-singapore-orchard.webp",
-      "publicNote": "Indoor + outdoor option for corporate event, conference / seminar, gala / dinner with a public capacity signal up to about 800 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for corporate event, conference / seminar, gala / dinner with a public capacity signal up to about 800 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3046043,
       "lng": 103.824818,
@@ -5260,7 +5178,6 @@
       "area": "Marina Bay",
       "address": "80 Collyer Quay, Singapore 049326",
       "website": "fullertonhotels.com",
-      "hours": "10:00–19:00",
       "rawSuggestedTypes": "婚礼, 水岸晚宴, 品牌发布, 颁奖典礼, 鸡尾酒会",
       "spaces": [
         {
@@ -5276,7 +5193,7 @@
         {
           "name": "The Orchid Ballroom",
           "areaSqm": 330,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 180,
           "cocktail": 280,
           "theatre": 250,
@@ -5286,7 +5203,7 @@
         {
           "name": "Straits Room",
           "areaSqm": 180,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 100,
           "cocktail": 150,
           "theatre": 140,
@@ -5336,7 +5253,6 @@
       ],
       "maxCapacity": 800,
       "maxAreaSqm": 1100,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -5405,7 +5321,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/fullerton-bay-clifford-pier.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 800 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 800 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2833389,
       "lng": 103.8533943,
@@ -5421,13 +5337,12 @@
       "area": "City Hall / Civic District",
       "address": "1 St Andrew's Road, Singapore 178957",
       "website": "nationalgallery.sg",
-      "hours": "10:00–19:00",
       "rawSuggestedTypes": "高端婚礼, 艺术晚宴, 颁奖典礼, 外交活动, 品牌发布",
       "spaces": [
         {
           "name": "Padang Atrium",
           "areaSqm": 600,
-          "ceilingM": 15.0,
+          "ceilingM": 15,
           "banquet": 350,
           "cocktail": 800,
           "theatre": 600,
@@ -5497,7 +5412,6 @@
       ],
       "maxCapacity": 800,
       "maxAreaSqm": 900,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -5554,7 +5468,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/national-gallery-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 800 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 800 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2902557,
       "lng": 103.8514709,
@@ -5570,7 +5484,6 @@
       "area": "Other Singapore",
       "address": "3 Upper Pickering Street, Singapore 058289",
       "website": "panpacific.com/parkroyal-collection-pickering",
-      "hours": "",
       "rawSuggestedTypes": "婚礼, 公司会议, 可持续主题活动, 产品发布, 鸡尾酒会",
       "spaces": [
         {
@@ -5596,7 +5509,7 @@
         {
           "name": "Garden Ballroom",
           "areaSqm": 240,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 160,
           "cocktail": 250,
           "theatre": 220,
@@ -5606,7 +5519,7 @@
         {
           "name": "Meeting Room 1",
           "areaSqm": 65,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -5616,7 +5529,7 @@
         {
           "name": "Meeting Room 2",
           "areaSqm": 65,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -5626,7 +5539,7 @@
         {
           "name": "Meeting Room 3",
           "areaSqm": 65,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -5646,7 +5559,6 @@
       ],
       "maxCapacity": 800,
       "maxAreaSqm": 756,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -5701,8 +5613,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/parkroyal-collection-pickering.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, conference / seminar, cocktail / reception with a public capacity signal up to about 800 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for product / brand launch, conference / seminar, cocktail / reception with a public capacity signal up to about 800 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2856566,
       "lng": 103.8462571,
       "geocodeStatus": "matched",
@@ -5717,7 +5629,6 @@
       "area": "Sentosa",
       "address": "Palawan Beach, Sentosa, Singapore",
       "website": "sentosa.com.sg/en/things-to-do/attractions/palawan-beach",
-      "hours": "24/7",
       "rawSuggestedTypes": "音乐节, 家庭日, 户外展览, 圆形剧场演出",
       "spaces": [
         {
@@ -5763,7 +5674,6 @@
       ],
       "maxCapacity": 800,
       "maxAreaSqm": 1500,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Wedding",
@@ -5804,7 +5714,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/palawan-beach.webp",
-      "publicNote": "Outdoor + garden / lawn option for wedding, exhibition / immersive, performance / concert with a public capacity signal up to about 800 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Outdoor + garden / lawn option for wedding, exhibition / immersive, performance / concert with a public capacity signal up to about 800 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2459472,
       "lng": 103.8253627,
@@ -5820,7 +5730,6 @@
       "area": "Sentosa",
       "address": "Sensoryscape, Sentosa, Singapore",
       "website": "sentosa.com.sg/en/things-to-do/attractions/sensoryscape",
-      "hours": "24/7",
       "rawSuggestedTypes": "沉浸式展览, 夜间灯光秀, 品牌发布, 艺术装置",
       "spaces": [
         {
@@ -5856,7 +5765,6 @@
       ],
       "maxCapacity": 800,
       "maxAreaSqm": 1200,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -5894,8 +5802,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/sensoryscape.webp",
-      "publicNote": "Outdoor + garden / lawn option for product / brand launch, exhibition / immersive with a public capacity signal up to about 800 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Outdoor + garden / lawn option for product / brand launch, exhibition / immersive with a public capacity signal up to about 800 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2532132,
       "lng": 103.8188201,
       "geocodeStatus": "matched",
@@ -5910,13 +5818,12 @@
       "area": "Marina Bay",
       "address": "30 Raffles Avenue, Singapore 039803",
       "website": "singaporeflyer.com",
-      "hours": "14:00–22:00",
       "rawSuggestedTypes": "高空鸡尾酒会, 求婚, 品牌发布, 私人派对",
       "spaces": [
         {
           "name": "Private Capsule (per capsule)",
           "areaSqm": 28,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 16,
           "cocktail": 28,
           "theatre": null,
@@ -5936,7 +5843,7 @@
         {
           "name": "Flyer Event Hall (Ground)",
           "areaSqm": 950,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 450,
           "cocktail": 800,
           "theatre": 700,
@@ -5966,7 +5873,6 @@
       ],
       "maxCapacity": 800,
       "maxAreaSqm": 950,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -6028,7 +5934,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/singapore-flyer.webp",
-      "publicNote": "Indoor + restaurant / bar option for product / brand launch, cocktail / reception, wedding with a public capacity signal up to about 800 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + restaurant / bar option for product / brand launch, cocktail / reception, wedding with a public capacity signal up to about 800 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2894379,
       "lng": 103.8632598,
@@ -6044,13 +5950,12 @@
       "area": "Sentosa",
       "address": "2 Bukit Manis Road, Sentosa, Singapore 099891",
       "website": "sofitel-singapore-sentosa.com",
-      "hours": "24/7",
       "rawSuggestedTypes": "高端婚礼, 悬崖晚宴, 产品发布, 颁奖典礼, 公司年会",
       "spaces": [
         {
           "name": "Grand Ballroom",
           "areaSqm": 690,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 500,
           "cocktail": 800,
           "theatre": 600,
@@ -6090,7 +5995,7 @@
         {
           "name": "Function Rooms (x6)",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -6100,7 +6005,6 @@
       ],
       "maxCapacity": 800,
       "maxAreaSqm": 690,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -6176,7 +6080,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/sofitel-singapore-sentosa-resort-spa.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 800 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 800 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2456478,
       "lng": 103.8277877,
@@ -6192,7 +6096,6 @@
       "area": "City Hall / Civic District",
       "address": "2 Stamford Road, Singapore 178882",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
@@ -6238,7 +6141,6 @@
       ],
       "maxCapacity": 800,
       "maxAreaSqm": 625,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -6291,7 +6193,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/swiss-tel-the-stamford.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 800 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 800 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2933171,
       "lng": 103.8533985,
@@ -6307,13 +6209,12 @@
       "area": "Marina Bay",
       "address": "30 Raffles Avenue, Singapore Flyer, Singapore 039803",
       "website": "plume.com.sg",
-      "hours": "Thu-Sat 10pm-4am",
       "rawSuggestedTypes": "品牌发布, 婚礼, 鸡尾酒会, 颁奖典礼, 大型招待会",
       "spaces": [
         {
           "name": "Plume Main Hall",
           "areaSqm": 680,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 280,
           "cocktail": 500,
           "theatre": 500,
@@ -6343,7 +6244,6 @@
       ],
       "maxCapacity": 750,
       "maxAreaSqm": 1080,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -6394,9 +6294,9 @@
         "产品发布",
         "activation"
       ],
-      "image": "/singapore-event-venue-finder/assets/venues/plume-singapore-flyer.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, wedding with a public capacity signal up to about 750 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "image": "",
+      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, wedding with a public capacity signal up to about 750 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "location",
       "lat": 1.289343,
       "lng": 103.863136,
       "geocodeStatus": "manual_verified",
@@ -6411,7 +6311,6 @@
       "area": "Sentosa",
       "address": "Siloso Beach, 51 Imbiah Walk, Sentosa, Singapore 099538",
       "website": "1-altitudecoast.sg",
-      "hours": "Thu-Sat 10pm-4am",
       "rawSuggestedTypes": "海滩派对, 泳池派对, 品牌发布, Afterparty, DJ活动",
       "spaces": [
         {
@@ -6457,7 +6356,6 @@
       ],
       "maxCapacity": 700,
       "maxAreaSqm": 1300,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -6521,8 +6419,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/1-altitude-coast.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, party / nightlife, vip / private event with a public capacity signal up to about 700 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for product / brand launch, party / nightlife, vip / private event with a public capacity signal up to about 700 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2547174,
       "lng": 103.8146148,
       "geocodeStatus": "matched",
@@ -6537,7 +6435,6 @@
       "area": "Orchard / Tanglin",
       "address": "2 Orchard Turn, ION Orchard L55-56, Singapore 238801",
       "website": "1-atico.sg",
-      "hours": "Thu-Sat 10pm-4am",
       "rawSuggestedTypes": "高空鸡尾酒会, 品牌发布, VIP招待, 时装秀, Afterparty",
       "spaces": [
         {
@@ -6583,7 +6480,6 @@
       ],
       "maxCapacity": 700,
       "maxAreaSqm": 1150,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -6637,7 +6533,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/1-atico.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, party / nightlife with a public capacity signal up to about 700 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, party / nightlife with a public capacity signal up to about 700 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.304105,
       "lng": 103.831781,
@@ -6653,7 +6549,6 @@
       "area": "Marina Bay",
       "address": "5 Raffles Avenue, Singapore 039797",
       "website": "mandarinoriental.com/singapore",
-      "hours": "",
       "rawSuggestedTypes": "高端婚礼, VIP宴请, 产品发布, 颁奖典礼, 外交晚宴",
       "spaces": [
         {
@@ -6739,7 +6634,6 @@
       ],
       "maxCapacity": 700,
       "maxAreaSqm": 650,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -6796,7 +6690,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/mandarin-oriental-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 700 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 700 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2907126,
       "lng": 103.8583454,
@@ -6812,7 +6706,6 @@
       "area": "Sentosa",
       "address": "40 Siloso Beach Walk, Sentosa, Singapore 098996",
       "website": "rumoursbeach.club",
-      "hours": "Mon–Thu 11:00–22:00；Fri–Sun 10:00–22:00",
       "rawSuggestedTypes": "海滩派对, 泳池派对, DJ活动, 品牌发布, Afterparty",
       "spaces": [
         {
@@ -6848,7 +6741,6 @@
       ],
       "maxCapacity": 700,
       "maxAreaSqm": null,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -6893,7 +6785,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/rumours-beach-club.webp",
-      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, party / nightlife, vip / private event with a public capacity signal up to about 700 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, party / nightlife, vip / private event with a public capacity signal up to about 700 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2540134,
       "lng": 103.8146202,
@@ -6909,7 +6801,6 @@
       "area": "North / Seletar",
       "address": "2 Park Lane, Seletar Aerospace Park, Singapore 798387",
       "website": "wheelersestate.com",
-      "hours": "Event-based",
       "rawSuggestedTypes": "户外婚礼, 花园派对, 家庭日, 团建, 品牌发布, 生日派对",
       "spaces": [
         {
@@ -6955,7 +6846,6 @@
       ],
       "maxCapacity": 700,
       "maxAreaSqm": 8000,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -7005,7 +6895,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/wheeler-s-estate.webp",
-      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, wedding, party / nightlife with a public capacity signal up to about 700 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, wedding, party / nightlife with a public capacity signal up to about 700 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.4093476,
       "lng": 103.8680089,
@@ -7021,7 +6911,6 @@
       "area": "Other Singapore",
       "address": "11 Laguna Golf Green, Singapore 488047",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
@@ -7067,7 +6956,6 @@
       ],
       "maxCapacity": 650,
       "maxAreaSqm": 580,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -7127,7 +7015,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/dusit-thani-laguna-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 650 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 650 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3237578,
       "lng": 103.9628922,
@@ -7143,13 +7031,12 @@
       "area": "Central / Novena",
       "address": "1 Farrer Park Station Road, Singapore 217562",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
           "name": "Grand Ballroom",
           "areaSqm": 600,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 450,
           "cocktail": 600,
           "theatre": 650,
@@ -7189,7 +7076,6 @@
       ],
       "maxCapacity": 650,
       "maxAreaSqm": 600,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -7255,7 +7141,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/one-farrer-hotel.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 650 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 650 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3126,
       "lng": 103.854,
@@ -7271,7 +7157,6 @@
       "area": "Orchard / Tanglin",
       "address": "320 Orchard Road, Singapore 238866",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
@@ -7317,7 +7202,6 @@
       ],
       "maxCapacity": 650,
       "maxAreaSqm": 556,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -7362,8 +7246,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/singapore-marriott-tang-plaza-hotel.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 650 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 650 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.304987,
       "lng": 103.8330525,
       "geocodeStatus": "matched",
@@ -7378,7 +7262,6 @@
       "area": "Orchard / Tanglin",
       "address": "29 Tanglin Road, Singapore 247911",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
@@ -7424,7 +7307,6 @@
       ],
       "maxCapacity": 650,
       "maxAreaSqm": 570,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -7469,7 +7351,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/st-regis-singapore.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 650 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 650 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3056937,
       "lng": 103.8261404,
@@ -7485,7 +7367,6 @@
       "area": "CBD / Tanjong Pagar",
       "address": "165 Tanjong Pagar Road, Singapore 088539",
       "website": "stayamara.com",
-      "hours": "",
       "rawSuggestedTypes": "婚礼, 婚宴, 公司年会, 会议, 产品发布, 鸡尾酒会",
       "spaces": [
         {
@@ -7511,7 +7392,7 @@
         {
           "name": "Connection 1",
           "areaSqm": 97,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 60,
           "cocktail": 90,
           "theatre": 80,
@@ -7521,7 +7402,7 @@
         {
           "name": "Connection 2",
           "areaSqm": 97,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 60,
           "cocktail": 90,
           "theatre": 80,
@@ -7531,7 +7412,7 @@
         {
           "name": "Connection 3",
           "areaSqm": 97,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 60,
           "cocktail": 90,
           "theatre": 80,
@@ -7541,7 +7422,7 @@
         {
           "name": "Interaction Room",
           "areaSqm": 65,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 50,
           "theatre": 50,
@@ -7551,7 +7432,7 @@
         {
           "name": "Inspiration Room",
           "areaSqm": 50,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 40,
           "theatre": 40,
@@ -7561,7 +7442,6 @@
       ],
       "maxCapacity": 600,
       "maxAreaSqm": 575,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -7604,7 +7484,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/amara-singapore.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 600 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 600 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2749407,
       "lng": 103.8436571,
@@ -7620,13 +7500,12 @@
       "area": "City Hall / Civic District",
       "address": "30 Victoria Street, Singapore 187996",
       "website": "chijmes.com.sg",
-      "hours": "10:00–19:00",
       "rawSuggestedTypes": "婚礼, 教堂式典礼, 音乐会, 颁奖典礼, 品牌发布",
       "spaces": [
         {
           "name": "CHIJMES Hall",
           "areaSqm": 690,
-          "ceilingM": 12.0,
+          "ceilingM": 12,
           "banquet": 320,
           "cocktail": 600,
           "theatre": 550,
@@ -7656,7 +7535,6 @@
       ],
       "maxCapacity": 600,
       "maxAreaSqm": 900,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -7702,7 +7580,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/chijmes-hall.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, wedding, awards ceremony with a public capacity signal up to about 600 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, wedding, awards ceremony with a public capacity signal up to about 600 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2954899,
       "lng": 103.8520117,
@@ -7718,13 +7596,12 @@
       "area": "Other Singapore",
       "address": "80 Middle Road, Singapore 188966",
       "website": "singapore.intercontinental.com",
-      "hours": "",
       "rawSuggestedTypes": "婚礼, 婚宴, 公司年会, 国际会议, 产品发布, 颁奖典礼",
       "spaces": [
         {
           "name": "Grand Ballroom",
           "areaSqm": 570,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 380,
           "cocktail": 600,
           "theatre": 550,
@@ -7744,7 +7621,7 @@
         {
           "name": "Ballroom 1",
           "areaSqm": 190,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 120,
           "cocktail": 200,
           "theatre": 180,
@@ -7754,7 +7631,7 @@
         {
           "name": "Ballroom 2",
           "areaSqm": 190,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 120,
           "cocktail": 200,
           "theatre": 180,
@@ -7764,7 +7641,7 @@
         {
           "name": "Ballroom 3",
           "areaSqm": 190,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 120,
           "cocktail": 200,
           "theatre": 180,
@@ -7794,7 +7671,7 @@
         {
           "name": "Bras Basah Room",
           "areaSqm": 65,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -7804,7 +7681,6 @@
       ],
       "maxCapacity": 600,
       "maxAreaSqm": 570,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -7847,7 +7723,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/intercontinental-singapore.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 600 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 600 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2989695,
       "lng": 103.8548896,
@@ -7863,7 +7739,6 @@
       "area": "Marina Bay",
       "address": "Marina Bay Sands, 10 Bayfront Avenue, Singapore 018956",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -7889,7 +7764,6 @@
       ],
       "maxCapacity": 600,
       "maxAreaSqm": 400,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -7946,8 +7820,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/marquee-singapore.webp",
-      "publicNote": "Indoor + waterfront / marina option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 600 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + waterfront / marina option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 600 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2836965,
       "lng": 103.8607226,
       "geocodeStatus": "matched",
@@ -7962,13 +7836,12 @@
       "area": "Sentosa",
       "address": "101 Siloso Road, Sentosa, Singapore 098970",
       "website": "shangri-la.com/singapore/rasasentosaresort",
-      "hours": "24/7",
       "rawSuggestedTypes": "婚礼, 海滩婚礼, 公司年会, 团建, 产品发布, MICE",
       "spaces": [
         {
           "name": "Rasa Ballroom",
           "areaSqm": 700,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 400,
           "cocktail": 600,
           "theatre": 550,
@@ -7978,7 +7851,7 @@
         {
           "name": "Sentosa Ballroom",
           "areaSqm": 380,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 200,
           "cocktail": 350,
           "theatre": 300,
@@ -7988,7 +7861,7 @@
         {
           "name": "Serapong Room",
           "areaSqm": 95,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 50,
           "cocktail": 80,
           "theatre": 70,
@@ -7998,7 +7871,7 @@
         {
           "name": "Siloso Room",
           "areaSqm": 90,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 50,
           "cocktail": 80,
           "theatre": 70,
@@ -8028,7 +7901,6 @@
       ],
       "maxCapacity": 600,
       "maxAreaSqm": 1200,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -8096,7 +7968,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/shangri-la-rasa-sentosa.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 600 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 600 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2574021,
       "lng": 103.8097938,
@@ -8112,13 +7984,12 @@
       "area": "CBD / Tanjong Pagar",
       "address": "9 Wallich Street, Singapore 078885",
       "website": "sofitel-singapore-citycentre.com",
-      "hours": "",
       "rawSuggestedTypes": "婚礼, 婚宴, 法式主题活动, 产品发布, 鸡尾酒会",
       "spaces": [
         {
           "name": "Grand Ballroom",
           "areaSqm": 530,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 320,
           "cocktail": 600,
           "theatre": 500,
@@ -8138,7 +8009,7 @@
         {
           "name": "Meeting Room 1",
           "areaSqm": 55,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 45,
           "theatre": 45,
@@ -8148,7 +8019,7 @@
         {
           "name": "Meeting Room 2",
           "areaSqm": 55,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 45,
           "theatre": 45,
@@ -8158,7 +8029,7 @@
         {
           "name": "Meeting Room 3",
           "areaSqm": 55,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 45,
           "theatre": 45,
@@ -8168,7 +8039,7 @@
         {
           "name": "Meeting Room 4",
           "areaSqm": 55,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 45,
           "theatre": 45,
@@ -8178,7 +8049,6 @@
       ],
       "maxCapacity": 600,
       "maxAreaSqm": 530,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -8221,7 +8091,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/sofitel-singapore-city-centre.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, conference / seminar, gala / dinner with a public capacity signal up to about 600 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, conference / seminar, gala / dinner with a public capacity signal up to about 600 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2771098,
       "lng": 103.8452066,
@@ -8237,7 +8107,6 @@
       "area": "HarbourFront / South",
       "address": "10 Telok Blangah Green, Singapore 109178",
       "website": "thealkaffmansion.sg",
-      "hours": "Event-based",
       "rawSuggestedTypes": "婚礼, 花园晚宴, 品鉴会, 品牌发布, 历史主题活动",
       "spaces": [
         {
@@ -8283,7 +8152,6 @@
       ],
       "maxCapacity": 600,
       "maxAreaSqm": 1200,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -8332,7 +8200,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/the-alkaff-mansion.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 600 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 600 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2788927,
       "lng": 103.813222,
@@ -8348,13 +8216,12 @@
       "area": "Sentosa",
       "address": "21 Ocean Way, Sentosa Cove, Singapore 098374",
       "website": "marriott.com/en-us/hotels/sinwh-w-singapore-sentosa-cove",
-      "hours": "24/7",
       "rawSuggestedTypes": "DJ派对, Afterparty, 时装秀, 品牌发布, 潮牌婚礼, 泳池派对",
       "spaces": [
         {
           "name": "Great Room",
           "areaSqm": 500,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 380,
           "cocktail": 600,
           "theatre": 450,
@@ -8364,7 +8231,7 @@
         {
           "name": "Strategy Rooms (x3)",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -8404,7 +8271,6 @@
       ],
       "maxCapacity": 600,
       "maxAreaSqm": 600,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -8477,7 +8343,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/w-singapore-sentosa-cove.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, conference / seminar, wedding with a public capacity signal up to about 600 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, conference / seminar, wedding with a public capacity signal up to about 600 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2460585,
       "lng": 103.8426843,
@@ -8493,7 +8359,6 @@
       "area": "Orchard / Tanglin",
       "address": "190 Orchard Boulevard, Singapore 248646",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
@@ -8539,7 +8404,6 @@
       ],
       "maxCapacity": 550,
       "maxAreaSqm": 430,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -8585,8 +8449,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/four-seasons-hotel-singapore.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 550 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 550 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.3052157,
       "lng": 103.828685,
       "geocodeStatus": "matched",
@@ -8601,7 +8465,6 @@
       "area": "Sentosa",
       "address": "46 Siloso Beach Walk, Sentosa, Singapore 099005",
       "website": "olabeachclub.com",
-      "hours": "10:00–22:00",
       "rawSuggestedTypes": "海滩派对, 水上运动团建, 品牌发布, 夏威夷主题",
       "spaces": [
         {
@@ -8637,7 +8500,6 @@
       ],
       "maxCapacity": 550,
       "maxAreaSqm": 900,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -8682,7 +8544,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/ola-beach-club.webp",
-      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, party / nightlife, team building / family day with a public capacity signal up to about 550 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, party / nightlife, team building / family day with a public capacity signal up to about 550 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2530342,
       "lng": 103.815412,
@@ -8698,13 +8560,12 @@
       "area": "City Hall / Civic District",
       "address": "1 Beach Road, Singapore 189673",
       "website": "raffles.com/singapore",
-      "hours": "",
       "rawSuggestedTypes": "高端婚礼, VIP宴请, 国事晚宴, 品牌发布, 历史主题活动",
       "spaces": [
         {
           "name": "Jubilee Ballroom",
           "areaSqm": 483,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 270,
           "cocktail": 550,
           "theatre": 500,
@@ -8814,7 +8675,6 @@
       ],
       "maxCapacity": 550,
       "maxAreaSqm": 483,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -8867,7 +8727,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/raffles-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 550 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 550 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.294941,
       "lng": 103.8543027,
@@ -8883,13 +8743,12 @@
       "area": "City Hall / Civic District",
       "address": "1 Empress Place, Singapore 179555",
       "website": "nhb.gov.sg/acm",
-      "hours": "Event-based",
       "rawSuggestedTypes": "文化晚宴, 品牌发布, 外交招待, 颁奖典礼, 艺术展",
       "spaces": [
         {
           "name": "Empress Place Atrium",
           "areaSqm": 480,
-          "ceilingM": 12.0,
+          "ceilingM": 12,
           "banquet": 200,
           "cocktail": 500,
           "theatre": 350,
@@ -8917,7 +8776,7 @@
           "note": "Riverside lawn outdoor"
         },
         {
-          "name": "Galleries (after hours)",
+          "name": "Galleries",
           "areaSqm": null,
           "ceilingM": null,
           "banquet": null,
@@ -8929,7 +8788,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 600,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -8980,7 +8838,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/asian-civilisations-museum.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2874464,
       "lng": 103.8514862,
@@ -8996,7 +8854,6 @@
       "area": "Sentosa",
       "address": "110 Tanjong Beach Walk, Sentosa, Singapore 098944",
       "website": "focsentosa.com",
-      "hours": "12:00–22:00",
       "rawSuggestedTypes": "海滩派对, 泳池派对, 品牌发布, 西班牙主题",
       "spaces": [
         {
@@ -9032,7 +8889,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 800,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -9075,8 +8931,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/foc-sentosa.webp",
-      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, party / nightlife with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, party / nightlife with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2446339,
       "lng": 103.8270064,
       "geocodeStatus": "matched",
@@ -9091,13 +8947,12 @@
       "area": "Orchard / Tanglin",
       "address": "22 Scotts Road, Singapore 228221",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
           "name": "Grand Ballroom",
           "areaSqm": 400,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 350,
           "cocktail": 450,
           "theatre": 500,
@@ -9137,7 +8992,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 400,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -9195,8 +9049,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/goodwood-park-hotel.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.3086899,
       "lng": 103.8349935,
       "geocodeStatus": "matched",
@@ -9211,7 +9065,6 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa, Singapore 098269",
       "website": "rwsentosa.com/en/hotels/hard-rock-hotel-singapore",
-      "hours": "24/7",
       "rawSuggestedTypes": "音乐品牌发布, 泳池派对, Afterparty, 摇滚主题婚礼",
       "spaces": [
         {
@@ -9247,7 +9100,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 800,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -9304,7 +9156,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/hard-rock-hotel-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, wedding, party / nightlife with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, wedding, party / nightlife with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2575434,
       "lng": 103.818827,
@@ -9320,13 +9172,12 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa 098269",
       "website": "rwsentosa.com",
-      "hours": "09:00–21:00",
       "rawSuggestedTypes": "会议, 研讨会, 中型发布, 团建",
       "spaces": [
         {
           "name": "Joaquim Hall",
           "areaSqm": 520,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 300,
           "cocktail": 500,
           "theatre": 450,
@@ -9346,7 +9197,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 520,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Conference / seminar",
@@ -9386,7 +9236,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/joaquim-hall.webp",
-      "publicNote": "Indoor option for conference / seminar, team building / family day with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor option for conference / seminar, team building / family day with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.25665,
       "lng": 103.81935,
@@ -9402,7 +9252,6 @@
       "area": "Other Singapore",
       "address": "Lazarus Island, Singapore",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -9428,7 +9277,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 1000,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -9463,7 +9311,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/lazarus-island.webp",
-      "publicNote": "Outdoor + beach option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Outdoor + beach option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2221928,
       "lng": 103.8552986,
@@ -9479,13 +9327,12 @@
       "area": "Sentosa",
       "address": "11 Cove Drive, Sentosa Cove, Singapore 098497",
       "website": "one15marina.com",
-      "hours": "24/7 会员制",
       "rawSuggestedTypes": "游艇婚礼, 码头颁奖, 豪华晚宴, 品牌发布, 公司年会",
       "spaces": [
         {
           "name": "Constellation Ballroom",
           "areaSqm": 560,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 300,
           "cocktail": 500,
           "theatre": 450,
@@ -9495,7 +9342,7 @@
         {
           "name": "Galaxy Room",
           "areaSqm": 180,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 90,
           "cocktail": 160,
           "theatre": 140,
@@ -9535,7 +9382,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 560,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -9598,7 +9444,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/one15-marina-sentosa-cove.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, gala / dinner with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, gala / dinner with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2456877,
       "lng": 103.8398789,
@@ -9614,7 +9460,6 @@
       "area": "Orchard / Tanglin",
       "address": "442 Orchard Road, Singapore 238879",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
@@ -9660,7 +9505,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 420,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -9705,8 +9549,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/orchard-hotel-singapore.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.3076686,
       "lng": 103.8281644,
       "geocodeStatus": "matched",
@@ -9721,13 +9565,12 @@
       "area": "Orchard / Tanglin",
       "address": "10 Claymore Road, Singapore 229540",
       "website": "panpacific.com/en/hotels-and-resorts/pp-orchard",
-      "hours": "",
       "rawSuggestedTypes": "婚礼, 婚宴, 产品发布, 鸡尾酒会, 公司年会",
       "spaces": [
         {
           "name": "Claymore Ballroom",
           "areaSqm": 480,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 280,
           "cocktail": 500,
           "theatre": 450,
@@ -9747,7 +9590,7 @@
         {
           "name": "Meeting Room 1",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -9757,7 +9600,7 @@
         {
           "name": "Meeting Room 2",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -9767,7 +9610,7 @@
         {
           "name": "Meeting Room 3",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -9787,7 +9630,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 480,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -9841,7 +9683,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/pan-pacific-orchard-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3073446,
       "lng": 103.8298621,
@@ -9857,7 +9699,6 @@
       "area": "City Hall / Civic District",
       "address": "39 Armenian Street, Singapore 179941",
       "website": "nhb.gov.sg/peranakanmuseum",
-      "hours": "Event-based",
       "rawSuggestedTypes": "文化活动, 品牌发布, 茶品发布, 沉浸式晚宴, 外交招待",
       "spaces": [
         {
@@ -9873,7 +9714,7 @@
         {
           "name": "Auditorium",
           "areaSqm": 180,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": null,
           "cocktail": null,
           "theatre": 150,
@@ -9881,7 +9722,7 @@
           "note": "Fixed-seat lecture hall"
         },
         {
-          "name": "Gallery Spaces (after hours)",
+          "name": "Gallery Spaces",
           "areaSqm": 400,
           "ceilingM": null,
           "banquet": null,
@@ -9903,7 +9744,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 800,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -9953,7 +9793,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/peranakan-museum.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2942914,
       "lng": 103.8491092,
@@ -9969,7 +9809,6 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Singapore 098269",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -10015,7 +9854,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 800,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -10063,8 +9901,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/resorts-world-convention-centre.webp",
-      "publicNote": "Indoor + meeting rooms option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + meeting rooms option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2556955,
       "lng": 103.8202156,
       "geocodeStatus": "matched",
@@ -10079,7 +9917,6 @@
       "area": "CBD / Tanjong Pagar",
       "address": "1 Straits Boulevard, Singapore 018906",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -10125,7 +9962,6 @@
       ],
       "maxCapacity": 500,
       "maxAreaSqm": 600,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -10173,8 +10009,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/singapore-chinese-cultural-centre.webp",
-      "publicNote": "Indoor + meeting rooms option for exhibition / immersive, performance / concert, pop-up / market / activation with a public capacity signal up to about 500 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + meeting rooms option for exhibition / immersive, performance / concert, pop-up / market / activation with a public capacity signal up to about 500 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2758286,
       "lng": 103.8495164,
       "geocodeStatus": "matched",
@@ -10189,7 +10025,6 @@
       "area": "Other Singapore",
       "address": "Singapore",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "婚礼, 公司年会, 会议, 颁奖典礼, 产品发布, 鸡尾酒会, 私人晚宴",
       "spaces": [
         {
@@ -10215,7 +10050,6 @@
       ],
       "maxCapacity": 450,
       "maxAreaSqm": 400,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -10259,9 +10093,9 @@
         "产品发布",
         "activation"
       ],
-      "image": "/singapore-event-venue-finder/assets/venues/far-east-hotel.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 450 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "image": "",
+      "publicNote": "Indoor + ballroom option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 450 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "location",
       "lat": 1.3521,
       "lng": 103.8198,
       "geocodeStatus": "manual_verified",
@@ -10276,13 +10110,12 @@
       "area": "Orchard / Tanglin",
       "address": "11 Cavenagh Road, Singapore 229616",
       "website": "singaporeorchard.holidayinn.com",
-      "hours": "",
       "rawSuggestedTypes": "婚宴, 公司会议, 团建, 产品发布",
       "spaces": [
         {
           "name": "Cornwall Ballroom",
           "areaSqm": 415,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 280,
           "cocktail": 450,
           "theatre": 400,
@@ -10302,7 +10135,7 @@
         {
           "name": "Windsor 1",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -10312,7 +10145,7 @@
         {
           "name": "Windsor 2",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -10322,7 +10155,7 @@
         {
           "name": "Windsor 3",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -10332,7 +10165,7 @@
         {
           "name": "Balmoral",
           "areaSqm": 45,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 20,
           "cocktail": 35,
           "theatre": 30,
@@ -10342,7 +10175,6 @@
       ],
       "maxCapacity": 450,
       "maxAreaSqm": 415,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -10383,7 +10215,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/holiday-inn-singapore-orchard-city-centre.webp",
-      "publicNote": "Indoor + ballroom option for product / brand launch, conference / seminar, gala / dinner with a public capacity signal up to about 450 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + ballroom option for product / brand launch, conference / seminar, gala / dinner with a public capacity signal up to about 450 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3022946,
       "lng": 103.8410916,
@@ -10399,7 +10231,6 @@
       "area": "CBD / Tanjong Pagar",
       "address": "8 Marina Boulevard, MBFC Tower 1, Level 33, Singapore 018981",
       "website": "level33.com.sg",
-      "hours": "Mon–Sat 12:00–深夜",
       "rawSuggestedTypes": "商务晚宴, 精酿品鉴, 品牌发布, 鸡尾酒会, 高空招待",
       "spaces": [
         {
@@ -10465,7 +10296,6 @@
       ],
       "maxCapacity": 450,
       "maxAreaSqm": 600,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -10522,7 +10352,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/level33.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 450 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 450 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.280274,
       "lng": 103.8542263,
@@ -10538,7 +10368,6 @@
       "area": "North / Seletar",
       "address": "43 Admiralty Road West, Singapore 759962",
       "website": "safyc.org.sg",
-      "hours": "Thu-Sat 10pm-4am",
       "rawSuggestedTypes": "婚礼, 海景宴会, 公司年会, 产品发布, 游艇派对",
       "spaces": [
         {
@@ -10564,7 +10393,7 @@
         {
           "name": "Function Room",
           "areaSqm": 110,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 50,
           "cocktail": 90,
           "theatre": 80,
@@ -10584,7 +10413,6 @@
       ],
       "maxCapacity": 450,
       "maxAreaSqm": 600,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -10658,7 +10486,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/saf-yacht-club.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 450 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, corporate event, conference / seminar with a public capacity signal up to about 450 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.4693474,
       "lng": 103.819981,
@@ -10674,13 +10502,12 @@
       "area": "Sentosa",
       "address": "27 Bukit Manis Road, Sentosa, Singapore 099892",
       "website": "sentosagolf.com",
-      "hours": "06:00–22:00",
       "rawSuggestedTypes": "高尔夫赛事, 企业锦标赛, 颁奖典礼, VIP 招待",
       "spaces": [
         {
           "name": "The Ballroom",
           "areaSqm": 420,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 280,
           "cocktail": 450,
           "theatre": 380,
@@ -10730,7 +10557,6 @@
       ],
       "maxCapacity": 450,
       "maxAreaSqm": 420,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Gala / dinner",
@@ -10783,7 +10609,7 @@
         "nightlife"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/sentosa-golf-club.webp",
-      "publicNote": "Indoor + outdoor option for gala / dinner, cocktail / reception, awards ceremony with a public capacity signal up to about 450 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for gala / dinner, cocktail / reception, awards ceremony with a public capacity signal up to about 450 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2438791,
       "lng": 103.8294313,
@@ -10799,13 +10625,12 @@
       "area": "Sentosa",
       "address": "10 Artillery Avenue, Sentosa, Singapore 099951",
       "website": "stayfareast.com/en/hotels/village-hotel-sentosa",
-      "hours": "24/7",
       "rawSuggestedTypes": "家庭日, 团建, 学术会议, 婚礼",
       "spaces": [
         {
           "name": "Sentosa Ballroom",
           "areaSqm": 380,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 250,
           "cocktail": 450,
           "theatre": 400,
@@ -10815,7 +10640,7 @@
         {
           "name": "Function Rooms (x5)",
           "areaSqm": 70,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 70,
           "theatre": 60,
@@ -10845,7 +10670,6 @@
       ],
       "maxCapacity": 450,
       "maxAreaSqm": 380,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Conference / seminar",
@@ -10890,9 +10714,9 @@
         "婚宴",
         "solemnisation"
       ],
-      "image": "",
-      "publicNote": "Indoor + outdoor option for conference / seminar, wedding, team building / family day with a public capacity signal up to about 450 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "location",
+      "image": "/singapore-event-venue-finder/assets/venues/village-hotel-sentosa.webp",
+      "publicNote": "Indoor + outdoor option for conference / seminar, wedding, team building / family day with a public capacity signal up to about 450 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2521451,
       "lng": 103.8200265,
       "geocodeStatus": "matched",
@@ -10907,7 +10731,6 @@
       "area": "Sentosa",
       "address": "1 Larkhill Road, Sentosa, Singapore 099394",
       "website": "amarasanctuary.com",
-      "hours": "24/7",
       "rawSuggestedTypes": "花园婚礼, 户外颁奖, 品牌发布, 鸡尾酒会",
       "spaces": [
         {
@@ -10923,7 +10746,7 @@
         {
           "name": "Sanctuary Ballroom",
           "areaSqm": 240,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 120,
           "cocktail": 220,
           "theatre": 200,
@@ -10963,7 +10786,6 @@
       ],
       "maxCapacity": 400,
       "maxAreaSqm": 800,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -11022,7 +10844,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/amara-sanctuary-resort-sentosa.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 400 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 400 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2521753,
       "lng": 103.8221922,
@@ -11038,13 +10860,12 @@
       "area": "Sentosa",
       "address": "1 The Knolls, Sentosa Island, Singapore 098297",
       "website": "capellahotels.com/en/capella-singapore",
-      "hours": "",
       "rawSuggestedTypes": "高端婚礼, VIP宴请, 产品发布, 私人派对, 媒体晚宴",
       "spaces": [
         {
           "name": "Capella Ballroom",
           "areaSqm": 423,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 240,
           "cocktail": 400,
           "theatre": 400,
@@ -11134,7 +10955,6 @@
       ],
       "maxCapacity": 400,
       "maxAreaSqm": 423,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -11190,8 +11010,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/capella-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 400 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 400 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2496982,
       "lng": 103.8244312,
       "geocodeStatus": "matched",
@@ -11206,7 +11026,6 @@
       "area": "Changi / Expo",
       "address": "78 Airport Boulevard, Singapore 819666",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -11222,7 +11041,6 @@
       ],
       "maxCapacity": 400,
       "maxAreaSqm": 400,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -11270,8 +11088,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/changi-experience-studio.webp",
-      "publicNote": "Indoor + meeting rooms option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 400 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + meeting rooms option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 400 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.3602243,
       "lng": 103.9896749,
       "geocodeStatus": "matched",
@@ -11286,7 +11104,6 @@
       "area": "Sentosa",
       "address": "50 Siloso Beach Walk, Sentosa, Singapore 099000",
       "website": "coastes.com",
-      "hours": "Thu-Sat 10pm-4am",
       "rawSuggestedTypes": "海滩派对, 生日派对, 品牌发布, 团建, 休闲鸡尾酒会",
       "spaces": [
         {
@@ -11322,7 +11139,6 @@
       ],
       "maxCapacity": 400,
       "maxAreaSqm": 700,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -11366,8 +11182,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/coastes-sentosa.webp",
-      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, cocktail / reception, party / nightlife with a public capacity signal up to about 400 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, cocktail / reception, party / nightlife with a public capacity signal up to about 400 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2515637,
       "lng": 103.8192644,
       "geocodeStatus": "matched",
@@ -11382,7 +11198,6 @@
       "area": "Marina Bay",
       "address": "10 Bayfront Avenue, MBS Tower 1, Level 57, Singapore 018956",
       "website": "lavosingapore.com",
-      "hours": "12:00–01:00",
       "rawSuggestedTypes": "婚礼, 鸡尾酒会, 高空晚宴, 品牌发布, Afterparty",
       "spaces": [
         {
@@ -11428,7 +11243,6 @@
       ],
       "maxCapacity": 397,
       "maxAreaSqm": 730,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -11494,7 +11308,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/lavo.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 397 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 397 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2826411,
       "lng": 103.8600277,
@@ -11510,13 +11324,12 @@
       "area": "Changi / Expo",
       "address": "1 Netheravon Road, Singapore 508502",
       "website": "canopybyhilton.com",
-      "hours": "",
       "rawSuggestedTypes": "婚礼, 团建, 公司会议, 鸡尾酒会, 户外活动",
       "spaces": [
         {
           "name": "Ballroom",
           "areaSqm": 350,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 220,
           "cocktail": 350,
           "theatre": 300,
@@ -11536,7 +11349,7 @@
         {
           "name": "Meeting Room 1",
           "areaSqm": 50,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 40,
           "theatre": 40,
@@ -11546,7 +11359,7 @@
         {
           "name": "Meeting Room 2",
           "areaSqm": 50,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 40,
           "theatre": 40,
@@ -11566,7 +11379,6 @@
       ],
       "maxCapacity": 350,
       "maxAreaSqm": 350,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Conference / seminar",
@@ -11613,7 +11425,7 @@
         "solemnisation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/canopy-changi-village.webp",
-      "publicNote": "Indoor + outdoor option for conference / seminar, cocktail / reception, wedding with a public capacity signal up to about 350 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for conference / seminar, cocktail / reception, wedding with a public capacity signal up to about 350 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3904999,
       "lng": 103.9859416,
@@ -11629,13 +11441,12 @@
       "area": "Orchard / Tanglin",
       "address": "583 Orchard Road, Forum The Shopping Mall, Singapore 238884",
       "website": "linoforum.com",
-      "hours": "Thu-Sat 10pm-4am",
       "rawSuggestedTypes": "品牌发布, 婚礼, 鸡尾酒会, 小型音乐会, 艺术展",
       "spaces": [
         {
           "name": "Main Forum Hall",
           "areaSqm": 380,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 180,
           "cocktail": 350,
           "theatre": 300,
@@ -11665,7 +11476,6 @@
       ],
       "maxCapacity": 350,
       "maxAreaSqm": 380,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -11710,9 +11520,9 @@
         "gallery",
         "museum"
       ],
-      "image": "/singapore-event-venue-finder/assets/venues/lino-forum.webp",
-      "publicNote": "Indoor + meeting rooms option for product / brand launch, conference / seminar, cocktail / reception with a public capacity signal up to about 350 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "image": "",
+      "publicNote": "Indoor + meeting rooms option for product / brand launch, conference / seminar, cocktail / reception with a public capacity signal up to about 350 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "location",
       "lat": 1.3068,
       "lng": 103.8286,
       "geocodeStatus": "manual_verified",
@@ -11727,13 +11537,12 @@
       "area": "HarbourFront / South",
       "address": "109 Mount Faber Road, Singapore 099203",
       "website": "mountfaberpeak.com",
-      "hours": "Event-based",
       "rawSuggestedTypes": "婚礼, 求婚, 鸡尾酒会, 私人晚宴, VIP招待",
       "spaces": [
         {
           "name": "The Ballroom",
           "areaSqm": 350,
-          "ceilingM": 5.0,
+          "ceilingM": 5,
           "banquet": 200,
           "cocktail": 350,
           "theatre": 280,
@@ -11783,7 +11592,6 @@
       ],
       "maxCapacity": 350,
       "maxAreaSqm": 350,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Gala / dinner",
@@ -11834,7 +11642,7 @@
         "solemnisation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/mount-faber-peak.webp",
-      "publicNote": "Indoor + outdoor option for gala / dinner, cocktail / reception, wedding with a public capacity signal up to about 350 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for gala / dinner, cocktail / reception, wedding with a public capacity signal up to about 350 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2712059,
       "lng": 103.8194141,
@@ -11850,7 +11658,6 @@
       "area": "North / Seletar",
       "address": "3 Park Lane, Seletar Aerospace Park, Singapore 798387",
       "website": "thesummerhouse.sg",
-      "hours": "Thu-Sat 10pm-4am",
       "rawSuggestedTypes": "户外婚礼, 花园晚宴, 品鉴会, 团建, 可持续主题活动",
       "spaces": [
         {
@@ -11896,7 +11703,6 @@
       ],
       "maxCapacity": 350,
       "maxAreaSqm": 600,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Gala / dinner",
@@ -11942,7 +11748,7 @@
         "solemnisation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/the-summerhouse.webp",
-      "publicNote": "Indoor + outdoor option for gala / dinner, wedding, team building / family day with a public capacity signal up to about 350 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for gala / dinner, wedding, team building / family day with a public capacity signal up to about 350 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.4079745,
       "lng": 103.8682998,
@@ -11958,7 +11764,6 @@
       "area": "Sentosa",
       "address": "10 Siloso Road, Shangri-La Rasa Sentosa, Singapore 098970",
       "website": "shangri-la.com/singapore/rasasentosaresort/dining/restaurants/trapizza",
-      "hours": "12:00–22:00",
       "rawSuggestedTypes": "家庭婚礼, 休闲品鉴, 团建, 儿童活动",
       "spaces": [
         {
@@ -11994,7 +11799,6 @@
       ],
       "maxCapacity": 320,
       "maxAreaSqm": 440,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Wedding",
@@ -12033,9 +11837,9 @@
         "婚宴",
         "solemnisation"
       ],
-      "image": "",
-      "publicNote": "Outdoor + restaurant / bar option for wedding, team building / family day with a public capacity signal up to about 320 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "location",
+      "image": "/singapore-event-venue-finder/assets/venues/trapizza.webp",
+      "publicNote": "Outdoor + restaurant / bar option for wedding, team building / family day with a public capacity signal up to about 320 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2562278,
       "lng": 103.8120427,
       "geocodeStatus": "matched",
@@ -12050,7 +11854,6 @@
       "area": "Other Singapore",
       "address": "5 Fraser Street, DUO Galleria, Singapore 189354",
       "website": "hyatt.com/andaz/sinaz",
-      "hours": "",
       "rawSuggestedTypes": "婚礼, 婚宴, 产品发布, DJ派对, 鸡尾酒会, 时装秀",
       "spaces": [
         {
@@ -12076,7 +11879,7 @@
         {
           "name": "Sunroom 1",
           "areaSqm": 65,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 45,
@@ -12086,7 +11889,7 @@
         {
           "name": "Sunroom 2",
           "areaSqm": 65,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 45,
@@ -12096,7 +11899,7 @@
         {
           "name": "Studio 1",
           "areaSqm": 48,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 20,
           "cocktail": 40,
           "theatre": 30,
@@ -12106,7 +11909,7 @@
         {
           "name": "Studio 2",
           "areaSqm": 48,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 20,
           "cocktail": 40,
           "theatre": 30,
@@ -12116,7 +11919,7 @@
         {
           "name": "Studio 3",
           "areaSqm": 48,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 20,
           "cocktail": 40,
           "theatre": 30,
@@ -12136,7 +11939,6 @@
       ],
       "maxCapacity": 300,
       "maxAreaSqm": 257,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -12198,7 +12000,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/andaz-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 300 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 300 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2991547,
       "lng": 103.8578314,
@@ -12214,7 +12016,6 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa, Singapore 098269",
       "website": "rwsentosa.com/en/hotels/equarius-hotel",
-      "hours": "24/7",
       "rawSuggestedTypes": "森林主题婚礼, 退修会议, 小型品牌发布",
       "spaces": [
         {
@@ -12230,7 +12031,7 @@
         {
           "name": "Function Rooms (x3)",
           "areaSqm": 70,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 35,
           "cocktail": 60,
           "theatre": 60,
@@ -12250,7 +12051,6 @@
       ],
       "maxCapacity": 300,
       "maxAreaSqm": 600,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -12310,7 +12110,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/equarius-hotel.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, conference / seminar, wedding with a public capacity signal up to about 300 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, conference / seminar, wedding with a public capacity signal up to about 300 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2577957,
       "lng": 103.8167429,
@@ -12326,7 +12126,6 @@
       "area": "Marina Bay",
       "address": "82 Collyer Quay, The Fullerton Pavilion, Singapore 049327",
       "website": "monti.sg",
-      "hours": "11:30–深夜",
       "rawSuggestedTypes": "婚礼, 水岸晚宴, 品牌发布, 鸡尾酒会, 小型产品发布",
       "spaces": [
         {
@@ -12372,7 +12171,6 @@
       ],
       "maxCapacity": 300,
       "maxAreaSqm": null,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -12421,7 +12219,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/monti.webp",
-      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 300 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 300 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2846744,
       "lng": 103.8539915,
@@ -12437,7 +12235,6 @@
       "area": "Sentosa",
       "address": "Sentosa, Singapore",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -12453,7 +12250,6 @@
       ],
       "maxCapacity": 300,
       "maxAreaSqm": 300,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -12493,7 +12289,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/southside.webp",
-      "publicNote": "Indoor + outdoor option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 300 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 300 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.249689,
       "lng": 103.8297534,
@@ -12509,13 +12305,12 @@
       "area": "Singapore River",
       "address": "320 Havelock Road, Singapore 169628",
       "website": "thewarehousehotel.com",
-      "hours": "Event-based",
       "rawSuggestedTypes": "婚礼, 私人派对, 品牌发布, 鸡尾酒会, 工业风主题",
       "spaces": [
         {
           "name": "The Po Restaurant",
           "areaSqm": 210,
-          "ceilingM": 6.0,
+          "ceilingM": 6,
           "banquet": 80,
           "cocktail": 150,
           "theatre": null,
@@ -12555,7 +12350,6 @@
       ],
       "maxCapacity": 300,
       "maxAreaSqm": 600,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -12622,7 +12416,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/the-warehouse-hotel.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, wedding with a public capacity signal up to about 300 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, wedding with a public capacity signal up to about 300 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2892118,
       "lng": 103.8374592,
@@ -12638,7 +12432,6 @@
       "area": "Sentosa",
       "address": "43 Siloso Beach Walk, #01-01, Singapore 099010",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -12664,7 +12457,6 @@
       ],
       "maxCapacity": 300,
       "maxAreaSqm": 300,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -12716,8 +12508,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/ifly-singapore.webp",
-      "publicNote": "Indoor + outdoor option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 300 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 300 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2521121,
       "lng": 103.817529,
       "geocodeStatus": "matched",
@@ -12732,7 +12524,6 @@
       "area": "Sentosa",
       "address": "31 Ocean Way, #01-11 Quayside Isle, Sentosa Cove, Singapore 098375",
       "website": "mykonosonthebay.com",
-      "hours": "12:00–22:30",
       "rawSuggestedTypes": "希腊主题婚礼, 品牌发布, 码头晚宴",
       "spaces": [
         {
@@ -12768,7 +12559,6 @@
       ],
       "maxCapacity": 280,
       "maxAreaSqm": 400,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -12825,9 +12615,9 @@
         "产品发布",
         "activation"
       ],
-      "image": "",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 280 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "location",
+      "image": "/singapore-event-venue-finder/assets/venues/mykonos-on-the-bay.webp",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 280 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "reference",
       "lat": 1.2470611,
       "lng": 103.8421012,
       "geocodeStatus": "matched",
@@ -12842,13 +12632,12 @@
       "area": "City Hall / Civic District",
       "address": "600 North Bridge Road, Parkview Square, Singapore 188778",
       "website": "atlasbar.sg",
-      "hours": "Mon–Thu 10:00–24:00；Fri–Sat 至 02:00",
       "rawSuggestedTypes": "鸡尾酒会, 品鉴会, 品牌发布, VIP招待, Art Deco主题派对",
       "spaces": [
         {
           "name": "The Lobby",
           "areaSqm": null,
-          "ceilingM": 15.0,
+          "ceilingM": 15,
           "banquet": 120,
           "cocktail": 250,
           "theatre": null,
@@ -12878,7 +12667,6 @@
       ],
       "maxCapacity": 250,
       "maxAreaSqm": null,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -12923,7 +12711,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/atlas.webp",
-      "publicNote": "Indoor + restaurant / bar option for product / brand launch, cocktail / reception, party / nightlife with a public capacity signal up to about 250 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + restaurant / bar option for product / brand launch, cocktail / reception, party / nightlife with a public capacity signal up to about 250 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.300097,
       "lng": 103.8577119,
@@ -12939,13 +12727,12 @@
       "area": "Sentosa",
       "address": "23 Beach View, Sentosa, Singapore 098679",
       "website": "oasiahotels.com/en/singapore/hotels/oasia-resort-sentosa",
-      "hours": "24/7",
       "rawSuggestedTypes": "养生主题活动, 瑜伽退修, 公司团建, 小型婚礼",
       "spaces": [
         {
           "name": "Oasia Ballroom",
           "areaSqm": 280,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 150,
           "cocktail": 250,
           "theatre": 220,
@@ -12975,7 +12762,7 @@
         {
           "name": "Function Rooms (x3)",
           "areaSqm": 55,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 25,
           "cocktail": 45,
           "theatre": 45,
@@ -12985,7 +12772,6 @@
       ],
       "maxCapacity": 250,
       "maxAreaSqm": 350,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Conference / seminar",
@@ -13044,8 +12830,8 @@
         "nightlife"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/oasia-resort-sentosa.webp",
-      "publicNote": "Indoor + outdoor option for conference / seminar, wedding, party / nightlife with a public capacity signal up to about 250 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for conference / seminar, wedding, party / nightlife with a public capacity signal up to about 250 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2532749,
       "lng": 103.8195532,
       "geocodeStatus": "matched",
@@ -13060,7 +12846,6 @@
       "area": "City Hall / Civic District",
       "address": "1 Old Parliament Lane, Singapore 179429",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -13106,7 +12891,6 @@
       ],
       "maxCapacity": 250,
       "maxAreaSqm": 200,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -13147,8 +12931,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/old-parliament-house.webp",
-      "publicNote": "Indoor + gallery / museum option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 250 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + gallery / museum option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 250 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2886695,
       "lng": 103.851099,
       "geocodeStatus": "matched",
@@ -13163,7 +12947,6 @@
       "area": "Orchard / Tanglin",
       "address": "28B Harding Road, Singapore 249549",
       "website": "",
-      "hours": "?",
       "rawSuggestedTypes": "社区活动, 户外直播, 市集, 品牌快闪, 粉丝区, 文化节, 展览",
       "spaces": [
         {
@@ -13189,7 +12972,6 @@
       ],
       "maxCapacity": 250,
       "maxAreaSqm": 250,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Exhibition / immersive",
@@ -13239,8 +13021,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/ps-cafe-harding-road.webp",
-      "publicNote": "Indoor + outdoor option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 250 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for exhibition / immersive, pop-up / market / activation with a public capacity signal up to about 250 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.3046694,
       "lng": 103.811018,
       "geocodeStatus": "matched",
@@ -13255,13 +13037,12 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa, Singapore 098269",
       "website": "rwsentosa.com/en/hotels/festive-hotel",
-      "hours": "24/7",
       "rawSuggestedTypes": "家庭日, 儿童活动, 团建, 小型会议",
       "spaces": [
         {
           "name": "Function Rooms (x4)",
           "areaSqm": 60,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": 50,
@@ -13291,7 +13072,6 @@
       ],
       "maxCapacity": 220,
       "maxAreaSqm": 380,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Conference / seminar",
@@ -13345,7 +13125,7 @@
         "meeting"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/festive-hotel.webp",
-      "publicNote": "Indoor + outdoor option for conference / seminar, team building / family day, vip / private event with a public capacity signal up to about 220 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for conference / seminar, team building / family day, vip / private event with a public capacity signal up to about 220 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2562238,
       "lng": 103.8189627,
@@ -13361,7 +13141,6 @@
       "area": "Orchard / Tanglin",
       "address": "7 Dempsey Road, #01-04, Singapore 249671",
       "website": "burntends.com.sg",
-      "hours": "Mon–Thu 10:00–24:00；Fri–Sat 至 02:00",
       "rawSuggestedTypes": "户外婚礼, 花园晚宴, 品鉴会, 小型产品发布",
       "spaces": [
         {
@@ -13407,7 +13186,6 @@
       ],
       "maxCapacity": 200,
       "maxAreaSqm": null,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -13458,7 +13236,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/black-white-house.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 200 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, wedding with a public capacity signal up to about 200 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3045547,
       "lng": 103.8089431,
@@ -13474,7 +13252,6 @@
       "area": "Marina Bay",
       "address": "82 Collyer Quay, The Fullerton Pavilion, Singapore 049327",
       "website": "monti.sg",
-      "hours": "11:30–深夜",
       "rawSuggestedTypes": "户外鸡尾酒会, 品牌发布, Afterparty, 私人派对",
       "spaces": [
         {
@@ -13500,7 +13277,6 @@
       ],
       "maxCapacity": 200,
       "maxAreaSqm": null,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -13556,8 +13332,8 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/padang-deck.webp",
-      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, cocktail / reception, party / nightlife with a public capacity signal up to about 200 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, cocktail / reception, party / nightlife with a public capacity signal up to about 200 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.290744,
       "lng": 103.851733,
       "geocodeStatus": "manual_verified",
@@ -13572,7 +13348,6 @@
       "area": "Singapore River",
       "address": "41 Robertson Quay, Singapore 238236",
       "website": "stpi.com.sg",
-      "hours": "Event-based",
       "rawSuggestedTypes": "艺术展, 品牌发布, 工作坊, 鸡尾酒会, 小型发布会",
       "spaces": [
         {
@@ -13608,7 +13383,6 @@
       ],
       "maxCapacity": 200,
       "maxAreaSqm": 280,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -13670,8 +13444,8 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/stpi-creative-workshop.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, exhibition / immersive with a public capacity signal up to about 200 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, exhibition / immersive with a public capacity signal up to about 200 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2911254,
       "lng": 103.8402234,
       "geocodeStatus": "matched",
@@ -13686,13 +13460,12 @@
       "area": "Orchard / Tanglin",
       "address": "38 Cuscaden Road, Singapore 249732",
       "website": "editionhotels.com/singapore",
-      "hours": "",
       "rawSuggestedTypes": "婚礼, 时装秀, 品牌发布, DJ派对, 鸡尾酒会, 艺术展",
       "spaces": [
         {
           "name": "The Studio",
           "areaSqm": 185,
-          "ceilingM": 4.0,
+          "ceilingM": 4,
           "banquet": 100,
           "cocktail": 180,
           "theatre": 150,
@@ -13712,7 +13485,7 @@
         {
           "name": "The Library",
           "areaSqm": 80,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 40,
           "cocktail": 60,
           "theatre": 50,
@@ -13722,7 +13495,7 @@
         {
           "name": "Punch Room",
           "areaSqm": 65,
-          "ceilingM": 3.0,
+          "ceilingM": 3,
           "banquet": 30,
           "cocktail": 50,
           "theatre": null,
@@ -13742,7 +13515,6 @@
       ],
       "maxCapacity": 180,
       "maxAreaSqm": 185,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -13817,7 +13589,7 @@
         "museum"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/edition-singapore.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, wedding with a public capacity signal up to about 180 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, cocktail / reception, wedding with a public capacity signal up to about 180 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3052947,
       "lng": 103.8272461,
@@ -13833,7 +13605,6 @@
       "area": "Sentosa",
       "address": "2 Gunner Lane, Sentosa, Singapore 099567",
       "website": "thebarrackshotel.com.sg",
-      "hours": "24/7",
       "rawSuggestedTypes": "遗产主题婚礼, 私人晚宴, VIP 招待, 历史主题活动",
       "spaces": [
         {
@@ -13879,7 +13650,6 @@
       ],
       "maxCapacity": 180,
       "maxAreaSqm": 400,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Gala / dinner",
@@ -13927,8 +13697,8 @@
         "solemnisation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/the-barracks-hotel-sentosa.webp",
-      "publicNote": "Indoor + outdoor option for gala / dinner, cocktail / reception, wedding with a public capacity signal up to about 180 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "reference",
+      "publicNote": "Indoor + outdoor option for gala / dinner, cocktail / reception, wedding with a public capacity signal up to about 180 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2519897,
       "lng": 103.820997,
       "geocodeStatus": "matched",
@@ -13943,7 +13713,6 @@
       "area": "Sentosa",
       "address": "10 Artillery Avenue, #02-01, Sentosa, Singapore 099951",
       "website": "theoutposthotel.com.sg",
-      "hours": "24/7",
       "rawSuggestedTypes": "成人专属派对, 品牌发布, 私人晚宴, 鸡尾酒会, Afterparty",
       "spaces": [
         {
@@ -13989,7 +13758,6 @@
       ],
       "maxCapacity": 180,
       "maxAreaSqm": 260,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -14055,9 +13823,9 @@
         "产品发布",
         "activation"
       ],
-      "image": "",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 180 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "location",
+      "image": "/singapore-event-venue-finder/assets/venues/the-outpost-hotel-sentosa.webp",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, cocktail / reception with a public capacity signal up to about 180 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.2518875,
       "lng": 103.8197207,
       "geocodeStatus": "matched",
@@ -14072,7 +13840,6 @@
       "area": "Orchard / Tanglin",
       "address": "39C Harding Road, Singapore 249541 (Dempsey Hill)",
       "website": "claudinerestaurant.com",
-      "hours": "12:00–深夜",
       "rawSuggestedTypes": "私人晚宴, 商务宴请, 酒品鉴, 小型品牌发布",
       "spaces": [
         {
@@ -14108,7 +13875,6 @@
       ],
       "maxCapacity": 150,
       "maxAreaSqm": null,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -14141,7 +13907,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/claudine.webp",
-      "publicNote": "Indoor + restaurant / bar option for product / brand launch, gala / dinner, vip / private event with a public capacity signal up to about 150 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + restaurant / bar option for product / brand launch, gala / dinner, vip / private event with a public capacity signal up to about 150 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.3038766,
       "lng": 103.8106019,
@@ -14157,7 +13923,6 @@
       "area": "Sentosa",
       "address": "41 Imbiah Road, Sentosa, Singapore 099707",
       "website": "mountfaberleisure.com/attraction/skyhelix-sentosa",
-      "hours": "10:00–21:30",
       "rawSuggestedTypes": "求婚, VIP 招待, 品牌体验, 空中鸡尾酒",
       "spaces": [
         {
@@ -14183,7 +13948,6 @@
       ],
       "maxCapacity": 150,
       "maxAreaSqm": 280,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Cocktail / reception",
@@ -14226,7 +13990,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/skyhelix-sentosa.webp",
-      "publicNote": "Indoor + rooftop / high-floor option for cocktail / reception, wedding, pop-up / market / activation with a public capacity signal up to about 150 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + rooftop / high-floor option for cocktail / reception, wedding, pop-up / market / activation with a public capacity signal up to about 150 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2557994,
       "lng": 103.8160173,
@@ -14242,7 +14006,6 @@
       "area": "Sentosa",
       "address": "31 Ocean Way, Singapore 098374 (Sentosa Cove)",
       "website": "tallship.com.sg",
-      "hours": "10:00–19:00",
       "rawSuggestedTypes": "海上婚礼, 日落巡游, VIP招待, 品牌发布, 私人派对",
       "spaces": [
         {
@@ -14278,7 +14041,6 @@
       ],
       "maxCapacity": 149,
       "maxAreaSqm": null,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -14339,7 +14101,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/royal-albatross.webp",
-      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, cocktail / reception, wedding with a public capacity signal up to about 149 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Outdoor + restaurant / bar option for product / brand launch, cocktail / reception, wedding with a public capacity signal up to about 149 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2467161,
       "lng": 103.8419915,
@@ -14355,7 +14117,6 @@
       "area": "CBD / Tanjong Pagar",
       "address": "88 Market Street, Level 51, CapitaSpring, Singapore 048948",
       "website": "1-arden.sg",
-      "hours": "Mon–Thu 10:00–24:00；Fri–Sat 至 02:00",
       "rawSuggestedTypes": "私人晚宴, 米其林美食品鉴, 产品发布, 商务宴请",
       "spaces": [
         {
@@ -14391,7 +14152,6 @@
       ],
       "maxCapacity": 80,
       "maxAreaSqm": null,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Product / brand launch",
@@ -14444,7 +14204,7 @@
         "activation"
       ],
       "image": "/singapore-event-venue-finder/assets/venues/arden.webp",
-      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, vip / private event with a public capacity signal up to about 80 pax. Confirm the exact space, setup rules and current availability before booking.",
+      "publicNote": "Indoor + outdoor option for product / brand launch, gala / dinner, vip / private event with a public capacity signal up to about 80 pax. Review the exact space and setup requirements with the venue team.",
       "imageMode": "reference",
       "lat": 1.2842204,
       "lng": 103.8501314,
@@ -14460,7 +14220,6 @@
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa, Singapore 098269",
       "website": "rwsentosa.com/en/hotels/beach-villas",
-      "hours": "24/7",
       "rawSuggestedTypes": "VIP 私人招待, 海洋套房过夜, 超奢婚礼, 家庭包场",
       "spaces": [
         {
@@ -14506,7 +14265,6 @@
       ],
       "maxCapacity": 40,
       "maxAreaSqm": 600,
-      "priceSignal": "Check with venue",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Cocktail / reception",
@@ -14557,9 +14315,9 @@
         "婚宴",
         "solemnisation"
       ],
-      "image": "",
-      "publicNote": "Indoor + outdoor option for cocktail / reception, wedding, vip / private event with a public capacity signal up to about 40 pax. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "location",
+      "image": "/singapore-event-venue-finder/assets/venues/beach-villas-rws.webp",
+      "publicNote": "Indoor + outdoor option for cocktail / reception, wedding, vip / private event with a public capacity signal up to about 40 pax. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "official",
       "lat": 1.25585,
       "lng": 103.816,
       "geocodeStatus": "manual_verified",
@@ -14574,7 +14332,6 @@
       "area": "Sentosa",
       "address": "1 Cove Way, Sentosa Island, Singapore 098537",
       "website": "raffles.com/sentosa",
-      "hours": "全天",
       "rawSuggestedTypes": "婚礼；高端品牌晚宴；度假式闭门会议；奢华客户招待；家庭庆典",
       "spaces": [
         {
@@ -14600,7 +14357,6 @@
       ],
       "maxCapacity": null,
       "maxAreaSqm": null,
-      "priceSignal": "Quote direction available",
       "sourceLevel": "Public summary from the internal Singapore venue index",
       "eventTypes": [
         "Conference / seminar",
@@ -14637,9 +14393,9 @@
         "婚宴",
         "solemnisation"
       ],
-      "image": "",
-      "publicNote": "Indoor + ballroom option for conference / seminar, gala / dinner, cocktail / reception. Confirm the exact space, setup rules and current availability before booking.",
-      "imageMode": "location",
+      "image": "/singapore-event-venue-finder/assets/venues/raffles-sentosa-singapore.webp",
+      "publicNote": "Indoor + ballroom option for conference / seminar, gala / dinner, cocktail / reception. Review the exact space and setup requirements with the venue team.",
+      "imageMode": "reference",
       "lat": 1.2471354,
       "lng": 103.8264725,
       "geocodeStatus": "matched",

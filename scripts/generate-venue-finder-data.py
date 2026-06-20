@@ -290,7 +290,7 @@ def build_public_note(venue: dict[str, Any]) -> str:
     event_summary = ", ".join(venue["eventTypes"][:3]).lower()
     setting_summary = " + ".join(venue["settings"][:2]).lower()
     cap = f" with a public capacity signal up to about {venue['maxCapacity']:,} pax" if venue["maxCapacity"] else ""
-    return f"{setting_summary.capitalize()} option for {event_summary}{cap}. Confirm the exact space, setup rules and current availability before booking."
+    return f"{setting_summary.capitalize()} option for {event_summary}{cap}. Review the exact space and setup requirements with the venue team."
 
 
 def read_workbook(path: Path) -> list[dict[str, Any]]:
@@ -300,7 +300,7 @@ def read_workbook(path: Path) -> list[dict[str, Any]]:
         current = dict.fromkeys(HEADERS, "")
         for row in sheet.iter_rows(min_row=3, values_only=True):
             record = dict(zip(HEADERS, list(row)[: len(HEADERS)]))
-            for field in ["category", "venue", "alias", "address", "website", "suggested_types", "hours"]:
+            for field in ["category", "venue", "alias", "address", "website", "suggested_types"]:
                 if clean(record.get(field)):
                     current[field] = clean(record.get(field))
             category = clean(record.get("category")) or current["category"]
@@ -318,12 +318,10 @@ def read_workbook(path: Path) -> list[dict[str, Any]]:
                     "area": infer_area(venue_name, address),
                     "address": address,
                     "website": clean(record.get("website")) or current["website"],
-                    "hours": clean(record.get("hours")) or current["hours"],
                     "rawSuggestedTypes": clean(record.get("suggested_types")) or current["suggested_types"],
                     "spaces": [],
                     "maxCapacity": None,
                     "maxAreaSqm": None,
-                    "priceSignal": "Check with venue",
                     "sourceLevel": "Public summary from the internal Singapore venue index",
                     "_notes": [],
                 }
@@ -339,8 +337,6 @@ def read_workbook(path: Path) -> list[dict[str, Any]]:
             note = clean(record.get("notes"))
             if note:
                 venue["_notes"].append(note)
-            if clean(record.get("price")) or clean(record.get("minimum_spend")):
-                venue["priceSignal"] = "Quote direction available"
             if space_max is not None:
                 venue["maxCapacity"] = max(venue["maxCapacity"] or 0, space_max)
             if area_sqm is not None:
@@ -629,7 +625,7 @@ def main() -> None:
         "source": "Internal Singapore venue index, public planning subset",
         "publicCount": len(venues),
         "mappedCount": len(mapped),
-        "privacyNote": "Pricing, contacts, live availability and source documents are intentionally withheld from the public dataset.",
+        "privacyNote": "This public dataset contains venue identity, planning tags, capacity signals and map coordinates only.",
         "venues": venues,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)

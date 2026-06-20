@@ -294,25 +294,25 @@
 
   <url>
     <loc>https://actcreative.net/singapore-event-venue-finder/</loc>
-    <lastmod>2026-06-18</lastmod>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.82</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-finder/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/singapore-event-venue-finder/" />
     <image:image>
-      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-ritz-interior.webp</image:loc>
-      <image:title>Singapore event venue finder map</image:title>
-      <image:caption>Interactive public venue finder for filtering Singapore venues by area, type, event format and capacity.</image:caption>
+      <image:loc>https://actcreative.net/og/singapore-event-venue-finder.png</image:loc>
+      <image:title>Singapore Event Venue Finder</image:title>
+      <image:caption>Interactive map and shortlist tool for comparing 122 Singapore event venues by area, type, format and capacity.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-fort-canning-green.webp</image:loc>
-      <image:title>Outdoor Singapore venue finder reference</image:title>
-      <image:caption>Outdoor venue reference used in the Singapore venue finder MVP.</image:caption>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/gardens-by-the-bay.webp</image:loc>
+      <image:title>Gardens by the Bay event venue</image:title>
+      <image:caption>Gardens by the Bay in the Singapore Event Venue Finder.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-joaquim-hall.webp</image:loc>
-      <image:title>Conference venue finder reference</image:title>
-      <image:caption>Conference room reference used in the Singapore venue finder MVP.</image:caption>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/resorts-world-ballroom.webp</image:loc>
+      <image:title>Resorts World Ballroom event venue</image:title>
+      <image:caption>Resorts World Ballroom in the Singapore Event Venue Finder.</image:caption>
     </image:image>
   </url>
 
