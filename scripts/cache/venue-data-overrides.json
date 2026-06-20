@@ -1,0 +1,137 @@
+{
+  "excludedVenueNames": [
+    "Far East Hotel",
+    "Plume Singapore Flyer",
+    "LINO Forum"
+  ],
+  "venues": {
+    "Marina Bay Cruise Centre Singapore": {
+      "website": "https://mbccs.com.sg/"
+    },
+    "Singapore Expo": {
+      "website": "https://www.singaporeexpo.com.sg/"
+    },
+    "Grand Hyatt Singapore": {
+      "website": "https://www.hyatt.com/grand-hyatt/en-US/singh-grand-hyatt-singapore"
+    },
+    "Fairmont Singapore": {
+      "website": "https://www.fairmont-singapore.com/"
+    },
+    "Swissôtel The Stamford": {
+      "website": "https://www.swissotel.com/hotels/singapore-stamford/"
+    },
+    "Dusit Thani Laguna Singapore": {
+      "website": "https://www.dusit.com/dusitthani-laguna-singapore/",
+      "area": "Changi / Expo",
+      "propertyTypes": [
+        "Hotel",
+        "Resort"
+      ]
+    },
+    "One Farrer Hotel": {
+      "website": "https://www.onefarrer.com/"
+    },
+    "St. Regis Singapore": {
+      "website": "https://www.marriott.com/en-us/hotels/sinxr-the-st-regis-singapore/overview/"
+    },
+    "Fort Canning Park": {
+      "area": "City Hall / Civic District"
+    },
+    "Esplanade - Theatres on the Bay": {
+      "area": "Marina Bay"
+    },
+    "The Westin Singapore": {
+      "area": "CBD / Tanjong Pagar",
+      "propertyTypes": [
+        "Hotel"
+      ]
+    },
+    "PARKROYAL COLLECTION Pickering": {
+      "area": "CBD / Tanjong Pagar"
+    },
+    "InterContinental Singapore": {
+      "area": "City Hall / Civic District"
+    },
+    "Lazarus Island": {
+      "area": "Southern Islands",
+      "propertyTypes": [
+        "Island / outdoor venue"
+      ],
+      "settings": [
+        "Outdoor",
+        "Beach",
+        "Waterfront / marina"
+      ]
+    },
+    "Andaz Singapore": {
+      "area": "City Hall / Civic District"
+    },
+    "Capella Singapore": {
+      "propertyTypes": [
+        "Hotel",
+        "Resort"
+      ]
+    },
+    "Raffles Sentosa Singapore": {
+      "propertyTypes": [
+        "Hotel",
+        "Resort"
+      ]
+    },
+    "The Star Performing Arts Centre": {
+      "propertyTypes": [
+        "Theatre / performance"
+      ],
+      "settings": [
+        "Indoor",
+        "Theatre / auditorium"
+      ],
+      "eventTypes": [
+        "Performance / concert",
+        "Conference / seminar",
+        "Awards ceremony",
+        "Corporate event"
+      ]
+    },
+    "iFly Singapore": {
+      "propertyTypes": [
+        "Attraction / theme park"
+      ],
+      "settings": [
+        "Indoor",
+        "Rooftop / high-floor"
+      ],
+      "eventTypes": [
+        "Team building / family day",
+        "Corporate event",
+        "VIP / private event"
+      ]
+    },
+    "Oasia Resort Sentosa": {
+      "propertyTypes": [
+        "Hotel",
+        "Resort"
+      ],
+      "settings": [
+        "Indoor",
+        "Outdoor",
+        "Ballroom",
+        "Meeting rooms",
+        "Garden / lawn",
+        "Poolside"
+      ]
+    },
+    "Sentosa Golf Club": {
+      "propertyTypes": [
+        "Golf / country club",
+        "Restaurant / dining"
+      ]
+    },
+    "The Capitol Kempinski": {
+      "propertyTypes": [
+        "Hotel",
+        "Heritage venue"
+      ]
+    }
+  }
+}

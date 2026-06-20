@@ -62,6 +62,8 @@
       "scripts": {
             "dev": "vite",
             "build": "vite build",
+            "generate:venue-pages": "node scripts/generate-venue-seo-pages.mjs",
+            "sanitize:venue-finder": "node scripts/sanitize-venue-public-data.mjs",
             "validate:venue-finder": "python scripts/validate-venue-finder.py",
             "smoke:venue-finder": "npm run build && node scripts/smoke-venue-finder.mjs",
             "og": "node scripts/generate-og-images.mjs",

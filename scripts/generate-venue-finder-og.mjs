@@ -41,7 +41,7 @@ const overlay = Buffer.from(`
     <rect width="1200" height="8" y="312" fill="#ccff00"/>
     <text x="70" y="396" fill="#ccff00" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="3">ACT CREATIVE · SINGAPORE</text>
     <text x="70" y="474" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="61" font-weight="800">Singapore Event Venue Finder</text>
-    <text x="70" y="536" fill="#d2d2d2" font-family="Arial, Helvetica, sans-serif" font-size="31">122 venues · interactive map · filters by area, type &amp; capacity</text>
+    <text x="70" y="536" fill="#d2d2d2" font-family="Arial, Helvetica, sans-serif" font-size="31">100+ venues · search, compare &amp; filter by area, type and capacity</text>
     <rect x="70" y="574" width="278" height="4" rx="2" fill="#ccff00"/>
   </svg>
 `);

@@ -60,11 +60,12 @@ AREA_RULES = [
     ("Marina Bay", ["bayfront", "marina bay", "marina gardens", "raffles avenue", "raffles boulevard", "fullerton", "clifford pier", "collyer quay", "temasek boulevard"]),
     ("Orchard / Tanglin", ["orchard", "scotts", "tanglin", "cuscaden", "claymore", "orange grove", "harding road", "dempsey"]),
     ("CBD / Tanjong Pagar", ["raffles place", "shenton", "tanjong pagar", "maxwell", "telok ayer", "wallich", "market street", "marina boulevard", "straits boulevard"]),
-    ("City Hall / Civic District", ["city hall", "stamford", "bras basah", "victoria street", "north bridge", "beach road", "empress place", "st andrew", "armenian street", "old parliament"]),
+    ("City Hall / Civic District", ["city hall", "stamford", "bras basah", "victoria street", "north bridge", "beach road", "empress place", "st andrew", "armenian street", "old parliament", "canning rise", "middle road", "fraser street"]),
     ("Singapore River", ["clarke quay", "river valley", "robertson", "havelock", "kim seng", "the cannery"]),
-    ("Changi / Expo", ["changi", "expo", "airport", "tanah merah", "netheravon"]),
+    ("Changi / Expo", ["changi", "expo", "airport", "tanah merah", "netheravon", "laguna golf"]),
     ("Kallang / Sports Hub", ["stadium", "kallang", "tanjong rhu"]),
     ("HarbourFront / South", ["harbourfront", "mount faber", "telok blangah", "pasir panjang", "keppel"]),
+    ("Southern Islands", ["lazarus island", "st john's island", "kusu island"]),
     ("One-North / West", ["jurong", "one-north", "science centre", "science park", "buona vista", "vista exchange", "west coast"]),
     ("North / Seletar", ["mandai", "seletar", "admiralty", "woodlands"]),
     ("Central / Novena", ["novena", "balestier", "serangoon", "toa payoh", "bishan", "farrer park"]),
@@ -366,6 +367,16 @@ def read_workbook(path: Path) -> list[dict[str, Any]]:
         identity = f"{venue['name']} {venue['alias']} {venue['address']}".lower()
         if "Hotel" in venue["propertyTypes"] and "Indoor" not in venue["settings"]:
             venue["settings"].insert(0, "Indoor")
+        if "Hotel" in venue["propertyTypes"]:
+            venue["propertyTypes"] = [
+                label
+                for label in venue["propertyTypes"]
+                if label not in {"Public / civic space", "Park / garden", "Beach / beach club"}
+            ]
+        if "Theatre / performance" in venue["propertyTypes"]:
+            venue["propertyTypes"] = [
+                label for label in venue["propertyTypes"] if label != "Park / garden"
+            ]
         if "south beach" in identity and "sentosa" not in identity:
             venue["settings"] = [label for label in venue["settings"] if label != "Beach"]
         if "Industrial / raw" in venue["settings"] and not matches_any(

@@ -302,7 +302,7 @@
     <image:image>
       <image:loc>https://actcreative.net/og/singapore-event-venue-finder.png</image:loc>
       <image:title>Singapore Event Venue Finder</image:title>
-      <image:caption>Interactive map and shortlist tool for comparing 122 Singapore event venues by area, type, format and capacity.</image:caption>
+      <image:caption>Interactive map, comparison and shortlist tool for more than 100 Singapore event venues, searchable by area, type, format and capacity.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/gardens-by-the-bay.webp</image:loc>
@@ -313,6 +313,66 @@
       <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/resorts-world-ballroom.webp</image:loc>
       <image:title>Resorts World Ballroom event venue</image:title>
       <image:caption>Resorts World Ballroom in the Singapore Event Venue Finder.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/sentosa/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/capella-singapore.webp</image:loc>
+      <image:title>Sentosa event venues</image:title>
+      <image:caption>Curated Sentosa hotels, attractions, beaches, restaurants and destination event spaces.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/marina-bay/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/gardens-by-the-bay.webp</image:loc>
+      <image:title>Marina Bay event venues</image:title>
+      <image:caption>Curated Marina Bay convention venues, hotels, theatres, rooftops and waterfront spaces.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/outdoor/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/lazarus-island.webp</image:loc>
+      <image:title>Outdoor event venues in Singapore</image:title>
+      <image:caption>Curated gardens, beaches, lawns, rooftops, decks and outdoor event settings in Singapore.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/hotel-ballrooms/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/four-seasons-hotel-singapore.webp</image:loc>
+      <image:title>Singapore hotel ballrooms</image:title>
+      <image:caption>Singapore hotel ballroom options for conferences, corporate dinners, receptions and weddings.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/200-guests/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.76</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/og/singapore-event-venue-finder.png</image:loc>
+      <image:title>Singapore event venues for 200 or more guests</image:title>
+      <image:caption>Curated Singapore venue records with a layout-specific capacity of at least 200 guests.</image:caption>
     </image:image>
   </url>
 
