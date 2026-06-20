@@ -9,6 +9,7 @@ const PORT = 5191;
 const BASE_URL =
   process.env.VENUE_FINDER_BASE_URL ||
   `http://${HOST}:${PORT}/singapore-event-venue-finder/`;
+const SITE_ORIGIN = new URL(BASE_URL).origin;
 const OUTPUT_DIR = path.resolve("output/playwright");
 
 let previewProcess;
@@ -77,7 +78,8 @@ async function launchPreview() {
 async function waitForVenueCards(page) {
   await page.waitForFunction(() => {
     const count = Number(document.querySelector("[data-result-count]")?.textContent || 0);
-    return count > 0 && document.querySelectorAll("[data-venue-card]").length === count;
+    const rendered = document.querySelectorAll("[data-venue-card]").length;
+    return count > 0 && rendered > 0 && rendered <= count;
   });
 }
 
@@ -122,7 +124,7 @@ async function runDesktopChecks(page) {
     };
   });
   assert(structure.howToBeforeFinder, "How-to section must appear before the venue finder");
-  assert(structure.searchInputs === 0, "Venue finder must not contain a text search input");
+  assert(structure.searchInputs === 1, "Venue finder must expose one text search input");
   assert(structure.areaOptions > 1, "Area dropdown must contain regional options");
 
   const firstImageCard = page.locator("[data-venue-card]").filter({
@@ -135,11 +137,20 @@ async function runDesktopChecks(page) {
   await details.locator("summary").click();
   assert(await details.evaluate((element) => element.open), "Venue details should expand when clicked");
 
+  while (
+    (await page.locator("[data-venue-card]", { hasText: "Southside" }).count()) ===
+      0 &&
+    (await page.locator("[data-load-more]").isVisible())
+  ) {
+    await page.locator("[data-load-more]").click();
+  }
   const southside = page.locator("[data-venue-card]", { hasText: "Southside" }).first();
   await southside.locator("summary").click();
+  const southsideSource = southside.locator(".venue-site-link");
   assert(
-    (await southside.locator(".venue-site-link").count()) === 0,
-    "Venue without a website must not render a website link",
+    (await southsideSource.count()) === 1 &&
+      (await southsideSource.getAttribute("href")).startsWith("https://"),
+    "Venue with a public reference source must render one valid source link",
   );
 
   const areaSelect = page.locator("[data-filter-area]");
@@ -148,8 +159,13 @@ async function runDesktopChecks(page) {
     () => document.querySelector("[data-result-count]")?.textContent === "41",
   );
   assert(
-    (await page.locator("[data-venue-card]").count()) === 41,
-    "Sentosa filter should show 41 venues",
+    (await page.locator("[data-venue-card]").count()) === 12,
+    "Sentosa filter should initially render one 12-card page",
+  );
+  await page.locator("[data-load-more]").click();
+  assert(
+    (await page.locator("[data-venue-card]").count()) === 24,
+    "Load more should append another 12 Sentosa venue cards",
   );
 
   const map = page.locator("#venue-map");
@@ -192,6 +208,95 @@ async function runMobileChecks(page) {
   await verifyImageGeometry(firstImageCard);
 }
 
+async function runFeaturedVenueChecks(page) {
+  await page.setViewportSize({ width: 1440, height: 1000 });
+  await page.goto(
+    `${SITE_ORIGIN}/singapore-event-venues/marina-bay-sands/`,
+    { waitUntil: "domcontentloaded" },
+  );
+  await page.locator("h1").waitFor();
+  assert(
+    (await page.locator(".capacity-audit-card h2").textContent()).includes(
+      "7,000",
+    ),
+    "Marina Bay Sands detail page must show the reviewed 7,000 benchmark",
+  );
+  assert(
+    !(await page.locator("body").textContent()).includes("9,225"),
+    "Conflicting Marina Bay Sands historical capacity must be omitted",
+  );
+  assert(
+    await page.evaluate(() =>
+      (window.vaq || []).some(
+        (entry) => entry?.[1]?.name === "Venue detail viewed",
+      ),
+    ),
+    "Venue detail page-view event must enter the Vercel Analytics queue",
+  );
+
+  await page.evaluate(() => {
+    document.addEventListener("click", (event) => event.preventDefault(), {
+      capture: true,
+      once: true,
+    });
+    document
+      .querySelector('[data-track-action="Venue sourcing opened"]')
+      ?.click();
+  });
+  assert(
+    await page.evaluate(() =>
+      (window.vaq || []).some(
+        (entry) => entry?.[1]?.name === "Venue sourcing opened",
+      ),
+    ),
+    "Venue sourcing conversion event must enter the analytics queue",
+  );
+
+  await page.goto(
+    `${SITE_ORIGIN}/singapore-event-venues/resorts-world-ballroom/`,
+    { waitUntil: "domcontentloaded" },
+  );
+  assert(
+    (await page.locator(".capacity-audit-card h2").textContent()).includes(
+      "Reference record",
+    ),
+    "Reference-only venue must not be labelled as an official capacity",
+  );
+
+  await page.goto(`${SITE_ORIGIN}/singapore-event-venues/marina-bay/`, {
+    waitUntil: "domcontentloaded",
+  });
+  assert(
+    (await page.locator('a[href="/singapore-event-venues/marina-bay-sands/"]').count()) >
+      0,
+    "Venue guide must link to reviewed venue detail pages",
+  );
+  assert(
+    await page.evaluate(() =>
+      (window.vaq || []).some(
+        (entry) => entry?.[1]?.name === "Venue guide viewed",
+      ),
+    ),
+    "Venue guide page-view event must enter the analytics queue",
+  );
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(
+    `${SITE_ORIGIN}/singapore-event-venues/marina-bay-sands/`,
+    { waitUntil: "domcontentloaded" },
+  );
+  const layout = await page.evaluate(() => ({
+    viewportWidth: window.innerWidth,
+    bodyWidth: document.body.scrollWidth,
+    documentWidth: document.documentElement.scrollWidth,
+  }));
+  assert(
+    layout.bodyWidth <= layout.viewportWidth &&
+      layout.documentWidth <= layout.viewportWidth,
+    `Venue detail mobile layout has horizontal overflow: ${JSON.stringify(layout)}`,
+  );
+}
+
 async function main() {
   await mkdir(OUTPUT_DIR, { recursive: true });
   await launchPreview();
@@ -208,6 +313,7 @@ async function main() {
   try {
     await runDesktopChecks(page);
     await runMobileChecks(page);
+    await runFeaturedVenueChecks(page);
     assert(consoleErrors.length === 0, `Browser console errors:\n${consoleErrors.join("\n")}`);
     console.log("Venue finder browser smoke test passed");
   } catch (error) {

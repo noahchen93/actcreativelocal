@@ -98,7 +98,23 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.thekallang.com.sg/venues-facilities/national-stadium",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The Kallang precinct supports stadium-scale events and several indoor or outdoor formats within a major transport-connected sports destination.",
+      "bestFor": [
+        "Stadium events",
+        "Concerts",
+        "Mass participation events",
+        "Large corporate programmes"
+      ],
+      "planningConsiderations": [
+        "Confirm the specific facility because capacities vary substantially across the precinct.",
+        "Coordinate crowd movement, security and transport planning from the outset.",
+        "Validate field protection, rigging, power and production-compound requirements."
+      ]
     },
     {
       "id": "gardens-by-the-bay",
@@ -223,7 +239,23 @@
       "imageSourceUrl": "https://www.gardensbythebay.com.sg/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.gardensbythebay.com.sg/en/plan-your-visit/venue-hire.html",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "Gardens by the Bay offers recognisable Singapore landscapes ranging from large lawns to conservatory and waterfront-adjacent settings.",
+      "bestFor": [
+        "Outdoor festivals",
+        "Brand activations",
+        "Large public events",
+        "Destination receptions"
+      ],
+      "planningConsiderations": [
+        "Build a wet-weather and heat-management plan for outdoor programmes.",
+        "Confirm ground protection, utilities, public access and permitted production zones.",
+        "Allow for long guest and supplier movement routes across the gardens."
+      ]
     },
     {
       "id": "marina-bay-sands",
@@ -237,8 +269,8 @@
           "areaSqm": 7672,
           "ceilingM": 9.5,
           "banquet": 5000,
-          "cocktail": 9225,
-          "theatre": 8000,
+          "cocktail": null,
+          "theatre": 7000,
           "classroom": 5850,
           "note": "Level 5; pillarless; divisible into 16"
         },
@@ -423,7 +455,7 @@
           "note": "57F Italian + rooftop terrace"
         }
       ],
-      "maxCapacity": 9225,
+      "maxCapacity": 7000,
       "maxAreaSqm": 7672,
       "eventTypes": [
         "Product / brand launch",
@@ -450,21 +482,37 @@
       ],
       "primaryType": "Hotel",
       "image": "/singapore-event-venue-finder/assets/venues/marina-bay-sands.webp",
-      "publicNote": "Hotel in Marina Bay with 19 recorded event spaces. Sands Grand Ballroom supports up to 9,225 guests in cocktail format. Planning tags include product / brand launch, conference / seminar and gala / dinner. Capacity depends on the selected space and event layout.",
+      "publicNote": "Hotel in Marina Bay with 19 recorded event spaces. Sands Grand Ballroom supports up to 7,000 guests in theatre format. Planning tags include product / brand launch, conference / seminar and gala / dinner. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.2836965,
       "lng": 103.8607226,
       "capacityBasis": {
         "space": "Sands Grand Ballroom",
-        "layout": "cocktail",
-        "capacity": 9225
+        "layout": "theatre",
+        "capacity": 7000
       },
       "sourceUrl": "https://marinabaysands.com/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.marinabaysands.com/meetings/meeting-venues.html",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The integrated resort combines large convention spaces, ballrooms, theatres, restaurants and hotel infrastructure in one Marina Bay complex.",
+      "bestFor": [
+        "Large conferences",
+        "Gala dinners",
+        "Exhibitions",
+        "Product launches"
+      ],
+      "planningConsiderations": [
+        "Confirm which MICE space is being quoted rather than using a property-wide maximum.",
+        "Check loading routes, production access windows and stage footprint early.",
+        "Plan guest movement carefully when several spaces or hotel towers are involved."
+      ]
     },
     {
       "id": "universal-studios-singapore",
@@ -473,6 +521,16 @@
       "address": "8 Sentosa Gateway, Singapore 098269",
       "website": "https://rwsentosa.com/en/attractions/universal-studios-singapore",
       "spaces": [
+        {
+          "name": "Pantages Hollywood Theater",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": 1500,
+          "classroom": null,
+          "note": "Official public benchmark"
+        },
         {
           "name": "Hollywood Boulevard",
           "areaSqm": 2000,
@@ -499,7 +557,7 @@
           "ceilingM": null,
           "banquet": null,
           "cocktail": null,
-          "theatre": 3000,
+          "theatre": null,
           "classroom": null,
           "note": ""
         },
@@ -508,13 +566,13 @@
           "areaSqm": null,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 8000,
+          "cocktail": null,
           "theatre": null,
           "classroom": null,
           "note": ""
         }
       ],
-      "maxCapacity": 8000,
+      "maxCapacity": 1500,
       "maxAreaSqm": 2000,
       "eventTypes": [
         "Performance / concert",
@@ -531,21 +589,37 @@
       ],
       "primaryType": "Attraction / theme park",
       "image": "/singapore-event-venue-finder/assets/venues/universal-studios-singapore.webp",
-      "publicNote": "Attraction / theme park in Sentosa with 4 recorded event spaces. Full Park private Buyout supports up to 8,000 guests in cocktail format. Planning tags include performance / concert, pop-up / market / activation and vip / private event. Capacity depends on the selected space and event layout.",
+      "publicNote": "Attraction / theme park in Sentosa with 5 recorded event spaces. Pantages Hollywood Theater supports up to 1,500 guests in theatre format. Planning tags include performance / concert, pop-up / market / activation and vip / private event. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.2556955,
       "lng": 103.8202156,
       "capacityBasis": {
-        "space": "Full Park private Buyout",
-        "layout": "cocktail",
-        "capacity": 8000
+        "space": "Pantages Hollywood Theater",
+        "layout": "theatre",
+        "capacity": 1500
       },
       "sourceUrl": "https://rwsentosa.com/en/attractions/universal-studios-singapore",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The attraction supports themed private events and incentive programmes with entertainment environments that differ from conventional hotel venues.",
+      "bestFor": [
+        "Incentive events",
+        "Private celebrations",
+        "Themed brand events",
+        "Performances"
+      ],
+      "planningConsiderations": [
+        "Confirm attraction operating boundaries and whether an individual space or wider park programme is proposed.",
+        "Plan guest routing, branding permissions and entertainment integration with the venue team.",
+        "Treat full-park buyout capacity as a separate bespoke enquiry."
+      ]
     },
     {
       "id": "fort-canning-park",
@@ -674,7 +748,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "marina-bay-cruise-centre-singapore",
@@ -735,7 +816,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "pasir-panjang-power-station",
@@ -789,13 +877,13 @@
           "areaSqm": 13500,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 5000,
+          "cocktail": null,
           "theatre": null,
           "classroom": null,
           "note": "Entire decommissioned power station"
         }
       ],
-      "maxCapacity": 5000,
+      "maxCapacity": 3500,
       "maxAreaSqm": 13500,
       "eventTypes": [
         "Product / brand launch",
@@ -815,21 +903,37 @@
       ],
       "primaryType": "Industrial venue",
       "image": "/singapore-event-venue-finder/assets/venues/pasir-panjang-power-station.webp",
-      "publicNote": "Industrial venue in HarbourFront / South with 5 recorded event spaces. Full Site Buyout supports up to 5,000 guests in cocktail format. Planning tags include product / brand launch, exhibition / immersive and performance / concert. Capacity depends on the selected space and event layout.",
+      "publicNote": "Industrial venue in HarbourFront / South with 5 recorded event spaces. Turbine Hall A supports up to 3,500 guests in cocktail format. Planning tags include product / brand launch, exhibition / immersive and performance / concert. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.270551,
       "lng": 103.7985522,
       "capacityBasis": {
-        "space": "Full Site Buyout",
+        "space": "Turbine Hall A",
         "layout": "cocktail",
-        "capacity": 5000
+        "capacity": 3500
       },
       "sourceUrl": "https://24owls.sg/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.24owls.sg/",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The former power station is a large industrial shell suited to high-impact installations and events that need a raw architectural backdrop.",
+      "bestFor": [
+        "Immersive exhibitions",
+        "Large brand launches",
+        "Fashion and cultural events",
+        "Industrial-scale builds"
+      ],
+      "planningConsiderations": [
+        "Confirm usable zones, temporary services and fire-safety requirements for the proposed layout.",
+        "Allow additional planning for climate control, acoustics and guest comfort.",
+        "Review floor loading, access doors and production vehicle routes before design development."
+      ]
     },
     {
       "id": "siloso-beach",
@@ -911,7 +1015,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "singapore-expo",
@@ -961,7 +1072,7 @@
           "note": "Open-air event space"
         }
       ],
-      "maxCapacity": 5000,
+      "maxCapacity": 7428,
       "maxAreaSqm": 60000,
       "eventTypes": [
         "Conference / seminar",
@@ -979,21 +1090,37 @@
       ],
       "primaryType": "Convention / exhibition",
       "image": "/singapore-event-venue-finder/assets/venues/singapore-expo.webp",
-      "publicNote": "Convention / exhibition in Changi / Expo with 4 recorded event spaces. Outdoor Area supports up to 5,000 guests in cocktail format. Planning tags include conference / seminar, exhibition / immersive and pop-up / market / activation. Capacity depends on the selected space and event layout.",
+      "publicNote": "Convention / exhibition in Changi / Expo with 4 recorded event spaces. APEX @ EXPO supports up to 7,428 guests in published total format. Planning tags include conference / seminar, exhibition / immersive and pop-up / market / activation. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.334308,
       "lng": 103.959258,
       "capacityBasis": {
-        "space": "Outdoor Area",
-        "layout": "cocktail",
-        "capacity": 5000
+        "space": "APEX @ EXPO",
+        "layout": "published total",
+        "capacity": 7428
       },
       "sourceUrl": "https://www.singaporeexpo.com.sg/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.singaporeexpo.com.sg/visit/venue-spaces",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "Singapore EXPO is a large Changi exhibition and conference campus with configurable halls and purpose-built event infrastructure.",
+      "bestFor": [
+        "Trade exhibitions",
+        "Conferences",
+        "Large plenaries",
+        "Multi-hall events"
+      ],
+      "planningConsiderations": [
+        "Select the hall or APEX configuration before comparing capacities.",
+        "Map organiser offices, loading docks, registration and visitor circulation as one operational plan.",
+        "Check whether the event relies on neighbouring halls or a single contained venue."
+      ]
     },
     {
       "id": "the-star-performing-arts-centre",
@@ -1002,6 +1129,16 @@
       "address": "1 Vista Exchange Green, Singapore 138617",
       "website": "https://www.thestar.sg/the-star-theatre",
       "spaces": [
+        {
+          "name": "The Star Theatre",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": 5000,
+          "classroom": null,
+          "note": "Official public benchmark"
+        },
         {
           "name": "Star Theatre",
           "areaSqm": 5000,
@@ -1060,12 +1197,12 @@
       ],
       "primaryType": "Theatre / performance",
       "image": "/singapore-event-venue-finder/assets/venues/the-star-performing-arts-centre.webp",
-      "publicNote": "Theatre / performance in One-North / West with 4 recorded event spaces. Star Theatre supports up to 5,000 guests in theatre format. Planning tags include performance / concert, conference / seminar and awards ceremony. Capacity depends on the selected space and event layout.",
+      "publicNote": "Theatre / performance in One-North / West with 5 recorded event spaces. The Star Theatre supports up to 5,000 guests in theatre format. Planning tags include performance / concert, conference / seminar and awards ceremony. Capacity depends on the selected space and event layout.",
       "imageMode": "official",
       "lat": 1.3080015,
       "lng": 103.7883825,
       "capacityBasis": {
-        "space": "Star Theatre",
+        "space": "The Star Theatre",
         "layout": "theatre",
         "capacity": 5000
       },
@@ -1074,7 +1211,23 @@
       "imageSourceUrl": "https://www.thestar.sg/the-star-theatre",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.thestar.sg/the-star-theatre",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The Star Theatre is a large fixed-seat performance venue with strong stage and auditorium infrastructure in the one-north precinct.",
+      "bestFor": [
+        "Concerts",
+        "Awards ceremonies",
+        "Large conferences",
+        "Stage productions"
+      ],
+      "planningConsiderations": [
+        "A fixed-seat theatre works differently from a flat-floor ballroom; confirm stage, backstage and foyer requirements.",
+        "Review sightlines and production positions before allocating seats.",
+        "Plan interval, registration and catering flows around theatre operations."
+      ]
     },
     {
       "id": "resorts-world-ballroom",
@@ -1134,7 +1287,23 @@
       "imageSourceUrl": "https://www.rwsentosa.com/en/meetings",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "reference",
+      "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The ballroom sits within the broader Resorts World Sentosa MICE ecosystem, which is undergoing renewed event-space development in 2026.",
+      "bestFor": [
+        "Conferences",
+        "Gala dinners",
+        "Exhibitions",
+        "Destination corporate events"
+      ],
+      "planningConsiderations": [
+        "Request the current 2026 floor plan because ballroom configurations may have changed.",
+        "Confirm whether adjacent foyer or convention spaces are included.",
+        "Coordinate hotel, attraction and dining components as part of one delegate journey."
+      ]
     },
     {
       "id": "adventure-cove-waterpark",
@@ -1205,7 +1374,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "cloud-9-piazza",
@@ -1276,7 +1452,14 @@
       "imageSourceUrl": "https://www.jewelchangiairport.com/en/venue-hire.html",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "marina-barrage",
@@ -1364,7 +1547,14 @@
       "imageSourceUrl": "https://www.pub.gov.sg/public/places-of-interest/marina-barrage",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "suntec-convention-centre",
@@ -1373,6 +1563,16 @@
       "address": "1 Raffles Boulevard, Singapore 039593",
       "website": "https://www.suntecsingapore.com/",
       "spaces": [
+        {
+          "name": "Level 6 Auditorium",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": 4200,
+          "classroom": null,
+          "note": "Official public benchmark"
+        },
         {
           "name": "Convention Hall",
           "areaSqm": 10000,
@@ -1414,7 +1614,7 @@
           "note": "Open-air"
         }
       ],
-      "maxCapacity": 3000,
+      "maxCapacity": 4200,
       "maxAreaSqm": 10000,
       "eventTypes": [
         "Conference / seminar",
@@ -1433,21 +1633,37 @@
       ],
       "primaryType": "Convention / exhibition",
       "image": "/singapore-event-venue-finder/assets/venues/suntec-convention-centre.webp",
-      "publicNote": "Convention / exhibition in Marina Bay with 4 recorded event spaces. Suntec Ballroom supports up to 3,000 guests in theatre format. Planning tags include conference / seminar, exhibition / immersive and pop-up / market / activation. Capacity depends on the selected space and event layout.",
+      "publicNote": "Convention / exhibition in Marina Bay with 5 recorded event spaces. Level 6 Auditorium supports up to 4,200 guests in theatre format. Planning tags include conference / seminar, exhibition / immersive and pop-up / market / activation. Capacity depends on the selected space and event layout.",
       "imageMode": "official",
       "lat": 1.2935792,
       "lng": 103.8566452,
       "capacityBasis": {
-        "space": "Suntec Ballroom",
+        "space": "Level 6 Auditorium",
         "layout": "theatre",
-        "capacity": 3000
+        "capacity": 4200
       },
       "sourceUrl": "https://www.suntecsingapore.com/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "https://www.suntecsingapore.com/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.suntecsingapore.com/floor-plans",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "Suntec provides central-city convention halls, meeting rooms and auditorium configurations with established MICE services.",
+      "bestFor": [
+        "Conferences",
+        "Exhibitions",
+        "Corporate plenaries",
+        "Product launches"
+      ],
+      "planningConsiderations": [
+        "Match the capacity to the exact level and hall combination.",
+        "Plan loading, registration and vertical guest movement around other activity in the centre.",
+        "Confirm included AV infrastructure versus temporary production scope."
+      ]
     },
     {
       "id": "zouk-singapore",
@@ -1537,7 +1753,14 @@
       "imageSourceUrl": "https://zoukgroup.com/singapore/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "sands-theatre-mbs",
@@ -1607,7 +1830,14 @@
       "imageSourceUrl": "https://sg.news.yahoo.com/sands-theatre-at-marina-bay-sands-to-welcome-guests-again-with-back-to-live-concerts-070922415.html",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "medium"
+      "dataConfidence": "medium",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "ocbc-square",
@@ -1670,7 +1900,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "s-e-a-aquarium",
@@ -1694,7 +1931,7 @@
           "areaSqm": 900,
           "ceilingM": 10,
           "banquet": 300,
-          "cocktail": 1000,
+          "cocktail": null,
           "theatre": null,
           "classroom": null,
           "note": "World's largest aquarium window as backdrop"
@@ -1714,13 +1951,13 @@
           "areaSqm": null,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 2000,
+          "cocktail": null,
           "theatre": null,
           "classroom": null,
           "note": ""
         }
       ],
-      "maxCapacity": 2000,
+      "maxCapacity": 400,
       "maxAreaSqm": 900,
       "eventTypes": [
         "Product / brand launch",
@@ -1742,21 +1979,37 @@
       ],
       "primaryType": "Attraction / theme park",
       "image": "/singapore-event-venue-finder/assets/venues/s-e-a-aquarium.webp",
-      "publicNote": "Attraction / theme park in Sentosa with 4 recorded event spaces. Full Aquarium Buyout supports up to 2,000 guests in cocktail format. Planning tags include product / brand launch, gala / dinner and wedding. Capacity depends on the selected space and event layout.",
+      "publicNote": "Attraction / theme park in Sentosa with 4 recorded event spaces. Ocean Gallery supports up to 400 guests in cocktail format. Planning tags include product / brand launch, gala / dinner and wedding. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.2556955,
       "lng": 103.8202156,
       "capacityBasis": {
-        "space": "Full Aquarium Buyout",
+        "space": "Ocean Gallery",
         "layout": "cocktail",
-        "capacity": 2000
+        "capacity": 400
       },
       "sourceUrl": "https://rwsentosa.com/en/attractions/sea-aquarium",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The Ocean Gallery creates an immersive aquarium backdrop for dinners and receptions within Resorts World Sentosa.",
+      "bestFor": [
+        "Cocktail receptions",
+        "Private dinners",
+        "VIP events",
+        "Immersive brand experiences"
+      ],
+      "planningConsiderations": [
+        "Use the specific Ocean Gallery capacity rather than a whole-attraction attendance estimate.",
+        "Confirm restrictions on lighting, sound, decor and animal-welfare-sensitive production.",
+        "Plan arrival timing and guest movement through the attraction."
+      ]
     },
     {
       "id": "science-centre-singapore",
@@ -1765,6 +2018,16 @@
       "address": "15 Science Centre Road, Singapore 609081",
       "website": "https://science.edu.sg/",
       "spaces": [
+        {
+          "name": "Marquee",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": 800,
+          "classroom": null,
+          "note": "Official public benchmark"
+        },
         {
           "name": "Atrium",
           "areaSqm": 800,
@@ -1810,13 +2073,13 @@
           "areaSqm": null,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 2000,
+          "cocktail": null,
           "theatre": null,
           "classroom": null,
           "note": ""
         }
       ],
-      "maxCapacity": 2000,
+      "maxCapacity": 800,
       "maxAreaSqm": 2000,
       "eventTypes": [
         "Product / brand launch",
@@ -1836,21 +2099,37 @@
       ],
       "primaryType": "Attraction / theme park",
       "image": "/singapore-event-venue-finder/assets/venues/science-centre-singapore.webp",
-      "publicNote": "Attraction / theme park in One-North / West with 5 recorded event spaces. Full Centre Buyout supports up to 2,000 guests in cocktail format. Planning tags include product / brand launch, gala / dinner and team building / family day. Capacity depends on the selected space and event layout.",
+      "publicNote": "Attraction / theme park in One-North / West with 6 recorded event spaces. Marquee supports up to 800 guests in theatre format. Planning tags include product / brand launch, gala / dinner and team building / family day. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.3328969,
       "lng": 103.7359933,
       "capacityBasis": {
-        "space": "Full Centre Buyout",
-        "layout": "cocktail",
-        "capacity": 2000
+        "space": "Marquee",
+        "layout": "theatre",
+        "capacity": 800
       },
       "sourceUrl": "https://science.edu.sg/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.science.edu.sg/visit-us/for-corporate-groups/corporate-events",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "Science Centre Singapore supports educational, family-day and corporate formats with interactive attractions and distinctive event settings.",
+      "bestFor": [
+        "Family days",
+        "Educational events",
+        "Team building",
+        "Product launches"
+      ],
+      "planningConsiderations": [
+        "Confirm whether galleries or attractions remain public during the event.",
+        "Plan programme timing around interactive experiences rather than treating the site as a blank hall.",
+        "Check catering, weather cover and guest movement for outdoor or marquee formats."
+      ]
     },
     {
       "id": "esplanade-theatres-on-the-bay",
@@ -1865,7 +2144,7 @@
           "ceilingM": null,
           "banquet": null,
           "cocktail": null,
-          "theatre": 1943,
+          "theatre": 1825,
           "classroom": null,
           "note": "Seated concert hall"
         },
@@ -1875,7 +2154,7 @@
           "ceilingM": null,
           "banquet": null,
           "cocktail": null,
-          "theatre": 1990,
+          "theatre": null,
           "classroom": null,
           "note": "Proscenium theatre"
         },
@@ -1900,7 +2179,7 @@
           "note": "Exhibition/foyer"
         }
       ],
-      "maxCapacity": 1990,
+      "maxCapacity": 1825,
       "maxAreaSqm": 1990,
       "eventTypes": [
         "Exhibition / immersive",
@@ -1918,21 +2197,37 @@
       ],
       "primaryType": "Theatre / performance",
       "image": "/singapore-event-venue-finder/assets/venues/esplanade-theatres-on-the-bay.webp",
-      "publicNote": "Theatre / performance in Marina Bay with 4 recorded event spaces. Theatre supports up to 1,990 guests in theatre format. Planning tags include exhibition / immersive, performance / concert and pop-up / market / activation. Capacity depends on the selected space and event layout.",
+      "publicNote": "Theatre / performance in Marina Bay with 4 recorded event spaces. Concert Hall supports up to 1,825 guests in theatre format. Planning tags include exhibition / immersive, performance / concert and pop-up / market / activation. Capacity depends on the selected space and event layout.",
       "imageMode": "official",
       "lat": 1.2900182,
       "lng": 103.8545878,
       "capacityBasis": {
-        "space": "Theatre",
+        "space": "Concert Hall",
         "layout": "theatre",
-        "capacity": 1990
+        "capacity": 1825
       },
       "sourceUrl": "https://www.esplanade.com/visit-esplanade/venues-and-spaces/venues/concert-hall",
       "sourceType": "Official venue website",
       "imageSourceUrl": "https://www.esplanade.com/visit-esplanade/venues-and-spaces/venues/concert-hall",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.esplanade.com/visit-esplanade/venues-and-spaces/venues/concert-hall",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "Esplanade offers purpose-built performance halls and public-facing cultural spaces in a prominent Marina Bay waterfront location.",
+      "bestFor": [
+        "Concerts",
+        "Stage presentations",
+        "Awards ceremonies",
+        "Cultural events"
+      ],
+      "planningConsiderations": [
+        "Confirm whether gallery seats are being opened when using the maximum capacity.",
+        "Review stage, orchestra, acoustic and technical requirements with the venue production team.",
+        "Plan foyer activity and public circulation around the wider arts centre."
+      ]
     },
     {
       "id": "quayside-isle",
@@ -2003,7 +2298,14 @@
       "imageSourceUrl": "https://axisarch.com.sg/axis-architecture/quayside-isle-sentosa-cove",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "hilton-singapore-orchard",
@@ -2017,8 +2319,8 @@
           "areaSqm": 1250,
           "ceilingM": 6.8,
           "banquet": 800,
-          "cocktail": 1500,
-          "theatre": 1350,
+          "cocktail": null,
+          "theatre": 1000,
           "classroom": 700,
           "note": "Pillarless, divisible into 5"
         },
@@ -2113,7 +2415,7 @@
           "note": "Boardroom-18"
         }
       ],
-      "maxCapacity": 1500,
+      "maxCapacity": 1000,
       "maxAreaSqm": 1250,
       "eventTypes": [
         "Product / brand launch",
@@ -2133,21 +2435,37 @@
       ],
       "primaryType": "Hotel",
       "image": "/singapore-event-venue-finder/assets/venues/hilton-singapore-orchard.webp",
-      "publicNote": "Hotel in Orchard / Tanglin with 10 recorded event spaces. Grand Ballroom supports up to 1,500 guests in cocktail format. Planning tags include product / brand launch, corporate event and conference / seminar. Capacity depends on the selected space and event layout.",
+      "publicNote": "Hotel in Orchard / Tanglin with 10 recorded event spaces. Grand Ballroom supports up to 1,000 guests in theatre format. Planning tags include product / brand launch, corporate event and conference / seminar. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.3019079,
       "lng": 103.8359161,
       "capacityBasis": {
         "space": "Grand Ballroom",
-        "layout": "cocktail",
-        "capacity": 1500
+        "layout": "theatre",
+        "capacity": 1000
       },
       "sourceUrl": "https://hilton.com/sinorhi",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.hilton.com/en/hotels/sinorhi-hilton-singapore-orchard/events/",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The Orchard hotel provides a large ballroom and multiple breakout spaces in a central shopping and hospitality district.",
+      "bestFor": [
+        "Corporate conferences",
+        "Gala dinners",
+        "Weddings",
+        "Multi-room meetings"
+      ],
+      "planningConsiderations": [
+        "Compare ballroom capacity after stage, production and catering footprints are deducted.",
+        "Use the breakout-room inventory to plan concurrent sessions.",
+        "Confirm hotel arrival, parking and supplier access during peak Orchard periods."
+      ]
     },
     {
       "id": "hotel-michael",
@@ -2223,7 +2541,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "tanjong-beach",
@@ -2284,7 +2609,14 @@
       "imageSourceUrl": "https://www.sentosa.com.sg/en/things-to-do/attractions/tanjong-beach/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "the-ritz-carlton-millenia-singapore",
@@ -2404,7 +2736,23 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.ritzcarlton.com/en/hotels/sinrz-the-ritz-carlton-millenia-singapore/events/",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The Marina Bay hotel provides a pillarless ballroom, smaller rooms and indoor-outdoor event options for premium corporate and social programmes.",
+      "bestFor": [
+        "Gala dinners",
+        "Corporate meetings",
+        "Luxury weddings",
+        "Product launches"
+      ],
+      "planningConsiderations": [
+        "Different official pages publish different capacities by layout; use the exact event format.",
+        "Confirm which LED walls and in-house production elements are included.",
+        "Check foyer and service circulation when combining reception and dinner programmes."
+      ]
     },
     {
       "id": "artscience-museum",
@@ -2414,11 +2762,21 @@
       "website": "https://marinabaysands.com/museum",
       "spaces": [
         {
+          "name": "Basement 2 Circulation",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 250,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official public benchmark"
+        },
+        {
           "name": "Whole Museum Buyout",
           "areaSqm": 6800,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 1200,
+          "cocktail": null,
           "theatre": null,
           "classroom": null,
           "note": "Entire lotus museum"
@@ -2448,7 +2806,7 @@
           "areaSqm": 865,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 500,
+          "cocktail": null,
           "theatre": null,
           "classroom": null,
           "note": "20m x 20m projection"
@@ -2458,7 +2816,7 @@
           "areaSqm": 1000,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 400,
+          "cocktail": null,
           "theatre": null,
           "classroom": null,
           "note": "Lily pond view"
@@ -2468,7 +2826,7 @@
           "areaSqm": 4000,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 500,
+          "cocktail": null,
           "theatre": null,
           "classroom": null,
           "note": "Future World + Rainbow Room"
@@ -2484,7 +2842,7 @@
           "note": ""
         }
       ],
-      "maxCapacity": 1200,
+      "maxCapacity": 250,
       "maxAreaSqm": 6800,
       "eventTypes": [
         "Product / brand launch",
@@ -2503,21 +2861,37 @@
       ],
       "primaryType": "Museum / gallery",
       "image": "/singapore-event-venue-finder/assets/venues/artscience-museum.webp",
-      "publicNote": "Museum / gallery in Marina Bay with 7 recorded event spaces. Whole Museum Buyout supports up to 1,200 guests in cocktail format. Planning tags include product / brand launch, conference / seminar and cocktail / reception. Capacity depends on the selected space and event layout.",
+      "publicNote": "Museum / gallery in Marina Bay with 8 recorded event spaces. Basement 2 Circulation supports up to 250 guests in cocktail format. Planning tags include product / brand launch, conference / seminar and cocktail / reception. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.2861382,
       "lng": 103.8592297,
       "capacityBasis": {
-        "space": "Whole Museum Buyout",
+        "space": "Basement 2 Circulation",
         "layout": "cocktail",
-        "capacity": 1200
+        "capacity": 250
       },
       "sourceUrl": "https://marinabaysands.com/museum",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.marinabaysands.com/museum/about-us/services/venue-rental.html",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "ArtScience Museum offers design-led museum spaces for smaller receptions, launches and private functions rather than conventional large hall formats.",
+      "bestFor": [
+        "Product launches",
+        "Cocktail receptions",
+        "Press events",
+        "Private cultural functions"
+      ],
+      "planningConsiderations": [
+        "Use the published rental space capacity rather than overall museum visitor numbers.",
+        "Confirm exhibition access, operating hours and installation restrictions.",
+        "Plan branding and production to respect museum finishes and visitor routes."
+      ]
     },
     {
       "id": "grand-copthorne-waterfront",
@@ -2640,7 +3014,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "grand-hyatt-singapore",
@@ -2726,7 +3107,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "national-museum-of-singapore",
@@ -2833,7 +3221,23 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "reference",
+      "capacitySourceUrl": "https://www.nhb.gov.sg/nationalmuseum/venue-rental",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The museum provides heritage architecture, gallery-adjacent areas, a theatre and smaller function spaces in the Civic District.",
+      "bestFor": [
+        "Cultural events",
+        "Corporate receptions",
+        "Talks and screenings",
+        "Brand heritage programmes"
+      ],
+      "planningConsiderations": [
+        "Confirm the current venue-rental toolkit and individual-space capacity.",
+        "Review exhibition, conservation, decor and food-service restrictions.",
+        "Plan public access, security and installation work around museum operations."
+      ]
     },
     {
       "id": "shangri-la-singapore",
@@ -2848,7 +3252,7 @@
           "ceilingM": 7.3,
           "banquet": 700,
           "cocktail": 1200,
-          "theatre": 1100,
+          "theatre": 1400,
           "classroom": 600,
           "note": "Pillarless, divisible into 3"
         },
@@ -2943,7 +3347,7 @@
           "note": "Outdoor poolside"
         }
       ],
-      "maxCapacity": 1200,
+      "maxCapacity": 1400,
       "maxAreaSqm": 1044,
       "eventTypes": [
         "Product / brand launch",
@@ -2964,21 +3368,37 @@
       ],
       "primaryType": "Hotel",
       "image": "/singapore-event-venue-finder/assets/venues/shangri-la-singapore.webp",
-      "publicNote": "Hotel in Orchard / Tanglin with 10 recorded event spaces. Island Ballroom supports up to 1,200 guests in cocktail format. Planning tags include product / brand launch, conference / seminar and gala / dinner. Capacity depends on the selected space and event layout.",
+      "publicNote": "Hotel in Orchard / Tanglin with 10 recorded event spaces. Island Ballroom supports up to 1,400 guests in theatre format. Planning tags include product / brand launch, conference / seminar and gala / dinner. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.311479,
       "lng": 103.8264448,
       "capacityBasis": {
         "space": "Island Ballroom",
-        "layout": "cocktail",
-        "capacity": 1200
+        "layout": "theatre",
+        "capacity": 1400
       },
       "sourceUrl": "https://shangri-la.com/singapore",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.shangri-la.com/singapore/shangrila/meetings-events/event-spaces/",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "Shangri-La Singapore combines large ballrooms, extensive breakout options, hotel rooms and landscaped surroundings in the Orchard area.",
+      "bestFor": [
+        "Large conferences",
+        "Gala dinners",
+        "Weddings",
+        "Multi-day programmes"
+      ],
+      "planningConsiderations": [
+        "Theatre, reception and banquet capacities differ materially; confirm the actual layout.",
+        "Review foyer, registration and breakout requirements alongside the main ballroom.",
+        "Plan transport for guests who are not staying at the hotel."
+      ]
     },
     {
       "id": "ce-la-vi",
@@ -3072,7 +3492,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "equarius-ballroom",
@@ -3164,7 +3591,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "jw-marriott-singapore-south-beach",
@@ -3285,7 +3719,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "tanjong-beach-club",
@@ -3370,7 +3811,14 @@
       "imageSourceUrl": "https://www.tanjongbeachclub.com/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "the-westin-singapore",
@@ -3380,12 +3828,22 @@
       "website": "https://marriott.com/SINWI",
       "spaces": [
         {
+          "name": "Grand Ballroom",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": 600,
+          "classroom": null,
+          "note": "Official public benchmark"
+        },
+        {
           "name": "Westin Grand Ballroom",
           "areaSqm": 950,
           "ceilingM": 4.7,
           "banquet": 600,
-          "cocktail": 1000,
-          "theatre": 900,
+          "cocktail": null,
+          "theatre": null,
           "classroom": 500,
           "note": "Level 32, pillarless, divisible into 3"
         },
@@ -3460,7 +3918,7 @@
           "note": ""
         }
       ],
-      "maxCapacity": 1000,
+      "maxCapacity": 600,
       "maxAreaSqm": 950,
       "eventTypes": [
         "Product / brand launch",
@@ -3481,21 +3939,37 @@
       ],
       "primaryType": "Hotel",
       "image": "/singapore-event-venue-finder/assets/venues/the-westin-singapore.webp",
-      "publicNote": "Hotel in CBD / Tanjong Pagar with 8 recorded event spaces. Westin Grand Ballroom supports up to 1,000 guests in cocktail format. Planning tags include product / brand launch, corporate event and conference / seminar. Capacity depends on the selected space and event layout.",
+      "publicNote": "Hotel in CBD / Tanjong Pagar with 9 recorded event spaces. Grand Ballroom supports up to 600 guests in theatre format. Planning tags include product / brand launch, corporate event and conference / seminar. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.2783073,
       "lng": 103.8507952,
       "capacityBasis": {
-        "space": "Westin Grand Ballroom",
-        "layout": "cocktail",
-        "capacity": 1000
+        "space": "Grand Ballroom",
+        "layout": "theatre",
+        "capacity": 600
       },
       "sourceUrl": "https://marriott.com/SINWI",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.marriott.com/en-us/hotels/sinwi-the-westin-singapore/events/",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The CBD hotel supports mid-sized corporate events with ballroom, meeting-room and high-floor hospitality infrastructure.",
+      "bestFor": [
+        "Corporate meetings",
+        "Conferences",
+        "Dinners",
+        "Executive events"
+      ],
+      "planningConsiderations": [
+        "Use the current official 600-person maximum rather than older third-party records.",
+        "Confirm lift and loading access for production equipment.",
+        "Plan arrival flows around weekday CBD traffic and office peaks."
+      ]
     },
     {
       "id": "fairmont-singapore",
@@ -3580,7 +4054,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "pan-pacific-singapore",
@@ -3704,7 +4185,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "the-capitol-kempinski",
@@ -3798,7 +4286,14 @@
       "imageSourceUrl": "https://www.kempinski.com/en/the-capitol-singapore",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "conrad-centennial-singapore",
@@ -3940,7 +4435,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "conrad-singapore-orchard",
@@ -4063,7 +4565,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "fullerton-bay-clifford-pier",
@@ -4182,7 +4691,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "national-gallery-singapore",
@@ -4299,7 +4815,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "parkroyal-collection-pickering",
@@ -4413,7 +4936,14 @@
       "imageSourceUrl": "https://www.panpacific.com/en/hotels-and-resorts/pr-collection-pickering.html",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "palawan-beach",
@@ -4496,7 +5026,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "sensoryscape",
@@ -4565,7 +5102,14 @@
       "imageSourceUrl": "https://www.sentosa.com.sg/en/things-to-do/attractions/sensoryscape",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "singapore-flyer",
@@ -4658,7 +5202,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "sofitel-singapore-sentosa-resort-spa",
@@ -4761,7 +5312,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "swiss-tel-the-stamford",
@@ -4847,7 +5405,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "1-altitude-coast",
@@ -4933,7 +5498,14 @@
       "imageSourceUrl": "https://1-altitudecoast.sg/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "1-atico",
@@ -5016,7 +5588,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "mandarin-oriental-singapore",
@@ -5140,7 +5719,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "rumours-beach-club",
@@ -5214,7 +5800,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "wheeler-s-estate",
@@ -5296,7 +5889,14 @@
       "imageSourceUrl": "https://danielfooddiary.com/2016/12/22/wheelersestate/",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "dusit-thani-laguna-singapore",
@@ -5385,7 +5985,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "one-farrer-hotel",
@@ -5475,7 +6082,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "singapore-marriott-tang-plaza-hotel",
@@ -5560,7 +6174,14 @@
       "imageSourceUrl": "https://www.marriott.com/en-us/hotels/sindt-singapore-marriott-tang-plaza-hotel/photos/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "st-regis-singapore",
@@ -5645,7 +6266,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "amara-singapore",
@@ -5758,7 +6386,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "chijmes-hall",
@@ -5831,7 +6466,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "intercontinental-singapore",
@@ -5954,7 +6596,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "marquee-singapore",
@@ -6013,7 +6662,14 @@
       "imageSourceUrl": "https://www.marinabaysands.com/nightlife/marquee-singapore.html",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "shangri-la-rasa-sentosa",
@@ -6123,7 +6779,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "sofitel-singapore-city-centre",
@@ -6226,7 +6889,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "the-alkaff-mansion",
@@ -6309,7 +6979,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "w-singapore-sentosa-cove",
@@ -6407,7 +7084,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "four-seasons-hotel-singapore",
@@ -6493,7 +7177,14 @@
       "imageSourceUrl": "https://www.fourseasons.com/singapore/meetings-and-events/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "ola-beach-club",
@@ -6567,7 +7258,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "raffles-singapore",
@@ -6724,7 +7422,23 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "reference",
+      "capacitySourceUrl": "https://www.raffles.com/singapore/meetings-events/",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "The heritage hotel offers premium ballrooms and function rooms suited to formal corporate and social occasions in the Civic District.",
+      "bestFor": [
+        "Luxury dinners",
+        "Corporate receptions",
+        "Weddings",
+        "VIP events"
+      ],
+      "planningConsiderations": [
+        "Confirm the current room chart and layout because heritage spaces have distinct usable dimensions.",
+        "Coordinate production design with the protected architectural character.",
+        "Review supplier access and service routes before finalising the event layout."
+      ]
     },
     {
       "id": "asian-civilisations-museum",
@@ -6811,7 +7525,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "foc-sentosa",
@@ -6883,7 +7604,14 @@
       "imageSourceUrl": "https://www.sentosa.com.sg/en/things-to-do/dining/foc-sentosa/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "goodwood-park-hotel",
@@ -6970,7 +7698,14 @@
       "imageSourceUrl": "https://www.goodwoodparkhotel.com/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "hard-rock-hotel-singapore",
@@ -7044,7 +7779,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "joaquim-hall",
@@ -7103,7 +7845,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "lazarus-island",
@@ -7163,7 +7912,14 @@
       "imageSourceUrl": "https://en.wikipedia.org/wiki/Lazarus_Island",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "medium"
+      "dataConfidence": "medium",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "one15-marina-sentosa-cove",
@@ -7261,7 +8017,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "orchard-hotel-singapore",
@@ -7346,7 +8109,14 @@
       "imageSourceUrl": "https://www.millenniumhotels.com/en/meetings-events/asia/singapore/orchard-hotel-singapore/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "pan-pacific-orchard-singapore",
@@ -7452,7 +8222,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "peranakan-museum",
@@ -7538,7 +8315,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "resorts-world-convention-centre",
@@ -7617,7 +8401,14 @@
       "imageSourceUrl": "https://www.rwsentosa.com/en/meetings",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "singapore-chinese-cultural-centre",
@@ -7699,7 +8490,14 @@
       "imageSourceUrl": "https://singaporeccc.org.sg/venue-hire/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "holiday-inn-singapore-orchard-city-centre",
@@ -7800,7 +8598,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "level33",
@@ -7904,7 +8709,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "saf-yacht-club",
@@ -7993,7 +8805,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "sentosa-golf-club",
@@ -8089,7 +8908,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "village-hotel-sentosa",
@@ -8172,7 +8998,14 @@
       "imageSourceUrl": "https://www.villagehotels.asia/en/hotels/village-hotel-sentosa",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "amara-sanctuary-resort-sentosa",
@@ -8270,7 +9103,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "capella-singapore",
@@ -8405,7 +9245,23 @@
       "imageSourceUrl": "https://capellahotels.com/en/capella-singapore",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": true,
+      "capacityAuditStatus": "reference",
+      "capacitySourceUrl": "https://capellahotels.com/en/en/capella-singapore/meetings-and-events",
+      "auditReviewedAt": "2026-06-20",
+      "auditSummary": "Capella combines a premium ballroom, heritage rooms and lawns in a low-density Sentosa resort setting.",
+      "bestFor": [
+        "Luxury weddings",
+        "VIP events",
+        "Brand dinners",
+        "Indoor-outdoor programmes"
+      ],
+      "planningConsiderations": [
+        "Confirm current ballroom and lawn capacities directly because public room data may vary by event type.",
+        "Plan wet-weather movement between indoor and outdoor components.",
+        "Review transport and guest arrival arrangements for destination-style programmes."
+      ]
     },
     {
       "id": "changi-experience-studio",
@@ -8454,7 +9310,14 @@
       "imageSourceUrl": "https://www.jewelchangiairport.com/en/attractions/ces.html",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "coastes-sentosa",
@@ -8527,7 +9390,14 @@
       "imageSourceUrl": "https://www.coastes.com/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "lavo",
@@ -8611,7 +9481,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "canopy-changi-village",
@@ -8705,7 +9582,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "mount-faber-peak",
@@ -8798,7 +9682,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "the-summerhouse",
@@ -8881,7 +9772,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "trapizza",
@@ -8953,7 +9851,14 @@
       "imageSourceUrl": "https://www.shangri-la.com/singapore/rasasentosaresort/dining/restaurants/trapizza/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "andaz-singapore",
@@ -9077,7 +9982,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "equarius-hotel",
@@ -9151,7 +10063,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "monti",
@@ -9233,7 +10152,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "southside",
@@ -9282,7 +10208,14 @@
       "imageSourceUrl": "https://www.1000meetings.com.sg/meeting-destination/31596/southside-sentosa/",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "medium"
+      "dataConfidence": "medium",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "the-warehouse-hotel",
@@ -9371,7 +10304,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "ifly-singapore",
@@ -9431,7 +10371,14 @@
       "imageSourceUrl": "https://altitudex.com/sg/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "mykonos-on-the-bay",
@@ -9504,7 +10451,14 @@
       "imageSourceUrl": "https://eatbook.sg/quayside-isle-sentosa-cove-restaurants/",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "atlas",
@@ -9576,7 +10530,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "oasia-resort-sentosa",
@@ -9662,7 +10623,14 @@
       "imageSourceUrl": "https://www.oasiahotels.com/en/singapore/hotels/oasia-resort-sentosa",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "old-parliament-house",
@@ -9742,7 +10710,14 @@
       "imageSourceUrl": "https://www.artshousegroup.sg/tah",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "ps-cafe-harding-road",
@@ -9803,7 +10778,14 @@
       "imageSourceUrl": "https://www.pscafe.com/pscafe-at-harding-road",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "festive-hotel",
@@ -9878,7 +10860,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "black-white-house",
@@ -9961,7 +10950,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "padang-deck",
@@ -10024,7 +11020,14 @@
       "imageSourceUrl": "https://www.monti.sg/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "stpi-creative-workshop",
@@ -10098,7 +11101,14 @@
       "imageSourceUrl": "https://www.stpi.com.sg/about",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "edition-singapore",
@@ -10195,7 +11205,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "the-barracks-hotel-sentosa",
@@ -10277,7 +11294,14 @@
       "imageSourceUrl": "https://www.thebarrackshotel.com.sg/",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "the-outpost-hotel-sentosa",
@@ -10363,7 +11387,14 @@
       "imageSourceUrl": "https://www.theoutposthotel.com.sg/en/amenities/pool-deck",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "claudine",
@@ -10433,7 +11464,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "skyhelix-sentosa",
@@ -10494,7 +11532,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "royal-albatross",
@@ -10569,7 +11614,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "arden",
@@ -10643,7 +11695,14 @@
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "beach-villas-rws",
@@ -10727,7 +11786,14 @@
       "imageSourceUrl": "https://www.rwsentosa.com/en/stay/equarius-villas",
       "imageSourceType": "official",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "high"
+      "dataConfidence": "high",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     },
     {
       "id": "raffles-sentosa-singapore",
@@ -10786,7 +11852,14 @@
       "imageSourceUrl": "https://luxuryescapes.com/au/partner/raffles-sentosa-singapore/048a3550-7451-495f-964a-d9ad09a11d2d",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-20",
-      "dataConfidence": "medium"
+      "dataConfidence": "medium",
+      "featuredDetail": false,
+      "capacityAuditStatus": "curated",
+      "capacitySourceUrl": "",
+      "auditReviewedAt": null,
+      "auditSummary": "",
+      "bestFor": [],
+      "planningConsiderations": []
     }
   ],
   "methodology": "Records are curated from ACT Creative's venue index and checked against public venue or reference sources. Capacity values describe the largest recorded layout and are not booking guarantees."

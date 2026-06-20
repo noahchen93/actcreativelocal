@@ -958,6 +958,13 @@ h1 {
   font-weight: 850;
 }
 
+.source-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
 .compare-panel {
   margin: 12px 0;
   padding: 18px;
@@ -1331,6 +1338,261 @@ h1 {
   contain-intrinsic-size: 650px;
 }
 
+.venue-category-page .venue-summary h3 a:hover {
+  color: var(--accent);
+}
+
+.detail-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 22px 0 6px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.detail-breadcrumbs a:hover {
+  color: var(--accent);
+}
+
+.venue-detail-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+  padding: clamp(34px, 6vw, 86px) 0 44px;
+}
+
+.venue-detail-copy h1 {
+  max-width: 900px;
+  margin-bottom: 20px;
+}
+
+.venue-detail-copy .lede {
+  max-width: 760px;
+}
+
+.venue-detail-address {
+  margin: 18px 0 0;
+  color: var(--text-dim);
+}
+
+.venue-detail-image {
+  margin: 0;
+}
+
+.venue-detail-image img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+}
+
+.venue-detail-image figcaption {
+  margin-top: 8px;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.capacity-audit-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.75fr) auto;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 16px;
+  padding: 24px;
+  border: 1px solid var(--line-accent);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(125deg, rgba(204, 255, 0, 0.11), transparent 48%),
+    var(--panel);
+}
+
+.capacity-audit-card h2 {
+  margin: 5px 0 9px;
+  font-size: clamp(25px, 3vw, 38px);
+}
+
+.capacity-audit-card p {
+  max-width: 780px;
+  margin: 0;
+  color: var(--text-dim);
+}
+
+.capacity-audit-card dl {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+}
+
+.capacity-audit-card dl div {
+  display: grid;
+  gap: 2px;
+}
+
+.capacity-audit-card dt {
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.capacity-audit-card dd {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.detail-section {
+  margin-top: 16px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.detail-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.detail-section-heading h2,
+.detail-panel h2 {
+  margin: 5px 0 0;
+  font-size: clamp(25px, 3vw, 38px);
+}
+
+.detail-section-heading > p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.space-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.venue-detail-page .space-table {
+  width: 100%;
+  min-width: 660px;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+}
+
+.venue-detail-page .space-table th,
+.venue-detail-page .space-table td {
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  font-size: 12px;
+}
+
+.venue-detail-page .space-table th:first-child {
+  text-align: left;
+}
+
+.venue-detail-page .space-table thead th {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.venue-detail-page .space-table tbody tr:last-child th,
+.venue-detail-page .space-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.detail-two-column {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.detail-panel {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.detail-check-list {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-check-list li {
+  position: relative;
+  padding: 12px 12px 12px 38px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.detail-check-list li::before {
+  position: absolute;
+  top: 11px;
+  left: 13px;
+  color: var(--accent);
+  content: "✓";
+  font-weight: 900;
+}
+
+.related-venue-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.related-venue-card {
+  display: grid;
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.related-venue-card:hover {
+  border-color: var(--line-accent);
+  transform: translateY(-2px);
+}
+
+.related-venue-card img {
+  width: 100%;
+  aspect-ratio: 21 / 13;
+  margin-bottom: 7px;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 4px);
+}
+
+.related-venue-card span,
+.related-venue-card small {
+  color: var(--text-muted);
+  font-size: 10px;
+}
+
+.related-venue-card strong {
+  font-size: 15px;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -1404,6 +1666,15 @@ footer {
     position: static;
     max-height: none;
     overflow: visible;
+  }
+
+  .venue-detail-hero,
+  .capacity-audit-card {
+    grid-template-columns: 1fr;
+  }
+
+  .venue-detail-image {
+    order: -1;
   }
 }
 
@@ -1485,6 +1756,16 @@ footer {
 
   .category-actions {
     grid-template-columns: 1fr;
+  }
+
+  .detail-two-column,
+  .related-venue-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .hero-stats {
@@ -1581,6 +1862,10 @@ footer {
     flex-direction: column;
   }
 
+  .source-links {
+    justify-content: flex-start;
+  }
+
   .map-footer,
   footer {
     flex-direction: column;
@@ -1613,6 +1898,12 @@ footer {
   .cta-panel {
     padding-left: 14px;
     padding-right: 14px;
+  }
+
+  .capacity-audit-card,
+  .detail-section,
+  .detail-panel {
+    padding: 18px 14px;
   }
 
   .topbar nav a {

@@ -97,7 +97,13 @@ function escapeHtml(value) {
 function capacityText(venue) {
   const basis = venue.capacityBasis;
   if (!basis?.capacity) return "Capacity requires source review";
-  return `Up to ${Number(basis.capacity).toLocaleString("en-SG")} guests · ${basis.layout} · ${basis.space}`;
+  const prefix =
+    venue.capacityAuditStatus === "official"
+      ? "Officially published"
+      : venue.capacityAuditStatus === "reference"
+        ? "Reference record"
+        : "Recorded";
+  return `${prefix}: up to ${Number(basis.capacity).toLocaleString("en-SG")} guests · ${basis.layout} · ${basis.space}`;
 }
 
 function score(venue) {
@@ -111,12 +117,15 @@ function score(venue) {
 
 function card(venue) {
   const source = venue.sourceUrl || venue.website || "";
+  const detailUrl = venue.featuredDetail
+    ? `/singapore-event-venues/${venue.id}/`
+    : "";
   return `
     <article class="venue-card" id="${escapeHtml(venue.id)}">
       <div class="venue-thumb">
         ${
           venue.image
-            ? `<img src="${escapeHtml(venue.image)}" alt="${escapeHtml(venue.name)} in ${escapeHtml(venue.area)}, Singapore" loading="lazy" decoding="async" width="560" height="350" />`
+            ? `${detailUrl ? `<a href="${escapeHtml(detailUrl)}" data-track-action="Reviewed venue opened" data-track-label="${escapeHtml(venue.id)}">` : ""}<img src="${escapeHtml(venue.image)}" alt="${escapeHtml(venue.name)} in ${escapeHtml(venue.area)}, Singapore" loading="lazy" decoding="async" width="560" height="350" />${detailUrl ? "</a>" : ""}`
             : `<div class="venue-location-card"><span>${escapeHtml(venue.area)}</span><strong>${escapeHtml(venue.name)}</strong><small>Location record</small></div>`
         }
         <span class="confidence-badge confidence-${escapeHtml(venue.dataConfidence)}">${venue.dataConfidence === "high" ? "Source-linked" : "Curated"}</span>
@@ -127,11 +136,14 @@ function card(venue) {
             <span class="tag accent">${escapeHtml(venue.primaryType)}</span>
             <span class="tag">${escapeHtml(venue.area)}</span>
           </div>
-          <h3>${escapeHtml(venue.name)}</h3>
+          <h3>${detailUrl ? `<a href="${escapeHtml(detailUrl)}" data-track-action="Reviewed venue opened" data-track-label="${escapeHtml(venue.id)}">${escapeHtml(venue.name)}</a>` : escapeHtml(venue.name)}</h3>
           <p class="venue-address">${escapeHtml(venue.address)}</p>
           <p class="venue-facts"><span>${escapeHtml(capacityText(venue))}</span></p>
           <p class="venue-note">${escapeHtml(venue.publicNote)}</p>
-          ${source ? `<a class="venue-site-link" href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${venue.sourceType === "Official venue website" ? "Open official venue site" : "Open public source"} ↗</a>` : ""}
+          <div class="source-links">
+            ${detailUrl ? `<a class="venue-site-link" href="${escapeHtml(detailUrl)}" data-track-action="Reviewed venue opened" data-track-label="${escapeHtml(venue.id)}">Open reviewed venue guide →</a>` : ""}
+            ${source ? `<a class="venue-site-link" href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer" data-track-action="Venue source opened" data-track-label="${escapeHtml(venue.id)}">${venue.sourceType === "Official venue website" ? "Open official venue site" : "Open public source"} ↗</a>` : ""}
+          </div>
         </div>
       </div>
     </article>`;
@@ -147,7 +159,9 @@ function renderGuide(guide) {
     "@type": "ListItem",
     position: index + 1,
     name: venue.name,
-    url: `${canonical}#${venue.id}`,
+    url: venue.featuredDetail
+      ? `https://actcreative.net/singapore-event-venues/${venue.id}/`
+      : `${canonical}#${venue.id}`,
   }));
 
   return `<!DOCTYPE html>
@@ -220,8 +234,17 @@ function renderGuide(guide) {
       2,
     )}
     </script>
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+      if (!["localhost", "127.0.0.1"].includes(window.location.hostname)) {
+        var insightsScript = document.createElement("script");
+        insightsScript.defer = true;
+        insightsScript.src = "/_vercel/insights/script.js";
+        document.head.appendChild(insightsScript);
+      }
+    </script>
   </head>
-  <body class="venue-category-page">
+  <body class="venue-category-page" data-page-type="venue-guide" data-guide-slug="${escapeHtml(guide.slug)}">
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="/" aria-label="ACT Creative home"><img src="/favicon-192.png" alt="ACT Creative logo" width="36" height="36" /><span>ACT Creative</span></a>
@@ -240,8 +263,8 @@ function renderGuide(guide) {
           <p>${escapeHtml(guide.planning)}</p>
         </section>
         <div class="category-actions">
-          <a class="button primary" href="/singapore-event-venue-finder/${guide.finderHash}">Open these filters in the venue finder</a>
-          <a class="button secondary" href="/singapore-event-venue-sourcing/#venue-brief-form">Request a reviewed shortlist</a>
+          <a class="button primary" href="/singapore-event-venue-finder/${guide.finderHash}" data-track-action="Filtered finder opened" data-track-label="${escapeHtml(guide.slug)}">Open these filters in the venue finder</a>
+          <a class="button secondary" href="/singapore-event-venue-sourcing/#venue-brief-form" data-track-action="Venue sourcing opened" data-track-label="${escapeHtml(guide.slug)}">Request a reviewed shortlist</a>
         </div>
         <section aria-labelledby="venue-list-title">
           <div class="result-header"><div><span class="section-kicker">Curated public records</span><h2 id="venue-list-title">${shown.length} venue options to compare</h2></div></div>
@@ -259,6 +282,7 @@ function renderGuide(guide) {
       <footer><span>&copy; 2026 ACT Creative Pte. Ltd. - Singapore</span><span><a href="/singapore-event-venue-finder/">Venue finder</a> · <a href="mailto:contact@actcreative.net">contact@actcreative.net</a></span></footer>
     </div>
     <script src="/inquiry-attribution.js" defer></script>
+    <script src="/venue-detail-tracking.js" defer></script>
   </body>
 </html>`;
 }
@@ -270,6 +294,7 @@ for (const guide of guides) {
     guide.slug,
   );
   await fs.mkdir(directory, { recursive: true });
-  await fs.writeFile(path.join(directory, "index.html"), renderGuide(guide));
+  const html = renderGuide(guide).replace(/[ \t]+$/gm, "");
+  await fs.writeFile(path.join(directory, "index.html"), html, "utf8");
   console.log(`Generated ${guide.slug}`);
 }

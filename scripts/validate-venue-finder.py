@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_PATH = ROOT / "public" / "singapore-event-venue-finder" / "venue-data.json"
 PAGE_PATH = ROOT / "public" / "singapore-event-venue-finder" / "index.html"
 OG_PATH = ROOT / "public" / "og" / "singapore-event-venue-finder.png"
+FEATURED_AUDIT_PATH = ROOT / "scripts" / "cache" / "featured-venue-audit.json"
 SEO_GUIDE_SLUGS = {
     "sentosa",
     "marina-bay",
@@ -50,6 +51,7 @@ NON_ENGLISH_OR_CORRUPT = re.compile(
 
 def main() -> None:
     dataset = json.loads(DATA_PATH.read_text(encoding="utf-8"))
+    featured_audit = json.loads(FEATURED_AUDIT_PATH.read_text(encoding="utf-8"))
     venues = dataset["venues"]
     errors: list[str] = []
     page_html = PAGE_PATH.read_text(encoding="utf-8")
@@ -65,6 +67,11 @@ def main() -> None:
         errors.append("mappedCount does not match mapped venues")
     if len({venue["id"] for venue in venues}) != len(venues):
         errors.append("venue IDs are not unique")
+    audited_venues = featured_audit.get("venues", [])
+    if len(audited_venues) != 20:
+        errors.append("featured venue audit must contain exactly 20 records")
+    if len({venue["id"] for venue in audited_venues}) != len(audited_venues):
+        errors.append("featured venue audit IDs are not unique")
 
     for venue in mapped:
         if not (1.15 <= venue["lat"] <= 1.48 and 103.58 <= venue["lng"] <= 104.12):
@@ -112,6 +119,8 @@ def main() -> None:
         errors.append("Vercel trailing-slash route is missing")
     if '"/singapore-event-venue-finder"' not in vercel_config:
         errors.append("Vercel non-trailing-slash route is missing")
+    if '"/singapore-event-venues/:slug/"' not in vercel_config:
+        errors.append("Generic venue detail Vercel route is missing")
 
     llms_text = (ROOT / "public" / "llms.txt").read_text(encoding="utf-8")
     expected_counts = (
@@ -136,12 +145,97 @@ def main() -> None:
         errors.append("Venue finder title does not use the maintainable 100+ count")
     if "What the venue information means" not in page_html:
         errors.append("Venue finder data methodology section is missing")
+    if "/_vercel/insights/script.js" not in page_html:
+        errors.append("Venue finder Vercel Analytics script is missing")
+    if 'window.va("event"' not in (
+        ROOT / "public" / "singapore-event-venue-finder" / "venue-finder.js"
+    ).read_text(encoding="utf-8"):
+        errors.append("Venue finder custom-event tracking is missing")
     public_data_text = DATA_PATH.read_text(encoding="utf-8")
     for invalid_name in {"Far East Hotel", "Plume Singapore Flyer", "LINO Forum"}:
         if invalid_name in public_data_text:
             errors.append(f"Unverified venue placeholder is still public: {invalid_name}")
 
     sitemap_text = (ROOT / "public" / "sitemap.xml").read_text(encoding="utf-8")
+    venues_by_id = {venue["id"]: venue for venue in venues}
+    for audited in audited_venues:
+        venue_id = audited["id"]
+        venue = venues_by_id.get(venue_id)
+        if not venue:
+            errors.append(f"Audited venue is missing from public data: {venue_id}")
+            continue
+        if not venue.get("featuredDetail"):
+            errors.append(f"Audited venue is not marked for a detail page: {venue_id}")
+        if venue.get("capacityAuditStatus") != audited.get("capacityStatus"):
+            errors.append(f"Capacity audit status is stale: {venue_id}")
+        if venue.get("auditReviewedAt") != featured_audit.get("reviewedAt"):
+            errors.append(f"Audit review date is stale: {venue_id}")
+        verified = audited.get("verifiedCapacity")
+        if verified and venue.get("capacityBasis") != verified:
+            errors.append(f"Official capacity basis does not match audit: {venue_id}")
+        if verified:
+            for space in venue.get("spaces", []):
+                for field in {"banquet", "cocktail", "theatre", "classroom"}:
+                    if (space.get(field) or 0) > verified["capacity"]:
+                        errors.append(
+                            f"Conflicting capacity exceeds the reviewed benchmark: "
+                            f"{venue_id} / {space.get('name')} / {field}"
+                        )
+            if verified.get("layout") in {
+                "banquet",
+                "cocktail",
+                "theatre",
+                "classroom",
+            }:
+                matching_spaces = [
+                    space
+                    for space in venue.get("spaces", [])
+                    if re.sub(r"[^a-z0-9]+", " ", space.get("name", "").lower()).strip()
+                    == re.sub(
+                        r"[^a-z0-9]+", " ", verified.get("space", "").lower()
+                    ).strip()
+                ]
+                if (
+                    not matching_spaces
+                    or matching_spaces[0].get(verified["layout"])
+                    != verified["capacity"]
+                ):
+                    errors.append(
+                        f"Reviewed benchmark space is missing from public data: {venue_id}"
+                    )
+
+        detail_path = (
+            ROOT / "public" / "singapore-event-venues" / venue_id / "index.html"
+        )
+        if not detail_path.is_file():
+            errors.append(f"Featured venue detail page is missing: {venue_id}")
+            continue
+        detail_html = detail_path.read_text(encoding="utf-8")
+        canonical = f"https://actcreative.net/singapore-event-venues/{venue_id}/"
+        if canonical not in detail_html:
+            errors.append(f"Featured venue canonical is missing: {venue_id}")
+        if canonical not in sitemap_text:
+            errors.append(f"Featured venue is missing from sitemap: {venue_id}")
+        if "/_vercel/insights/script.js" not in detail_html:
+            errors.append(f"Featured venue analytics script is missing: {venue_id}")
+        if "/venue-detail-tracking.js" not in detail_html:
+            errors.append(f"Featured venue conversion tracking is missing: {venue_id}")
+        json_ld_blocks = re.findall(
+            r'<script type="application/ld\+json">\s*(.*?)\s*</script>',
+            detail_html,
+            re.DOTALL,
+        )
+        if not json_ld_blocks:
+            errors.append(f"Featured venue structured data is missing: {venue_id}")
+        else:
+            for block in json_ld_blocks:
+                try:
+                    json.loads(block)
+                except json.JSONDecodeError:
+                    errors.append(
+                        f"Featured venue structured data is invalid: {venue_id}"
+                    )
+
     for slug in SEO_GUIDE_SLUGS:
         guide_path = (
             ROOT / "public" / "singapore-event-venues" / slug / "index.html"
@@ -157,6 +251,8 @@ def main() -> None:
             errors.append(f"SEO venue guide is missing from sitemap: {slug}")
         if f'"/singapore-event-venues/{slug}/"' not in vercel_config:
             errors.append(f"SEO venue guide Vercel route is missing: {slug}")
+        if "/_vercel/insights/script.js" not in guide_html:
+            errors.append(f"SEO venue guide analytics script is missing: {slug}")
 
     finder_entry = re.search(
         r"<url>\s*<loc>https://actcreative\.net/singapore-event-venue-finder/</loc>"

@@ -1,0 +1,246 @@
+{
+  "reviewedAt": "2026-06-20",
+  "method": "Manual review against official venue, operator, hotel or public-agency pages. A verified capacity is only applied when the public source identifies a named space and capacity. Other values remain clearly labelled as reference records requiring direct confirmation.",
+  "venues": [
+    {
+      "id": "marina-bay-sands",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.marinabaysands.com/meetings/meeting-venues.html",
+      "verifiedCapacity": {
+        "space": "Sands Grand Ballroom",
+        "layout": "theatre",
+        "capacity": 7000
+      },
+      "auditSummary": "The integrated resort combines large convention spaces, ballrooms, theatres, restaurants and hotel infrastructure in one Marina Bay complex.",
+      "bestFor": ["Large conferences", "Gala dinners", "Exhibitions", "Product launches"],
+      "planningConsiderations": ["Confirm which MICE space is being quoted rather than using a property-wide maximum.", "Check loading routes, production access windows and stage footprint early.", "Plan guest movement carefully when several spaces or hotel towers are involved."]
+    },
+    {
+      "id": "gardens-by-the-bay",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.gardensbythebay.com.sg/en/plan-your-visit/venue-hire.html",
+      "verifiedCapacity": {
+        "space": "The Meadow",
+        "layout": "cocktail",
+        "capacity": 30000
+      },
+      "auditSummary": "Gardens by the Bay offers recognisable Singapore landscapes ranging from large lawns to conservatory and waterfront-adjacent settings.",
+      "bestFor": ["Outdoor festivals", "Brand activations", "Large public events", "Destination receptions"],
+      "planningConsiderations": ["Build a wet-weather and heat-management plan for outdoor programmes.", "Confirm ground protection, utilities, public access and permitted production zones.", "Allow for long guest and supplier movement routes across the gardens."]
+    },
+    {
+      "id": "singapore-sports-hub",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.thekallang.com.sg/venues-facilities/national-stadium",
+      "verifiedCapacity": {
+        "space": "National Stadium",
+        "layout": "theatre",
+        "capacity": 55000
+      },
+      "auditSummary": "The Kallang precinct supports stadium-scale events and several indoor or outdoor formats within a major transport-connected sports destination.",
+      "bestFor": ["Stadium events", "Concerts", "Mass participation events", "Large corporate programmes"],
+      "planningConsiderations": ["Confirm the specific facility because capacities vary substantially across the precinct.", "Coordinate crowd movement, security and transport planning from the outset.", "Validate field protection, rigging, power and production-compound requirements."]
+    },
+    {
+      "id": "universal-studios-singapore",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "verifiedCapacity": {
+        "space": "Pantages Hollywood Theater",
+        "layout": "theatre",
+        "capacity": 1500
+      },
+      "auditSummary": "The attraction supports themed private events and incentive programmes with entertainment environments that differ from conventional hotel venues.",
+      "bestFor": ["Incentive events", "Private celebrations", "Themed brand events", "Performances"],
+      "planningConsiderations": ["Confirm attraction operating boundaries and whether an individual space or wider park programme is proposed.", "Plan guest routing, branding permissions and entertainment integration with the venue team.", "Treat full-park buyout capacity as a separate bespoke enquiry."]
+    },
+    {
+      "id": "pasir-panjang-power-station",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.24owls.sg/",
+      "verifiedCapacity": {
+        "space": "Turbine Hall A",
+        "layout": "cocktail",
+        "capacity": 3500
+      },
+      "auditSummary": "The former power station is a large industrial shell suited to high-impact installations and events that need a raw architectural backdrop.",
+      "bestFor": ["Immersive exhibitions", "Large brand launches", "Fashion and cultural events", "Industrial-scale builds"],
+      "planningConsiderations": ["Confirm usable zones, temporary services and fire-safety requirements for the proposed layout.", "Allow additional planning for climate control, acoustics and guest comfort.", "Review floor loading, access doors and production vehicle routes before design development."]
+    },
+    {
+      "id": "singapore-expo",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.singaporeexpo.com.sg/visit/venue-spaces",
+      "verifiedCapacity": {
+        "space": "APEX @ EXPO",
+        "layout": "published total",
+        "capacity": 7428
+      },
+      "auditSummary": "Singapore EXPO is a large Changi exhibition and conference campus with configurable halls and purpose-built event infrastructure.",
+      "bestFor": ["Trade exhibitions", "Conferences", "Large plenaries", "Multi-hall events"],
+      "planningConsiderations": ["Select the hall or APEX configuration before comparing capacities.", "Map organiser offices, loading docks, registration and visitor circulation as one operational plan.", "Check whether the event relies on neighbouring halls or a single contained venue."]
+    },
+    {
+      "id": "the-star-performing-arts-centre",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.thestar.sg/the-star-theatre",
+      "verifiedCapacity": {
+        "space": "The Star Theatre",
+        "layout": "theatre",
+        "capacity": 5000
+      },
+      "auditSummary": "The Star Theatre is a large fixed-seat performance venue with strong stage and auditorium infrastructure in the one-north precinct.",
+      "bestFor": ["Concerts", "Awards ceremonies", "Large conferences", "Stage productions"],
+      "planningConsiderations": ["A fixed-seat theatre works differently from a flat-floor ballroom; confirm stage, backstage and foyer requirements.", "Review sightlines and production positions before allocating seats.", "Plan interval, registration and catering flows around theatre operations."]
+    },
+    {
+      "id": "resorts-world-ballroom",
+      "capacityStatus": "reference",
+      "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings",
+      "auditSummary": "The ballroom sits within the broader Resorts World Sentosa MICE ecosystem, which is undergoing renewed event-space development in 2026.",
+      "bestFor": ["Conferences", "Gala dinners", "Exhibitions", "Destination corporate events"],
+      "planningConsiderations": ["Request the current 2026 floor plan because ballroom configurations may have changed.", "Confirm whether adjacent foyer or convention spaces are included.", "Coordinate hotel, attraction and dining components as part of one delegate journey."]
+    },
+    {
+      "id": "suntec-convention-centre",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.suntecsingapore.com/floor-plans",
+      "verifiedCapacity": {
+        "space": "Level 6 Auditorium",
+        "layout": "theatre",
+        "capacity": 4200
+      },
+      "auditSummary": "Suntec provides central-city convention halls, meeting rooms and auditorium configurations with established MICE services.",
+      "bestFor": ["Conferences", "Exhibitions", "Corporate plenaries", "Product launches"],
+      "planningConsiderations": ["Match the capacity to the exact level and hall combination.", "Plan loading, registration and vertical guest movement around other activity in the centre.", "Confirm included AV infrastructure versus temporary production scope."]
+    },
+    {
+      "id": "hilton-singapore-orchard",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.hilton.com/en/hotels/sinorhi-hilton-singapore-orchard/events/",
+      "verifiedCapacity": {
+        "space": "Grand Ballroom",
+        "layout": "theatre",
+        "capacity": 1000
+      },
+      "auditSummary": "The Orchard hotel provides a large ballroom and multiple breakout spaces in a central shopping and hospitality district.",
+      "bestFor": ["Corporate conferences", "Gala dinners", "Weddings", "Multi-room meetings"],
+      "planningConsiderations": ["Compare ballroom capacity after stage, production and catering footprints are deducted.", "Use the breakout-room inventory to plan concurrent sessions.", "Confirm hotel arrival, parking and supplier access during peak Orchard periods."]
+    },
+    {
+      "id": "science-centre-singapore",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.science.edu.sg/visit-us/for-corporate-groups/corporate-events",
+      "verifiedCapacity": {
+        "space": "Marquee",
+        "layout": "theatre",
+        "capacity": 800
+      },
+      "auditSummary": "Science Centre Singapore supports educational, family-day and corporate formats with interactive attractions and distinctive event settings.",
+      "bestFor": ["Family days", "Educational events", "Team building", "Product launches"],
+      "planningConsiderations": ["Confirm whether galleries or attractions remain public during the event.", "Plan programme timing around interactive experiences rather than treating the site as a blank hall.", "Check catering, weather cover and guest movement for outdoor or marquee formats."]
+    },
+    {
+      "id": "shangri-la-singapore",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.shangri-la.com/singapore/shangrila/meetings-events/event-spaces/",
+      "verifiedCapacity": {
+        "space": "Island Ballroom",
+        "layout": "theatre",
+        "capacity": 1400
+      },
+      "auditSummary": "Shangri-La Singapore combines large ballrooms, extensive breakout options, hotel rooms and landscaped surroundings in the Orchard area.",
+      "bestFor": ["Large conferences", "Gala dinners", "Weddings", "Multi-day programmes"],
+      "planningConsiderations": ["Theatre, reception and banquet capacities differ materially; confirm the actual layout.", "Review foyer, registration and breakout requirements alongside the main ballroom.", "Plan transport for guests who are not staying at the hotel."]
+    },
+    {
+      "id": "s-e-a-aquarium",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "verifiedCapacity": {
+        "space": "Ocean Gallery",
+        "layout": "cocktail",
+        "capacity": 400
+      },
+      "auditSummary": "The Ocean Gallery creates an immersive aquarium backdrop for dinners and receptions within Resorts World Sentosa.",
+      "bestFor": ["Cocktail receptions", "Private dinners", "VIP events", "Immersive brand experiences"],
+      "planningConsiderations": ["Use the specific Ocean Gallery capacity rather than a whole-attraction attendance estimate.", "Confirm restrictions on lighting, sound, decor and animal-welfare-sensitive production.", "Plan arrival timing and guest movement through the attraction."]
+    },
+    {
+      "id": "esplanade-theatres-on-the-bay",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.esplanade.com/visit-esplanade/venues-and-spaces/venues/concert-hall",
+      "verifiedCapacity": {
+        "space": "Concert Hall",
+        "layout": "theatre",
+        "capacity": 1825
+      },
+      "auditSummary": "Esplanade offers purpose-built performance halls and public-facing cultural spaces in a prominent Marina Bay waterfront location.",
+      "bestFor": ["Concerts", "Stage presentations", "Awards ceremonies", "Cultural events"],
+      "planningConsiderations": ["Confirm whether gallery seats are being opened when using the maximum capacity.", "Review stage, orchestra, acoustic and technical requirements with the venue production team.", "Plan foyer activity and public circulation around the wider arts centre."]
+    },
+    {
+      "id": "the-ritz-carlton-millenia-singapore",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.ritzcarlton.com/en/hotels/sinrz-the-ritz-carlton-millenia-singapore/events/",
+      "verifiedCapacity": {
+        "space": "Grand Ballroom",
+        "layout": "theatre",
+        "capacity": 1400
+      },
+      "auditSummary": "The Marina Bay hotel provides a pillarless ballroom, smaller rooms and indoor-outdoor event options for premium corporate and social programmes.",
+      "bestFor": ["Gala dinners", "Corporate meetings", "Luxury weddings", "Product launches"],
+      "planningConsiderations": ["Different official pages publish different capacities by layout; use the exact event format.", "Confirm which LED walls and in-house production elements are included.", "Check foyer and service circulation when combining reception and dinner programmes."]
+    },
+    {
+      "id": "artscience-museum",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.marinabaysands.com/museum/about-us/services/venue-rental.html",
+      "verifiedCapacity": {
+        "space": "Basement 2 Circulation",
+        "layout": "cocktail",
+        "capacity": 250
+      },
+      "auditSummary": "ArtScience Museum offers design-led museum spaces for smaller receptions, launches and private functions rather than conventional large hall formats.",
+      "bestFor": ["Product launches", "Cocktail receptions", "Press events", "Private cultural functions"],
+      "planningConsiderations": ["Use the published rental space capacity rather than overall museum visitor numbers.", "Confirm exhibition access, operating hours and installation restrictions.", "Plan branding and production to respect museum finishes and visitor routes."]
+    },
+    {
+      "id": "the-westin-singapore",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.marriott.com/en-us/hotels/sinwi-the-westin-singapore/events/",
+      "verifiedCapacity": {
+        "space": "Grand Ballroom",
+        "layout": "theatre",
+        "capacity": 600
+      },
+      "auditSummary": "The CBD hotel supports mid-sized corporate events with ballroom, meeting-room and high-floor hospitality infrastructure.",
+      "bestFor": ["Corporate meetings", "Conferences", "Dinners", "Executive events"],
+      "planningConsiderations": ["Use the current official 600-person maximum rather than older third-party records.", "Confirm lift and loading access for production equipment.", "Plan arrival flows around weekday CBD traffic and office peaks."]
+    },
+    {
+      "id": "capella-singapore",
+      "capacityStatus": "reference",
+      "capacitySourceUrl": "https://capellahotels.com/en/en/capella-singapore/meetings-and-events",
+      "auditSummary": "Capella combines a premium ballroom, heritage rooms and lawns in a low-density Sentosa resort setting.",
+      "bestFor": ["Luxury weddings", "VIP events", "Brand dinners", "Indoor-outdoor programmes"],
+      "planningConsiderations": ["Confirm current ballroom and lawn capacities directly because public room data may vary by event type.", "Plan wet-weather movement between indoor and outdoor components.", "Review transport and guest arrival arrangements for destination-style programmes."]
+    },
+    {
+      "id": "national-museum-of-singapore",
+      "capacityStatus": "reference",
+      "capacitySourceUrl": "https://www.nhb.gov.sg/nationalmuseum/venue-rental",
+      "auditSummary": "The museum provides heritage architecture, gallery-adjacent areas, a theatre and smaller function spaces in the Civic District.",
+      "bestFor": ["Cultural events", "Corporate receptions", "Talks and screenings", "Brand heritage programmes"],
+      "planningConsiderations": ["Confirm the current venue-rental toolkit and individual-space capacity.", "Review exhibition, conservation, decor and food-service restrictions.", "Plan public access, security and installation work around museum operations."]
+    },
+    {
+      "id": "raffles-singapore",
+      "capacityStatus": "reference",
+      "capacitySourceUrl": "https://www.raffles.com/singapore/meetings-events/",
+      "auditSummary": "The heritage hotel offers premium ballrooms and function rooms suited to formal corporate and social occasions in the Civic District.",
+      "bestFor": ["Luxury dinners", "Corporate receptions", "Weddings", "VIP events"],
+      "planningConsiderations": ["Confirm the current room chart and layout because heritage spaces have distinct usable dimensions.", "Coordinate production design with the protected architectural character.", "Review supplier access and service routes before finalising the event layout."]
+    }
+  ]
+}

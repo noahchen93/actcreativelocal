@@ -121,8 +121,14 @@
   function capacityLabel(venue) {
     const basis = venue.capacityBasis;
     if (!basis?.capacity) return "Capacity requires source review";
+    const prefix =
+      venue.capacityAuditStatus === "official"
+        ? "Officially published"
+        : venue.capacityAuditStatus === "reference"
+          ? "Reference record"
+          : "Recorded";
     const space = basis.space ? ` · ${basis.space}` : "";
-    return `Up to ${Number(basis.capacity).toLocaleString("en-SG")} guests · ${formatLayout(basis.layout)}${space}`;
+    return `${prefix}: up to ${Number(basis.capacity).toLocaleString("en-SG")} guests · ${formatLayout(basis.layout)}${space}`;
   }
 
   function confidenceLabel(value) {
@@ -181,6 +187,9 @@
     };
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(event);
+    if (typeof window.va === "function") {
+      window.va("event", { name: eventName, data: event });
+    }
     window.dispatchEvent(new CustomEvent(`act:${eventName}`, { detail: event }));
   }
 
@@ -648,8 +657,11 @@
               <p class="venue-note">${escapeHtml(venue.publicNote)}</p>
               ${spacesTable(venue)}
               <div class="source-row">
-                <span>${escapeHtml(confidenceLabel(venue.dataConfidence))} · reviewed ${escapeHtml(formatDate(venue.lastVerified))}</span>
-                ${sourceUrl ? `<a class="venue-site-link" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${venue.sourceType === "Official venue website" ? "Open official venue site" : "Open public source"} ↗</a>` : '<span>Public source link not recorded</span>'}
+                <span>${escapeHtml(confidenceLabel(venue.dataConfidence))} · reviewed ${escapeHtml(formatDate(venue.auditReviewedAt || venue.lastVerified))}</span>
+                <div class="source-links">
+                  ${venue.featuredDetail ? `<a class="venue-site-link" href="/singapore-event-venues/${escapeHtml(venue.id)}/" data-track-link="reviewed_detail" data-track-venue="${escapeHtml(venue.id)}">Open reviewed venue guide →</a>` : ""}
+                  ${sourceUrl ? `<a class="venue-site-link" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" data-track-link="venue_source" data-track-venue="${escapeHtml(venue.id)}">${venue.sourceType === "Official venue website" ? "Open official venue site" : "Open public source"} ↗</a>` : '<span>Public source link not recorded</span>'}
+                </div>
               </div>
             </div>
           </details>
@@ -925,6 +937,15 @@
     const viewMode = event.target.closest("[data-view-mode]");
     if (viewMode) {
       setViewMode(viewMode.getAttribute("data-view-mode"));
+      return;
+    }
+
+    const trackedLink = event.target.closest("[data-track-link]");
+    if (trackedLink) {
+      track("venue_link_opened", {
+        link_type: trackedLink.getAttribute("data-track-link"),
+        venue_id: trackedLink.getAttribute("data-track-venue") || "",
+      });
       return;
     }
 

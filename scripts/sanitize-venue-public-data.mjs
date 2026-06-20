@@ -21,6 +21,12 @@ const OVERRIDE_PATH = path.join(
   "cache",
   "venue-data-overrides.json",
 );
+const FEATURED_AUDIT_PATH = path.join(
+  ROOT,
+  "scripts",
+  "cache",
+  "featured-venue-audit.json",
+);
 
 const sensitiveNotePattern =
   /(?:\bavailability\b|\bavailable dates?\b|\bdate holds?\b|\bafter[- ]hours\b|\bweekdays?\b|\bweekends?\b|\bminimum spend\b|\bpricing\b|\bprices?\b|\bcosts?\b|\bfees?\b|\brates?\b|\bquotes?\b|s\$|\$\s*\d|档期|可用日期|最低消费|价格|费用|报价|营业时间)/i;
@@ -59,6 +65,13 @@ function cleanSpaceNote(note) {
     return "";
   }
   return value;
+}
+
+function normaliseName(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 }
 
 function getLargestSetup(venue) {
@@ -106,6 +119,12 @@ function buildPublicNote(venue, largestSetup) {
 const dataset = JSON.parse(await fs.readFile(DATA_PATH, "utf8"));
 const imageSources = JSON.parse(await fs.readFile(IMAGE_SOURCE_PATH, "utf8"));
 const overrides = JSON.parse(await fs.readFile(OVERRIDE_PATH, "utf8"));
+const featuredAudit = JSON.parse(
+  await fs.readFile(FEATURED_AUDIT_PATH, "utf8"),
+);
+const featuredAuditById = new Map(
+  (featuredAudit.venues || []).map((venue) => [venue.id, venue]),
+);
 const excludedNames = new Set(overrides.excludedVenueNames || []);
 
 dataset.privacyNote =
@@ -129,6 +148,8 @@ for (const venue of dataset.venues || []) {
   venue.settings = [...new Set(venue.settings || [])].filter(Boolean);
   venue.eventTypes = [...new Set(venue.eventTypes || [])].filter(Boolean);
   venue.primaryType = venue.propertyTypes[0] || "Flexible event venue";
+  const audit = featuredAuditById.get(venue.id);
+  const verifiedCapacity = audit?.verifiedCapacity || null;
 
   for (const space of venue.spaces || []) {
     space.name = String(space.name || "")
@@ -139,16 +160,56 @@ for (const venue of dataset.venues || []) {
     space.note = cleanSpaceNote(space.note);
   }
 
-  const largestSetup = getLargestSetup(venue);
-  venue.maxCapacity = largestSetup?.capacity || venue.maxCapacity || null;
-  venue.capacityBasis = largestSetup
+  if (audit?.capacityStatus === "official" && verifiedCapacity) {
+    for (const space of venue.spaces || []) {
+      for (const field of capacityFields) {
+        if (Number(space[field] || 0) > Number(verifiedCapacity.capacity)) {
+          space[field] = null;
+        }
+      }
+    }
+    if (capacityFields.includes(verifiedCapacity.layout)) {
+      let reviewedSpace = (venue.spaces || []).find(
+        (space) =>
+          normaliseName(space.name) === normaliseName(verifiedCapacity.space),
+      );
+      if (!reviewedSpace) {
+        reviewedSpace = {
+          name: verifiedCapacity.space,
+          areaSqm: null,
+          ceilingM: null,
+          banquet: null,
+          cocktail: null,
+          theatre: null,
+          classroom: null,
+          note: "Official public benchmark",
+        };
+        venue.spaces = [reviewedSpace, ...(venue.spaces || [])];
+      }
+      reviewedSpace[verifiedCapacity.layout] = verifiedCapacity.capacity;
+    }
+  }
+
+  const recordedLargestSetup = getLargestSetup(venue);
+  const capacityBasis = verifiedCapacity || recordedLargestSetup;
+  venue.maxCapacity = capacityBasis?.capacity || venue.maxCapacity || null;
+  venue.capacityBasis = capacityBasis
     ? {
-        space: largestSetup.space,
-        layout: largestSetup.layout,
-        capacity: largestSetup.capacity,
+        space: capacityBasis.space,
+        layout: capacityBasis.layout,
+        capacity: capacityBasis.capacity,
       }
     : null;
-  venue.publicNote = buildPublicNote(venue, largestSetup);
+  venue.featuredDetail = Boolean(audit);
+  venue.capacityAuditStatus = audit?.capacityStatus || "curated";
+  venue.capacitySourceUrl = normaliseUrl(audit?.capacitySourceUrl);
+  venue.auditReviewedAt = audit ? featuredAudit.reviewedAt : null;
+  venue.auditSummary = audit?.auditSummary || "";
+  venue.bestFor = [...new Set(audit?.bestFor || [])];
+  venue.planningConsiderations = [
+    ...new Set(audit?.planningConsiderations || []),
+  ];
+  venue.publicNote = buildPublicNote(venue, capacityBasis);
 
   const imageSource = imageSources.replacements?.[venue.id] || null;
   const officialImageSource =
@@ -173,7 +234,9 @@ for (const venue of dataset.venues || []) {
     Boolean(venue.spaces?.length),
   ].filter(Boolean).length;
   venue.dataConfidence =
-    completeness === 4 && venue.sourceType === "Official venue website"
+    audit?.capacityStatus === "official"
+      ? "high"
+      : completeness === 4 && venue.sourceType === "Official venue website"
       ? "high"
       : completeness >= 3
         ? "medium"

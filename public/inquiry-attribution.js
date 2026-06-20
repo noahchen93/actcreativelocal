@@ -152,6 +152,17 @@
 
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(event);
+    if (typeof window.va === "function") {
+      window.va("event", {
+        name: "Inquiry intent",
+        data: {
+          channel: channel,
+          label: label || "",
+          page_path: window.location.pathname,
+          source: data.firstSource || data.source || "unknown",
+        },
+      });
+    }
     window.dispatchEvent(new CustomEvent("act:inquiry-intent", { detail: event }));
   }
 

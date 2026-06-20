@@ -383,8 +383,17 @@
       </footer>
     </div>
     <button class="back-to-top" type="button" data-back-to-top aria-label="Back to the top of the venue finder">↑<span>Top</span></button>
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+      if (!["localhost", "127.0.0.1"].includes(window.location.hostname)) {
+        var insightsScript = document.createElement("script");
+        insightsScript.defer = true;
+        insightsScript.src = "/_vercel/insights/script.js";
+        document.head.appendChild(insightsScript);
+      }
+    </script>
     <script src="/vendor/leaflet/leaflet.js"></script>
     <script src="/inquiry-attribution.js" defer></script>
-    <script src="/singapore-event-venue-finder/venue-finder.js?v=20260620-2" defer></script>
+    <script src="/singapore-event-venue-finder/venue-finder.js?v=20260620-3" defer></script>
   </body>
 </html>
