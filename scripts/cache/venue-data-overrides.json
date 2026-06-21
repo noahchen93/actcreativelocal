@@ -2,7 +2,8 @@
   "excludedVenueNames": [
     "Far East Hotel",
     "Plume Singapore Flyer",
-    "LINO Forum"
+    "LINO Forum",
+    "Hard Rock Hotel Singapore"
   ],
   "venues": {
     "Marina Bay Cruise Centre Singapore": {
@@ -35,7 +36,50 @@
       "website": "https://www.marriott.com/en-us/hotels/sinxr-the-st-regis-singapore/overview/"
     },
     "Fort Canning Park": {
-      "area": "City Hall / Civic District"
+      "area": "City Hall / Civic District",
+      "website": "https://www.nparks.gov.sg/visit/parks/fort-canning-park/amenities/venues-booking",
+      "spaces": [
+        {
+          "name": "Fort Canning Green",
+          "areaSqm": 11500,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 7000,
+          "theatre": 500,
+          "classroom": null,
+          "note": "Official standing and seated benchmarks"
+        },
+        {
+          "name": "Fort Gate",
+          "areaSqm": 4500,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 2500,
+          "theatre": 600,
+          "classroom": null,
+          "note": "Official standing and seated benchmarks"
+        },
+        {
+          "name": "Raffles Garden",
+          "areaSqm": 1600,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 1000,
+          "theatre": 500,
+          "classroom": null,
+          "note": "Official standing and seated benchmarks"
+        },
+        {
+          "name": "Old Married Soldier's Quarters",
+          "areaSqm": 3100,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 1000,
+          "theatre": 400,
+          "classroom": null,
+          "note": "Outdoor standing and seated benchmarks"
+        }
+      ]
     },
     "Esplanade - Theatres on the Bay": {
       "area": "Marina Bay"
@@ -50,7 +94,57 @@
       "area": "CBD / Tanjong Pagar"
     },
     "InterContinental Singapore": {
-      "area": "City Hall / Civic District"
+      "id": "frasers-house-singapore",
+      "name": "Frasers House, a Luxury Collection Hotel, Singapore",
+      "area": "City Hall / Civic District",
+      "website": "https://www.marriott.com/en-us/hotels/sinlb-frasers-house-a-luxury-collection-hotel-singapore/events/",
+      "spaces": [
+        {
+          "name": "Grand Ballroom",
+          "areaSqm": 540,
+          "ceilingM": 6,
+          "banquet": 320,
+          "cocktail": 364,
+          "theatre": null,
+          "classroom": null,
+          "note": "Current official largest-space benchmark"
+        },
+        {
+          "name": "Bras Basah Meeting Rooms",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 120,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official maximum capacity"
+        },
+        {
+          "name": "The Vault",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 48,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official maximum capacity"
+        },
+        {
+          "name": "Boardroom",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": null,
+          "classroom": 10,
+          "note": "Official maximum capacity"
+        }
+      ],
+      "maxAreaSqm": 540,
+      "propertyTypes": [
+        "Hotel",
+        "Heritage venue"
+      ]
     },
     "Lazarus Island": {
       "area": "Southern Islands",
@@ -132,6 +226,349 @@
         "Hotel",
         "Heritage venue"
       ]
+    },
+    "Universal Studios Singapore": {
+      "website": "https://www.rwsentosa.com/en/play/universal-studios-singapore",
+      "lat": 1.2566416,
+      "lng": 103.8212057
+    },
+    "Adventure Cove Waterpark": {
+      "website": "https://www.rwsentosa.com/en/play/adventure-cove-waterpark",
+      "lat": 1.2580864,
+      "lng": 103.8177227,
+      "spaces": [
+        {
+          "name": "Full attraction event programme",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 2000,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official maximum event capacity"
+        }
+      ]
+    },
+    "S.E.A. Aquarium": {
+      "id": "singapore-oceanarium",
+      "name": "Singapore Oceanarium",
+      "website": "https://www.rwsentosa.com/en/play/singapore-oceanarium",
+      "lat": 1.2583525,
+      "lng": 103.820484,
+      "spaces": [
+        {
+          "name": "Ocean Gallery",
+          "areaSqm": 689,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 400,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official public benchmark"
+        },
+        {
+          "name": "Whale Fall and Seamount",
+          "areaSqm": 470,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 282,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official maximum capacity"
+        },
+        {
+          "name": "Ancient Waters",
+          "areaSqm": 453,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 272,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official maximum capacity"
+        },
+        {
+          "name": "Seminar Room",
+          "areaSqm": 164,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": 138,
+          "classroom": null,
+          "note": "Official maximum capacity"
+        }
+      ],
+      "maxAreaSqm": 689
+    },
+    "Resorts World Ballroom": {
+      "website": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "spaces": [
+        {
+          "name": "Resorts World Ballroom",
+          "areaSqm": 6000,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 3620,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official maximum event capacity"
+        }
+      ],
+      "maxAreaSqm": 6000
+    },
+    "Resorts World Convention Centre": {
+      "website": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "spaces": [
+        {
+          "name": "Resorts World Function Rooms",
+          "areaSqm": 839,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 540,
+          "theatre": null,
+          "classroom": null,
+          "note": "Largest configuration across 21 function rooms"
+        }
+      ],
+      "maxAreaSqm": 839
+    },
+    "Equarius Ballroom": {
+      "name": "Equarius Hotel Ballroom & Function Rooms",
+      "website": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "spaces": [
+        {
+          "name": "Ballroom & Function Rooms",
+          "areaSqm": 1807,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 1017,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official maximum event capacity"
+        }
+      ],
+      "maxAreaSqm": 1807
+    },
+    "Hotel Michael": {
+      "website": "https://www.rwsentosa.com/en/stay/hotel-michael",
+      "spaces": [],
+      "maxCapacity": null,
+      "maxAreaSqm": null,
+      "propertyTypes": [
+        "Hotel"
+      ],
+      "settings": [
+        "Indoor"
+      ],
+      "eventTypes": [
+        "Corporate event",
+        "VIP / private event"
+      ]
+    },
+    "Equarius Hotel": {
+      "website": "https://www.rwsentosa.com/en/stay/equarius-hotel",
+      "spaces": [],
+      "maxCapacity": null,
+      "maxAreaSqm": null,
+      "propertyTypes": [
+        "Hotel",
+        "Resort"
+      ]
+    },
+    "Festive Hotel": {
+      "id": "hotel-ora",
+      "name": "Hotel Ora",
+      "website": "https://www.rwsentosa.com/en/stay/hotel-ora",
+      "lat": 1.2562238,
+      "lng": 103.8189627,
+      "spaces": [
+        {
+          "name": "Meeting Rooms",
+          "areaSqm": 40,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": null,
+          "classroom": 10,
+          "note": "Official maximum capacity is 10 guests"
+        }
+      ],
+      "maxCapacity": 10,
+      "maxAreaSqm": 40,
+      "propertyTypes": [
+        "Hotel"
+      ],
+      "settings": [
+        "Indoor",
+        "Meeting rooms"
+      ],
+      "eventTypes": [
+        "Conference / seminar",
+        "Corporate event"
+      ]
+    },
+    "Beach Villas RWS": {
+      "id": "equarius-villas",
+      "name": "Equarius Villas",
+      "website": "https://www.rwsentosa.com/en/stay/equarius-villas",
+      "lat": 1.2590879,
+      "lng": 103.8162643,
+      "spaces": [
+        {
+          "name": "1 Bedroom Villa",
+          "areaSqm": 76,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": null,
+          "classroom": null,
+          "note": ""
+        },
+        {
+          "name": "2 Bedroom Villa",
+          "areaSqm": 388,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": null,
+          "classroom": null,
+          "note": ""
+        },
+        {
+          "name": "3 Bedroom Villa",
+          "areaSqm": 477,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": null,
+          "classroom": null,
+          "note": ""
+        }
+      ],
+      "maxCapacity": null,
+      "maxAreaSqm": 477,
+      "propertyTypes": [
+        "Hotel",
+        "Resort"
+      ],
+      "settings": [
+        "Indoor",
+        "Outdoor",
+        "Poolside"
+      ],
+      "eventTypes": [
+        "VIP / private event"
+      ]
+    },
+    "OCBC Square": {
+      "lat": 1.3020746,
+      "lng": 103.8735992,
+      "spaces": [
+        {
+          "name": "OCBC Square",
+          "areaSqm": 1542,
+          "ceilingM": 16,
+          "banquet": null,
+          "cocktail": 2000,
+          "theatre": null,
+          "classroom": null,
+          "note": ""
+        }
+      ]
+    },
+    "ArtScience Museum": {
+      "website": "https://www.marinabaysands.com/museum/about-us/services/venue-rental.html",
+      "spaces": [
+        {
+          "name": "Basement 2 Circulation",
+          "areaSqm": 525,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 250,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official public benchmark"
+        },
+        {
+          "name": "ArtScience Cinema",
+          "areaSqm": 236,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": 66,
+          "classroom": null,
+          "note": ""
+        },
+        {
+          "name": "Level 4 Lift Lobby",
+          "areaSqm": 166,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 50,
+          "theatre": null,
+          "classroom": null,
+          "note": ""
+        },
+        {
+          "name": "VR Gallery",
+          "areaSqm": 184,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": null,
+          "classroom": 15,
+          "note": "Pods-style seating"
+        }
+      ],
+      "maxAreaSqm": 525
+    },
+    "Conrad Centennial Singapore": {
+      "name": "Conrad Singapore Marina Bay",
+      "website": "https://www.hilton.com/en/hotels/sincici-conrad-singapore-marina-bay/"
+    },
+    "Conrad Singapore Orchard": {
+      "website": "https://www.hilton.com/en/hotels/sinodci-conrad-singapore-orchard/"
+    },
+    "Hilton Singapore Orchard": {
+      "website": "https://www.hilton.com/en/hotels/sinorhi-hilton-singapore-orchard/"
+    },
+    "Pan Pacific Orchard Singapore": {
+      "website": "https://www.panpacific.com/en/hotels-and-resorts/pp-orchard-sg.html"
+    },
+    "PARKROYAL COLLECTION Pickering": {
+      "website": "https://www.panpacific.com/en/hotels-and-resorts/pr-collection-pickering.html"
+    },
+    "Sofitel Singapore City Centre": {
+      "website": "https://all.accor.com/hotel/A152/index.en.shtml"
+    },
+    "JW Marriott Singapore South Beach": {
+      "website": "https://www.marriott.com/en-us/hotels/sinjw-jw-marriott-hotel-singapore-south-beach/events/"
+    },
+    "Singapore Sports Hub": {
+      "name": "The Kallang (Singapore Sports Hub)",
+      "website": "https://www.thekallang.com.sg/venues-facilities"
+    },
+    "Marina Barrage": {
+      "website": "https://www.pub.gov.sg/public/places-of-interest/marina-barrage"
+    },
+    "Village Hotel Sentosa": {
+      "website": "https://www.villagehotels.asia/en/hotels/village-hotel-sentosa"
+    },
+    "Amara Sanctuary Resort Sentosa": {
+      "website": "https://sentosa.amarahotels.com/"
+    },
+    "Fullerton Bay / Clifford Pier": {
+      "website": "https://www.fullertonhotels.com/fullerton-bay-hotel-singapore/meetings-and-events/the-clifford-pier"
+    },
+    "Mount Faber Peak": {
+      "website": "https://mountfaberdining.com/pages/corporate-events"
+    },
+    "SkyHelix Sentosa": {
+      "lat": 1.2549572,
+      "lng": 103.817612
+    },
+    "Changi Experience Studio": {
+      "lat": 1.3601242,
+      "lng": 103.9891242
     }
   }
 }

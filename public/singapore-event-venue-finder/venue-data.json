@@ -1,16 +1,16 @@
 {
   "generatedAt": "2026-06-21",
   "source": "Internal Singapore venue index, public planning subset",
-  "publicCount": 136,
-  "mappedCount": 136,
+  "publicCount": 135,
+  "mappedCount": 135,
   "privacyNote": "This public planning dataset contains venue identity, source-linked planning tags, capacity signals and map coordinates. Commercial terms and scheduling information are excluded.",
   "venues": [
     {
       "id": "singapore-sports-hub",
-      "name": "Singapore Sports Hub",
+      "name": "The Kallang (Singapore Sports Hub)",
       "area": "Kallang / Sports Hub",
       "address": "1 Stadium Drive, Singapore 397629",
-      "website": "https://kallangalive.com.sg/",
+      "website": "https://www.thekallang.com.sg/venues-facilities",
       "spaces": [
         {
           "name": "National Stadium",
@@ -93,7 +93,7 @@
         "layout": "theatre",
         "capacity": 55000
       },
-      "sourceUrl": "https://kallangalive.com.sg/",
+      "sourceUrl": "https://www.thekallang.com.sg/venues-facilities",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
@@ -519,8 +519,18 @@
       "name": "Universal Studios Singapore",
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Singapore 098269",
-      "website": "https://rwsentosa.com/en/attractions/universal-studios-singapore",
+      "website": "https://www.rwsentosa.com/en/play/universal-studios-singapore",
       "spaces": [
+        {
+          "name": "Full attraction event programme",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 8000,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official public benchmark"
+        },
         {
           "name": "Pantages Hollywood Theater",
           "areaSqm": null,
@@ -572,7 +582,7 @@
           "note": ""
         }
       ],
-      "maxCapacity": 1500,
+      "maxCapacity": 8000,
       "maxAreaSqm": 2000,
       "eventTypes": [
         "Performance / concert",
@@ -589,19 +599,19 @@
       ],
       "primaryType": "Attraction / theme park",
       "image": "/singapore-event-venue-finder/assets/venues/universal-studios-singapore.webp",
-      "publicNote": "Attraction / theme park in Sentosa with 5 recorded event spaces. Pantages Hollywood Theater supports up to 1,500 guests in theatre format. Planning tags include performance / concert, pop-up / market / activation and vip / private event. Capacity depends on the selected space and event layout.",
-      "imageMode": "reference",
-      "lat": 1.2556955,
-      "lng": 103.8202156,
+      "publicNote": "Attraction / theme park in Sentosa with 6 recorded event spaces. Full attraction event programme supports up to 8,000 guests in cocktail format. Planning tags include performance / concert, pop-up / market / activation and vip / private event. Capacity depends on the selected space and event layout.",
+      "imageMode": "official",
+      "lat": 1.2566416,
+      "lng": 103.8212057,
       "capacityBasis": {
-        "space": "Pantages Hollywood Theater",
-        "layout": "theatre",
-        "capacity": 1500
+        "space": "Full attraction event programme",
+        "layout": "cocktail",
+        "capacity": 8000
       },
-      "sourceUrl": "https://rwsentosa.com/en/attractions/universal-studios-singapore",
+      "sourceUrl": "https://www.rwsentosa.com/en/play/universal-studios-singapore",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "",
-      "imageSourceType": "reference",
+      "imageSourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "imageSourceType": "official",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
       "featuredDetail": true,
@@ -626,87 +636,47 @@
       "name": "Fort Canning Park",
       "area": "City Hall / Civic District",
       "address": "51 Canning Rise, Singapore 179872",
-      "website": "https://eventbutler.sg/fort-canning-park",
+      "website": "https://www.nparks.gov.sg/visit/parks/fort-canning-park/amenities/venues-booking",
       "spaces": [
         {
           "name": "Fort Canning Green",
-          "areaSqm": null,
+          "areaSqm": 11500,
           "ceilingM": null,
           "banquet": null,
           "cocktail": 7000,
-          "theatre": 5000,
+          "theatre": 500,
           "classroom": null,
-          "note": ""
+          "note": "Official standing and seated benchmarks"
         },
         {
           "name": "Fort Gate",
-          "areaSqm": null,
+          "areaSqm": 4500,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 500,
+          "cocktail": 2500,
+          "theatre": 600,
+          "classroom": null,
+          "note": "Official standing and seated benchmarks"
+        },
+        {
+          "name": "Raffles Garden",
+          "areaSqm": 1600,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 1000,
           "theatre": 500,
           "classroom": null,
-          "note": ""
+          "note": "Official standing and seated benchmarks"
         },
         {
-          "name": "Lawn at The Foothills",
-          "areaSqm": null,
+          "name": "Old Married Soldier's Quarters",
+          "areaSqm": 3100,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 200,
-          "theatre": 200,
+          "cocktail": 1000,
+          "theatre": 400,
           "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Raffles House and Lawn",
-          "areaSqm": 101,
-          "ceilingM": null,
-          "banquet": 80,
-          "cocktail": 200,
-          "theatre": 150,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Old Married Soldier's Quarters (OMSq)",
-          "areaSqm": null,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": 200,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Gallery & Foyer",
-          "areaSqm": 298,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": 250,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Function Hall (FCC Level 2)",
-          "areaSqm": null,
-          "ceilingM": null,
-          "banquet": 150,
-          "cocktail": 250,
-          "theatre": 200,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "White Studio",
-          "areaSqm": 110,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": 100,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
+          "note": "Outdoor standing and seated benchmarks"
         }
       ],
       "maxCapacity": 7000,
@@ -734,8 +704,8 @@
       ],
       "primaryType": "Park / garden",
       "image": "/singapore-event-venue-finder/assets/venues/fort-canning-park.webp",
-      "publicNote": "Park / garden in City Hall / Civic District with 8 recorded event spaces. Fort Canning Green supports up to 7,000 guests in cocktail format. Planning tags include corporate event, cocktail / reception and wedding. Capacity depends on the selected space and event layout.",
-      "imageMode": "reference",
+      "publicNote": "Park / garden in City Hall / Civic District with 4 recorded event spaces. Fort Canning Green supports up to 7,000 guests in cocktail format. Planning tags include corporate event, cocktail / reception and wedding. Capacity depends on the selected space and event layout.",
+      "imageMode": "official",
       "lat": 1.2931917,
       "lng": 103.848716,
       "capacityBasis": {
@@ -743,10 +713,10 @@
         "layout": "cocktail",
         "capacity": 7000
       },
-      "sourceUrl": "https://eventbutler.sg/fort-canning-park",
+      "sourceUrl": "https://www.nparks.gov.sg/visit/parks/fort-canning-park/amenities/venues-booking",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "",
-      "imageSourceType": "reference",
+      "imageSourceUrl": "https://www.nparks.gov.sg/visit/parks/fort-canning-park/amenities/venues-booking",
+      "imageSourceType": "official",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
       "featuredDetail": false,
@@ -1234,31 +1204,21 @@
       "name": "Resorts World Ballroom",
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Singapore 098269",
-      "website": "https://www.rwsentosa.com/en/meetings",
+      "website": "https://www.rwsentosa.com/en/meetings/event-venues",
       "spaces": [
         {
-          "name": "Main Hall",
-          "areaSqm": 2500,
-          "ceilingM": 9,
-          "banquet": 2000,
-          "cocktail": 3600,
-          "theatre": 3600,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Foyer",
-          "areaSqm": 500,
+          "name": "Resorts World Ballroom",
+          "areaSqm": 6000,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 500,
+          "cocktail": 3620,
           "theatre": null,
           "classroom": null,
-          "note": ""
+          "note": "Official maximum event capacity"
         }
       ],
-      "maxCapacity": 3600,
-      "maxAreaSqm": 2500,
+      "maxCapacity": 3620,
+      "maxAreaSqm": 6000,
       "eventTypes": [
         "Exhibition / immersive",
         "Pop-up / market / activation"
@@ -1273,26 +1233,26 @@
       ],
       "primaryType": "Flexible event venue",
       "image": "/singapore-event-venue-finder/assets/venues/resorts-world-ballroom.webp",
-      "publicNote": "Flexible event venue in Sentosa with 2 recorded event spaces. Main Hall supports up to 3,600 guests in cocktail format. Planning tags include exhibition / immersive and pop-up / market / activation. Capacity depends on the selected space and event layout.",
+      "publicNote": "Flexible event venue in Sentosa with 1 recorded event space. Resorts World Ballroom supports up to 3,620 guests in cocktail format. Planning tags include exhibition / immersive and pop-up / market / activation. Capacity depends on the selected space and event layout.",
       "imageMode": "official",
       "lat": 1.2556955,
       "lng": 103.8202156,
       "capacityBasis": {
-        "space": "Main Hall",
+        "space": "Resorts World Ballroom",
         "layout": "cocktail",
-        "capacity": 3600
+        "capacity": 3620
       },
-      "sourceUrl": "https://www.rwsentosa.com/en/meetings",
+      "sourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "https://www.rwsentosa.com/en/meetings",
+      "imageSourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
       "imageSourceType": "official",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
       "featuredDetail": true,
-      "capacityAuditStatus": "reference",
-      "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings",
+      "capacityAuditStatus": "official",
+      "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
       "auditReviewedAt": "2026-06-20",
-      "auditSummary": "The ballroom sits within the broader Resorts World Sentosa MICE ecosystem, which is undergoing renewed event-space development in 2026.",
+      "auditSummary": "The ballroom is a 6,000 sqm venue within Resorts World Convention Centre, with a current official maximum event capacity of 3,620 guests.",
       "bestFor": [
         "Conferences",
         "Gala dinners",
@@ -1300,7 +1260,7 @@
         "Destination corporate events"
       ],
       "planningConsiderations": [
-        "Request the current 2026 floor plan because ballroom configurations may have changed.",
+        "Request the current floor plan and layout-specific capacities for the proposed event format.",
         "Confirm whether adjacent foyer or convention spaces are included.",
         "Coordinate hotel, attraction and dining components as part of one delegate journey."
       ]
@@ -1310,40 +1270,20 @@
       "name": "Adventure Cove Waterpark",
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Singapore 098269",
-      "website": "https://rwsentosa.com/en/attractions/adventure-cove-waterpark",
+      "website": "https://www.rwsentosa.com/en/play/adventure-cove-waterpark",
       "spaces": [
         {
-          "name": "Wave Pool Deck",
-          "areaSqm": 1500,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": 800,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Rainbow Reef",
-          "areaSqm": 800,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": 400,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Full Park Buyout",
+          "name": "Full attraction event programme",
           "areaSqm": null,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 3000,
+          "cocktail": 2000,
           "theatre": null,
           "classroom": null,
-          "note": ""
+          "note": "Official maximum event capacity"
         }
       ],
-      "maxCapacity": 3000,
+      "maxCapacity": 2000,
       "maxAreaSqm": 1500,
       "eventTypes": [
         "Party / nightlife",
@@ -1360,19 +1300,19 @@
       ],
       "primaryType": "Attraction / theme park",
       "image": "/singapore-event-venue-finder/assets/venues/adventure-cove-waterpark.webp",
-      "publicNote": "Attraction / theme park in Sentosa with 3 recorded event spaces. Full Park Buyout supports up to 3,000 guests in cocktail format. Planning tags include party / nightlife, team building / family day and vip / private event. Capacity depends on the selected space and event layout.",
-      "imageMode": "reference",
-      "lat": 1.2556955,
-      "lng": 103.8202156,
+      "publicNote": "Attraction / theme park in Sentosa with 1 recorded event space. Full attraction event programme supports up to 2,000 guests in cocktail format. Planning tags include party / nightlife, team building / family day and vip / private event. Capacity depends on the selected space and event layout.",
+      "imageMode": "official",
+      "lat": 1.2580864,
+      "lng": 103.8177227,
       "capacityBasis": {
-        "space": "Full Park Buyout",
+        "space": "Full attraction event programme",
         "layout": "cocktail",
-        "capacity": 3000
+        "capacity": 2000
       },
-      "sourceUrl": "https://rwsentosa.com/en/attractions/adventure-cove-waterpark",
+      "sourceUrl": "https://www.rwsentosa.com/en/play/adventure-cove-waterpark",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "",
-      "imageSourceType": "reference",
+      "imageSourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "imageSourceType": "official",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
       "featuredDetail": false,
@@ -1466,7 +1406,7 @@
       "name": "Marina Barrage",
       "area": "Marina Bay",
       "address": "8 Marina Gardens Drive, Singapore 018951",
-      "website": "https://pub.gov.sg/marinabarrage",
+      "website": "https://www.pub.gov.sg/public/places-of-interest/marina-barrage",
       "spaces": [
         {
           "name": "Solar Park (Green Roof)",
@@ -1542,7 +1482,7 @@
         "layout": "cocktail",
         "capacity": 3000
       },
-      "sourceUrl": "https://pub.gov.sg/marinabarrage",
+      "sourceUrl": "https://www.pub.gov.sg/public/places-of-interest/marina-barrage",
       "sourceType": "Official venue website",
       "imageSourceUrl": "https://www.pub.gov.sg/public/places-of-interest/marina-barrage",
       "imageSourceType": "official",
@@ -1847,21 +1787,11 @@
       "website": "https://thekallang.com.sg/venues-facilities/ocbc-square",
       "spaces": [
         {
-          "name": "OCBC Square（全场）",
+          "name": "OCBC Square",
           "areaSqm": 1542,
           "ceilingM": 16,
           "banquet": null,
           "cocktail": 2000,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Stage Area",
-          "areaSqm": null,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": null,
           "theatre": null,
           "classroom": null,
           "note": ""
@@ -1886,19 +1816,19 @@
       ],
       "primaryType": "Stadium / arena",
       "image": "/singapore-event-venue-finder/assets/venues/ocbc-square.webp",
-      "publicNote": "Stadium / arena in Kallang / Sports Hub with 2 recorded event spaces. OCBC Square（全场） supports up to 2,000 guests in cocktail format. Planning tags include product / brand launch, exhibition / immersive and performance / concert. Capacity depends on the selected space and event layout.",
-      "imageMode": "reference",
-      "lat": 1.3025469,
-      "lng": 103.8781887,
+      "publicNote": "Stadium / arena in Kallang / Sports Hub with 1 recorded event space. OCBC Square supports up to 2,000 guests in cocktail format. Planning tags include product / brand launch, exhibition / immersive and performance / concert. Capacity depends on the selected space and event layout.",
+      "imageMode": "official",
+      "lat": 1.3020746,
+      "lng": 103.8735992,
       "capacityBasis": {
-        "space": "OCBC Square（全场）",
+        "space": "OCBC Square",
         "layout": "cocktail",
         "capacity": 2000
       },
       "sourceUrl": "https://thekallang.com.sg/venues-facilities/ocbc-square",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "",
-      "imageSourceType": "reference",
+      "imageSourceUrl": "https://www.thekallang.com.sg/venues-facilities/ocbc-square",
+      "imageSourceType": "official",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
       "featuredDetail": false,
@@ -1910,55 +1840,55 @@
       "planningConsiderations": []
     },
     {
-      "id": "s-e-a-aquarium",
-      "name": "S.E.A. Aquarium",
+      "id": "singapore-oceanarium",
+      "name": "Singapore Oceanarium",
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Sentosa, Singapore 098269",
-      "website": "https://rwsentosa.com/en/attractions/sea-aquarium",
+      "website": "https://www.rwsentosa.com/en/play/singapore-oceanarium",
       "spaces": [
         {
           "name": "Ocean Gallery",
-          "areaSqm": 500,
+          "areaSqm": 689,
           "ceilingM": null,
-          "banquet": 150,
+          "banquet": null,
           "cocktail": 400,
           "theatre": null,
           "classroom": null,
-          "note": "Floor-to-ceiling tank backdrop"
+          "note": "Official public benchmark"
         },
         {
-          "name": "Open Ocean Habitat Hall",
-          "areaSqm": 900,
-          "ceilingM": 10,
-          "banquet": 300,
-          "cocktail": null,
-          "theatre": null,
-          "classroom": null,
-          "note": "World's largest aquarium window as backdrop"
-        },
-        {
-          "name": "Shipwreck Gallery",
-          "areaSqm": 350,
+          "name": "Whale Fall and Seamount",
+          "areaSqm": 470,
           "ceilingM": null,
-          "banquet": 100,
-          "cocktail": 250,
+          "banquet": null,
+          "cocktail": 282,
           "theatre": null,
           "classroom": null,
-          "note": "Themed space with shipwreck"
+          "note": "Official maximum capacity"
         },
         {
-          "name": "Full Aquarium Buyout",
-          "areaSqm": null,
+          "name": "Ancient Waters",
+          "areaSqm": 453,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 272,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official maximum capacity"
+        },
+        {
+          "name": "Seminar Room",
+          "areaSqm": 164,
           "ceilingM": null,
           "banquet": null,
           "cocktail": null,
-          "theatre": null,
+          "theatre": 138,
           "classroom": null,
-          "note": ""
+          "note": "Official maximum capacity"
         }
       ],
       "maxCapacity": 400,
-      "maxAreaSqm": 900,
+      "maxAreaSqm": 689,
       "eventTypes": [
         "Product / brand launch",
         "Gala / dinner",
@@ -1978,27 +1908,27 @@
         "Waterfront / marina"
       ],
       "primaryType": "Attraction / theme park",
-      "image": "/singapore-event-venue-finder/assets/venues/s-e-a-aquarium.webp",
+      "image": "/singapore-event-venue-finder/assets/venues/singapore-oceanarium.webp",
       "publicNote": "Attraction / theme park in Sentosa with 4 recorded event spaces. Ocean Gallery supports up to 400 guests in cocktail format. Planning tags include product / brand launch, gala / dinner and wedding. Capacity depends on the selected space and event layout.",
-      "imageMode": "reference",
-      "lat": 1.2556955,
-      "lng": 103.8202156,
+      "imageMode": "official",
+      "lat": 1.2583525,
+      "lng": 103.820484,
       "capacityBasis": {
         "space": "Ocean Gallery",
         "layout": "cocktail",
         "capacity": 400
       },
-      "sourceUrl": "https://rwsentosa.com/en/attractions/sea-aquarium",
+      "sourceUrl": "https://www.rwsentosa.com/en/play/singapore-oceanarium",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "",
-      "imageSourceType": "reference",
+      "imageSourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "imageSourceType": "official",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
       "featuredDetail": true,
       "capacityAuditStatus": "official",
       "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
       "auditReviewedAt": "2026-06-20",
-      "auditSummary": "The Ocean Gallery creates an immersive aquarium backdrop for dinners and receptions within Resorts World Sentosa.",
+      "auditSummary": "Singapore Oceanarium's Ocean Gallery creates an immersive underwater backdrop for dinners and receptions within Resorts World Sentosa.",
       "bestFor": [
         "Cocktail receptions",
         "Private dinners",
@@ -2312,7 +2242,7 @@
       "name": "Hilton Singapore Orchard",
       "area": "Orchard / Tanglin",
       "address": "333 Orchard Road, Singapore 238867",
-      "website": "https://hilton.com/sinorhi",
+      "website": "https://www.hilton.com/en/hotels/sinorhi-hilton-singapore-orchard/",
       "spaces": [
         {
           "name": "Grand Ballroom",
@@ -2444,7 +2374,7 @@
         "layout": "theatre",
         "capacity": 1000
       },
-      "sourceUrl": "https://hilton.com/sinorhi",
+      "sourceUrl": "https://www.hilton.com/en/hotels/sinorhi-hilton-singapore-orchard/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
@@ -2472,76 +2402,33 @@
       "name": "Hotel Michael",
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa, Singapore 098269",
-      "website": "https://rwsentosa.com/en/hotels/hotel-michael",
-      "spaces": [
-        {
-          "name": "Crockfords Ballroom",
-          "areaSqm": 1400,
-          "ceilingM": 7,
-          "banquet": 900,
-          "cocktail": 1500,
-          "theatre": 1300,
-          "classroom": 650,
-          "note": ""
-        },
-        {
-          "name": "Function Rooms (x12)",
-          "areaSqm": 80,
-          "ceilingM": 3,
-          "banquet": 40,
-          "cocktail": 70,
-          "theatre": 70,
-          "classroom": 35,
-          "note": ""
-        },
-        {
-          "name": "Michael Restaurant",
-          "areaSqm": 220,
-          "ceilingM": null,
-          "banquet": 100,
-          "cocktail": 180,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        }
-      ],
-      "maxCapacity": 1500,
-      "maxAreaSqm": 1400,
+      "website": "https://www.rwsentosa.com/en/stay/hotel-michael",
+      "spaces": [],
+      "maxCapacity": null,
+      "maxAreaSqm": null,
       "eventTypes": [
         "Corporate event",
-        "Conference / seminar",
-        "Gala / dinner",
-        "Awards ceremony",
-        "Exhibition / immersive",
         "VIP / private event"
       ],
       "propertyTypes": [
-        "Hotel",
-        "Restaurant / dining"
+        "Hotel"
       ],
       "settings": [
-        "Indoor",
-        "Ballroom",
-        "Meeting rooms",
-        "Restaurant / bar"
+        "Indoor"
       ],
       "primaryType": "Hotel",
       "image": "/singapore-event-venue-finder/assets/venues/hotel-michael.webp",
-      "publicNote": "Hotel in Sentosa with 3 recorded event spaces. Crockfords Ballroom supports up to 1,500 guests in cocktail format. Planning tags include corporate event, conference / seminar and gala / dinner. Capacity depends on the selected space and event layout.",
-      "imageMode": "reference",
+      "publicNote": "Hotel in Sentosa. Planning tags include corporate event and vip / private event. Capacity depends on the selected space and event layout.",
+      "imageMode": "official",
       "lat": 1.2551317,
       "lng": 103.8203679,
-      "capacityBasis": {
-        "space": "Crockfords Ballroom",
-        "layout": "cocktail",
-        "capacity": 1500
-      },
-      "sourceUrl": "https://rwsentosa.com/en/hotels/hotel-michael",
+      "capacityBasis": null,
+      "sourceUrl": "https://www.rwsentosa.com/en/stay/hotel-michael",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "",
-      "imageSourceType": "reference",
+      "imageSourceUrl": "https://www.rwsentosa.com/en/stay/hotel-michael",
+      "imageSourceType": "official",
       "lastVerified": "2026-06-21",
-      "dataConfidence": "high",
+      "dataConfidence": "limited",
       "featuredDetail": false,
       "capacityAuditStatus": "curated",
       "capacitySourceUrl": "",
@@ -2759,11 +2646,11 @@
       "name": "ArtScience Museum",
       "area": "Marina Bay",
       "address": "6 Bayfront Avenue, Singapore 018974",
-      "website": "https://marinabaysands.com/museum",
+      "website": "https://www.marinabaysands.com/museum/about-us/services/venue-rental.html",
       "spaces": [
         {
           "name": "Basement 2 Circulation",
-          "areaSqm": null,
+          "areaSqm": 525,
           "ceilingM": null,
           "banquet": null,
           "cocktail": 250,
@@ -2772,78 +2659,38 @@
           "note": "Official public benchmark"
         },
         {
-          "name": "Whole Museum Buyout",
-          "areaSqm": 6800,
+          "name": "ArtScience Cinema",
+          "areaSqm": 236,
           "ceilingM": null,
           "banquet": null,
           "cocktail": null,
-          "theatre": null,
+          "theatre": 66,
           "classroom": null,
-          "note": "Entire lotus museum"
-        },
-        {
-          "name": "Level 4 - Expression",
-          "areaSqm": 325,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": 150,
-          "theatre": null,
-          "classroom": null,
-          "note": "4-screen system"
-        },
-        {
-          "name": "Level 4 - Curiosity",
-          "areaSqm": 450,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": 250,
-          "theatre": null,
-          "classroom": null,
-          "note": "Showcase space"
-        },
-        {
-          "name": "Level 4 - Inspiration",
-          "areaSqm": 865,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": null,
-          "theatre": null,
-          "classroom": null,
-          "note": "20m x 20m projection"
-        },
-        {
-          "name": "Level 1 Lobby",
-          "areaSqm": 1000,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": null,
-          "theatre": null,
-          "classroom": null,
-          "note": "Lily pond view"
-        },
-        {
-          "name": "Basement 2 Galleries",
-          "areaSqm": 4000,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": null,
-          "theatre": null,
-          "classroom": null,
-          "note": "Future World + Rainbow Room"
-        },
-        {
-          "name": "Conference Room",
-          "areaSqm": 100,
-          "ceilingM": null,
-          "banquet": 40,
-          "cocktail": 60,
-          "theatre": 60,
-          "classroom": 30,
           "note": ""
+        },
+        {
+          "name": "Level 4 Lift Lobby",
+          "areaSqm": 166,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 50,
+          "theatre": null,
+          "classroom": null,
+          "note": ""
+        },
+        {
+          "name": "VR Gallery",
+          "areaSqm": 184,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": null,
+          "classroom": 15,
+          "note": "Pods-style seating"
         }
       ],
       "maxCapacity": 250,
-      "maxAreaSqm": 6800,
+      "maxAreaSqm": 525,
       "eventTypes": [
         "Product / brand launch",
         "Conference / seminar",
@@ -2861,7 +2708,7 @@
       ],
       "primaryType": "Museum / gallery",
       "image": "/singapore-event-venue-finder/assets/venues/artscience-museum.webp",
-      "publicNote": "Museum / gallery in Marina Bay with 8 recorded event spaces. Basement 2 Circulation supports up to 250 guests in cocktail format. Planning tags include product / brand launch, conference / seminar and cocktail / reception. Capacity depends on the selected space and event layout.",
+      "publicNote": "Museum / gallery in Marina Bay with 4 recorded event spaces. Basement 2 Circulation supports up to 250 guests in cocktail format. Planning tags include product / brand launch, conference / seminar and cocktail / reception. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.2861382,
       "lng": 103.8592297,
@@ -2870,9 +2717,9 @@
         "layout": "cocktail",
         "capacity": 250
       },
-      "sourceUrl": "https://marinabaysands.com/museum",
+      "sourceUrl": "https://www.marinabaysands.com/museum/about-us/services/venue-rental.html",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "",
+      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:ArtScience_Museum,_Marina_Bay_Sands,_Singapore.jpg",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
@@ -3218,7 +3065,7 @@
       },
       "sourceUrl": "https://nhb.gov.sg/nationalmuseum",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "",
+      "imageSourceUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_Singapore.jpg",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
@@ -3503,64 +3350,24 @@
     },
     {
       "id": "equarius-ballroom",
-      "name": "Equarius Ballroom",
+      "name": "Equarius Hotel Ballroom & Function Rooms",
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa 098269",
-      "website": "https://rwsentosa.com/",
+      "website": "https://www.rwsentosa.com/en/meetings/event-venues",
       "spaces": [
         {
-          "name": "Equarius Ballroom",
-          "areaSqm": 840,
-          "ceilingM": 8,
-          "banquet": 600,
-          "cocktail": 1000,
-          "theatre": 900,
-          "classroom": 500,
-          "note": "Pillarless; divisible into 3"
-        },
-        {
-          "name": "Equarius Ballroom Foyer",
-          "areaSqm": 420,
+          "name": "Ballroom & Function Rooms",
+          "areaSqm": 1807,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 500,
+          "cocktail": 1017,
           "theatre": null,
           "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Equarius Ballroom 1",
-          "areaSqm": 280,
-          "ceilingM": 8,
-          "banquet": 180,
-          "cocktail": 300,
-          "theatre": 280,
-          "classroom": 150,
-          "note": "1/3"
-        },
-        {
-          "name": "Equarius Ballroom 2",
-          "areaSqm": 280,
-          "ceilingM": 8,
-          "banquet": 180,
-          "cocktail": 300,
-          "theatre": 280,
-          "classroom": 150,
-          "note": "1/3"
-        },
-        {
-          "name": "Equarius Ballroom 3",
-          "areaSqm": 280,
-          "ceilingM": 8,
-          "banquet": 180,
-          "cocktail": 300,
-          "theatre": 280,
-          "classroom": 150,
-          "note": "1/3"
+          "note": "Official maximum event capacity"
         }
       ],
-      "maxCapacity": 1000,
-      "maxAreaSqm": 840,
+      "maxCapacity": 1017,
+      "maxAreaSqm": 1807,
       "eventTypes": [
         "Product / brand launch",
         "Corporate event",
@@ -3577,19 +3384,19 @@
       ],
       "primaryType": "Hotel",
       "image": "/singapore-event-venue-finder/assets/venues/equarius-ballroom.webp",
-      "publicNote": "Hotel in Sentosa with 5 recorded event spaces. Equarius Ballroom supports up to 1,000 guests in cocktail format. Planning tags include product / brand launch, corporate event and conference / seminar. Capacity depends on the selected space and event layout.",
-      "imageMode": "reference",
+      "publicNote": "Hotel in Sentosa with 1 recorded event space. Ballroom & Function Rooms supports up to 1,017 guests in cocktail format. Planning tags include product / brand launch, corporate event and conference / seminar. Capacity depends on the selected space and event layout.",
+      "imageMode": "official",
       "lat": 1.256502,
       "lng": 103.8189,
       "capacityBasis": {
-        "space": "Equarius Ballroom",
+        "space": "Ballroom & Function Rooms",
         "layout": "cocktail",
-        "capacity": 1000
+        "capacity": 1017
       },
-      "sourceUrl": "https://rwsentosa.com/",
+      "sourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "",
-      "imageSourceType": "reference",
+      "imageSourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "imageSourceType": "official",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
       "featuredDetail": false,
@@ -3605,7 +3412,7 @@
       "name": "JW Marriott Singapore South Beach",
       "area": "City Hall / Civic District",
       "address": "30 Beach Road, Singapore 189763",
-      "website": "https://marriott.com/SINDT",
+      "website": "https://www.marriott.com/en-us/hotels/sinjw-jw-marriott-hotel-singapore-south-beach/events/",
       "spaces": [
         {
           "name": "The Grand Hall",
@@ -3714,7 +3521,7 @@
         "layout": "cocktail",
         "capacity": 1000
       },
-      "sourceUrl": "https://marriott.com/SINDT",
+      "sourceUrl": "https://www.marriott.com/en-us/hotels/sinjw-jw-marriott-hotel-singapore-south-beach/events/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
@@ -4297,10 +4104,10 @@
     },
     {
       "id": "conrad-centennial-singapore",
-      "name": "Conrad Centennial Singapore",
+      "name": "Conrad Singapore Marina Bay",
       "area": "Marina Bay",
       "address": "2 Temasek Boulevard, Singapore 038982",
-      "website": "https://hilton.com/conrad/sinci",
+      "website": "https://www.hilton.com/en/hotels/sincici-conrad-singapore-marina-bay/",
       "spaces": [
         {
           "name": "Grand Ballroom",
@@ -4430,7 +4237,7 @@
         "layout": "cocktail",
         "capacity": 800
       },
-      "sourceUrl": "https://hilton.com/conrad/sinci",
+      "sourceUrl": "https://www.hilton.com/en/hotels/sincici-conrad-singapore-marina-bay/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
@@ -4449,7 +4256,7 @@
       "name": "Conrad Singapore Orchard",
       "area": "Orchard / Tanglin",
       "address": "1 Cuscaden Road, Singapore 249715",
-      "website": "https://hilton.com/conrad/sinor",
+      "website": "https://www.hilton.com/en/hotels/sinodci-conrad-singapore-orchard/",
       "spaces": [
         {
           "name": "Grand Ballroom",
@@ -4560,7 +4367,7 @@
         "layout": "cocktail",
         "capacity": 800
       },
-      "sourceUrl": "https://hilton.com/conrad/sinor",
+      "sourceUrl": "https://www.hilton.com/en/hotels/sinodci-conrad-singapore-orchard/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
@@ -4579,7 +4386,7 @@
       "name": "Fullerton Bay / Clifford Pier",
       "area": "Marina Bay",
       "address": "80 Collyer Quay, Singapore 049326",
-      "website": "https://fullertonhotels.com/",
+      "website": "https://www.fullertonhotels.com/fullerton-bay-hotel-singapore/meetings-and-events/the-clifford-pier",
       "spaces": [
         {
           "name": "Clifford Pier (main hall)",
@@ -4686,7 +4493,7 @@
         "layout": "cocktail",
         "capacity": 800
       },
-      "sourceUrl": "https://fullertonhotels.com/",
+      "sourceUrl": "https://www.fullertonhotels.com/fullerton-bay-hotel-singapore/meetings-and-events/the-clifford-pier",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
@@ -4829,7 +4636,7 @@
       "name": "PARKROYAL COLLECTION Pickering",
       "area": "CBD / Tanjong Pagar",
       "address": "3 Upper Pickering Street, Singapore 058289",
-      "website": "https://panpacific.com/parkroyal-collection-pickering",
+      "website": "https://www.panpacific.com/en/hotels-and-resorts/pr-collection-pickering.html",
       "spaces": [
         {
           "name": "Grand Ballroom",
@@ -4931,7 +4738,7 @@
         "layout": "cocktail",
         "capacity": 800
       },
-      "sourceUrl": "https://panpacific.com/parkroyal-collection-pickering",
+      "sourceUrl": "https://www.panpacific.com/en/hotels-and-resorts/pr-collection-pickering.html",
       "sourceType": "Official venue website",
       "imageSourceUrl": "https://www.panpacific.com/en/hotels-and-resorts/pr-collection-pickering.html",
       "imageSourceType": "official",
@@ -6476,95 +6283,55 @@
       "planningConsiderations": []
     },
     {
-      "id": "intercontinental-singapore",
-      "name": "InterContinental Singapore",
+      "id": "frasers-house-singapore",
+      "name": "Frasers House, a Luxury Collection Hotel, Singapore",
       "area": "City Hall / Civic District",
       "address": "80 Middle Road, Singapore 188966",
-      "website": "https://singapore.intercontinental.com/",
+      "website": "https://www.marriott.com/en-us/hotels/sinlb-frasers-house-a-luxury-collection-hotel-singapore/events/",
       "spaces": [
         {
           "name": "Grand Ballroom",
-          "areaSqm": 570,
+          "areaSqm": 540,
           "ceilingM": 6,
-          "banquet": 380,
-          "cocktail": 600,
-          "theatre": 550,
-          "classroom": 280,
-          "note": "Pillarless, divisible into 3"
-        },
-        {
-          "name": "Grand Ballroom Foyer",
-          "areaSqm": 280,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": 250,
+          "banquet": 320,
+          "cocktail": 364,
           "theatre": null,
           "classroom": null,
-          "note": ""
+          "note": "Current official largest-space benchmark"
         },
         {
-          "name": "Ballroom 1",
-          "areaSqm": 190,
-          "ceilingM": 6,
-          "banquet": 120,
-          "cocktail": 200,
-          "theatre": 180,
-          "classroom": 90,
-          "note": "1/3"
+          "name": "Bras Basah Meeting Rooms",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 120,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official maximum capacity"
         },
         {
-          "name": "Ballroom 2",
-          "areaSqm": 190,
-          "ceilingM": 6,
-          "banquet": 120,
-          "cocktail": 200,
-          "theatre": 180,
-          "classroom": 90,
-          "note": "1/3"
+          "name": "The Vault",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": 48,
+          "theatre": null,
+          "classroom": null,
+          "note": "Official maximum capacity"
         },
         {
-          "name": "Ballroom 3",
-          "areaSqm": 190,
-          "ceilingM": 6,
-          "banquet": 120,
-          "cocktail": 200,
-          "theatre": 180,
-          "classroom": 90,
-          "note": "1/3"
-        },
-        {
-          "name": "Ophir Room",
-          "areaSqm": 120,
-          "ceilingM": 3.5,
-          "banquet": 70,
-          "cocktail": 110,
-          "theatre": 100,
-          "classroom": 50,
-          "note": ""
-        },
-        {
-          "name": "Victoria Room",
-          "areaSqm": 90,
-          "ceilingM": 3.5,
-          "banquet": 50,
-          "cocktail": 80,
-          "theatre": 80,
-          "classroom": 40,
-          "note": ""
-        },
-        {
-          "name": "Bras Basah Room",
-          "areaSqm": 65,
-          "ceilingM": 3,
-          "banquet": 30,
-          "cocktail": 50,
-          "theatre": 50,
-          "classroom": 25,
-          "note": ""
+          "name": "Boardroom",
+          "areaSqm": null,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": null,
+          "classroom": 10,
+          "note": "Official maximum capacity"
         }
       ],
-      "maxCapacity": 600,
-      "maxAreaSqm": 570,
+      "maxCapacity": 364,
+      "maxAreaSqm": 540,
       "eventTypes": [
         "Product / brand launch",
         "Corporate event",
@@ -6574,7 +6341,8 @@
         "Awards ceremony"
       ],
       "propertyTypes": [
-        "Hotel"
+        "Hotel",
+        "Heritage venue"
       ],
       "settings": [
         "Indoor",
@@ -6582,16 +6350,16 @@
       ],
       "primaryType": "Hotel",
       "image": "/singapore-event-venue-finder/assets/venues/intercontinental-singapore.webp",
-      "publicNote": "Hotel in City Hall / Civic District with 8 recorded event spaces. Grand Ballroom supports up to 600 guests in cocktail format. Planning tags include product / brand launch, corporate event and conference / seminar. Capacity depends on the selected space and event layout.",
+      "publicNote": "Hotel in City Hall / Civic District with 4 recorded event spaces. Grand Ballroom supports up to 364 guests in cocktail format. Planning tags include product / brand launch, corporate event and conference / seminar. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.2989695,
       "lng": 103.8548896,
       "capacityBasis": {
         "space": "Grand Ballroom",
         "layout": "cocktail",
-        "capacity": 600
+        "capacity": 364
       },
-      "sourceUrl": "https://singapore.intercontinental.com/",
+      "sourceUrl": "https://www.marriott.com/en-us/hotels/sinlb-frasers-house-a-luxury-collection-hotel-singapore/events/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
@@ -6793,7 +6561,7 @@
       "name": "Sofitel Singapore City Centre",
       "area": "CBD / Tanjong Pagar",
       "address": "9 Wallich Street, Singapore 078885",
-      "website": "https://sofitel-singapore-citycentre.com/",
+      "website": "https://all.accor.com/hotel/A152/index.en.shtml",
       "spaces": [
         {
           "name": "Grand Ballroom",
@@ -6884,7 +6652,7 @@
         "layout": "cocktail",
         "capacity": 600
       },
-      "sourceUrl": "https://sofitel-singapore-citycentre.com/",
+      "sourceUrl": "https://all.accor.com/hotel/A152/index.en.shtml",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
@@ -7708,87 +7476,6 @@
       "planningConsiderations": []
     },
     {
-      "id": "hard-rock-hotel-singapore",
-      "name": "Hard Rock Hotel Singapore",
-      "area": "Sentosa",
-      "address": "8 Sentosa Gateway, Resorts World Sentosa, Singapore 098269",
-      "website": "https://rwsentosa.com/en/hotels/hard-rock-hotel-singapore",
-      "spaces": [
-        {
-          "name": "Pool Deck",
-          "areaSqm": 800,
-          "ceilingM": null,
-          "banquet": null,
-          "cocktail": 500,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Hard Rock Cafe (adjacent)",
-          "areaSqm": 450,
-          "ceilingM": null,
-          "banquet": 200,
-          "cocktail": 400,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Sessions Restaurant",
-          "areaSqm": 180,
-          "ceilingM": null,
-          "banquet": 80,
-          "cocktail": 150,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        }
-      ],
-      "maxCapacity": 500,
-      "maxAreaSqm": 800,
-      "eventTypes": [
-        "Product / brand launch",
-        "Wedding",
-        "Party / nightlife",
-        "VIP / private event"
-      ],
-      "propertyTypes": [
-        "Hotel",
-        "Restaurant / dining"
-      ],
-      "settings": [
-        "Indoor",
-        "Outdoor",
-        "Restaurant / bar",
-        "Poolside"
-      ],
-      "primaryType": "Hotel",
-      "image": "/singapore-event-venue-finder/assets/venues/hard-rock-hotel-singapore.webp",
-      "publicNote": "Hotel in Sentosa with 3 recorded event spaces. Pool Deck supports up to 500 guests in cocktail format. Planning tags include product / brand launch, wedding and party / nightlife. Capacity depends on the selected space and event layout.",
-      "imageMode": "reference",
-      "lat": 1.2575434,
-      "lng": 103.818827,
-      "capacityBasis": {
-        "space": "Pool Deck",
-        "layout": "cocktail",
-        "capacity": 500
-      },
-      "sourceUrl": "https://rwsentosa.com/en/hotels/hard-rock-hotel-singapore",
-      "sourceType": "Official venue website",
-      "imageSourceUrl": "",
-      "imageSourceType": "reference",
-      "lastVerified": "2026-06-21",
-      "dataConfidence": "high",
-      "featuredDetail": false,
-      "capacityAuditStatus": "curated",
-      "capacitySourceUrl": "",
-      "auditReviewedAt": null,
-      "auditSummary": "",
-      "bestFor": [],
-      "planningConsiderations": []
-    },
-    {
       "id": "joaquim-hall",
       "name": "Joaquim Hall",
       "area": "Sentosa",
@@ -8123,7 +7810,7 @@
       "name": "Pan Pacific Orchard Singapore",
       "area": "Orchard / Tanglin",
       "address": "10 Claymore Road, Singapore 229540",
-      "website": "https://panpacific.com/en/hotels-and-resorts/pp-orchard",
+      "website": "https://www.panpacific.com/en/hotels-and-resorts/pp-orchard-sg.html",
       "spaces": [
         {
           "name": "Claymore Ballroom",
@@ -8217,7 +7904,7 @@
         "layout": "cocktail",
         "capacity": 500
       },
-      "sourceUrl": "https://panpacific.com/en/hotels-and-resorts/pp-orchard",
+      "sourceUrl": "https://www.panpacific.com/en/hotels-and-resorts/pp-orchard-sg.html",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
@@ -8329,51 +8016,21 @@
       "name": "Resorts World Convention Centre",
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Singapore 098269",
-      "website": "https://www.rwsentosa.com/en/meetings",
+      "website": "https://www.rwsentosa.com/en/meetings/event-venues",
       "spaces": [
         {
-          "name": "Pisces 2+3+4",
-          "areaSqm": 800,
+          "name": "Resorts World Function Rooms",
+          "areaSqm": 839,
           "ceilingM": null,
-          "banquet": 400,
-          "cocktail": 500,
-          "theatre": 500,
-          "classroom": 300,
-          "note": ""
-        },
-        {
-          "name": "Pisces 2",
-          "areaSqm": 260,
-          "ceilingM": null,
-          "banquet": 120,
-          "cocktail": 180,
-          "theatre": 180,
-          "classroom": 100,
-          "note": ""
-        },
-        {
-          "name": "Pisces 3",
-          "areaSqm": 260,
-          "ceilingM": null,
-          "banquet": 120,
-          "cocktail": 180,
-          "theatre": 180,
-          "classroom": 100,
-          "note": ""
-        },
-        {
-          "name": "Pisces 4",
-          "areaSqm": 280,
-          "ceilingM": null,
-          "banquet": 150,
-          "cocktail": 200,
-          "theatre": 200,
-          "classroom": 120,
-          "note": ""
+          "banquet": null,
+          "cocktail": 540,
+          "theatre": null,
+          "classroom": null,
+          "note": "Largest configuration across 21 function rooms"
         }
       ],
-      "maxCapacity": 500,
-      "maxAreaSqm": 800,
+      "maxCapacity": 540,
+      "maxAreaSqm": 839,
       "eventTypes": [
         "Exhibition / immersive",
         "Pop-up / market / activation"
@@ -8387,18 +8044,18 @@
       ],
       "primaryType": "Convention / exhibition",
       "image": "/singapore-event-venue-finder/assets/venues/resorts-world-convention-centre.webp",
-      "publicNote": "Convention / exhibition in Sentosa with 4 recorded event spaces. Pisces 2+3+4 supports up to 500 guests in cocktail format. Planning tags include exhibition / immersive and pop-up / market / activation. Capacity depends on the selected space and event layout.",
+      "publicNote": "Convention / exhibition in Sentosa with 1 recorded event space. Resorts World Function Rooms supports up to 540 guests in cocktail format. Planning tags include exhibition / immersive and pop-up / market / activation. Capacity depends on the selected space and event layout.",
       "imageMode": "official",
       "lat": 1.2556955,
       "lng": 103.8202156,
       "capacityBasis": {
-        "space": "Pisces 2+3+4",
+        "space": "Resorts World Function Rooms",
         "layout": "cocktail",
-        "capacity": 500
+        "capacity": 540
       },
-      "sourceUrl": "https://www.rwsentosa.com/en/meetings",
+      "sourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "https://www.rwsentosa.com/en/meetings",
+      "imageSourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
       "imageSourceType": "official",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
@@ -8922,7 +8579,7 @@
       "name": "Village Hotel Sentosa",
       "area": "Sentosa",
       "address": "10 Artillery Avenue, Sentosa, Singapore 099951",
-      "website": "https://stayfareast.com/en/hotels/village-hotel-sentosa",
+      "website": "https://www.villagehotels.asia/en/hotels/village-hotel-sentosa",
       "spaces": [
         {
           "name": "Sentosa Ballroom",
@@ -8993,7 +8650,7 @@
         "layout": "cocktail",
         "capacity": 450
       },
-      "sourceUrl": "https://stayfareast.com/en/hotels/village-hotel-sentosa",
+      "sourceUrl": "https://www.villagehotels.asia/en/hotels/village-hotel-sentosa",
       "sourceType": "Official venue website",
       "imageSourceUrl": "https://www.villagehotels.asia/en/hotels/village-hotel-sentosa",
       "imageSourceType": "official",
@@ -9012,7 +8669,7 @@
       "name": "Amara Sanctuary Resort Sentosa",
       "area": "Sentosa",
       "address": "1 Larkhill Road, Sentosa, Singapore 099394",
-      "website": "https://amarasanctuary.com/",
+      "website": "https://sentosa.amarahotels.com/",
       "spaces": [
         {
           "name": "The Glasshouse",
@@ -9098,7 +8755,7 @@
         "layout": "cocktail",
         "capacity": 400
       },
-      "sourceUrl": "https://amarasanctuary.com/",
+      "sourceUrl": "https://sentosa.amarahotels.com/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
@@ -9298,8 +8955,8 @@
       "image": "/singapore-event-venue-finder/assets/venues/changi-experience-studio.webp",
       "publicNote": "Attraction / theme park in Changi / Expo with 1 recorded event space. Studio Space supports up to 400 guests in cocktail format. Planning tags include exhibition / immersive and pop-up / market / activation. Capacity depends on the selected space and event layout.",
       "imageMode": "official",
-      "lat": 1.3602243,
-      "lng": 103.9896749,
+      "lat": 1.3601242,
+      "lng": 103.9891242,
       "capacityBasis": {
         "space": "Studio Space",
         "layout": "cocktail",
@@ -9596,7 +9253,7 @@
       "name": "Mount Faber Peak",
       "area": "HarbourFront / South",
       "address": "109 Mount Faber Road, Singapore 099203",
-      "website": "https://mountfaberpeak.com/",
+      "website": "https://mountfaberdining.com/pages/corporate-events",
       "spaces": [
         {
           "name": "The Ballroom",
@@ -9677,7 +9334,7 @@
         "layout": "cocktail",
         "capacity": 350
       },
-      "sourceUrl": "https://mountfaberpeak.com/",
+      "sourceUrl": "https://mountfaberdining.com/pages/corporate-events",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
@@ -9996,41 +9653,10 @@
       "name": "Equarius Hotel",
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa, Singapore 098269",
-      "website": "https://rwsentosa.com/en/hotels/equarius-hotel",
-      "spaces": [
-        {
-          "name": "Forest Lawn",
-          "areaSqm": 600,
-          "ceilingM": null,
-          "banquet": 150,
-          "cocktail": 300,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Function Rooms (x3)",
-          "areaSqm": 70,
-          "ceilingM": 3,
-          "banquet": 35,
-          "cocktail": 60,
-          "theatre": 60,
-          "classroom": 28,
-          "note": ""
-        },
-        {
-          "name": "Forest @ Equarius",
-          "areaSqm": 280,
-          "ceilingM": null,
-          "banquet": 120,
-          "cocktail": 220,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        }
-      ],
-      "maxCapacity": 300,
-      "maxAreaSqm": 600,
+      "website": "https://www.rwsentosa.com/en/stay/equarius-hotel",
+      "spaces": [],
+      "maxCapacity": null,
+      "maxAreaSqm": null,
       "eventTypes": [
         "Product / brand launch",
         "Conference / seminar",
@@ -10038,7 +9664,8 @@
         "VIP / private event"
       ],
       "propertyTypes": [
-        "Hotel"
+        "Hotel",
+        "Resort"
       ],
       "settings": [
         "Indoor",
@@ -10049,21 +9676,17 @@
       ],
       "primaryType": "Hotel",
       "image": "/singapore-event-venue-finder/assets/venues/equarius-hotel.webp",
-      "publicNote": "Hotel in Sentosa with 3 recorded event spaces. Forest Lawn supports up to 300 guests in cocktail format. Planning tags include product / brand launch, conference / seminar and wedding. Capacity depends on the selected space and event layout.",
+      "publicNote": "Hotel in Sentosa. Planning tags include product / brand launch, conference / seminar and wedding. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.2577957,
       "lng": 103.8167429,
-      "capacityBasis": {
-        "space": "Forest Lawn",
-        "layout": "cocktail",
-        "capacity": 300
-      },
-      "sourceUrl": "https://rwsentosa.com/en/hotels/equarius-hotel",
+      "capacityBasis": null,
+      "sourceUrl": "https://www.rwsentosa.com/en/stay/equarius-hotel",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-21",
-      "dataConfidence": "high",
+      "dataConfidence": "limited",
       "featuredDetail": false,
       "capacityAuditStatus": "curated",
       "capacitySourceUrl": "",
@@ -10788,77 +10411,51 @@
       "planningConsiderations": []
     },
     {
-      "id": "festive-hotel",
-      "name": "Festive Hotel",
+      "id": "hotel-ora",
+      "name": "Hotel Ora",
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa, Singapore 098269",
-      "website": "https://rwsentosa.com/en/hotels/festive-hotel",
+      "website": "https://www.rwsentosa.com/en/stay/hotel-ora",
       "spaces": [
         {
-          "name": "Function Rooms (x4)",
-          "areaSqm": 60,
-          "ceilingM": 3,
-          "banquet": 30,
-          "cocktail": 50,
-          "theatre": 50,
-          "classroom": 24,
-          "note": ""
-        },
-        {
-          "name": "Rooftop Pool",
-          "areaSqm": 380,
+          "name": "Meeting Rooms",
+          "areaSqm": 40,
           "ceilingM": null,
           "banquet": null,
-          "cocktail": 180,
+          "cocktail": null,
           "theatre": null,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Festive Grand Restaurant",
-          "areaSqm": 240,
-          "ceilingM": null,
-          "banquet": 120,
-          "cocktail": 220,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
+          "classroom": 10,
+          "note": "Official maximum capacity is 10 guests"
         }
       ],
-      "maxCapacity": 220,
-      "maxAreaSqm": 380,
+      "maxCapacity": 10,
+      "maxAreaSqm": 40,
       "eventTypes": [
         "Conference / seminar",
-        "Team building / family day",
-        "VIP / private event"
+        "Corporate event"
       ],
       "propertyTypes": [
-        "Hotel",
-        "Restaurant / dining"
+        "Hotel"
       ],
       "settings": [
         "Indoor",
-        "Outdoor",
-        "Meeting rooms",
-        "Restaurant / bar",
-        "Rooftop / high-floor",
-        "Poolside"
+        "Meeting rooms"
       ],
       "primaryType": "Hotel",
-      "image": "/singapore-event-venue-finder/assets/venues/festive-hotel.webp",
-      "publicNote": "Hotel in Sentosa with 3 recorded event spaces. Festive Grand Restaurant supports up to 220 guests in cocktail format. Planning tags include conference / seminar, team building / family day and vip / private event. Capacity depends on the selected space and event layout.",
-      "imageMode": "reference",
+      "image": "/singapore-event-venue-finder/assets/venues/hotel-ora.webp",
+      "publicNote": "Hotel in Sentosa with 1 recorded event space. Meeting Rooms supports up to 10 guests in classroom format. Planning tags include conference / seminar and corporate event. Capacity depends on the selected space and event layout.",
+      "imageMode": "official",
       "lat": 1.2562238,
       "lng": 103.8189627,
       "capacityBasis": {
-        "space": "Festive Grand Restaurant",
-        "layout": "cocktail",
-        "capacity": 220
+        "space": "Meeting Rooms",
+        "layout": "classroom",
+        "capacity": 10
       },
-      "sourceUrl": "https://rwsentosa.com/en/hotels/festive-hotel",
+      "sourceUrl": "https://www.rwsentosa.com/en/stay/hotel-ora",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "",
-      "imageSourceType": "reference",
+      "imageSourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "imageSourceType": "official",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
       "featuredDetail": false,
@@ -11520,8 +11117,8 @@
       "image": "/singapore-event-venue-finder/assets/venues/skyhelix-sentosa.webp",
       "publicNote": "Attraction / theme park in Sentosa with 2 recorded event spaces. Ground Plaza supports up to 150 guests in cocktail format. Planning tags include cocktail / reception, wedding and pop-up / market / activation. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
-      "lat": 1.2557994,
-      "lng": 103.8160173,
+      "lat": 1.2549572,
+      "lng": 103.817612,
       "capacityBasis": {
         "space": "Ground Plaza",
         "layout": "cocktail",
@@ -11682,7 +11279,7 @@
       "primaryType": "Restaurant / dining",
       "image": "/singapore-event-venue-finder/assets/venues/arden.webp",
       "publicNote": "Restaurant / dining in CBD / Tanjong Pagar with 3 recorded event spaces. Full Buyout supports up to 80 guests in cocktail format. Planning tags include product / brand launch, gala / dinner and vip / private event. Capacity depends on the selected space and event layout.",
-      "imageMode": "reference",
+      "imageMode": "official",
       "lat": 1.2842204,
       "lng": 103.8501314,
       "capacityBasis": {
@@ -11692,8 +11289,8 @@
       },
       "sourceUrl": "https://1-arden.sg/",
       "sourceType": "Official venue website",
-      "imageSourceUrl": "",
-      "imageSourceType": "reference",
+      "imageSourceUrl": "https://www.1-arden.sg/",
+      "imageSourceType": "official",
       "lastVerified": "2026-06-21",
       "dataConfidence": "high",
       "featuredDetail": false,
@@ -11705,35 +11302,15 @@
       "planningConsiderations": []
     },
     {
-      "id": "beach-villas-rws",
-      "name": "Beach Villas RWS",
+      "id": "equarius-villas",
+      "name": "Equarius Villas",
       "area": "Sentosa",
       "address": "8 Sentosa Gateway, Resorts World Sentosa, Singapore 098269",
-      "website": "https://rwsentosa.com/en/hotels/beach-villas",
+      "website": "https://www.rwsentosa.com/en/stay/equarius-villas",
       "spaces": [
         {
-          "name": "Ocean Suite (x2)",
-          "areaSqm": 600,
-          "ceilingM": null,
-          "banquet": 20,
-          "cocktail": 40,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Tree Top Loft (x2)",
-          "areaSqm": 275,
-          "ceilingM": null,
-          "banquet": 12,
-          "cocktail": 25,
-          "theatre": null,
-          "classroom": null,
-          "note": ""
-        },
-        {
-          "name": "Garden Villa",
-          "areaSqm": 180,
+          "name": "1 Bedroom Villa",
+          "areaSqm": 76,
           "ceilingM": null,
           "banquet": null,
           "cocktail": null,
@@ -11742,8 +11319,18 @@
           "note": ""
         },
         {
-          "name": "Beachfront Villa",
-          "areaSqm": 220,
+          "name": "2 Bedroom Villa",
+          "areaSqm": 388,
+          "ceilingM": null,
+          "banquet": null,
+          "cocktail": null,
+          "theatre": null,
+          "classroom": null,
+          "note": ""
+        },
+        {
+          "name": "3 Bedroom Villa",
+          "areaSqm": 477,
           "ceilingM": null,
           "banquet": null,
           "cocktail": null,
@@ -11752,41 +11339,33 @@
           "note": ""
         }
       ],
-      "maxCapacity": 40,
-      "maxAreaSqm": 600,
+      "maxCapacity": null,
+      "maxAreaSqm": 477,
       "eventTypes": [
-        "Cocktail / reception",
-        "Wedding",
         "VIP / private event"
       ],
       "propertyTypes": [
         "Hotel",
-        "Beach / beach club"
+        "Resort"
       ],
       "settings": [
         "Indoor",
         "Outdoor",
-        "Garden / lawn",
-        "Beach",
-        "Waterfront / marina"
+        "Poolside"
       ],
       "primaryType": "Hotel",
-      "image": "/singapore-event-venue-finder/assets/venues/beach-villas-rws.webp",
-      "publicNote": "Hotel in Sentosa with 4 recorded event spaces. Ocean Suite (x2) supports up to 40 guests in cocktail format. Planning tags include cocktail / reception, wedding and vip / private event. Capacity depends on the selected space and event layout.",
+      "image": "/singapore-event-venue-finder/assets/venues/equarius-villas.webp",
+      "publicNote": "Hotel in Sentosa with 3 recorded event spaces. Planning tags include vip / private event. Capacity depends on the selected space and event layout.",
       "imageMode": "official",
-      "lat": 1.25585,
-      "lng": 103.816,
-      "capacityBasis": {
-        "space": "Ocean Suite (x2)",
-        "layout": "cocktail",
-        "capacity": 40
-      },
-      "sourceUrl": "https://rwsentosa.com/en/hotels/beach-villas",
+      "lat": 1.2590879,
+      "lng": 103.8162643,
+      "capacityBasis": null,
+      "sourceUrl": "https://www.rwsentosa.com/en/stay/equarius-villas",
       "sourceType": "Official venue website",
       "imageSourceUrl": "https://www.rwsentosa.com/en/stay/equarius-villas",
       "imageSourceType": "official",
       "lastVerified": "2026-06-21",
-      "dataConfidence": "high",
+      "dataConfidence": "medium",
       "featuredDetail": false,
       "capacityAuditStatus": "curated",
       "capacitySourceUrl": "",

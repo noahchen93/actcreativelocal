@@ -25,6 +25,66 @@ const SOURCE_MANIFEST_PATH = path.join(
 );
 
 const replacements = {
+  "fort-canning-park": {
+    sourcePage:
+      "https://www.nparks.gov.sg/visit/parks/fort-canning-park/amenities/venues-booking",
+    assetUrl:
+      "https://www.nparks.gov.sg/images/default-source/parks-img/fort-canning-park/fort-canning-park-heritage-walk-hero-centre.jpg",
+  },
+  "ocbc-square": {
+    sourcePage: "https://www.thekallang.com.sg/venues-facilities/ocbc-square",
+    assetUrl:
+      "https://www.thekallang.com.sg/sites/default/files/styles/convert_webp/public/2022-08/OCBC%20Square%20Header%20Banner%201784x675_.png.webp?itok=oKhZCV6f",
+  },
+  "artscience-museum": {
+    sourcePage:
+      "https://commons.wikimedia.org/wiki/File:ArtScience_Museum,_Marina_Bay_Sands,_Singapore.jpg",
+    assetUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/f/f3/ArtScience_Museum%2C_Marina_Bay_Sands%2C_Singapore.jpg",
+    imageMode: "reference",
+  },
+  "national-museum-of-singapore": {
+    sourcePage:
+      "https://commons.wikimedia.org/wiki/File:National_Museum_Singapore.jpg",
+    assetUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/0/09/National_Museum_Singapore.jpg",
+    imageMode: "reference",
+  },
+  arden: {
+    sourcePage: "https://www.1-arden.sg/",
+    assetUrl:
+      "https://www.1-arden.sg/wp-content/uploads/2022/10/W6A1801.jpg",
+  },
+  "universal-studios-singapore": {
+    sourcePage: "https://www.rwsentosa.com/en/meetings/event-venues",
+    assetUrl:
+      "https://www.rwsentosa.com/-/jssmedia/project/mice/uss-new-york-street-wide-shoot-banquet-2nd-angle.jpg?h=529&iar=0&w=800&rev=3b8cda92fcee4f7aa6be6cc77675e384&sc_lang=en&extension=webp&hash=2A967805A472C917D16C2E8263FF26A3",
+  },
+  "adventure-cove-waterpark": {
+    sourcePage: "https://www.rwsentosa.com/en/meetings/event-venues",
+    assetUrl:
+      "https://www.rwsentosa.com/-/jssmedia/project/mice/acw.jpg?h=1235&iar=0&w=2031&rev=3fe434be9ab741e0b8f7b84697e2450a&sc_lang=en&extension=webp&hash=38354BF1F386F3AB089CEC3CD4D71190",
+  },
+  "singapore-oceanarium": {
+    sourcePage: "https://www.rwsentosa.com/en/meetings/event-venues",
+    assetUrl:
+      "https://www.rwsentosa.com/-/jssmedia/project/mice/sgo-ocean-gallery_ooh-wedding-venue_rws7_v1.jpg?h=5584&iar=0&w=8368&rev=d9507c59852042fa9908eb0af25c640f&sc_lang=en&extension=webp&hash=6612E159A681109E0ABDB6194CB438D9",
+  },
+  "hotel-michael": {
+    sourcePage: "https://www.rwsentosa.com/en/stay/hotel-michael",
+    assetUrl:
+      "https://www.rwsentosa.com/-/jssmedia/project/stay/hotel-michael/deluxe-room---main.jpg?mw=1000",
+  },
+  "hotel-ora": {
+    sourcePage: "https://www.rwsentosa.com/en/meetings/event-venues",
+    assetUrl:
+      "https://www.rwsentosa.com/-/jssmedia/project/mice/hotel-ora-1.jpg?h=2254&iar=0&w=3354&rev=fce2062d642b44c6baeddc96eb5b7e02&sc_lang=en&extension=webp&hash=0DCCBD561B9ADE761D4F72B84194784D",
+  },
+  "equarius-ballroom": {
+    sourcePage: "https://www.rwsentosa.com/en/meetings/event-venues",
+    assetUrl:
+      "https://www.rwsentosa.com/-/jssmedia/project/mice/equarius-ballroom.jpg?h=534&iar=0&w=800&rev=d36a3cfcd8f3476380f7b008a53ba311&sc_lang=en&extension=webp&hash=BCAD137B56B6C92803AD2367300FDBEE",
+  },
   "gardens-by-the-bay": {
     sourcePage: "https://www.gardensbythebay.com.sg/",
     assetUrl:
@@ -165,14 +225,14 @@ const replacements = {
       "https://images.squarespace-cdn.com/content/v1/5326c064e4b011eeaa057a38/1465182549069-VAWFO7DY6W9GAVBPLRP7/web1+copy.jpg?format=2500w",
   },
   "resorts-world-ballroom": {
-    sourcePage: "https://www.rwsentosa.com/en/meetings",
+    sourcePage: "https://www.rwsentosa.com/en/meetings/event-venues",
     assetUrl:
-      "https://www.rwsentosa.com/-/jssmedia/project/mice/large-scale-exhibition.jpg?h=422&iar=0&w=750&rev=d1c3f66482d541e7981f2f6d9c66909b&sc_lang=en&extension=webp&hash=23BC6735D930882B5E5D8E6EB80029A7",
+      "https://www.rwsentosa.com/-/jssmedia/project/mice/mice1375_2026micesaleskit_ccballroom_sideangle.jpg?h=2752&iar=0&w=4128&rev=8c048e410253442a86699e38f1113516&sc_lang=en&extension=webp&hash=B5ADB281BF021F80119D6FF89580D35F",
   },
   "resorts-world-convention-centre": {
-    sourcePage: "https://www.rwsentosa.com/en/meetings",
+    sourcePage: "https://www.rwsentosa.com/en/meetings/event-venues",
     assetUrl:
-      "https://www.rwsentosa.com/-/jssmedia/project/mice/meetings-n-conventions.jpg?h=422&iar=0&w=750&rev=0e6e159f9e564e239e56890011c6e88b&sc_lang=en&extension=webp&hash=92362A0C831D6E514AB79BEED5E54604",
+      "https://www.rwsentosa.com/-/jssmedia/project/mice/convention-centre-level-1-function-spaces.jpg?h=5043&iar=0&w=7557&rev=c04276fc41ee42d8becee699e48a5925&sc_lang=en&extension=webp&hash=A6903311CD2C8A4BD0A8693D3069367C",
   },
   "sands-theatre-mbs": {
     sourcePage:
@@ -253,7 +313,7 @@ const replacements = {
     assetUrl:
       "https://www.theoutposthotel.com.sg/globalassets/media-library/stayfareast/images/outpost/amenities/desktop/amenities-detail-masthead_1920_pool-deck.jpg",
   },
-  "beach-villas-rws": {
+  "equarius-villas": {
     sourcePage: "https://www.rwsentosa.com/en/stay/equarius-villas",
     assetUrl:
       "https://www.rwsentosa.com/-/jssmedia/project/non-gaming/rwsentosa/hotels/beach-villas/room-type/bv-swimming-pool---750x422.jpg?h=422&iar=0&w=750&rev=fc90ae99422647228f9b87cf75129113&extension=webp&hash=9EFCCFB96579F003B5ACBFD88721ED8A",
@@ -314,10 +374,10 @@ async function renderVenueImage(input, outputPath) {
   await sharp(input, { failOn: "warning" })
     .rotate()
     .resize({
-      width: 960,
-      height: 720,
-      fit: "inside",
-      withoutEnlargement: true,
+      width: 1200,
+      height: 750,
+      fit: "cover",
+      position: "attention",
     })
     .webp({ quality: 82, effort: 6 })
     .toFile(outputPath);
@@ -327,15 +387,43 @@ async function main() {
   await fs.mkdir(IMAGE_DIR, { recursive: true });
   const dataset = JSON.parse(await fs.readFile(DATA_PATH, "utf8"));
   const venueById = new Map(dataset.venues.map((venue) => [venue.id, venue]));
-  const manifest = {
+  const requestedIds = new Set(
+    process.argv.slice(2).filter((value) => !value.startsWith("-")),
+  );
+  const selectedReplacements = requestedIds.size
+    ? Object.entries(replacements).filter(([id]) => requestedIds.has(id))
+    : Object.entries(replacements);
+  const unknownIds = [...requestedIds].filter((id) => !replacements[id]);
+  if (unknownIds.length) {
+    throw new Error(`unknown replacement ids: ${unknownIds.join(", ")}`);
+  }
+
+  let manifest = null;
+  if (requestedIds.size) {
+    try {
+      manifest = JSON.parse(await fs.readFile(SOURCE_MANIFEST_PATH, "utf8"));
+    } catch {
+      manifest = null;
+    }
+  }
+  manifest = {
     auditedAt: shanghaiDate(),
     note: "Venue images verified during the audit. Each record identifies whether the source is official or a third-party reference.",
-    replacements: {},
+    replacements: manifest?.replacements || {},
     removedIncorrectImages: [...removeIncorrectImages].sort(),
   };
+  if (requestedIds.has("singapore-oceanarium")) {
+    delete manifest.replacements["s-e-a-aquarium"];
+  }
+  if (requestedIds.has("hotel-ora")) {
+    delete manifest.replacements["festive-hotel"];
+  }
+  if (requestedIds.has("equarius-villas")) {
+    delete manifest.replacements["beach-villas-rws"];
+  }
   const failures = [];
 
-  for (const [id, source] of Object.entries(replacements)) {
+  for (const [id, source] of selectedReplacements) {
     const venue = venueById.get(id);
     if (!venue) {
       failures.push(`${id}: venue not found`);
@@ -370,15 +458,17 @@ async function main() {
     return;
   }
 
-  for (const id of removeIncorrectImages) {
-    const venue = venueById.get(id);
-    if (!venue) {
-      failures.push(`${id}: venue not found for removal`);
-      continue;
+  if (!requestedIds.size) {
+    for (const id of removeIncorrectImages) {
+      const venue = venueById.get(id);
+      if (!venue) {
+        failures.push(`${id}: venue not found for removal`);
+        continue;
+      }
+      venue.image = "";
+      venue.imageMode = "location";
+      await fs.rm(path.join(IMAGE_DIR, `${id}.webp`), { force: true });
     }
-    venue.image = "";
-    venue.imageMode = "location";
-    await fs.rm(path.join(IMAGE_DIR, `${id}.webp`), { force: true });
   }
 
   dataset.generatedAt = shanghaiDate();
@@ -390,7 +480,7 @@ async function main() {
   );
 
   console.log(
-    `updated ${Object.keys(manifest.replacements).length} verified images; removed ${removeIncorrectImages.size} incorrect images`,
+    `updated ${selectedReplacements.length} verified images; manifest contains ${Object.keys(manifest.replacements).length} replacements`,
   );
 }
 

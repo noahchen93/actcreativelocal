@@ -46,9 +46,9 @@
       "capacityStatus": "official",
       "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
       "verifiedCapacity": {
-        "space": "Pantages Hollywood Theater",
-        "layout": "theatre",
-        "capacity": 1500
+        "space": "Full attraction event programme",
+        "layout": "cocktail",
+        "capacity": 8000
       },
       "auditSummary": "The attraction supports themed private events and incentive programmes with entertainment environments that differ from conventional hotel venues.",
       "bestFor": ["Incentive events", "Private celebrations", "Themed brand events", "Performances"],
@@ -95,11 +95,16 @@
     },
     {
       "id": "resorts-world-ballroom",
-      "capacityStatus": "reference",
-      "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings",
-      "auditSummary": "The ballroom sits within the broader Resorts World Sentosa MICE ecosystem, which is undergoing renewed event-space development in 2026.",
+      "capacityStatus": "official",
+      "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "verifiedCapacity": {
+        "space": "Resorts World Ballroom",
+        "layout": "cocktail",
+        "capacity": 3620
+      },
+      "auditSummary": "The ballroom is a 6,000 sqm venue within Resorts World Convention Centre, with a current official maximum event capacity of 3,620 guests.",
       "bestFor": ["Conferences", "Gala dinners", "Exhibitions", "Destination corporate events"],
-      "planningConsiderations": ["Request the current 2026 floor plan because ballroom configurations may have changed.", "Confirm whether adjacent foyer or convention spaces are included.", "Coordinate hotel, attraction and dining components as part of one delegate journey."]
+      "planningConsiderations": ["Request the current floor plan and layout-specific capacities for the proposed event format.", "Confirm whether adjacent foyer or convention spaces are included.", "Coordinate hotel, attraction and dining components as part of one delegate journey."]
     },
     {
       "id": "suntec-convention-centre",
@@ -154,7 +159,7 @@
       "planningConsiderations": ["Theatre, reception and banquet capacities differ materially; confirm the actual layout.", "Review foyer, registration and breakout requirements alongside the main ballroom.", "Plan transport for guests who are not staying at the hotel."]
     },
     {
-      "id": "s-e-a-aquarium",
+      "id": "singapore-oceanarium",
       "capacityStatus": "official",
       "capacitySourceUrl": "https://www.rwsentosa.com/en/meetings/event-venues",
       "verifiedCapacity": {
@@ -162,7 +167,7 @@
         "layout": "cocktail",
         "capacity": 400
       },
-      "auditSummary": "The Ocean Gallery creates an immersive aquarium backdrop for dinners and receptions within Resorts World Sentosa.",
+      "auditSummary": "Singapore Oceanarium's Ocean Gallery creates an immersive underwater backdrop for dinners and receptions within Resorts World Sentosa.",
       "bestFor": ["Cocktail receptions", "Private dinners", "VIP events", "Immersive brand experiences"],
       "planningConsiderations": ["Use the specific Ocean Gallery capacity rather than a whole-attraction attendance estimate.", "Confirm restrictions on lighting, sound, decor and animal-welfare-sensitive production.", "Plan arrival timing and guest movement through the attraction."]
     },

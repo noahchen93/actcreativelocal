@@ -1,5 +1,5 @@
 {
-  "auditedAt": "2026-06-19",
+  "auditedAt": "2026-06-21",
   "note": "Venue images verified during the audit. Each record identifies whether the source is official or a third-party reference.",
   "replacements": {
     "gardens-by-the-bay": {
@@ -160,14 +160,14 @@
     },
     "resorts-world-ballroom": {
       "name": "Resorts World Ballroom",
-      "sourcePage": "https://www.rwsentosa.com/en/meetings",
-      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/mice/large-scale-exhibition.jpg?h=422&iar=0&w=750&rev=d1c3f66482d541e7981f2f6d9c66909b&sc_lang=en&extension=webp&hash=23BC6735D930882B5E5D8E6EB80029A7",
+      "sourcePage": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/mice/mice1375_2026micesaleskit_ccballroom_sideangle.jpg?h=2752&iar=0&w=4128&rev=8c048e410253442a86699e38f1113516&sc_lang=en&extension=webp&hash=B5ADB281BF021F80119D6FF89580D35F",
       "imageMode": "official"
     },
     "resorts-world-convention-centre": {
       "name": "Resorts World Convention Centre",
-      "sourcePage": "https://www.rwsentosa.com/en/meetings",
-      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/mice/meetings-n-conventions.jpg?h=422&iar=0&w=750&rev=0e6e159f9e564e239e56890011c6e88b&sc_lang=en&extension=webp&hash=92362A0C831D6E514AB79BEED5E54604",
+      "sourcePage": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/mice/convention-centre-level-1-function-spaces.jpg?h=5043&iar=0&w=7557&rev=c04276fc41ee42d8becee699e48a5925&sc_lang=en&extension=webp&hash=A6903311CD2C8A4BD0A8693D3069367C",
       "imageMode": "official"
     },
     "sands-theatre-mbs": {
@@ -246,12 +246,6 @@
       "name": "The Outpost Hotel Sentosa",
       "sourcePage": "https://www.theoutposthotel.com.sg/en/amenities/pool-deck",
       "assetUrl": "https://www.theoutposthotel.com.sg/globalassets/media-library/stayfareast/images/outpost/amenities/desktop/amenities-detail-masthead_1920_pool-deck.jpg",
-      "imageMode": "official"
-    },
-    "beach-villas-rws": {
-      "name": "Beach Villas RWS",
-      "sourcePage": "https://www.rwsentosa.com/en/stay/equarius-villas",
-      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/non-gaming/rwsentosa/hotels/beach-villas/room-type/bv-swimming-pool---750x422.jpg?h=422&iar=0&w=750&rev=fc90ae99422647228f9b87cf75129113&extension=webp&hash=9EFCCFB96579F003B5ACBFD88721ED8A",
       "imageMode": "official"
     },
     "raffles-sentosa-singapore": {
@@ -360,6 +354,78 @@
       "name": "Stamford Arts Centre",
       "sourcePage": "https://artshouselimited.sg/sac-venue-details/sac-black-box",
       "assetUrl": "https://www.artshousegroup.sg/images/venues/2025/sac/black-box-banner.jpg",
+      "imageMode": "official"
+    },
+    "fort-canning-park": {
+      "name": "Fort Canning Park",
+      "sourcePage": "https://www.nparks.gov.sg/visit/parks/fort-canning-park/amenities/venues-booking",
+      "assetUrl": "https://www.nparks.gov.sg/images/default-source/parks-img/fort-canning-park/fort-canning-park-heritage-walk-hero-centre.jpg",
+      "imageMode": "official"
+    },
+    "ocbc-square": {
+      "name": "OCBC Square",
+      "sourcePage": "https://www.thekallang.com.sg/venues-facilities/ocbc-square",
+      "assetUrl": "https://www.thekallang.com.sg/sites/default/files/styles/convert_webp/public/2022-08/OCBC%20Square%20Header%20Banner%201784x675_.png.webp?itok=oKhZCV6f",
+      "imageMode": "official"
+    },
+    "artscience-museum": {
+      "name": "ArtScience Museum",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:ArtScience_Museum,_Marina_Bay_Sands,_Singapore.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/ArtScience_Museum%2C_Marina_Bay_Sands%2C_Singapore.jpg",
+      "imageMode": "reference"
+    },
+    "universal-studios-singapore": {
+      "name": "Universal Studios Singapore",
+      "sourcePage": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/mice/uss-new-york-street-wide-shoot-banquet-2nd-angle.jpg?h=529&iar=0&w=800&rev=3b8cda92fcee4f7aa6be6cc77675e384&sc_lang=en&extension=webp&hash=2A967805A472C917D16C2E8263FF26A3",
+      "imageMode": "official"
+    },
+    "adventure-cove-waterpark": {
+      "name": "Adventure Cove Waterpark",
+      "sourcePage": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/mice/acw.jpg?h=1235&iar=0&w=2031&rev=3fe434be9ab741e0b8f7b84697e2450a&sc_lang=en&extension=webp&hash=38354BF1F386F3AB089CEC3CD4D71190",
+      "imageMode": "official"
+    },
+    "singapore-oceanarium": {
+      "name": "Singapore Oceanarium",
+      "sourcePage": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/mice/sgo-ocean-gallery_ooh-wedding-venue_rws7_v1.jpg?h=5584&iar=0&w=8368&rev=d9507c59852042fa9908eb0af25c640f&sc_lang=en&extension=webp&hash=6612E159A681109E0ABDB6194CB438D9",
+      "imageMode": "official"
+    },
+    "hotel-michael": {
+      "name": "Hotel Michael",
+      "sourcePage": "https://www.rwsentosa.com/en/stay/hotel-michael",
+      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/stay/hotel-michael/deluxe-room---main.jpg?mw=1000",
+      "imageMode": "official"
+    },
+    "hotel-ora": {
+      "name": "Hotel Ora",
+      "sourcePage": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/mice/hotel-ora-1.jpg?h=2254&iar=0&w=3354&rev=fce2062d642b44c6baeddc96eb5b7e02&sc_lang=en&extension=webp&hash=0DCCBD561B9ADE761D4F72B84194784D",
+      "imageMode": "official"
+    },
+    "equarius-ballroom": {
+      "name": "Equarius Hotel Ballroom & Function Rooms",
+      "sourcePage": "https://www.rwsentosa.com/en/meetings/event-venues",
+      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/mice/equarius-ballroom.jpg?h=534&iar=0&w=800&rev=d36a3cfcd8f3476380f7b008a53ba311&sc_lang=en&extension=webp&hash=BCAD137B56B6C92803AD2367300FDBEE",
+      "imageMode": "official"
+    },
+    "equarius-villas": {
+      "name": "Equarius Villas",
+      "sourcePage": "https://www.rwsentosa.com/en/stay/equarius-villas",
+      "assetUrl": "https://www.rwsentosa.com/-/jssmedia/project/non-gaming/rwsentosa/hotels/beach-villas/room-type/bv-swimming-pool---750x422.jpg?h=422&iar=0&w=750&rev=fc90ae99422647228f9b87cf75129113&extension=webp&hash=9EFCCFB96579F003B5ACBFD88721ED8A",
+      "imageMode": "official"
+    },
+    "national-museum-of-singapore": {
+      "name": "National Museum of Singapore",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:National_Museum_Singapore.jpg",
+      "assetUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/National_Museum_Singapore.jpg",
+      "imageMode": "reference"
+    },
+    "arden": {
+      "name": "Arden",
+      "sourcePage": "https://www.1-arden.sg/",
+      "assetUrl": "https://www.1-arden.sg/wp-content/uploads/2022/10/W6A1801.jpg",
       "imageMode": "official"
     }
   },

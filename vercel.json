@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/singapore-event-venues/s-e-a-aquarium",
+      "destination": "/singapore-event-venues/singapore-oceanarium/",
+      "permanent": true
+    },
+    {
+      "source": "/singapore-event-venues/s-e-a-aquarium/",
+      "destination": "/singapore-event-venues/singapore-oceanarium/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/about", "destination": "/about/index.html" },
     { "source": "/about/", "destination": "/about/index.html" },
