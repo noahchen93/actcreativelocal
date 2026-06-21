@@ -294,7 +294,7 @@
 
   <url>
     <loc>https://actcreative.net/singapore-event-venue-finder/</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-06-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.82</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-finder/" />
@@ -373,6 +373,18 @@
       <image:loc>https://actcreative.net/og/singapore-event-venue-finder.png</image:loc>
       <image:title>Singapore event venues for 200 or more guests</image:title>
       <image:caption>Curated Singapore venue records with a layout-specific capacity of at least 200 guests.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/arts-performance/</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/victoria-theatre-and-concert-hall.webp</image:loc>
+      <image:title>Arts and performance venues in Singapore</image:title>
+      <image:caption>Curated Singapore theatres, concert halls, black boxes and arts centres for performances and creative events.</image:caption>
     </image:image>
   </url>
 

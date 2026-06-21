@@ -616,6 +616,7 @@
 
   function venueCard(venue) {
     const sourceUrl = websiteHref(venue.sourceUrl || venue.website);
+    const imageLicenseUrl = websiteHref(venue.imageLicenseUrl);
     const isSelected = state.shortlist.has(venue.id);
     const isExpanded = state.expanded.has(venue.id);
     const activeClass = state.activeVenueId === venue.id ? " is-active" : "";
@@ -655,6 +656,15 @@
               <div class="venue-meta setting-tags">${settingTags.map((tag) => `<span class="tag setting">${escapeHtml(tag)}</span>`).join("")}</div>
               <div class="venue-meta">${eventTags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("")}</div>
               <p class="venue-note">${escapeHtml(venue.publicNote)}</p>
+              ${
+                venue.imageCredit
+                  ? `<p class="image-credit">Image credit: ${
+                      imageLicenseUrl
+                        ? `<a href="${escapeHtml(imageLicenseUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(venue.imageCredit)}</a>`
+                        : escapeHtml(venue.imageCredit)
+                    }</p>`
+                  : ""
+              }
               ${spacesTable(venue)}
               <div class="source-row">
                 <span>${escapeHtml(confidenceLabel(venue.dataConfidence))} · reviewed ${escapeHtml(formatDate(venue.auditReviewedAt || venue.lastVerified))}</span>

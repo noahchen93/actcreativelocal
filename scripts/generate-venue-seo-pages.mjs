@@ -84,6 +84,20 @@ const guides = [
     filter: (venue) => Number(venue.maxCapacity || 0) >= 200,
     finderHash: "#capacity=200",
   },
+  {
+    slug: "arts-performance",
+    name: "Arts & Performance Venues",
+    title: "Arts & Performance Venues in Singapore: Theatres & Arts Centres",
+    description:
+      "Compare Singapore theatres, concert halls, black boxes and arts centres for performances, talks, launches, conferences and creative events.",
+    eyebrow: "Theatres and creative event spaces",
+    intro:
+      "Singapore's arts and performance venues range from major concert halls and proscenium theatres to flexible black boxes, rehearsal studios and heritage arts centres. This guide focuses on spaces designed primarily for performances and creative programmes.",
+    planning:
+      "Compare fixed versus retractable seating, stage dimensions, technical systems, foyer capacity, rehearsal access and production load-in. Published seating is a starting point and may change with the event configuration.",
+    filter: (venue) => venue.primaryType === "Theatre / performance",
+    finderHash: "#type=Theatre+%2F+performance",
+  },
 ];
 
 function escapeHtml(value) {
@@ -117,6 +131,14 @@ function score(venue) {
 
 function card(venue) {
   const source = venue.sourceUrl || venue.website || "";
+  const imageLicenseUrl = venue.imageLicenseUrl || "";
+  const imageCredit = venue.imageCredit
+    ? `<p class="image-credit">Image credit: ${
+        imageLicenseUrl
+          ? `<a href="${escapeHtml(imageLicenseUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(venue.imageCredit)}</a>`
+          : escapeHtml(venue.imageCredit)
+      }</p>`
+    : "";
   const detailUrl = venue.featuredDetail
     ? `/singapore-event-venues/${venue.id}/`
     : "";
@@ -139,7 +161,7 @@ function card(venue) {
           <h3>${detailUrl ? `<a href="${escapeHtml(detailUrl)}" data-track-action="Reviewed venue opened" data-track-label="${escapeHtml(venue.id)}">${escapeHtml(venue.name)}</a>` : escapeHtml(venue.name)}</h3>
           <p class="venue-address">${escapeHtml(venue.address)}</p>
           <p class="venue-facts"><span>${escapeHtml(capacityText(venue))}</span></p>
-          <p class="venue-note">${escapeHtml(venue.publicNote)}</p>
+          <p class="venue-note">${escapeHtml(venue.publicNote)}</p>${imageCredit}
           <div class="source-links">
             ${detailUrl ? `<a class="venue-site-link" href="${escapeHtml(detailUrl)}" data-track-action="Reviewed venue opened" data-track-label="${escapeHtml(venue.id)}">Open reviewed venue guide →</a>` : ""}
             ${source ? `<a class="venue-site-link" href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer" data-track-action="Venue source opened" data-track-label="${escapeHtml(venue.id)}">${venue.sourceType === "Official venue website" ? "Open official venue site" : "Open public source"} ↗</a>` : ""}

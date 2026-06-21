@@ -20,6 +20,7 @@ SEO_GUIDE_SLUGS = {
     "outdoor",
     "hotel-ballrooms",
     "200-guests",
+    "arts-performance",
 }
 EXPECTED_POSTCODES = {
     "Arden": "048948",

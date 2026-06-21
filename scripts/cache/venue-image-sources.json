@@ -259,6 +259,108 @@
       "sourcePage": "https://luxuryescapes.com/au/partner/raffles-sentosa-singapore/048a3550-7451-495f-964a-d9ad09a11d2d",
       "assetUrl": "https://images.luxuryescapes.com/fl_progressive,q_auto:eco,c_scale,w_650/n90bgd6yzdhjyhlo9p.jpeg",
       "imageMode": "reference"
+    },
+    "parkroyal-collection-marina-bay": {
+      "name": "PARKROYAL COLLECTION Marina Bay",
+      "sourcePage": "https://www.panpacific.com/en/hotels-and-resorts/pr-collection-marina-bay/meetings.html",
+      "assetUrl": "https://www.panpacific.com/content/dam/pphg-revamp/en/prsmb/prc2-0/meetings-and-events/PRSMB_MeetingsandEvents_Event_Spaces_Image_1.jpg",
+      "imageMode": "official"
+    },
+    "the-fullerton-hotel-singapore": {
+      "name": "The Fullerton Hotel Singapore",
+      "sourcePage": "https://www.fullertonhotels.com/fullerton-hotel-singapore/meetings-and-events",
+      "assetUrl": "https://image-tc.galaxy.tf/wijpeg-a8km48zjtqdh9zsudxbjwmd01/ballroom-cluster-setup-ii.jpg?width=1980&height=890",
+      "imageMode": "official"
+    },
+    "changi-exhibition-centre": {
+      "name": "Changi Exhibition Centre",
+      "sourcePage": "https://www.visitsingapore.com/mice/en/plan-your-event/find-a-venue/changi-exhibition-centre/",
+      "assetUrl": "https://www.visitsingapore.com/content/dam/mice2-0/venues/changi-exhibition-centre/carousel-1-feature.jpg",
+      "imageMode": "official"
+    },
+    "f1-pit-building": {
+      "name": "F1 Pit Building",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Singapore_(SG),_Marina_Bay_Street_Circuit,_F1_Pit_Building_--_2019_--_4478.jpg",
+      "assetUrl": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Singapore%20%28SG%29%2C%20Marina%20Bay%20Street%20Circuit%2C%20F1%20Pit%20Building%20--%202019%20--%204478.jpg?width=1600",
+      "imageMode": "reference"
+    },
+    "victoria-theatre-and-concert-hall": {
+      "name": "Victoria Theatre & Victoria Concert Hall",
+      "sourcePage": "https://artshouselimited.sg/vtvch",
+      "assetUrl": "https://www.artshousegroup.sg/images/venues/2025/vtvch/main-vtvtch-banner.jpg",
+      "imageMode": "official"
+    },
+    "singapore-botanic-gardens": {
+      "name": "Singapore Botanic Gardens",
+      "sourcePage": "https://sbg.nparks.gov.sg/visit/rent-an-indoor-venue/",
+      "assetUrl": "https://isomer-user-content.by.gov.sg/152/7217a85f-a9eb-414d-acb1-6b9908a489dd/2017-738-2%20Burkill%20Low.jpg",
+      "imageMode": "official"
+    },
+    "green-canvas-mandai": {
+      "name": "Green Canvas at Mandai Wildlife Reserve",
+      "sourcePage": "https://www.mandai.com/en/venues-for-hire/venues/green-canvas/exhibition-hall.html",
+      "assetUrl": "https://www.mandai.com/content/dam/mandai/events/plan-a-wild-event/green-canvas/exhibition-hall-1200x630.jpg",
+      "imageMode": "official"
+    },
+    "palawan-green": {
+      "name": "Palawan Green",
+      "sourcePage": "https://www.sentosa.com.sg/en/plan-your-event/event-venues/palawan-green/",
+      "assetUrl": "https://www.sentosa.com.sg/-/media/sentosa/hero-asset/plan-your-event/palawan-green.png?revision=d626e502-72b0-4cad-83a2-94a26ed07878",
+      "imageMode": "official"
+    },
+    "the-glasshouse-lazarus": {
+      "name": "The Glasshouse @ Lazarus",
+      "sourcePage": "https://www.sentosa.com.sg/en/plan-your-event/event-venues/the-glasshouse-at-lazarus/",
+      "assetUrl": "https://www.sentosa.com.sg/-/media/sentosa/hero-asset/plan-your-event/glasshouse/hero-image-glasshouse-drone.png?revision=22dc4a6e-7b98-4bf3-b60b-1266f4fc218b",
+      "imageMode": "official"
+    },
+    "the-lawn-marina-bay": {
+      "name": "The Lawn at Marina Bay",
+      "sourcePage": "https://www.ura.gov.sg/Corporate/Get-Involved/Shape-A-Distinctive-City/Explore-Our-City/Marina-Bay/Event-Application",
+      "assetUrl": "https://www.ura.gov.sg/-/media/Corporate/Get-Involved/Shape-A-Distinctive-City/Event-Application/Marina-Bay-event-spaces_photos_final.pdf",
+      "imageMode": "official"
+    },
+    "national-design-centre": {
+      "name": "National Design Centre",
+      "sourcePage": "https://uas.edu.sg/contact-us/venue-for-hire",
+      "assetUrl": "https://uas.edu.sg/images/default-source/default-album/contact-us/venue-for-hire/atrium-01.jpg?sfvrsn=87d46cd1_1",
+      "imageMode": "official"
+    },
+    "drama-centre": {
+      "name": "Drama Centre",
+      "sourcePage": "https://artshouselimited.sg/dc",
+      "assetUrl": "https://www.artshousegroup.sg/images/venues-microsite/dctr/home/welcome/Theatre-Stage-Nocurtains.jpg",
+      "imageMode": "official"
+    },
+    "singapore-conference-hall": {
+      "name": "Singapore Conference Hall",
+      "sourcePage": "https://sco.com.sg/venues/concert-hall/",
+      "assetUrl": "https://sco.com.sg/wp-content/uploads/2025/04/concert-hall-full-scaled.jpg",
+      "imageMode": "official"
+    },
+    "mandai-rainforest-resort": {
+      "name": "Mandai Rainforest Resort by Banyan Tree",
+      "sourcePage": "https://www.mandai.com/en/mandai-rainforest-resort/meetings-and-events.html",
+      "assetUrl": "https://www.mandai.com/content/dam/mandai/mandai-rainforest-resort/meetings-and-events/meranti-ballroom-1920x1080.jpg",
+      "imageMode": "official"
+    },
+    "aliwal-arts-centre": {
+      "name": "Aliwal Arts Centre",
+      "sourcePage": "https://artshouselimited.sg/aac-venue-details/multi-purpose-hall",
+      "assetUrl": "https://www.artshousegroup.sg/images/venues/2025/aac/multipurpose-hall-banner.jpg",
+      "imageMode": "official"
+    },
+    "goodman-arts-centre": {
+      "name": "Goodman Arts Centre",
+      "sourcePage": "https://artshouselimited.sg/gac-venue-details/black-box",
+      "assetUrl": "https://www.artshousegroup.sg/images/venues-microsite/gac/venue-hire/black-box/Black-Box-Main.jpg",
+      "imageMode": "official"
+    },
+    "stamford-arts-centre": {
+      "name": "Stamford Arts Centre",
+      "sourcePage": "https://artshouselimited.sg/sac-venue-details/sac-black-box",
+      "assetUrl": "https://www.artshousegroup.sg/images/venues/2025/sac/black-box-banner.jpg",
+      "imageMode": "official"
     }
   },
   "removedIncorrectImages": [

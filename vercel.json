@@ -36,6 +36,8 @@
     { "source": "/singapore-event-venues/hotel-ballrooms/", "destination": "/singapore-event-venues/hotel-ballrooms/index.html" },
     { "source": "/singapore-event-venues/200-guests", "destination": "/singapore-event-venues/200-guests/index.html" },
     { "source": "/singapore-event-venues/200-guests/", "destination": "/singapore-event-venues/200-guests/index.html" },
+    { "source": "/singapore-event-venues/arts-performance", "destination": "/singapore-event-venues/arts-performance/index.html" },
+    { "source": "/singapore-event-venues/arts-performance/", "destination": "/singapore-event-venues/arts-performance/index.html" },
     { "source": "/singapore-event-venues/:slug", "destination": "/singapore-event-venues/:slug/index.html" },
     { "source": "/singapore-event-venues/:slug/", "destination": "/singapore-event-venues/:slug/index.html" },
     { "source": "/exhibition-booth-production-singapore", "destination": "/exhibition-booth-production-singapore/index.html" },
