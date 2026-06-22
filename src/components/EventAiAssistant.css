@@ -1,9 +1,24 @@
 .event-ai-shell {
   position: fixed;
   right: 1.25rem;
-  bottom: 1.25rem;
-  z-index: 80;
-  font-family: var(--font-sans);
+  bottom: max(1.25rem, env(safe-area-inset-bottom));
+  z-index: 2147483000;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+}
+
+.event-ai-shell,
+.event-ai-shell *,
+.event-ai-shell *::before,
+.event-ai-shell *::after {
+  box-sizing: border-box;
+}
+
+.event-ai-shell button,
+.event-ai-shell textarea {
+  margin: 0;
+  font: inherit;
+  letter-spacing: 0;
 }
 
 .event-ai-launcher {
@@ -169,6 +184,8 @@
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 0.4rem;
+  background: transparent;
+  padding: 0;
   color: rgba(255, 255, 255, 0.72);
   cursor: pointer;
 }
@@ -248,6 +265,7 @@
   padding: 0.62rem 0.72rem;
   border: 1px solid rgba(204, 255, 0, 0.22);
   border-radius: 0.4rem;
+  background: transparent;
   color: rgba(255, 255, 255, 0.82);
   font-size: 0.79rem;
   line-height: 1.35;
@@ -417,7 +435,7 @@ a.event-ai-source-link:focus-visible {
 @media (max-width: 640px) {
   .event-ai-shell {
     right: 0.75rem;
-    bottom: 0.75rem;
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
   }
 
   .event-ai-panel {

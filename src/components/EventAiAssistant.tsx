@@ -89,12 +89,7 @@ export function EventAiAssistant() {
           "How should I choose a venue for a 200-person corporate event?",
         ];
 
-  const isEnabled =
-    import.meta.env.DEV || import.meta.env.VITE_ENABLE_EVENT_AI === "true";
-
   useEffect(() => {
-    if (!isEnabled) return;
-
     let isActive = true;
     const checkHealth = async () => {
       try {
@@ -122,7 +117,7 @@ export function EventAiAssistant() {
       isActive = false;
       window.clearInterval(intervalId);
     };
-  }, [isEnabled]);
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -235,8 +230,6 @@ export function EventAiAssistant() {
       void sendMessage(input);
     }
   };
-
-  if (!isEnabled) return null;
 
   const statusLabel =
     serviceStatus === "ready"

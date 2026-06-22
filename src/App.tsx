@@ -4,8 +4,6 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
-const eventAiEnabled =
-  import.meta.env.DEV || import.meta.env.VITE_ENABLE_EVENT_AI === "true";
 const EventAiAssistant = lazy(() =>
   import("./components/EventAiAssistant").then((module) => ({
     default: module.EventAiAssistant,
@@ -108,7 +106,7 @@ export default function App() {
         </Suspense>
         <HashScrollRestorer />
         <Suspense fallback={null}>
-          {eventAiEnabled ? <EventAiAssistant /> : null}
+          <EventAiAssistant />
         </Suspense>
         <Analytics />
       </div>

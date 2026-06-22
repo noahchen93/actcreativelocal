@@ -43,17 +43,25 @@ function getInitialLanguage(): Language {
   return "en";
 }
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
+export function LanguageProvider({
+  children,
+  manageDocumentMetadata = true,
+}: {
+  children: ReactNode;
+  manageDocumentMetadata?: boolean;
+}) {
   const [language, setLanguage] = useState<Language>(getInitialLanguage);
 
   useEffect(() => {
+    if (!manageDocumentMetadata) return;
+
     const meta = META_COPY[language];
     const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
 
     document.documentElement.lang = language === "zh" ? "zh-Hans-SG" : "en-SG";
     document.title = meta.title;
     description?.setAttribute("content", meta.description);
-  }, [language]);
+  }, [language, manageDocumentMetadata]);
 
   const t = (zh: string, en: string) => {
     return language === "zh" ? zh : en;

@@ -84,11 +84,96 @@
     },
   });
 
+  const listHtmlFiles = async (directory: string): Promise<string[]> => {
+    const entries = await fs.readdir(directory, { withFileTypes: true });
+    const files = await Promise.all(
+      entries.map(async (entry) => {
+        const entryPath = path.join(directory, entry.name);
+        if (entry.isDirectory()) return listHtmlFiles(entryPath);
+        return entry.isFile() && entry.name.endsWith('.html') ? [entryPath] : [];
+      }),
+    );
+
+    return files.flat();
+  };
+
+  const universalEventAssistantPlugin = (): Plugin => ({
+    name: 'universal-event-ai-assistant',
+    apply: 'build',
+    async writeBundle(_options, bundle) {
+      const outDir = path.resolve(__dirname, 'build');
+      const embedEntry = Object.values(bundle).find(
+        (output) =>
+          output.type === 'chunk' &&
+          output.isEntry &&
+          output.facadeModuleId
+            ?.replace(/\\/g, '/')
+            .endsWith('/event-ai-embed.tsx'),
+      );
+
+      if (!embedEntry || embedEntry.type !== 'chunk') {
+        throw new Error('Unable to find the event AI embed entry in the Vite manifest.');
+      }
+
+      const importedCss = new Set<string>();
+      const visitedChunks = new Set<string>();
+      const collectChunkCss = (fileName: string) => {
+        if (visitedChunks.has(fileName)) return;
+        visitedChunks.add(fileName);
+
+        const output = bundle[fileName];
+        if (!output || output.type !== 'chunk') return;
+
+        const metadata = (
+          output as typeof output & {
+            viteMetadata?: { importedCss?: Set<string> };
+          }
+        ).viteMetadata;
+        metadata?.importedCss?.forEach((file) => importedCss.add(file));
+        output.imports.forEach(collectChunkCss);
+      };
+
+      collectChunkCss(embedEntry.fileName);
+      const marker = 'data-act-event-ai-embed';
+      const stylesheetTags = Array.from(importedCss)
+        .map(
+          (file) =>
+            `    <link rel="stylesheet" href="/${file}" ${marker} />`,
+        )
+        .join('\n');
+      const scriptTag =
+        `    <script type="module" src="/${embedEntry.fileName}" ${marker}></script>`;
+      const excludedPages = new Set(['index.html', 'zh/index.html']);
+      const htmlFiles = await listHtmlFiles(outDir);
+      let injectedCount = 0;
+
+      for (const htmlPath of htmlFiles) {
+        const relativePath = path.relative(outDir, htmlPath).replace(/\\/g, '/');
+        if (excludedPages.has(relativePath)) continue;
+
+        let html = await fs.readFile(htmlPath, 'utf8');
+        if (html.includes(marker)) continue;
+
+        if (stylesheetTags) {
+          html = html.replace('</head>', `${stylesheetTags}\n  </head>`);
+        }
+        html = html.replace('</body>', `${scriptTag}\n  </body>`);
+        await fs.writeFile(htmlPath, html, 'utf8');
+        injectedCount += 1;
+      }
+
+      console.log(
+        `[event-ai] Injected the floating assistant into ${injectedCount} static pages.`,
+      );
+    },
+  });
+
   export default defineConfig(({ mode }) => ({
     plugins: [
       react(),
       googleSiteVerificationPlugin(getGoogleSiteVerificationToken(mode)),
       localizedHomepagePlugin(),
+      universalEventAssistantPlugin(),
     ],
     define: mode === 'production'
       ? {
@@ -169,6 +254,10 @@
       target: 'esnext',
       outDir: 'build',
       rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          eventAiEmbed: path.resolve(__dirname, 'src/event-ai-embed.tsx'),
+        },
         output: {
           manualChunks(id) {
             const normalizedId = id.replace(/\\/g, '/');
