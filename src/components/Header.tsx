@@ -87,7 +87,7 @@ export function Header() {
       meta: t("按地区、类型、活动形式和容量筛选新加坡场地", "Filter Singapore venues by area, type, event format and capacity"),
     },
     {
-      title: t("中国采购代理", "China Sourcing Agent"),
+      title: t("国际供应商采购", "International Supplier Sourcing"),
       href: localizedHref("/china-sourcing-agent/", "/zh/china-sourcing-agent/"),
       meta: t("供应商筛选、比价、打样与定制跟进", "Supplier search, price comparison, samples and custom production"),
     },
@@ -97,9 +97,9 @@ export function Header() {
       meta: t("定制咨询、报价参考与生产建议", "Quote reference, specs and production direction"),
     },
     {
-      title: t("中国与东南亚运输协调", "China & SEA Logistics"),
+      title: t("跨境运输与清关", "Cross-Border Logistics & Customs"),
       href: "/china-southeast-asia-logistics/",
-      meta: t("运输代理、装箱、交付与现场协调", "Packing, shipment planning and delivery coordination"),
+      meta: t("装箱、国际运输、清关、本地配送与交付", "Packing, international freight, customs, local delivery and handover"),
     },
     {
       title: t("艺术展览策划与布展", "Art Exhibition Planning & Installation"),
@@ -162,6 +162,19 @@ export function Header() {
         .act-header-container {
           padding-left: 1rem;
           padding-right: 1.25rem;
+        }
+        .act-brand-link {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.65rem;
+          color: #fff;
+          flex-shrink: 0;
+        }
+        .act-brand-name {
+          font-size: 0.86rem;
+          font-weight: 800;
+          letter-spacing: 0.08em;
+          white-space: nowrap;
         }
         .act-desktop-nav {
           display: none;
@@ -488,27 +501,79 @@ export function Header() {
         .act-mobile-nav {
           display: block;
         }
-        @media (min-width: 1120px) {
+        @media (max-width: 639px) {
+          .act-brand-name {
+            display: none;
+          }
+        }
+        @media (min-width: 1000px) {
           .act-desktop-nav {
             display: flex;
             align-items: center;
-            gap: 1.55rem;
+            gap: 0.7rem;
             padding: 0.42rem 0;
             border: 1px solid rgba(204, 255, 0, 0.16);
             border-left: 0;
             border-right: 0;
             background: transparent;
           }
+          .act-nav-pill {
+            min-height: 40px;
+            padding-inline: 0.12rem;
+            font-size: 0.8rem;
+          }
           .act-header-actions {
             display: flex;
             align-items: center;
-            margin-left: 1rem;
+            margin-left: 0.45rem;
+          }
+          .act-action-cluster {
+            gap: 0.25rem;
+            padding: 0.2rem;
+          }
+          .act-action-button {
+            height: 40px;
+            font-size: 0.8rem;
+          }
+          .act-language-button {
+            min-width: 78px;
+            padding-inline: 0.65rem;
+          }
+          .act-brief-button {
+            min-width: 96px;
+            padding-inline: 0.75rem;
           }
           .act-mobile-actions {
             display: none;
           }
           .act-mobile-nav {
             display: none;
+          }
+        }
+        @media (min-width: 1120px) {
+          .act-desktop-nav {
+            gap: 1.55rem;
+          }
+          .act-nav-pill {
+            min-height: 44px;
+            padding: 0.68rem 0.28rem;
+            font-size: 0.98rem;
+          }
+          .act-header-actions {
+            margin-left: 1rem;
+          }
+          .act-action-cluster {
+            gap: 0.4rem;
+            padding: 0.25rem;
+          }
+          .act-action-button {
+            height: 44px;
+            font-size: 0.92rem;
+          }
+          .act-language-button,
+          .act-brief-button {
+            min-width: 126px;
+            padding-inline: 0.95rem;
           }
         }
         @media (min-width: 1200px) {
@@ -534,12 +599,14 @@ export function Header() {
       `}</style>
       <div className="act-header-container container mx-auto">
         <div className="act-header-row flex items-center justify-between">
-          <motion.div
-            className="flex items-center gap-3"
+          <motion.a
+            href="/"
+            className="act-brand-link"
             whileHover={{ scale: 1.02 }}
           >
-            <img src={logo} alt="ACT Creative logo — Singapore event fabrication and cross-border production agency" className="h-12 w-auto" />
-          </motion.div>
+            <img src={logo} alt="ACT Creative logo — Singapore event solutions and fabrication partner" className="h-12 w-auto" />
+            <span className="act-brand-name">ACT CREATIVE</span>
+          </motion.a>
 
           {/* Desktop Navigation */}
           <nav className="act-desktop-nav" aria-label="Primary navigation">

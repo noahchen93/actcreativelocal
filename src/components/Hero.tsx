@@ -154,7 +154,7 @@ export function Hero() {
               className="hero-eyebrow"
               style={{ marginBottom: "1.25rem" }}
             >
-              {t("创意制作 · 艺术呈现", "Creative Production · Artful Execution")}
+              {t("供应商采购 · 制作 · 运输 · 落地", "Sourcing · Production · Logistics · Delivery")}
             </div>
 
             {/* H1 */}
@@ -169,12 +169,12 @@ export function Hero() {
               }}
             >
               <span style={{ color: "#CCFF00" }}>
-                {t("让灵感，", "Where inspiration finds")}
+                {t("活动、展览与定制项目", "One-stop solutions")}
               </span>
               <br />
               {t(
-                "找到最艺术的形态",
-                "its most artful form",
+                "一站式解决方案",
+                "for events, exhibitions & custom projects",
               )}
             </h1>
 
@@ -190,7 +190,7 @@ export function Hero() {
             >
               {t(
                 "立足新加坡的创意制作伙伴。为活动机构、品牌团队与艺术项目交付定制道具、展陈装置、活动搭建与跨境生产支持。",
-                "Singapore-based creative production partner for event agencies and brand teams, covering custom props, installations, event buildouts and China-side production support.",
+                "Tell us what needs to happen. We compare specialist suppliers and coordinate production, international shipping, customs clearance, local installation, permits and compliance through one project team.",
               )}
             </p>
 
@@ -250,21 +250,21 @@ export function Hero() {
             {/* Workflow stats */}
             <div className="hero-stats">
               <div>
-                <div className="hero-stat-num">{t("构思", "IDEA")}</div>
+                <div className="hero-stat-num">{t("需求", "BRIEF")}</div>
                 <div className="hero-stat-label">
-                  {t("概念与创意方向", "Concept & creative direction")}
+                  {t("目标、预算与项目条件", "Goals, budget & project constraints")}
                 </div>
               </div>
               <div>
-                <div className="hero-stat-num">{t("制作", "BUILD")}</div>
+                <div className="hero-stat-num">{t("整合", "SOURCE")}</div>
                 <div className="hero-stat-label">
-                  {t("定制制作与生产", "Custom fabrication & production")}
+                  {t("供应商比较与方案整合", "Supplier comparison & solution design")}
                 </div>
               </div>
               <div>
-                <div className="hero-stat-num">{t("落地", "LIVE")}</div>
+                <div className="hero-stat-num">{t("交付", "DELIVER")}</div>
                 <div className="hero-stat-label">
-                  {t("现场协调与呈现", "On-site coordination & delivery")}
+                  {t("跨境运输、合规与现场落地", "Logistics, compliance & site delivery")}
                 </div>
               </div>
             </div>

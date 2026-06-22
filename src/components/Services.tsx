@@ -47,8 +47,8 @@ const serviceFlowData = [
       en: "Negotiate best pricing"
     },
     details: [
-      { zh: "利用规模采购优势", en: "Leverage bulk purchasing power" },
-      { zh: "直接对接工厂源头", en: "Direct factory connection" },
+      { zh: "比较不同供应与制作路线", en: "Compare sourcing and production routes" },
+      { zh: "对接合适的专业供应商", en: "Match suitable specialist suppliers" },
       { zh: "透明定价无隐藏", en: "Transparent pricing" }
     ],
     gradient: "from-[#CCFF00] to-[#b8e600]"
@@ -120,16 +120,16 @@ const serviceFlowData = [
   {
     step: 8,
     icon: Headphones,
-    title: { zh: "本地运营维护支持", en: "Local Operations Support" },
+    title: { zh: "许可与本地合规", en: "Permits & Local Compliance" },
     emoji: "🛠️",
     description: { 
       zh: "持续的维护和技术支持",
-      en: "Ongoing maintenance & support"
+      en: "Coordinate local requirements"
     },
     details: [
-      { zh: "长期维护服务", en: "Long-term maintenance service" },
-      { zh: "技术咨询热线", en: "Technical consultation hotline" },
-      { zh: "零配件供应保障", en: "Spare parts supply guarantee" }
+      { zh: "场地方与主办方资料提交", en: "Venue and organiser submissions" },
+      { zh: "许可证与合规协调", en: "Permit and compliance coordination" },
+      { zh: "现场交付与问题响应", en: "Site handover and issue response" }
     ],
     gradient: "from-[#CCFF00] to-[#b8e600]"
   }
@@ -435,12 +435,12 @@ export function Services() {
             {t("一条龙服务流程", "End-to-End Service Flow")}
           </div>
           <h2 className="text-3xl md:text-4xl text-white mb-4">
-            {t("您只需等待收货，其他交给我们", "You Just Wait for Delivery, We Handle the Rest")}
+            {t("一个需求，一套整合交付方案", "One Brief, One Coordinated Delivery")}
           </h2>
           <p className="text-gray-400 text-base md:text-lg">
             {t(
               "从咨询到维护，8个环节无缝衔接，让跨境采购变得像网购一样简单。",
-              "From consultation to maintenance, 8 seamless steps make cross-border procurement as easy as online shopping."
+              "From supplier comparison to production, customs, local installation and compliance, we coordinate the service chain around one project brief."
             )}
           </p>
         </motion.div>
@@ -589,7 +589,7 @@ export function Services() {
                 <div className="text-4xl mb-3">💰</div>
                 <div className="mb-2">{t("节省成本", "Save Money")}</div>
                 <div className="text-sm text-black/60">
-                  {t("平均节省30-50%采购成本", "Average 30-50% cost savings")}
+                  {t("多方案比价与成本优化", "Competitive options through comparison")}
                 </div>
               </motion.div>
 
@@ -613,7 +613,7 @@ export function Services() {
               onClick={() => scrollToSection("contact")}
             >
               <CheckCircle2 className="service-outcome-cta-icon" />
-              <span className="service-outcome-cta-text font-bold">{t("立即开始您的无忧采购之旅", "Start Your Hassle-Free Procurement Journey")}</span>
+              <span className="service-outcome-cta-text font-bold">{t("提交需求，开始整合方案", "Send a Brief for an Integrated Solution")}</span>
             </motion.button>
           </div>
         </motion.div>

@@ -32,11 +32,11 @@ export function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <img src={logo} alt="ACT Creative — Singapore-based creative production and event fabrication partner" className="h-12 w-auto mb-4" />
+            <img src={logo} alt="ACT Creative — Singapore-based integrated event solutions partner" className="h-12 w-auto mb-4" />
             <p className="text-sm mb-4 text-gray-400 max-w-sm">
               {t(
                 "立足新加坡的创意制作伙伴，为活动机构与品牌团队提供定制制作与项目落地支持。",
-                "Singapore-based creative production partner — custom fabrication and project delivery for event agencies and brand teams."
+                "Singapore-based integrated solutions partner — flexible supplier sourcing, production, logistics, compliance and local delivery for events and custom projects."
               )}
             </p>
             <div className="flex items-center gap-3" aria-label="ACT Creative Singapore official social media">
@@ -115,7 +115,7 @@ export function Footer() {
               </li>
               <li>
                 <a href={localizedHref("/china-sourcing-agent/", "/zh/china-sourcing-agent/")} className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("中国采购代理", "China Sourcing Agent")}
+                  {t("国际供应商采购", "International Supplier Sourcing")}
                 </a>
               </li>
               <li>
@@ -125,7 +125,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="/china-southeast-asia-logistics/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("中国与东南亚运输协调", "China & SEA Logistics")}
+                  {t("跨境运输与清关", "Cross-Border Logistics & Customs")}
                 </a>
               </li>
               <li>
