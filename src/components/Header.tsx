@@ -77,12 +77,12 @@ export function Header() {
       meta: t("展会、快闪与品牌活动空间", "Exhibition, pop-up and activation spaces"),
     },
     {
-      title: t("场地匹配与实地考察", "Venue Sourcing & Site Recap"),
+      title: t("人工场地匹配服务", "Human Venue Matching"),
       href: "/singapore-event-venue-sourcing/",
       meta: t("新加坡酒店、场地档期、初步报价与现场复核", "Singapore hotel options, availability, quotes and site recap"),
     },
     {
-      title: t("场地地图筛选工具", "Venue Finder Map"),
+      title: t("场地地图搜索", "Search Venue Map"),
       href: "/singapore-event-venue-finder/",
       meta: t("按地区、类型、活动形式和容量筛选新加坡场地", "Filter Singapore venues by area, type, event format and capacity"),
     },

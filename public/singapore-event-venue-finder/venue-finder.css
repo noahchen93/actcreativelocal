@@ -214,6 +214,10 @@ h1 {
   margin-top: 22px;
 }
 
+.finder-grid-primary {
+  margin-top: 10px;
+}
+
 .filter-panel,
 .map-card,
 .cta-panel,
@@ -1819,6 +1823,14 @@ footer {
     border-radius: var(--radius);
     background: rgba(8, 8, 8, 0.94);
     backdrop-filter: blur(12px);
+  }
+
+  .finder-grid-primary {
+    margin-top: 8px;
+  }
+
+  .finder-grid-primary .map-results {
+    order: -1;
   }
 
   .mobile-view-toggle button {

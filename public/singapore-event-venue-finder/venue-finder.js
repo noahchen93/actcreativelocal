@@ -1038,7 +1038,9 @@
           ).length;
       }
       initFilters();
-      setViewMode("list");
+      setViewMode(
+        window.matchMedia("(max-width: 840px)").matches ? "map" : "list",
+      );
       requestAnimationFrame(() => {
         setTimeout(() => {
           initMap();
