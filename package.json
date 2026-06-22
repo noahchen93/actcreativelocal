@@ -48,11 +48,13 @@
             "sonner": "^2.0.3",
             "tailwind-merge": "*",
             "tailwindcss": "*",
+            "undici": "^7.28.0",
             "vaul": "^1.1.2"
       },
       "devDependencies": {
             "@types/node": "^20.10.0",
             "@vitejs/plugin-react-swc": "^3.10.2",
+            "cheerio": "^1.2.0",
             "dotenv": "^17.4.2",
             "googleapis": "^172.0.0",
             "playwright": "^1.61.0",
@@ -61,6 +63,10 @@
       },
       "scripts": {
             "dev": "vite",
+            "dev:ai": "node scripts/local-ai-server.mjs",
+            "ollama:create": "ollama create act-event-assistant -f local-ai/Modelfile",
+            "ollama:embedding": "ollama create act-rag-embedding -f local-ai/EmbeddingModelfile",
+            "rag:index": "node scripts/build-local-ai-index.mjs",
             "build": "vite build",
             "generate:venue-pages": "node scripts/generate-venue-seo-pages.mjs",
             "generate:venue-details": "node scripts/generate-featured-venue-pages.mjs",

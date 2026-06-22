@@ -4,6 +4,13 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
+const eventAiEnabled =
+  import.meta.env.DEV || import.meta.env.VITE_ENABLE_EVENT_AI === "true";
+const EventAiAssistant = lazy(() =>
+  import("./components/EventAiAssistant").then((module) => ({
+    default: module.EventAiAssistant,
+  })),
+);
 const CaseStudies = lazy(() =>
   import("./components/CaseStudies").then((module) => ({
     default: module.CaseStudies,
@@ -100,6 +107,9 @@ export default function App() {
           <Toaster />
         </Suspense>
         <HashScrollRestorer />
+        <Suspense fallback={null}>
+          {eventAiEnabled ? <EventAiAssistant /> : null}
+        </Suspense>
         <Analytics />
       </div>
     </LanguageProvider>
