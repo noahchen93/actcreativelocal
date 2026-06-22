@@ -64,6 +64,7 @@
       "scripts": {
             "dev": "vite",
             "dev:ai": "node scripts/local-ai-server.mjs",
+            "start:ai": "node scripts/local-ai-server.mjs",
             "ollama:create": "ollama create act-event-assistant -f local-ai/Modelfile",
             "ollama:embedding": "ollama create act-rag-embedding -f local-ai/EmbeddingModelfile",
             "rag:index": "node scripts/build-local-ai-index.mjs",

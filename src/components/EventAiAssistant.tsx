@@ -99,7 +99,7 @@ export function EventAiAssistant() {
     let isActive = true;
     const checkHealth = async () => {
       try {
-        const response = await fetch("/api/chat/health", { cache: "no-store" });
+        const response = await fetch("/api/chat?health=1", { cache: "no-store" });
         const payload = await response.json();
         if (!isActive) return;
 
@@ -120,7 +120,7 @@ export function EventAiAssistant() {
     };
 
     void checkHealth();
-    const intervalId = window.setInterval(checkHealth, 10_000);
+    const intervalId = window.setInterval(checkHealth, 120_000);
     return () => {
       isActive = false;
       window.clearInterval(intervalId);
@@ -217,8 +217,8 @@ export function EventAiAssistant() {
       setMessages((current) => current.filter((message) => message.id !== assistantId));
       setError(
         t(
-          "暂时无法连接本地 Qwen 3.6。请确认 Ollama 和本地 AI 网关正在运行。",
-          "Unable to reach local Qwen 3.6. Check that Ollama and the local AI gateway are running.",
+          "AI 助理暂时无法使用，请稍后再试。",
+          "The AI assistant is temporarily unavailable. Please try again later.",
         ),
       );
     } finally {
@@ -249,8 +249,8 @@ export function EventAiAssistant() {
       : serviceStatus === "warming"
         ? t("Qwen 3.6 正在预热", "Warming up Qwen 3.6")
         : serviceStatus === "offline"
-          ? t("本地 AI 未连接", "Local AI offline")
-          : t("正在检查本地 AI", "Checking local AI");
+          ? t("AI 助理暂时离线", "AI assistant offline")
+          : t("正在检查 AI 助理", "Checking AI assistant");
 
   if (!isOpen) {
     return (

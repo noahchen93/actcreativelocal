@@ -1,4 +1,12 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/**/*.ts": {
+      "maxDuration": 60,
+      "regions": ["sin1"],
+      "supportsCancellation": true
+    }
+  },
   "redirects": [
     {
       "source": "/singapore-event-venues/s-e-a-aquarium",

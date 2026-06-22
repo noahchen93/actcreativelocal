@@ -32,6 +32,11 @@
     return env.GOOGLE_SITE_VERIFICATION || env.VITE_GOOGLE_SITE_VERIFICATION;
   };
 
+  const getLocalAiProxyHeaders = (mode: string) => {
+    const secret = loadEnv(mode, process.cwd(), '').AI_GATEWAY_SECRET;
+    return secret ? { Authorization: `Bearer ${secret}` } : undefined;
+  };
+
   const localizedHomepagePlugin = (): Plugin => ({
     name: 'localized-homepage',
     async closeBundle() {
@@ -205,6 +210,7 @@
         '/api/chat': {
           target: 'http://127.0.0.1:8787',
           changeOrigin: false,
+          headers: getLocalAiProxyHeaders(mode),
         },
       },
     },

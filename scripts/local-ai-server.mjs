@@ -1,5 +1,5 @@
 import { createServer } from "node:http";
-import { randomUUID } from "node:crypto";
+import { randomUUID, timingSafeEqual } from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { Agent, setGlobalDispatcher } from "undici";
@@ -11,6 +11,39 @@ import {
 } from "./lib/local-ai-rag.mjs";
 
 const ROOT = process.cwd();
+
+async function loadLocalEnvironment() {
+  const envPath = path.join(ROOT, ".env.local");
+
+  try {
+    const contents = await fs.readFile(envPath, "utf8");
+    for (const line of contents.split(/\r?\n/)) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith("#")) continue;
+
+      const separator = trimmed.indexOf("=");
+      if (separator <= 0) continue;
+
+      const key = trimmed.slice(0, separator).trim();
+      let value = trimmed.slice(separator + 1).trim();
+      if (
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"))
+      ) {
+        value = value.slice(1, -1);
+      }
+
+      if (!(key in process.env)) process.env[key] = value;
+    }
+  } catch (error) {
+    if (error?.code !== "ENOENT") {
+      console.error("[local-ai] Unable to load .env.local", error);
+    }
+  }
+}
+
+await loadLocalEnvironment();
+
 const HOST = process.env.LOCAL_AI_HOST || "127.0.0.1";
 const PORT = Number(process.env.LOCAL_AI_PORT || 8787);
 const OLLAMA_URL = (process.env.OLLAMA_URL || "http://127.0.0.1:11434").replace(/\/$/, "");
@@ -29,6 +62,7 @@ const MAX_BODY_BYTES = 64 * 1024;
 const MAX_MESSAGES = 12;
 const MAX_MESSAGE_CHARS = 4_000;
 const MAX_PAGE_URL_CHARS = 600;
+const GATEWAY_SECRET = process.env.AI_GATEWAY_SECRET?.trim() || "";
 const DEFAULT_SYSTEM_PROMPT =
   "You are the ACT Creative Event Assistant. Reply in the user's language and do not invent company facts.";
 
@@ -47,6 +81,7 @@ let ragIndex = null;
 let ragIndexModifiedAt = 0;
 let lastRagIndexCheck = 0;
 let logWriteQueue = Promise.resolve();
+let activeChatRequestId = "";
 
 async function loadSystemPrompt() {
   try {
@@ -59,12 +94,28 @@ async function loadSystemPrompt() {
 
 const SYSTEM_PROMPT = await loadSystemPrompt();
 
-function sendJson(response, status, payload) {
+function sendJson(response, status, payload, headers = {}) {
   response.writeHead(status, {
     "Content-Type": "application/json; charset=utf-8",
     "Cache-Control": "no-store",
+    "X-Content-Type-Options": "nosniff",
+    ...headers,
   });
   response.end(JSON.stringify(payload));
+}
+
+function isAuthorized(request) {
+  if (!GATEWAY_SECRET) return true;
+
+  const authorization = request.headers.authorization || "";
+  const suppliedSecret = authorization.startsWith("Bearer ")
+    ? authorization.slice("Bearer ".length).trim()
+    : "";
+  if (!suppliedSecret) return false;
+
+  const expected = Buffer.from(GATEWAY_SECRET);
+  const supplied = Buffer.from(suppliedSecret);
+  return expected.length === supplied.length && timingSafeEqual(expected, supplied);
 }
 
 async function readJson(request) {
@@ -319,9 +370,16 @@ async function warmServices() {
 const server = createServer(async (request, response) => {
   const requestUrl = new URL(request.url || "/", `http://${request.headers.host || HOST}`);
 
+  if (!isAuthorized(request)) {
+    sendJson(response, 401, { error: "Unauthorized" });
+    return;
+  }
+
   if (
     request.method === "GET" &&
-    (requestUrl.pathname === "/health" || requestUrl.pathname === "/api/chat/health")
+    (requestUrl.pathname === "/health" ||
+      requestUrl.pathname === "/api/chat/health" ||
+      (requestUrl.pathname === "/api/chat" && requestUrl.searchParams.get("health") === "1"))
   ) {
     await refreshRagIndex();
     sendJson(response, 200, {
@@ -350,6 +408,16 @@ const server = createServer(async (request, response) => {
     return;
   }
 
+  if (activeChatRequestId) {
+    sendJson(
+      response,
+      429,
+      { error: "The AI assistant is handling another request. Please try again shortly." },
+      { "Retry-After": "20" },
+    );
+    return;
+  }
+
   let payload;
   try {
     payload = await readJson(request);
@@ -367,6 +435,7 @@ const server = createServer(async (request, response) => {
 
   const metadata = normalizeMetadata(payload);
   const requestId = randomUUID();
+  activeChatRequestId = requestId;
   const startedAt = new Date();
   const userMessage = messages.at(-1).content;
   const { matches, sources } = await retrieveKnowledge(userMessage);
@@ -471,6 +540,7 @@ const server = createServer(async (request, response) => {
 
     console.error("[local-ai]", error);
   } finally {
+    if (activeChatRequestId === requestId) activeChatRequestId = "";
     clearTimeout(timeoutId);
     await appendConversationTurn({
       version: 1,
@@ -499,5 +569,6 @@ server.listen(PORT, HOST, () => {
   console.log(`ACT local AI gateway: http://${HOST}:${PORT}`);
   console.log(`Ollama chat model: ${OLLAMA_MODEL}`);
   console.log(`Ollama embedding model: ${EMBEDDING_MODEL}`);
+  console.log(`Gateway authentication: ${GATEWAY_SECRET ? "enabled" : "disabled"}`);
   void warmServices();
 });
