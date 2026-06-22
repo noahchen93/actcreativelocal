@@ -66,7 +66,6 @@ export function EventAiAssistant() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [serviceStatus, setServiceStatus] = useState<ServiceStatus>("checking");
-  const [ragReady, setRagReady] = useState(false);
   const [sessionId] = useState(getSessionId);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -110,11 +109,9 @@ export function EventAiAssistant() {
               ? "warming"
               : "offline",
         );
-        setRagReady(Boolean(payload.rag?.ready));
       } catch {
         if (isActive) {
           setServiceStatus("offline");
-          setRagReady(false);
         }
       }
     };
@@ -243,11 +240,9 @@ export function EventAiAssistant() {
 
   const statusLabel =
     serviceStatus === "ready"
-      ? ragReady
-        ? t("Qwen 3.6 · 网站知识库已连接", "Qwen 3.6 · Website knowledge connected")
-        : t("Qwen 3.6 已就绪", "Qwen 3.6 ready")
+      ? t("AI 助理在线", "AI assistant online")
       : serviceStatus === "warming"
-        ? t("Qwen 3.6 正在预热", "Warming up Qwen 3.6")
+        ? t("AI 助理正在准备", "AI assistant is getting ready")
         : serviceStatus === "offline"
           ? t("AI 助理暂时离线", "AI assistant offline")
           : t("正在检查 AI 助理", "Checking AI assistant");
@@ -323,8 +318,8 @@ export function EventAiAssistant() {
           </div>
           <p className="event-ai-disclaimer">
             {t(
-              "网站知识库用于公司与案例问答；对话会保存在本地用于改进服务，请勿输入敏感资料。法规与档期仍需人工核实。",
-              "Website knowledge supports company and case questions. Chats are saved locally to improve the service, so do not enter sensitive information. Regulations and availability still require human verification.",
+              "回答仅供参考；对话会保存在本地用于改进服务，请勿输入敏感资料。法规与档期仍需人工核实。",
+              "Answers are for reference only. Chats are saved locally to improve the service, so do not enter sensitive information. Regulations and availability still require human verification.",
             )}
           </p>
 
@@ -366,7 +361,7 @@ export function EventAiAssistant() {
                   <div className="event-ai-sources">
                     <div className="event-ai-sources-title">
                       <BookOpen size={13} aria-hidden="true" />
-                      {t("参考网站内容", "Website references")}
+                      {t("参考资料", "References")}
                     </div>
                     {message.sources.map((source) =>
                       source.url ? (
@@ -425,8 +420,8 @@ export function EventAiAssistant() {
           {serviceStatus === "warming" ? (
             <div className="event-ai-composer-note">
               {t(
-                "36B 模型首次加载约需 3 分钟，完成后即可开始测试。",
-                "The 36B model can take about 3 minutes to load the first time.",
+                "AI 助理正在准备，请稍候。",
+                "The AI assistant is getting ready. Please wait.",
               )}
             </div>
           ) : null}
