@@ -72,39 +72,34 @@ export function Header() {
 
   const serviceItems = [
     {
-      title: t("展位设计和搭建", "Booth Design & Build"),
+      title: t("展位", "Booths"),
       href: localizedHref("/booth-design-build-singapore/", "/zh/booth-design-build-singapore/"),
-      meta: t("展会、快闪与品牌活动空间", "Exhibition, pop-up and activation spaces"),
+      meta: t("设计与搭建", "Design & build"),
     },
     {
-      title: t("人工场地匹配服务", "Human Venue Matching"),
-      href: "/singapore-event-venue-sourcing/",
-      meta: t("新加坡酒店、场地档期、初步报价与现场复核", "Singapore hotel options, availability, quotes and site recap"),
-    },
-    {
-      title: t("场地地图搜索", "Search Venue Map"),
+      title: t("场地", "Venues"),
       href: "/singapore-event-venue-finder/",
-      meta: t("按地区、类型、活动形式和容量筛选新加坡场地", "Filter Singapore venues by area, type, event format and capacity"),
+      meta: t("地图与人工匹配", "Map & matching"),
     },
     {
-      title: t("国际供应商采购", "International Supplier Sourcing"),
+      title: t("采购", "Sourcing"),
       href: localizedHref("/china-sourcing-agent/", "/zh/china-sourcing-agent/"),
-      meta: t("供应商筛选、比价、打样与定制跟进", "Supplier search, price comparison, samples and custom production"),
+      meta: t("供应商与生产", "Suppliers & production"),
     },
     {
-      title: t("文创礼品与道具咨询", "Merchandise & Props Consulting"),
+      title: t("礼品道具", "Merchandise"),
       href: "/custom-merchandise-props-consulting/",
-      meta: t("定制咨询、报价参考与生产建议", "Quote reference, specs and production direction"),
+      meta: t("礼品与定制道具", "Gifts & props"),
     },
     {
-      title: t("跨境运输与清关", "Cross-Border Logistics & Customs"),
+      title: t("物流", "Logistics"),
       href: "/china-southeast-asia-logistics/",
-      meta: t("装箱、国际运输、清关、本地配送与交付", "Packing, international freight, customs, local delivery and handover"),
+      meta: t("运输与清关", "Freight & customs"),
     },
     {
-      title: t("艺术展览策划与布展", "Art Exhibition Planning & Installation"),
+      title: t("展览", "Exhibitions"),
       href: "/art-exhibition-planning-installation/",
-      meta: t("展陈策划、制作协调、运输与布展", "Display planning, fabrication, logistics and installation"),
+      meta: t("策划与布展", "Planning & installation"),
     },
   ];
 
@@ -367,6 +362,12 @@ export function Header() {
           pointer-events: none;
           transform: translate(-50%, -0.35rem);
           transition: opacity 160ms ease, transform 160ms ease;
+        }
+        .act-service-dropdown-compact {
+          display: grid;
+          width: min(32rem, calc(100vw - 2rem));
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 0.2rem;
         }
         .act-service-dropdown::before {
           content: "";
@@ -658,7 +659,7 @@ export function Header() {
                 {t("服务", "Services")}
                 <span className="act-project-trigger-icon" aria-hidden="true" />
               </button>
-              <div className="act-service-dropdown" role="menu" aria-label="Services">
+              <div className="act-service-dropdown act-service-dropdown-compact" role="menu" aria-label="Services">
                 {serviceItems.map((service) => (
                   <a key={service.href} href={service.href} className="act-service-link" role="menuitem">
                     <span>

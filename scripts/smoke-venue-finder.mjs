@@ -1,5 +1,5 @@
 import { spawn } from "node:child_process";
-import { mkdir } from "node:fs/promises";
+import { mkdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import { chromium } from "playwright";
@@ -11,6 +11,9 @@ const BASE_URL =
   `http://${HOST}:${PORT}/singapore-event-venue-finder/`;
 const SITE_ORIGIN = new URL(BASE_URL).origin;
 const OUTPUT_DIR = path.resolve("output/playwright");
+const FEATURED_AUDIT_PATH = path.resolve(
+  "scripts/cache/featured-venue-audit.json",
+);
 
 let previewProcess;
 let browser;
@@ -116,14 +119,14 @@ async function runDesktopChecks(page) {
     const howTo = document.querySelector(".planning-strip");
     const finder = document.querySelector(".finder-grid");
     return {
-      howToBeforeFinder:
+      finderBeforeHowTo:
         Boolean(howTo && finder) &&
-        Boolean(howTo.compareDocumentPosition(finder) & Node.DOCUMENT_POSITION_FOLLOWING),
+        Boolean(finder.compareDocumentPosition(howTo) & Node.DOCUMENT_POSITION_FOLLOWING),
       searchInputs: document.querySelectorAll(".filter-panel input").length,
       areaOptions: document.querySelector("[data-filter-area]")?.options.length || 0,
     };
   });
-  assert(structure.howToBeforeFinder, "How-to section must appear before the venue finder");
+  assert(structure.finderBeforeHowTo, "Venue finder must appear before the how-to section");
   assert(structure.searchInputs === 1, "Venue finder must expose one text search input");
   assert(structure.areaOptions > 1, "Area dropdown must contain regional options");
 
@@ -252,8 +255,15 @@ async function runFeaturedVenueChecks(page) {
     "Venue sourcing conversion event must enter the analytics queue",
   );
 
+  const featuredAudit = JSON.parse(
+    await readFile(FEATURED_AUDIT_PATH, "utf8"),
+  );
+  const referenceVenue = featuredAudit.venues.find(
+    (venue) => venue.capacityStatus === "reference",
+  );
+  assert(referenceVenue, "Featured audit must include a reference-only venue");
   await page.goto(
-    `${SITE_ORIGIN}/singapore-event-venues/resorts-world-ballroom/`,
+    `${SITE_ORIGIN}/singapore-event-venues/${referenceVenue.id}/`,
     { waitUntil: "domcontentloaded" },
   );
   assert(
@@ -307,7 +317,13 @@ async function main() {
   const consoleErrors = [];
 
   page.on("console", (message) => {
-    if (message.type() === "error") consoleErrors.push(message.text());
+    const sourceUrl = message.location().url || "";
+    const expectedOfflineAiHealthCheck =
+      sourceUrl.includes("/api/chat") &&
+      message.text().includes("Failed to load resource");
+    if (message.type() === "error" && !expectedOfflineAiHealthCheck) {
+      consoleErrors.push(`${message.text()} @ ${sourceUrl}`);
+    }
   });
 
   try {

@@ -908,6 +908,71 @@
     dom.backToTop.classList.toggle("is-visible", window.scrollY > 700);
   }
 
+  function initVenueBriefForm() {
+    const form = document.querySelector("[data-venue-brief-form]");
+    if (!form) return;
+
+    const fileInput = form.querySelector('input[type="file"]');
+    const fileSummary = form.querySelector("[data-file-summary]");
+    const status = form.querySelector("[data-form-status]");
+    const getFileNames = () =>
+      fileInput?.files?.length
+        ? Array.from(fileInput.files).map((file) => file.name)
+        : [];
+
+    fileInput?.addEventListener("change", () => {
+      const files = getFileNames();
+      if (!fileSummary) return;
+      fileSummary.textContent = files.length
+        ? `Selected files: ${files.join(", ")}. Attach them in your email client after clicking Prepare venue brief.`
+        : "Files cannot be attached automatically through a browser mail link. Select them here to record the filenames, then attach them in your email client.";
+    });
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(form);
+      const lines = [
+        "Singapore Venue Service Brief",
+        "",
+        `Contact name: ${data.get("Contact name") || ""}`,
+        `Company / brand: ${data.get("Company or brand") || ""}`,
+        `Email: ${data.get("Email") || ""}`,
+        `Phone / WhatsApp: ${data.get("Phone or WhatsApp") || ""}`,
+        "",
+        `Event type: ${data.get("Event type") || ""}`,
+        `Expected guest count: ${data.get("Expected guest count") || ""}`,
+        `Preferred date or date range: ${data.get("Preferred date or date range") || ""}`,
+        `Preferred area: ${data.get("Preferred area") || ""}`,
+        `Budget direction: ${data.get("Budget range") || ""}`,
+        `Venue format: ${data.get("Venue format") || ""}`,
+        "",
+        "Event description:",
+        data.get("Event description") || "",
+        "",
+        "Restrictions or site details to check:",
+        data.get("Restrictions to check") || "",
+        "",
+        `Reference files selected: ${getFileNames().join(", ") || "None selected"}`,
+        "",
+        "Please attach any selected files before sending.",
+      ];
+      const mailtoUrl =
+        "mailto:contact@actcreative.net?subject=" +
+        encodeURIComponent("Singapore venue service brief") +
+        "&body=" +
+        encodeURIComponent(lines.join("\n"));
+
+      if (status) {
+        status.textContent =
+          "Opening your email client with the structured venue brief.";
+      }
+      track("venue_brief_prepared", {
+        venue_count: state.shortlist.size,
+      });
+      window.location.href = mailtoUrl;
+    });
+  }
+
   document.addEventListener("click", (event) => {
     const shortlistToggle = event.target.closest("[data-shortlist-toggle]");
     if (shortlistToggle) {
@@ -1018,6 +1083,8 @@
     readHashState();
     applyFilters({ fitMap: true });
   });
+
+  initVenueBriefForm();
 
   fetch(DATA_URL)
     .then((response) => {

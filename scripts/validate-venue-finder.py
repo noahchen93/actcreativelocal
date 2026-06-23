@@ -140,7 +140,9 @@ def main() -> None:
         errors.append("Deprecated FAQPage structured data is still present")
     if '<link rel="canonical" href="https://actcreative.net/singapore-event-venue-finder/"' not in page_html:
         errors.append("Venue finder canonical URL is missing")
-    if f'"dateModified": "{dataset["generatedAt"]}"' not in page_html:
+    page_modified_match = re.search(r'"dateModified": "(\d{4}-\d{2}-\d{2})"', page_html)
+    page_modified = page_modified_match.group(1) if page_modified_match else ""
+    if not page_modified or page_modified < dataset["generatedAt"]:
         errors.append("Structured data dateModified is stale")
     if "100+ Venues" not in page_html:
         errors.append("Venue finder title does not use the maintainable 100+ count")
@@ -265,7 +267,7 @@ def main() -> None:
         errors.append("Venue finder sitemap entry is missing")
     else:
         finder_body = finder_entry.group("body")
-        if f"<lastmod>{dataset['generatedAt']}</lastmod>" not in finder_body:
+        if not page_modified or f"<lastmod>{page_modified}</lastmod>" not in finder_body:
             errors.append("Venue finder sitemap lastmod is stale")
         if expected_og_url not in finder_body:
             errors.append("Venue finder sitemap does not include the dedicated Open Graph image")

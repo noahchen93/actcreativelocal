@@ -240,11 +240,11 @@ function renderPage(venue, venueAudit) {
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="/" aria-label="ACT Creative home"><img src="/favicon-192.png" alt="ACT Creative logo" width="36" height="36" /><span>ACT Creative</span></a>
-        <nav aria-label="Primary navigation"><a href="/singapore-event-venue-finder/">Venue finder</a><a href="/singapore-event-venue-sourcing/">Venue sourcing</a><a href="/#contact">Contact</a></nav>
+        <nav aria-label="Primary navigation"><a href="/singapore-event-venue-finder/">Venue service</a><a href="/#contact">Contact</a></nav>
       </header>
       <main>
         <nav class="detail-breadcrumbs" aria-label="Breadcrumb">
-          <a href="/">Home</a><span>/</span><a href="/singapore-event-venue-finder/">Venue finder</a><span>/</span><span>${escapeHtml(venue.name)}</span>
+          <a href="/">Home</a><span>/</span><a href="/singapore-event-venue-finder/">Venue service</a><span>/</span><span>${escapeHtml(venue.name)}</span>
         </nav>
         <section class="venue-detail-hero">
           <div class="venue-detail-copy">
@@ -258,8 +258,8 @@ function renderPage(venue, venueAudit) {
             </div>
             <p class="venue-detail-address">${escapeHtml(venue.address)}</p>
             <div class="category-actions">
-              <a class="button primary" href="/singapore-event-venue-finder/#q=${encodeURIComponent(venue.name)}" data-track-action="Venue finder opened" data-track-label="${escapeHtml(venue.id)}">Compare in venue finder</a>
-              <a class="button secondary" href="/singapore-event-venue-sourcing/#venue-brief-form" data-track-action="Venue sourcing opened" data-track-label="${escapeHtml(venue.id)}">Request a reviewed shortlist</a>
+              <a class="button primary" href="/singapore-event-venue-finder/#q=${encodeURIComponent(venue.name)}" data-track-action="Venue finder opened" data-track-label="${escapeHtml(venue.id)}">Compare on map</a>
+              <a class="button secondary" href="/singapore-event-venue-finder/#venue-brief-form" data-track-action="Venue sourcing opened" data-track-label="${escapeHtml(venue.id)}">Request a reviewed shortlist</a>
             </div>
           </div>
           <figure class="venue-detail-image">
@@ -342,11 +342,11 @@ function renderPage(venue, venueAudit) {
           <div><span class="section-kicker">Need a practical venue check?</span><h2>Turn venue records into a workable shortlist.</h2><p>ACT Creative can review venue fit, production access, guest flow and the questions to raise before requesting a quote.</p></div>
           <div class="cta-actions">
             <a class="button primary" href="https://wa.me/6584515268?text=Hello%20ACT%20Creative%2C%20I%20would%20like%20help%20reviewing%20${encodeURIComponent(venue.name)}%20for%20an%20event." data-inquiry-link="whatsapp" data-track-action="WhatsApp venue enquiry" data-track-label="${escapeHtml(venue.id)}">Discuss this venue</a>
-            <a class="button secondary" href="/singapore-event-venue-sourcing/#venue-brief-form" data-track-action="Venue brief opened" data-track-label="${escapeHtml(venue.id)}">Send a venue brief</a>
+            <a class="button secondary" href="/singapore-event-venue-finder/#venue-brief-form" data-track-action="Venue brief opened" data-track-label="${escapeHtml(venue.id)}">Send a venue brief</a>
           </div>
         </section>
       </main>
-      <footer><span>&copy; 2026 ACT Creative Pte. Ltd. - Singapore</span><span><a href="/singapore-event-venue-finder/">Venue finder</a> · <a href="mailto:contact@actcreative.net">contact@actcreative.net</a></span></footer>
+      <footer><span>&copy; 2026 ACT Creative Pte. Ltd. - Singapore</span><span><a href="/singapore-event-venue-finder/">Venue service</a> · <a href="mailto:contact@actcreative.net">contact@actcreative.net</a></span></footer>
     </div>
     <script src="/inquiry-attribution.js" defer></script>
     <script src="/venue-detail-tracking.js" defer></script>

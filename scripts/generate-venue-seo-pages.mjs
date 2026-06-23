@@ -270,7 +270,7 @@ function renderGuide(guide) {
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="/" aria-label="ACT Creative home"><img src="/favicon-192.png" alt="ACT Creative logo" width="36" height="36" /><span>ACT Creative</span></a>
-        <nav aria-label="Primary navigation"><a href="/singapore-event-venue-finder/">Venue finder</a><a href="/singapore-event-venue-sourcing/">Venue sourcing</a><a href="/#contact">Contact</a></nav>
+        <nav aria-label="Primary navigation"><a href="/singapore-event-venue-finder/">Venue service</a><a href="/#contact">Contact</a></nav>
       </header>
       <main>
         <section class="tool-hero">
@@ -285,8 +285,8 @@ function renderGuide(guide) {
           <p>${escapeHtml(guide.planning)}</p>
         </section>
         <div class="category-actions">
-          <a class="button primary" href="/singapore-event-venue-finder/${guide.finderHash}" data-track-action="Filtered finder opened" data-track-label="${escapeHtml(guide.slug)}">Open these filters in the venue finder</a>
-          <a class="button secondary" href="/singapore-event-venue-sourcing/#venue-brief-form" data-track-action="Venue sourcing opened" data-track-label="${escapeHtml(guide.slug)}">Request a reviewed shortlist</a>
+          <a class="button primary" href="/singapore-event-venue-finder/${guide.finderHash}" data-track-action="Filtered finder opened" data-track-label="${escapeHtml(guide.slug)}">Open on venue map</a>
+          <a class="button secondary" href="/singapore-event-venue-finder/#venue-brief-form" data-track-action="Venue sourcing opened" data-track-label="${escapeHtml(guide.slug)}">Request a reviewed shortlist</a>
         </div>
         <section aria-labelledby="venue-list-title">
           <div class="result-header"><div><span class="section-kicker">Curated public records</span><h2 id="venue-list-title">${shown.length} venue options to compare</h2></div></div>
@@ -301,7 +301,7 @@ function renderGuide(guide) {
           </div>
         </section>
       </main>
-      <footer><span>&copy; 2026 ACT Creative Pte. Ltd. - Singapore</span><span><a href="/singapore-event-venue-finder/">Venue finder</a> · <a href="mailto:contact@actcreative.net">contact@actcreative.net</a></span></footer>
+      <footer><span>&copy; 2026 ACT Creative Pte. Ltd. - Singapore</span><span><a href="/singapore-event-venue-finder/">Venue service</a> · <a href="mailto:contact@actcreative.net">contact@actcreative.net</a></span></footer>
     </div>
     <script src="/inquiry-attribution.js" defer></script>
     <script src="/venue-detail-tracking.js" defer></script>
