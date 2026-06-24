@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 // Case study photos served from /public/case-studies/images/ at the URL root
 const bigBigWorld = "/case-studies/images/big-big-world.webp";
+const kickOffChallenge = "/case-studies/images/kick-off-challenge.webp";
 const wingsOfArt = "/case-studies/images/wings-of-art.webp";
 const pacmanFriends = "/case-studies/images/pacman-friends.webp";
 
@@ -18,6 +19,7 @@ import lightingImage from "figma:asset/6c4b2d9ca5b30a77b60b7dc9631b8f412b2e0bc7.
 import sculptureImage from "figma:asset/f60bebcbcb0f95e82cfd56ae7974a5af64351275.png";
 
 const slides: { src: string; alt: string }[] = [
+  { src: kickOffChallenge, alt: "Kick Off Challenge football activation at The Star Vista B1 Atrium, Singapore" },
   { src: bigBigWorld, alt: "A BIG BIG WORLD light show installation at Sentosa, Singapore" },
   { src: wingsOfArt, alt: "Wings of Art Barbie charity art exhibition runway, Singapore" },
   { src: pacmanFriends, alt: "PACMAN and Friends human game public activation at Sentosa" },
