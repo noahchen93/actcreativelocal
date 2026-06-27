@@ -64,6 +64,8 @@
       "scripts": {
             "dev": "vite",
             "dev:ai": "node scripts/local-ai-server.mjs",
+            "ai:insights": "node scripts/analyze-ai-conversations.mjs",
+            "ai:insights:preview": "node scripts/analyze-ai-conversations.mjs --min-topic-count=2",
             "start:ai": "node scripts/local-ai-server.mjs",
             "ollama:create": "ollama create act-event-assistant -f local-ai/Modelfile",
             "ollama:embedding": "ollama create act-rag-embedding -f local-ai/EmbeddingModelfile",

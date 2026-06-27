@@ -28,10 +28,46 @@ type ChatMessage = {
   sources?: RagSource[];
 };
 
+type SuggestedQuestion = {
+  id: string;
+  question: {
+    zh?: string;
+    en?: string;
+  };
+};
+
+type TopQuestionsPayload = {
+  questions?: SuggestedQuestion[];
+  fallbackQuestions?: SuggestedQuestion[];
+};
+
 type ServiceStatus = "checking" | "warming" | "ready" | "offline";
 
 const createId = () => `${Date.now()}-${Math.random().toString(36).slice(2)}`;
 const SESSION_STORAGE_KEY = "act-event-ai-session-v1";
+const DEFAULT_SUGGESTIONS: SuggestedQuestion[] = [
+  {
+    id: "services",
+    question: {
+      zh: "ACT Creative 主要提供哪些服务？",
+      en: "What services does ACT Creative provide?",
+    },
+  },
+  {
+    id: "cases_sentosa",
+    question: {
+      zh: "介绍一下你们在圣淘沙做过的项目案例。",
+      en: "Tell me about your Sentosa project cases.",
+    },
+  },
+  {
+    id: "venue_planning",
+    question: {
+      zh: "如何选择适合 200 人企业活动的场地？",
+      en: "How should I choose a venue for a 200-person corporate event?",
+    },
+  },
+];
 
 function getSessionId() {
   if (typeof window === "undefined") return createId();
@@ -58,6 +94,18 @@ function parseRagSources(value: string | null): RagSource[] {
   }
 }
 
+function isSuggestedQuestion(value: unknown): value is SuggestedQuestion {
+  if (!value || typeof value !== "object") return false;
+
+  const suggestion = value as SuggestedQuestion;
+  return (
+    typeof suggestion.id === "string" &&
+    Boolean(suggestion.question) &&
+    (typeof suggestion.question.zh === "string" ||
+      typeof suggestion.question.en === "string")
+  );
+}
+
 export function EventAiAssistant() {
   const { language, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
@@ -66,6 +114,7 @@ export function EventAiAssistant() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [serviceStatus, setServiceStatus] = useState<ServiceStatus>("checking");
+  const [learnedSuggestions, setLearnedSuggestions] = useState<SuggestedQuestion[]>([]);
   const [sessionId] = useState(getSessionId);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -76,18 +125,10 @@ export function EventAiAssistant() {
     "Hello, I am the ACT Creative Event AI Assistant. Ask me about our services, project cases, Singapore event planning, venues, fabrication or production.",
   );
 
-  const suggestions =
-    language === "zh"
-      ? [
-          "ACT Creative 主要提供哪些服务？",
-          "介绍一下你们在圣淘沙做过的项目案例。",
-          "如何选择适合 200 人企业活动的场地？",
-        ]
-      : [
-          "What services does ACT Creative provide?",
-          "Tell me about your Sentosa project cases.",
-          "How should I choose a venue for a 200-person corporate event?",
-        ];
+  const suggestions = (learnedSuggestions.length ? learnedSuggestions : DEFAULT_SUGGESTIONS)
+    .map((suggestion) => suggestion.question[language] || suggestion.question.en || suggestion.question.zh)
+    .filter((suggestion): suggestion is string => Boolean(suggestion))
+    .slice(0, 3);
 
   useEffect(() => {
     let isActive = true;
@@ -116,6 +157,38 @@ export function EventAiAssistant() {
     return () => {
       isActive = false;
       window.clearInterval(intervalId);
+    };
+  }, []);
+
+  useEffect(() => {
+    let isActive = true;
+
+    const loadTopQuestions = async () => {
+      try {
+        const response = await fetch("/ai-insights/top-questions.json", {
+          cache: "no-store",
+        });
+        if (!response.ok) return;
+
+        const payload = (await response.json()) as TopQuestionsPayload;
+        if (!isActive) return;
+
+        const questions = Array.isArray(payload.questions)
+          ? payload.questions.filter(isSuggestedQuestion)
+          : [];
+        const fallbackQuestions = Array.isArray(payload.fallbackQuestions)
+          ? payload.fallbackQuestions.filter(isSuggestedQuestion)
+          : [];
+
+        setLearnedSuggestions(questions.length ? questions : fallbackQuestions);
+      } catch {
+        if (isActive) setLearnedSuggestions([]);
+      }
+    };
+
+    void loadTopQuestions();
+    return () => {
+      isActive = false;
     };
   }, []);
 

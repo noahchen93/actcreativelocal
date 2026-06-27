@@ -8,4 +8,7 @@
   Run `npm i` to install the dependencies.
 
   Run `npm run dev` to start the development server.
-  
+
+  ## Project context
+
+  Read `PROJECT_CONTEXT.md` before continuing development. It records the site history, architecture, AI operations, user preferences, and handoff rules.

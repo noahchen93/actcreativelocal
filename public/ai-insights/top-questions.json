@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-26T08:46:42.905Z",
+  "minTopicCount": 3,
+  "source": {
+    "totalRecords": 12,
+    "includedRecords": 5,
+    "excludedRecords": 7
+  },
+  "questions": [],
+  "fallbackQuestions": [
+    {
+      "id": "services",
+      "question": {
+        "zh": "ACT Creative 主要提供哪些服务？",
+        "en": "What services does ACT Creative provide?"
+      }
+    },
+    {
+      "id": "cases_sentosa",
+      "question": {
+        "zh": "介绍一下你们在圣淘沙做过的项目案例。",
+        "en": "Tell me about your Sentosa project cases."
+      }
+    },
+    {
+      "id": "venue_planning",
+      "question": {
+        "zh": "如何选择适合 200 人企业活动的场地？",
+        "en": "How should I choose a venue for a 200-person corporate event?"
+      }
+    }
+  ]
+}

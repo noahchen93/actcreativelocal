@@ -52,7 +52,24 @@ The logs include an anonymous session ID, page URL, language, question, answer, 
 
 Conversation log files and generated vector indexes are ignored by Git.
 
+## Conversation insights and popular questions
+
+Generate private trend analysis and public recommended questions from local conversation logs:
+
+```powershell
+npm run ai:insights
+```
+
+The private report is written to `local-ai/insights/conversation-insights.json` and remains ignored by Git. The public suggestion feed is written to `public/ai-insights/top-questions.json`; it uses curated topic questions instead of publishing raw user messages.
+
+By default, local `127.0.0.1` traffic and known test sessions are excluded, and a topic must appear at least three times before it becomes a public recommendation. For early testing, preview with a lower threshold:
+
+```powershell
+npm run ai:insights:preview
+```
+
+Run `npm run ai:insights` again before deployment if you do not want early test patterns to appear as public suggestions.
+
 ## Hardware note
 
 The Qwen 3.6 36B chat model can require about five minutes to cold-start on the current machine. Once loaded, it remains warm for 24 hours. The dedicated embedding model uses a 1024-token context to allow both models to stay resident together.
-
