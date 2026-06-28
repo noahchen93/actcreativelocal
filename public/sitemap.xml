@@ -115,7 +115,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/booth-design-build-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/og/exhibition-booth-production-singapore.png</image:loc>
-      <image:title>鏂板姞鍧″睍浣嶈璁′笌鎼缓</image:title>
+      <image:title>新加坡展位设计与搭建</image:title>
     </image:image>
   </url>
 
@@ -130,7 +130,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/booth-design-build-portfolio/" />
     <image:image>
       <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/002-china-moutai-booth-dbf2789e7d.webp</image:loc>
-      <image:title>鏂板姞鍧″睍浣嶈璁℃渚嬩綔鍝侀泦</image:title>
+      <image:title>新加坡展位设计案例作品集</image:title>
     </image:image>
   </url>
 
@@ -571,12 +571,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/" />
     <image:image>
       <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-final-product-display.webp</image:loc>
-      <image:title>ARTBOX Singapore 娲诲姩鍛ㄨ竟閲囪喘妗堜緥</image:title>
+      <image:title>ARTBOX Singapore 活动周边采购案例</image:title>
       <image:caption>Final event merchandise displayed at the Singapore event venue.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-shopping-bag-colour-card.webp</image:loc>
-      <image:title>Shopping bag 鑹插崱姣斿</image:title>
+      <image:title>Shopping bag 色卡比对</image:title>
       <image:caption>Event shopping bag sample compared with colour cards before production.</image:caption>
     </image:image>
   </url>
@@ -740,6 +740,21 @@
       <image:loc>https://actcreative.net/case-studies/images/k11-shenyang.webp</image:loc>
     </image:image>
   </url>
+
+  <url>
+    <loc>https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/" />
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/assets/atrium-carpet-overview.webp</image:loc>
+      <image:title>Kick Off Challenge football activation at The Star Vista Singapore</image:title>
+      <image:caption>Football activation, bowling lane and ball-pit setup at The Star Vista B1 Atrium in Singapore.</image:caption>
+    </image:image>
+  </url>
+
   <url>
     <loc>https://actcreative.net/singapore-event-venues/marina-bay-sands/</loc>
     <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
