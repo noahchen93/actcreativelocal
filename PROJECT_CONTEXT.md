@@ -1,6 +1,6 @@
 # ACT Creative Website Project Context
 
-Last updated: 2026-06-27, Asia/Shanghai.
+Last updated: 2026-06-28, Asia/Shanghai.
 
 This file is the living handoff document for `actcreativelocal`. Update it in the same commit as every meaningful website, content, data, AI, deployment, or operations change. If another tool or developer continues this project, read this file first.
 
@@ -300,6 +300,14 @@ The git history shows these major phases:
 11. Project context handoff file on 2026-06-27.
    - This file was added so future tools/developers can understand project history, intent, operations, and constraints quickly.
    - README links to this file.
+
+12. Christmas/NewYear holiday decorations page committed 2026-06-28 (by Claude, on Codex's behalf).
+   - Committed Codex's local work on branch `codex/Christmas-NewYear-CNY` (commit `20d8ec0`): new static page `public/holiday-decorations-singapore/` (index.html + 7 `.webp` assets) plus `src/components/HolidayPromo.tsx` wired into the homepage via `App`/`Hero`; `Header` nav and `sitemap.xml` updated.
+   - Pushed the branch to `origin/codex/Christmas-NewYear-CNY` and created a Vercel preview with `vercel deploy`.
+   - Preview URL: `https://actcreativelocal-9zpqx1p9s-noah-chens-projects-c58c1ebe.vercel.app` (Vercel SSO-gated; deployment id `dpl_CKmtMf9RXyKEqW5DWpZ7sbJBWuLT`).
+   - Page images live in `public/holiday-decorations-singapore/assets/` and are referenced by absolute path in `index.html`; swap in place by overwriting the same `.webp` filename, then `npm run build` + redeploy. No code change needed unless filename/extension changes.
+   - Real product images to be supplied by the user. OG image still uses `og-default.png` (page-specific OG is a future SEO improvement).
+   - Not yet promoted to production as of this entry.
 
 ## AI Assistant Operating Notes
 
