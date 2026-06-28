@@ -72,6 +72,11 @@ export function Header() {
 
   const serviceItems = [
     {
+      title: t("节日装饰", "Festive Decor"),
+      href: "/holiday-decorations-singapore/index.html",
+      meta: t("圣诞、元旦与中国新年", "Christmas, New Year & CNY"),
+    },
+    {
       title: t("展位", "Booths"),
       href: localizedHref("/booth-design-build-singapore/", "/zh/booth-design-build-singapore/"),
       meta: t("设计与搭建", "Design & build"),

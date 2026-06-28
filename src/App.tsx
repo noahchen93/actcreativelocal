@@ -2,6 +2,7 @@ import { lazy, Suspense, useEffect } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { HolidayPromo } from "./components/HolidayPromo";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
 const EventAiAssistant = lazy(() =>
@@ -84,6 +85,7 @@ export default function App() {
       <div className="min-h-screen bg-black">
         <Header />
         <main>
+          <HolidayPromo />
           <Hero />
           <Suspense fallback={<SectionFallback minHeight="48rem" />}>
             <CaseStudies />

@@ -11,7 +11,7 @@ export function Hero() {
     <section
       id="home"
       className="relative overflow-hidden bg-black"
-      style={{ paddingTop: "6.5rem", paddingBottom: "4rem" }}
+      style={{ paddingTop: "3.75rem", paddingBottom: "4rem" }}
     >
       {/* Hero-scoped CSS */}
       <style>{`
