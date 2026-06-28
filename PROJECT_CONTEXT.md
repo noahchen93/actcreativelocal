@@ -307,7 +307,7 @@ The git history shows these major phases:
    - Preview URL: `https://actcreativelocal-9zpqx1p9s-noah-chens-projects-c58c1ebe.vercel.app` (Vercel SSO-gated; deployment id `dpl_CKmtMf9RXyKEqW5DWpZ7sbJBWuLT`).
    - Page images live in `public/holiday-decorations-singapore/assets/` and are referenced by absolute path in `index.html`; swap in place by overwriting the same `.webp` filename, then `npm run build` + redeploy. No code change needed unless filename/extension changes.
    - Real product images to be supplied by the user. OG image still uses `og-default.png` (page-specific OG is a future SEO improvement).
-   - Not yet promoted to production as of this entry.
+   - Promoted to production on 2026-06-28 via `vercel deploy --prod`: deployment id `dpl_2Mn8C3J1GKhgWjG3u2MDL1SNivnX`, aliased to `https://actcreative.net`. This production update also brought live the Kick Off Challenge case study (`ed490f6`) and AI assistant ops hardening (`76b063f`), which were committed after the previous 2026-06-24 production deploy. Verified live: `/` 200, `/holiday-decorations-singapore/` 200, hero asset 200. Rollback, if needed: promote the previous production deployment `actcreativelocal-3nbgckvgq` via Vercel dashboard/CLI. Real product images still pending from the user; swap is a follow-up deploy.
 
 ## AI Assistant Operating Notes
 
