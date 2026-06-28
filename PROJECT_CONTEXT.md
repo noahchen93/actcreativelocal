@@ -320,6 +320,14 @@ The git history shows these major phases:
    - width/height added to all 11 content `<img>` tags on the holiday page (3 multi-line hero imgs + 8 product/section imgs) using sharp-measured intrinsic dims (`holiday-hero.webp` 1672×941; all others 1448×1086) to reduce CLS. Case-study pages were re-checked and already carry width/height, so no change there.
    - `npm run build` passes (✓ 7.42s; assistant injected into 63 static pages). One-off helper scripts live in gitignored `tmp/` (add_twitter_card.py, fix_twitter_image.py, add_img_dims.py) and are not committed.
 
+14. SEO title shortening batch on 2026-06-28 (by Claude, on Codex's behalf; branch `codex/Christmas-NewYear-CNY`).
+   - Shortened 44 EN page `<title>`s that were over Google's ~60-char display limit (measured in DECODED length — `&` counts as 1, not `&amp;`'s 5; the earlier raw-byte counts were inflated). All new titles ≤62 chars; only `case-studies/` index is intentionally left at its original longer title per user instruction.
+   - 20 venue detail pages: dropped the repetitive `Event Venue Singapore: Capacity & Spaces | ACT Creative` suffix to `Event Venue [Singapore] | ACT Creative`, keeping each venue's factual name verbatim and avoiding duplicate "Singapore" where the venue name already contains it. Biggest cuts: Ritz-Carlton 91→62, Sports Hub 90→61, Esplanade/Star 87→58.
+   - 5 venue guide pages: dropped descriptive colon clauses (e.g. `: Theatres & Arts Centres`, `: Gardens, Beaches & Decks`).
+   - 6 case-study pages: trimmed per user-approved decisions — PACMAN keeps `Event Fabrication` (drops Human Game/Wearable Inflatables); Wings of Art keeps `Butterfly Sculpture` (drops Barbie Runway/Procurement); Kick Off drops the `Case Study` label; K11 `Public Artworks`→`Public Art`; BIG BIG WORLD and ARTBOX light trims. `case-studies/` index left unchanged (user: don't cut).
+   - 13 service/blog/holiday pages: light trims. Holiday drops `New Year` from the title (`Christmas & CNY`; the page still covers all three). `singapore-event-venue-finder/` reworded `Venue Service`→`Venue Finder` (matches URL slug/product name, same length). 4 pages whose old titles were already ≤60 were also trimmed per user's "change all optionals" decision (booth-design-build-singapore, booth-design-build-portfolio dropping `44 Visual Case Groups`, event-fabrication-singapore, singapore-event-venue-finder).
+   - `&` written as `&amp;` in the files for HTML validity. `npm run build` passes (✓ 5.16s). One-off helper in gitignored `tmp/apply_titles.py`. Not yet deployed at commit time — pending user decision on preview vs production.
+
 ## AI Assistant Operating Notes
 
 Health endpoints:
