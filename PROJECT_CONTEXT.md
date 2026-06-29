@@ -328,6 +328,12 @@ The git history shows these major phases:
    - 13 service/blog/holiday pages: light trims. Holiday drops `New Year` from the title (`Christmas & CNY`; the page still covers all three). `singapore-event-venue-finder/` reworded `Venue Service`→`Venue Finder` (matches URL slug/product name, same length). 4 pages whose old titles were already ≤60 were also trimmed per user's "change all optionals" decision (booth-design-build-singapore, booth-design-build-portfolio dropping `44 Visual Case Groups`, event-fabrication-singapore, singapore-event-venue-finder).
    - `&` written as `&amp;` in the files for HTML validity. `npm run build` passes (✓ 5.16s). One-off helper in gitignored `tmp/apply_titles.py`. Committed as `e425269` and pushed. Promoted to production the same day via `vercel deploy --prod --yes`: deployment id `dpl_EJkCvx18h6DC4RfbymJEf7eZNco2`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote `dpl_5FGqF9RHBU4eceSqEVRuPvUSgBKu` via Vercel dashboard/CLI. Verified live: Ritz-Carlton 62, PACMAN keeps `Event Fabrication`, Wings of Art keeps `Butterfly Sculpture`, holiday `Christmas & CNY`, venue-finder reworded to `Venue Finder`; `case-studies/` index unchanged (original, per user).
 
+15. Artbox case-study image update on 2026-06-29 (Codex; branch `codex/venue-finder-finish`).
+   - Fast-forwarded the branch to include the already-deployed `codex/Christmas-NewYear-CNY` holiday/SEO/title commits before publishing, avoiding a production rollback of those changes.
+   - Committed `9b24582`: replaced the Artbox case-study visual in `public/booth-design-build-singapore/index.html`, `public/case-studies/index.html`, and `src/components/CaseStudies.tsx` with the real `public/china-sourcing-agent/assets/artbox-final-product-display.webp` image; recompressed the image at the same 1333×1000 dimensions.
+   - `npm run build` passes locally and on Vercel; both builds injected the floating assistant into 63 static pages.
+   - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_d6QCUdoPwZDbSW89N5QFueLinbck`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_EJkCvx18h6DC4RfbymJEf7eZNco2`.
+
 ## AI Assistant Operating Notes
 
 Health endpoints:
