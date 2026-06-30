@@ -339,6 +339,7 @@ The git history shows these major phases:
    - New page structure: consultation entry, Christmas/CNY/New Year capability taxonomy, B2B client fit, 8-step turnkey process, ACT Creative differentiation and stronger brief CTA.
    - Updated `src/components/HolidayPromo.tsx` so the homepage promo points to the page as a strategic service, not a temporary product catalog; also simplified the promo visual to one stable hero image and repaired the holiday promo Chinese copy.
    - `npm run build` passes; Playwright desktop/mobile screenshots for the holiday page and homepage promo were saved under `output/playwright/`. Local Vite dev URL used for verification: `http://localhost:3000/`.
+   - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_AMHrL9sndJ7sEYPnPXgkWvzUadz6`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_d6QCUdoPwZDbSW89N5QFueLinbck`.
 
 ## AI Assistant Operating Notes
 
