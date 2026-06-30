@@ -334,6 +334,12 @@ The git history shows these major phases:
    - `npm run build` passes locally and on Vercel; both builds injected the floating assistant into 63 static pages.
    - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_d6QCUdoPwZDbSW89N5QFueLinbck`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_EJkCvx18h6DC4RfbymJEf7eZNco2`.
 
+16. Holiday decorations service-page repositioning on 2026-06-30 (Codex; branch `codex/venue-finder-finish`).
+   - Reworked `public/holiday-decorations-singapore/index.html` from a standard festive product/order page into an evergreen B2B service page for custom festive decoration consulting, sourcing, fabrication, installation, maintenance and dismantling.
+   - New page structure: consultation entry, Christmas/CNY/New Year capability taxonomy, B2B client fit, 8-step turnkey process, ACT Creative differentiation and stronger brief CTA.
+   - Updated `src/components/HolidayPromo.tsx` so the homepage promo points to the page as a strategic service, not a temporary product catalog; also simplified the promo visual to one stable hero image and repaired the holiday promo Chinese copy.
+   - `npm run build` passes; Playwright desktop/mobile screenshots for the holiday page and homepage promo were saved under `output/playwright/`. Local Vite dev URL used for verification: `http://localhost:3000/`.
+
 ## AI Assistant Operating Notes
 
 Health endpoints:

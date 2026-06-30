@@ -5,15 +5,7 @@ import { useLanguage } from "../contexts/LanguageContext";
 const previewImages = [
   {
     src: "/holiday-decorations-singapore/assets/holiday-hero.webp",
-    alt: "Generated holiday decor concept with Christmas tree, festive lighting and Chinese New Year installation",
-  },
-  {
-    src: "/holiday-decorations-singapore/assets/cny-decor-lantern-arch.webp",
-    alt: "Generated Chinese New Year lantern arch and gold festive decor concept",
-  },
-  {
-    src: "/holiday-decorations-singapore/assets/zodiac-sheep-sculpture.webp",
-    alt: "Generated zodiac sheep sculpture concept for Chinese New Year decor",
+    alt: "Commercial festive decoration concept with Christmas tree, lighting and seasonal installation",
   },
 ];
 
@@ -39,8 +31,8 @@ export function HolidayPromo() {
           border: 1px solid rgba(204, 255, 0, 0.2);
           border-radius: 8px;
           background:
-            linear-gradient(135deg, rgba(174, 20, 34, 0.26), rgba(10, 10, 10, 0.94) 42%),
-            linear-gradient(90deg, rgba(204, 255, 0, 0.12), rgba(204, 255, 0, 0) 34%),
+            linear-gradient(135deg, rgba(174, 20, 34, 0.24), rgba(10, 10, 10, 0.94) 42%),
+            linear-gradient(90deg, rgba(204, 255, 0, 0.1), rgba(204, 255, 0, 0) 34%),
             #0a0a0a;
           box-shadow: 0 22px 72px -54px rgba(204, 255, 0, 0.72);
         }
@@ -67,7 +59,7 @@ export function HolidayPromo() {
           text-wrap: balance;
         }
         .holiday-promo-body {
-          max-width: 62rem;
+          max-width: 64rem;
           margin-top: 0.8rem;
           color: rgba(255, 255, 255, 0.7);
           font-size: clamp(0.92rem, 1vw, 1.02rem);
@@ -117,12 +109,12 @@ export function HolidayPromo() {
         }
         .holiday-promo-media {
           display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+          grid-template-columns: minmax(0, 1fr);
           gap: 0.5rem;
           min-width: 0;
         }
         .holiday-promo-image {
-          aspect-ratio: 4 / 3;
+          aspect-ratio: 16 / 7;
           overflow: hidden;
           border-radius: 8px;
           border: 1px solid rgba(255, 255, 255, 0.12);
@@ -133,9 +125,6 @@ export function HolidayPromo() {
           height: 100%;
           object-fit: cover;
         }
-        .holiday-promo-image:first-child {
-          grid-column: span 2;
-        }
         @media (min-width: 960px) {
           .holiday-promo-home {
             padding-top: calc(86px + 1.25rem);
@@ -144,13 +133,6 @@ export function HolidayPromo() {
           .holiday-promo-shell {
             grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.55fr);
             align-items: center;
-          }
-          .holiday-promo-media {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-          .holiday-promo-image:first-child {
-            grid-column: span 2;
-            aspect-ratio: 16 / 7;
           }
         }
         @media (max-width: 520px) {
@@ -178,24 +160,24 @@ export function HolidayPromo() {
         <div className="holiday-promo-copy">
           <div className="holiday-promo-kicker">
             <CalendarDays className="h-4 w-4" />
-            <span>{t("节日活动筹备已开放", "Festive production planning is open")}</span>
+            <span>{t("节庆装饰项目咨询已开放", "Festive decoration consultation is open")}</span>
           </div>
           <h2 className="holiday-promo-title">
             {t(
-              "圣诞、元旦与中国新年装饰专题",
-              "Christmas, New Year and Chinese New Year decor",
+              "商场、品牌、办公楼与公共空间节庆装饰",
+              "Festive decorations for malls, brands, offices and public spaces",
             )}
           </h2>
           <p className="holiday-promo-body">
             {t(
-              "标准圣诞树、装饰部件、灯饰安装，以及圣诞树定制、中国新年场景和生肖雕塑制作，都可以先从这个专题页提交需求。",
-              "Standard Christmas trees, ornaments, lighting installation, custom festive builds, Chinese New Year scenes and zodiac sculpture fabrication are now grouped into one seasonal brief page.",
+              "从圣诞树、春节雕塑、灯笼与灯光装置，到采购、定制制作、安装、维护和拆除，我们把节庆装饰作为一个可落地的商业空间项目来统筹。",
+              "From Christmas trees, CNY sculptures, lanterns and lighting to sourcing, custom fabrication, installation, maintenance and dismantling, we coordinate festive decor as a buildable commercial-space project.",
             )}
           </p>
           <div className="holiday-promo-actions">
-            <a className="holiday-promo-button holiday-promo-button-primary" href="/holiday-decorations-singapore/index.html">
+            <a className="holiday-promo-button holiday-promo-button-primary" href="/holiday-decorations-singapore/">
               <Gift className="h-4 w-4" />
-              <span>{t("查看节日方案", "View festive options")}</span>
+              <span>{t("查看节庆装饰服务", "View festive services")}</span>
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
@@ -205,7 +187,7 @@ export function HolidayPromo() {
               rel="noopener noreferrer"
             >
               <Sparkles className="h-4 w-4" />
-              <span>{t("WhatsApp 发送需求", "WhatsApp a festive brief")}</span>
+              <span>{t("WhatsApp 发送节庆需求", "WhatsApp a festive brief")}</span>
             </a>
           </div>
         </div>
