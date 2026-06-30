@@ -1,6 +1,6 @@
 # ACT Creative Website Project Context
 
-Last updated: 2026-06-28, Asia/Shanghai.
+Last updated: 2026-06-30, Asia/Shanghai.
 
 This file is the living handoff document for `actcreativelocal`. Update it in the same commit as every meaningful website, content, data, AI, deployment, or operations change. If another tool or developer continues this project, read this file first.
 
@@ -96,7 +96,9 @@ Operations scripts:
 
 - `scripts/start-production-ai.ps1` starts/repairs the site AI stack on Windows.
 - `scripts/start-production-tunnel.ps1` starts the Cloudflare Tunnel.
-- Windows startup entries documented in `docs/production-ai-operations.md` are expected to run these scripts after sign-in.
+- `scripts/watch-production-ai.ps1` is the persistent watchdog for local AI and Cloudflare Tunnel health.
+- `scripts/install-production-ai-supervisor.ps1` installs the watchdog as a Windows autostart entry.
+- `scripts/check-production-ai.ps1` reports local Ollama, local gateway, direct tunnel, production proxy, and autostart status.
 
 Data/tooling:
 
@@ -146,6 +148,11 @@ AI insights:
 ```powershell
 npm run ai:insights
 npm run ai:insights:preview
+npm run ai:prod:install
+npm run ai:prod:check
+npm run ai:prod:start
+npm run ai:prod:tunnel
+npm run ai:prod:watch
 ```
 
 Google/Search Console workflows:
@@ -220,6 +227,9 @@ Operations:
 - `docs/production-ai-operations.md`
 - `scripts/start-production-ai.ps1`
 - `scripts/start-production-tunnel.ps1`
+- `scripts/watch-production-ai.ps1`
+- `scripts/install-production-ai-supervisor.ps1`
+- `scripts/check-production-ai.ps1`
 - `vercel.json`
 - `.env.example`
 - `.env.local` exists locally and must not be committed.
@@ -328,6 +338,15 @@ The git history shows these major phases:
    - 13 service/blog/holiday pages: light trims. Holiday drops `New Year` from the title (`Christmas & CNY`; the page still covers all three). `singapore-event-venue-finder/` reworded `Venue Service`→`Venue Finder` (matches URL slug/product name, same length). 4 pages whose old titles were already ≤60 were also trimmed per user's "change all optionals" decision (booth-design-build-singapore, booth-design-build-portfolio dropping `44 Visual Case Groups`, event-fabrication-singapore, singapore-event-venue-finder).
    - `&` written as `&amp;` in the files for HTML validity. `npm run build` passes (✓ 5.16s). One-off helper in gitignored `tmp/apply_titles.py`. Committed as `e425269` and pushed. Promoted to production the same day via `vercel deploy --prod --yes`: deployment id `dpl_EJkCvx18h6DC4RfbymJEf7eZNco2`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote `dpl_5FGqF9RHBU4eceSqEVRuPvUSgBKu` via Vercel dashboard/CLI. Verified live: Ritz-Carlton 62, PACMAN keeps `Event Fabrication`, Wings of Art keeps `Butterfly Sculpture`, holiday `Christmas & CNY`, venue-finder reworded to `Venue Finder`; `case-studies/` index unchanged (original, per user).
 
+15. Production AI watchdog and auto-recovery hardening on 2026-06-30.
+   - `scripts/start-production-ai.ps1` was changed from a blocking foreground script into an idempotent repair script. It now exits when healthy, cleans up duplicate `ollama.exe` service processes, preserves normal `llama-server.exe` model worker processes, verifies ACT models, starts Ollama with the site-specific environment, starts the local gateway detached, and waits for local health.
+   - `scripts/start-production-tunnel.ps1` now validates direct Tunnel health through `https://ai.actcreative.net/api/chat?health=1` with the local gateway secret, and restarts the matching `cloudflared` process when local gateway health is good but Tunnel health fails.
+   - Added `scripts/watch-production-ai.ps1`, a mutex-protected watchdog that checks the local AI stack and Tunnel every 60 seconds and warms the chat/embedding models every 12 hours via direct Ollama API calls, avoiding maintenance messages in conversation logs.
+   - Added `scripts/install-production-ai-supervisor.ps1`, which tries scheduled-task installation first and falls back to a current-user Startup shortcut plus hidden runner if Task Scheduler registration is denied.
+   - Added `scripts/check-production-ai.ps1` and `npm run ai:prod:*` commands for status, install, start, tunnel, and watch workflows.
+   - Current workstation state after installation: Windows denied ScheduledTasks and `schtasks.exe`, so the active autostart method is the Startup shortcut fallback at `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\ACTCreativeProductionAISupervisor.lnk`, backed by gitignored files in `tmp/`.
+   - Verification on 2026-06-30: one `ollama.exe`, one `cloudflared.exe`, local ports `11434` and `8787` listening, required ACT models visible, local gateway ready, direct Tunnel ready, production health ready, local POST returned `ACT AI online`, and production POST with `Origin: https://actcreative.net` returned `ACT AI online`.
+
 ## AI Assistant Operating Notes
 
 Health endpoints:
@@ -359,6 +378,12 @@ Successful verification on 2026-06-27 after repair:
 - Production POST to `https://actcreative.net/api/chat`: 200, returned `ACT AI online`.
 - Production health: `ready`, RAG ready.
 
+Successful verification on 2026-06-30 after watchdog installation:
+
+- `npm run ai:prod:check`: autostart `startupShortcut`, supervisor running, one `ollama.exe`, one `cloudflared.exe`, ports `11434` and `8787` listening, Ollama ACT models ready, local gateway ready, direct Tunnel ready, production ready.
+- Local gateway POST to `http://127.0.0.1:8787/api/chat`: returned `ACT AI online`.
+- Production POST to `https://actcreative.net/api/chat` with `Origin: https://actcreative.net`: returned `ACT AI online`.
+
 ## Privacy And Data Rules
 
 - Never commit `.env`, `.env.local`, service account files, OAuth tokens, Google refresh tokens, or Cloudflare credentials.
@@ -383,6 +408,7 @@ Successful verification on 2026-06-27 after repair:
 
 - Ollama desktop/Cloud Code/Claude tooling can start a competing Ollama process with a different `OLLAMA_MODELS` path. Use `scripts/start-production-ai.ps1` to restore the site-specific runtime.
 - The chat model is large and cold start is slow; production chat can time out during cold start even when health eventually becomes ready.
+- This workstation currently uses the Startup shortcut fallback, not a Windows scheduled task, because task registration returned `Access is denied`. The fallback starts after the Administrator user logs in; it is not a pre-login Windows service.
 - Static pages under `public/` are numerous; changes to global assistant injection require `npm run build` verification.
 - Venue data must remain public-safe and source-aware; do not ingest unreviewed sensitive notes into public JSON.
 - Generated files and ignored local data can make local/remote context diverge if this file is not updated in the same commit as changes.

@@ -55,6 +55,31 @@ function Set-SiteOllamaEnvironment {
   $env:OLLAMA_VULKAN = "false"
 }
 
+function Get-ListeningProcessIds {
+  param([Parameter(Mandatory = $true)][int]$Port)
+
+  return @(
+    Get-NetTCPConnection -LocalPort $Port -State Listen -ErrorAction SilentlyContinue |
+      Select-Object -ExpandProperty OwningProcess -Unique
+  )
+}
+
+function Get-OllamaServeProcessIds {
+  return @(
+    Get-CimInstance Win32_Process |
+      Where-Object { $_.Name -in @("ollama.exe", "ollama app.exe") } |
+      Select-Object -ExpandProperty ProcessId
+  )
+}
+
+function Get-OllamaRelatedProcessIds {
+  return @(
+    Get-CimInstance Win32_Process |
+      Where-Object { $_.Name -in @("ollama.exe", "ollama app.exe", "llama-server.exe") } |
+      Select-Object -ExpandProperty ProcessId
+  )
+}
+
 function Test-OllamaModelsAvailable {
   try {
     $payload = Invoke-RestMethod -Uri "http://127.0.0.1:11434/api/tags" -TimeoutSec 10
@@ -74,22 +99,51 @@ function Test-OllamaModelsAvailable {
   }
 }
 
-function Stop-OllamaForSiteRestart {
-  Get-CimInstance Win32_Process |
-    Where-Object {
-      $_.Name -in @("ollama.exe", "ollama app.exe", "llama-server.exe")
-    } |
-    ForEach-Object {
-      Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue
+function Test-LocalAiGatewayHealth {
+  try {
+    $secret = Get-LocalEnvValue "AI_GATEWAY_SECRET"
+    $headers = @{}
+    if ($secret) {
+      $headers.Authorization = "Bearer $secret"
     }
+
+    $payload = Invoke-RestMethod `
+      -Headers $headers `
+      -Uri "http://127.0.0.1:8787/api/chat?health=1" `
+      -TimeoutSec 10
+
+    if ($payload.ok -ne $true) {
+      return $false
+    }
+    if ($payload.status -eq "error") {
+      return $false
+    }
+    if ($payload.rag -and $payload.rag.embeddingStatus -eq "error") {
+      return $false
+    }
+
+    return $true
+  } catch {
+    return $false
+  }
+}
+
+function Stop-ProcessIds {
+  param([int[]]$ProcessIds)
+
+  foreach ($processId in @($ProcessIds | Select-Object -Unique)) {
+    if ($processId) {
+      Stop-Process -Id $processId -Force -ErrorAction SilentlyContinue
+    }
+  }
+}
+
+function Stop-OllamaForSiteRestart {
+  Stop-ProcessIds -ProcessIds (Get-OllamaRelatedProcessIds)
 }
 
 function Stop-LocalAiGateway {
-  Get-NetTCPConnection -LocalPort 8787 -State Listen -ErrorAction SilentlyContinue |
-    Select-Object -ExpandProperty OwningProcess -Unique |
-    ForEach-Object {
-      Stop-Process -Id $_ -Force -ErrorAction SilentlyContinue
-    }
+  Stop-ProcessIds -ProcessIds (Get-ListeningProcessIds -Port 8787)
 }
 
 function Wait-ForPortToClose {
@@ -108,33 +162,55 @@ function Wait-ForPortToClose {
   return $false
 }
 
+function Wait-ForOllamaModels {
+  param([int]$Attempts = 90)
+
+  for ($attempt = 0; $attempt -lt $Attempts; $attempt += 1) {
+    if (Test-OllamaModelsAvailable) {
+      return $true
+    }
+    Start-Sleep -Seconds 2
+  }
+
+  return $false
+}
+
+function Wait-ForLocalAiGatewayHealth {
+  param([int]$Attempts = 60)
+
+  for ($attempt = 0; $attempt -lt $Attempts; $attempt += 1) {
+    if (Test-LocalAiGatewayHealth) {
+      return $true
+    }
+    Start-Sleep -Seconds 2
+  }
+
+  return $false
+}
+
 New-Item -ItemType Directory -Path $runtimeDirectory -Force | Out-Null
 Set-Location $repoRoot
 Set-SiteOllamaEnvironment
 
-if (
-  (Get-NetTCPConnection -LocalPort 8787 -State Listen -ErrorAction SilentlyContinue) -and
-  (Test-OllamaModelsAvailable)
-) {
+$ollamaProcessIds = Get-OllamaServeProcessIds
+$ollamaModelsAvailable = Test-OllamaModelsAvailable
+$gatewayHealthy = Test-LocalAiGatewayHealth
+
+if ($gatewayHealthy -and $ollamaModelsAvailable -and $ollamaProcessIds.Count -le 1) {
   exit 0
 }
 
-if (-not (Test-Path -LiteralPath $nodeExecutable)) {
-  throw "Node.js was not found at $nodeExecutable"
-}
-
-if (
-  (Get-NetTCPConnection -LocalPort 11434 -State Listen -ErrorAction SilentlyContinue) -and
-  (-not (Test-OllamaModelsAvailable))
-) {
+if ($ollamaProcessIds.Count -gt 1 -or ((Get-ListeningProcessIds -Port 11434).Count -gt 0 -and -not $ollamaModelsAvailable)) {
   Stop-LocalAiGateway
   Stop-OllamaForSiteRestart
   if (-not (Wait-ForPortToClose -Port 11434)) {
     throw "Ollama did not release port 11434"
   }
+  $ollamaModelsAvailable = $false
+  $gatewayHealthy = $false
 }
 
-if (-not (Get-NetTCPConnection -LocalPort 11434 -State Listen -ErrorAction SilentlyContinue)) {
+if (-not (Get-ListeningProcessIds -Port 11434)) {
   if (-not (Test-Path -LiteralPath $ollamaExecutable)) {
     throw "Ollama was not found at $ollamaExecutable"
   }
@@ -144,34 +220,32 @@ if (-not (Get-NetTCPConnection -LocalPort 11434 -State Listen -ErrorAction Silen
     -ArgumentList "serve" `
     -WindowStyle Hidden `
     -RedirectStandardOutput $ollamaOutputLog `
-    -RedirectStandardError $ollamaErrorLog
-
-  $ollamaReady = $false
-  for ($attempt = 0; $attempt -lt 60; $attempt += 1) {
-    Start-Sleep -Seconds 2
-    if (Get-NetTCPConnection -LocalPort 11434 -State Listen -ErrorAction SilentlyContinue) {
-      $ollamaReady = $true
-      break
-    }
-  }
-
-  if (-not $ollamaReady) {
-    throw "Ollama did not start within 120 seconds"
-  }
+    -RedirectStandardError $ollamaErrorLog | Out-Null
 }
 
-if (-not (Test-OllamaModelsAvailable)) {
+if (-not (Wait-ForOllamaModels)) {
   throw "Ollama is running, but the ACT Creative AI models are not available. Check OLLAMA_MODELS."
 }
 
-$process = Start-Process `
-  -FilePath $nodeExecutable `
-  -ArgumentList "scripts/local-ai-server.mjs" `
-  -WorkingDirectory $repoRoot `
-  -WindowStyle Hidden `
-  -RedirectStandardOutput $gatewayOutputLog `
-  -RedirectStandardError $gatewayErrorLog `
-  -PassThru `
-  -Wait
+if (-not (Test-Path -LiteralPath $nodeExecutable)) {
+  throw "Node.js was not found at $nodeExecutable"
+}
 
-exit $process.ExitCode
+if (-not (Test-LocalAiGatewayHealth)) {
+  Stop-LocalAiGateway
+  Start-Sleep -Seconds 2
+
+  Start-Process `
+    -FilePath $nodeExecutable `
+    -ArgumentList "scripts/local-ai-server.mjs" `
+    -WorkingDirectory $repoRoot `
+    -WindowStyle Hidden `
+    -RedirectStandardOutput $gatewayOutputLog `
+    -RedirectStandardError $gatewayErrorLog | Out-Null
+}
+
+if (-not (Wait-ForLocalAiGatewayHealth)) {
+  throw "Local AI gateway did not become healthy on 127.0.0.1:8787"
+}
+
+exit 0
