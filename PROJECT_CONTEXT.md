@@ -341,6 +341,11 @@ The git history shows these major phases:
    - `npm run build` passes; Playwright desktop/mobile screenshots for the holiday page and homepage promo were saved under `output/playwright/`. Local Vite dev URL used for verification: `http://localhost:3000/`.
    - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_AMHrL9sndJ7sEYPnPXgkWvzUadz6`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_d6QCUdoPwZDbSW89N5QFueLinbck`.
 
+17. Holiday hero visual refinement on 2026-07-01 (Codex; branch `codex/venue-finder-finish`).
+   - Replaced the holiday page hero's three separate image cards with a single CSS-only carousel frame so the images are wider and captions sit in a dedicated copy band rather than covering the image subject.
+   - Added stronger holiday-themed red, gold and lime linear-gradient blending across the black page background and hero area.
+   - `npm run build` passes; Playwright verified the carousel frame, three slide states, desktop/mobile screenshots, and first-frame visibility at `http://localhost:3000/holiday-decorations-singapore/index.html`.
+
 ## AI Assistant Operating Notes
 
 Health endpoints:
