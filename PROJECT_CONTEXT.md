@@ -345,6 +345,7 @@ The git history shows these major phases:
    - Replaced the holiday page hero's three separate image cards with a single CSS-only carousel frame so the images are wider and captions sit in a dedicated copy band rather than covering the image subject.
    - Added stronger holiday-themed red, gold and lime linear-gradient blending across the black page background and hero area.
    - `npm run build` passes; Playwright verified the carousel frame, three slide states, desktop/mobile screenshots, and first-frame visibility at `http://localhost:3000/holiday-decorations-singapore/index.html`.
+   - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_8RxTgz38oyay4pjYjsBpef5mhEwu`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_AMHrL9sndJ7sEYPnPXgkWvzUadz6`.
 
 ## AI Assistant Operating Notes
 
