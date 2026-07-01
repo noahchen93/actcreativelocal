@@ -351,6 +351,7 @@ The git history shows these major phases:
    - Intensified the holiday page's black background with broader red, gold and lime color fields behind the hero and carousel instead of small decorative color blobs.
    - Strengthened the carousel frame border, shadow and caption band color treatment so the right-side visual area feels integrated with the new festive background.
    - `npm run build` passes; Playwright desktop/mobile screenshots saved as `output/playwright/holiday-bold-bg-desktop.png` and `output/playwright/holiday-bold-bg-mobile.png`. Static verification used `python -m http.server 5174 --directory public` and `http://localhost:5174/holiday-decorations-singapore/index.html`; Vite dev returns 404 for this public-directory HTML route.
+   - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_HccbkXgy9pyPWCLrL1exr6C9xine`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_8RxTgz38oyay4pjYjsBpef5mhEwu`.
 
 ## AI Assistant Operating Notes
 
