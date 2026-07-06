@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Festive Decorations Singapore | Christmas &amp; CNY | ACT Creative</title>
-    <meta name="description" content="Custom festive decorations in Singapore for malls, brands, offices, hotels and public spaces. Christmas, CNY and New Year concept, sourcing, fabrication, installation and dismantling." />
+    <title>Festive Decorations Singapore | Christmas Trees &amp; CNY Installations</title>
+    <meta name="description" content="Custom Christmas trees, CNY goat, ram and sheep sculptures, festive concepts, fabrication, installation and dismantling for malls, hotels and brands in Singapore." />
     <link rel="canonical" href="https://actcreative.net/holiday-decorations-singapore/" />
     <link rel="alternate" hreflang="en-sg" href="https://actcreative.net/holiday-decorations-singapore/" />
     <link rel="alternate" hreflang="x-default" href="https://actcreative.net/holiday-decorations-singapore/" />
-    <meta property="og:title" content="Festive Decorations Singapore | ACT Creative" />
+    <meta property="og:title" content="Festive Decorations Singapore | Christmas Trees &amp; CNY Installations" />
     <meta
       property="og:description"
-      content="Custom Christmas, Lunar New Year and New Year decoration planning, sourcing, fabrication, installation and dismantling for commercial spaces in Singapore."
+      content="Custom Christmas trees, CNY goat, ram and sheep sculptures, festive concept development, fabrication, installation and dismantling for commercial spaces in Singapore."
     />
     <meta property="og:url" content="https://actcreative.net/holiday-decorations-singapore/" />
     <meta property="og:type" content="article" />
@@ -20,8 +20,8 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Festive Decorations Singapore - Christmas, New Year and CNY decor by ACT Creative" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Festive Decorations Singapore | ACT Creative" />
-    <meta name="twitter:description" content="Custom Christmas, Lunar New Year and New Year decoration planning, sourcing, fabrication, installation and dismantling for commercial spaces in Singapore." />
+    <meta name="twitter:title" content="Festive Decorations Singapore | Christmas Trees &amp; CNY Installations" />
+    <meta name="twitter:description" content="Custom Christmas trees, CNY goat, ram and sheep sculptures, festive concept development, fabrication, installation and dismantling for commercial spaces in Singapore." />
     <meta name="twitter:image" content="https://actcreative.net/og/holiday-decorations-singapore.png" />
     <meta name="theme-color" content="#000000" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -396,7 +396,8 @@
 
       @media (prefers-reduced-motion: reduce) {
         .carousel-slide,
-        .carousel-dots span {
+        .carousel-dots span,
+        .concept-track {
           animation: none;
         }
 
@@ -507,6 +508,307 @@
       .card .button {
         width: 100%;
         margin-top: 1rem;
+      }
+
+      .concept-accordion {
+        border: 1px solid var(--line-strong);
+        border-radius: var(--radius);
+        background:
+          linear-gradient(118deg, rgba(204, 255, 0, 0.09), transparent 28%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.042), rgba(255, 255, 255, 0.014));
+      }
+
+      .concept-accordion + .concept-accordion {
+        margin-top: 1rem;
+      }
+
+      .concept-summary {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(12rem, 0.34fr) auto;
+        gap: clamp(0.85rem, 2vw, 1.25rem);
+        align-items: center;
+        padding: clamp(0.95rem, 2.4vw, 1.35rem);
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .concept-summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .concept-summary-main {
+        min-width: 0;
+      }
+
+      .concept-summary h2 {
+        max-width: 820px;
+        margin: 0.35rem 0 0;
+        font-size: clamp(1.45rem, 2.7vw, 2.75rem);
+        line-height: 1.04;
+        font-weight: 900;
+        letter-spacing: 0;
+        text-wrap: balance;
+      }
+
+      .concept-summary p {
+        max-width: 780px;
+        margin: 0.75rem 0 0;
+        color: var(--muted);
+        font-size: 0.88rem;
+        line-height: 1.62;
+      }
+
+      .concept-summary-preview {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.35rem;
+        align-self: stretch;
+        min-height: 5.7rem;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 260ms ease, transform 260ms ease;
+      }
+
+      .concept-summary-preview img {
+        width: 100%;
+        height: 100%;
+        min-height: 5.7rem;
+        object-fit: cover;
+        border: 1px solid rgba(241, 208, 120, 0.22);
+        border-radius: 6px;
+        background: #0b0b0b;
+      }
+
+      .concept-accordion[open] .concept-summary-preview {
+        opacity: 0.38;
+        transform: translateY(0.25rem);
+      }
+
+      .concept-summary-side {
+        display: grid;
+        gap: 0.55rem;
+        justify-items: end;
+        min-width: 9rem;
+      }
+
+      .concept-summary-meta {
+        color: var(--gold);
+        font-size: 0.74rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        line-height: 1.25;
+        text-align: right;
+        text-transform: uppercase;
+      }
+
+      .summary-action {
+        display: inline-flex;
+        min-height: 2.2rem;
+        align-items: center;
+        border: 1px solid rgba(204, 255, 0, 0.45);
+        border-radius: 999px;
+        padding: 0.42rem 0.72rem;
+        background: rgba(204, 255, 0, 0.08);
+        color: var(--lime);
+        font-size: 0;
+        font-weight: 900;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .summary-action::after {
+        content: "Open gallery";
+        font-size: 0.72rem;
+      }
+
+      .concept-accordion[open] .summary-action::after {
+        content: "Close gallery";
+      }
+
+      .concept-panel {
+        padding: 0 clamp(1.1rem, 3vw, 1.65rem) clamp(1.1rem, 3vw, 1.65rem);
+        overflow: hidden;
+        transform-origin: top;
+      }
+
+      .concept-note {
+        display: grid;
+        grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+        gap: 1rem;
+        align-items: start;
+        margin-bottom: 1rem;
+        padding: clamp(1rem, 2vw, 1.35rem);
+        border: 1px solid var(--line-strong);
+        border-radius: var(--radius);
+        background:
+          linear-gradient(118deg, rgba(204, 255, 0, 0.12), transparent 34%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.018));
+      }
+
+      .concept-note strong {
+        color: var(--lime);
+        font-size: 0.86rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        line-height: 1.25;
+        text-transform: uppercase;
+      }
+
+      .concept-note span {
+        color: rgba(255, 255, 255, 0.74);
+        font-size: 0.95rem;
+        line-height: 1.65;
+      }
+
+      .concept-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .concept-card {
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.062), rgba(255, 255, 255, 0.018)),
+          var(--panel);
+      }
+
+      .concept-media {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 4 / 5;
+        border-bottom: 1px solid rgba(204, 255, 0, 0.13);
+        background:
+          radial-gradient(circle at 50% 18%, rgba(241, 208, 120, 0.1), transparent 35%),
+          #080808;
+      }
+
+      .concept-track {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+
+      .concept-card:hover .concept-track {
+        animation-play-state: paused;
+      }
+
+      .concept-slide {
+        display: grid;
+        flex: 0 0 100%;
+        height: 100%;
+        place-items: center;
+      }
+
+      .concept-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .slides-2 .concept-track {
+        width: 200%;
+        animation: concept-slide-2 10s infinite;
+      }
+
+      .slides-2 .concept-slide {
+        flex-basis: 50%;
+      }
+
+      .slides-3 .concept-track {
+        width: 300%;
+        animation: concept-slide-3 14s infinite;
+      }
+
+      .slides-3 .concept-slide {
+        flex-basis: 33.3333%;
+      }
+
+      .slides-4 .concept-track {
+        width: 400%;
+        animation: concept-slide-4 18s infinite;
+      }
+
+      .slides-4 .concept-slide {
+        flex-basis: 25%;
+      }
+
+      .slides-5 .concept-track {
+        width: 500%;
+        animation: concept-slide-5 22s infinite;
+      }
+
+      .slides-5 .concept-slide {
+        flex-basis: 20%;
+      }
+
+      .concept-count {
+        position: absolute;
+        right: 0.65rem;
+        bottom: 0.65rem;
+        z-index: 2;
+        padding: 0.25rem 0.45rem;
+        border: 1px solid rgba(241, 208, 120, 0.34);
+        border-radius: 999px;
+        background: rgba(5, 5, 5, 0.76);
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      @keyframes concept-slide-2 {
+        0%, 42% { transform: translateX(0); }
+        50%, 92% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+      }
+
+      @keyframes concept-slide-3 {
+        0%, 28% { transform: translateX(0); }
+        33%, 61% { transform: translateX(-33.3333%); }
+        66%, 94% { transform: translateX(-66.6666%); }
+        100% { transform: translateX(0); }
+      }
+
+      @keyframes concept-slide-4 {
+        0%, 20% { transform: translateX(0); }
+        25%, 45% { transform: translateX(-25%); }
+        50%, 70% { transform: translateX(-50%); }
+        75%, 95% { transform: translateX(-75%); }
+        100% { transform: translateX(0); }
+      }
+
+      @keyframes concept-slide-5 {
+        0%, 16% { transform: translateX(0); }
+        20%, 36% { transform: translateX(-20%); }
+        40%, 56% { transform: translateX(-40%); }
+        60%, 76% { transform: translateX(-60%); }
+        80%, 96% { transform: translateX(-80%); }
+        100% { transform: translateX(0); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .slides-2 .concept-track,
+        .slides-3 .concept-track,
+        .slides-4 .concept-track,
+        .slides-5 .concept-track {
+          animation: none;
+          transform: none;
+        }
+      }
+
+      .concept-card .eyebrow {
+        margin-bottom: 0.55rem;
+        color: rgba(241, 208, 120, 0.84);
+        font-size: 0.68rem;
+      }
+
+      .concept-card h3 {
+        font-size: 1rem;
+      }
+
+      .concept-card p {
+        font-size: 0.84rem;
       }
 
       .services-grid {
@@ -687,6 +989,7 @@
         .flow,
         .consult-grid,
         .season-grid,
+        .concept-grid,
         .audience-grid,
         .why-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -742,13 +1045,37 @@
         .flow,
         .consult-grid,
         .season-grid,
+        .concept-grid,
         .audience-grid,
         .why-grid {
           grid-template-columns: 1fr;
         }
 
+        .concept-summary {
+          grid-template-columns: 1fr;
+        }
+
+        .concept-summary-preview {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          min-height: 4.8rem;
+        }
+
+        .concept-summary-preview img {
+          min-height: 4.8rem;
+        }
+
+        .concept-summary-side {
+          justify-items: start;
+          min-width: 0;
+        }
+
+        .concept-summary-meta {
+          text-align: left;
+        }
+
         .service-card,
-        .brief-panel {
+        .brief-panel,
+        .concept-note {
           grid-template-columns: 1fr;
         }
 
@@ -783,7 +1110,12 @@
             "@type": "Service",
             "@id": "https://actcreative.net/holiday-decorations-singapore/#service",
             "name": "Holiday Decorations Singapore",
-            "serviceType": "Christmas, Lunar New Year and New Year festive decoration consulting, sourcing, fabrication and installation",
+            "serviceType": "Christmas tree, Lunar New Year goat, ram and sheep sculpture, New Year festive decoration consulting, sourcing, fabrication and installation",
+            "image": [
+              "https://actcreative.net/holiday-decorations-singapore/assets/holiday-hero.webp",
+              "https://actcreative.net/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-12-translucent-candy-paper-tree-a.webp",
+              "https://actcreative.net/holiday-decorations-singapore/assets/cny-ram-concepts/ram-09-mirror-steel-ram-a.webp"
+            ],
             "provider": {
               "@type": "Organization",
               "name": "ACT Creative Pte. Ltd.",
@@ -793,7 +1125,7 @@
             },
             "areaServed": ["Singapore", "Southeast Asia", "China"],
             "url": "https://actcreative.net/holiday-decorations-singapore/",
-            "description": "Custom festive decoration planning, sourcing, fabrication, installation, maintenance and dismantling for Singapore malls, brands, offices, hotels and public spaces."
+            "description": "Custom Christmas trees, Lunar New Year goat, ram and sheep sculptures, New Year decoration planning, sourcing, fabrication, installation, maintenance and dismantling for Singapore malls, brands, offices, hotels and public spaces."
           },
           {
             "@type": "BreadcrumbList",
@@ -813,6 +1145,8 @@
         <nav aria-label="Holiday decorations navigation">
           <a href="#consultation">Consultation</a>
           <a href="#capabilities">Capabilities</a>
+          <a href="#christmas-tree-concepts">Christmas Concepts</a>
+          <a href="#cny-ram-concepts">CNY Concepts</a>
           <a href="#clients">Clients</a>
           <a href="#process">Process</a>
           <a href="#brief">Get a quote</a>
@@ -949,6 +1283,315 @@
               </div>
             </article>
           </div>
+        </section>
+
+        <section>
+          <details id="christmas-tree-concepts" class="concept-accordion">
+            <summary class="concept-summary">
+              <div class="concept-summary-main">
+                <span class="eyebrow">AI Concept References</span>
+                <h2>Christmas tree concept gallery</h2>
+                <p>
+                  AI-generated Christmas tree directions grouped by concept. Expand to review buildable starting points for seasonal briefs.
+                </p>
+              </div>
+              <div class="concept-summary-preview" aria-hidden="true">
+                <img src="/holiday-decorations-singapore/assets/concept-summary-thumbs/christmas-pop-up-book.webp" alt="" loading="lazy" width="320" height="399" />
+                <img src="/holiday-decorations-singapore/assets/concept-summary-thumbs/christmas-tropical-reflective.webp" alt="" loading="lazy" width="320" height="400" />
+                <img src="/holiday-decorations-singapore/assets/concept-summary-thumbs/christmas-translucent-candy.webp" alt="" loading="lazy" width="320" height="400" />
+                <img src="/holiday-decorations-singapore/assets/concept-summary-thumbs/christmas-fishing-net.webp" alt="" loading="lazy" width="320" height="400" />
+              </div>
+              <div class="concept-summary-side">
+                <span class="concept-summary-meta">11 frames / 26 visuals</span>
+                <span class="summary-action" aria-hidden="true"></span>
+              </div>
+            </summary>
+            <div class="concept-panel">
+              <div class="concept-note">
+                <strong>AI-generated concept visuals</strong>
+                <span>These concepts show possible moods, materials and spatial effects. For real projects, we translate the chosen direction into scale drawings, budget routes, sourcing, engineering coordination, production, site installation and dismantling support.</span>
+              </div>
+              <div class="concept-grid" aria-label="AI Christmas tree concept gallery">
+            <article class="card concept-card slides-2">
+              <div class="concept-media">
+                <div class="concept-track">
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-01-pop-up-book-tree-a.webp" alt="AI concept reference for a pop-up book Christmas tree with paper sculpture layers" loading="lazy" width="900" height="1123" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-02-pop-up-book-tree-b.webp" alt="AI concept reference for a dimensional pop-up book Christmas tree" loading="lazy" width="900" height="1125" /></div>
+                </div>
+                <span class="concept-count">2 variants</span>
+              </div>
+              <div class="card-body">
+                <span class="eyebrow">AI Concept 01</span>
+                <h3>Pop-up book Christmas tree</h3>
+                <p>Oversized paper-sculpture language for a mall atrium, library, bookstore or storytelling-led festive scene.</p>
+              </div>
+            </article>
+            <article class="card concept-card slides-3">
+              <div class="concept-media">
+                <div class="concept-track">
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-03-global-travel-tree-a.webp" alt="AI concept reference for a global travel themed Christmas tree" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-04-global-travel-tree-b.webp" alt="AI concept reference for a Singapore global travel Christmas tree" loading="lazy" width="900" height="1200" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-05-global-travel-tree-c.webp" alt="AI concept reference for an international travel themed festive tree" loading="lazy" width="900" height="1125" /></div>
+                </div>
+                <span class="concept-count">3 variants</span>
+              </div>
+              <div class="card-body">
+                <span class="eyebrow">AI Concept 02</span>
+                <h3>Global travel tree</h3>
+                <p>A world-citizen festive marker for travel retail, airport-adjacent venues or international community campaigns.</p>
+              </div>
+            </article>
+            <article class="card concept-card slides-2">
+              <div class="concept-media">
+                <div class="concept-track">
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-06-tropical-reflective-tree-a.webp" alt="AI concept reference for a tropical reflective Christmas tree using palm leaf forms" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-07-tropical-reflective-tree-b.webp" alt="AI concept reference for a colorful tropical Christmas tree with reflective film" loading="lazy" width="900" height="1125" /></div>
+                </div>
+                <span class="concept-count">2 variants</span>
+              </div>
+              <div class="card-body">
+                <span class="eyebrow">AI Concept 03</span>
+                <h3>Tropical reflective tree</h3>
+                <p>Palm-leaf geometry and reflective film create a Singapore-appropriate festive tree with saturated color shifts.</p>
+              </div>
+            </article>
+            <article class="card concept-card">
+              <div class="concept-media">
+                <div class="concept-track">
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-08-abstract-mountain-tree.webp" alt="AI concept reference for an abstract mountain shaped Christmas tree" loading="lazy" width="900" height="1125" /></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="eyebrow">AI Concept 04</span>
+                <h3>Abstract mountain tree</h3>
+                <p>The tree silhouette becomes a sculptural landscape, giving the festive centrepiece a cleaner gallery-like tone.</p>
+              </div>
+            </article>
+            <article class="card concept-card">
+              <div class="concept-media">
+                <div class="concept-track">
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-09-dream-box-tree.webp" alt="AI concept reference for a transparent dream box Christmas tree" loading="lazy" width="900" height="1125" /></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="eyebrow">AI Concept 05</span>
+                <h3>Dream box tree</h3>
+                <p>Transparent boxes can hold wishes, community notes, product stories or campaign messages inside the tree.</p>
+              </div>
+            </article>
+            <article class="card concept-card">
+              <div class="concept-media">
+                <div class="concept-track">
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-10-glass-candy-tree.webp" alt="AI concept reference for a glass and candy inspired Christmas tree" loading="lazy" width="900" height="1125" /></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="eyebrow">AI Concept 06</span>
+                <h3>Glass candy tree</h3>
+                <p>Traditional Christmas color moves into translucent candy-like surfaces for a playful but polished lobby moment.</p>
+              </div>
+            </article>
+            <article class="card concept-card">
+              <div class="concept-media">
+                <div class="concept-track">
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-11-future-space-tree.webp" alt="AI concept reference for a futuristic space themed Christmas tree" loading="lazy" width="900" height="1125" /></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="eyebrow">AI Concept 07</span>
+                <h3>Future space tree</h3>
+                <p>A cosmic material direction for science, technology, gaming or future-facing brand activations.</p>
+              </div>
+            </article>
+            <article class="card concept-card slides-4">
+              <div class="concept-media">
+                <div class="concept-track">
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-12-translucent-candy-paper-tree-a.webp" alt="AI concept reference for a translucent candy paper Christmas tree" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-13-translucent-candy-paper-tree-b.webp" alt="AI concept reference for translucent film Christmas tree color refraction" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-15-translucent-candy-paper-tree-d.webp" alt="AI concept reference for a festive tree made with translucent candy paper effects" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-16-translucent-candy-paper-tree-e.webp" alt="AI concept reference for a tall translucent festive tree installation" loading="lazy" width="900" height="1352" /></div>
+                </div>
+                <span class="concept-count">4 variants</span>
+              </div>
+              <div class="card-body">
+                <span class="eyebrow">AI Concept 08</span>
+                <h3>Translucent candy paper tree</h3>
+                <p>Layered translucent film, acrylic and LED routes can create color mixing and reflection for refined mall atriums, hotel lobbies and retail activations.</p>
+              </div>
+            </article>
+            <article class="card concept-card slides-5">
+              <div class="concept-media">
+                <div class="concept-track">
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-17-lightweight-flow-tree-a.webp" alt="AI concept reference for a lightweight flowing Christmas tree with thin illuminated structure" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-18-lightweight-flow-tree-b.webp" alt="AI concept reference for a slender flowing Christmas tree structure" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-19-lightweight-flow-tree-c.webp" alt="AI concept reference for a flowing illuminated Christmas tree concept" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-20-lightweight-flow-tree-d.webp" alt="AI concept reference for a flowing commercial Christmas tree installation" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-21-lightweight-flow-tree-e.webp" alt="AI concept reference for a thin material flowing Christmas tree" loading="lazy" width="900" height="1125" /></div>
+                </div>
+                <span class="concept-count">5 variants</span>
+              </div>
+              <div class="card-body">
+                <span class="eyebrow">AI Concept 09</span>
+                <h3>Lightweight flow tree</h3>
+                <p>Fine structure replaces visual heaviness, giving the tree an upward movement and night-light identity.</p>
+              </div>
+            </article>
+            <article class="card concept-card slides-5">
+              <div class="concept-media">
+                <div class="concept-track">
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-22-fishing-net-heritage-tree-a.webp" alt="AI concept reference for a fishing net heritage Christmas tree inspired by Singapore island culture" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-23-fishing-net-heritage-tree-b.webp" alt="AI concept reference for a maritime net Christmas tree installation" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-24-fishing-net-heritage-tree-c.webp" alt="AI concept reference for a netted festive tree with Singapore maritime inspiration" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-25-fishing-net-heritage-tree-d.webp" alt="AI concept reference for a fishing net Christmas tree with cultural storytelling" loading="lazy" width="900" height="1125" /></div>
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-26-fishing-net-heritage-tree-e.webp" alt="AI concept reference for a heritage fishing net festive tree" loading="lazy" width="900" height="1125" /></div>
+                </div>
+                <span class="concept-count">5 variants</span>
+              </div>
+              <div class="card-body">
+                <span class="eyebrow">AI Concept 10</span>
+                <h3>Fishing net heritage tree</h3>
+                <p>Net language references Singapore's island history and can be combined with light, rope, shells or maritime details.</p>
+              </div>
+            </article>
+            <article class="card concept-card">
+              <div class="concept-media">
+                <div class="concept-track">
+                  <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-27-cosmic-star-tree.webp" alt="AI concept reference for a cosmic star themed Christmas tree" loading="lazy" width="900" height="1125" /></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <span class="eyebrow">AI Concept 11</span>
+                <h3>Cosmic star tree</h3>
+                <p>A dreamy night-sky direction for premium retail, hotel lobby or countdown-adjacent festive staging.</p>
+              </div>
+            </article>
+              </div>
+            </div>
+          </details>
+        </section>
+
+        <section>
+          <details id="cny-ram-concepts" class="concept-accordion">
+            <summary class="concept-summary">
+              <div class="concept-summary-main">
+                <span class="eyebrow">AI Concept References</span>
+                <h2>Year of the Goat / Ram CNY concept gallery</h2>
+                <p>
+                  AI-generated goat, sheep and ram sculpture directions for Lunar New Year campaigns. Expand to review material, lighting and character routes that can be developed into buildable CNY installations.
+                </p>
+              </div>
+              <div class="concept-summary-preview" aria-hidden="true">
+                <img src="/holiday-decorations-singapore/assets/concept-summary-thumbs/cny-mixed-material-sheep.webp" alt="" loading="lazy" width="320" height="350" />
+                <img src="/holiday-decorations-singapore/assets/concept-summary-thumbs/cny-jade-resin-sheep.webp" alt="" loading="lazy" width="213" height="320" />
+                <img src="/holiday-decorations-singapore/assets/concept-summary-thumbs/cny-mirror-steel-ram.webp" alt="" loading="lazy" width="320" height="400" />
+                <img src="/holiday-decorations-singapore/assets/concept-summary-thumbs/cny-moon-landing-sheep.webp" alt="" loading="lazy" width="320" height="362" />
+              </div>
+              <div class="concept-summary-side">
+                <span class="concept-summary-meta">6 frames / 21 visuals</span>
+                <span class="summary-action" aria-hidden="true"></span>
+              </div>
+            </summary>
+            <div class="concept-panel">
+              <div class="concept-note">
+                <strong>AI-generated concept visuals</strong>
+                <span>These Year of the Ram references are concept visuals, not completed project photography. ACT Creative can help turn a selected direction into scale, surface finish, lighting, fabrication method, site installation and maintenance planning.</span>
+              </div>
+              <div class="concept-grid" aria-label="AI Year of the Ram Chinese New Year concept gallery">
+                <article class="card concept-card slides-4">
+                  <div class="concept-media">
+                    <div class="concept-track">
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-01-mixed-material-sheep-a.webp" alt="AI concept reference for a soft mixed-material sheep sculpture for Lunar New Year" loading="lazy" width="900" height="985" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-02-mixed-material-sheep-b.webp" alt="AI concept reference for a premium mixed-material sheep form" loading="lazy" width="900" height="1125" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-03-mixed-material-sheep-c.webp" alt="AI concept reference for a tactile sheep sculpture concept" loading="lazy" width="900" height="1020" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-04-mixed-material-sheep-d.webp" alt="AI concept reference for a layered soft-material sheep sculpture" loading="lazy" width="900" height="980" /></div>
+                    </div>
+                    <span class="concept-count">4 variants</span>
+                  </div>
+                  <div class="card-body">
+                    <span class="eyebrow">AI Concept 12</span>
+                    <h3>Soft mixed-material sheep</h3>
+                    <p>A premium tactile route using soft material cues, layered finishes and gentle character design for family-friendly CNY scenes.</p>
+                  </div>
+                </article>
+                <article class="card concept-card slides-4">
+                  <div class="concept-media">
+                    <div class="concept-track">
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-05-jade-resin-sheep-a.webp" alt="AI concept reference for a jade-like transparent resin sheep sculpture" loading="lazy" width="600" height="900" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-06-jade-resin-sheep-b.webp" alt="AI concept reference for a classical jade resin sheep installation" loading="lazy" width="900" height="1125" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-07-jade-resin-sheep-c.webp" alt="AI concept reference for a transparent resin ram with Chinese painting colors" loading="lazy" width="900" height="1125" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-08-jade-resin-sheep-d.webp" alt="AI concept reference for a warm jade-texture sheep sculpture" loading="lazy" width="900" height="1125" /></div>
+                    </div>
+                    <span class="concept-count">4 variants</span>
+                  </div>
+                  <div class="card-body">
+                    <span class="eyebrow">AI Concept 13</span>
+                    <h3>Jade resin sheep</h3>
+                    <p>A classical CNY goat, ram or sheep sculpture route with jade-like resin, soft internal glow and Chinese painting-inspired surface color.</p>
+                  </div>
+                </article>
+                <article class="card concept-card slides-3">
+                  <div class="concept-media">
+                    <div class="concept-track">
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-09-mirror-steel-ram-a.webp" alt="AI concept reference for a mirror stainless steel ram sculpture with base lighting" loading="lazy" width="900" height="1125" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-10-mirror-steel-ram-b.webp" alt="AI concept reference for a strong mirror-finish ram sculpture" loading="lazy" width="900" height="1125" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-11-mirror-steel-ram-c.webp" alt="AI concept reference for a proud mirror stainless steel ram form" loading="lazy" width="900" height="1125" /></div>
+                    </div>
+                    <span class="concept-count">3 variants</span>
+                  </div>
+                  <div class="card-body">
+                    <span class="eyebrow">AI Concept 14</span>
+                    <h3>Mirror stainless steel ram</h3>
+                    <p>A confident upward-facing ram sculpture direction using mirror stainless steel cues, base lighting and strong plaza or premium mall entrance impact.</p>
+                  </div>
+                </article>
+                <article class="card concept-card slides-4">
+                  <div class="concept-media">
+                    <div class="concept-track">
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-12-iridescent-crystal-ram-a.webp" alt="AI concept reference for an iridescent crystal ram sculpture" loading="lazy" width="900" height="1125" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-13-iridescent-crystal-ram-b.webp" alt="AI concept reference for a transparent rainbow ram concept" loading="lazy" width="900" height="1125" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-14-iridescent-crystal-ram-c.webp" alt="AI concept reference for a modern iridescent ram form" loading="lazy" width="900" height="1125" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-15-iridescent-crystal-ram-d.webp" alt="AI concept reference for a fashion-forward crystal ram installation" loading="lazy" width="900" height="1125" /></div>
+                    </div>
+                    <span class="concept-count">4 variants</span>
+                  </div>
+                  <div class="card-body">
+                    <span class="eyebrow">AI Concept 15</span>
+                    <h3>Iridescent crystal ram</h3>
+                    <p>A non-traditional fashion-forward CNY route using transparent material cues, rainbow reflection and stronger ram posture.</p>
+                  </div>
+                </article>
+                <article class="card concept-card">
+                  <div class="concept-media">
+                    <div class="concept-track">
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-16-porcelain-sheep.webp" alt="AI concept reference for a porcelain-texture sheep sculpture for Chinese New Year" loading="lazy" width="900" height="1125" /></div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <span class="eyebrow">AI Concept 16</span>
+                    <h3>Porcelain sheep</h3>
+                    <p>A cute Year of the Goat / Sheep form treated with porcelain texture, balancing traditional Chinese craft cues with softer family-friendly CNY character design.</p>
+                  </div>
+                </article>
+                <article class="card concept-card slides-5">
+                  <div class="concept-media">
+                    <div class="concept-track">
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-17-moon-landing-sheep-a.webp" alt="AI concept reference for a moon landing sheep sculpture for Lunar New Year" loading="lazy" width="900" height="1018" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-18-moon-landing-sheep-b.webp" alt="AI concept reference for a warm sci-fi sheep CNY scene" loading="lazy" width="900" height="1014" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-19-moon-landing-sheep-c.webp" alt="AI concept reference for a personified sheep moon landing concept" loading="lazy" width="900" height="1048" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-20-moon-landing-sheep-d.webp" alt="AI concept reference for a futuristic sheep installation with moon theme" loading="lazy" width="900" height="1029" /></div>
+                      <div class="concept-slide"><img src="/holiday-decorations-singapore/assets/cny-ram-concepts/ram-21-moon-landing-sheep-e.webp" alt="AI concept reference for a cozy space-themed sheep sculpture" loading="lazy" width="900" height="1005" /></div>
+                    </div>
+                    <span class="concept-count">5 variants</span>
+                  </div>
+                  <div class="card-body">
+                    <span class="eyebrow">AI Concept 17</span>
+                    <h3>Moon landing sheep</h3>
+                    <p>A warm sci-fi CNY concept that personifies the sheep character for family traffic, technology themes or future-facing festive storytelling.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </details>
         </section>
 
         <section id="clients">
@@ -1144,6 +1787,98 @@
         <span><a href="/">Back to home</a> · <a href="mailto:contact@actcreative.net">contact@actcreative.net</a> · <a href="https://wa.me/6584515268" target="_blank" rel="noopener noreferrer">WhatsApp</a></span>
       </footer>
     </div>
+    <script>
+      (() => {
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        const animationOptions = {
+          duration: 320,
+          easing: "cubic-bezier(0.22, 1, 0.36, 1)"
+        };
+
+        document.querySelectorAll(".concept-accordion").forEach((details) => {
+          const summary = details.querySelector(".concept-summary");
+          const panel = details.querySelector(".concept-panel");
+          let animation = null;
+          let cleanupTimer = null;
+
+          if (!summary || !panel || !panel.animate) {
+            return;
+          }
+
+          summary.addEventListener("click", (event) => {
+            if (reduceMotion.matches) {
+              return;
+            }
+
+            event.preventDefault();
+            details.style.overflow = "hidden";
+
+            if (animation) {
+              animation.cancel();
+            }
+
+            if (cleanupTimer) {
+              window.clearTimeout(cleanupTimer);
+            }
+
+            if (details.open) {
+              const startHeight = `${panel.scrollHeight}px`;
+              animation = panel.animate(
+                [
+                  { height: startHeight, opacity: 1 },
+                  { height: "0px", opacity: 0 }
+                ],
+                animationOptions
+              );
+
+              const finishClose = () => {
+                if (cleanupTimer) {
+                  window.clearTimeout(cleanupTimer);
+                }
+                details.open = false;
+                panel.style.height = "";
+                panel.style.opacity = "";
+                details.style.overflow = "";
+                animation = null;
+                cleanupTimer = null;
+              };
+              animation.onfinish = finishClose;
+              cleanupTimer = window.setTimeout(finishClose, animationOptions.duration + 120);
+              return;
+            }
+
+            details.open = true;
+            panel.style.height = "auto";
+            panel.style.opacity = "1";
+            const endHeight = `${panel.scrollHeight}px`;
+            panel.style.height = "0px";
+            panel.style.opacity = "0";
+            panel.offsetHeight;
+
+            animation = panel.animate(
+              [
+                { height: "0px", opacity: 0 },
+                { height: endHeight, opacity: 1 }
+              ],
+              animationOptions
+            );
+
+            const finishOpen = () => {
+              if (cleanupTimer) {
+                window.clearTimeout(cleanupTimer);
+              }
+              panel.style.height = "";
+              panel.style.opacity = "";
+              details.style.overflow = "";
+              animation = null;
+              cleanupTimer = null;
+            };
+            animation.onfinish = finishOpen;
+            cleanupTimer = window.setTimeout(finishOpen, animationOptions.duration + 120);
+          });
+        });
+      })();
+    </script>
     <script src="/inquiry-attribution.js" defer></script>
   </body>
 </html>

@@ -165,19 +165,19 @@ export function HolidayPromo() {
           <h2 className="holiday-promo-title">
             {t(
               "商场、品牌、办公楼与公共空间节庆装饰",
-              "Festive decorations for malls, brands, offices and public spaces",
+              "Christmas trees and CNY sculpture decor for commercial spaces",
             )}
           </h2>
           <p className="holiday-promo-body">
             {t(
               "从圣诞树、春节雕塑、灯笼与灯光装置，到采购、定制制作、安装、维护和拆除，我们把节庆装饰作为一个可落地的商业空间项目来统筹。",
-              "From Christmas trees, CNY sculptures, lanterns and lighting to sourcing, custom fabrication, installation, maintenance and dismantling, we coordinate festive decor as a buildable commercial-space project.",
+              "From custom Christmas trees and Year of the Goat / Ram CNY sculptures to lanterns, lighting, sourcing, fabrication, installation, maintenance and dismantling, we coordinate festive decor as a buildable commercial-space project.",
             )}
           </p>
           <div className="holiday-promo-actions">
             <a className="holiday-promo-button holiday-promo-button-primary" href="/holiday-decorations-singapore/">
               <Gift className="h-4 w-4" />
-              <span>{t("查看节庆装饰服务", "View festive services")}</span>
+              <span>{t("查看节庆装饰服务", "View Christmas & CNY decor")}</span>
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
