@@ -62,6 +62,9 @@ const MAX_BODY_BYTES = 64 * 1024;
 const MAX_MESSAGES = 12;
 const MAX_MESSAGE_CHARS = 4_000;
 const MAX_PAGE_URL_CHARS = 600;
+const CHAT_REQUEST_TIMEOUT_MS = 120_000;
+const CHAT_STREAM_IDLE_TIMEOUT_MS = 40_000;
+const CHAT_NUM_PREDICT = 320;
 const GATEWAY_SECRET = process.env.AI_GATEWAY_SECRET?.trim() || "";
 const DEFAULT_SYSTEM_PROMPT =
   "You are the ACT Creative Event Assistant. Reply in the user's language and do not invent company facts.";
@@ -102,6 +105,28 @@ function sendJson(response, status, payload, headers = {}) {
     ...headers,
   });
   response.end(JSON.stringify(payload));
+}
+
+function sendChatStreamHeaders(response, metadata, sources) {
+  response.writeHead(200, {
+    "Content-Type": "text/plain; charset=utf-8",
+    "Cache-Control": "no-store",
+    "X-Content-Type-Options": "nosniff",
+    "X-Act-Session-Id": metadata.sessionId,
+    "X-Act-Rag-Used": sources.length ? "true" : "false",
+    "X-Act-Rag-Sources": encodeURIComponent(JSON.stringify(sources)),
+    "Access-Control-Expose-Headers":
+      "X-Act-Session-Id, X-Act-Rag-Used, X-Act-Rag-Sources",
+  });
+  response.flushHeaders();
+}
+
+function timeoutFallback(language) {
+  if (language === "zh") {
+    return "\u62b1\u6b49\uff0c\u8fd9\u6b21\u54cd\u5e94\u592a\u6162\uff0c\u6211\u5148\u505c\u6b62\u4e86\u3002\u8bf7\u518d\u53d1\u9001\u4e00\u6b21\u5173\u952e\u95ee\u9898\uff0c\u6211\u4f1a\u7528\u66f4\u77ed\u7684\u65b9\u5f0f\u56de\u7b54\u3002";
+  }
+
+  return "Sorry, this response is taking too long, so I stopped it. Please send the key question again and I will answer more briefly.";
 }
 
 function isAuthorized(request) {
@@ -440,17 +465,35 @@ const server = createServer(async (request, response) => {
   const userMessage = messages.at(-1).content;
   const { matches, sources } = await retrieveKnowledge(userMessage);
   const knowledgeContext = buildKnowledgeContext(matches);
+  sendChatStreamHeaders(response, metadata, sources);
+
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 600_000);
+  let abortReason = "";
+  let streamIdleTimeoutId;
+  const timeoutId = setTimeout(() => {
+    abortReason = "timeout";
+    controller.abort();
+  }, CHAT_REQUEST_TIMEOUT_MS);
+  const resetStreamIdleTimeout = () => {
+    clearTimeout(streamIdleTimeoutId);
+    streamIdleTimeoutId = setTimeout(() => {
+      abortReason = "idle";
+      controller.abort();
+    }, CHAT_STREAM_IDLE_TIMEOUT_MS);
+  };
   let assistantMessage = "";
   let outcome = "completed";
   let failureMessage = "";
 
   response.on("close", () => {
-    if (!response.writableEnded) controller.abort();
+    if (!response.writableEnded) {
+      abortReason ||= "client";
+      controller.abort();
+    }
   });
 
   try {
+    resetStreamIdleTimeout();
     const ollamaResponse = await fetch(`${OLLAMA_URL}/api/chat`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -470,7 +513,7 @@ const server = createServer(async (request, response) => {
         keep_alive: "24h",
         options: {
           num_ctx: 8192,
-          num_predict: 600,
+          num_predict: CHAT_NUM_PREDICT,
           temperature: 0.35,
           top_k: 20,
           top_p: 0.9,
@@ -484,21 +527,12 @@ const server = createServer(async (request, response) => {
       throw new Error(details || `Ollama returned ${ollamaResponse.status}`);
     }
 
-    response.writeHead(200, {
-      "Content-Type": "text/plain; charset=utf-8",
-      "Cache-Control": "no-store",
-      "X-Content-Type-Options": "nosniff",
-      "X-Act-Session-Id": metadata.sessionId,
-      "X-Act-Rag-Used": sources.length ? "true" : "false",
-      "X-Act-Rag-Sources": encodeURIComponent(JSON.stringify(sources)),
-      "Access-Control-Expose-Headers":
-        "X-Act-Session-Id, X-Act-Rag-Used, X-Act-Rag-Sources",
-    });
-
+    resetStreamIdleTimeout();
     const decoder = new TextDecoder();
     let buffer = "";
 
     for await (const chunk of ollamaResponse.body) {
+      resetStreamIdleTimeout();
       buffer += decoder.decode(chunk, { stream: true });
       const lines = buffer.split("\n");
       buffer = lines.pop() || "";
@@ -526,14 +560,24 @@ const server = createServer(async (request, response) => {
 
     response.end();
   } catch (error) {
-    outcome = error instanceof Error && error.name === "AbortError" ? "cancelled" : "error";
-    failureMessage =
-      error instanceof Error && error.name === "AbortError"
+    const isAbortError = error instanceof Error && error.name === "AbortError";
+    const isSlowResponse = isAbortError && (abortReason === "timeout" || abortReason === "idle");
+    outcome = isSlowResponse ? "timeout" : isAbortError ? "cancelled" : "error";
+    failureMessage = isSlowResponse
+      ? "The local model response was too slow and was stopped."
+      : isAbortError
         ? "The local model timed out or the request was cancelled."
         : "The local AI service is unavailable. Check that Ollama and the local gateway are running.";
 
     if (!response.headersSent) {
       sendJson(response, 503, { error: failureMessage });
+    } else if (isSlowResponse && !response.writableEnded) {
+      const fallback = timeoutFallback(metadata.language);
+      response.write(assistantMessage.trim() ? `\n\n${fallback}` : fallback);
+      response.end();
+      modelStatus = "warming";
+      modelStatusDetail = "Refreshing Qwen 3.6 after a slow response";
+      void warmChatModel();
     } else if (!response.writableEnded) {
       response.end();
     }
@@ -542,6 +586,7 @@ const server = createServer(async (request, response) => {
   } finally {
     if (activeChatRequestId === requestId) activeChatRequestId = "";
     clearTimeout(timeoutId);
+    clearTimeout(streamIdleTimeoutId);
     await appendConversationTurn({
       version: 1,
       requestId,
