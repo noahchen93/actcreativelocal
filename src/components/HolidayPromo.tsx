@@ -1,4 +1,4 @@
-import { ArrowRight, CalendarDays, Gift, Sparkles } from "lucide-react";
+import { ArrowRight, Gift, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -13,189 +13,221 @@ export function HolidayPromo() {
   const { t } = useLanguage();
 
   return (
-    <section className="holiday-promo-home bg-black">
+    <section className="holiday-promo-home" aria-label="Holiday decorations promotion">
       <style>{`
         .holiday-promo-home {
-          position: relative;
-          padding: calc(86px + 1rem) 1rem 1rem;
-          border-bottom: 1px solid rgba(204, 255, 0, 0.12);
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 60;
+          height: var(--holiday-promo-height, 72px);
+          padding: 0.35rem 0.75rem;
           overflow: hidden;
+          border-bottom: 1px solid rgba(255, 209, 102, 0.28);
+          background:
+            linear-gradient(90deg, rgba(7, 24, 14, 0.96), rgba(42, 7, 16, 0.98) 38%, rgba(38, 22, 4, 0.96) 68%, rgba(4, 18, 26, 0.98));
         }
         .holiday-promo-shell {
+          position: relative;
           display: grid;
-          grid-template-columns: minmax(0, 1fr);
-          gap: 1rem;
+          grid-template-columns: minmax(0, 1fr) auto;
+          align-items: center;
+          gap: 0.65rem;
+          width: 100%;
+          height: 100%;
           max-width: min(92vw, 1760px);
           margin: 0 auto;
-          padding: clamp(1rem, 2.2vw, 1.5rem);
-          border: 1px solid rgba(204, 255, 0, 0.2);
+          padding: 0.32rem 0.6rem;
+          overflow: hidden;
+          border: 1px solid transparent;
           border-radius: 8px;
           background:
-            linear-gradient(135deg, rgba(174, 20, 34, 0.24), rgba(10, 10, 10, 0.94) 42%),
-            linear-gradient(90deg, rgba(204, 255, 0, 0.1), rgba(204, 255, 0, 0) 34%),
-            #0a0a0a;
-          box-shadow: 0 22px 72px -54px rgba(204, 255, 0, 0.72);
+            linear-gradient(108deg, rgba(30, 8, 14, 0.95), rgba(7, 21, 17, 0.92) 44%, rgba(37, 18, 5, 0.94)) padding-box,
+            linear-gradient(90deg, #ccff00 0%, #ffd166 24%, #ff3d71 52%, #2ee6a6 76%, #35d7ff 100%) border-box;
+          box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.04),
+            0 14px 34px -28px rgba(255, 61, 113, 0.9),
+            0 14px 36px -30px rgba(53, 215, 255, 0.8);
+        }
+        .holiday-promo-shell::after {
+          content: "";
+          position: absolute;
+          left: 0.6rem;
+          right: 0.6rem;
+          bottom: 0;
+          height: 2px;
+          border-radius: 999px;
+          pointer-events: none;
+          background: linear-gradient(90deg, #ccff00, #ffd166 28%, #ff3d71 56%, #35d7ff);
+          opacity: 0.95;
         }
         .holiday-promo-copy {
+          display: flex;
           min-width: 0;
-        }
-        .holiday-promo-kicker {
-          display: inline-flex;
           align-items: center;
-          gap: 0.5rem;
-          margin-bottom: 0.65rem;
-          color: #f1d078;
-          font-size: 0.78rem;
-          font-weight: 800;
-          line-height: 1.2;
-          letter-spacing: 0;
+          gap: 0.65rem;
         }
         .holiday-promo-title {
-          color: #fff;
-          font-size: clamp(1.45rem, 4.8vw, 2.45rem);
-          line-height: 1.06;
+          min-width: 0;
+          overflow: hidden;
+          color: #fff7dd;
+          font-size: clamp(0.88rem, 1.25vw, 1.06rem);
+          line-height: 1.1;
           font-weight: 850;
           letter-spacing: 0;
-          text-wrap: balance;
-        }
-        .holiday-promo-body {
-          max-width: 64rem;
-          margin-top: 0.8rem;
-          color: rgba(255, 255, 255, 0.7);
-          font-size: clamp(0.92rem, 1vw, 1.02rem);
-          line-height: 1.58;
+          text-shadow: 0 0 18px rgba(255, 209, 102, 0.22);
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
         .holiday-promo-actions {
           display: flex;
-          flex-wrap: wrap;
-          gap: 0.7rem;
-          margin-top: 1rem;
+          flex: 0 0 auto;
+          align-items: center;
+          gap: 0.45rem;
         }
         .holiday-promo-button {
           display: inline-flex;
-          min-height: 44px;
+          min-height: 30px;
           align-items: center;
           justify-content: center;
-          gap: 0.5rem;
+          gap: 0.42rem;
           border-radius: 8px;
-          padding: 0.72rem 1rem;
-          font-size: 0.9rem;
+          padding: 0.35rem 0.62rem;
+          font-size: 0.72rem;
           font-weight: 760;
-          line-height: 1.15;
+          line-height: 1.1;
+          white-space: nowrap;
           transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease;
         }
         .holiday-promo-button:focus-visible {
           outline: 2px solid rgba(204, 255, 0, 0.9);
-          outline-offset: 3px;
+          outline-offset: 2px;
         }
         .holiday-promo-button-primary {
-          background: #ccff00;
+          border: 1px solid #d8ff29;
+          background: linear-gradient(90deg, #ccff00, #fff06a);
           color: #050505;
-          border: 1px solid #ccff00;
+          box-shadow: 0 0 22px -16px rgba(204, 255, 0, 0.95);
         }
         .holiday-promo-button-primary:hover {
-          background: #d7ff4d;
+          background: linear-gradient(90deg, #dfff42, #fff49a);
           transform: translateY(-1px);
         }
         .holiday-promo-button-secondary {
+          border: 1px solid rgba(53, 215, 255, 0.48);
+          background: rgba(53, 215, 255, 0.07);
           color: #fff;
-          border: 1px solid rgba(241, 208, 120, 0.46);
-          background: rgba(255, 255, 255, 0.045);
         }
         .holiday-promo-button-secondary:hover {
-          border-color: rgba(241, 208, 120, 0.88);
-          background: rgba(241, 208, 120, 0.1);
+          border-color: rgba(255, 61, 113, 0.8);
+          background: rgba(255, 61, 113, 0.12);
           transform: translateY(-1px);
         }
         .holiday-promo-media {
-          display: grid;
-          grid-template-columns: minmax(0, 1fr);
-          gap: 0.5rem;
-          min-width: 0;
-        }
-        .holiday-promo-image {
-          aspect-ratio: 16 / 7;
+          display: none;
+          flex: 0 0 auto;
+          width: 116px;
+          height: 38px;
           overflow: hidden;
+          border: 1px solid rgba(255, 209, 102, 0.32);
           border-radius: 8px;
-          border: 1px solid rgba(255, 255, 255, 0.12);
-          background: #111;
+          background: rgba(255, 255, 255, 0.055);
         }
-        .holiday-promo-image img {
+        .holiday-promo-media img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
         }
-        @media (min-width: 960px) {
+        @media (min-width: 768px) {
           .holiday-promo-home {
-            padding-top: calc(86px + 1.25rem);
-            padding-bottom: 1.25rem;
+            padding: 0.32rem 0.75rem;
           }
           .holiday-promo-shell {
-            grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.55fr);
-            align-items: center;
+            grid-template-columns: minmax(0, 1fr) auto auto;
+            gap: 0.75rem;
+            padding: 0.28rem 0.7rem;
+          }
+          .holiday-promo-media {
+            display: block;
           }
         }
-        @media (max-width: 520px) {
-          .holiday-promo-home {
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-          }
-          .holiday-promo-shell {
-            padding: 0.9rem;
-          }
-          .holiday-promo-actions {
-            display: grid;
+        @media (min-width: 1180px) {
+          .holiday-promo-title {
+            font-size: clamp(0.92rem, 1vw, 1.08rem);
           }
           .holiday-promo-button {
-            width: 100%;
+            min-height: 32px;
+            padding-inline: 0.72rem;
+            font-size: 0.76rem;
+          }
+          .holiday-promo-media {
+            width: 132px;
+            height: 40px;
+          }
+        }
+        @media (max-width: 640px) {
+          .holiday-promo-shell {
+            gap: 0.5rem;
+            padding: 0.42rem 0.55rem;
+          }
+          .holiday-promo-copy {
+            gap: 0;
+          }
+          .holiday-promo-title {
+            display: -webkit-box;
+            font-size: 0.86rem;
+            line-height: 1.12;
+            white-space: normal;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+          }
+          .holiday-promo-button {
+            min-height: 30px;
+            padding: 0.34rem 0.5rem;
+            font-size: 0.68rem;
+          }
+          .holiday-promo-button-primary span {
+            display: none;
+          }
+          .holiday-promo-button-secondary {
+            display: none;
           }
         }
       `}</style>
       <motion.div
         className="holiday-promo-shell"
-        initial={{ opacity: 0, y: 16 }}
+        initial={{ opacity: 0, y: -6 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.45 }}
+        transition={{ duration: 0.32 }}
       >
         <div className="holiday-promo-copy">
-          <div className="holiday-promo-kicker">
-            <CalendarDays className="h-4 w-4" />
-            <span>{t("节庆装饰项目咨询已开放", "Festive decoration consultation is open")}</span>
-          </div>
           <h2 className="holiday-promo-title">
             {t(
-              "商场、品牌、办公楼与公共空间节庆装饰",
+              "Christmas trees and CNY sculpture decor for commercial spaces",
               "Christmas trees and CNY sculpture decor for commercial spaces",
             )}
           </h2>
-          <p className="holiday-promo-body">
-            {t(
-              "从圣诞树、春节雕塑、灯笼与灯光装置，到采购、定制制作、安装、维护和拆除，我们把节庆装饰作为一个可落地的商业空间项目来统筹。",
-              "From custom Christmas trees and Year of the Goat / Ram CNY sculptures to lanterns, lighting, sourcing, fabrication, installation, maintenance and dismantling, we coordinate festive decor as a buildable commercial-space project.",
-            )}
-          </p>
-          <div className="holiday-promo-actions">
-            <a className="holiday-promo-button holiday-promo-button-primary" href="/holiday-decorations-singapore/">
-              <Gift className="h-4 w-4" />
-              <span>{t("查看节庆装饰服务", "View Christmas & CNY decor")}</span>
-              <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              className="holiday-promo-button holiday-promo-button-secondary"
-              href="https://wa.me/6584515268?text=Hi%20ACT%20Creative%2C%20I%20would%20like%20to%20discuss%20Christmas%2C%20New%20Year%20or%20Chinese%20New%20Year%20decor%20support."
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Sparkles className="h-4 w-4" />
-              <span>{t("WhatsApp 发送节庆需求", "WhatsApp a festive brief")}</span>
-            </a>
-          </div>
+        </div>
+        <div className="holiday-promo-actions">
+          <a className="holiday-promo-button holiday-promo-button-primary" href="/holiday-decorations-singapore/">
+            <Gift className="h-4 w-4" />
+            <span>{t("View Christmas & CNY decor", "View Christmas & CNY decor")}</span>
+            <ArrowRight className="h-4 w-4" />
+          </a>
+          <a
+            className="holiday-promo-button holiday-promo-button-secondary"
+            href="https://wa.me/6584515268?text=Hi%20ACT%20Creative%2C%20I%20would%20like%20to%20discuss%20Christmas%2C%20New%20Year%20or%20Chinese%20New%20Year%20decor%20support."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Sparkles className="h-4 w-4" />
+            <span>{t("WhatsApp festive brief", "WhatsApp festive brief")}</span>
+          </a>
         </div>
         <div className="holiday-promo-media" aria-hidden="true">
           {previewImages.map((image) => (
-            <div className="holiday-promo-image" key={image.src}>
-              <img src={image.src} alt={image.alt} loading="eager" decoding="async" />
-            </div>
+            <img key={image.src} src={image.src} alt={image.alt} loading="eager" decoding="async" />
           ))}
         </div>
       </motion.div>

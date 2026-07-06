@@ -82,10 +82,27 @@ function HashScrollRestorer() {
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-black">
+      <style>{`
+        .site-shell {
+          --holiday-promo-height: 72px;
+          --site-header-height: 86px;
+        }
+        .site-main {
+          padding-top: calc(var(--holiday-promo-height) + var(--site-header-height));
+        }
+        .site-main > section {
+          scroll-margin-top: calc(var(--holiday-promo-height) + var(--site-header-height) + 1rem);
+        }
+        @media (min-width: 768px) {
+          .site-shell {
+            --holiday-promo-height: 58px;
+          }
+        }
+      `}</style>
+      <div className="site-shell min-h-screen bg-black">
+        <HolidayPromo />
         <Header />
-        <main>
-          <HolidayPromo />
+        <main className="site-main">
           <Hero />
           <Suspense fallback={<SectionFallback minHeight="48rem" />}>
             <CaseStudies />
