@@ -353,6 +353,11 @@ The git history shows these major phases:
    - `npm run build` passes; Playwright desktop/mobile screenshots saved as `output/playwright/holiday-bold-bg-desktop.png` and `output/playwright/holiday-bold-bg-mobile.png`. Static verification used `python -m http.server 5174 --directory public` and `http://localhost:5174/holiday-decorations-singapore/index.html`; Vite dev returns 404 for this public-directory HTML route.
    - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_HccbkXgy9pyPWCLrL1exr6C9xine`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_8RxTgz38oyay4pjYjsBpef5mhEwu`.
 
+19. Holiday homepage promo strip production recovery on 2026-07-07 (Codex; branch `codex/venue-finder-finish`).
+   - Investigation found production was still serving old homepage JS `assets/main-C7Jg93cB.js`, whose `HolidayPromo` implementation used the large relative banner (`padding: calc(86px + 1rem) 1rem 1rem`) rather than the thin fixed top strip from commit `347fde6`.
+   - Local `npm run build` passed and emitted `build/assets/main-CA06cJwN.js`, which contains the fixed top strip styles (`--holiday-promo-height`, `position: fixed`) and the header offset below it.
+   - Promoted commit `347fde6` to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_TTcHke3sDNEePfV5yYne8nvgYJQL`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_HccbkXgy9pyPWCLrL1exr6C9xine`.
+
 ## AI Assistant Operating Notes
 
 Health endpoints:
