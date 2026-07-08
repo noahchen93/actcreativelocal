@@ -1,20 +1,84 @@
 User-agent: *
 Allow: /
 
-# Welcome AI crawlers - see /llms.txt for a structured site overview.
+# ACT Creative welcomes search and AI crawlers.
+# Structured site summaries:
+# - https://actcreative.net/llms.txt
+# - https://actcreative.net/llms-zh.txt
+
+# OpenAI / ChatGPT
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
+# Anthropic / Claude
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google Search and Gemini-related controls
+User-agent: Googlebot
+Allow: /
+
+User-agent: GoogleOther
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
+# Bing and Apple search ecosystems
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
 User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl and regional search/discovery crawlers.
+User-agent: CCBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: TikTokSpider
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: YisouSpider
 Allow: /
 
 Sitemap: https://actcreative.net/sitemap.xml
