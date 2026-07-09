@@ -72,9 +72,9 @@ export function Header() {
 
   const serviceItems = [
     {
-      title: t("节日装饰", "Festive Decor"),
+      title: t("节日装饰", "Christmas & CNY Decor"),
       href: "/holiday-decorations-singapore/index.html",
-      meta: t("圣诞、元旦与中国新年", "Christmas, New Year & CNY"),
+      meta: t("圣诞、元旦与中国新年", "Trees, goat / ram sculptures"),
     },
     {
       title: t("展位", "Booths"),
@@ -154,14 +154,15 @@ export function Header() {
   const languageLabel = language === "zh" ? "EN" : "中文";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#CCFF00]/20">
+    <header className="fixed left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-[#CCFF00]/20" style={{ top: "var(--holiday-promo-height, 0px)" }}>
       <style>{`
         .act-header-row {
           min-height: 86px;
+          gap: 0.75rem;
         }
         .act-header-container {
           padding-left: 1rem;
-          padding-right: 1.25rem;
+          padding-right: clamp(1.25rem, 3vw, 2rem);
         }
         .act-brand-link {
           display: inline-flex;
@@ -512,11 +513,18 @@ export function Header() {
             display: none;
           }
         }
-        @media (min-width: 1000px) {
+        @media (min-width: 1180px) {
+          .act-header-container {
+            padding-left: 1rem;
+            padding-right: clamp(1.5rem, 2.4vw, 2.25rem);
+          }
           .act-desktop-nav {
             display: flex;
+            flex: 1 1 auto;
             align-items: center;
-            gap: 0.7rem;
+            justify-content: center;
+            min-width: 0;
+            gap: clamp(0.55rem, 1vw, 0.9rem);
             padding: 0.42rem 0;
             border: 1px solid rgba(204, 255, 0, 0.16);
             border-left: 0;
@@ -531,7 +539,7 @@ export function Header() {
           .act-header-actions {
             display: flex;
             align-items: center;
-            margin-left: 0.45rem;
+            margin-left: 0.35rem;
           }
           .act-action-cluster {
             gap: 0.25rem;
@@ -539,7 +547,7 @@ export function Header() {
           }
           .act-action-button {
             height: 40px;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
           }
           .act-language-button {
             min-width: 78px;
@@ -556,50 +564,71 @@ export function Header() {
             display: none;
           }
         }
-        @media (min-width: 1120px) {
+        @media (min-width: 1320px) {
+          .act-header-container {
+            padding-left: 1.25rem;
+            padding-right: clamp(2rem, 2.8vw, 2.75rem);
+          }
           .act-desktop-nav {
-            gap: 1.55rem;
+            gap: 1.1rem;
           }
           .act-nav-pill {
             min-height: 44px;
-            padding: 0.68rem 0.28rem;
-            font-size: 0.98rem;
+            padding: 0.64rem 0.24rem;
+            font-size: 0.9rem;
           }
           .act-header-actions {
-            margin-left: 1rem;
+            margin-left: 0.65rem;
           }
           .act-action-cluster {
-            gap: 0.4rem;
+            gap: 0.3rem;
             padding: 0.25rem;
           }
           .act-action-button {
             height: 44px;
-            font-size: 0.92rem;
+            font-size: 0.84rem;
+          }
+          .act-language-button,
+          .act-brief-button {
+            min-width: 108px;
+            padding-inline: 0.75rem;
+          }
+        }
+        @media (min-width: 1480px) {
+          .act-header-container {
+            padding-left: 1.5rem;
+            padding-right: clamp(2.25rem, 3vw, 3rem);
+          }
+          .act-desktop-nav {
+            gap: 1.55rem;
+          }
+          .act-nav-pill {
+            padding-inline: 0.3rem;
+            font-size: 0.95rem;
+          }
+          .act-action-button {
+            font-size: 0.9rem;
+          }
+          .act-language-button,
+          .act-brief-button {
+            min-width: 116px;
+            padding-inline: 0.85rem;
+          }
+        }
+        @media (min-width: 1640px) {
+          .act-desktop-nav {
+            gap: 2rem;
+          }
+          .act-header-container {
+            padding-right: 3rem;
+          }
+          .act-nav-pill {
+            font-size: 0.98rem;
           }
           .act-language-button,
           .act-brief-button {
             min-width: 126px;
             padding-inline: 0.95rem;
-          }
-        }
-        @media (min-width: 1200px) {
-          .act-header-container {
-            padding-left: 1.5rem;
-            padding-right: 1.75rem;
-          }
-          .act-desktop-nav {
-            gap: 2rem;
-          }
-          .act-nav-pill {
-            padding-inline: 0.35rem;
-          }
-        }
-        @media (min-width: 1360px) {
-          .act-desktop-nav {
-            gap: 2.35rem;
-          }
-          .act-header-container {
-            padding-right: 2rem;
           }
         }
       `}</style>

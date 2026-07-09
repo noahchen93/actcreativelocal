@@ -56,11 +56,17 @@
 
   <url>
     <loc>https://actcreative.net/holiday-decorations-singapore/</loc>
-    <lastmod>2026-06-28</lastmod>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://actcreative.net/holiday-decorations-singapore/assets/holiday-hero.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-12-translucent-candy-paper-tree-a.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/holiday-decorations-singapore/assets/cny-ram-concepts/ram-09-mirror-steel-ram-a.webp</image:loc>
     </image:image>
   </url>
 
@@ -452,7 +458,7 @@
 
   <url>
     <loc>https://actcreative.net/exhibition-booth-production-singapore/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -518,7 +524,7 @@
 
   <url>
     <loc>https://actcreative.net/retail-mall-activation-singapore/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>

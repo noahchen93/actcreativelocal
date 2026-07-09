@@ -346,6 +346,35 @@ The git history shows these major phases:
    - Added `scripts/check-production-ai.ps1` and `npm run ai:prod:*` commands for status, install, start, tunnel, and watch workflows.
    - Current workstation state after installation: Windows denied ScheduledTasks and `schtasks.exe`, so the active autostart method is the Startup shortcut fallback at `%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\ACTCreativeProductionAISupervisor.lnk`, backed by gitignored files in `tmp/`.
    - Verification on 2026-06-30: one `ollama.exe`, one `cloudflared.exe`, local ports `11434` and `8787` listening, required ACT models visible, local gateway ready, direct Tunnel ready, production health ready, local POST returned `ACT AI online`, and production POST with `Origin: https://actcreative.net` returned `ACT AI online`.
+16. Artbox case-study image update on 2026-06-29 (Codex; branch `codex/venue-finder-finish`).
+   - Fast-forwarded the branch to include the already-deployed `codex/Christmas-NewYear-CNY` holiday/SEO/title commits before publishing, avoiding a production rollback of those changes.
+   - Committed `9b24582`: replaced the Artbox case-study visual in `public/booth-design-build-singapore/index.html`, `public/case-studies/index.html`, and `src/components/CaseStudies.tsx` with the real `public/china-sourcing-agent/assets/artbox-final-product-display.webp` image; recompressed the image at the same 1333×1000 dimensions.
+   - `npm run build` passes locally and on Vercel; both builds injected the floating assistant into 63 static pages.
+   - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_d6QCUdoPwZDbSW89N5QFueLinbck`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_EJkCvx18h6DC4RfbymJEf7eZNco2`.
+
+17. Holiday decorations service-page repositioning on 2026-06-30 (Codex; branch `codex/venue-finder-finish`).
+   - Reworked `public/holiday-decorations-singapore/index.html` from a standard festive product/order page into an evergreen B2B service page for custom festive decoration consulting, sourcing, fabrication, installation, maintenance and dismantling.
+   - New page structure: consultation entry, Christmas/CNY/New Year capability taxonomy, B2B client fit, 8-step turnkey process, ACT Creative differentiation and stronger brief CTA.
+   - Updated `src/components/HolidayPromo.tsx` so the homepage promo points to the page as a strategic service, not a temporary product catalog; also simplified the promo visual to one stable hero image and repaired the holiday promo Chinese copy.
+   - `npm run build` passes; Playwright desktop/mobile screenshots for the holiday page and homepage promo were saved under `output/playwright/`. Local Vite dev URL used for verification: `http://localhost:3000/`.
+   - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_AMHrL9sndJ7sEYPnPXgkWvzUadz6`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_d6QCUdoPwZDbSW89N5QFueLinbck`.
+
+18. Holiday hero visual refinement on 2026-07-01 (Codex; branch `codex/venue-finder-finish`).
+   - Replaced the holiday page hero's three separate image cards with a single CSS-only carousel frame so the images are wider and captions sit in a dedicated copy band rather than covering the image subject.
+   - Added stronger holiday-themed red, gold and lime linear-gradient blending across the black page background and hero area.
+   - `npm run build` passes; Playwright verified the carousel frame, three slide states, desktop/mobile screenshots, and first-frame visibility at `http://localhost:3000/holiday-decorations-singapore/index.html`.
+   - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_8RxTgz38oyay4pjYjsBpef5mhEwu`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_AMHrL9sndJ7sEYPnPXgkWvzUadz6`.
+
+19. Holiday page bolder background color pass on 2026-07-01 (Codex; branch `codex/venue-finder-finish`).
+   - Intensified the holiday page's black background with broader red, gold and lime color fields behind the hero and carousel instead of small decorative color blobs.
+   - Strengthened the carousel frame border, shadow and caption band color treatment so the right-side visual area feels integrated with the new festive background.
+   - `npm run build` passes; Playwright desktop/mobile screenshots saved as `output/playwright/holiday-bold-bg-desktop.png` and `output/playwright/holiday-bold-bg-mobile.png`. Static verification used `python -m http.server 5174 --directory public` and `http://localhost:5174/holiday-decorations-singapore/index.html`; Vite dev returns 404 for this public-directory HTML route.
+   - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_HccbkXgy9pyPWCLrL1exr6C9xine`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_8RxTgz38oyay4pjYjsBpef5mhEwu`.
+
+20. Holiday homepage promo strip production recovery on 2026-07-07 (Codex; branch `codex/venue-finder-finish`).
+   - Investigation found production was still serving old homepage JS `assets/main-C7Jg93cB.js`, whose `HolidayPromo` implementation used the large relative banner (`padding: calc(86px + 1rem) 1rem 1rem`) rather than the thin fixed top strip from commit `347fde6`.
+   - Local `npm run build` passed and emitted `build/assets/main-CA06cJwN.js`, which contains the fixed top strip styles (`--holiday-promo-height`, `position: fixed`) and the header offset below it.
+   - Promoted commit `347fde6` to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_TTcHke3sDNEePfV5yYne8nvgYJQL`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_HccbkXgy9pyPWCLrL1exr6C9xine`.
 
 ## AI Assistant Operating Notes
 
