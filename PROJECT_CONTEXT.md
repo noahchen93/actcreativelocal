@@ -382,6 +382,12 @@ The git history shows these major phases:
    - `npm run build` passes and emits `build/assets/main-CA06cJwN.js`; verified the built and live JS include `--holiday-promo-height` and do not include the old large-banner padding.
    - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_4Yd6SXirXSdhBVXy4i2yfYmhpeuA`, aliased to `https://actcreative.net` (READY). Live verification loaded `assets/main-CA06cJwN.js`. Rollback, if needed: promote `dpl_DWWQgBXQTs8omPtDhfAish8X1KzC`.
 
+22. Header navigation laptop-width restore on 2026-07-09 (Codex; branch `codex/Christmas-NewYear-CNY`).
+   - Root cause: the thin holiday strip merge left `.act-desktop-nav` hidden until `min-width: 1180px`, so laptop-width viewports between 1024 and 1179 showed the mobile menu instead of the desktop navigation buttons.
+   - Changed the desktop navigation breakpoint to `min-width: 1024px`; kept the right-side language/send-brief action cluster at `min-width: 1180px` to avoid crowding, and tightened nav spacing/font size at the laptop breakpoint.
+   - `npm run build` passes and emits `build/assets/main-nTrCC71d.js`. Playwright verified live `https://actcreative.net/`: at 1024px and 1180px `.act-desktop-nav` is `display: flex`; at 390px desktop nav remains hidden and `.act-mobile-actions` is `display: flex`.
+   - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_98cgbRr5hbAiojbExk9eg366ba4r`, aliased to `https://actcreative.net` (READY). Live verification loaded `assets/main-nTrCC71d.js`.
+
 ## AI Assistant Operating Notes
 
 Health endpoints:
