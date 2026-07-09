@@ -376,6 +376,12 @@ The git history shows these major phases:
    - Local `npm run build` passed and emitted `build/assets/main-CA06cJwN.js`, which contains the fixed top strip styles (`--holiday-promo-height`, `position: fixed`) and the header offset below it.
    - Promoted commit `347fde6` to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_TTcHke3sDNEePfV5yYne8nvgYJQL`, aliased to `https://actcreative.net` (READY). Rollback, if needed: promote the previous production deployment `dpl_HccbkXgy9pyPWCLrL1exr6C9xine`.
 
+21. Holiday promo strip production-branch merge on 2026-07-09 (Codex; branch `codex/Christmas-NewYear-CNY`).
+   - Root cause of the repeated regression: Vercel production was auto-deploying `codex/Christmas-NewYear-CNY`; on 2026-07-09 it promoted commit `b05c425` as `dpl_DWWQgBXQTs8omPtDhfAish8X1KzC`, which rebuilt the old `assets/main-C7Jg93cB.js` banner and overwrote the manual `codex/venue-finder-finish` production deployment.
+   - Merged `origin/codex/venue-finder-finish` into `codex/Christmas-NewYear-CNY` as commit `1b46cce`, preserving the AI/search updates from the production branch and the thin fixed holiday strip from `347fde6`.
+   - `npm run build` passes and emits `build/assets/main-CA06cJwN.js`; verified the built and live JS include `--holiday-promo-height` and do not include the old large-banner padding.
+   - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_4Yd6SXirXSdhBVXy4i2yfYmhpeuA`, aliased to `https://actcreative.net` (READY). Live verification loaded `assets/main-CA06cJwN.js`. Rollback, if needed: promote `dpl_DWWQgBXQTs8omPtDhfAish8X1KzC`.
+
 ## AI Assistant Operating Notes
 
 Health endpoints:
