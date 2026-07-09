@@ -513,10 +513,10 @@ export function Header() {
             display: none;
           }
         }
-        @media (min-width: 1180px) {
+        @media (min-width: 1024px) {
           .act-header-container {
             padding-left: 1rem;
-            padding-right: clamp(1.5rem, 2.4vw, 2.25rem);
+            padding-right: clamp(1rem, 2vw, 1.75rem);
           }
           .act-desktop-nav {
             display: flex;
@@ -524,7 +524,7 @@ export function Header() {
             align-items: center;
             justify-content: center;
             min-width: 0;
-            gap: clamp(0.55rem, 1vw, 0.9rem);
+            gap: clamp(0.42rem, 0.8vw, 0.7rem);
             padding: 0.42rem 0;
             border: 1px solid rgba(204, 255, 0, 0.16);
             border-left: 0;
@@ -534,8 +534,16 @@ export function Header() {
           .act-nav-pill {
             min-height: 40px;
             padding-inline: 0.12rem;
-            font-size: 0.8rem;
+            font-size: 0.76rem;
           }
+          .act-mobile-actions {
+            display: none;
+          }
+          .act-mobile-nav {
+            display: none;
+          }
+        }
+        @media (min-width: 1180px) {
           .act-header-actions {
             display: flex;
             align-items: center;
@@ -556,12 +564,6 @@ export function Header() {
           .act-brief-button {
             min-width: 96px;
             padding-inline: 0.75rem;
-          }
-          .act-mobile-actions {
-            display: none;
-          }
-          .act-mobile-nav {
-            display: none;
           }
         }
         @media (min-width: 1320px) {
