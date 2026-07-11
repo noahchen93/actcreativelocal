@@ -85,8 +85,45 @@ function Invoke-RepairScript {
   }
 }
 
+function Invoke-CurlJsonPost {
+  param(
+    [Parameter(Mandatory = $true)][string]$CurlExecutable,
+    [Parameter(Mandatory = $true)][string]$Uri,
+    [Parameter(Mandatory = $true)][string]$JsonBody,
+    [Parameter(Mandatory = $true)][int]$MaxSeconds
+  )
+
+  $bodyPath = Join-Path $runtimeDirectory "warm-probe-$PID-$([guid]::NewGuid().ToString('N')).json"
+  try {
+    [System.IO.File]::WriteAllText(
+      $bodyPath,
+      $JsonBody,
+      (New-Object System.Text.UTF8Encoding($false))
+    )
+
+    & $CurlExecutable `
+      --silent `
+      --show-error `
+      --fail `
+      --max-time $MaxSeconds `
+      --header "Content-Type: application/json" `
+      --data-binary "@$bodyPath" `
+      $Uri | Out-Null
+
+    return $LASTEXITCODE
+  } finally {
+    Remove-Item -LiteralPath $bodyPath -Force -ErrorAction SilentlyContinue
+  }
+}
+
 function Invoke-OllamaWarmProbe {
   Set-SiteOllamaEnvironment
+
+  $curlExecutable = Join-Path $env:SystemRoot "System32\curl.exe"
+  if (-not (Test-Path -LiteralPath $curlExecutable)) {
+    Write-SupervisorLog "Ollama warm probe failed: curl.exe was not found"
+    return $false
+  }
 
   $ollamaUrl = (Get-LocalEnvValue "OLLAMA_URL")
   if (-not $ollamaUrl) {
@@ -118,12 +155,14 @@ function Invoke-OllamaWarmProbe {
       }
     } | ConvertTo-Json -Depth 8
 
-    Invoke-RestMethod `
-      -Method Post `
+    $chatExitCode = Invoke-CurlJsonPost `
+      -CurlExecutable $curlExecutable `
       -Uri "$ollamaUrl/api/chat" `
-      -ContentType "application/json" `
-      -Body $chatBody `
-      -TimeoutSec 600 | Out-Null
+      -JsonBody $chatBody `
+      -MaxSeconds 180
+    if ($chatExitCode -ne 0) {
+      throw "Chat warm probe exited with code $chatExitCode"
+    }
 
     $embedBody = @{
       model = $embeddingModel
@@ -132,12 +171,14 @@ function Invoke-OllamaWarmProbe {
       keep_alive = "24h"
     } | ConvertTo-Json -Depth 5
 
-    Invoke-RestMethod `
-      -Method Post `
+    $embedExitCode = Invoke-CurlJsonPost `
+      -CurlExecutable $curlExecutable `
       -Uri "$ollamaUrl/api/embed" `
-      -ContentType "application/json" `
-      -Body $embedBody `
-      -TimeoutSec 120 | Out-Null
+      -JsonBody $embedBody `
+      -MaxSeconds 60
+    if ($embedExitCode -ne 0) {
+      throw "Embedding warm probe exited with code $embedExitCode"
+    }
 
     Write-SupervisorLog "Ollama warm probe completed for $chatModel and $embeddingModel"
     return $true
