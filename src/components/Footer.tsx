@@ -110,7 +110,12 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href={localizedHref("/booth-design-build-singapore/", "/zh/booth-design-build-singapore/")} className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("展位设计和搭建", "Booth Design & Build")}
+                  {t("展位设计和搭建", "Exhibition Booth Design & Build Singapore")}
+                </a>
+              </li>
+              <li>
+                <a href={localizedHref("/event-fabrication-singapore/", "/zh/event-fabrication-singapore/")} className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("活动制作服务", "Event Fabrication Services Singapore")}
                 </a>
               </li>
               <li>

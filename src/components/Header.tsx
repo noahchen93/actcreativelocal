@@ -77,9 +77,9 @@ export function Header() {
       meta: t("圣诞、元旦与中国新年", "Trees, goat / ram sculptures"),
     },
     {
-      title: t("展位", "Booths"),
+      title: t("展位", "Booth Design & Build"),
       href: localizedHref("/booth-design-build-singapore/", "/zh/booth-design-build-singapore/"),
-      meta: t("设计与搭建", "Design & build"),
+      meta: t("设计与搭建", "Exhibition booth contractor"),
     },
     {
       title: t("场地", "Venues"),
@@ -130,9 +130,9 @@ export function Header() {
       meta: t("大型道具、主题装饰与品牌展示物", "Oversized props, themed decor and branded displays"),
     },
     {
-      title: t("活动制作", "Event Fabrication Singapore"),
+      title: t("活动制作", "Event Fabrication Services"),
       href: localizedHref("/event-fabrication-singapore/", "/zh/event-fabrication-singapore/"),
-      meta: t("活动场景、装置、展陈与现场交付", "Custom physical builds, branded experiences and site delivery"),
+      meta: t("活动场景、装置、展陈与现场交付", "Custom builds, setup and installation"),
     },
   ];
 
