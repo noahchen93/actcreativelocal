@@ -1,5 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
   "functions": {
     "api/**/*.ts": {
       "maxDuration": 60,
@@ -36,6 +37,14 @@
     { "source": "/zh/", "destination": "/zh/index.html" },
     { "source": "/zh/event-fabrication-singapore", "destination": "/zh/event-fabrication-singapore/index.html" },
     { "source": "/zh/event-fabrication-singapore/", "destination": "/zh/event-fabrication-singapore/index.html" },
+    { "source": "/zh/custom-props-singapore", "destination": "/zh/custom-props-singapore/index.html" },
+    { "source": "/zh/custom-props-singapore/", "destination": "/zh/custom-props-singapore/index.html" },
+    { "source": "/zh/frp-sculpture-fabrication-singapore", "destination": "/zh/frp-sculpture-fabrication-singapore/index.html" },
+    { "source": "/zh/frp-sculpture-fabrication-singapore/", "destination": "/zh/frp-sculpture-fabrication-singapore/index.html" },
+    { "source": "/zh/custom-food-truck-rental-singapore", "destination": "/zh/custom-food-truck-rental-singapore/index.html" },
+    { "source": "/zh/custom-food-truck-rental-singapore/", "destination": "/zh/custom-food-truck-rental-singapore/index.html" },
+    { "source": "/zh/singapore-event-venue-finder", "destination": "/zh/singapore-event-venue-finder/index.html" },
+    { "source": "/zh/singapore-event-venue-finder/", "destination": "/zh/singapore-event-venue-finder/index.html" },
     { "source": "/zh/china-event-production-support", "destination": "/zh/china-event-production-support/index.html" },
     { "source": "/zh/china-event-production-support/", "destination": "/zh/china-event-production-support/index.html" },
     { "source": "/blog", "destination": "/blog/index.html" },

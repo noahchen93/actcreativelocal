@@ -15,6 +15,23 @@
     return new URLSearchParams(window.location.search || "");
   }
 
+  function normalizeSource(value) {
+    var source = (value || "").toLowerCase().replace(/^www\./, "");
+    if (!source) return "";
+    if (source.indexOf("chatgpt") !== -1 || source.indexOf("openai") !== -1) return "chatgpt";
+    if (source.indexOf("perplexity") !== -1) return "perplexity";
+    if (source.indexOf("claude") !== -1 || source.indexOf("anthropic") !== -1) return "claude";
+    if (source.indexOf("copilot") !== -1) return "copilot";
+    if (source.indexOf("gemini") !== -1) return "gemini";
+    if (source.indexOf("deepseek") !== -1) return "deepseek";
+    if (source.indexOf("doubao") !== -1) return "doubao";
+    if (source.indexOf("kimi") !== -1 || source.indexOf("moonshot") !== -1) return "kimi";
+    if (source.indexOf("tongyi") !== -1 || source.indexOf("qianwen") !== -1) return "qwen";
+    if (source.indexOf("chatglm") !== -1 || source.indexOf("zhipu") !== -1) return "zhipu";
+    if (source.indexOf("minimax") !== -1) return "minimax";
+    return value || "";
+  }
+
   function readStored() {
     try {
       var raw = window.sessionStorage.getItem(STORAGE_KEY);
@@ -34,12 +51,14 @@
 
   function detectSource(referrer, params) {
     var utmSource = params.get("utm_source");
-    if (utmSource) return safeDecode(utmSource);
+    if (utmSource) return normalizeSource(safeDecode(utmSource));
 
     if (!referrer) return "direct";
 
     try {
       var host = new URL(referrer).hostname.replace(/^www\./, "");
+      var normalizedAiSource = normalizeSource(host);
+      if (normalizedAiSource !== host) return normalizedAiSource;
       if (host.indexOf("google.") !== -1) return "google";
       if (host.indexOf("bing.") !== -1) return "bing";
       if (host.indexOf("yahoo.") !== -1) return "yahoo";

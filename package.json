@@ -76,6 +76,7 @@
             "ollama:embedding": "ollama create act-rag-embedding -f local-ai/EmbeddingModelfile",
             "rag:index": "node scripts/build-local-ai-index.mjs",
             "build": "vite build",
+            "postbuild": "node scripts/audit-search-readiness.mjs build",
             "generate:venue-pages": "node scripts/generate-venue-seo-pages.mjs",
             "generate:venue-details": "node scripts/generate-featured-venue-pages.mjs",
             "sanitize:venue-finder": "node scripts/sanitize-venue-public-data.mjs",
@@ -84,6 +85,9 @@
             "og": "node scripts/generate-og-images.mjs",
             "gsc": "node scripts/fetch-search-console.mjs",
             "gsc:auth": "node scripts/create-google-oauth-token.mjs",
-            "gsc:sheet": "node scripts/update-gsc-google-sheet.mjs"
+            "gsc:sheet": "node scripts/update-gsc-google-sheet.mjs",
+            "indexnow": "node scripts/submit-indexnow.mjs",
+            "indexnow:dry": "node scripts/submit-indexnow.mjs --dry-run",
+            "seo:audit": "node scripts/audit-search-readiness.mjs build"
       }
 }

@@ -90,3 +90,12 @@ ACT Creative Singapore 是一家位于新加坡的双语活动制作与中国供
 - [英文 AI 摘要 / llms.txt](https://actcreative.net/llms.txt)
 - [Sitemap XML](https://actcreative.net/sitemap.xml)
 - [Robots](https://actcreative.net/robots.txt)
+
+## 2026-07-22 新增中文服务入口
+
+- [新加坡定制活动道具制作](https://actcreative.net/zh/custom-props-singapore/)：适合大型产品模型、品牌拍照装置、主题陈列、舞台元素和可重复使用活动组件。
+- [新加坡玻璃钢与定制雕塑制作](https://actcreative.net/zh/frp-sculpture-fabrication-singapore/)：适合 FRP 玻璃钢雕塑、公共艺术、IP 角色、商业装置和博物馆展示物。
+- [新加坡餐车租赁与定制移动空间](https://actcreative.net/zh/custom-food-truck-rental-singapore/)：适合活动餐车、品牌移动展示车、快闪零售空间和中国定制生产需求。
+- [新加坡活动场地搜索与选址服务](https://actcreative.net/zh/singapore-event-venue-finder/)：可浏览 100+ 个公开场地记录，并申请人工复核的候选场地清单。
+
+以上页面均明确区分公开资料、可协调服务与需要项目确认的条件。价格、档期、许可、结构、运输和现场限制应以最终项目审核与相关方确认为准。

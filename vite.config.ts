@@ -97,8 +97,8 @@
     return files.flat();
   };
 
-  const universalEventAssistantPlugin = (): Plugin => ({
-    name: 'universal-event-ai-assistant',
+  const universalHtmlEnhancementsPlugin = (): Plugin => ({
+    name: 'universal-html-enhancements',
     apply: 'build',
     async writeBundle(_options, bundle) {
       const outDir = path.resolve(__dirname, 'build');
@@ -143,27 +143,37 @@
         .join('\n');
       const scriptTag =
         `    <script type="module" src="/${embedEntry.fileName}" ${marker}></script>`;
+      const analyticsTag = '    <script src="/site-analytics.js" defer></script>';
       const excludedPages = new Set(['index.html', 'zh/index.html']);
       const htmlFiles = await listHtmlFiles(outDir);
-      let injectedCount = 0;
+      let analyticsCount = 0;
+      let assistantCount = 0;
 
       for (const htmlPath of htmlFiles) {
         const relativePath = path.relative(outDir, htmlPath).replace(/\\/g, '/');
-        if (excludedPages.has(relativePath)) continue;
-
         let html = await fs.readFile(htmlPath, 'utf8');
-        if (html.includes(marker)) continue;
+        let changed = false;
 
-        if (stylesheetTags) {
-          html = html.replace('</head>', `${stylesheetTags}\n  </head>`);
+        if (!html.includes('/site-analytics.js')) {
+          html = html.replace('</head>', `${analyticsTag}\n  </head>`);
+          analyticsCount += 1;
+          changed = true;
         }
-        html = html.replace('</body>', `${scriptTag}\n  </body>`);
-        await fs.writeFile(htmlPath, html, 'utf8');
-        injectedCount += 1;
+
+        if (!excludedPages.has(relativePath) && !html.includes(marker)) {
+          if (stylesheetTags) {
+            html = html.replace('</head>', `${stylesheetTags}\n  </head>`);
+          }
+          html = html.replace('</body>', `${scriptTag}\n  </body>`);
+          assistantCount += 1;
+          changed = true;
+        }
+
+        if (changed) await fs.writeFile(htmlPath, html, 'utf8');
       }
 
       console.log(
-        `[event-ai] Injected the floating assistant into ${injectedCount} static pages.`,
+        `[html] Injected analytics into ${analyticsCount} pages and the floating assistant into ${assistantCount} pages.`,
       );
     },
   });
@@ -173,7 +183,7 @@
       react(),
       googleSiteVerificationPlugin(getGoogleSiteVerificationToken(mode)),
       localizedHomepagePlugin(),
-      universalEventAssistantPlugin(),
+      universalHtmlEnhancementsPlugin(),
     ],
     define: mode === 'production'
       ? {

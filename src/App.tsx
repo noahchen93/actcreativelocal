@@ -1,5 +1,4 @@
 import { lazy, Suspense, useEffect } from "react";
-import { Analytics } from "@vercel/analytics/react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { HolidayPromo } from "./components/HolidayPromo";
@@ -127,7 +126,6 @@ export default function App() {
         <Suspense fallback={null}>
           <EventAiAssistant />
         </Suspense>
-        <Analytics />
       </div>
     </LanguageProvider>
   );

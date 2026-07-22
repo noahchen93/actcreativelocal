@@ -83,7 +83,7 @@
 
   <url>
     <loc>https://actcreative.net/zh/event-fabrication-singapore/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/event-fabrication-singapore/" />
@@ -93,6 +93,54 @@
     <image:image>
       <image:loc>https://actcreative.net/og/zh-event-fabrication-singapore.png</image:loc>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/custom-props-singapore/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/custom-props-singapore/" />
+    <image:image><image:loc>https://actcreative.net/og/custom-props-singapore.png</image:loc><image:title>新加坡定制活动道具制作</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/frp-sculpture-fabrication-singapore/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/frp-sculpture-fabrication-singapore/" />
+    <image:image><image:loc>https://actcreative.net/frp-sculpture-fabrication-singapore/assets/images/slides/slide-08.webp</image:loc><image:title>新加坡玻璃钢与定制雕塑制作</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/custom-food-truck-rental-singapore/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
+    <image:image><image:loc>https://actcreative.net/custom-food-truck-rental-singapore/assets/singapore-sample-food-truck.webp</image:loc><image:title>新加坡餐车租赁与定制移动空间</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/singapore-event-venue-finder/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <image:image><image:loc>https://actcreative.net/og/singapore-event-venue-finder.png</image:loc><image:title>新加坡活动场地搜索与选址服务</image:title></image:image>
   </url>
 
   <url>
@@ -126,7 +174,7 @@
 
   <url>
     <loc>https://actcreative.net/zh/booth-design-build-singapore/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/booth-design-build-singapore/" />
@@ -172,7 +220,7 @@
 
   <url>
     <loc>https://actcreative.net/booth-design-build-singapore/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.92</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/booth-design-build-singapore/" />
@@ -285,10 +333,12 @@
 
   <url>
     <loc>https://actcreative.net/singapore-event-venue-finder/</loc>
-    <lastmod>2026-06-23</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/singapore-event-venue-finder/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/singapore-event-venue-finder/" />
     <image:image>
       <image:loc>https://actcreative.net/og/singapore-event-venue-finder.png</image:loc>
@@ -369,7 +419,7 @@
 
   <url>
     <loc>https://actcreative.net/singapore-event-venues/arts-performance/</loc>
-    <lastmod>2026-06-21</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.78</priority>
     <image:image>
@@ -381,7 +431,7 @@
 
   <url>
     <loc>https://actcreative.net/event-fabrication-singapore/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/event-fabrication-singapore/" />
@@ -395,9 +445,13 @@
 
   <url>
     <loc>https://actcreative.net/custom-props-singapore/</loc>
-    <lastmod>2026-07-09</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/custom-props-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/og/custom-props-singapore.png</image:loc>
     </image:image>
@@ -405,9 +459,13 @@
 
   <url>
     <loc>https://actcreative.net/frp-sculpture-fabrication-singapore/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/frp-sculpture-fabrication-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/frp-sculpture-fabrication-singapore/assets/images/slides/slide-08.webp</image:loc>
       <image:title>Custom large-scale sculpture fabrication reference</image:title>
@@ -425,9 +483,13 @@
 
   <url>
     <loc>https://actcreative.net/custom-food-truck-rental-singapore/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/custom-food-truck-rental-singapore/assets/singapore-sample-food-truck.webp</image:loc>
       <image:title>Custom food truck rental and mobile event unit in Singapore</image:title>
