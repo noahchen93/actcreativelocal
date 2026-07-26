@@ -3,6 +3,28 @@
   var PHONE = "6584515268";
   var EMAIL = "contact@actcreative.net";
 
+  function ensureVercelAnalytics() {
+    // The React homepage injects Analytics through @vercel/analytics/react.
+    // Static landing pages need the framework-agnostic script explicitly.
+    if (document.getElementById("root")) return;
+
+    window.va =
+      window.va ||
+      function () {
+        (window.vaq = window.vaq || []).push(arguments);
+      };
+
+    if (document.querySelector('script[src="/_vercel/insights/script.js"]')) {
+      return;
+    }
+
+    var script = document.createElement("script");
+    script.defer = true;
+    script.src = "/_vercel/insights/script.js";
+    script.dataset.actVercelAnalytics = "true";
+    document.head.appendChild(script);
+  }
+
   function safeDecode(value) {
     try {
       return decodeURIComponent(value || "");
@@ -153,6 +175,16 @@
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(event);
     window.dispatchEvent(new CustomEvent("act:inquiry-intent", { detail: event }));
+
+    // Vercel custom events appear on Pro/Enterprise plans. Keeping this call
+    // here makes the same intent data available automatically after an upgrade,
+    // while the dataLayer event and inquiry message attribution work on all plans.
+    if (typeof window.va === "function") {
+      window.va("event", "Inquiry Intent", {
+        channel: channel,
+        page_path: data.page,
+      });
+    }
   }
 
   function appendWhatsAppText(href) {
@@ -226,6 +258,7 @@
     appendMailtoBody: appendMailtoBody,
   };
 
+  ensureVercelAnalytics();
   getInitialAttribution();
 
   if (document.readyState === "loading") {

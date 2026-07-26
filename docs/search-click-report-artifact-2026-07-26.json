@@ -1,0 +1,829 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "ACT Creative 搜索与点击表现",
+    "description": "Google Search Console 与 Vercel Web Analytics 的近期表现交叉分析。",
+    "generatedAt": "2026-07-26T15:19:39+08:00",
+    "sources": [
+      {
+        "id": "gsc_performance",
+        "label": "Google Search Console — 搜索结果",
+        "href": "https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Aactcreative.net",
+        "query": {
+          "engine": "Google Search Console",
+          "language": "sql",
+          "sql": "WITH reviewed_rows(record_type, label, clicks_current, clicks_prior, impressions_current, impressions_prior, ctr_current, ctr_prior, position_current, position_prior) AS (VALUES ('summary','All search results',85,29,7593,3194,0.011,0.009,27.7,48.2),('page','Food truck rental',12,3,388,77,0.031,0.039,16.5,24.8),('page','Homepage',12,17,70,47,0.171,0.362,4.7,4.2),('page','Event fabrication HK',9,2,105,35,0.086,0.057,22.6,18.5),('page','Booth design/build',8,0,2004,1236,0.004,0,46.8,70.7),('page','Custom props',7,3,435,58,0.016,0.052,30.6,15.7),('page','Event fabrication SG',5,1,862,747,0.006,0.001,14.1,22.4),('page','FRP sculpture',5,0,63,29,0.079,0,7.8,20.9),('page','Venue finder',3,1,245,24,0.012,0.042,7.8,10.0),('page','National Museum',3,0,229,0,0.013,0,7.9,NULL),('page','Marina Bay Sands',2,0,381,40,0.005,0,11.8,11.2)) SELECT * FROM reviewed_rows;",
+          "description": "从 actcreative.net 的 Search results 报告中复核最近 28 天与前 28 天的总览、查询、页面、国家和设备数据。",
+          "executed_at": "2026-07-26T15:00:00+08:00",
+          "tables_used": [
+            "Search results performance"
+          ],
+          "filters": [
+            "Property: sc-domain:actcreative.net",
+            "Search type: Web",
+            "Current period: 2026-06-26 to 2026-07-23",
+            "Comparison period: 2026-05-29 to 2026-06-25"
+          ],
+          "metric_definitions": [
+            "Clicks：用户从 Google 搜索结果点击进入网站的次数。",
+            "Impressions：网站链接在 Google 搜索结果中展示的次数。",
+            "CTR：Clicks / Impressions。",
+            "Average position：网站最高结果在各次展示中的平均排名；数值越低越好。"
+          ]
+        }
+      },
+      {
+        "id": "vercel_analytics",
+        "label": "Vercel Web Analytics — actcreativelocal",
+        "href": "https://vercel.com/noah-chens-projects-c58c1ebe/actcreativelocal/analytics",
+        "query": {
+          "engine": "Vercel Web Analytics",
+          "language": "sql",
+          "sql": "WITH reviewed_rows(record_type, label, visitors, pageviews, bounce_rate) AS (VALUES ('summary','All traffic',108,155,0.80),('page','Homepage',74,101,NULL),('page','Venue finder',6,8,NULL),('page','National Museum',5,5,NULL),('page','Event fabrication SG',4,4,NULL),('page','ArtScience Museum',2,2,NULL),('page','Esplanade',2,2,NULL)) SELECT * FROM reviewed_rows;",
+          "description": "从 actcreativelocal 生产项目的 Web Analytics 报告中复核最近 30 天的访客、浏览量、跳出率、页面、来源、国家和设备数据。",
+          "executed_at": "2026-07-26T15:00:00+08:00",
+          "tables_used": [
+            "Web Analytics production environment"
+          ],
+          "filters": [
+            "Project: actcreativelocal",
+            "Domains include actcreative.net and www.actcreative.net",
+            "Environment: Production",
+            "Current period: 2026-06-26 15:00 to 2026-07-26 15:59 Asia/Singapore",
+            "Comparison: previous 30 days as displayed by Vercel"
+          ],
+          "metric_definitions": [
+            "Visitors：Vercel 去重后的访客数。",
+            "Page Views：页面被查看的总次数。",
+            "Bounce Rate：仅发生一次页面浏览且未继续浏览的访问占比；数值越低通常越好。",
+            "上期 Visitors、Page Views 与 Bounce Rate 为根据界面展示的整数/百分比变化反推的近似值。"
+          ]
+        }
+      }
+    ],
+    "cards": [
+      {
+        "id": "gsc_clicks",
+        "description": "最近 28 天",
+        "dataset": "gsc_summary",
+        "sourceId": "gsc_performance",
+        "metrics": [
+          {
+            "label": "点击",
+            "field": "clicks_current",
+            "format": "number"
+          },
+          {
+            "label": "前 28 天",
+            "field": "clicks_prior",
+            "format": "number"
+          },
+          {
+            "label": "环比",
+            "field": "clicks_delta_pct",
+            "format": "percent",
+            "signed": true
+          }
+        ]
+      },
+      {
+        "id": "gsc_impressions",
+        "description": "最近 28 天",
+        "dataset": "gsc_summary",
+        "sourceId": "gsc_performance",
+        "metrics": [
+          {
+            "label": "曝光",
+            "field": "impressions_current",
+            "format": "number"
+          },
+          {
+            "label": "前 28 天",
+            "field": "impressions_prior",
+            "format": "number"
+          },
+          {
+            "label": "环比",
+            "field": "impressions_delta_pct",
+            "format": "percent",
+            "signed": true
+          }
+        ]
+      },
+      {
+        "id": "gsc_ctr",
+        "description": "最近 28 天",
+        "dataset": "gsc_summary",
+        "sourceId": "gsc_performance",
+        "metrics": [
+          {
+            "label": "CTR",
+            "field": "ctr_current",
+            "format": "percent"
+          },
+          {
+            "label": "前 28 天",
+            "field": "ctr_prior",
+            "format": "percent"
+          },
+          {
+            "label": "提升",
+            "field": "ctr_delta_pp",
+            "format": "percent",
+            "signed": true
+          }
+        ]
+      },
+      {
+        "id": "gsc_position",
+        "description": "数值越低越好",
+        "dataset": "gsc_summary",
+        "sourceId": "gsc_performance",
+        "metrics": [
+          {
+            "label": "平均排名",
+            "field": "position_current",
+            "format": "number"
+          },
+          {
+            "label": "前 28 天",
+            "field": "position_prior",
+            "format": "number"
+          },
+          {
+            "label": "改善位次",
+            "field": "position_improvement",
+            "format": "number",
+            "signed": true
+          }
+        ]
+      },
+      {
+        "id": "vercel_visitors",
+        "description": "最近 30 天",
+        "dataset": "vercel_summary",
+        "sourceId": "vercel_analytics",
+        "metrics": [
+          {
+            "label": "访客",
+            "field": "visitors_current",
+            "format": "number"
+          },
+          {
+            "label": "上期估算",
+            "field": "visitors_prior_estimate",
+            "format": "number"
+          },
+          {
+            "label": "环比",
+            "field": "visitors_delta_pct",
+            "format": "percent",
+            "signed": true
+          }
+        ]
+      },
+      {
+        "id": "vercel_pageviews",
+        "description": "最近 30 天",
+        "dataset": "vercel_summary",
+        "sourceId": "vercel_analytics",
+        "metrics": [
+          {
+            "label": "浏览量",
+            "field": "pageviews_current",
+            "format": "number"
+          },
+          {
+            "label": "上期估算",
+            "field": "pageviews_prior_estimate",
+            "format": "number"
+          },
+          {
+            "label": "环比",
+            "field": "pageviews_delta_pct",
+            "format": "percent",
+            "signed": true
+          }
+        ]
+      },
+      {
+        "id": "vercel_bounce",
+        "description": "最近 30 天；越低越好",
+        "dataset": "vercel_summary",
+        "sourceId": "vercel_analytics",
+        "metrics": [
+          {
+            "label": "跳出率",
+            "field": "bounce_current",
+            "format": "percent"
+          },
+          {
+            "label": "上期估算",
+            "field": "bounce_prior_estimate",
+            "format": "percent"
+          },
+          {
+            "label": "环比",
+            "field": "bounce_delta_pct",
+            "format": "percent",
+            "signed": true
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "id": "landing_click_growth",
+        "title": "搜索落地页点击变化（最近 28 天 vs 前 28 天）",
+        "subtitle": "前 10 个落地页贡献了总点击增量的约 70%。",
+        "type": "bar",
+        "dataset": "gsc_landing_pages",
+        "sourceId": "gsc_performance",
+        "encodings": {
+          "x": {
+            "field": "page_label",
+            "type": "nominal",
+            "title": "落地页"
+          },
+          "y": {
+            "field": "click_change",
+            "type": "quantitative",
+            "title": "点击增量"
+          }
+        },
+        "options": {
+          "orientation": "horizontal",
+          "grouping": "grouped"
+        },
+        "valueFormat": "number"
+      },
+      {
+        "id": "low_ctr_exposure",
+        "title": "低 CTR 机会页曝光量（最近 28 天）",
+        "subtitle": "这些页面已有可观曝光，但 CTR 仍低于 2%。",
+        "type": "bar",
+        "dataset": "priority_pages",
+        "sourceId": "gsc_performance",
+        "encodings": {
+          "x": {
+            "field": "page_label",
+            "type": "nominal",
+            "title": "页面"
+          },
+          "y": {
+            "field": "impressions",
+            "type": "quantitative",
+            "title": "曝光量"
+          }
+        },
+        "options": {
+          "orientation": "horizontal",
+          "grouping": "grouped"
+        },
+        "valueFormat": "number"
+      },
+      {
+        "id": "vercel_pageviews_chart",
+        "title": "热门页面浏览量（最近 30 天）",
+        "subtitle": "首页占总浏览量的 65%，访问仍高度集中。",
+        "type": "bar",
+        "dataset": "vercel_pages",
+        "sourceId": "vercel_analytics",
+        "encodings": {
+          "x": {
+            "field": "page_label",
+            "type": "nominal",
+            "title": "页面"
+          },
+          "y": {
+            "field": "pageviews",
+            "type": "quantitative",
+            "title": "浏览量"
+          }
+        },
+        "options": {
+          "orientation": "horizontal",
+          "grouping": "grouped"
+        },
+        "valueFormat": "number"
+      }
+    ],
+    "tables": [
+      {
+        "id": "priority_pages_table",
+        "title": "优先优化页面",
+        "description": "按可操作的搜索机会排序；点击潜力为方向性情景估算。",
+        "dataset": "priority_pages",
+        "sourceId": "gsc_performance",
+        "columns": [
+          {
+            "field": "page_label",
+            "label": "页面",
+            "type": "text"
+          },
+          {
+            "field": "impressions",
+            "label": "曝光",
+            "type": "number",
+            "format": "number"
+          },
+          {
+            "field": "clicks",
+            "label": "点击",
+            "type": "number",
+            "format": "number"
+          },
+          {
+            "field": "ctr",
+            "label": "CTR",
+            "type": "percent",
+            "format": "percent"
+          },
+          {
+            "field": "position",
+            "label": "平均排名",
+            "type": "number",
+            "format": "number"
+          },
+          {
+            "field": "estimated_click_upside",
+            "label": "情景增量",
+            "type": "number",
+            "format": "number"
+          },
+          {
+            "field": "opportunity_score",
+            "label": "优先分",
+            "type": "number",
+            "format": "number"
+          },
+          {
+            "field": "recommended_action",
+            "label": "下一步",
+            "type": "text"
+          }
+        ],
+        "defaultSort": {
+          "field": "opportunity_score",
+          "direction": "desc"
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# ACT Creative 搜索与点击表现"
+      },
+      {
+        "id": "executive_summary",
+        "type": "markdown",
+        "body": "## Executive Summary\n\n- **增长已经发生，并得到两个来源交叉验证：**Google 搜索点击从 29 增至 85（+193%），Vercel 访客达到 108（+248%）。两者时间窗和去重口径不同，但增长方向一致。\n- **可见度增长快于点击效率：**Google 曝光增长 138%，平均排名改善 20.5 位，但 CTR 仅从 0.9% 升至 1.1%。下一阶段的最大杠杆是标题、描述与搜索意图匹配。\n- **获客增长尚未转化为强参与：**Vercel 页面浏览量增长 80%，但跳出率升至 80%（较上期高 15%）。应优先验证落地页信息、首屏 CTA 与站内路径。\n- **增长主要来自服务页与场地内容：**前 10 个搜索落地页贡献约 70% 的点击增量，其中 food truck、booth、event fabrication、props、FRP 服务页合计贡献 66% 的总增量。"
+      },
+      {
+        "id": "search_growth",
+        "type": "markdown",
+        "sourceId": "gsc_performance",
+        "body": "## 搜索增长已经确认，但点击效率仍落后\n\nSearch Console 的“点击”是从 Google 搜索结果进入网站的次数，“曝光”是链接在结果中出现的次数，CTR 为点击除以曝光，平均排名越低越好。\n\n最近 28 天点击为 **85**、曝光为 **7,593**，分别较前 28 天增长 **193%** 和 **138%**；平均排名从 **48.2** 改善到 **27.7**。不过 CTR 只从 **0.9%** 升至 **1.1%**，说明新获得的曝光尚未被充分转化为点击。"
+      },
+      {
+        "id": "gsc_metrics",
+        "type": "metric-strip",
+        "cardIds": [
+          "gsc_clicks",
+          "gsc_impressions",
+          "gsc_ctr",
+          "gsc_position"
+        ]
+      },
+      {
+        "id": "landing_growth_chart_block",
+        "type": "chart",
+        "chartId": "landing_click_growth"
+      },
+      {
+        "id": "growth_drivers",
+        "type": "markdown",
+        "sourceId": "gsc_performance",
+        "body": "## 增长由服务页和场地内容驱动\n\n点击增量最明显的是 **custom food truck（+9）**、**booth design/build（+8）**、**香港 event fabrication（+7）**、**FRP sculpture（+5）**、**新加坡 event fabrication（+4）** 与 **custom props（+4）**。场地内容也开始带来长尾流量，venue finder、National Museum 和 Marina Bay Sands 合计新增 7 次点击。\n\n与此同时，品牌查询 **“act creative”** 点击减少 7 次，平均排名从 1.0 降至 8.3；首页点击也减少 5 次。品牌词下降与非品牌增长并存，需要单独排查品牌 SERP、首页标题/规范链接及竞品占位。"
+      },
+      {
+        "id": "low_ctr_chart_block",
+        "type": "chart",
+        "chartId": "low_ctr_exposure"
+      },
+      {
+        "id": "priority_pages_table_block",
+        "type": "table",
+        "tableId": "priority_pages_table"
+      },
+      {
+        "id": "engagement",
+        "type": "markdown",
+        "sourceId": "vercel_analytics",
+        "body": "## 真实访问同步增长，但参与度变差\n\nVercel 的 Visitors 是去重访客，Page Views 是页面查看总次数，Bounce Rate 是只浏览一个页面就结束的访问占比。\n\n最近 30 天网站有 **108 位访客**、**155 次浏览**，界面显示分别增长 **248%** 和 **80%**。但跳出率为 **80%**，较上期上升 **15%**，是当前最明显的风险。首页承载 74 位访客与 101 次浏览，分别占总量约 69% 和 65%，流量结构仍较集中。"
+      },
+      {
+        "id": "vercel_metrics",
+        "type": "metric-strip",
+        "cardIds": [
+          "vercel_visitors",
+          "vercel_pageviews",
+          "vercel_bounce"
+        ]
+      },
+      {
+        "id": "vercel_pages_chart_block",
+        "type": "chart",
+        "chartId": "vercel_pageviews_chart"
+      },
+      {
+        "id": "cross_validation",
+        "type": "markdown",
+        "body": "## 两个来源交叉验证后的判断\n\n- **设备结构一致：**Search Console 点击中桌面占 73%、移动端占 27%；Vercel 访客中桌面占 76%、移动端占 23%。这增强了趋势可信度。\n- **地域结构基本一致：**新加坡占 Google 点击的 69%，占 Vercel 访客的 61%，仍是核心市场。美国在 Vercel 访客中占 22%，高于其 Google 点击占比，可能来自直接访问、其他来源、回访或归因差异。\n- **85 次 Google 点击与 39 位 google.com 引荐访客不能直接对账：**点击是交互次数，访客会去重，且来源识别、隐私处理与时间窗均不同。\n- **转化表现仍未知：**当前 Vercel 页面未展示自定义转化事件，因此无法判断新增流量是否带来 WhatsApp、邮件、表单或询盘。"
+      },
+      {
+        "id": "recommendations",
+        "type": "markdown",
+        "body": "## Recommended Next Steps\n\n1. **本周先改 5 个高杠杆页面：**booth design/build、event fabrication Singapore、custom props、venue finder、Marina Bay Sands。重写 title、meta description、H1 与首屏文案，使其紧贴已出现的查询意图。\n2. **修复品牌词下滑：**复核首页 title、canonical、结构化数据、Google 实际展示标题，以及“act creative”结果页上的竞品与同名实体。\n3. **降低高流量落地页跳出：**首屏明确服务范围与地域，放置单一主 CTA，加入案例/客户证明，并从场地内容引导到相关制作服务。\n4. **建立转化测量：**至少跟踪 WhatsApp 点击、邮件点击、表单提交和关键 CTA；在无法使用 Vercel 自定义事件时，使用可用的替代分析方案。\n5. **每周复盘同一批页面：**监控点击、曝光、CTR、排名、访客、浏览量、跳出率与询盘事件，避免只看总流量。"
+      },
+      {
+        "id": "further_questions",
+        "type": "markdown",
+        "body": "## Further Questions\n\n- 哪些落地页最终产生了 WhatsApp、邮件或表单询盘？\n- 高跳出是否集中在首页、特定设备、国家或某些新内容页？\n- 品牌词排名下降是短期波动，还是首页标题、规范链接或同名竞争导致？\n- food truck 页面在 Search Console 中增长明显，但未出现在 Vercel 可见热门页列表中；应复核该静态页的实际 analytics 上报与路径规范化。"
+      },
+      {
+        "id": "caveats",
+        "type": "markdown",
+        "body": "## Caveats and Assumptions\n\nSearch Console 使用完整的 28 天对比窗口；Vercel 使用最近 30 天，二者日期和指标定义不同，因此仅用于方向性交叉验证，不应逐项相减。Vercel 的上期绝对值由界面显示的整数变化率反推，属于近似值。点击潜力情景假设页面在当前曝光量下达到指定 CTR，未考虑排名、查询组合和曝光量后续变化。"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-26T15:19:39+08:00",
+    "status": "ready",
+    "datasets": {
+      "gsc_summary": [
+        {
+          "clicks_current": 85,
+          "clicks_prior": 29,
+          "clicks_delta_pct": 1.931034,
+          "impressions_current": 7593,
+          "impressions_prior": 3194,
+          "impressions_delta_pct": 1.37727,
+          "ctr_current": 0.011,
+          "ctr_prior": 0.009,
+          "ctr_delta_pp": 0.002,
+          "position_current": 27.7,
+          "position_prior": 48.2,
+          "position_improvement": 20.5,
+          "current_start": "2026-06-26",
+          "current_end": "2026-07-23",
+          "prior_start": "2026-05-29",
+          "prior_end": "2026-06-25"
+        }
+      ],
+      "vercel_summary": [
+        {
+          "visitors_current": 108,
+          "visitors_prior_estimate": 31,
+          "visitors_delta_pct": 2.48,
+          "pageviews_current": 155,
+          "pageviews_prior_estimate": 86,
+          "pageviews_delta_pct": 0.8,
+          "bounce_current": 0.8,
+          "bounce_prior_estimate": 0.696,
+          "bounce_delta_pct": 0.15,
+          "current_start": "2026-06-26T15:00:00+08:00",
+          "current_end": "2026-07-26T15:59:59+08:00"
+        }
+      ],
+      "gsc_landing_pages": [
+        {
+          "page_label": "Food truck rental",
+          "path": "/custom-food-truck-rental-singapore/",
+          "clicks_current": 12,
+          "clicks_prior": 3,
+          "click_change": 9,
+          "impressions_current": 388,
+          "impressions_prior": 77,
+          "ctr_current": 0.031,
+          "ctr_prior": 0.039,
+          "position_current": 16.5,
+          "position_prior": 24.8,
+          "position_improvement": 8.3
+        },
+        {
+          "page_label": "首页",
+          "path": "/",
+          "clicks_current": 12,
+          "clicks_prior": 17,
+          "click_change": -5,
+          "impressions_current": 70,
+          "impressions_prior": 47,
+          "ctr_current": 0.171,
+          "ctr_prior": 0.362,
+          "position_current": 4.7,
+          "position_prior": 4.2,
+          "position_improvement": -0.5
+        },
+        {
+          "page_label": "Event fabrication HK",
+          "path": "/event-fabrication-hong-kong/",
+          "clicks_current": 9,
+          "clicks_prior": 2,
+          "click_change": 7,
+          "impressions_current": 105,
+          "impressions_prior": 35,
+          "ctr_current": 0.086,
+          "ctr_prior": 0.057,
+          "position_current": 22.6,
+          "position_prior": 18.5,
+          "position_improvement": -4.1
+        },
+        {
+          "page_label": "Booth design/build",
+          "path": "/booth-design-build-singapore/",
+          "clicks_current": 8,
+          "clicks_prior": 0,
+          "click_change": 8,
+          "impressions_current": 2004,
+          "impressions_prior": 1236,
+          "ctr_current": 0.004,
+          "ctr_prior": 0,
+          "position_current": 46.8,
+          "position_prior": 70.7,
+          "position_improvement": 23.9
+        },
+        {
+          "page_label": "Custom props",
+          "path": "/custom-props-singapore/",
+          "clicks_current": 7,
+          "clicks_prior": 3,
+          "click_change": 4,
+          "impressions_current": 435,
+          "impressions_prior": 58,
+          "ctr_current": 0.016,
+          "ctr_prior": 0.052,
+          "position_current": 30.6,
+          "position_prior": 15.7,
+          "position_improvement": -14.8
+        },
+        {
+          "page_label": "Event fabrication SG",
+          "path": "/event-fabrication-singapore/",
+          "clicks_current": 5,
+          "clicks_prior": 1,
+          "click_change": 4,
+          "impressions_current": 862,
+          "impressions_prior": 747,
+          "ctr_current": 0.006,
+          "ctr_prior": 0.001,
+          "position_current": 14.1,
+          "position_prior": 22.4,
+          "position_improvement": 8.3
+        },
+        {
+          "page_label": "FRP sculpture",
+          "path": "/frp-sculpture-fabrication-singapore/",
+          "clicks_current": 5,
+          "clicks_prior": 0,
+          "click_change": 5,
+          "impressions_current": 63,
+          "impressions_prior": 29,
+          "ctr_current": 0.079,
+          "ctr_prior": 0,
+          "position_current": 7.8,
+          "position_prior": 20.9,
+          "position_improvement": 13.1
+        },
+        {
+          "page_label": "Venue finder",
+          "path": "/singapore-event-venue-finder/",
+          "clicks_current": 3,
+          "clicks_prior": 1,
+          "click_change": 2,
+          "impressions_current": 245,
+          "impressions_prior": 24,
+          "ctr_current": 0.012,
+          "ctr_prior": 0.042,
+          "position_current": 7.8,
+          "position_prior": 10,
+          "position_improvement": 2.2
+        },
+        {
+          "page_label": "National Museum",
+          "path": "/singapore-event-venues/national-museum-of-singapore/",
+          "clicks_current": 3,
+          "clicks_prior": 0,
+          "click_change": 3,
+          "impressions_current": 229,
+          "impressions_prior": 0,
+          "ctr_current": 0.013,
+          "ctr_prior": 0,
+          "position_current": 7.9,
+          "position_prior": null,
+          "position_improvement": null
+        },
+        {
+          "page_label": "Marina Bay Sands",
+          "path": "/singapore-event-venues/marina-bay-sands/",
+          "clicks_current": 2,
+          "clicks_prior": 0,
+          "click_change": 2,
+          "impressions_current": 381,
+          "impressions_prior": 40,
+          "ctr_current": 0.005,
+          "ctr_prior": 0,
+          "position_current": 11.8,
+          "position_prior": 11.2,
+          "position_improvement": -0.6
+        }
+      ],
+      "priority_pages": [
+        {
+          "page_label": "Booth design/build",
+          "path": "/booth-design-build-singapore/",
+          "impressions": 2004,
+          "clicks": 8,
+          "ctr": 0.004,
+          "position": 46.8,
+          "target_ctr": 0.01,
+          "estimated_click_upside": 12,
+          "opportunity_score": 100,
+          "recommended_action": "重写标题/描述，并围绕 booth design 查询补强内容"
+        },
+        {
+          "page_label": "Event fabrication SG",
+          "path": "/event-fabrication-singapore/",
+          "impressions": 862,
+          "clicks": 5,
+          "ctr": 0.006,
+          "position": 14.1,
+          "target_ctr": 0.015,
+          "estimated_click_upside": 8,
+          "opportunity_score": 95,
+          "recommended_action": "冲击第一页并强化服务证据与本地意图"
+        },
+        {
+          "page_label": "Custom props",
+          "path": "/custom-props-singapore/",
+          "impressions": 435,
+          "clicks": 7,
+          "ctr": 0.016,
+          "position": 30.6,
+          "target_ctr": 0.025,
+          "estimated_click_upside": 4,
+          "opportunity_score": 90,
+          "recommended_action": "排查排名回落并更新案例、内部链接与标题"
+        },
+        {
+          "page_label": "Marina Bay Sands",
+          "path": "/singapore-event-venues/marina-bay-sands/",
+          "impressions": 381,
+          "clicks": 2,
+          "ctr": 0.005,
+          "position": 11.8,
+          "target_ctr": 0.02,
+          "estimated_click_upside": 6,
+          "opportunity_score": 88,
+          "recommended_action": "优化摘要并从场地页导流到制作服务"
+        },
+        {
+          "page_label": "Venue finder",
+          "path": "/singapore-event-venue-finder/",
+          "impressions": 245,
+          "clicks": 3,
+          "ctr": 0.012,
+          "position": 7.8,
+          "target_ctr": 0.03,
+          "estimated_click_upside": 4,
+          "opportunity_score": 85,
+          "recommended_action": "优化结果摘要、首屏承诺与场地筛选价值"
+        },
+        {
+          "page_label": "National Museum",
+          "path": "/singapore-event-venues/national-museum-of-singapore/",
+          "impressions": 229,
+          "clicks": 3,
+          "ctr": 0.013,
+          "position": 7.9,
+          "target_ctr": 0.03,
+          "estimated_click_upside": 4,
+          "opportunity_score": 82,
+          "recommended_action": "增强活动规划信息与相关服务 CTA"
+        }
+      ],
+      "vercel_pages": [
+        {
+          "page_label": "首页",
+          "path": "/",
+          "visitors": 74,
+          "pageviews": 101,
+          "visitor_share": 0.685,
+          "pageview_share": 0.652
+        },
+        {
+          "page_label": "Venue finder",
+          "path": "/singapore-event-venue-finder",
+          "visitors": 6,
+          "pageviews": 8,
+          "visitor_share": 0.056,
+          "pageview_share": 0.052
+        },
+        {
+          "page_label": "National Museum",
+          "path": "/singapore-event-venues/national-museum-of-singapore",
+          "visitors": 5,
+          "pageviews": 5,
+          "visitor_share": 0.046,
+          "pageview_share": 0.032
+        },
+        {
+          "page_label": "Event fabrication SG",
+          "path": "/event-fabrication-singapore",
+          "visitors": 4,
+          "pageviews": 4,
+          "visitor_share": 0.037,
+          "pageview_share": 0.026
+        },
+        {
+          "page_label": "ArtScience Museum",
+          "path": "/singapore-event-venues/artscience-museum",
+          "visitors": 2,
+          "pageviews": 2,
+          "visitor_share": 0.019,
+          "pageview_share": 0.013
+        },
+        {
+          "page_label": "Esplanade",
+          "path": "/singapore-event-venues/esplanade-theatres-on-the-bay",
+          "visitors": 2,
+          "pageviews": 2,
+          "visitor_share": 0.019,
+          "pageview_share": 0.013
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "gsc_performance",
+      "label": "Google Search Console — 搜索结果",
+      "href": "https://search.google.com/search-console/performance/search-analytics?resource_id=sc-domain%3Aactcreative.net",
+      "query": {
+        "engine": "Google Search Console",
+        "language": "sql",
+        "sql": "WITH reviewed_rows(record_type, label, clicks_current, clicks_prior, impressions_current, impressions_prior, ctr_current, ctr_prior, position_current, position_prior) AS (VALUES ('summary','All search results',85,29,7593,3194,0.011,0.009,27.7,48.2),('page','Food truck rental',12,3,388,77,0.031,0.039,16.5,24.8),('page','Homepage',12,17,70,47,0.171,0.362,4.7,4.2),('page','Event fabrication HK',9,2,105,35,0.086,0.057,22.6,18.5),('page','Booth design/build',8,0,2004,1236,0.004,0,46.8,70.7),('page','Custom props',7,3,435,58,0.016,0.052,30.6,15.7),('page','Event fabrication SG',5,1,862,747,0.006,0.001,14.1,22.4),('page','FRP sculpture',5,0,63,29,0.079,0,7.8,20.9),('page','Venue finder',3,1,245,24,0.012,0.042,7.8,10.0),('page','National Museum',3,0,229,0,0.013,0,7.9,NULL),('page','Marina Bay Sands',2,0,381,40,0.005,0,11.8,11.2)) SELECT * FROM reviewed_rows;",
+        "description": "从 actcreative.net 的 Search results 报告中复核最近 28 天与前 28 天的总览、查询、页面、国家和设备数据。",
+        "executed_at": "2026-07-26T15:00:00+08:00",
+        "tables_used": [
+          "Search results performance"
+        ],
+        "filters": [
+          "Property: sc-domain:actcreative.net",
+          "Search type: Web",
+          "Current period: 2026-06-26 to 2026-07-23",
+          "Comparison period: 2026-05-29 to 2026-06-25"
+        ],
+        "metric_definitions": [
+          "Clicks：用户从 Google 搜索结果点击进入网站的次数。",
+          "Impressions：网站链接在 Google 搜索结果中展示的次数。",
+          "CTR：Clicks / Impressions。",
+          "Average position：网站最高结果在各次展示中的平均排名；数值越低越好。"
+        ]
+      }
+    },
+    {
+      "id": "vercel_analytics",
+      "label": "Vercel Web Analytics — actcreativelocal",
+      "href": "https://vercel.com/noah-chens-projects-c58c1ebe/actcreativelocal/analytics",
+      "query": {
+        "engine": "Vercel Web Analytics",
+        "language": "sql",
+        "sql": "WITH reviewed_rows(record_type, label, visitors, pageviews, bounce_rate) AS (VALUES ('summary','All traffic',108,155,0.80),('page','Homepage',74,101,NULL),('page','Venue finder',6,8,NULL),('page','National Museum',5,5,NULL),('page','Event fabrication SG',4,4,NULL),('page','ArtScience Museum',2,2,NULL),('page','Esplanade',2,2,NULL)) SELECT * FROM reviewed_rows;",
+        "description": "从 actcreativelocal 生产项目的 Web Analytics 报告中复核最近 30 天的访客、浏览量、跳出率、页面、来源、国家和设备数据。",
+        "executed_at": "2026-07-26T15:00:00+08:00",
+        "tables_used": [
+          "Web Analytics production environment"
+        ],
+        "filters": [
+          "Project: actcreativelocal",
+          "Domains include actcreative.net and www.actcreative.net",
+          "Environment: Production",
+          "Current period: 2026-06-26 15:00 to 2026-07-26 15:59 Asia/Singapore",
+          "Comparison: previous 30 days as displayed by Vercel"
+        ],
+        "metric_definitions": [
+          "Visitors：Vercel 去重后的访客数。",
+          "Page Views：页面被查看的总次数。",
+          "Bounce Rate：仅发生一次页面浏览且未继续浏览的访问占比；数值越低通常越好。",
+          "上期 Visitors、Page Views 与 Bounce Rate 为根据界面展示的整数/百分比变化反推的近似值。"
+        ]
+      }
+    }
+  ]
+}

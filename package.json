@@ -61,6 +61,7 @@
       "scripts": {
             "dev": "vite",
             "build": "vite build",
+            "seo:check": "node scripts/check-seo-pages.mjs",
             "og": "node scripts/generate-og-images.mjs",
             "gsc": "node scripts/fetch-search-console.mjs",
             "gsc:auth": "node scripts/create-google-oauth-token.mjs",
