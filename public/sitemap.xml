@@ -15,7 +15,7 @@
   -->
   <url>
     <loc>https://actcreative.net/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/" />
@@ -395,7 +395,7 @@
 
   <url>
     <loc>https://actcreative.net/event-merchandise-sourcing/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -447,9 +447,48 @@
 
   <url>
     <loc>https://actcreative.net/case-studies/</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/" />
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/assets/sengkang-custom-mug.webp</image:loc>
+      <image:title>Weekend Brew Club Sengkang custom mug</image:title>
+      <image:caption>Sengkang neighbourhood edition mug sourced, produced and delivered through ACT Creative.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/assets/bras-basah-custom-mug.webp</image:loc>
+      <image:title>Weekend Brew Club Bras Basah custom mug</image:title>
+      <image:caption>Bras Basah Complex edition with bilingual location-specific artwork.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/assets/hougang-custom-mug.webp</image:loc>
+      <image:title>Weekend Brew Club Hougang custom mug</image:title>
+      <image:caption>Hougang Village Merchants Association edition within the multi-location mug series.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/assets/marsiling-custom-mug.webp</image:loc>
+      <image:title>Weekend Brew Club Marsiling custom mug</image:title>
+      <image:caption>Marsiling edition custom mug prepared through the repeatable China-to-Singapore supply workflow.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/assets/sengkang-bulk-custom-mugs.webp</image:loc>
+      <image:title>Weekend Brew Club Sengkang mugs in bulk</image:title>
+      <image:caption>Bulk Sengkang edition mugs visible during production and packing coordination.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/assets/hougang-bulk-custom-mugs.webp</image:loc>
+      <image:title>Weekend Brew Club Hougang mugs in bulk</image:title>
+      <image:caption>Bulk Hougang edition mugs prepared before the China-to-Singapore shipment.</image:caption>
+    </image:image>
   </url>
 
   <url>

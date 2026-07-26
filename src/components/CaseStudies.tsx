@@ -77,6 +77,25 @@ export function CaseStudies() {
       ]
     },
     {
+      title: t("WEEKEND BREW CLUB", "WEEKEND BREW CLUB"),
+      subtitle: t("社区定制咖啡杯采购", "Custom Mug Sourcing & Delivery"),
+      image: "/case-studies/weekend-brew-club-custom-mugs-singapore/assets/sengkang-custom-mug.webp",
+      href: "/case-studies/weekend-brew-club-custom-mugs-singapore/",
+      client: "INVade",
+      achievement: t("一条龙", "End-to-end"),
+      achievementDesc: t("寻厂 · 定制 · 跨境与本地交付", "factory · customization · delivery"),
+      highlights: [
+        t(
+          "中国工厂寻找、沟通与多地点版本制作",
+          "China factory sourcing and multi-edition production coordination"
+        ),
+        t(
+          "跨境运输、时间线管理与新加坡本地配送",
+          "Freight, timeline management and Singapore local delivery"
+        )
+      ]
+    },
+    {
       title: t("ARTBOX SINGAPORE", "ARTBOX SINGAPORE"),
       subtitle: t("活动衍生品与物料支持", "Event Merchandise & Materials Support"),
       image: artboxMaterialsImage,
@@ -271,7 +290,7 @@ export function CaseStudies() {
             <div className="w-32 h-1 bg-[#CCFF00] mx-auto"></div>
           </div>
 
-          {/* Projects Grid — 4 cards: 2x2 on tablet, 1x4 on desktop */}
+          {/* Horizontally scrollable Singapore project cards */}
           <div className="case-rail-shell">
           <div
             ref={singaporeRailRef}

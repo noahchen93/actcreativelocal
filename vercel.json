@@ -42,6 +42,8 @@
     { "source": "/case-studies/", "destination": "/case-studies/index.html" },
     { "source": "/case-studies/artbox-singapore-merchandise-materials", "destination": "/case-studies/artbox-singapore-merchandise-materials/index.html" },
     { "source": "/case-studies/artbox-singapore-merchandise-materials/", "destination": "/case-studies/artbox-singapore-merchandise-materials/index.html" },
+    { "source": "/case-studies/weekend-brew-club-custom-mugs-singapore", "destination": "/case-studies/weekend-brew-club-custom-mugs-singapore/index.html" },
+    { "source": "/case-studies/weekend-brew-club-custom-mugs-singapore/", "destination": "/case-studies/weekend-brew-club-custom-mugs-singapore/index.html" },
     { "source": "/case-studies/sentosa-big-big-world-event-fabrication", "destination": "/case-studies/sentosa-big-big-world-event-fabrication/index.html" },
     { "source": "/case-studies/sentosa-big-big-world-event-fabrication/", "destination": "/case-studies/sentosa-big-big-world-event-fabrication/index.html" },
     { "source": "/case-studies/wings-of-art-barbie-runway-singapore", "destination": "/case-studies/wings-of-art-barbie-runway-singapore/index.html" },

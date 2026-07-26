@@ -35,6 +35,11 @@ export function Header() {
           meta: t("慈善艺术展与道具制作", "Charity art exhibition and props"),
         },
         {
+          title: "Weekend Brew Club",
+          href: "/case-studies/weekend-brew-club-custom-mugs-singapore/",
+          meta: t("社区定制咖啡杯采购与交付", "Custom mug sourcing and delivery"),
+        },
+        {
           title: "Artbox Singapore",
           href: localizedHref(
             "/case-studies/artbox-singapore-merchandise-materials/",

@@ -13,6 +13,7 @@ const priorityPages = [
   "event-fabrication-singapore/index.html",
   "custom-props-singapore/index.html",
   "singapore-event-venue-sourcing/index.html",
+  "case-studies/weekend-brew-club-custom-mugs-singapore/index.html",
 ];
 
 const allStaticPages = [];
