@@ -4370,6 +4370,37 @@ footer a:hover { color: var(--accent); }
     #050505;
 }
 
+.wbc-onsite-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.wbc-onsite-gallery figure {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-sm);
+  background: #050505;
+}
+
+.wbc-onsite-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+
+.wbc-onsite-gallery figcaption {
+  padding: 13px 15px 15px;
+  color: var(--text-dim);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
 .wbc-edition-tabs {
   display: flex;
   gap: 8px;
@@ -4546,6 +4577,10 @@ footer a:hover { color: var(--accent); }
 }
 
 @media (max-width: 620px) {
+  .wbc-onsite-gallery {
+    grid-template-columns: 1fr;
+  }
+
   .wbc-edition-panel figure img {
     height: 330px;
   }
