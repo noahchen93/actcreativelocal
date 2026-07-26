@@ -1,9 +1,14 @@
 import { lazy, Suspense, useEffect } from "react";
-import { Analytics } from "@vercel/analytics/react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { HolidayPromo } from "./components/HolidayPromo";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
+const EventAiAssistant = lazy(() =>
+  import("./components/EventAiAssistant").then((module) => ({
+    default: module.EventAiAssistant,
+  })),
+);
 const CaseStudies = lazy(() =>
   import("./components/CaseStudies").then((module) => ({
     default: module.CaseStudies,
@@ -76,9 +81,27 @@ function HashScrollRestorer() {
 export default function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-black">
+      <style>{`
+        .site-shell {
+          --holiday-promo-height: 72px;
+          --site-header-height: 86px;
+        }
+        .site-main {
+          padding-top: calc(var(--holiday-promo-height) + var(--site-header-height));
+        }
+        .site-main > section {
+          scroll-margin-top: calc(var(--holiday-promo-height) + var(--site-header-height) + 1rem);
+        }
+        @media (min-width: 768px) {
+          .site-shell {
+            --holiday-promo-height: 58px;
+          }
+        }
+      `}</style>
+      <div className="site-shell min-h-screen bg-black">
+        <HolidayPromo />
         <Header />
-        <main>
+        <main className="site-main">
           <Hero />
           <Suspense fallback={<SectionFallback minHeight="48rem" />}>
             <CaseStudies />
@@ -100,7 +123,9 @@ export default function App() {
           <Toaster />
         </Suspense>
         <HashScrollRestorer />
-        <Analytics />
+        <Suspense fallback={null}>
+          <EventAiAssistant />
+        </Suspense>
       </div>
     </LanguageProvider>
   );

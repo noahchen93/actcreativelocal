@@ -1,4 +1,35 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
+  "functions": {
+    "api/**/*.ts": {
+      "maxDuration": 60,
+      "regions": ["sin1"],
+      "supportsCancellation": true
+    }
+  },
+  "redirects": [
+    {
+      "source": "/singapore-event-venues/s-e-a-aquarium",
+      "destination": "/singapore-event-venues/singapore-oceanarium/",
+      "permanent": true
+    },
+    {
+      "source": "/singapore-event-venues/s-e-a-aquarium/",
+      "destination": "/singapore-event-venues/singapore-oceanarium/",
+      "permanent": true
+    },
+    {
+      "source": "/singapore-event-venue-sourcing",
+      "destination": "/singapore-event-venue-finder/",
+      "permanent": true
+    },
+    {
+      "source": "/singapore-event-venue-sourcing/",
+      "destination": "/singapore-event-venue-finder/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/about", "destination": "/about/index.html" },
     { "source": "/about/", "destination": "/about/index.html" },
@@ -6,6 +37,14 @@
     { "source": "/zh/", "destination": "/zh/index.html" },
     { "source": "/zh/event-fabrication-singapore", "destination": "/zh/event-fabrication-singapore/index.html" },
     { "source": "/zh/event-fabrication-singapore/", "destination": "/zh/event-fabrication-singapore/index.html" },
+    { "source": "/zh/custom-props-singapore", "destination": "/zh/custom-props-singapore/index.html" },
+    { "source": "/zh/custom-props-singapore/", "destination": "/zh/custom-props-singapore/index.html" },
+    { "source": "/zh/frp-sculpture-fabrication-singapore", "destination": "/zh/frp-sculpture-fabrication-singapore/index.html" },
+    { "source": "/zh/frp-sculpture-fabrication-singapore/", "destination": "/zh/frp-sculpture-fabrication-singapore/index.html" },
+    { "source": "/zh/custom-food-truck-rental-singapore", "destination": "/zh/custom-food-truck-rental-singapore/index.html" },
+    { "source": "/zh/custom-food-truck-rental-singapore/", "destination": "/zh/custom-food-truck-rental-singapore/index.html" },
+    { "source": "/zh/singapore-event-venue-finder", "destination": "/zh/singapore-event-venue-finder/index.html" },
+    { "source": "/zh/singapore-event-venue-finder/", "destination": "/zh/singapore-event-venue-finder/index.html" },
     { "source": "/zh/china-event-production-support", "destination": "/zh/china-event-production-support/index.html" },
     { "source": "/zh/china-event-production-support/", "destination": "/zh/china-event-production-support/index.html" },
     { "source": "/blog", "destination": "/blog/index.html" },
@@ -22,8 +61,22 @@
     { "source": "/frp-sculpture-fabrication-singapore/", "destination": "/frp-sculpture-fabrication-singapore/index.html" },
     { "source": "/custom-food-truck-rental-singapore", "destination": "/custom-food-truck-rental-singapore/index.html" },
     { "source": "/custom-food-truck-rental-singapore/", "destination": "/custom-food-truck-rental-singapore/index.html" },
-    { "source": "/singapore-event-venue-sourcing", "destination": "/singapore-event-venue-sourcing/index.html" },
-    { "source": "/singapore-event-venue-sourcing/", "destination": "/singapore-event-venue-sourcing/index.html" },
+    { "source": "/singapore-event-venue-finder", "destination": "/singapore-event-venue-finder/index.html" },
+    { "source": "/singapore-event-venue-finder/", "destination": "/singapore-event-venue-finder/index.html" },
+    { "source": "/singapore-event-venues/sentosa", "destination": "/singapore-event-venues/sentosa/index.html" },
+    { "source": "/singapore-event-venues/sentosa/", "destination": "/singapore-event-venues/sentosa/index.html" },
+    { "source": "/singapore-event-venues/marina-bay", "destination": "/singapore-event-venues/marina-bay/index.html" },
+    { "source": "/singapore-event-venues/marina-bay/", "destination": "/singapore-event-venues/marina-bay/index.html" },
+    { "source": "/singapore-event-venues/outdoor", "destination": "/singapore-event-venues/outdoor/index.html" },
+    { "source": "/singapore-event-venues/outdoor/", "destination": "/singapore-event-venues/outdoor/index.html" },
+    { "source": "/singapore-event-venues/hotel-ballrooms", "destination": "/singapore-event-venues/hotel-ballrooms/index.html" },
+    { "source": "/singapore-event-venues/hotel-ballrooms/", "destination": "/singapore-event-venues/hotel-ballrooms/index.html" },
+    { "source": "/singapore-event-venues/200-guests", "destination": "/singapore-event-venues/200-guests/index.html" },
+    { "source": "/singapore-event-venues/200-guests/", "destination": "/singapore-event-venues/200-guests/index.html" },
+    { "source": "/singapore-event-venues/arts-performance", "destination": "/singapore-event-venues/arts-performance/index.html" },
+    { "source": "/singapore-event-venues/arts-performance/", "destination": "/singapore-event-venues/arts-performance/index.html" },
+    { "source": "/singapore-event-venues/:slug", "destination": "/singapore-event-venues/:slug/index.html" },
+    { "source": "/singapore-event-venues/:slug/", "destination": "/singapore-event-venues/:slug/index.html" },
     { "source": "/exhibition-booth-production-singapore", "destination": "/exhibition-booth-production-singapore/index.html" },
     { "source": "/exhibition-booth-production-singapore/", "destination": "/exhibition-booth-production-singapore/index.html" },
     { "source": "/china-event-production-support", "destination": "/china-event-production-support/index.html" },
@@ -42,6 +95,8 @@
     { "source": "/case-studies/", "destination": "/case-studies/index.html" },
     { "source": "/case-studies/artbox-singapore-merchandise-materials", "destination": "/case-studies/artbox-singapore-merchandise-materials/index.html" },
     { "source": "/case-studies/artbox-singapore-merchandise-materials/", "destination": "/case-studies/artbox-singapore-merchandise-materials/index.html" },
+    { "source": "/case-studies/kick-off-challenge-star-vista-singapore", "destination": "/case-studies/kick-off-challenge-star-vista-singapore/index.html" },
+    { "source": "/case-studies/kick-off-challenge-star-vista-singapore/", "destination": "/case-studies/kick-off-challenge-star-vista-singapore/index.html" },
     { "source": "/case-studies/weekend-brew-club-custom-mugs-singapore", "destination": "/case-studies/weekend-brew-club-custom-mugs-singapore/index.html" },
     { "source": "/case-studies/weekend-brew-club-custom-mugs-singapore/", "destination": "/case-studies/weekend-brew-club-custom-mugs-singapore/index.html" },
     { "source": "/case-studies/sentosa-big-big-world-event-fabrication", "destination": "/case-studies/sentosa-big-big-world-event-fabrication/index.html" },

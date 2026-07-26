@@ -1,0 +1,1840 @@
+{
+  "b97e6361972a6ba3007d13d28ff9cbd755733b8d": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "3ef02f2b37e80182e1be246c664d128388e7403f": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "e522829efaf73828ebaccadebf528f06921e7794": {
+    "lat": 1.2836965,
+    "lng": 103.8607226,
+    "geocodeStatus": "matched",
+    "geocodeName": "Marina Bay Sands, 10, Bayfront Avenue, Bayfront Subzone, Civic District, Downtown Core, Central Region, Singapore, 018956, Singapore"
+  },
+  "b9151a38374c5d38a2c5082128e2a8ef70dbde93": {
+    "lat": 1.2566416,
+    "lng": 103.8212057,
+    "geocodeStatus": "matched",
+    "geocodeName": "Universal Studios Globe, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "56884ee2cdc4668844f19b2a982d2bc284b8678d": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "48edddb8d1451e422b32b8ac08a9f46ee866cf35": {
+    "lat": 1.2663024,
+    "lng": 103.8604558,
+    "geocodeStatus": "matched",
+    "geocodeName": "Marina Bay Cruise Centre, 61, Marina Coastal Drive, Straits View, Central Region, Singapore, 018947, Singapore"
+  },
+  "7c17282682cca30056e39c25145e0f2a47ff6e7e": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "316f0840e479f3a0e0770850a76c9aa659065bc4": {
+    "lat": 1.2566645,
+    "lng": 103.8113714,
+    "geocodeStatus": "matched",
+    "geocodeName": "Siloso, Siloso Beach Walk, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 098979, Singapore"
+  },
+  "49a76333913b6c9fc3df580134cc27fbb3a5810a": {
+    "lat": 1.3333815,
+    "lng": 103.9569064,
+    "geocodeStatus": "matched",
+    "geocodeName": "Bliss Garden Restaurant, 1, Expo Drive, Xilin, Changi Business Park, Tampines, East Region, Singapore, 486150, Singapore"
+  },
+  "c0a5189e9e6dd53fb70eb4ff977995ad68c3f2ec": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "955ff01ddfeee283166d1bbc1e1af0c7c707efd0": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "42cce8c4110d8d6886ee6c2115f8c3e232a7809a": {
+    "lat": 1.2580864,
+    "lng": 103.8177227,
+    "geocodeStatus": "matched",
+    "geocodeName": "Adventure Cove Waterpark, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "51b996ee823471d10e40cd62d0bd05c46deb3072": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "213f7442f4c2199571def2a92c06546f0b4d9d42": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "64afe28776bad6e66e51aa256b03194a23139a22": {
+    "lat": 1.2935198,
+    "lng": 103.8572572,
+    "geocodeStatus": "matched",
+    "geocodeName": "Suntec Singapore Convention & Exhibition Centre, 1, Raffles Boulevard, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039593, Singapore"
+  },
+  "a283d0cedf4e54c930b3963ac014ba6929fbf83f": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "f8cacded56fc4d5bd388efbed67f4c37a7820e99": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "12ac39d0d28fc9fa8a090f07a31d8ef134920291": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "cdb8122a7cd240aab4816cdbfb3b58c539d58e36": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "c369c3feb6ffb5499741c4aec505877c06789df4": {
+    "lat": 1.3328969,
+    "lng": 103.7359933,
+    "geocodeStatus": "matched",
+    "geocodeName": "Science Centre Singapore, 15, Science Centre Road, Lakeside (business), Jurong East, West Region, Singapore, 609081, Singapore"
+  },
+  "1615d908ccae4a16e26415d87ffc1f9e7a6e04d2": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "08fa8c314fd51721075ab08bd3fdcf40b7593a3f": {
+    "lat": 1.2479779,
+    "lng": 103.8416982,
+    "geocodeStatus": "matched",
+    "geocodeName": "Quayside Isle, 31, Ocean Way, Sentosa, Sentosa Cove, Southern Islands, Central Region, Singapore, 098375, Singapore"
+  },
+  "0be370a207bac3fb6ec9148e325396b156aec61f": {
+    "lat": 1.3019079,
+    "lng": 103.8359161,
+    "geocodeStatus": "matched",
+    "geocodeName": "Hilton Singapore Orchard, 333, Orchard Road, Somerset, Orchard, Central Region, Singapore, 238867, Singapore"
+  },
+  "28adbb76e3e17bdaa9c92d3035832224040b52ab": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "b027cfe9570b0d74d5dd4d3462560cb31f51ecca": {
+    "lat": 1.2446339,
+    "lng": 103.8270064,
+    "geocodeStatus": "matched",
+    "geocodeName": "Tanjong Beach Walk, Sentosa, Southern Islands, Central Region, Singapore, 099891, Singapore"
+  },
+  "a629e6b7e72930a849352e35d476fa3deb7fba66": {
+    "lat": 1.2905344,
+    "lng": 103.8600739,
+    "geocodeStatus": "matched",
+    "geocodeName": "The Ritz-Carlton, Millenia Singapore, 7, Raffles Avenue, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039799, Singapore"
+  },
+  "c11eb187ec9eff51f910a2c74f854b6fd35d7c7d": {
+    "lat": 1.2861382,
+    "lng": 103.8592297,
+    "geocodeStatus": "matched",
+    "geocodeName": "ArtScience Museum, 6, Bayfront Avenue, Bayfront, Civic District, Downtown Core, Central Region, Singapore, 018974, Singapore"
+  },
+  "01472a6d09bbfec1005813027f43d70ec702892d": {
+    "lat": 1.2905075,
+    "lng": 103.8349983,
+    "geocodeStatus": "matched",
+    "geocodeName": "Grand Copthorne Waterfront Hotel, 392, Havelock Road, Robertson Quay, Singapore River, Central Region, Singapore, 169663, Singapore"
+  },
+  "535ab0f6c933c76d9e75a9f267046177969eefb0": {
+    "lat": 1.3063453,
+    "lng": 103.8332833,
+    "geocodeStatus": "matched",
+    "geocodeName": "Grand Hyatt Singapore, 10-12, Scotts Road, Boulevard, Orchard, Central Region, Singapore, 228211, Singapore"
+  },
+  "cea6f176811993e3b67027478aacac077c937a1d": {
+    "lat": 1.2965476,
+    "lng": 103.8483167,
+    "geocodeStatus": "matched",
+    "geocodeName": "National Museum of Singapore, 93, Stamford Road, Bras Basah, Museum, Central Region, Singapore, 178897, Singapore"
+  },
+  "216b18b6b7cd1de04e39022a633d18929772bb2c": {
+    "lat": 1.311479,
+    "lng": 103.8264448,
+    "geocodeStatus": "matched",
+    "geocodeName": "Shangri-La Hotel Singapore, 22, Orange Grove Road, Nassim, Tanglin, Central Region, Singapore, 258350, Singapore"
+  },
+  "fe39860686773e0b775a1a2a8b0377c1cc71258e": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "00330093868f76ee81488bebbd170785d5fa399c": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "16ee53222673370028bfe30fcf038dea7fb188be": {
+    "lat": 1.2942958,
+    "lng": 103.8560812,
+    "geocodeStatus": "matched",
+    "geocodeName": "JW Marriott Hotel Singapore South Beach, 30, Beach Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 189763, Singapore"
+  },
+  "01071890df397880e175d48a38d22d9d2fb4c17d": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "cfda6827f3877925cb65aaa47280f1bbe6a11aa1": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "884d93fa2ef2778ca6c8306d062031fa7741f461": {
+    "lat": 1.2940043,
+    "lng": 103.8539661,
+    "geocodeStatus": "matched",
+    "geocodeName": "Fairmont, 80, Bras Basah Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 189560, Singapore"
+  },
+  "99c324765f0d1b7d5bfa7e7a710c0f9d0f705582": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "aa71af9bacf795530f3a8e582f9fdeb1a35af025": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "6be94e7e431cafc4953623e1fde26a395bc57718": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "e2cef1337db36a7026ce6a77d886fdd22aabbc1c": {
+    "lat": 1.3046244,
+    "lng": 103.8248487,
+    "geocodeStatus": "matched",
+    "geocodeName": "Conrad Singapore Orchard, 1, Cuscaden Road, Tanglin, Orchard, Central Region, Singapore, 249715, Singapore"
+  },
+  "72abd4201bc38e97694bcafbd111658a57fa9c8d": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "9ce085f7eb0a2a8666751f4e44d33f7bf1cb432e": {
+    "lat": 1.2902557,
+    "lng": 103.8514709,
+    "geocodeStatus": "matched",
+    "geocodeName": "National Gallery Singapore, 1, Saint Andrew's Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 178957, Singapore"
+  },
+  "8778d6bb4906973d635db6ca9a3b1d74689da6cd": {
+    "lat": 1.2856566,
+    "lng": 103.8462571,
+    "geocodeStatus": "matched",
+    "geocodeName": "PARKROYAL COLLECTION Pickering, Singapore, 3, Upper Pickering Street, China Square, Tanjong Pagar, Outram, Central Region, Singapore, 058289, Singapore"
+  },
+  "3df693b73163dc28b29d0380f10c963fef98d1d8": {
+    "lat": 1.2477745,
+    "lng": 103.823979,
+    "geocodeStatus": "matched",
+    "geocodeName": "Palawan Beach, Palawan Beach Walk, Sentosa, Southern Islands, Central Region, Singapore, 098297, Singapore"
+  },
+  "665ed9db2f0ec0b0fa7e55662591f025c4a6a585": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "596b9ca83d6ec36ced52ddcdc97a8ba9734be863": {
+    "lat": 1.2894379,
+    "lng": 103.8632598,
+    "geocodeStatus": "matched",
+    "geocodeName": "Singapore Flyer, 30, Raffles Avenue, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039803, Singapore"
+  },
+  "952ad5b207e18e9e01d8ed5b8f525453453f3bd4": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "2fc7fcb5b759a657a0b1475c50fe4b224c386d61": {
+    "lat": 1.2933171,
+    "lng": 103.8533985,
+    "geocodeStatus": "matched",
+    "geocodeName": "Swissôtel The Stamford, 2, Stamford Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 178882, Singapore"
+  },
+  "a53bfb0d82d1972f547fb989527d78e46b7a1954": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "fc6417e776e2425563465b86fd7a12f9ba196bcb": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "5770083fbd793bfe049d9ffa90028617dcd1f8ff": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "425bb143aceace4f4ebe8d0c6f14a1b5b87c767d": {
+    "lat": 1.2906606,
+    "lng": 103.858324,
+    "geocodeStatus": "matched",
+    "geocodeName": "Mandarin Oriental Singapore, 5, Raffles Avenue, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039797, Singapore"
+  },
+  "103022094c3af85a6ffffa68094152823c71b3b4": {
+    "lat": 1.2540134,
+    "lng": 103.8146202,
+    "geocodeStatus": "matched",
+    "geocodeName": "Rumours Beach Club, 40, Siloso Beach Walk, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 098996, Singapore"
+  },
+  "787122fe3bcb20d02f3d892541bae71ebb65c928": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "a11b444b9d478c934d7467c0b7d4b8444e07dbe3": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "38a19c9c77ffe6c0b6936ed13550c2caee0a6aed": {
+    "lat": 1.3129505,
+    "lng": 103.8539713,
+    "geocodeStatus": "matched",
+    "geocodeName": "One Farrer Hotel & Spa, 1, Farrer Park Station Road, Farrer Park, Little India, Rochor, Central Region, Singapore, 217562, Singapore"
+  },
+  "6ff0be962fec6d12448f007baad090672d00aa7b": {
+    "lat": 1.305109,
+    "lng": 103.8328767,
+    "geocodeStatus": "matched",
+    "geocodeName": "Singapore Marriott Tang Plaza Hotel, 320, Orchard Road, Boulevard, Orchard, Central Region, Singapore, 238865, Singapore"
+  },
+  "ec72b116bea4ebd8a82c0516ca77c53a9960f932": {
+    "lat": 1.3056937,
+    "lng": 103.8261404,
+    "geocodeStatus": "matched",
+    "geocodeName": "The St. Regis Singapore, 29, Tanglin Road, Tanglin, Orchard, Central Region, Singapore, 247911, Singapore"
+  },
+  "a3b440067a9e437d2d8fa221f3a8394138ff39c1": {
+    "lat": 1.2749407,
+    "lng": 103.8436571,
+    "geocodeStatus": "matched",
+    "geocodeName": "Amara Singapore, 165, Tanjong Pagar Road, Anson, Civic District, Downtown Core, Central Region, Singapore, 088539, Singapore"
+  },
+  "aeda21037d6179ecee5d37fc84f44789ee3281bf": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "653c8f4cb0160ab3a4b1755fd87bc56f75756d44": {
+    "lat": 1.2983823,
+    "lng": 103.8548923,
+    "geocodeStatus": "matched",
+    "geocodeName": "InterContinental Singapore, 80, Middle Road, Bugis, Civic District, Downtown Core, Central Region, Singapore, 188966, Singapore"
+  },
+  "c5ab37da6ed191c3fd3a723a3397b2fa72ec5e97": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "9162f1836003a3f2cd4b5d5322069ba3c44a0992": {
+    "lat": 1.2574021,
+    "lng": 103.8097938,
+    "geocodeStatus": "matched",
+    "geocodeName": "Shangri-La's Rasa Sentosa Resort & Spa, 101, Siloso Road, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 098970, Singapore"
+  },
+  "4aece3f9060ca10c85f9ee2476b2f185212f8d48": {
+    "lat": 1.2771112,
+    "lng": 103.8451982,
+    "geocodeStatus": "matched",
+    "geocodeName": "Sofitel Singapore City Centre, 9, Wallich Street, Tanjong Pagar, Civic District, Downtown Core, Central Region, Singapore, 078885, Singapore"
+  },
+  "a508bf561432809812c8553260b7a0a099b80cb3": {
+    "lat": 1.2788927,
+    "lng": 103.813222,
+    "geocodeStatus": "matched",
+    "geocodeName": "The Alkaff Mansion, 10, Telok Blangah Green, Telok Blangah Drive, Telok Blangah, Bukit Merah, Central Region, Singapore, 109178, Singapore"
+  },
+  "6c45559ea1962d618e155b6ca973239055f358ad": {
+    "lat": 1.2463653,
+    "lng": 103.842351,
+    "geocodeStatus": "matched",
+    "geocodeName": "W Singapore - Sentosa Cove, 21, Ocean Way, Sentosa, Sentosa Cove, Southern Islands, Central Region, Singapore, 098374, Singapore"
+  },
+  "da969b78ea8a46ae4e0f5741b6ed0b73435df52f": {
+    "lat": 1.3052157,
+    "lng": 103.828685,
+    "geocodeStatus": "matched",
+    "geocodeName": "Four Seasons Hotel, 190, Orchard Boulevard, Boulevard, Orchard, Central Region, Singapore, 248646, Singapore"
+  },
+  "523b2a03c860210ad01a1f5b3405102b2a679dda": {
+    "lat": 1.2530529,
+    "lng": 103.8154311,
+    "geocodeStatus": "matched",
+    "geocodeName": "Ola Beach Club, 46, Siloso Beach Walk, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 099005, Singapore"
+  },
+  "6224936081ecaf5a7d409aea01849066d61220cd": {
+    "lat": 1.2946815,
+    "lng": 103.8546412,
+    "geocodeStatus": "matched",
+    "geocodeName": "Raffles Hotel, 1, Beach Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 189673, Singapore"
+  },
+  "4ce0745534b6e8034724fe49f00382ffe11e4e33": {
+    "lat": 1.2874464,
+    "lng": 103.8514862,
+    "geocodeStatus": "matched",
+    "geocodeName": "Asian Civilisations Museum, 1, Empress Place, City Hall, Civic District, Downtown Core, Central Region, Singapore, 179555, Singapore"
+  },
+  "cf53b83a9a26e1ae37a5cc256af72fbbe05e4510": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "8f92010b5a61256955a33524fd2cabeed58135c5": {
+    "lat": 1.3086899,
+    "lng": 103.8349935,
+    "geocodeStatus": "matched",
+    "geocodeName": "Goodwood Park Hotel, 22, Scotts Road, Boulevard, Orchard, Central Region, Singapore, 228221, Singapore"
+  },
+  "390663c81717d68cdc675770f3c1f18a862e3889": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "c6b8dee65d92a2757fe6217d8f115bc205345ad9": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "42d28328caa8febf5264b26203e029c3d49bdc4a": {
+    "lat": 1.2221928,
+    "lng": 103.8552986,
+    "geocodeStatus": "matched",
+    "geocodeName": "Lazarus Island, Central Region, Singapore"
+  },
+  "f77732c3f5c4e093787e46258ba55e911af20ff6": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "6c1999786bd3146819baaccd5e9a183bc458176e": {
+    "lat": 1.3076686,
+    "lng": 103.8281644,
+    "geocodeStatus": "matched",
+    "geocodeName": "Orchard Hotel Singapore, 442, Orchard Road, Tanglin, Orchard, Central Region, Singapore, 238879, Singapore"
+  },
+  "f5a220daf6c48316b03d67362190f4ec4843fe8e": {
+    "lat": 1.3073446,
+    "lng": 103.8298621,
+    "geocodeStatus": "matched",
+    "geocodeName": "Pan Pacific Orchard, 10, Claymore Road, Orange Grove, Newton, Central Region, Singapore, 229540, Singapore"
+  },
+  "019437cfff251beb70bae96a904fc1dc4205901a": {
+    "lat": 1.2942914,
+    "lng": 103.8491092,
+    "geocodeStatus": "matched",
+    "geocodeName": "Peranakan Museum, 39, Armenian Street, Bras Basah, Museum, Central Region, Singapore, 179941, Singapore"
+  },
+  "564770f364ace3323ca86e0e76cdfccd6bd5800a": {
+    "lat": 1.3058186,
+    "lng": 103.8719046,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Stadium Drive, Singapore 397629",
+    "geocodeName": "Stadium Drive, Tanjong Rhu, Crawford, Kallang, Central Region, Singapore, 397750, Singapore"
+  },
+  "51adf72f35d57e5e01fb47497ab3413e9cb7adc8": {
+    "lat": 1.2832438,
+    "lng": 103.8619344,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "18 Marina Gardens Drive, Singapore 018953",
+    "geocodeName": "IMBA Theatre, 18, Marina Gardens Drive, Marina South, Central Region, Singapore, 018953, Singapore"
+  },
+  "b7e0511809e0b96a0e32113ac594586f453a16fa": {
+    "lat": 1.2836965,
+    "lng": 103.8607226,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "10 Bayfront Avenue, Singapore 018956",
+    "geocodeName": "Marina Bay Sands, 10, Bayfront Avenue, Bayfront Subzone, Civic District, Downtown Core, Central Region, Singapore, 018956, Singapore"
+  },
+  "4db26bea2f560afb4ce11c89506636f9a2d3f201": {
+    "lat": 1.2556955,
+    "lng": 103.8202156,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "8 Sentosa Gateway, Singapore 098269",
+    "geocodeName": "Resorts World Sentosa Casino, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "94c1df2b70801c51c56ebc2f3ba89ae52df0af63": {
+    "lat": 1.2931917,
+    "lng": 103.848716,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "51 Canning Rise, Singapore 179872",
+    "geocodeName": "Canning Rise, Fort Canning, Museum, Central Region, Singapore, 179868, Singapore"
+  },
+  "6c91fcf44499a1214fb4fd82b6d8acfa16f3879c": {
+    "lat": 1.2663024,
+    "lng": 103.8604558,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "61 Marina Coastal Drive, Singapore 018947",
+    "geocodeName": "Marina Bay Cruise Centre, 61, Marina Coastal Drive, Straits View, Central Region, Singapore, 018947, Singapore"
+  },
+  "11d6a01984145572a325d4c4fc80899caf261e93": {
+    "lat": 1.270551,
+    "lng": 103.7985522,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "27 Pasir Panjang Rd, Singapore 117537",
+    "geocodeName": "27, Pasir Panjang Road, Port, Queenstown, Central Region, Singapore, 117537, Singapore"
+  },
+  "fcceb3633ea48ea2c5df7a445cf1552e9352ca16": {
+    "lat": 1.2516169,
+    "lng": 103.8191007,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Siloso Beach, Sentosa, Singapore",
+    "geocodeName": "Siloso Beach Walk, Sentosa, Southern Islands, Central Region, Singapore, 098604, Singapore"
+  },
+  "0b23d73d90722334ae8f53e4831a65ac87748ad0": {
+    "lat": 1.334308,
+    "lng": 103.959258,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Expo Drive, Singapore 486150",
+    "geocodeName": "UOB, 1, Expo Drive, Xilin, Changi Business Park, Tampines, East Region, Singapore, 486150, Singapore"
+  },
+  "337791107b9d927fbbb9fb6daf5a7b945ca9efcd": {
+    "lat": 1.3080015,
+    "lng": 103.7883825,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Vista Exchange Green, Singapore 138617",
+    "geocodeName": "The Star Vista, 1, Vista Exchange Green, One North, Ghim Moh, Queenstown, Central Region, Singapore, 138617, Singapore"
+  },
+  "ab2344529a66b7ebbaba1d27545278b6061a87ef": {
+    "lat": 1.2556955,
+    "lng": 103.8202156,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "8 Sentosa Gateway, Singapore 098269",
+    "geocodeName": "Resorts World Sentosa Casino, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "cf9e9d34f3cab1d95b523ddc09b04c7a04be0788": {
+    "lat": 1.2556955,
+    "lng": 103.8202156,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "8 Sentosa Gateway, Singapore 098269",
+    "geocodeName": "Resorts World Sentosa Casino, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "2c3848d57bddfe663136ee6685efd4cbf9f3e648": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "88befc3c569bdc932eb2181c950ce52ab6fe36ed": {
+    "lat": 1.2802762,
+    "lng": 103.8657015,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "8 Marina Gardens Drive, Singapore 018951",
+    "geocodeName": "Marina Gardens Drive, Marina South, Central Region, Singapore, 019396, Singapore"
+  },
+  "ee25f9404b9914ad0d04e30bb79eb4e61e22b66a": {
+    "lat": 1.2935792,
+    "lng": 103.8566452,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Raffles Boulevard, Singapore 039593",
+    "geocodeName": "Sephora, 1, Raffles Boulevard, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039593, Singapore"
+  },
+  "9e382b382828f83d900348c6ff26eb1b307598b5": {
+    "lat": 1.2905378,
+    "lng": 103.8458375,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "3C The Cannery, River Valley Road, Singapore 179022",
+    "geocodeName": "The Cannery, 3C, River Valley Road, Singapore General Hospital, Singapore River, Central Region, Singapore, 179022, Singapore"
+  },
+  "435d09cd6a1e603148396724102f04b5011aff3f": {
+    "lat": 1.2836965,
+    "lng": 103.8607226,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "10 Bayfront Avenue, Singapore 018956",
+    "geocodeName": "Marina Bay Sands, 10, Bayfront Avenue, Bayfront Subzone, Civic District, Downtown Core, Central Region, Singapore, 018956, Singapore"
+  },
+  "f55f5a5b7abafbf12e0c3c5b43cff7c37fe9acda": {
+    "lat": 1.3025469,
+    "lng": 103.8781887,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "15 Stadium Walk, Singapore 397694",
+    "geocodeName": "Stadium Walk, Tanjong Rhu, Kallang, Central Region, Singapore, 397694, Singapore"
+  },
+  "d5dceee83d04fa7c0d852e6d66d5aa54d9ffcbd1": {
+    "lat": 1.2556955,
+    "lng": 103.8202156,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "8 Sentosa Gateway, Sentosa, Singapore 098269",
+    "geocodeName": "Resorts World Sentosa Casino, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "7e9dce4b30ea226270d43e699cba8a64248baa31": {
+    "lat": 1.3328969,
+    "lng": 103.7359933,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "15 Science Centre Road, Singapore 609081",
+    "geocodeName": "Science Centre Singapore, 15, Science Centre Road, Lakeside (business), Jurong East, West Region, Singapore, 609081, Singapore"
+  },
+  "3a838447b975cfc60ac264c3df859db893480827": {
+    "lat": 1.2900182,
+    "lng": 103.8545878,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Esplanade Drive, Singapore 038981",
+    "geocodeName": "Esplanade Drive, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039802, Singapore"
+  },
+  "248706382888ac3b1421a887ae34b4e77aa68e2d": {
+    "lat": 1.2479779,
+    "lng": 103.8416982,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "31 Ocean Way, Sentosa Cove, Singapore 098375",
+    "geocodeName": "Quayside Isle, 31, Ocean Way, Sentosa, Sentosa Cove, Southern Islands, Central Region, Singapore, 098375, Singapore"
+  },
+  "731c456fe8a62d896778fc403a0f13fd6264f1b6": {
+    "lat": 1.3019079,
+    "lng": 103.8359161,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "333 Orchard Road, Singapore 238867",
+    "geocodeName": "Hilton Singapore Orchard, 333, Orchard Road, Somerset, Orchard, Central Region, Singapore, 238867, Singapore"
+  },
+  "a8379fefcdba1efda22d0b0ed89aa551b4134687": {
+    "lat": 1.2551317,
+    "lng": 103.8203679,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Hotel Michael Singapore",
+    "geocodeName": "Hotel Michael, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "4abd51794200ab15383f3444496fe83fcd9d7613": {
+    "lat": 1.2439496,
+    "lng": 103.8271204,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Tanjong Beach, Sentosa, Singapore",
+    "geocodeName": "Tanjong Beach, Cove Drive, Sentosa, Southern Islands, Central Region, Singapore, 099891, Singapore"
+  },
+  "a04bdfaa2323130225d5085188fffdef2a9124cd": {
+    "lat": 1.2905344,
+    "lng": 103.8600739,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "7 Raffles Avenue, Singapore 039799",
+    "geocodeName": "The Ritz-Carlton, Millenia Singapore, 7, Raffles Avenue, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039799, Singapore"
+  },
+  "e94afeccc498f0042eb5edd29b52687e84717b65": {
+    "lat": 1.2861382,
+    "lng": 103.8592297,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "6 Bayfront Avenue, Singapore 018974",
+    "geocodeName": "ArtScience Museum, 6, Bayfront Avenue, Bayfront, Civic District, Downtown Core, Central Region, Singapore, 018974, Singapore"
+  },
+  "eb93ee6860896b9ea4480a69d642d0e00a82f0d1": {
+    "lat": 1.2903275,
+    "lng": 103.8350307,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "392 Havelock Road, Singapore 169663",
+    "geocodeName": "Waterfront Plaza, 392, Havelock Road, Robertson Quay, Singapore River, Central Region, Singapore, 169663, Singapore"
+  },
+  "a09a9305fe4137262a884a9db0816afacb633918": {
+    "lat": 1.3064248,
+    "lng": 103.8334719,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "10 Scotts Road, Singapore 228211",
+    "geocodeName": "Straits Kitchen, 10, Scotts Road, Boulevard, Orchard, Central Region, Singapore, 228211, Singapore"
+  },
+  "a8042e2f20b5dac67b4d60cd8c4f0b0b2336b588": {
+    "lat": 1.2965476,
+    "lng": 103.8483167,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "93 Stamford Road, Singapore 178897",
+    "geocodeName": "National Museum of Singapore, 93, Stamford Road, Bras Basah, Museum, Central Region, Singapore, 178897, Singapore"
+  },
+  "efa61377c3a690401b9457a3158d8607e32db6b3": {
+    "lat": 1.311479,
+    "lng": 103.8264448,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "22 Orange Grove Road, Singapore 258350",
+    "geocodeName": "Shangri-La Hotel Singapore, 22, Orange Grove Road, Nassim, Tanglin, Central Region, Singapore, 258350, Singapore"
+  },
+  "b363733642c602fab994f4ffb8377b9ea9a33fc2": {
+    "lat": 1.2846154,
+    "lng": 103.860933,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Ce La Vi Singapore",
+    "geocodeName": "CÉ LA VI, 1, Bayfront Avenue, Bayfront, Civic District, Downtown Core, Central Region, Singapore, 018971, Singapore"
+  },
+  "ce31d57118f2b42390005bf08140c9e8b948ddbe": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "d6ceba339fa907fb40d72a62e9cdaa6d9e23a830": {
+    "lat": 1.2942958,
+    "lng": 103.8560812,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "30 Beach Road, Singapore 189763",
+    "geocodeName": "JW Marriott Hotel Singapore South Beach, 30, Beach Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 189763, Singapore"
+  },
+  "9f50519c9d3f180c5404e2bc310bf3c9edf3f553": {
+    "lat": 1.2446451,
+    "lng": 103.82694,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "120 Tanjong Beach Walk, Sentosa, Singapore 098942",
+    "geocodeName": "Tanjong Beach Walk, Sentosa, Southern Islands, Central Region, Singapore, 099891, Singapore"
+  },
+  "8e793db383f4dbe8a42db3b9e3d8c877e34f2fe2": {
+    "lat": 1.2783073,
+    "lng": 103.8507952,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "The Westin Singapore Singapore",
+    "geocodeName": "The Westin Singapore, 12, Marina View, Downtown Central, Civic District, Downtown Core, Central Region, Singapore, 018961, Singapore"
+  },
+  "659d3de94cd1e0bc56d99cea0194fa0389e8171e": {
+    "lat": 1.2941133,
+    "lng": 103.8539484,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "80 Bras Basah Road, Singapore 189560",
+    "geocodeName": "80, Bras Basah Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 189560, Singapore"
+  },
+  "966fe0945f67c915153a05c872e79d9a181a8ee6": {
+    "lat": 1.3073446,
+    "lng": 103.8298621,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Pan Pacific Singapore Singapore",
+    "geocodeName": "Pan Pacific Orchard, 10, Claymore Road, Boulevard, Orchard, Central Region, Singapore, 229540, Singapore"
+  },
+  "3510639c70311d7a63956d4a9ce612f8d14782ab": {
+    "lat": 1.2925042,
+    "lng": 103.8537716,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "15 Stamford Road, Singapore 178906",
+    "geocodeName": "Stamford Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 179682, Singapore"
+  },
+  "cca9f5336ba3c41312a58777a22e0d33f1483532": {
+    "lat": 1.293525,
+    "lng": 103.8587748,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "2 Temasek Boulevard, Singapore 038982",
+    "geocodeName": "Conrad Singapore Marina Bay, 2, Temasek Boulevard, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 038982, Singapore"
+  },
+  "5ca64797ab1b18791712df69f33741021cd3baee": {
+    "lat": 1.3046043,
+    "lng": 103.824818,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Cuscaden Road, Singapore 249715",
+    "geocodeName": "Shoukouwa Shinjidai, 1, Cuscaden Road, Tanglin, Orchard, Central Region, Singapore, 249715, Singapore"
+  },
+  "a57f15944c8818c56036798a8cd8d61c00b7ab3d": {
+    "lat": 1.2833389,
+    "lng": 103.8533943,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "80 Collyer Quay, Singapore 049326",
+    "geocodeName": "The Fullerton Bay Hotel, 80, Collyer Quay, Clifford Pier, Civic District, Downtown Core, Central Region, Singapore, 049326, Singapore"
+  },
+  "2662838eae08f75d892334a20378d7c6c27374ec": {
+    "lat": 1.2902557,
+    "lng": 103.8514709,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 St Andrew's Road, Singapore 178957",
+    "geocodeName": "National Gallery Singapore, 1, Saint Andrew's Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 178957, Singapore"
+  },
+  "f44203824f310e13a33833830ffc3ac5d1ae2140": {
+    "lat": 1.2856566,
+    "lng": 103.8462571,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "3 Upper Pickering Street, Singapore 058289",
+    "geocodeName": "PARKROYAL COLLECTION Pickering, Singapore, 3, Upper Pickering Street, China Square, Tanjong Pagar, Outram, Central Region, Singapore, 058289, Singapore"
+  },
+  "90a97608d9309d4cee4ec75cf23e6670daecfa14": {
+    "lat": 1.2459472,
+    "lng": 103.8253627,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Palawan Beach, Sentosa, Singapore",
+    "geocodeName": "Palawan Beach, Tanjong Beach Walk, Sentosa, Southern Islands, Central Region, Singapore, 099947, Singapore"
+  },
+  "b8090a2713fb1b49c1504dc5a0df18519854f7e5": {
+    "lat": 1.2532132,
+    "lng": 103.8188201,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Sensoryscape Singapore",
+    "geocodeName": "Sentosa Sensoryscape, Southern Islands, Central Region, Singapore, 098977, Singapore"
+  },
+  "ef61e7c678130da6d75c114176bbb21912f30474": {
+    "lat": 1.2894379,
+    "lng": 103.8632598,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "30 Raffles Avenue, Singapore 039803",
+    "geocodeName": "Singapore Flyer, 30, Raffles Avenue, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039803, Singapore"
+  },
+  "7bb2d86f5aade5e2c05cfe54f6802db38da7bb27": {
+    "lat": 1.2456478,
+    "lng": 103.8277877,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "2 Bukit Manis Road, Sentosa, Singapore 099891",
+    "geocodeName": "Sofitel Hotel Sentosa Singapore, 2, Bukit Manis Road, Sentosa, Southern Islands, Central Region, Singapore, 099891, Singapore"
+  },
+  "9c9a32544f94762a37188f383214ff4c03765a84": {
+    "lat": 1.2933171,
+    "lng": 103.8533985,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "2 Stamford Road, Singapore 178882",
+    "geocodeName": "Swissôtel The Stamford, 2, Stamford Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 178882, Singapore"
+  },
+  "c8e4072a302cba10690d73799e009840db90674a": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "c223635c6f7d88a66be720f4ee0f93809194421b": {
+    "lat": 1.2547174,
+    "lng": 103.8146148,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Siloso Beach, 51 Imbiah Walk, Sentosa, Singapore 099538",
+    "geocodeName": "Siloso Beach Resort, 51, Imbiah Walk, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 099538, Singapore"
+  },
+  "aeea83c3f1dbd8304281cdf41f019cb0526c943c": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "a21a1db31620774dc63e80cb3442555b10da4888": {
+    "lat": 1.2907126,
+    "lng": 103.8583454,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "5 Raffles Avenue, Singapore 039797",
+    "geocodeName": "Mandarin Oriental Hotel, 5, Raffles Avenue, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039797, Singapore"
+  },
+  "bfa108a8fce6e362fe069094d6e3f09efaf42158": {
+    "lat": 1.2540134,
+    "lng": 103.8146202,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "40 Siloso Beach Walk, Sentosa, Singapore 098996",
+    "geocodeName": "Rumours Beach Club, 40, Siloso Beach Walk, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 098996, Singapore"
+  },
+  "77b69aff823958a87dae820ae55d898be567e44e": {
+    "lat": 1.4093476,
+    "lng": 103.8680089,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Wheeler's Estate Singapore",
+    "geocodeName": "Wheeler’s Estate, 2, Park Lane, Seletar, North-east Region, Singapore, 798386, Singapore"
+  },
+  "880e3d5f914ce0e05e72cd25dca3be4990ae6eef": {
+    "lat": 1.3237578,
+    "lng": 103.9628922,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Dusit Thani Laguna Singapore Singapore",
+    "geocodeName": "Dusit Thani Laguna Singapore, 11, Upper Changi Road East, Xilin, Changi Business Park, Tampines, East Region, Singapore, 488047, Singapore"
+  },
+  "10c92c3738123dcb767c940be3f9133869ae0533": {
+    "lat": 1.3126,
+    "lng": 103.854,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Farrer Park Station Road, Singapore 217562",
+    "geocodeName": "Farrer Park Hospital, 1, Farrer Park Station Road, Farrer Park, Little India, Rochor, Central Region, Singapore, 217562, Singapore"
+  },
+  "8f933b404c8f34a4e3622b0db85fecc93c99a453": {
+    "lat": 1.304987,
+    "lng": 103.8330525,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "320 Orchard Road, Singapore 238866",
+    "geocodeName": "Tang Plaza, 320, Orchard Road, Boulevard, Orchard, Central Region, Singapore, 238864, Singapore"
+  },
+  "39c9f67a2ff40c31b6cc432d238204737ae98fa8": {
+    "lat": 1.3056937,
+    "lng": 103.8261404,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "29 Tanglin Road, Singapore 247911",
+    "geocodeName": "The St. Regis Singapore, 29, Tanglin Road, Tanglin, Orchard, Central Region, Singapore, 247911, Singapore"
+  },
+  "b1e521a8bd4450a3d2047a5517c550afed85347d": {
+    "lat": 1.2749407,
+    "lng": 103.8436571,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "165 Tanjong Pagar Road, Singapore 088539",
+    "geocodeName": "Amara Singapore, 165, Tanjong Pagar Road, Anson, Civic District, Downtown Core, Central Region, Singapore, 088539, Singapore"
+  },
+  "3a510d8d46360905e0823f180425fff838126e92": {
+    "lat": 1.2954899,
+    "lng": 103.8520117,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "30 Victoria Street, Singapore 187996",
+    "geocodeName": "Caldwell House, 30, Victoria Street, City Hall, Civic District, Downtown Core, Central Region, Singapore, 188533, Singapore"
+  },
+  "66c1f50adfa5d65ce0e1da3a6183db627fe82494": {
+    "lat": 1.2989695,
+    "lng": 103.8548896,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "80 Middle Road, Singapore 188966",
+    "geocodeName": "BEUTEA, 80, Middle Road, Bugis, Civic District, Downtown Core, Central Region, Singapore, 188966, Singapore"
+  },
+  "fe5f3b1c170f8c903694002af376ef89dc18238b": {
+    "lat": 1.2836965,
+    "lng": 103.8607226,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Marina Bay Sands, 10 Bayfront Avenue, Singapore 018956",
+    "geocodeName": "Marina Bay Sands, 10, Bayfront Avenue, Bayfront Subzone, Civic District, Downtown Core, Central Region, Singapore, 018956, Singapore"
+  },
+  "f42b2f2a8889793c95140ddb146e2eb3dcf244cb": {
+    "lat": 1.2574021,
+    "lng": 103.8097938,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "101 Siloso Road, Sentosa, Singapore 098970",
+    "geocodeName": "Shangri-La's Rasa Sentosa Resort & Spa, 101, Siloso Road, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 098970, Singapore"
+  },
+  "2fe74b2a6a064367038aa994691e46a9389c7cd4": {
+    "lat": 1.2771098,
+    "lng": 103.8452066,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "9 Wallich Street, Singapore 078885",
+    "geocodeName": "9, Wallich Street, Tanjong Pagar, Civic District, Downtown Core, Central Region, Singapore, 078885, Singapore"
+  },
+  "98059322203aa35638bbea3d7bb0f196c656c910": {
+    "lat": 1.2788927,
+    "lng": 103.813222,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "10 Telok Blangah Green, Singapore 109178",
+    "geocodeName": "The Alkaff Mansion, 10, Telok Blangah Green, Telok Blangah Drive, Telok Blangah, Bukit Merah, Central Region, Singapore, 109178, Singapore"
+  },
+  "7fd63c14fab65f6d805fa40358c36c2493302607": {
+    "lat": 1.2460585,
+    "lng": 103.8426843,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "21 Ocean Way, Sentosa Cove, Singapore 098374",
+    "geocodeName": "21, Ocean Way, Sentosa, Sentosa Cove, Southern Islands, Central Region, Singapore, 098374, Singapore"
+  },
+  "8354661b2c76f2ffda7a40160a08fb62cdea5e6c": {
+    "lat": 1.3052157,
+    "lng": 103.828685,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "190 Orchard Boulevard, Singapore 248646",
+    "geocodeName": "Four Seasons Hotel, 190, Orchard Boulevard, Boulevard, Orchard, Central Region, Singapore, 248646, Singapore"
+  },
+  "052681c35af63bf2b8d7c58f5a5605696cb183e5": {
+    "lat": 1.2530342,
+    "lng": 103.815412,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "46 Siloso Beach Walk, Sentosa, Singapore 099005",
+    "geocodeName": "46, Siloso Beach Walk, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 099005, Singapore"
+  },
+  "e3e786130b433022aa2aca332dce5a2f9cf9c805": {
+    "lat": 1.294941,
+    "lng": 103.8543027,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Beach Road, Singapore 189673",
+    "geocodeName": "1, Beach Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 189673, Singapore"
+  },
+  "46e01f397e43d6fdca5e50cbb99d627c961827cf": {
+    "lat": 1.2874464,
+    "lng": 103.8514862,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Empress Place, Singapore 179555",
+    "geocodeName": "Asian Civilisations Museum, 1, Empress Place, City Hall, Civic District, Downtown Core, Central Region, Singapore, 179555, Singapore"
+  },
+  "edc7d5783f6d9433ce384fe74920e84a78457a6c": {
+    "lat": 1.2446339,
+    "lng": 103.8270064,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "110 Tanjong Beach Walk, Sentosa, Singapore 098944",
+    "geocodeName": "Tanjong Beach Walk, Sentosa, Southern Islands, Central Region, Singapore, 099891, Singapore"
+  },
+  "e43ff23806015b61064acd3134e80a05e825764c": {
+    "lat": 1.3086899,
+    "lng": 103.8349935,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "22 Scotts Road, Singapore 228221",
+    "geocodeName": "Goodwood Park Hotel, 22, Scotts Road, Boulevard, Orchard, Central Region, Singapore, 228221, Singapore"
+  },
+  "076c9b26af45af8193d70b883c5c28911ebd464b": {
+    "lat": 1.2575434,
+    "lng": 103.818827,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Hard Rock Hotel Singapore Singapore",
+    "geocodeName": "Hard Rock Hotel Singapore, 28, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098139, Singapore"
+  },
+  "f93b11aaff5149e6872ec56900571565acafae16": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "4a231cf402ea01adc6f361efca57af2e7aad42ca": {
+    "lat": 1.2221928,
+    "lng": 103.8552986,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Lazarus Island, Singapore",
+    "geocodeName": "Lazarus Island, Central Region, Singapore"
+  },
+  "b9d61d8ea55ed3d45840df15f03667c784a6deda": {
+    "lat": 1.2456877,
+    "lng": 103.8398789,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "11 Cove Drive, Sentosa Cove, Singapore 098497",
+    "geocodeName": "ONE ̊15 Marina, 11, Cove Drive, Sentosa, Sentosa Cove, Southern Islands, Central Region, Singapore, 098497, Singapore"
+  },
+  "4cb7ce5862378b2072288643c4d8a054fddd9120": {
+    "lat": 1.3076686,
+    "lng": 103.8281644,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "442 Orchard Road, Singapore 238879",
+    "geocodeName": "Orchard Hotel Singapore, 442, Orchard Road, Tanglin, Orchard, Central Region, Singapore, 238879, Singapore"
+  },
+  "519a9cc1536ba6ddd34b7f06a5613fa06606a861": {
+    "lat": 1.3073446,
+    "lng": 103.8298621,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "10 Claymore Road, Singapore 229540",
+    "geocodeName": "Pan Pacific Orchard, 10, Claymore Road, Orange Grove, Newton, Central Region, Singapore, 229540, Singapore"
+  },
+  "94879b1e33e8613137d7cb077f1cf878c8fa8744": {
+    "lat": 1.2942914,
+    "lng": 103.8491092,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "39 Armenian Street, Singapore 179941",
+    "geocodeName": "Peranakan Museum, 39, Armenian Street, Bras Basah, Museum, Central Region, Singapore, 179941, Singapore"
+  },
+  "9ed7bc046abbbff18309518a4422f3f3d1ae5d6c": {
+    "lat": 1.3062726,
+    "lng": 103.8725641,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Stadium Drive, Singapore 397629",
+    "geocodeName": "Stadium Drive, Tanjong Rhu, Kallang, Central Region, Singapore, 397750, Singapore"
+  },
+  "474eb24a429e9dce65ddffb70f78795889f909fd": {
+    "lat": 1.2832438,
+    "lng": 103.8619344,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "18 Marina Gardens Drive, Singapore 018953",
+    "geocodeName": "IMBA Theatre, 18, Marina Gardens Drive, Marina South, Central Region, Singapore, 018953, Singapore"
+  },
+  "e0e9497460b60cbd1177bfb218663870c1872242": {
+    "lat": 1.2836965,
+    "lng": 103.8607226,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "10 Bayfront Avenue, Singapore 018956",
+    "geocodeName": "Marina Bay Sands, 10, Bayfront Avenue, Bayfront Subzone, Civic District, Downtown Core, Central Region, Singapore, 018956, Singapore"
+  },
+  "34696e2091784ffa0a548af30e00fe4a6eb28077": {
+    "lat": 1.2556955,
+    "lng": 103.8202156,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "8 Sentosa Gateway, Singapore 098269",
+    "geocodeName": "Resorts World Sentosa Casino, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "26c5954dd3a7058b82b3c29a198def4e87d3401b": {
+    "lat": 1.2931917,
+    "lng": 103.848716,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "51 Canning Rise, Singapore 179872",
+    "geocodeName": "Canning Rise, Fort Canning, Museum, Central Region, Singapore, 179868, Singapore"
+  },
+  "a878f4f522527fb99cbeeb8269800db11edcef4b": {
+    "lat": 1.2663024,
+    "lng": 103.8604558,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "61 Marina Coastal Drive, Singapore 018947",
+    "geocodeName": "Marina Bay Cruise Centre, 61, Marina Coastal Drive, Straits View, Central Region, Singapore, 018947, Singapore"
+  },
+  "d1b4d82771dd7fbd8bf0b6510aef3fedced115d4": {
+    "lat": 1.270551,
+    "lng": 103.7985522,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "27 Pasir Panjang Rd, Singapore 117537",
+    "geocodeName": "27, Pasir Panjang Road, Port, Queenstown, Central Region, Singapore, 117537, Singapore"
+  },
+  "69b84847fd70246b46a4fa39df0e6c83b9bfbc86": {
+    "lat": 1.2509287,
+    "lng": 103.819179,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Siloso Beach, Sentosa, Singapore",
+    "geocodeName": "Siloso Beach View, Sentosa, Southern Islands, Central Region, Singapore, 098604, Singapore"
+  },
+  "e7cd10ac0693a98e4cbe96ab802a0bf60bc3f09a": {
+    "lat": 1.334308,
+    "lng": 103.959258,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Expo Drive, Singapore 486150",
+    "geocodeName": "UOB, 1, Expo Drive, Xilin, Changi Business Park, Tampines, East Region, Singapore, 486150, Singapore"
+  },
+  "54c963eb65bcddd82f4b7fdb3783a6e247c4ad86": {
+    "lat": 1.3069152,
+    "lng": 103.7886102,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Vista Exchange Green, Singapore 138617",
+    "geocodeName": "Texas Chicken, 1, Vista Exchange Green, One North, Ghim Moh, Queenstown, Central Region, Singapore, 138617, Singapore"
+  },
+  "6742a5ef2c3e5b368510a2c49ce90f4d96deeb53": {
+    "lat": 1.2556955,
+    "lng": 103.8202156,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "8 Sentosa Gateway, Singapore 098269",
+    "geocodeName": "Resorts World Sentosa Casino, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "0fa77d2462257dc7f9c39fd0fc4121b0ed2dd0d1": {
+    "lat": 1.2556955,
+    "lng": 103.8202156,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "8 Sentosa Gateway, Singapore 098269",
+    "geocodeName": "Resorts World Sentosa Casino, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "1ab7aeca6b0b205b323922e623b0c37c9cee41b8": {
+    "lat": 1.2804956,
+    "lng": 103.8665217,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "8 Marina Gardens Drive, Singapore 018951",
+    "geocodeName": "Marina Gardens Drive, Marina South, Central Region, Singapore, 019396, Singapore"
+  },
+  "9983d15897e8905d1fe65dbcf8fc553c2a577055": {
+    "lat": 1.2935792,
+    "lng": 103.8566452,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Raffles Boulevard, Singapore 039593",
+    "geocodeName": "Sephora, 1, Raffles Boulevard, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039593, Singapore"
+  },
+  "120c6c32d245a9ad278180ead9f22eef4079dad2": {
+    "lat": 1.2905378,
+    "lng": 103.8458375,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "3C The Cannery, River Valley Road, Singapore 179022",
+    "geocodeName": "The Cannery, 3C, River Valley Road, Singapore General Hospital, Singapore River, Central Region, Singapore, 179022, Singapore"
+  },
+  "7b99b7a8a34d2d56bb866ce39e7d22755b2b84ed": {
+    "lat": 1.2836965,
+    "lng": 103.8607226,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "10 Bayfront Avenue, Singapore 018956",
+    "geocodeName": "Marina Bay Sands, 10, Bayfront Avenue, Bayfront Subzone, Civic District, Downtown Core, Central Region, Singapore, 018956, Singapore"
+  },
+  "2c414f1c07c5982c8846d5cdd9409a75967d879c": {
+    "lat": 1.3025469,
+    "lng": 103.8781887,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "15 Stadium Walk, Singapore 397694",
+    "geocodeName": "Stadium Walk, Tanjong Rhu, Kallang, Central Region, Singapore, 397694, Singapore"
+  },
+  "749ecbf1aecc96461b22432890d89a2a05b46396": {
+    "lat": 1.2556955,
+    "lng": 103.8202156,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "8 Sentosa Gateway, Sentosa, Singapore 098269",
+    "geocodeName": "Resorts World Sentosa Casino, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "a9315e0e6fb641e0076d771b40587b5bb6e9f34a": {
+    "lat": 1.3328969,
+    "lng": 103.7359933,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "15 Science Centre Road, Singapore 609081",
+    "geocodeName": "Science Centre Singapore, 15, Science Centre Road, Lakeside (business), Jurong East, West Region, Singapore, 609081, Singapore"
+  },
+  "bfc4f7d6f063ec25c21ef18439633550d1080b8e": {
+    "lat": 1.2900182,
+    "lng": 103.8545878,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Esplanade Drive, Singapore 038981",
+    "geocodeName": "Esplanade Drive, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039802, Singapore"
+  },
+  "d8ed6fba0e358cc0ac4ad5dedf5308032fb50f98": {
+    "lat": 1.2479779,
+    "lng": 103.8416982,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "31 Ocean Way, Sentosa Cove, Singapore 098375",
+    "geocodeName": "Quayside Isle, 31, Ocean Way, Sentosa, Sentosa Cove, Southern Islands, Central Region, Singapore, 098375, Singapore"
+  },
+  "ce17824c437e40caf579d37e347372b6c9b62af9": {
+    "lat": 1.3019079,
+    "lng": 103.8359161,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "333 Orchard Road, Singapore 238867",
+    "geocodeName": "Hilton Singapore Orchard, 333, Orchard Road, Somerset, Orchard, Central Region, Singapore, 238867, Singapore"
+  },
+  "ed9eeb841454f7048477ead0deedcb0f28bbc587": {
+    "lat": 1.2551317,
+    "lng": 103.8203679,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Hotel Michael, Singapore",
+    "geocodeName": "Hotel Michael, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "8dc4385e51b4f7eaa3b9e16cc21a83ffc17ead79": {
+    "lat": 1.2439496,
+    "lng": 103.8271204,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Tanjong Beach, Sentosa, Singapore",
+    "geocodeName": "Tanjong Beach, Cove Drive, Sentosa, Southern Islands, Central Region, Singapore, 099891, Singapore"
+  },
+  "ea4c6f2661b9ec41c94fc46726aeb44384e94a5b": {
+    "lat": 1.2905344,
+    "lng": 103.8600739,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "7 Raffles Avenue, Singapore 039799",
+    "geocodeName": "The Ritz-Carlton, Millenia Singapore, 7, Raffles Avenue, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039799, Singapore"
+  },
+  "fe7d60700c4837591e82301a6fa4e1ead9a9cc7a": {
+    "lat": 1.2861382,
+    "lng": 103.8592297,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "6 Bayfront Avenue, Singapore 018974",
+    "geocodeName": "ArtScience Museum, 6, Bayfront Avenue, Bayfront, Civic District, Downtown Core, Central Region, Singapore, 018974, Singapore"
+  },
+  "e6b16c312f574b465962094fdb05c2f0941e0a29": {
+    "lat": 1.2903275,
+    "lng": 103.8350307,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "392 Havelock Road, Singapore 169663",
+    "geocodeName": "Waterfront Plaza, 392, Havelock Road, Robertson Quay, Singapore River, Central Region, Singapore, 169663, Singapore"
+  },
+  "3c3bc25e759ea8dc0104fde0786667a4c11a650f": {
+    "lat": 1.3064248,
+    "lng": 103.8334719,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "10 Scotts Road, Singapore 228211",
+    "geocodeName": "Straits Kitchen, 10, Scotts Road, Boulevard, Orchard, Central Region, Singapore, 228211, Singapore"
+  },
+  "cdea36b4bf600792d93db94c6aa4276a412a13a8": {
+    "lat": 1.2965476,
+    "lng": 103.8483167,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "93 Stamford Road, Singapore 178897",
+    "geocodeName": "National Museum of Singapore, 93, Stamford Road, Bras Basah, Museum, Central Region, Singapore, 178897, Singapore"
+  },
+  "655a08499fdc3d9804bd4b410be869ea8ffe573d": {
+    "lat": 1.311479,
+    "lng": 103.8264448,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "22 Orange Grove Road, Singapore 258350",
+    "geocodeName": "Shangri-La Hotel Singapore, 22, Orange Grove Road, Nassim, Tanglin, Central Region, Singapore, 258350, Singapore"
+  },
+  "a5e47f18a83828a9d02bd4cc6b66fb29f9f7eba8": {
+    "lat": 1.2846154,
+    "lng": 103.860933,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Ce La Vi, Singapore",
+    "geocodeName": "CÉ LA VI, 1, Bayfront Avenue, Bayfront, Civic District, Downtown Core, Central Region, Singapore, 018971, Singapore"
+  },
+  "1b0977fc4c614f56aaceecea4e37ae5aa54becb4": {
+    "lat": 1.2942958,
+    "lng": 103.8560812,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "30 Beach Road, Singapore 189763",
+    "geocodeName": "JW Marriott Hotel Singapore South Beach, 30, Beach Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 189763, Singapore"
+  },
+  "174e01fee0ce067c86be2deedf098eea82e2e12e": {
+    "lat": 1.2446451,
+    "lng": 103.82694,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "120 Tanjong Beach Walk, Sentosa, Singapore 098942",
+    "geocodeName": "Tanjong Beach Walk, Sentosa, Southern Islands, Central Region, Singapore, 099891, Singapore"
+  },
+  "235508e6969b1aafb8a58728d844154d1d7ca771": {
+    "lat": 1.2783073,
+    "lng": 103.8507952,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "The Westin Singapore, Singapore",
+    "geocodeName": "The Westin Singapore, 12, Marina View, Downtown Central, Civic District, Downtown Core, Central Region, Singapore, 018961, Singapore"
+  },
+  "b5bf9c37081a2da3cefb573a93ca9a9db9a2de27": {
+    "lat": 1.2941133,
+    "lng": 103.8539484,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "80 Bras Basah Road, Singapore 189560",
+    "geocodeName": "80, Bras Basah Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 189560, Singapore"
+  },
+  "3ba8c595088281f9a4c23250ecacc3ad39b38eea": {
+    "lat": 1.2923514,
+    "lng": 103.8586837,
+    "geocodeStatus": "manual_verified",
+    "geocodeQuery": "7 Raffles Boulevard, Marina Square, Singapore 039595",
+    "geocodeName": "The Pan Pacific Hotel Singapore, 7, Raffles Boulevard, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039595, Singapore"
+  },
+  "977270c6fbbf62b4b0aa749ee5e9169421e8efb3": {
+    "lat": 1.2917559,
+    "lng": 103.854561,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "15 Stamford Road, Singapore 178906",
+    "geocodeName": "Stamford Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 039393, Singapore"
+  },
+  "6bc2e6ed08d0122ca7d8ce3b4360a3e2f4bc5120": {
+    "lat": 1.293525,
+    "lng": 103.8587748,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "2 Temasek Boulevard, Singapore 038982",
+    "geocodeName": "Conrad Singapore Marina Bay, 2, Temasek Boulevard, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 038982, Singapore"
+  },
+  "0904428331d044590ea2997dcf9d8f27fab08a0c": {
+    "lat": 1.3046043,
+    "lng": 103.824818,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Cuscaden Road, Singapore 249715",
+    "geocodeName": "Shoukouwa Shinjidai, 1, Cuscaden Road, Tanglin, Orchard, Central Region, Singapore, 249715, Singapore"
+  },
+  "c08ace9b8fb50fb51fe5eb293081b197f76098fc": {
+    "lat": 1.2833389,
+    "lng": 103.8533943,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "80 Collyer Quay, Singapore 049326",
+    "geocodeName": "The Fullerton Bay Hotel, 80, Collyer Quay, Clifford Pier, Civic District, Downtown Core, Central Region, Singapore, 049326, Singapore"
+  },
+  "d409034d53fedebbee60913da215d8e36807c303": {
+    "lat": 1.2902557,
+    "lng": 103.8514709,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 St Andrew's Road, Singapore 178957",
+    "geocodeName": "National Gallery Singapore, 1, Saint Andrew's Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 178957, Singapore"
+  },
+  "eeebd38322322a5c4c668c9729a35e6845e1048b": {
+    "lat": 1.2856566,
+    "lng": 103.8462571,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "3 Upper Pickering Street, Singapore 058289",
+    "geocodeName": "PARKROYAL COLLECTION Pickering, Singapore, 3, Upper Pickering Street, China Square, Tanjong Pagar, Outram, Central Region, Singapore, 058289, Singapore"
+  },
+  "8c54d560fe920c4e06d5ae359b64bcf16a0ab72d": {
+    "lat": 1.2459472,
+    "lng": 103.8253627,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Palawan Beach, Sentosa, Singapore",
+    "geocodeName": "Palawan Beach, Tanjong Beach Walk, Sentosa, Southern Islands, Central Region, Singapore, 099947, Singapore"
+  },
+  "809dbb83ba0df81e3fd55347ed3df9702bee096b": {
+    "lat": 1.2532132,
+    "lng": 103.8188201,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Sensoryscape, Singapore",
+    "geocodeName": "Sentosa Sensoryscape, Southern Islands, Central Region, Singapore, 098977, Singapore"
+  },
+  "3b12c4e0a9d322f1fd6d32baa4cb7b490c32ab8d": {
+    "lat": 1.2894379,
+    "lng": 103.8632598,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "30 Raffles Avenue, Singapore 039803",
+    "geocodeName": "Singapore Flyer, 30, Raffles Avenue, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039803, Singapore"
+  },
+  "f00193126453a376087cf733dd09f95aacbc5b56": {
+    "lat": 1.2456478,
+    "lng": 103.8277877,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "2 Bukit Manis Road, Sentosa, Singapore 099891",
+    "geocodeName": "Sofitel Hotel Sentosa Singapore, 2, Bukit Manis Road, Sentosa, Southern Islands, Central Region, Singapore, 099891, Singapore"
+  },
+  "4625f8013f61000dfca0e6c268117bcc85529e9a": {
+    "lat": 1.2933171,
+    "lng": 103.8533985,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "2 Stamford Road, Singapore 178882",
+    "geocodeName": "Swissôtel The Stamford, 2, Stamford Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 178882, Singapore"
+  },
+  "375c265c117132307a8aeba70f37d8b18b955575": {
+    "lat": 1.2547174,
+    "lng": 103.8146148,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Siloso Beach, 51 Imbiah Walk, Sentosa, Singapore 099538",
+    "geocodeName": "Siloso Beach Resort, 51, Imbiah Walk, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 099538, Singapore"
+  },
+  "7b675ccbf30d1f20fc142feedb2aa434a8136b48": {
+    "lat": 1.2907126,
+    "lng": 103.8583454,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "5 Raffles Avenue, Singapore 039797",
+    "geocodeName": "Mandarin Oriental Hotel, 5, Raffles Avenue, Marina Centre, Civic District, Downtown Core, Central Region, Singapore, 039797, Singapore"
+  },
+  "97b60f3df5687f8d9901c920fba5e454673234a3": {
+    "lat": 1.2540134,
+    "lng": 103.8146202,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "40 Siloso Beach Walk, Sentosa, Singapore 098996",
+    "geocodeName": "Rumours Beach Club, 40, Siloso Beach Walk, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 098996, Singapore"
+  },
+  "6bc5326955942618f713e40f33da1741446d0ec6": {
+    "lat": 1.4093476,
+    "lng": 103.8680089,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Wheeler's Estate, Singapore",
+    "geocodeName": "Wheeler’s Estate, 2, Park Lane, Seletar, North-east Region, Singapore, 798386, Singapore"
+  },
+  "f9ef9c9e43d960ad59b58325b8615c4f927c44b4": {
+    "lat": 1.3237578,
+    "lng": 103.9628922,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Dusit Thani Laguna Singapore, Singapore",
+    "geocodeName": "Dusit Thani Laguna Singapore, 11, Upper Changi Road East, Xilin, Changi Business Park, Tampines, East Region, Singapore, 488047, Singapore"
+  },
+  "9b951da2dc476767e188d316e58d138be053296d": {
+    "lat": 1.3125512,
+    "lng": 103.8535998,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Farrer Park Station Road, Singapore 217562",
+    "geocodeName": "UOB, 1, Farrer Park Station Road, Farrer Park, Little India, Rochor, Central Region, Singapore, 217562, Singapore"
+  },
+  "131cae3da75411e070f5f769c60791cc72fd816e": {
+    "lat": 1.304987,
+    "lng": 103.8330525,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "320 Orchard Road, Singapore 238866",
+    "geocodeName": "Tang Plaza, 320, Orchard Road, Boulevard, Orchard, Central Region, Singapore, 238864, Singapore"
+  },
+  "392afc1c23aa16d4016f1abbf7a584c9bec9ef89": {
+    "lat": 1.3056937,
+    "lng": 103.8261404,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "29 Tanglin Road, Singapore 247911",
+    "geocodeName": "The St. Regis Singapore, 29, Tanglin Road, Tanglin, Orchard, Central Region, Singapore, 247911, Singapore"
+  },
+  "69f401a6486558b56632808f2f0b2738a1c5ffc3": {
+    "lat": 1.2749407,
+    "lng": 103.8436571,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "165 Tanjong Pagar Road, Singapore 088539",
+    "geocodeName": "Amara Singapore, 165, Tanjong Pagar Road, Anson, Civic District, Downtown Core, Central Region, Singapore, 088539, Singapore"
+  },
+  "46db9efc9d0e8b45c09d21db38fcc6e6979c1b8a": {
+    "lat": 1.2954899,
+    "lng": 103.8520117,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "30 Victoria Street, Singapore 187996",
+    "geocodeName": "Caldwell House, 30, Victoria Street, City Hall, Civic District, Downtown Core, Central Region, Singapore, 188533, Singapore"
+  },
+  "7ad077c50b3ed12fe3624f8a5d620c4b7a7f55fa": {
+    "lat": 1.2983823,
+    "lng": 103.8548923,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "80 Middle Road, Singapore 188966",
+    "geocodeName": "InterContinental Singapore, 80, Middle Road, Bugis, Civic District, Downtown Core, Central Region, Singapore, 188966, Singapore"
+  },
+  "3a070eede6612c8893c7d050fb4366cb29de619e": {
+    "lat": 1.2836965,
+    "lng": 103.8607226,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Marina Bay Sands, 10 Bayfront Avenue, Singapore 018956",
+    "geocodeName": "Marina Bay Sands, 10, Bayfront Avenue, Bayfront Subzone, Civic District, Downtown Core, Central Region, Singapore, 018956, Singapore"
+  },
+  "a321e7b9dc171cee5ffd6f8ca3c1155066658550": {
+    "lat": 1.2574021,
+    "lng": 103.8097938,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "101 Siloso Road, Sentosa, Singapore 098970",
+    "geocodeName": "Shangri-La's Rasa Sentosa Resort & Spa, 101, Siloso Road, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 098970, Singapore"
+  },
+  "06444f05f794670af69402f53b72cf14cb5cb84e": {
+    "lat": 1.2771098,
+    "lng": 103.8452066,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "9 Wallich Street, Singapore 078885",
+    "geocodeName": "9, Wallich Street, Tanjong Pagar, Civic District, Downtown Core, Central Region, Singapore, 078885, Singapore"
+  },
+  "292261149020031592295259f113feed8b58a704": {
+    "lat": 1.2788927,
+    "lng": 103.813222,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "10 Telok Blangah Green, Singapore 109178",
+    "geocodeName": "The Alkaff Mansion, 10, Telok Blangah Green, Telok Blangah Drive, Telok Blangah, Bukit Merah, Central Region, Singapore, 109178, Singapore"
+  },
+  "54556624ce3fe968d36398cb2316bfcc0bda3e82": {
+    "lat": 1.2460585,
+    "lng": 103.8426843,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "21 Ocean Way, Sentosa Cove, Singapore 098374",
+    "geocodeName": "21, Ocean Way, Sentosa, Sentosa Cove, Southern Islands, Central Region, Singapore, 098374, Singapore"
+  },
+  "c15d16f28d70dc277e362ff6ac3ea7fb441e56b7": {
+    "lat": 1.3052157,
+    "lng": 103.828685,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "190 Orchard Boulevard, Singapore 248646",
+    "geocodeName": "Four Seasons Hotel, 190, Orchard Boulevard, Boulevard, Orchard, Central Region, Singapore, 248646, Singapore"
+  },
+  "6421cb80a892abedc5ddf85030ef9b6638499696": {
+    "lat": 1.2530342,
+    "lng": 103.815412,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "46 Siloso Beach Walk, Sentosa, Singapore 099005",
+    "geocodeName": "46, Siloso Beach Walk, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 099005, Singapore"
+  },
+  "ceb9bfc685b7112caf4a0e32864897643d2d4c00": {
+    "lat": 1.294941,
+    "lng": 103.8543027,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Beach Road, Singapore 189673",
+    "geocodeName": "1, Beach Road, City Hall, Civic District, Downtown Core, Central Region, Singapore, 189673, Singapore"
+  },
+  "e507f35388b01d43d1197f98fb96f661766e63ff": {
+    "lat": 1.2874464,
+    "lng": 103.8514862,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Empress Place, Singapore 179555",
+    "geocodeName": "Asian Civilisations Museum, 1, Empress Place, City Hall, Civic District, Downtown Core, Central Region, Singapore, 179555, Singapore"
+  },
+  "630deecd2f70063e55e8d2bfbedd2bb0ef59787a": {
+    "lat": 1.2446339,
+    "lng": 103.8270064,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "110 Tanjong Beach Walk, Sentosa, Singapore 098944",
+    "geocodeName": "Tanjong Beach Walk, Sentosa, Southern Islands, Central Region, Singapore, 099891, Singapore"
+  },
+  "3f16252d517d3edfb835825794455af0581faa70": {
+    "lat": 1.3086899,
+    "lng": 103.8349935,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "22 Scotts Road, Singapore 228221",
+    "geocodeName": "Goodwood Park Hotel, 22, Scotts Road, Boulevard, Orchard, Central Region, Singapore, 228221, Singapore"
+  },
+  "c47906e3dfdb0b115d6d4341a4b829779c5018c6": {
+    "lat": 1.2575434,
+    "lng": 103.818827,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Hard Rock Hotel Singapore, Singapore",
+    "geocodeName": "Hard Rock Hotel Singapore, 28, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098139, Singapore"
+  },
+  "61a6bce6138c6f1e868695c4e4a8265c7b2f0a7d": {
+    "lat": 1.2221928,
+    "lng": 103.8552986,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Lazarus Island, Singapore",
+    "geocodeName": "Lazarus Island, Central Region, Singapore"
+  },
+  "a26a8790058f24db7d784576e406ee53d070de08": {
+    "lat": 1.2456877,
+    "lng": 103.8398789,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "11 Cove Drive, Sentosa Cove, Singapore 098497",
+    "geocodeName": "ONE ̊15 Marina, 11, Cove Drive, Sentosa, Sentosa Cove, Southern Islands, Central Region, Singapore, 098497, Singapore"
+  },
+  "68955da48fd562a07740ea6f9acf9ccbf22b5790": {
+    "lat": 1.3076686,
+    "lng": 103.8281644,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "442 Orchard Road, Singapore 238879",
+    "geocodeName": "Orchard Hotel Singapore, 442, Orchard Road, Tanglin, Orchard, Central Region, Singapore, 238879, Singapore"
+  },
+  "dc7072f2660c54940281d0bf6178cf974d78a2be": {
+    "lat": 1.3073446,
+    "lng": 103.8298621,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "10 Claymore Road, Singapore 229540",
+    "geocodeName": "Pan Pacific Orchard, 10, Claymore Road, Boulevard, Orchard, Central Region, Singapore, 229540, Singapore"
+  },
+  "0f1f7a15afdd33dfc188bd34cc358fd3180a936b": {
+    "lat": 1.2942914,
+    "lng": 103.8491092,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "39 Armenian Street, Singapore 179941",
+    "geocodeName": "Peranakan Museum, 39, Armenian Street, Bras Basah, Museum, Central Region, Singapore, 179941, Singapore"
+  },
+  "4a3be2624704cb644cece6928a090f2a06ed8cf9": {
+    "lat": 1.2556955,
+    "lng": 103.8202156,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "8 Sentosa Gateway, Singapore 098269",
+    "geocodeName": "Resorts World Sentosa Casino, 8, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098269, Singapore"
+  },
+  "893ada5ac989a28f564706c0ed7ff057ca7db64a": {
+    "lat": 1.2758286,
+    "lng": 103.8495164,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Straits Boulevard, Singapore 018906",
+    "geocodeName": "Singapore Chinese Cultural Centre, 1, Straits Boulevard, Cecil, Civic District, Downtown Core, Central Region, Singapore, 018906, Singapore"
+  },
+  "4651b9e83bba1c30254a397569a279820abc75bd": {
+    "lat": 1.3022946,
+    "lng": 103.8410916,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "11 Cavenagh Road, Singapore 229616",
+    "geocodeName": "Holiday Inn Singapore Orchard City Centre, 11, Cavenagh Road, Somerset, Orchard, Central Region, Singapore, 229616, Singapore"
+  },
+  "43005a7d36b1db92ec586f462b6dfb63790a6222": {
+    "lat": 1.280274,
+    "lng": 103.8542263,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "LeVeL33, Singapore",
+    "geocodeName": "LeVel33, 8, Marina Boulevard, Central Subzone, Civic District, Downtown Core, Central Region, Singapore, 018981, Singapore"
+  },
+  "c74c7ad76a3758cbef00212a9d640b97bb62e81a": {
+    "lat": 1.4693474,
+    "lng": 103.819981,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "43 Admiralty Road West, Singapore 759962",
+    "geocodeName": "SAF Yacht Club, 43, Admiralty Road West, The Wharves, Senoko, Sembawang, North Region, Singapore, 759962, Singapore"
+  },
+  "d83155c4f6807c0e1a662578b7f5b7c45c214b65": {
+    "lat": 1.2438791,
+    "lng": 103.8294313,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "27 Bukit Manis Road, Sentosa, Singapore 099892",
+    "geocodeName": "Sentosa Golf Club, 27, Bukit Manis Road, Sentosa, Southern Islands, Central Region, Singapore, 099892, Singapore"
+  },
+  "d007857a0d944fc541d77585674ceeccb0979c48": {
+    "lat": 1.2521451,
+    "lng": 103.8200265,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "10 Artillery Avenue, Sentosa, Singapore 099951",
+    "geocodeName": "Village Hotel @ Sentosa, 10, Artillery Avenue, Sentosa, Southern Islands, Central Region, Singapore, 099951, Singapore"
+  },
+  "5ea834bb416a165b204cdf537478ad181efb7bee": {
+    "lat": 1.2521753,
+    "lng": 103.8221922,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Larkhill Road, Sentosa, Singapore 099394",
+    "geocodeName": "Amara Sanctuary Resort, Sentosa, 1, Larkhill Road, Sentosa, Southern Islands, Central Region, Singapore, 099394, Singapore"
+  },
+  "2853857f2f2cac7b1fa0b0813268a155b3c6e515": {
+    "lat": 1.2496982,
+    "lng": 103.8244312,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Capella Singapore, Singapore",
+    "geocodeName": "Capella Singapore, 1, The Knolls, Sentosa, Southern Islands, Central Region, Singapore, 098297, Singapore"
+  },
+  "37a51cf7c7d2abb2b7eb612ccc3274e508853623": {
+    "lat": 1.3602243,
+    "lng": 103.9896749,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "78 Airport Boulevard, Singapore 819666",
+    "geocodeName": "Jewel Changi Airport, 78, T1 Boulevard, Changi, East Region, Singapore, 819666, Singapore"
+  },
+  "fd98bad19b2aa129b8a206c376057923864c5d70": {
+    "lat": 1.2515637,
+    "lng": 103.8192644,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "50 Siloso Beach Walk, Sentosa, Singapore 099000",
+    "geocodeName": "Siloso Beach Walk, Sentosa, Southern Islands, Central Region, Singapore, 099951, Singapore"
+  },
+  "facb8ec0ba2b4a74851587384f359fb5a7a6db80": {
+    "lat": 1.2826411,
+    "lng": 103.8600277,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "LAVO, Singapore",
+    "geocodeName": "Lavo, Level 57, 10, Bayfront Avenue, Bayfront Subzone, Civic District, Downtown Core, Central Region, Singapore, 018956, Singapore"
+  },
+  "8e12cc06163413c5ff46785a52e53bf32a82f809": {
+    "lat": 1.3904999,
+    "lng": 103.9859416,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Netheravon Road, Singapore 508502",
+    "geocodeName": "Village Hotel (Changi), 1, Netheravon Road, Changi, Changi Village, East Region, Singapore, 508502, Singapore"
+  },
+  "7e07b691b9989268f8406fb7910549e60b184bab": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "5029c21f4115ef602cdaa7140e6137e96178e99a": {
+    "lat": 1.2712059,
+    "lng": 103.8194141,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "109 Mount Faber Road, Singapore 099203",
+    "geocodeName": "Faber Peak, 109, Mount Faber Road, Maritime Square, HarbourFront, Bukit Merah, Central Region, Singapore, 098801, Singapore"
+  },
+  "61802bf30be5405b138cff4f506456c95033652d": {
+    "lat": 1.4079745,
+    "lng": 103.8682998,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "The Summerhouse, Singapore",
+    "geocodeName": "The Summerhouse, 3, Park Lane, Seletar, North-east Region, Singapore, 798387, Singapore"
+  },
+  "0a6308aba889f1f96967150e808445ba9869e01e": {
+    "lat": 1.2562278,
+    "lng": 103.8120427,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Trapizza, Singapore",
+    "geocodeName": "Trapizza, Siloso Beach Walk, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 098979, Singapore"
+  },
+  "dc129cae5d01455f2ce99b6c14be70983a264168": {
+    "lat": 1.2991547,
+    "lng": 103.8578314,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Andaz Singapore, Singapore",
+    "geocodeName": "ANdAZ Singapore, 1, Fraser Street, Bugis, Civic District, Downtown Core, Central Region, Singapore, 189350, Singapore"
+  },
+  "debd2079fcb1c6da9aeff417cb77af48b2f92f16": {
+    "lat": 1.2577957,
+    "lng": 103.8167429,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Equarius Hotel, Singapore",
+    "geocodeName": "Equarius Hotel, 16, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098133, Singapore"
+  },
+  "d82ba2006e97a7436f16eeba80caf6e79bd884b2": {
+    "lat": 1.2846744,
+    "lng": 103.8539915,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Monti, Singapore",
+    "geocodeName": "Monti, Clifford Square, Clifford Pier, Civic District, Downtown Core, Central Region, Singapore, 049325, Singapore"
+  },
+  "db532d4714a3a98f2ad8371bad87a89fece1cb3e": {
+    "lat": 1.249689,
+    "lng": 103.8297534,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Sentosa, Singapore",
+    "geocodeName": "Sentosa, Southern Islands, Central Region, Singapore"
+  },
+  "82d680f70ac80fd804ccb96526c61cac189e29d9": {
+    "lat": 1.2892118,
+    "lng": 103.8374592,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "320 Havelock Road, Singapore 169628",
+    "geocodeName": "The Warehouse, 320, Havelock Road, Robertson Quay, Singapore River, Central Region, Singapore, 169628, Singapore"
+  },
+  "97bc4e464126a46c6f1d9c3d25f3f8c04f999edb": {
+    "lat": 1.2521121,
+    "lng": 103.817529,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "iFly Singapore, Singapore",
+    "geocodeName": "iFly Singapore, 43, Siloso Beach Walk, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 099010, Singapore"
+  },
+  "e240c9f5a3022b76c4127c245dc87106f2f49e7d": {
+    "lat": 1.2470611,
+    "lng": 103.8421012,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Mykonos on the Bay, Singapore",
+    "geocodeName": "Mykonos On The Bay, Ocean Way, Sentosa, Sentosa Cove, Southern Islands, Central Region, Singapore, 098374, Singapore"
+  },
+  "b15a6028934fb0ccdea7407dedcd7fdbbdcf6cea": {
+    "lat": 1.300097,
+    "lng": 103.8577119,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "ATLAS, Singapore",
+    "geocodeName": "ATLAS, 600, North Bridge Road, Bugis, Civic District, Downtown Core, Central Region, Singapore, 188778, Singapore"
+  },
+  "e0da04d0eeb4cb2d86237054136c407f62082ea0": {
+    "lat": 1.2532749,
+    "lng": 103.8195532,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "23 Beach View, Sentosa, Singapore 098679",
+    "geocodeName": "Oasis Resort Sentosa, 23, Beach View, Sentosa, Southern Islands, Central Region, Singapore, 098679, Singapore"
+  },
+  "453bb2d12cc986c2dc5961d2379f5e11f3ad46ad": {
+    "lat": 1.2886695,
+    "lng": 103.851099,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "1 Old Parliament Lane, Singapore 179429",
+    "geocodeName": "The Arts House, 1, Old Parliament Lane, City Hall, Civic District, Downtown Core, Central Region, Singapore, 179429, Singapore"
+  },
+  "c7f6764be78927fba8764458e7ffcd86ed5bd224": {
+    "lat": 1.3046694,
+    "lng": 103.811018,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "28B Harding Road, Singapore 249549",
+    "geocodeName": "28B, Harding Road, Ridout, Tanglin, Central Region, Singapore, 249549, Singapore"
+  },
+  "d91415828481f818fd0c76bef0f2ae5158d7147f": {
+    "lat": 1.2562238,
+    "lng": 103.8189627,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Festive Hotel, Singapore",
+    "geocodeName": "Hotel Ora, 12, Sentosa Gateway, Sentosa, Southern Islands, Central Region, Singapore, 098271, Singapore"
+  },
+  "de14c4fadfea1125a0ebc94c90061c2d1afd84c8": {
+    "lat": 1.3045547,
+    "lng": 103.8089431,
+    "geocodeStatus": "manual_verified",
+    "geocodeQuery": "7 Dempsey Road, #01-04, Singapore 249671",
+    "geocodeName": "7, Dempsey Road, Ridout, Tanglin, Central Region, Singapore, 249671, Singapore"
+  },
+  "5bf1a98e42c4128374f6ea48d4641755db48b71b": {
+    "lat": 1.2911254,
+    "lng": 103.8402234,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "41 Robertson Quay, Singapore 238236",
+    "geocodeName": "STPI Creative Workshop and Gallery, 41, Robertson Quay, Singapore River, Central Region, Singapore, 238236, Singapore"
+  },
+  "1e8aa1e99c1eae43a2fb4cdcd7039e15ee85563e": {
+    "lat": 1.3052947,
+    "lng": 103.8272461,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "38 Cuscaden Road, Singapore 249732",
+    "geocodeName": "The Singapore EDITION, 38, Cuscaden Road, Tanglin, Orchard, Central Region, Singapore, 249731, Singapore"
+  },
+  "9dd357800ef8f43880c7a56e98c5b75479fdb0f0": {
+    "lat": 1.2519897,
+    "lng": 103.820997,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "2 Gunner Lane, Sentosa, Singapore 099567",
+    "geocodeName": "The Barracks Hotel, 2, Gunner Lane, Sentosa, Southern Islands, Central Region, Singapore, 099567, Singapore"
+  },
+  "6693c6725aab09de9f7cea775bdbac85ee0360da": {
+    "lat": 1.2518875,
+    "lng": 103.8197207,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "The Outpost Hotel Sentosa, Singapore",
+    "geocodeName": "The Outpost, Beach View, Sentosa, Southern Islands, Central Region, Singapore, 099951, Singapore"
+  },
+  "8004fad59a73d1e60f9043efc52d2ca67eb7fa53": {
+    "lat": 1.3038766,
+    "lng": 103.8106019,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "39C Harding Road, Singapore 249541 (Dempsey Hill)",
+    "geocodeName": "Harding Road, Ridout, Tanglin, Central Region, Singapore, 249673, Singapore"
+  },
+  "2cf3a1ba2c4ac44bcb358f7a9caec111a471283e": {
+    "lat": 1.2557994,
+    "lng": 103.8160173,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "41 Imbiah Road, Sentosa, Singapore 099707",
+    "geocodeName": "Imbiah Road, Sentosa, Fort Siloso, Southern Islands, Central Region, Singapore, 099708, Singapore"
+  },
+  "768c0f931d7413e3568630d01401b0e69fc3b181": {
+    "lat": 1.2467161,
+    "lng": 103.8419915,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "31 Ocean Way, Singapore 098374 (Sentosa Cove)",
+    "geocodeName": "SolePomodoro, 31, Ocean Way, Sentosa, Sentosa Cove, Southern Islands, Central Region, Singapore, 098375, Singapore"
+  },
+  "59906b730681a9bbdf95acd157b7f9e61565a198": {
+    "lat": 1.2842204,
+    "lng": 103.8501314,
+    "geocodeStatus": "manual_verified",
+    "geocodeQuery": "88 Market Street, Level 51, CapitaSpring, Singapore 048948",
+    "geocodeName": "CapitaSpring, 88, Market Street, Golden Shoe, Civic District, Downtown Core, Central Region, Singapore, 048948, Singapore"
+  },
+  "52e6013fa023e5553f57a83da424132814dda58c": {
+    "lat": null,
+    "lng": null,
+    "geocodeStatus": "not_found",
+    "geocodeName": ""
+  },
+  "18da882a3bbb0ec982571e91d77494f7de801a2b": {
+    "lat": 1.2471354,
+    "lng": 103.8264725,
+    "geocodeStatus": "matched",
+    "geocodeQuery": "Raffles Sentosa Singapore, Singapore",
+    "geocodeName": "Raffles Sentosa Singapore, 4, Bukit Manis Road, Sentosa, Southern Islands, Central Region, Singapore, 099947, Singapore"
+  }
+}

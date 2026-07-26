@@ -34,10 +34,40 @@
   </url>
 
   <url>
+    <loc>https://actcreative.net/llms.txt</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/llms-zh.txt</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
     <loc>https://actcreative.net/about/</loc>
     <lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/holiday-decorations-singapore/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://actcreative.net/holiday-decorations-singapore/assets/holiday-hero.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/holiday-decorations-singapore/assets/christmas-tree-concepts/concept-12-translucent-candy-paper-tree-a.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/holiday-decorations-singapore/assets/cny-ram-concepts/ram-09-mirror-steel-ram-a.webp</image:loc>
+    </image:image>
   </url>
 
   <url>
@@ -53,7 +83,7 @@
 
   <url>
     <loc>https://actcreative.net/zh/event-fabrication-singapore/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/event-fabrication-singapore/" />
@@ -66,8 +96,56 @@
   </url>
 
   <url>
+    <loc>https://actcreative.net/zh/custom-props-singapore/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/custom-props-singapore/" />
+    <image:image><image:loc>https://actcreative.net/og/custom-props-singapore.png</image:loc><image:title>新加坡定制活动道具制作</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/frp-sculpture-fabrication-singapore/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/frp-sculpture-fabrication-singapore/" />
+    <image:image><image:loc>https://actcreative.net/frp-sculpture-fabrication-singapore/assets/images/slides/slide-08.webp</image:loc><image:title>新加坡玻璃钢与定制雕塑制作</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/custom-food-truck-rental-singapore/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
+    <image:image><image:loc>https://actcreative.net/custom-food-truck-rental-singapore/assets/singapore-sample-food-truck.webp</image:loc><image:title>新加坡餐车租赁与定制移动空间</image:title></image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/zh/singapore-event-venue-finder/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <image:image><image:loc>https://actcreative.net/og/singapore-event-venue-finder.png</image:loc><image:title>新加坡活动场地搜索与选址服务</image:title></image:image>
+  </url>
+
+  <url>
     <loc>https://actcreative.net/zh/china-event-production-support/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/china-event-production-support/" />
@@ -81,7 +159,7 @@
 
   <url>
     <loc>https://actcreative.net/zh/china-sourcing-agent/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/china-sourcing-agent/" />
@@ -96,7 +174,7 @@
 
   <url>
     <loc>https://actcreative.net/zh/booth-design-build-singapore/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/booth-design-build-singapore/" />
@@ -105,7 +183,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/booth-design-build-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/og/exhibition-booth-production-singapore.png</image:loc>
-      <image:title>鏂板姞鍧″睍浣嶈璁′笌鎼缓</image:title>
+      <image:title>新加坡展位设计与搭建</image:title>
     </image:image>
   </url>
 
@@ -120,7 +198,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/booth-design-build-portfolio/" />
     <image:image>
       <image:loc>https://actcreative.net/booth-design-build-portfolio/assets/002-china-moutai-booth-dbf2789e7d.webp</image:loc>
-      <image:title>鏂板姞鍧″睍浣嶈璁℃渚嬩綔鍝侀泦</image:title>
+      <image:title>新加坡展位设计案例作品集</image:title>
     </image:image>
   </url>
 
@@ -142,7 +220,7 @@
 
   <url>
     <loc>https://actcreative.net/booth-design-build-singapore/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.92</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/booth-design-build-singapore/" />
@@ -189,7 +267,7 @@
 
   <url>
     <loc>https://actcreative.net/china-sourcing-agent/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/china-sourcing-agent/" />
@@ -254,47 +332,106 @@
   </url>
 
   <url>
-    <loc>https://actcreative.net/singapore-event-venue-sourcing/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <loc>https://actcreative.net/singapore-event-venue-finder/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/singapore-event-venue-finder/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/singapore-event-venue-finder/" />
+    <image:image>
+      <image:loc>https://actcreative.net/og/singapore-event-venue-finder.png</image:loc>
+      <image:title>Singapore Venue Service</image:title>
+      <image:caption>Interactive venue map, comparison, shortlist and human venue matching service for more than 100 Singapore event venues.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/gardens-by-the-bay.webp</image:loc>
+      <image:title>Gardens by the Bay event venue</image:title>
+      <image:caption>Gardens by the Bay in the Singapore Event Venue Finder.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/resorts-world-ballroom.webp</image:loc>
+      <image:title>Resorts World Ballroom event venue</image:title>
+      <image:caption>Resorts World Ballroom in the Singapore Event Venue Finder.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/sentosa/</loc>
+    <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.84</priority>
-    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/singapore-event-venue-sourcing/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/singapore-event-venue-sourcing/" />
+    <priority>0.78</priority>
     <image:image>
-      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-ritz-interior.webp</image:loc>
-      <image:title>Singapore hotel event venue sourcing reference</image:title>
-      <image:caption>Hotel interior reference used for Singapore event venue sourcing, quote direction and site recap discussion.</image:caption>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/capella-singapore.webp</image:loc>
+      <image:title>Sentosa event venues</image:title>
+      <image:caption>Curated Sentosa hotels, attractions, beaches, restaurants and destination event spaces.</image:caption>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/marina-bay/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
     <image:image>
-      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-clifford-pier-foyer.webp</image:loc>
-      <image:title>Singapore heritage event venue reference</image:title>
-      <image:caption>Heritage indoor venue reference used for Singapore venue fit, guest flow and production checks.</image:caption>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/gardens-by-the-bay.webp</image:loc>
+      <image:title>Marina Bay event venues</image:title>
+      <image:caption>Curated Marina Bay convention venues, hotels, theatres, rooftops and waterfront spaces.</image:caption>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/outdoor/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
     <image:image>
-      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-fort-canning-green.webp</image:loc>
-      <image:title>Singapore outdoor event venue reference</image:title>
-      <image:caption>Outdoor lawn reference used for venue fit, guest flow and production constraint checks.</image:caption>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/lazarus-island.webp</image:loc>
+      <image:title>Outdoor event venues in Singapore</image:title>
+      <image:caption>Curated gardens, beaches, lawns, rooftops, decks and outdoor event settings in Singapore.</image:caption>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/hotel-ballrooms/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
     <image:image>
-      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-joaquim-hall.webp</image:loc>
-      <image:title>Singapore conference room venue reference</image:title>
-      <image:caption>Seminar and conference room reference for Singapore event venue shortlist discussion.</image:caption>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/four-seasons-hotel-singapore.webp</image:loc>
+      <image:title>Singapore hotel ballrooms</image:title>
+      <image:caption>Singapore hotel ballroom options for conferences, corporate dinners, receptions and weddings.</image:caption>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/200-guests/</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.76</priority>
     <image:image>
-      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-clifford-pier-event-setup.webp</image:loc>
-      <image:title>Singapore venue site recap reference</image:title>
-      <image:caption>Venue setup reference used for lighting, cocktail table, access and production recap checks.</image:caption>
+      <image:loc>https://actcreative.net/og/singapore-event-venue-finder.png</image:loc>
+      <image:title>Singapore event venues for 200 or more guests</image:title>
+      <image:caption>Curated Singapore venue records with a layout-specific capacity of at least 200 guests.</image:caption>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/arts-performance/</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.78</priority>
     <image:image>
-      <image:loc>https://actcreative.net/singapore-event-venue-sourcing/assets/venue-sports-hub-waterfront.webp</image:loc>
-      <image:title>Singapore waterfront event venue reference</image:title>
-      <image:caption>Waterfront event area reference for outdoor venue and public event planning.</image:caption>
+      <image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/victoria-theatre-and-concert-hall.webp</image:loc>
+      <image:title>Arts and performance venues in Singapore</image:title>
+      <image:caption>Curated Singapore theatres, concert halls, black boxes and arts centres for performances and creative events.</image:caption>
     </image:image>
   </url>
 
   <url>
     <loc>https://actcreative.net/event-fabrication-singapore/</loc>
-    <lastmod>2026-06-17</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/event-fabrication-singapore/" />
@@ -308,9 +445,13 @@
 
   <url>
     <loc>https://actcreative.net/custom-props-singapore/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/custom-props-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/custom-props-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/og/custom-props-singapore.png</image:loc>
     </image:image>
@@ -318,9 +459,13 @@
 
   <url>
     <loc>https://actcreative.net/frp-sculpture-fabrication-singapore/</loc>
-    <lastmod>2026-06-09</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/frp-sculpture-fabrication-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/frp-sculpture-fabrication-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/frp-sculpture-fabrication-singapore/assets/images/slides/slide-08.webp</image:loc>
       <image:title>Custom large-scale sculpture fabrication reference</image:title>
@@ -338,9 +483,13 @@
 
   <url>
     <loc>https://actcreative.net/custom-food-truck-rental-singapore/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/custom-food-truck-rental-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/custom-food-truck-rental-singapore/assets/singapore-sample-food-truck.webp</image:loc>
       <image:title>Custom food truck rental and mobile event unit in Singapore</image:title>
@@ -355,7 +504,7 @@
 
   <url>
     <loc>https://actcreative.net/custom-flying-inflatables-singapore/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <image:image>
@@ -371,7 +520,7 @@
 
   <url>
     <loc>https://actcreative.net/exhibition-booth-production-singapore/</loc>
-    <lastmod>2026-06-16</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -381,7 +530,7 @@
 
   <url>
     <loc>https://actcreative.net/china-event-production-support/</loc>
-    <lastmod>2026-05-29</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/china-event-production-support/" />
@@ -427,7 +576,7 @@
 
   <url>
     <loc>https://actcreative.net/roadshow-production-singapore/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-07-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -437,7 +586,7 @@
 
   <url>
     <loc>https://actcreative.net/retail-mall-activation-singapore/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -543,12 +692,12 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/" />
     <image:image>
       <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-final-product-display.webp</image:loc>
-      <image:title>ARTBOX Singapore 娲诲姩鍛ㄨ竟閲囪喘妗堜緥</image:title>
+      <image:title>ARTBOX Singapore 活动周边采购案例</image:title>
       <image:caption>Final event merchandise displayed at the Singapore event venue.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://actcreative.net/china-sourcing-agent/assets/artbox-shopping-bag-colour-card.webp</image:loc>
-      <image:title>Shopping bag 鑹插崱姣斿</image:title>
+      <image:title>Shopping bag 色卡比对</image:title>
       <image:caption>Event shopping bag sample compared with colour cards before production.</image:caption>
     </image:image>
   </url>
@@ -711,5 +860,120 @@
     <image:image>
       <image:loc>https://actcreative.net/case-studies/images/k11-shenyang.webp</image:loc>
     </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/" />
+    <image:image>
+      <image:loc>https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/assets/atrium-carpet-overview.webp</image:loc>
+      <image:title>Kick Off Challenge football activation at The Star Vista Singapore</image:title>
+      <image:caption>Football activation, bowling lane and ball-pit setup at The Star Vista B1 Atrium in Singapore.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/marina-bay-sands/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/marina-bay-sands.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/gardens-by-the-bay/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/gardens-by-the-bay.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/singapore-sports-hub/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/singapore-sports-hub.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/universal-studios-singapore/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/universal-studios-singapore.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/pasir-panjang-power-station/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/pasir-panjang-power-station.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/singapore-expo/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/singapore-expo.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/the-star-performing-arts-centre/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/the-star-performing-arts-centre.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/resorts-world-ballroom/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/resorts-world-ballroom.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/suntec-convention-centre/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/suntec-convention-centre.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/hilton-singapore-orchard/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/hilton-singapore-orchard.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/science-centre-singapore/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/science-centre-singapore.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/shangri-la-singapore/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/shangri-la-singapore.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/singapore-oceanarium/</loc>
+    <lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/singapore-oceanarium.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/esplanade-theatres-on-the-bay/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/esplanade-theatres-on-the-bay.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/the-ritz-carlton-millenia-singapore/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/the-ritz-carlton-millenia-singapore.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/artscience-museum/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/artscience-museum.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/the-westin-singapore/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/the-westin-singapore.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/capella-singapore/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/capella-singapore.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/national-museum-of-singapore/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/national-museum-of-singapore.webp</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://actcreative.net/singapore-event-venues/raffles-singapore/</loc>
+    <lastmod>2026-06-20</lastmod><changefreq>monthly</changefreq><priority>0.72</priority>
+    <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/raffles-singapore.webp</image:loc></image:image>
   </url>
 </urlset>

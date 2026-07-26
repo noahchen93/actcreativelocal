@@ -6,11 +6,12 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 import bigWorldImage1 from "figma:asset/50a15c0d86a008b03137d5f66091522ea2e22af0.png";
 import wingsArtImage1 from "figma:asset/ce1fae3f9d7c9c86cee5a57f78785bd01887f88b.png";
 import pacmanImage from "figma:asset/b24cf62a1dacab87d8adfc51e494355881e2ebd8.png";
-// Neutral materials image until a verified Artbox project photo is available.
-import artboxMaterialsImage from "figma:asset/1436808f505f19492ee82879766d0c80dc0901a9.png";
 import hofmanImage from "figma:asset/26e483ed6154d773d2210e3142c24d5a30471e92.png";
 import craigKarlImage from "figma:asset/f8ae069f17a75c4bb35568fc55aa9c42b28b80e6.png";
 import k11Image from "figma:asset/9d25bfe44e81512703910c57ed786148c93dcb9b.png";
+
+const kickOffChallengeImage = "/case-studies/images/kick-off-challenge.webp";
+const artboxMaterialsImage = "/china-sourcing-agent/assets/artbox-final-product-display.webp";
 
 export function CaseStudies() {
   const { t } = useLanguage();
@@ -40,6 +41,26 @@ export function CaseStudies() {
   };
 
   const singaporeProjects = [
+    {
+      title: t("KICK OFF CHALLENGE", "KICK OFF CHALLENGE"),
+      subtitle: t("The Star Vista B1 Atrium football activation", "The Star Vista B1 Atrium Activation"),
+      image: kickOffChallengeImage,
+      href: "/case-studies/kick-off-challenge-star-vista-singapore/",
+      clientLabel: t("Role", "Role"),
+      client: t("Supplier support at The Star Vista", "Supplier support at The Star Vista"),
+      achievement: t("Supplier", "Supplier"),
+      achievementDesc: t("carpet, fencing, props and setup", "carpet, fencing, props and setup"),
+      highlights: [
+        t(
+          "Carpet procurement and installation for the mall atrium play surface",
+          "Carpet procurement and installation for the mall atrium play surface"
+        ),
+        t(
+          "Cross-border football fencing, truss covers and football bowling props",
+          "Cross-border football fencing, truss covers and football bowling props"
+        )
+      ]
+    },
     {
       title: t("A BIG BIG WORLD", "A BIG BIG WORLD"),
       subtitle: t("圣淘沙跨年灯光秀", "Sentosa New Year Light Show"),
@@ -248,7 +269,7 @@ export function CaseStudies() {
             display: none;
           }
         }
-        @media (min-width: 1760px) {
+        @media (min-width: 2240px) {
           .case-grid--singapore + .case-rail-nav {
             display: none;
           }
@@ -337,7 +358,7 @@ export function CaseStudies() {
                       {/* Client */}
                       <div className="mb-4">
                         <p className="text-xs text-gray-500 mb-1">
-                          {t("客户", "Client")}
+                          {"clientLabel" in project ? project.clientLabel : t("客户", "Client")}
                         </p>
                         <p className="text-sm text-[#CCFF00]">
                           {project.client}
@@ -494,7 +515,7 @@ export function CaseStudies() {
                       {/* Client */}
                       <div className="mb-4">
                         <p className="text-xs text-gray-500 mb-1">
-                          {t("客户", "Client")}
+                          {"clientLabel" in project ? project.clientLabel : t("客户", "Client")}
                         </p>
                         <p className="text-sm text-[#CCFF00]">
                           {project.client}

@@ -15,6 +15,7 @@ const sources = {
   hofman: 'public/case-studies/images/florentijn-hofman.webp',
   craigKarl: 'public/case-studies/images/craig-karl.webp',
   sourcing: 'public/blog/assets/linkedin-sourcing-solutions.jpg',
+  holiday: 'public/holiday-decorations-singapore/assets/holiday-hero.webp',
 };
 
 const cards = [
@@ -89,6 +90,12 @@ const cards = [
     image: sources.sourcing,
     title: 'China Production Support',
     subtitle: 'Factory coordination, sampling, quality checks and shipping for SEA agencies.',
+  },
+  {
+    slug: 'holiday-decorations-singapore',
+    image: sources.holiday,
+    title: 'Holiday Decorations Singapore',
+    subtitle: 'Christmas, New Year and CNY decor with local installation.',
   },
 ];
 

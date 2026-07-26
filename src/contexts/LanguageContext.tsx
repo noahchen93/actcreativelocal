@@ -11,9 +11,9 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 const META_COPY = {
   en: {
-    title: "ACT Creative Singapore | Event Fabrication & Production Partner",
+    title: "ACT Creative Singapore | Event Solutions & Fabrication",
     description:
-      "Singapore event fabrication and cross-border production partner for custom props, exhibition components, FRP/sculpture and event merchandise.",
+      "Singapore event solutions partner for fabrication, booth design and build, venue sourcing, supplier coordination, cross-border logistics, permits and installation.",
   },
   zh: {
     title: "及物创意 ACT Creative | 新加坡跨境活动制作与中国生产支持伙伴",
@@ -43,17 +43,25 @@ function getInitialLanguage(): Language {
   return "en";
 }
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
+export function LanguageProvider({
+  children,
+  manageDocumentMetadata = true,
+}: {
+  children: ReactNode;
+  manageDocumentMetadata?: boolean;
+}) {
   const [language, setLanguage] = useState<Language>(getInitialLanguage);
 
   useEffect(() => {
+    if (!manageDocumentMetadata) return;
+
     const meta = META_COPY[language];
     const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
 
     document.documentElement.lang = language === "zh" ? "zh-Hans-SG" : "en-SG";
     document.title = meta.title;
     description?.setAttribute("content", meta.description);
-  }, [language]);
+  }, [language, manageDocumentMetadata]);
 
   const t = (zh: string, en: string) => {
     return language === "zh" ? zh : en;
