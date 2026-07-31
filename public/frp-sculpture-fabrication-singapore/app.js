@@ -136,6 +136,12 @@
     `${CONTROL_BUTTON_BASE} border border-accent/70 bg-black text-white shadow-[0_22px_55px_rgba(0,0,0,0.38)] hover:border-accent hover:text-accent`;
   const preloadedImages = new Set();
 
+  function trackPortfolioAction(name, label, details) {
+    if (window.ACTInquiryAttribution?.trackAction) {
+      window.ACTInquiryAttribution.trackAction(name, label, details);
+    }
+  }
+
   function getProjectProfile(project) {
     switch (project.category) {
       case "large-scale":
@@ -352,7 +358,12 @@
       <button
         type="button"
         className="project-card button-elevated overflow-hidden rounded-[1.8rem] border border-line bg-black/74 text-left shadow-[0_20px_55px_rgba(0,0,0,0.4)]"
-        onClick=${() => props.onSelect(project.id)}
+        onClick=${() => {
+          trackPortfolioAction("Sculpture project opened", project.id, {
+            category: project.category,
+          });
+          props.onSelect(project.id);
+        }}
         onMouseEnter=${() => props.onPreview(project)}
         onFocus=${() => props.onPreview(project)}
       >
@@ -387,7 +398,12 @@
             <button
               type="button"
               className=${`filter-pill ${active ? "filter-pill-active" : ""}`}
-              onClick=${() => props.onChange(filter.key)}
+              onClick=${() => {
+                trackPortfolioAction("Sculpture filter used", filter.key, {
+                  visible_projects: counts[filter.key] || 0,
+                });
+                props.onChange(filter.key);
+              }}
             >
               ${filter.label}
               <span className=${`ml-2 rounded-full px-2 py-0.5 text-[0.68rem] ${active ? "bg-black/18 text-black" : "bg-black text-white"}`}>

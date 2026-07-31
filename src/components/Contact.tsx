@@ -11,7 +11,7 @@ import {
   Send,
 } from "lucide-react";
 import { Button } from "./ui/button";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
 
 const EMAIL = "contact@actcreative.net";
@@ -21,6 +21,11 @@ const MAILTO_SUBJECT = "Project Inquiry - ACT Creative";
 type InquiryAttributionBridge = {
   formatLines?: (channel: string) => string;
   track?: (channel: string, label?: string) => void;
+  trackAction?: (
+    name: string,
+    label?: string,
+    details?: Record<string, string | number | boolean>,
+  ) => void;
 };
 
 declare global {
@@ -80,6 +85,18 @@ const trackInquiryIntent = (channel: string, label: string) => {
   window.ACTInquiryAttribution?.track?.(channel, label);
 };
 
+const trackSiteAction = (
+  name: string,
+  label: string,
+  details?: Record<string, string | number | boolean>,
+) => {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  window.ACTInquiryAttribution?.trackAction?.(name, label, details);
+};
+
 export function Contact() {
   const { t } = useLanguage();
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -90,6 +107,7 @@ export function Contact() {
   const [budget, setBudget] = useState(budgets[0].id);
   const [timeline, setTimeline] = useState("");
   const [notes, setNotes] = useState("");
+  const briefStarted = useRef(false);
 
   const selectedScopes = scopes.filter((scope) => scopeIds.includes(scope.id));
 
@@ -124,6 +142,14 @@ export function Contact() {
     );
   };
 
+  const trackBriefStart = () => {
+    if (briefStarted.current) return;
+    briefStarted.current = true;
+    trackSiteAction("Brief started", "homepage_brief_builder", {
+      project_type: projectType,
+    });
+  };
+
   const handleWhatsApp = () => {
     trackInquiryIntent("whatsapp", "contact_brief_builder");
     const message = `${briefMessage}${getAttributionLines("whatsapp")}`;
@@ -136,6 +162,7 @@ export function Contact() {
   };
 
   const copyEmail = async () => {
+    trackInquiryIntent("email_copy", "contact_email_copy");
     try {
       await navigator.clipboard.writeText(EMAIL);
       setCopiedEmail(true);
@@ -151,6 +178,10 @@ export function Contact() {
   };
 
   const copyBrief = async () => {
+    trackSiteAction("Brief copied", "homepage_brief_builder", {
+      project_type: projectType,
+      location: location,
+    });
     try {
       await navigator.clipboard.writeText(briefMessage);
       setCopiedBrief(true);
@@ -329,7 +360,11 @@ export function Contact() {
           <div className="w-32 h-1 bg-[#CCFF00] mx-auto"></div>
         </motion.div>
 
-        <div className="brief-shell max-w-6xl mx-auto">
+        <div
+          className="brief-shell max-w-6xl mx-auto"
+          onFocusCapture={trackBriefStart}
+          onPointerDown={trackBriefStart}
+        >
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}

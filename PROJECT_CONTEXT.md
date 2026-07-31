@@ -1,6 +1,6 @@
 # ACT Creative Website Project Context
 
-Last updated: 2026-06-30, Asia/Shanghai.
+Last updated: 2026-07-31, Asia/Singapore.
 
 This file is the living handoff document for `actcreativelocal`. Update it in the same commit as every meaningful website, content, data, AI, deployment, or operations change. If another tool or developer continues this project, read this file first.
 
@@ -39,7 +39,7 @@ User intent and product direction:
 
 - Local workspace: `E:\actcreativelocal`
 - Git remote: `https://github.com/noahchen93/actcreativelocal.git`
-- Active branch at this update: `codex/venue-finder-finish`
+- Active branch at this update: `master`
 - Production domain: `https://actcreative.net`
 - AI gateway public tunnel hostname: `https://ai.actcreative.net`
 
@@ -387,6 +387,14 @@ The git history shows these major phases:
    - Changed the desktop navigation breakpoint to `min-width: 1024px`; kept the right-side language/send-brief action cluster at `min-width: 1180px` to avoid crowding, and tightened nav spacing/font size at the laptop breakpoint.
    - `npm run build` passes and emits `build/assets/main-nTrCC71d.js`. Playwright verified live `https://actcreative.net/`: at 1024px and 1180px `.act-desktop-nav` is `display: flex`; at 390px desktop nav remains hidden and `.act-mobile-actions` is `display: flex`.
    - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_98cgbRr5hbAiojbExk9eg366ba4r`, aliased to `https://actcreative.net` (READY). Live verification loaded `assets/main-nTrCC71d.js`.
+
+23. Conversion, sculpture indexing and deploy-safety optimization on 2026-07-31 (Codex; branch `master`, local only at handoff).
+   - Expanded `public/inquiry-attribution.js` with privacy-safe Vercel/dataLayer events for brief starts, inquiry CTAs, proof views, service exploration, venue exploration, 15-second engagement, scroll depth and mobile sticky WhatsApp CTAs with page-specific brief text.
+   - Added homepage brief-builder start/copy/email-copy tracking in `src/components/Contact.tsx` and project/filter interaction tracking in the sculpture portfolio app.
+   - Clarified the Custom Props service boundary against sculpture and full event fabrication, added the Kick Off Challenge prop proof, strengthened Event Fabrication case-role context, and aligned the booth page title/H1 with exhibition booth contractor intent.
+   - Added `scripts/generate-sculpture-seo-index.mjs`, which generates a crawlable 43-project named index from 67 total sculpture references while retaining ACT Creative's systems-and-solutions integration positioning and omitting partner branding.
+   - Added `scripts/check-content-integrity.mjs` and `scripts/content-integrity-baseline.json`. Every build now protects minimum page/case/venue/sitemap counts and 17 critical service, venue and case URLs; the optional production comparison checks that no live sitemap URL is missing locally.
+   - Verification passed: `npm run seo:check`, `npm run content:guard:production`, `npm run build`, JavaScript syntax checks and `git diff --check`. Build audit reported 72 HTML pages, 74 sitemap URLs and 5 localized pairs. No commit, push or deployment was performed in this update.
 
 ## AI Assistant Operating Notes
 

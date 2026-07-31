@@ -1,11 +1,12 @@
 (function () {
   var STORAGE_KEY = "act_inquiry_attribution_v1";
+  var ENGAGEMENT_STORAGE_KEY = "act_engagement_events_v1";
   var PHONE = "6584515268";
   var EMAIL = "contact@actcreative.net";
 
   function ensureVercelAnalytics() {
-    // The React homepage injects Analytics through @vercel/analytics/react.
-    // Static landing pages need the framework-agnostic script explicitly.
+    // The React homepage loads Analytics through site-analytics.js.
+    // Static landing pages also keep this fallback for direct page loads.
     if (document.getElementById("root")) return;
 
     window.va =
@@ -205,16 +206,44 @@
       });
     }
     window.dispatchEvent(new CustomEvent("act:inquiry-intent", { detail: event }));
+  }
 
-    // Vercel custom events appear on Pro/Enterprise plans. Keeping this call
-    // here makes the same intent data available automatically after an upgrade,
-    // while the dataLayer event and inquiry message attribution work on all plans.
+  function trackAction(name, label, details) {
+    var attribution = getAttribution();
+    var safeDetails = details || {};
+    var data = {
+      label: label || "",
+      page_path: window.location.pathname,
+      source: attribution.firstSource || attribution.source || "unknown",
+    };
+
+    Object.keys(safeDetails).forEach(function (key) {
+      var value = safeDetails[key];
+      if (["string", "number", "boolean"].includes(typeof value)) {
+        data[key] = value;
+      }
+    });
+
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "act_site_action",
+      action_name: name,
+      action_label: label || "",
+      page_path: window.location.pathname,
+      landing_page: attribution.landingPage,
+      first_source: attribution.firstSource,
+      details: data,
+    });
+
     if (typeof window.va === "function") {
-      window.va("event", "Inquiry Intent", {
-        channel: channel,
-        page_path: data.page,
-      });
+      window.va("event", { name: name, data: data });
     }
+
+    window.dispatchEvent(
+      new CustomEvent("act:site-action", {
+        detail: { name: name, data: data },
+      }),
+    );
   }
 
   function appendWhatsAppText(href) {
@@ -274,16 +303,169 @@
     }
   }
 
+  function classifyInternalLink(link) {
+    if (link.dataset.actEvent) {
+      return {
+        name: link.dataset.actEvent,
+        label: link.dataset.actLabel || link.textContent.trim(),
+      };
+    }
+
+    var href = link.getAttribute("href") || "";
+    if (!href || href.charAt(0) === "#") return null;
+
+    var pathname;
+    try {
+      var url = new URL(href, window.location.href);
+      if (url.origin !== window.location.origin) return null;
+      pathname = url.pathname;
+    } catch {
+      return null;
+    }
+
+    if (pathname.indexOf("/case-studies/") === 0 || pathname.indexOf("/booth-design-build-portfolio/") === 0) {
+      return { name: "Proof viewed", label: pathname };
+    }
+    if (pathname.indexOf("/singapore-event-venues/") === 0 || pathname.indexOf("/singapore-event-venue-finder/") === 0) {
+      return { name: "Venue explored", label: pathname };
+    }
+    if (
+      /\/(event-fabrication|custom-props|booth-design-build|frp-sculpture|interactive-digital-display|event-merchandise|china-event-production)/.test(
+        pathname,
+      )
+    ) {
+      return { name: "Service explored", label: pathname };
+    }
+
+    return null;
+  }
+
+  function enhanceActionLink(link) {
+    if (link.dataset.actActionEnhanced === "true") return;
+
+    var classification = classifyInternalLink(link);
+    if (!classification) return;
+
+    link.dataset.actActionEnhanced = "true";
+    link.addEventListener("click", function () {
+      trackAction(classification.name, classification.label, {
+        destination: compactUrl(link.getAttribute("href") || ""),
+      });
+    });
+  }
+
   function enhanceLinks() {
     document
       .querySelectorAll('a[href*="wa.me/' + PHONE + '"], a[href^="mailto:' + EMAIL + '"]')
       .forEach(enhanceLink);
+    document.querySelectorAll("a[href]").forEach(enhanceActionLink);
+  }
+
+  function getMobileBrief() {
+    var path = window.location.pathname.toLowerCase();
+    var isChinese = (document.documentElement.lang || "").toLowerCase().indexOf("zh") === 0;
+    var config = {
+      label: isChinese ? "发送项目需求" : "Send project brief",
+      message: "Hi ACT Creative, I found this page and would like to discuss a project.",
+      eventLabel: "general_mobile_sticky",
+    };
+
+    if (path.indexOf("booth") !== -1 || path.indexOf("trade-show") !== -1) {
+      config.message = "Hi ACT Creative, I would like to discuss an exhibition booth project.";
+      config.eventLabel = "booth_mobile_sticky";
+    } else if (path.indexOf("custom-props") !== -1) {
+      config.message = "Hi ACT Creative, I would like to discuss a custom prop project.";
+      config.eventLabel = "custom_props_mobile_sticky";
+    } else if (path.indexOf("frp-sculpture") !== -1) {
+      config.message = "Hi ACT Creative, I would like to discuss a custom sculpture or installation project.";
+      config.eventLabel = "sculpture_mobile_sticky";
+    } else if (path.indexOf("event-fabrication") !== -1) {
+      config.message = "Hi ACT Creative, I would like to discuss an event fabrication project.";
+      config.eventLabel = "event_fabrication_mobile_sticky";
+    } else if (path.indexOf("singapore-event-venue") !== -1) {
+      config.message = "Hi ACT Creative, I would like help shortlisting a Singapore event venue.";
+      config.label = isChinese ? "咨询场地方案" : "Ask about venues";
+      config.eventLabel = "venue_mobile_sticky";
+    } else if (path.indexOf("weekend-brew-club") !== -1 || path.indexOf("merchandise") !== -1) {
+      config.message = "Hi ACT Creative, I would like to discuss custom merchandise sourcing and delivery.";
+      config.eventLabel = "merchandise_mobile_sticky";
+    }
+
+    return config;
+  }
+
+  function installMobileInquiryCta() {
+    if (document.querySelector("[data-act-mobile-inquiry]")) return;
+    if (["/", "/zh/"].includes(window.location.pathname)) return;
+
+    var config = getMobileBrief();
+    var link = document.createElement("a");
+    link.className = "act-mobile-inquiry-cta";
+    link.dataset.actMobileInquiry = "true";
+    link.dataset.actEvent = "Mobile inquiry CTA";
+    link.dataset.actLabel = config.eventLabel;
+    link.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(config.message);
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.setAttribute("aria-label", config.label + " via WhatsApp");
+    link.innerHTML = '<span aria-hidden="true">&#9993;</span><span>' + config.label + "</span>";
+
+    var style = document.createElement("style");
+    style.dataset.actMobileInquiry = "true";
+    style.textContent =
+      ".act-mobile-inquiry-cta{display:none}" +
+      "@media(max-width:767px){.act-mobile-inquiry-cta{position:fixed;left:50%;bottom:max(12px,env(safe-area-inset-bottom));z-index:2147482000;display:inline-flex;align-items:center;justify-content:center;gap:.55rem;width:min(420px,calc(100% - 24px));min-height:50px;padding:.75rem 1.1rem;border:1px solid rgba(0,0,0,.45);border-radius:999px;background:#ccff00;color:#050505!important;font:700 15px/1.2 Inter,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;text-decoration:none!important;box-shadow:0 14px 36px rgba(0,0,0,.48),0 0 0 1px rgba(204,255,0,.24);transform:translateX(-50%)}.act-mobile-inquiry-cta:focus-visible{outline:3px solid #fff;outline-offset:3px}}";
+
+    document.head.appendChild(style);
+    document.body.appendChild(link);
+    enhanceLink(link);
+  }
+
+  function readEngagementEvents() {
+    try {
+      return JSON.parse(window.sessionStorage.getItem(ENGAGEMENT_STORAGE_KEY) || "{}");
+    } catch {
+      return {};
+    }
+  }
+
+  function trackEngagementOnce(key, name, details) {
+    var events = readEngagementEvents();
+    var storageKey = window.location.pathname + ":" + key;
+    if (events[storageKey]) return;
+    events[storageKey] = true;
+    try {
+      window.sessionStorage.setItem(ENGAGEMENT_STORAGE_KEY, JSON.stringify(events));
+    } catch {
+      // Engagement tracking must not affect page use.
+    }
+    trackAction(name, key, details);
+  }
+
+  function installEngagementTracking() {
+    window.setTimeout(function () {
+      trackEngagementOnce("15_seconds", "Engaged visit", { seconds: 15 });
+    }, 15000);
+
+    var onScroll = function () {
+      var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollable <= 0) return;
+      var depth = Math.round((window.scrollY / scrollable) * 100);
+      if (depth >= 50) trackEngagementOnce("scroll_50", "Scroll depth", { percent: 50 });
+      if (depth >= 90) {
+        trackEngagementOnce("scroll_90", "Scroll depth", { percent: 90 });
+        window.removeEventListener("scroll", onScroll);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
   }
 
   window.ACTInquiryAttribution = {
     get: getAttribution,
     formatLines: formatLines,
     track: track,
+    trackAction: trackAction,
     appendWhatsAppText: appendWhatsAppText,
     appendMailtoBody: appendMailtoBody,
   };
@@ -292,9 +474,15 @@
   getInitialAttribution();
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", enhanceLinks);
+    document.addEventListener("DOMContentLoaded", function () {
+      installMobileInquiryCta();
+      enhanceLinks();
+      installEngagementTracking();
+    });
   } else {
+    installMobileInquiryCta();
     enhanceLinks();
+    installEngagementTracking();
   }
 
   new MutationObserver(enhanceLinks).observe(document.documentElement, {

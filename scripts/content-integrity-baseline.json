@@ -1,0 +1,27 @@
+{
+  "minimums": {
+    "publicStaticPages": 70,
+    "caseStudies": 9,
+    "venuePages": 26,
+    "sitemapUrls": 74
+  },
+  "protectedPages": [
+    "booth-design-build-singapore",
+    "event-fabrication-singapore",
+    "custom-props-singapore",
+    "frp-sculpture-fabrication-singapore",
+    "interactive-digital-display-singapore",
+    "singapore-event-venue-finder",
+    "singapore-event-venues/marina-bay-sands",
+    "singapore-event-venues/national-museum-of-singapore",
+    "case-studies/artbox-singapore-merchandise-materials",
+    "case-studies/craig-and-karl-beijing-museum-show",
+    "case-studies/florentijn-hofman-shanghai-museum-show",
+    "case-studies/k11-shenyang-public-art-collection",
+    "case-studies/kick-off-challenge-star-vista-singapore",
+    "case-studies/sentosa-big-big-world-event-fabrication",
+    "case-studies/sentosa-pacman-human-game",
+    "case-studies/weekend-brew-club-custom-mugs-singapore",
+    "case-studies/wings-of-art-barbie-runway-singapore"
+  ]
+}
