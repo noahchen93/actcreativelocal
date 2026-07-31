@@ -96,6 +96,21 @@
   </url>
 
   <url>
+    <loc>https://actcreative.net/zh/interactive-digital-display-singapore/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/interactive-digital-display-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/interactive-digital-display-singapore/" />
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/interactive-digital-display-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/interactive-digital-display-singapore/" />
+    <image:image>
+      <image:loc>https://actcreative.net/interactive-digital-display-singapore/assets/interactive-touchscreen-kiosks.webp</image:loc>
+      <image:title>新加坡互动数字展陈与多媒体显示方案</image:title>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://actcreative.net/zh/custom-props-singapore/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -109,14 +124,14 @@
 
   <url>
     <loc>https://actcreative.net/zh/frp-sculpture-fabrication-singapore/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/frp-sculpture-fabrication-singapore/" />
     <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/frp-sculpture-fabrication-singapore/" />
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/frp-sculpture-fabrication-singapore/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/frp-sculpture-fabrication-singapore/" />
-    <image:image><image:loc>https://actcreative.net/frp-sculpture-fabrication-singapore/assets/images/slides/slide-08.webp</image:loc><image:title>新加坡玻璃钢与定制雕塑制作</image:title></image:image>
+    <image:image><image:loc>https://actcreative.net/frp-sculpture-fabrication-singapore/assets/images/expanded/stainless-mirror-circular.webp</image:loc><image:title>新加坡定制雕塑与不锈钢公共艺术制作</image:title></image:image>
   </url>
 
   <url>
@@ -444,6 +459,22 @@
   </url>
 
   <url>
+    <loc>https://actcreative.net/interactive-digital-display-singapore/</loc>
+    <lastmod>2026-07-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/interactive-digital-display-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/interactive-digital-display-singapore/" />
+    <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/interactive-digital-display-singapore/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/interactive-digital-display-singapore/" />
+    <image:image>
+      <image:loc>https://actcreative.net/interactive-digital-display-singapore/assets/interactive-touchscreen-kiosks.webp</image:loc>
+      <image:title>Interactive digital displays Singapore</image:title>
+      <image:caption>Touch displays, rail screens, holograms, projection, video walls and local commissioning coordination.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://actcreative.net/custom-props-singapore/</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -459,7 +490,7 @@
 
   <url>
     <loc>https://actcreative.net/frp-sculpture-fabrication-singapore/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-07-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/frp-sculpture-fabrication-singapore/" />
@@ -478,6 +509,11 @@
     <image:image>
       <image:loc>https://actcreative.net/frp-sculpture-fabrication-singapore/assets/images/slides/slide-14.webp</image:loc>
       <image:title>Public art and installation fabrication reference</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/frp-sculpture-fabrication-singapore/assets/images/expanded/stainless-mirror-circular.webp</image:loc>
+      <image:title>Custom stainless-steel sculpture fabrication reference</image:title>
+      <image:caption>Mirror-finish stainless-steel sculpture capability represented through ACT Creative's specialist production network.</image:caption>
     </image:image>
   </url>
 

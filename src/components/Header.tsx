@@ -120,6 +120,14 @@ export function Header() {
 
   const productPortfolioItems = [
     {
+      title: t("互动数字展陈", "Interactive Digital Displays"),
+      href: localizedHref(
+        "/interactive-digital-display-singapore/",
+        "/zh/interactive-digital-display-singapore/",
+      ),
+      meta: t("滑轨屏、全息、互动投影与展厅中控", "Rail screens, holograms, projection and control"),
+    },
+    {
       title: t("定制餐车与移动空间", "Custom Food Trucks & Mobile Units"),
       href: "/custom-food-truck-rental-singapore/",
       meta: t("新加坡租赁车、定制制造与移动活动系统", "Singapore rentals, custom builds and mobile activation platforms"),
@@ -132,7 +140,7 @@ export function Header() {
     {
       title: t("雕塑与艺术装置", "Custom Sculptures & Art Installations"),
       href: "/frp-sculpture-fabrication-singapore/",
-      meta: t("49个雕塑、公共艺术与装置制作参考项目", "49 sculpture, public art and installation references"),
+      meta: t("FRP、不锈钢、公共艺术与多材料制作参考", "FRP, stainless steel, public art and multi-material references"),
     },
     {
       title: t("活动道具定制", "Custom Event Props"),

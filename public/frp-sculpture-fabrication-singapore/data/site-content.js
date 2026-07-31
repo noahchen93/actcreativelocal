@@ -1,5 +1,6 @@
 const slidePath = (slide) =>
   `assets/images/slides/slide-${String(slide).padStart(2, "0")}.webp`;
+const expandedPath = (name) => `assets/images/expanded/${name}.webp`;
 
 window.ACT_CREATIVE_SITE_CONTENT = {
   company: {
@@ -9,19 +10,19 @@ window.ACT_CREATIVE_SITE_CONTENT = {
     email: "contact@actcreative.net",
     whatsapp: "+65 84515268",
     whatsappHref: "https://wa.me/6584515268",
-    location: "Singapore coordination with China production and overseas delivery support.",
+    location: "Singapore systems integration with a multi-partner China production network and overseas delivery support.",
     legalLine: "ACT CREATIVE PTE. LTD.",
   },
   hero: {
     eyebrow: "Custom sculpture fabrication Singapore",
-    title: "Custom Sculptures, Public Art & Installations",
+    title: "Custom Sculpture & Spatial Solutions",
     subtitle:
-      "From custom fabrication in China to freight, Singapore delivery and installation support.",
+      "ACT Creative integrates the right material, specialist production route, export logistics and Singapore delivery plan around one project brief.",
     ctaPrimary: { label: "View Projects", href: "#cases" },
     ctaSecondary: { label: "View Workflow", href: "#workflow" },
     trustPoints: [
-      "China factory production",
-      "Specialist sculpture production",
+      "Multi-partner fabrication network",
+      "Material-specific production routes",
       "Overseas delivery support",
       "Large-format custom builds",
       "Singapore installation coordination",
@@ -30,12 +31,12 @@ window.ACT_CREATIVE_SITE_CONTENT = {
       {
         label: "Featured references",
         value: "20",
-        detail: "curated references selected from a 49-project sculpture portfolio",
+        detail: "curated references across an expanded multi-material sculpture portfolio",
       },
       {
-        label: "Core categories",
-        value: "4",
-        detail: "large sculpture, public art, decorative objects and collectibles",
+        label: "Production routes",
+        value: "9+",
+        detail: "FRP, stainless steel, metal, relief, 3D printing, GRG/GRC and more",
       },
       {
         label: "Delivery model",
@@ -45,8 +46,8 @@ window.ACT_CREATIVE_SITE_CONTENT = {
     ],
     imagery: {
       primary: slidePath(8),
-      secondaryA: slidePath(5),
-      secondaryB: slidePath(14),
+      secondaryA: expandedPath("stainless-mirror-circular"),
+      secondaryB: expandedPath("frp-integrated-planter-seating"),
     },
   },
   productionTracks: [
@@ -56,8 +57,28 @@ window.ACT_CREATIVE_SITE_CONTENT = {
       image: slidePath(3),
       bullets: [
         "Mall activations and public art",
-        "Large-format steel and fiberglass structures",
+        "Large-format metal, FRP and composite structures",
         "Engineered for shipment and site assembly",
+      ],
+    },
+    {
+      title: "Commercial FRP & Spatial Objects",
+      subtitle: "Seating, planters, public furniture and themed commercial forms",
+      image: expandedPath("frp-public-realm-furniture"),
+      bullets: [
+        "Moulded seating and integrated planter systems",
+        "Themed furniture and visitor-facing spatial objects",
+        "Finish, maintenance and public-use considerations",
+      ],
+    },
+    {
+      title: "Stainless-Steel Sculpture",
+      subtitle: "Mirror polish, satin finish, electroplating and formed metalwork",
+      image: expandedPath("stainless-mirror-irregular-3m"),
+      bullets: [
+        "Abstract, figurative and landscape sculpture",
+        "Forming, welding, grinding and high-polish finishing",
+        "Modular fabrication and export-ready structural planning",
       ],
     },
     {
@@ -80,12 +101,22 @@ window.ACT_CREATIVE_SITE_CONTENT = {
         "Custom scene building and presentation support",
       ],
     },
+    {
+      title: "Specialist Multi-Material Processes",
+      subtitle: "Relief, 3D printing, GRG/GRC, foam, water features and art finishes",
+      image: expandedPath("multi-3d-printing-sculpture"),
+      bullets: [
+        "Choose production methods by form, environment and programme",
+        "Combine digital fabrication with hand finishing where useful",
+        "Coordinate specialist production instead of forcing one factory route",
+      ],
+    },
   ],
   caseSection: {
     eyebrow: "Sculpture portfolio",
     title: "Project references for commercial, cultural and IP-led work",
     description:
-      "Browse large sculptures, public art, decorative fabrication and collectible production.",
+      "Browse spatial FRP, stainless-steel sculpture, public art, commercial furniture, reliefs, 3D printing and other specialist production references.",
   },
   workflow: {
     eyebrow: "Service workflow",
@@ -119,9 +150,9 @@ window.ACT_CREATIVE_SITE_CONTENT = {
       },
       {
         number: "05",
-        title: "Factory production in China",
+        title: "Production-network management",
         detail:
-          "Carry out sculpting, mold work, metal structure, finishing and quality control at the fabrication stage.",
+          "Coordinate the selected specialist route for sculpting, mould work, metal structure, digital fabrication, finishing and quality control.",
       },
       {
         number: "06",
@@ -212,5 +243,5 @@ window.ACT_CREATIVE_SITE_CONTENT = {
     ],
   },
   footer:
-    "ACT Creative coordinates cross-border sculpture fabrication, export delivery and installation planning for commercial, cultural and IP-led projects.",
+    "ACT Creative integrates specialist sculpture production, export delivery and installation planning for commercial, cultural and IP-led projects.",
 };

@@ -119,6 +119,11 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a href={localizedHref("/interactive-digital-display-singapore/", "/zh/interactive-digital-display-singapore/")} className="text-gray-400 hover:text-[#CCFF00] transition-colors">
+                  {t("互动数字展陈", "Interactive Digital Displays")}
+                </a>
+              </li>
+              <li>
                 <a href={localizedHref("/china-sourcing-agent/", "/zh/china-sourcing-agent/")} className="text-gray-400 hover:text-[#CCFF00] transition-colors">
                   {t("国际供应商采购", "International Supplier Sourcing")}
                 </a>

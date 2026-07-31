@@ -28,6 +28,9 @@
     { key: "collectibles", label: "Collectibles" },
     { key: "special-finish", label: "Special Finish" },
     { key: "museum", label: "Clay & Museum" },
+    { key: "spatial-frp", label: "Spatial FRP" },
+    { key: "stainless-steel", label: "Stainless Steel" },
+    { key: "multi-material", label: "Multi-Material" },
   ];
 
   const CASE_GROUPS = [
@@ -53,6 +56,42 @@
       curatedCount: 5,
       tone:
         "border-[#4a640f] bg-[radial-gradient(circle_at_top_left,rgba(180,255,72,0.14),transparent_34%),linear-gradient(180deg,rgba(13,15,11,0.98),rgba(7,8,7,0.98))]",
+      startExpanded: false,
+    },
+    {
+      id: "spatial-frp-group",
+      title: "Commercial Spatial Sculpture, Seating & Planters",
+      description:
+        "Moulded FRP seating, planters, themed furniture and large commercial-space objects for malls, attractions and public-facing interiors.",
+      categories: ["spatial-frp"],
+      stat: "Spatial FRP",
+      curatedCount: 5,
+      tone:
+        "border-[#526c0c] bg-[radial-gradient(circle_at_top_right,rgba(204,255,0,0.14),transparent_34%),linear-gradient(180deg,rgba(14,15,10,0.98),rgba(7,8,6,0.98))]",
+      startExpanded: false,
+    },
+    {
+      id: "stainless-group",
+      title: "Stainless-Steel & Mirror-Finish Sculpture",
+      description:
+        "Abstract, figurative and landscape sculpture references using formed stainless steel, welding, polishing, electroplating and export-ready assembly.",
+      categories: ["stainless-steel"],
+      stat: "Metal / mirror finish",
+      curatedCount: 6,
+      tone:
+        "border-[#6f7d55] bg-[radial-gradient(circle_at_top_left,rgba(216,229,199,0.13),transparent_34%),linear-gradient(180deg,rgba(15,16,14,0.98),rgba(7,8,7,0.98))]",
+      startExpanded: false,
+    },
+    {
+      id: "multi-material-group",
+      title: "Multi-Material & Specialist Sculpture Processes",
+      description:
+        "An expanded production network for metal, FRP, foam, GRG/GRC, relief, large-format 3D printing, water features and painted sculpture.",
+      categories: ["multi-material"],
+      stat: "Specialist processes",
+      curatedCount: 7,
+      tone:
+        "border-[#486f23] bg-[radial-gradient(circle_at_bottom_left,rgba(147,213,77,0.15),transparent_34%),linear-gradient(180deg,rgba(12,15,10,0.98),rgba(6,8,5,0.98))]",
       startExpanded: false,
     },
     {
@@ -128,6 +167,21 @@
         return {
           scale: "Medium-scale",
           type: "Museum display",
+        };
+      case "spatial-frp":
+        return {
+          scale: "Furniture to landmark",
+          type: "Spatial FRP / public realm",
+        };
+      case "stainless-steel":
+        return {
+          scale: "Medium to large",
+          type: "Stainless-steel sculpture",
+        };
+      case "multi-material":
+        return {
+          scale: "Custom scale",
+          type: "Specialist fabrication route",
         };
       default:
         return {
@@ -684,14 +738,14 @@
             </div>
             <div className="rounded-[1.8rem] border border-accent bg-accent p-6 text-black shadow-[0_22px_60px_rgba(0,0,0,0.42)]">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-black/70">
-                Overseas-ready positioning
+                Solutions integration model
               </p>
               <div className="mt-4 space-y-3 text-sm leading-7 text-black/80">
                 <p>
-                  Ideal for Singapore and overseas clients seeking China-based fabrication with practical support on export delivery, freight coordination and installation planning.
+                  ACT Creative is the client-facing systems and solutions integration platform. We define the scope, select the appropriate material and specialist production route from a vetted network, then coordinate fabrication, quality checks, logistics and site delivery under one project plan.
                 </p>
                 <p>
-                  Initial enquiries can include drawings, dimensions, finish references, target venue, destination market and timeline to speed up technical review and quotation.
+                  Reference media demonstrates available production capabilities rather than a single supplier brand. Initial enquiries can include drawings, dimensions, finish references, target venue, destination market and timeline to speed up technical review and quotation.
                 </p>
               </div>
             </div>

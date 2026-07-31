@@ -11,6 +11,7 @@ const publicDir = path.join(root, "public");
 const priorityPages = [
   "booth-design-build-singapore/index.html",
   "event-fabrication-singapore/index.html",
+  "interactive-digital-display-singapore/index.html",
   "custom-props-singapore/index.html",
   "singapore-event-venue-finder/index.html",
   "case-studies/weekend-brew-club-custom-mugs-singapore/index.html",

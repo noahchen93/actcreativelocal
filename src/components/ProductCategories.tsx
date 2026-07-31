@@ -128,15 +128,18 @@ const productCategories = [
   },
   {
     icon: Smartphone,
-    title: { zh: "高科技互动设备", en: "Hi-Tech Interactive Equipment" },
+    href: "/interactive-digital-display-singapore/",
+    hrefZh: "/zh/interactive-digital-display-singapore/",
+    linkLabel: { zh: "查看互动数字展陈方案", en: "View interactive display solutions" },
+    title: { zh: "互动数字展陈", en: "Interactive Digital Displays" },
     description: { 
-      zh: "AI变脸、自助拍照亭、VR/AR体验设备等。为活动注入科技元素，提升参与者互动体验。",
-      en: "AI face-changing, photo booths, VR/AR experience equipment, etc. Inject technology into events and enhance participant interaction."
+      zh: "以 ACT Creative 为系统整合平台，统筹滑轨屏、触摸屏、全息展示、互动投影、LED、展厅中控与新加坡安装调试。",
+      en: "ACT Creative integrates rail screens, touch displays, holograms, projection, LED, exhibition control and Singapore commissioning as one solution."
     },
     features: [
-      { zh: "社交媒体即时分享功能", en: "Instant social media sharing" },
-      { zh: "数据收集和分析", en: "Data collection and analytics" },
-      { zh: "品牌曝光增强", en: "Enhanced brand exposure" }
+      { zh: "根据观众体验匹配硬件与内容", en: "Match hardware and content to the visitor experience" },
+      { zh: "根据需求选择合适的技术与生产路线", en: "Select the right technology and production route for the brief" },
+      { zh: "运输、本地安装、调试与交接", en: "Freight, local installation, commissioning and handover" }
     ],
     emoji: "📱",
     image: hiTechImage
@@ -162,13 +165,13 @@ const productCategories = [
     linkLabel: { zh: "查看雕塑案例", en: "View sculpture portfolio" },
     title: { zh: "雕塑与艺术装置定制", en: "Custom Sculptures & Art Installations" },
     description: { 
-      zh: "从节庆圣诞树、生肖灯光装置到艺术雕塑、手办衍生品，我们拥有专业工厂提供高度定制化服务，将您的创意变为现实。",
-      en: "From festive Christmas trees, zodiac light installations to art sculptures, figurines and merchandise, our professional factories provide highly customized services to bring your creative vision to life."
+      zh: "ACT Creative 作为系统与解决方案整合平台，根据项目需求匹配 FRP、不锈钢、公共艺术、IP 角色和多材料专业生产路线，并统筹制作、物流与现场落地。",
+      en: "As a systems and solutions integration platform, ACT Creative matches each brief to the right FRP, stainless-steel, public-art, IP-character or specialist multi-material production route, then coordinates fabrication, logistics and site delivery."
     },
     features: [
-      { zh: "节庆装饰：圣诞树、生肖装置等", en: "Festive decor: Christmas trees, zodiac installations" },
-      { zh: "艺术雕塑与灯光装置定制", en: "Custom art sculptures & light installations" },
-      { zh: "手办、衍生品批量生产", en: "Figurines & merchandise mass production" }
+      { zh: "FRP 商业装置、座椅与花池", en: "FRP spatial objects, seating and planters" },
+      { zh: "镜面与拉丝不锈钢公共艺术", en: "Mirror and satin stainless-steel public art" },
+      { zh: "浮雕、3D 打印、GRG/GRC 等专业路线", en: "Relief, 3D printing, GRG/GRC and specialist routes" }
     ],
     emoji: "🎨",
     image: sculptureImage
@@ -191,7 +194,7 @@ const productCategories = [
 ];
 
 export function ProductCategories() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const [showAllCategories, setShowAllCategories] = useState(false);
   const visibleCategories = showAllCategories
@@ -326,7 +329,7 @@ export function ProductCategories() {
                       </ul>
                       {"href" in category && category.href && (
                         <a
-                          href={category.href}
+                          href={language === "zh" && "hrefZh" in category && category.hrefZh ? category.hrefZh : category.href}
                           className="mt-5 inline-flex items-center justify-center rounded-lg border border-[#CCFF00] bg-[#CCFF00] px-4 py-2.5 text-sm font-semibold text-black transition-colors hover:bg-[#d7ff57]"
                           onClick={(event) => event.stopPropagation()}
                         >

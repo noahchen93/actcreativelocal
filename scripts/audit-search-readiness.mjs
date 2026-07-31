@@ -112,6 +112,7 @@ const localizedPairs = [
   ["https://actcreative.net/frp-sculpture-fabrication-singapore/", "https://actcreative.net/zh/frp-sculpture-fabrication-singapore/"],
   ["https://actcreative.net/custom-food-truck-rental-singapore/", "https://actcreative.net/zh/custom-food-truck-rental-singapore/"],
   ["https://actcreative.net/singapore-event-venue-finder/", "https://actcreative.net/zh/singapore-event-venue-finder/"],
+  ["https://actcreative.net/interactive-digital-display-singapore/", "https://actcreative.net/zh/interactive-digital-display-singapore/"],
 ];
 
 for (const [englishUrl, chineseUrl] of localizedPairs) {
