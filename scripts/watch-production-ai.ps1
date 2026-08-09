@@ -71,10 +71,23 @@ function Invoke-RepairScript {
     [Parameter(Mandatory = $true)][string]$Path
   )
 
+  $process = $null
   try {
-    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $Path
-    if ($LASTEXITCODE -ne 0) {
-      Write-SupervisorLog "$Name repair exited with code $LASTEXITCODE"
+    $process = Start-Process `
+      -FilePath "powershell.exe" `
+      -ArgumentList "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "`"$Path`"" `
+      -WindowStyle Hidden `
+      -PassThru
+
+    if (-not $process.WaitForExit(300000)) {
+      & taskkill.exe /PID $process.Id /T /F 2>&1 | Out-Null
+      Write-SupervisorLog "$Name repair exceeded 300 seconds and was terminated"
+      return $false
+    }
+
+    $process.Refresh()
+    if ($process.ExitCode -ne 0) {
+      Write-SupervisorLog "$Name repair exited with code $($process.ExitCode)"
       return $false
     }
 

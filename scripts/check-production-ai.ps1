@@ -70,7 +70,7 @@ if ($ollamaTags.ok) {
 $missingModels = @($requiredOllamaModels | Where-Object { $availableModels -notcontains $_ })
 $localHealth = Test-HttpJson -Headers $authHeaders -Uri "http://127.0.0.1:8787/api/chat?health=1"
 $tunnelHealth = Test-HttpJson -Headers $authHeaders -Uri "https://ai.actcreative.net/api/chat?health=1"
-$productionHealth = Test-HttpJson -Uri "https://actcreative.net/api/chat?health=1"
+$productionHealth = Test-HttpJson -Uri "https://actcreative.net/api/chat/?health=1"
 $task = Get-ScheduledTask -TaskName "ACTCreativeProductionAISupervisor" -ErrorAction SilentlyContinue
 $startupShortcut = Join-Path ([Environment]::GetFolderPath("Startup")) "ACTCreativeProductionAISupervisor.lnk"
 $supervisorProcesses = @(

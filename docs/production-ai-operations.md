@@ -98,7 +98,7 @@ Invoke-RestMethod `
 Production proxy:
 
 ```powershell
-Invoke-RestMethod -Uri "https://actcreative.net/api/chat?health=1"
+Invoke-RestMethod -Uri "https://actcreative.net/api/chat/?health=1"
 ```
 
 Production POST checks must include a browser-like origin because
@@ -114,7 +114,7 @@ $body = @{
 Invoke-RestMethod `
   -Method Post `
   -Headers @{ Origin = "https://actcreative.net" } `
-  -Uri "https://actcreative.net/api/chat" `
+  -Uri "https://actcreative.net/api/chat/" `
   -ContentType "application/json" `
   -Body $body `
   -TimeoutSec 180

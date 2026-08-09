@@ -1,6 +1,6 @@
 # ACT Creative Website Project Context
 
-Last updated: 2026-06-30, Asia/Shanghai.
+Last updated: 2026-08-09, Asia/Shanghai.
 
 This file is the living handoff document for `actcreativelocal`. Update it in the same commit as every meaningful website, content, data, AI, deployment, or operations change. If another tool or developer continues this project, read this file first.
 
@@ -37,9 +37,9 @@ User intent and product direction:
 
 ## Repository And Remote
 
-- Local workspace: `E:\actcreativelocal`
+- Local workspace: `G:\actcreativelocal`
 - Git remote: `https://github.com/noahchen93/actcreativelocal.git`
-- Active branch at this update: `codex/venue-finder-finish`
+- Active branch at this update: `codex/Christmas-NewYear-CNY`
 - Production domain: `https://actcreative.net`
 - AI gateway public tunnel hostname: `https://ai.actcreative.net`
 
@@ -388,6 +388,13 @@ The git history shows these major phases:
    - `npm run build` passes and emits `build/assets/main-nTrCC71d.js`. Playwright verified live `https://actcreative.net/`: at 1024px and 1180px `.act-desktop-nav` is `display: flex`; at 390px desktop nav remains hidden and `.act-mobile-actions` is `display: flex`.
    - Promoted to production via `npx --yes vercel deploy --prod --yes`: deployment id `dpl_98cgbRr5hbAiojbExk9eg366ba4r`, aliased to `https://actcreative.net` (READY). Live verification loaded `assets/main-nTrCC71d.js`.
 
+23. Local workspace migration on 2026-08-09 (Codex; branch `codex/Christmas-NewYear-CNY`).
+   - Moved the working repository from `E:\actcreativelocal` to `G:\actcreativelocal` while preserving Git history, the GitHub remote, the Vercel project link, local dependencies, and private environment files.
+   - Reinstalled the production AI supervisor from the G-drive repository so its Startup shortcut and generated runners no longer reference the removed E-drive workspace.
+   - Updated the production health check to use the canonical trailing-slash API URL, avoiding a false failure on Vercel's `308` redirect.
+   - Included the pending AI supervisor hardening: startup repair no longer terminates unrelated Ollama sessions, and watchdog repair subprocesses now run hidden with a 300-second timeout.
+   - Verification: the production build and search audit passed; local Ollama, RAG, gateway, Tunnel, and production proxy all reported `ready`; a production `Noa Test` POST returned `ACT AI online`.
+
 ## AI Assistant Operating Notes
 
 Health endpoints:
@@ -400,7 +407,7 @@ Invoke-RestMethod `
   -Headers @{ Authorization = "Bearer $secret" } `
   -Uri "http://127.0.0.1:8787/api/chat?health=1"
 
-Invoke-RestMethod -Uri "https://actcreative.net/api/chat?health=1"
+Invoke-RestMethod -Uri "https://actcreative.net/api/chat/?health=1"
 ```
 
 Known behavior:

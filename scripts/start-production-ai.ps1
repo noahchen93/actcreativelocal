@@ -64,22 +64,6 @@ function Get-ListeningProcessIds {
   )
 }
 
-function Get-OllamaServeProcessIds {
-  return @(
-    Get-CimInstance Win32_Process |
-      Where-Object { $_.Name -in @("ollama.exe", "ollama app.exe") } |
-      Select-Object -ExpandProperty ProcessId
-  )
-}
-
-function Get-OllamaRelatedProcessIds {
-  return @(
-    Get-CimInstance Win32_Process |
-      Where-Object { $_.Name -in @("ollama.exe", "ollama app.exe", "llama-server.exe") } |
-      Select-Object -ExpandProperty ProcessId
-  )
-}
-
 function Test-OllamaModelsAvailable {
   try {
     $payload = Invoke-RestMethod -Uri "http://127.0.0.1:11434/api/tags" -TimeoutSec 10
@@ -138,28 +122,8 @@ function Stop-ProcessIds {
   }
 }
 
-function Stop-OllamaForSiteRestart {
-  Stop-ProcessIds -ProcessIds (Get-OllamaRelatedProcessIds)
-}
-
 function Stop-LocalAiGateway {
   Stop-ProcessIds -ProcessIds (Get-ListeningProcessIds -Port 8787)
-}
-
-function Wait-ForPortToClose {
-  param(
-    [Parameter(Mandatory = $true)][int]$Port,
-    [int]$Attempts = 30
-  )
-
-  for ($attempt = 0; $attempt -lt $Attempts; $attempt += 1) {
-    if (-not (Get-NetTCPConnection -LocalPort $Port -State Listen -ErrorAction SilentlyContinue)) {
-      return $true
-    }
-    Start-Sleep -Seconds 1
-  }
-
-  return $false
 }
 
 function Wait-ForOllamaModels {
@@ -192,22 +156,11 @@ New-Item -ItemType Directory -Path $runtimeDirectory -Force | Out-Null
 Set-Location $repoRoot
 Set-SiteOllamaEnvironment
 
-$ollamaProcessIds = Get-OllamaServeProcessIds
 $ollamaModelsAvailable = Test-OllamaModelsAvailable
 $gatewayHealthy = Test-LocalAiGatewayHealth
 
-if ($gatewayHealthy -and $ollamaModelsAvailable -and $ollamaProcessIds.Count -le 1) {
+if ($gatewayHealthy -and $ollamaModelsAvailable) {
   exit 0
-}
-
-if ($ollamaProcessIds.Count -gt 1 -or ((Get-ListeningProcessIds -Port 11434).Count -gt 0 -and -not $ollamaModelsAvailable)) {
-  Stop-LocalAiGateway
-  Stop-OllamaForSiteRestart
-  if (-not (Wait-ForPortToClose -Port 11434)) {
-    throw "Ollama did not release port 11434"
-  }
-  $ollamaModelsAvailable = $false
-  $gatewayHealthy = $false
 }
 
 if (-not (Get-ListeningProcessIds -Port 11434)) {
@@ -224,7 +177,7 @@ if (-not (Get-ListeningProcessIds -Port 11434)) {
 }
 
 if (-not (Wait-ForOllamaModels)) {
-  throw "Ollama is running, but the ACT Creative AI models are not available. Check OLLAMA_MODELS."
+  throw "The Ollama endpoint is running, but the ACT Creative AI models are unavailable. Check OLLAMA_MODELS without stopping unrelated Ollama sessions."
 }
 
 if (-not (Test-Path -LiteralPath $nodeExecutable)) {
