@@ -375,6 +375,13 @@ The git history shows these major phases:
    - Updated `public/inquiry-attribution.js` so prominent inquiry buttons on static pages open prefilled email drafts, including prominent buttons that previously opened WhatsApp.
    - Kept WhatsApp available as one global, fixed bottom-right entry point for visitors who actively prefer it; lower-emphasis inline WhatsApp references remain available where context requires them.
 
+26. Search Console follow-up SEO and model-search proof expansion on 2026-08-09 (Codex; branch `codex/Christmas-NewYear-CNY`).
+   - Added an English, source-aware HIKVISION and EZVIZ booth case reference for GITEX Asia 2025 Singapore, with six existing project images, Article/WebPage/Breadcrumb structured data and links to the three distinct booth service intents.
+   - Linked the independent case from the booth design-and-build, approved-drawing production, overseas trade-show support, portfolio and case-study hub pages so search engines and answer models can connect service claims to visual project evidence.
+   - Rewrote the Marina Bay Sands and Resorts World Ballroom search titles and descriptions around event spaces and officially reviewed capacity signals, reflecting their high-impression Search Console queries.
+   - Added durable per-venue SEO overrides to the generator and changed all generated venue-detail primary enquiry actions from WhatsApp to prefilled email, preserving the site's email-first conversion policy on future regeneration.
+   - Added the new case and refreshed venue-page dates in the XML image sitemap.
+
 ## AI Assistant Operating Notes
 
 The service is retired. Expected state:

@@ -19,6 +19,20 @@ const audit = JSON.parse(
 const auditById = new Map(audit.venues.map((venue) => [venue.id, venue]));
 const venueById = new Map(dataset.venues.map((venue) => [venue.id, venue]));
 const capacityFields = ["banquet", "cocktail", "theatre", "classroom"];
+const venueSeoOverrides = {
+  "marina-bay-sands": {
+    title: "Marina Bay Sands Event Spaces & Capacity | ACT Creative",
+    socialTitle: "Marina Bay Sands Event Spaces & Capacity",
+    description:
+      "Compare Marina Bay Sands ballrooms, theatre and event spaces, including an officially published capacity of up to 7,000, planning notes and source links.",
+  },
+  "resorts-world-ballroom": {
+    title: "Resorts World Ballroom Capacity & Event Spaces | ACT Creative",
+    socialTitle: "Resorts World Ballroom Capacity & Event Spaces",
+    description:
+      "Review Resorts World Ballroom event spaces, including an officially published capacity of up to 3,620, recorded layouts, planning notes and source links.",
+  },
+};
 
 function escapeHtml(value) {
   return String(value || "")
@@ -82,6 +96,16 @@ function renderRelatedCard(venue) {
     </a>`;
 }
 
+function venueSeo(venue) {
+  const defaultName = `${venue.name} Event Venue${/\bsingapore\b/i.test(venue.name) ? "" : " Singapore"}`;
+  return {
+    title: `${defaultName} | ACT Creative`,
+    socialTitle: defaultName,
+    description: `${venue.name} event venue guide: reviewed capacity context, recorded spaces, planning considerations and official source links for Singapore event teams.`,
+    ...venueSeoOverrides[venue.id],
+  };
+}
+
 function renderPage(venue, venueAudit) {
   const canonical = `https://actcreative.net/singapore-event-venues/${venue.id}/`;
   const sourceUrl =
@@ -139,7 +163,8 @@ function renderPage(venue, venueAudit) {
   }
   topSpaces = topSpaces.slice(0, 8);
   const related = relatedVenues(venue);
-  const description = `${venue.name} event venue guide: reviewed capacity context, recorded spaces, planning considerations and official source links for Singapore event teams.`;
+  const seo = venueSeo(venue);
+  const description = seo.description;
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -147,7 +172,7 @@ function renderPage(venue, venueAudit) {
         "@type": "WebPage",
         "@id": `${canonical}#webpage`,
         url: canonical,
-        name: `${venue.name} Event Venue Singapore`,
+        name: seo.socialTitle,
         description,
         inLanguage: "en-SG",
         dateModified: audit.reviewedAt,
@@ -208,16 +233,17 @@ function renderPage(venue, venueAudit) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>${escapeHtml(venue.name)} Event Venue Singapore: Capacity & Spaces | ACT Creative</title>
+    <title>${escapeHtml(seo.title)}</title>
     <meta name="description" content="${escapeHtml(description)}" />
     <link rel="canonical" href="${canonical}" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="${escapeHtml(venue.name)} Event Venue Singapore" />
+    <meta property="og:title" content="${escapeHtml(seo.socialTitle)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
     <meta property="og:url" content="${canonical}" />
     <meta property="og:image" content="https://actcreative.net${escapeHtml(venue.image)}" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://actcreative.net${escapeHtml(venue.image)}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
@@ -341,8 +367,8 @@ function renderPage(venue, venueAudit) {
         <section class="cta-panel">
           <div><span class="section-kicker">Need a practical venue check?</span><h2>Turn venue records into a workable shortlist.</h2><p>ACT Creative can review venue fit, production access, guest flow and the questions to raise before requesting a quote.</p></div>
           <div class="cta-actions">
-            <a class="button primary" href="https://wa.me/6584515268?text=Hello%20ACT%20Creative%2C%20I%20would%20like%20help%20reviewing%20${encodeURIComponent(venue.name)}%20for%20an%20event." data-inquiry-link="whatsapp" data-track-action="WhatsApp venue enquiry" data-track-label="${escapeHtml(venue.id)}">Discuss this venue</a>
-            <a class="button secondary" href="/singapore-event-venue-finder/#venue-brief-form" data-track-action="Venue brief opened" data-track-label="${escapeHtml(venue.id)}">Send a venue brief</a>
+            <a class="button primary" href="mailto:contact@actcreative.net?subject=${encodeURIComponent(`Venue enquiry: ${venue.name}`)}" data-track-action="Email venue enquiry" data-track-label="${escapeHtml(venue.id)}">Email this venue brief</a>
+            <a class="button secondary" href="/singapore-event-venue-finder/#venue-brief-form" data-track-action="Venue brief opened" data-track-label="${escapeHtml(venue.id)}">Review brief details</a>
           </div>
         </section>
       </main>
