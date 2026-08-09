@@ -162,7 +162,7 @@ Static pages and public assets:
 - `public/trade-show-booth-singapore/`
 - `public/zh/`
 - `public/seo-service-page.css`
-- `public/inquiry-attribution.js`
+- `public/inquiry-attribution.js`: inquiry attribution, email-first CTA normalization, and the global fixed WhatsApp entry point.
 - `public/venue-detail-tracking.js`
 - `public/sitemap.xml`, `robots.txt`, `llms.txt`
 
@@ -368,6 +368,12 @@ The git history shows these major phases:
    - Removed the floating assistant from the React homepage and all generated static pages, removed the local Vite proxy and runtime npm commands, and changed `/api/chat/` to return `410 Gone` without contacting an upstream service.
    - Disabled the Startup shortcut, stopped the supervisor, local gateway, both loaded Ollama models, the Ollama service and the Cloudflare Tunnel process; ports `8787` and `11434` are no longer listening.
    - Kept model files, private conversation logs, local AI source code and Cloudflare configuration as offline archives for rollback. Do not restart them unless the user explicitly restores the service.
+
+25. Email-first inquiry routing on 2026-08-09 (Codex; branch `codex/Christmas-NewYear-CNY`).
+   - Changed the homepage header, hero, service, product, holiday and footer inquiry actions to open a prefilled email to `contact@actcreative.net`.
+   - Made the contact brief's primary action email-only and removed WhatsApp and phone from that action group.
+   - Updated `public/inquiry-attribution.js` so prominent inquiry buttons on static pages open prefilled email drafts, including prominent buttons that previously opened WhatsApp.
+   - Kept WhatsApp available as one global, fixed bottom-right entry point for visitors who actively prefer it; lower-emphasis inline WhatsApp references remain available where context requires them.
 
 ## AI Assistant Operating Notes
 

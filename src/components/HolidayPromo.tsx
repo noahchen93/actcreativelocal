@@ -1,6 +1,7 @@
-import { ArrowRight, Gift, Sparkles } from "lucide-react";
+import { ArrowRight, Gift, Mail } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
+import { FESTIVE_INQUIRY_MAILTO } from "../lib/contactLinks";
 
 const previewImages = [
   {
@@ -217,12 +218,10 @@ export function HolidayPromo() {
           </a>
           <a
             className="holiday-promo-button holiday-promo-button-secondary"
-            href="https://wa.me/6584515268?text=Hi%20ACT%20Creative%2C%20I%20would%20like%20to%20discuss%20Christmas%2C%20New%20Year%20or%20Chinese%20New%20Year%20decor%20support."
-            target="_blank"
-            rel="noopener noreferrer"
+            href={FESTIVE_INQUIRY_MAILTO}
           >
-            <Sparkles className="h-4 w-4" />
-            <span>{t("WhatsApp festive brief", "WhatsApp festive brief")}</span>
+            <Mail className="h-4 w-4" />
+            <span>{t("Email festive brief", "Email festive brief")}</span>
           </a>
         </div>
         <div className="holiday-promo-media" aria-hidden="true">

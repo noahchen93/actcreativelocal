@@ -1,10 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
-import { Tent, Truck, Monitor, Wind, Lightbulb, FileImage, Gamepad2, Smartphone, Sparkles, ChevronDown, ChevronUp, Lamp, Shapes } from "lucide-react";
+import { Tent, Truck, Monitor, Wind, Lightbulb, FileImage, Gamepad2, Smartphone, Sparkles, ChevronDown, ChevronUp, Lamp, Shapes, Mail } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { useState } from "react";
-import { scrollToSection } from "../lib/scrollToSection";
+import { PROJECT_INQUIRY_MAILTO } from "../lib/contactLinks";
 import gazeboImage from "figma:asset/1caf9ac9a9d0d7f9cad8ed51a98bb55b8d03990a.png";
 import foodTruckImage from "figma:asset/31c3a94b1e29c068a2f34e21f880665e070fc631.png";
 import ledDisplayImage from "figma:asset/9895e54c650c91e8620205b506be0a07797290ab.png";
@@ -389,14 +389,17 @@ export function ProductCategories() {
                     "Whatever you need, our professional team can find the best solution for you. Contact us and tell us your requirements."
                   )}
                 </p>
-                <motion.button
+                <motion.a
+                  href={PROJECT_INQUIRY_MAILTO}
                   className="mt-2 rounded-lg bg-[#CCFF00] px-8 py-3 text-black shadow-lg transition-all hover:bg-[#b8e600] hover:shadow-xl"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  onClick={() => scrollToSection("contact")}
                 >
-                  {t("立即咨询", "Contact Us Now")}
-                </motion.button>
+                  <span className="inline-flex items-center gap-2">
+                    <Mail className="h-4 w-4" />
+                    {t("立即发送邮件", "Email Us Now")}
+                  </span>
+                </motion.a>
               </div>
             </div>
           </div>

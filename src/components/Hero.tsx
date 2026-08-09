@@ -1,8 +1,9 @@
 import { Button } from "./ui/button";
-import { ArrowRight, Award, Facebook, Instagram, Zap } from "lucide-react";
+import { ArrowRight, Award, Facebook, Instagram, Mail } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { HeroSlideshow } from "./HeroSlideshow";
 import { scrollToSection } from "../lib/scrollToSection";
+import { PROJECT_INQUIRY_MAILTO } from "../lib/contactLinks";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -200,14 +201,16 @@ export function Hero() {
               style={{ marginBottom: "1rem" }}
             >
               <Button
+                asChild
                 size="lg"
-                onClick={() => scrollToSection("contact")}
                 className="group bg-[#CCFF00] hover:bg-[#b8e600] text-black shadow-2xl hover:shadow-[#CCFF00]/40 transition-all text-base h-auto"
                 style={{ paddingInline: "1.75rem", paddingBlock: "0.95rem" }}
               >
-                <Zap className="w-4 h-4 mr-2" />
-                {t("发送项目需求", "Send a Brief")}
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <a href={PROJECT_INQUIRY_MAILTO}>
+                  <Mail className="w-4 h-4 mr-2" />
+                  {t("邮件发送项目需求", "Email Your Brief")}
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <Button
                 size="lg"

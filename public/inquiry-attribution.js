@@ -218,6 +218,93 @@
     return "mailto:" + address + "?" + params.toString();
   }
 
+  function isChinesePage() {
+    return (document.documentElement.lang || "").toLowerCase().indexOf("zh") === 0;
+  }
+
+  function isProminentLink(link) {
+    return link.matches(
+      '.button, .btn, .cta, .nav-cta, [class*="button"], [class*="cta"]',
+    );
+  }
+
+  function isEmailFirstIntent(link) {
+    var label = (link.textContent || "").replace(/\s+/g, " ").trim();
+    if (/^(contact(?: us)?|email us|联系我们|联系|发送邮件)$/i.test(label)) {
+      return true;
+    }
+
+    if (!isProminentLink(link)) return false;
+
+    return /(send.{0,18}brief|request|quote|estimate|discuss|enquir|availability|contact|咨询|需求|报价|询价|联系|发送.{0,12}需求)/i.test(
+      label,
+    );
+  }
+
+  function createIntentMailto(label, message) {
+    var subject = label && label.length < 90 ? label : "Project Inquiry - ACT Creative";
+    var body =
+      message ||
+      "Hi ACT Creative,\n\nI found this page and would like to discuss a project.\n";
+    var params = new URLSearchParams();
+    params.set("subject", subject);
+    params.set("body", body);
+    return appendMailtoBody("mailto:" + EMAIL + "?" + params.toString());
+  }
+
+  function convertWhatsAppButtonToEmail(link, href) {
+    var url = new URL(href, window.location.href);
+    var message = url.searchParams.get("text") || "";
+    var label = (link.textContent || "").replace(/\s+/g, " ").trim();
+    link.setAttribute("href", createIntentMailto(label, message));
+    link.removeAttribute("target");
+    link.removeAttribute("rel");
+
+    if (/whatsapp/i.test(label)) {
+      link.textContent = label
+        .replace(/on WhatsApp/gi, isChinesePage() ? "通过邮件" : "by Email")
+        .replace(/via WhatsApp/gi, isChinesePage() ? "通过邮件" : "by Email")
+        .replace(/whatsapp/gi, isChinesePage() ? "邮件" : "Email");
+    } else if (/^\+?65[\s-]*8451[\s-]*5268$/.test(label)) {
+      link.textContent = EMAIL;
+    }
+  }
+
+  function createFloatingWhatsApp() {
+    if (document.querySelector("[data-act-whatsapp-float]")) return;
+
+    var style = document.createElement("style");
+    style.textContent =
+      ".act-whatsapp-float{" +
+      "position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));z-index:55;" +
+      "display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 14px;" +
+      "border:1px solid rgba(255,255,255,.3);border-radius:8px;background:#1fbd63;color:#06130b;" +
+      "font:800 14px/1 system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;letter-spacing:0;" +
+      "box-shadow:0 12px 30px rgba(0,0,0,.32);text-decoration:none;transition:transform 160ms ease,background 160ms ease}" +
+      ".act-whatsapp-float:hover{background:#38d878;transform:translateY(-2px)}" +
+      ".act-whatsapp-float:focus-visible{outline:3px solid #fff;outline-offset:3px}" +
+      ".act-whatsapp-mark{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;" +
+      "border:2px solid currentColor;border-radius:50%;font-size:9px;font-weight:900}" +
+      "@media(max-width:480px){.act-whatsapp-float{right:max(10px,env(safe-area-inset-right));bottom:max(10px,env(safe-area-inset-bottom));width:48px;min-height:48px;padding:0;border-radius:50%}.act-whatsapp-float>span:last-child{display:none}}" +
+      "@media print{.act-whatsapp-float{display:none!important}}";
+    document.head.appendChild(style);
+
+    var link = document.createElement("a");
+    link.className = "act-whatsapp-float";
+    link.href = "https://wa.me/" + PHONE;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.dataset.actWhatsappFloat = "true";
+    link.dataset.actWhatsappPreserve = "true";
+    link.setAttribute(
+      "aria-label",
+      isChinesePage() ? "通过 WhatsApp 联系 ACT Creative" : "Contact ACT Creative on WhatsApp",
+    );
+    link.title = isChinesePage() ? "WhatsApp 联系" : "WhatsApp";
+    link.innerHTML = '<span class="act-whatsapp-mark" aria-hidden="true">WA</span><span>WhatsApp</span>';
+    document.body.appendChild(link);
+  }
+
   function enhanceLink(link) {
     if (link.dataset.actInquiryEnhanced === "true") return;
 
@@ -225,10 +312,30 @@
     if (!href) return;
 
     if (href.indexOf("wa.me/" + PHONE) !== -1) {
+      if (link.dataset.actWhatsappPreserve !== "true" && isProminentLink(link)) {
+        convertWhatsAppButtonToEmail(link, href);
+        link.dataset.actInquiryEnhanced = "true";
+        link.addEventListener("click", function () {
+          track("email", link.textContent.trim());
+        });
+        return;
+      }
+
       link.setAttribute("href", appendWhatsAppText(href));
       link.dataset.actInquiryEnhanced = "true";
       link.addEventListener("click", function () {
         track("whatsapp", link.textContent.trim());
+      });
+      return;
+    }
+
+    if (isEmailFirstIntent(link) && href.charAt(0) !== "#") {
+      link.setAttribute("href", createIntentMailto(link.textContent.trim()));
+      link.removeAttribute("target");
+      link.removeAttribute("rel");
+      link.dataset.actInquiryEnhanced = "true";
+      link.addEventListener("click", function () {
+        track("email", link.textContent.trim());
       });
       return;
     }
@@ -244,7 +351,7 @@
 
   function enhanceLinks() {
     document
-      .querySelectorAll('a[href*="wa.me/' + PHONE + '"], a[href^="mailto:' + EMAIL + '"]')
+      .querySelectorAll('a[href*="wa.me/' + PHONE + '"], a[href^="mailto:' + EMAIL + '"], a[href]')
       .forEach(enhanceLink);
   }
 
@@ -259,8 +366,12 @@
   getInitialAttribution();
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", enhanceLinks);
+    document.addEventListener("DOMContentLoaded", function () {
+      createFloatingWhatsApp();
+      enhanceLinks();
+    });
   } else {
+    createFloatingWhatsApp();
     enhanceLinks();
   }
 

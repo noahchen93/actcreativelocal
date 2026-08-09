@@ -1,8 +1,8 @@
 import { Card, CardContent } from "./ui/card";
-import { Package, Truck, DollarSign, ShieldCheck, Scale, MessageSquare, CheckCircle2, ArrowRight, ArrowDown, Settings, Headphones } from "lucide-react";
+import { Package, Truck, DollarSign, ShieldCheck, Scale, MessageSquare, Mail, ArrowRight, ArrowDown, Settings, Headphones, CheckCircle2 } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
-import { scrollToSection } from "../lib/scrollToSection";
+import { PROJECT_INQUIRY_MAILTO } from "../lib/contactLinks";
 
 const serviceFlowData = [
   {
@@ -605,16 +605,15 @@ export function Services() {
               </motion.div>
             </div>
 
-            <motion.button
-              type="button"
+            <motion.a
+              href={PROJECT_INQUIRY_MAILTO}
               className="service-outcome-cta items-center justify-center gap-3 bg-black text-[#CCFF00] px-5 md:px-8 py-3 md:py-4 rounded-lg shadow-lg cursor-pointer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection("contact")}
             >
-              <CheckCircle2 className="service-outcome-cta-icon" />
-              <span className="service-outcome-cta-text font-bold">{t("提交需求，开始整合方案", "Send a Brief for an Integrated Solution")}</span>
-            </motion.button>
+              <Mail className="service-outcome-cta-icon" />
+              <span className="service-outcome-cta-text font-bold">{t("邮件提交需求，开始整合方案", "Email a Brief for an Integrated Solution")}</span>
+            </motion.a>
           </div>
         </motion.div>
       </div>
