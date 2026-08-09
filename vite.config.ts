@@ -32,11 +32,6 @@
     return env.GOOGLE_SITE_VERIFICATION || env.VITE_GOOGLE_SITE_VERIFICATION;
   };
 
-  const getLocalAiProxyHeaders = (mode: string) => {
-    const secret = loadEnv(mode, process.cwd(), '').AI_GATEWAY_SECRET;
-    return secret ? { Authorization: `Bearer ${secret}` } : undefined;
-  };
-
   const localizedHomepagePlugin = (): Plugin => ({
     name: 'localized-homepage',
     async closeBundle() {
@@ -100,81 +95,23 @@
   const universalHtmlEnhancementsPlugin = (): Plugin => ({
     name: 'universal-html-enhancements',
     apply: 'build',
-    async writeBundle(_options, bundle) {
+    async writeBundle() {
       const outDir = path.resolve(__dirname, 'build');
-      const embedEntry = Object.values(bundle).find(
-        (output) =>
-          output.type === 'chunk' &&
-          output.isEntry &&
-          output.facadeModuleId
-            ?.replace(/\\/g, '/')
-            .endsWith('/event-ai-embed.tsx'),
-      );
-
-      if (!embedEntry || embedEntry.type !== 'chunk') {
-        throw new Error('Unable to find the event AI embed entry in the Vite manifest.');
-      }
-
-      const importedCss = new Set<string>();
-      const visitedChunks = new Set<string>();
-      const collectChunkCss = (fileName: string) => {
-        if (visitedChunks.has(fileName)) return;
-        visitedChunks.add(fileName);
-
-        const output = bundle[fileName];
-        if (!output || output.type !== 'chunk') return;
-
-        const metadata = (
-          output as typeof output & {
-            viteMetadata?: { importedCss?: Set<string> };
-          }
-        ).viteMetadata;
-        metadata?.importedCss?.forEach((file) => importedCss.add(file));
-        output.imports.forEach(collectChunkCss);
-      };
-
-      collectChunkCss(embedEntry.fileName);
-      const marker = 'data-act-event-ai-embed';
-      const stylesheetTags = Array.from(importedCss)
-        .map(
-          (file) =>
-            `    <link rel="stylesheet" href="/${file}" ${marker} />`,
-        )
-        .join('\n');
-      const scriptTag =
-        `    <script type="module" src="/${embedEntry.fileName}" ${marker}></script>`;
       const analyticsTag = '    <script src="/site-analytics.js" defer></script>';
-      const excludedPages = new Set(['index.html', 'zh/index.html']);
       const htmlFiles = await listHtmlFiles(outDir);
       let analyticsCount = 0;
-      let assistantCount = 0;
 
       for (const htmlPath of htmlFiles) {
-        const relativePath = path.relative(outDir, htmlPath).replace(/\\/g, '/');
         let html = await fs.readFile(htmlPath, 'utf8');
-        let changed = false;
 
         if (!html.includes('/site-analytics.js')) {
           html = html.replace('</head>', `${analyticsTag}\n  </head>`);
           analyticsCount += 1;
-          changed = true;
+          await fs.writeFile(htmlPath, html, 'utf8');
         }
-
-        if (!excludedPages.has(relativePath) && !html.includes(marker)) {
-          if (stylesheetTags) {
-            html = html.replace('</head>', `${stylesheetTags}\n  </head>`);
-          }
-          html = html.replace('</body>', `${scriptTag}\n  </body>`);
-          assistantCount += 1;
-          changed = true;
-        }
-
-        if (changed) await fs.writeFile(htmlPath, html, 'utf8');
       }
 
-      console.log(
-        `[html] Injected analytics into ${analyticsCount} pages and the floating assistant into ${assistantCount} pages.`,
-      );
+      console.log(`[html] Injected analytics into ${analyticsCount} pages.`);
     },
   });
 
@@ -266,7 +203,6 @@
       rollupOptions: {
         input: {
           main: path.resolve(__dirname, 'index.html'),
-          eventAiEmbed: path.resolve(__dirname, 'src/event-ai-embed.tsx'),
         },
         output: {
           manualChunks(id) {
@@ -305,12 +241,5 @@
     server: {
       port: 3000,
       open: true,
-      proxy: {
-        '/api/chat': {
-          target: 'http://127.0.0.1:8787',
-          changeOrigin: false,
-          headers: getLocalAiProxyHeaders(mode),
-        },
-      },
     },
   }));

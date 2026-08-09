@@ -4,11 +4,6 @@ import { Hero } from "./components/Hero";
 import { HolidayPromo } from "./components/HolidayPromo";
 import { LanguageProvider } from "./contexts/LanguageContext";
 
-const EventAiAssistant = lazy(() =>
-  import("./components/EventAiAssistant").then((module) => ({
-    default: module.EventAiAssistant,
-  })),
-);
 const CaseStudies = lazy(() =>
   import("./components/CaseStudies").then((module) => ({
     default: module.CaseStudies,
@@ -123,9 +118,6 @@ export default function App() {
           <Toaster />
         </Suspense>
         <HashScrollRestorer />
-        <Suspense fallback={null}>
-          <EventAiAssistant />
-        </Suspense>
       </div>
     </LanguageProvider>
   );

@@ -57,48 +57,40 @@ Frontend:
 Static/public site:
 
 - Many SEO service and case-study pages are static HTML under `public/`.
-- Vite build copies public assets and injects the floating AI assistant into most static pages through the custom `universal-event-ai-assistant` plugin in `vite.config.ts`.
+- Vite build copies public assets and injects first-party analytics into static pages.
 - Homepage is React-driven from `index.html` and `src/`.
 - A localized Chinese homepage is generated at build time under `/zh/`.
 
 Backend/API:
 
-- `api/chat.ts` is the Vercel Function proxy for production `/api/chat`.
-- It accepts only allowed origins: `actcreative.net`, `www.actcreative.net`, localhost, 127.0.0.1, and matching Vercel preview host.
-- It requires `AI_GATEWAY_URL` and `AI_GATEWAY_SECRET` in the Vercel runtime.
-- It forwards requests to the local gateway through Cloudflare Tunnel and attaches `Authorization: Bearer <AI_GATEWAY_SECRET>`.
+- The website AI assistant was retired on 2026-08-09.
+- `api/chat.ts` returns `410 Gone` and does not connect to any upstream service.
+- The homepage and static pages no longer render or inject the floating assistant.
 
-Local AI:
+Retired local AI archive:
 
-- Local gateway: `scripts/local-ai-server.mjs`
-- Local gateway port: `127.0.0.1:8787`
-- Ollama port: `127.0.0.1:11434`
-- Chat model: `act-event-assistant`
-- Embedding model: `act-rag-embedding`
+- The former gateway, RAG and supervisor code remains in the repository only as an offline archive.
+- Ollama, the local gateway and Cloudflare Tunnel are stopped and have no autostart entry.
+- Archived chat model: `act-event-assistant`.
+- Archived embedding model: `act-rag-embedding`.
 - RAG index: `local-ai/knowledge/index/act-creative-rag-index.json`
 - System prompt: `local-ai/system-prompt.md`
 - Conversation logs: `local-ai/conversations/YYYY-MM-DD.ndjson`
 - Private insight reports: `local-ai/insights/conversation-insights.json` ignored by Git.
 - Public popular-question feed: `public/ai-insights/top-questions.json`
 
-Production AI path:
+Retired production path:
 
 ```text
-actcreative.net/api/chat
--> Vercel Function api/chat.ts
--> ai.actcreative.net
--> Cloudflare Tunnel
--> local AI gateway on 127.0.0.1:8787
--> Ollama on 127.0.0.1:11434
+actcreative.net/api/chat/ -> 410 Gone
+ai.actcreative.net -> no local Tunnel connection
+127.0.0.1:8787 -> not listening
+127.0.0.1:11434 -> not listening
 ```
 
-Operations scripts:
+Archived operations scripts:
 
-- `scripts/start-production-ai.ps1` starts/repairs the site AI stack on Windows.
-- `scripts/start-production-tunnel.ps1` starts the Cloudflare Tunnel.
-- `scripts/watch-production-ai.ps1` is the persistent watchdog for local AI and Cloudflare Tunnel health.
-- `scripts/install-production-ai-supervisor.ps1` installs the watchdog as a Windows autostart entry.
-- `scripts/check-production-ai.ps1` reports local Ollama, local gateway, direct tunnel, production proxy, and autostart status.
+- Scripts under `scripts/*production-ai*`, `scripts/start-production-tunnel.ps1` and `scripts/local-ai-server.mjs` must not be run unless the user explicitly restores the retired service.
 
 Data/tooling:
 
@@ -114,22 +106,6 @@ Install and run:
 ```powershell
 npm install
 npm run dev
-```
-
-Local AI:
-
-```powershell
-npm run ollama:create
-npm run ollama:embedding
-npm run rag:index
-npm run dev:ai
-```
-
-Production AI repair/start:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts\start-production-ai.ps1
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts\start-production-tunnel.ps1
 ```
 
 Build and venue workflows:
@@ -148,11 +124,6 @@ AI insights:
 ```powershell
 npm run ai:insights
 npm run ai:insights:preview
-npm run ai:prod:install
-npm run ai:prod:check
-npm run ai:prod:start
-npm run ai:prod:tunnel
-npm run ai:prod:watch
 ```
 
 Google/Search Console workflows:
@@ -167,14 +138,12 @@ npm run gsc:sheet
 
 Core app:
 
-- `src/App.tsx`: homepage composition, lazy-loaded homepage sections, analytics, and floating AI assistant.
+- `src/App.tsx`: homepage composition, lazy-loaded homepage sections, and analytics.
 - `src/components/Header.tsx`: navigation and language-aware header behavior.
 - `src/components/Hero.tsx`, `HeroSlideshow.tsx`: first viewport.
 - `src/components/CaseStudies.tsx`, `CaseDetailDialog.tsx`: project case content and dialogs.
 - `src/components/ProductCategories.tsx`, `Services.tsx`: business capability sections.
 - `src/components/Contact.tsx`: contact and brief-building interaction.
-- `src/components/EventAiAssistant.tsx` and `.css`: floating AI assistant UI.
-- `src/event-ai-embed.tsx`: standalone mount used for static pages.
 
 Static pages and public assets:
 
@@ -395,42 +364,20 @@ The git history shows these major phases:
    - Included the pending AI supervisor hardening: startup repair no longer terminates unrelated Ollama sessions, and watchdog repair subprocesses now run hidden with a 300-second timeout.
    - Verification: the production build and search audit passed; local Ollama, RAG, gateway, Tunnel, and production proxy all reported `ready`; a production `Noa Test` POST returned `ACT AI online`.
 
+24. AI assistant retirement on 2026-08-09 (Codex; branch `codex/Christmas-NewYear-CNY`).
+   - Removed the floating assistant from the React homepage and all generated static pages, removed the local Vite proxy and runtime npm commands, and changed `/api/chat/` to return `410 Gone` without contacting an upstream service.
+   - Disabled the Startup shortcut, stopped the supervisor, local gateway, both loaded Ollama models, the Ollama service and the Cloudflare Tunnel process; ports `8787` and `11434` are no longer listening.
+   - Kept model files, private conversation logs, local AI source code and Cloudflare configuration as offline archives for rollback. Do not restart them unless the user explicitly restores the service.
+
 ## AI Assistant Operating Notes
 
-Health endpoints:
+The service is retired. Expected state:
 
-```powershell
-$secret = (Get-Content .env.local -Encoding UTF8 |
-  Where-Object { $_ -like "AI_GATEWAY_SECRET=*" }).Split("=", 2)[1]
-
-Invoke-RestMethod `
-  -Headers @{ Authorization = "Bearer $secret" } `
-  -Uri "http://127.0.0.1:8787/api/chat?health=1"
-
-Invoke-RestMethod -Uri "https://actcreative.net/api/chat/?health=1"
-```
-
-Known behavior:
-
-- Qwen 3.6 36B cold start can take several minutes.
-- Once loaded, the model is kept warm for 24 hours by the local gateway.
-- The gateway allows only one active chat request at a time. A second request returns 429.
-- Vercel proxy timeout is shorter than full cold-start time; warm the model locally before expecting production chat to work reliably.
-- Embedding model uses a smaller context and may stay resident together with the chat model.
-- If production health says ready but chat fails, check for multiple Ollama processes, wrong `OLLAMA_MODELS`, and residual `llama-server.exe` processes.
-
-Successful verification on 2026-06-27 after repair:
-
-- Local gateway POST to `http://127.0.0.1:8787/api/chat`: 200, returned `ACT AI online`.
-- Local Vite proxy POST to `http://127.0.0.1:3000/api/chat`: 200, returned `ACT AI online`.
-- Production POST to `https://actcreative.net/api/chat`: 200, returned `ACT AI online`.
-- Production health: `ready`, RAG ready.
-
-Successful verification on 2026-06-30 after watchdog installation:
-
-- `npm run ai:prod:check`: autostart `startupShortcut`, supervisor running, one `ollama.exe`, one `cloudflared.exe`, ports `11434` and `8787` listening, Ollama ACT models ready, local gateway ready, direct Tunnel ready, production ready.
-- Local gateway POST to `http://127.0.0.1:8787/api/chat`: returned `ACT AI online`.
-- Production POST to `https://actcreative.net/api/chat` with `Origin: https://actcreative.net`: returned `ACT AI online`.
+- No floating AI control is present on any website page.
+- `/api/chat/` returns HTTP `410` with status `retired`.
+- No ACT Creative AI supervisor Startup shortcut is enabled.
+- No local process listens on ports `8787` or `11434`.
+- No site `cloudflared` Tunnel process or Ollama model worker is running.
 
 ## Privacy And Data Rules
 
@@ -454,10 +401,7 @@ Successful verification on 2026-06-30 after watchdog installation:
 
 ## Current Known Risks
 
-- Ollama desktop/Cloud Code/Claude tooling can start a competing Ollama process with a different `OLLAMA_MODELS` path. Use `scripts/start-production-ai.ps1` to restore the site-specific runtime.
-- The chat model is large and cold start is slow; production chat can time out during cold start even when health eventually becomes ready.
-- This workstation currently uses the Startup shortcut fallback, not a Windows scheduled task, because task registration returned `Access is denied`. The fallback starts after the Administrator user logs in; it is not a pre-login Windows service.
-- Static pages under `public/` are numerous; changes to global assistant injection require `npm run build` verification.
+- Archived AI start scripts and Cloudflare configuration can restore the retired service if run manually; do not run them without explicit user approval.
 - Venue data must remain public-safe and source-aware; do not ingest unreviewed sensitive notes into public JSON.
 - Generated files and ignored local data can make local/remote context diverge if this file is not updated in the same commit as changes.
 
@@ -470,7 +414,5 @@ Before handing work to another tool or developer:
 3. Run the relevant verification:
    - `npm run build` for frontend/build changes.
    - `npm run smoke:venue-finder` for venue finder changes.
-   - `npm run rag:index` after knowledge/page changes that should affect AI.
-   - Local and production `/api/chat` checks after AI operations changes.
 4. Commit code and this file together.
 5. Push to `origin` so remote context matches local context.
