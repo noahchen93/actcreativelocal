@@ -144,8 +144,11 @@ def main() -> None:
     page_modified = page_modified_match.group(1) if page_modified_match else ""
     if not page_modified or page_modified < dataset["generatedAt"]:
         errors.append("Structured data dateModified is stale")
-    if "100+ Venues" not in page_html:
-        errors.append("Venue finder title does not use the maintainable 100+ count")
+    expected_title_count = f"{dataset['publicCount']} Venues"
+    if expected_title_count not in page_html:
+        errors.append(
+            f"Venue finder title count is stale (expected {expected_title_count})"
+        )
     if "What the venue information means" not in page_html:
         errors.append("Venue finder data methodology section is missing")
     if "/_vercel/insights/script.js" not in page_html:

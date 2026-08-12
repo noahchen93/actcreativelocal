@@ -1,9 +1,10 @@
 import { Button } from "./ui/button";
-import { Menu, Globe } from "lucide-react";
+import { Menu, Globe, Mail } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { scrollToSection } from "../lib/scrollToSection";
+import { PROJECT_INQUIRY_MAILTO } from "../lib/contactLinks";
 import logo from "figma:asset/9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png";
 
 export function Header() {
@@ -751,12 +752,12 @@ export function Header() {
             >
               {t("关于", "About")}
             </a>
-            <button
-              onClick={() => handleSectionLink("contact")}
+            <a
+              href={PROJECT_INQUIRY_MAILTO}
               className="act-nav-pill"
             >
-              {t("联系我们", "Contact")}
-            </button>
+              {t("发送邮件", "Email Us")}
+            </a>
           </nav>
 
           <div className="act-header-actions act-action-cluster">
@@ -770,13 +771,13 @@ export function Header() {
               <span>{languageLabel}</span>
             </button>
 
-            <button
-              type="button"
-              onClick={() => handleSectionLink("contact")}
+            <a
+              href={PROJECT_INQUIRY_MAILTO}
               className="act-action-button act-brief-button"
             >
-              {t("发送需求", "Send Brief")}
-            </button>
+              <Mail className="h-4 w-4" />
+              {t("邮件发送需求", "Email Brief")}
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -874,17 +875,21 @@ export function Header() {
                 >
                   {t("关于", "About")}
                 </a>
-                <button
-                  onClick={() => handleSectionLink("contact")}
+                <a
+                  href={PROJECT_INQUIRY_MAILTO}
+                  onClick={() => setIsMenuOpen(false)}
                   className="text-white hover:text-[#CCFF00] transition-colors text-left px-4 py-2 rounded-lg hover:bg-[#1a1a1a]"
                 >
-                  {t("联系我们", "Contact")}
-                </button>
+                  {t("发送邮件", "Email Us")}
+                </a>
                 <Button
-                  onClick={() => handleSectionLink("contact")}
+                  asChild
                   className="w-full bg-[#CCFF00] hover:bg-[#b8e600] text-black"
                 >
-                  {t("发送需求", "Send Brief")}
+                  <a href={PROJECT_INQUIRY_MAILTO} onClick={() => setIsMenuOpen(false)}>
+                    <Mail className="h-4 w-4" />
+                    {t("邮件发送需求", "Email Brief")}
+                  </a>
                 </Button>
               </div>
             </motion.nav>

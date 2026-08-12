@@ -1,7 +1,8 @@
-import { Mail, Phone, MapPin, Facebook, Instagram, Heart } from "lucide-react";
+import { Mail, MapPin, Facebook, Instagram, Heart } from "lucide-react";
 import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { scrollToSection } from "../lib/scrollToSection";
+import { PROJECT_INQUIRY_MAILTO } from "../lib/contactLinks";
 import logo from "figma:asset/9f81ed77f1d1b1fce6de57ec26fc06cd89a9a112.png";
 
 export function Footer() {
@@ -93,9 +94,9 @@ export function Footer() {
               <button onClick={switchLanguage} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
                 {language === "zh" ? "English" : "中文"}
               </button>
-              <button onClick={() => scrollToSection("contact")} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
-                {t("联系我们", "Contact")}
-              </button>
+              <a href={PROJECT_INQUIRY_MAILTO} className="block text-gray-400 hover:text-[#CCFF00] transition-colors">
+                {t("发送邮件", "Email Us")}
+              </a>
             </nav>
           </motion.div>
 
@@ -173,10 +174,6 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Mail className="w-4 h-4 text-[#CCFF00] mt-0.5 flex-shrink-0" />
                 <a href="mailto:contact@actcreative.net" className="text-gray-400 hover:text-[#CCFF00] transition-colors">contact@actcreative.net</a>
-              </li>
-              <li className="flex items-start gap-2">
-                <Phone className="w-4 h-4 text-[#CCFF00] mt-0.5 flex-shrink-0" />
-                <a href="https://wa.me/6584515268" className="text-gray-400 hover:text-[#CCFF00] transition-colors">+65 84515268</a>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-[#CCFF00] mt-0.5 flex-shrink-0" />

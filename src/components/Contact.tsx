@@ -7,7 +7,6 @@ import {
   Instagram,
   Mail,
   MapPin,
-  MessageCircle,
   Send,
 } from "lucide-react";
 import { Button } from "./ui/button";
@@ -15,7 +14,6 @@ import { useMemo, useRef, useState } from "react";
 import { toast } from "sonner";
 
 const EMAIL = "contact@actcreative.net";
-const WHATSAPP = "6584515268";
 const MAILTO_SUBJECT = "Project Inquiry - ACT Creative";
 
 type InquiryAttributionBridge = {
@@ -148,17 +146,6 @@ export function Contact() {
     trackSiteAction("Brief started", "homepage_brief_builder", {
       project_type: projectType,
     });
-  };
-
-  const handleWhatsApp = () => {
-    trackInquiryIntent("whatsapp", "contact_brief_builder");
-    const message = `${briefMessage}${getAttributionLines("whatsapp")}`;
-
-    window.open(
-      `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`,
-      "_blank",
-      "noopener",
-    );
   };
 
   const copyEmail = async () => {
@@ -513,46 +500,24 @@ export function Contact() {
               {briefMessage}
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-3 mt-5">
-              <Button
-                onClick={handleWhatsApp}
-                className="bg-[#CCFF00] hover:bg-[#b8e600] text-black h-12"
-              >
-                <MessageCircle className="w-4 h-4 mr-2" />
-                {t("WhatsApp 发送", "Send via WhatsApp")}
-              </Button>
+            <div className="mt-5">
               <Button
                 onClick={handleEmail}
-                variant="outline"
-                className="border-[#CCFF00] text-[#CCFF00] hover:bg-[#CCFF00] hover:text-black h-12 bg-transparent"
+                className="w-full bg-[#CCFF00] hover:bg-[#b8e600] text-black h-12"
               >
                 <Mail className="w-4 h-4 mr-2" />
-                {t("发送邮件", "Send Email")}
+                {t("通过邮件发送需求", "Email This Brief")}
               </Button>
             </div>
 
             <div className="mt-6 pt-6 border-t border-[#CCFF00]/10">
               <div className="grid gap-3 text-sm text-gray-300">
-                <button
-                  type="button"
-                  onClick={copyEmail}
+                <a
+                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(MAILTO_SUBJECT)}`}
                   className="inline-flex items-center justify-between gap-3 rounded-lg border border-[#CCFF00]/15 px-4 py-3 text-left hover:border-[#CCFF00]/45 hover:text-white transition-colors"
                 >
                   <span>{EMAIL}</span>
-                  {copiedEmail ? (
-                    <Check className="w-4 h-4 text-[#CCFF00]" />
-                  ) : (
-                    <Copy className="w-4 h-4 text-[#CCFF00]" />
-                  )}
-                </button>
-                <a
-                  href={`https://wa.me/${WHATSAPP}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-between gap-3 rounded-lg border border-[#CCFF00]/15 px-4 py-3 hover:border-[#CCFF00]/45 hover:text-white transition-colors"
-                >
-                  <span>+65 8451 5268</span>
-                  <MessageCircle className="w-4 h-4 text-[#CCFF00]" />
+                  <Mail className="w-4 h-4 text-[#CCFF00]" />
                 </a>
               </div>
             </div>
