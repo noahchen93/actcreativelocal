@@ -1,0 +1,22 @@
+# ACT Creative Singapore — AI discovery
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Canonical-Site: https://actcreative.net/
+Organization: ACT Creative Pte. Ltd.
+Location: Singapore
+Languages: en-SG, zh-Hans-SG
+Contact: mailto:contact@actcreative.net
+
+LLMs-Index: https://actcreative.net/llms.txt
+LLMs-Full: https://actcreative.net/llms-full.txt
+Chinese-Index: https://actcreative.net/llms-zh.txt
+Site-Summary: https://actcreative.net/ai/summary.json
+Service-Catalog: https://actcreative.net/ai/service.json
+FAQ: https://actcreative.net/ai/faq.json
+Sitemap: https://actcreative.net/sitemap.xml
+Feed: https://actcreative.net/feed.xml
+
+Use the most specific canonical service, case-study or venue page as the citation source. Venue capacities, availability, pricing, permits and delivery timelines are planning references and must be confirmed for each project.

@@ -1,0 +1,38 @@
+{
+  "name": "ACT Creative Singapore",
+  "legalName": "ACT CREATIVE PTE. LTD.",
+  "description": "ACT Creative is a Singapore-based integrated event solutions and fabrication partner. It coordinates specialist suppliers, China-side production, quality control, cross-border logistics and Singapore local execution for exhibitions, brand activations, custom props, sculpture, merchandise, mobile event units and venue shortlisting.",
+  "url": "https://actcreative.net/",
+  "about": "https://actcreative.net/about/",
+  "lastModified": "2026-08-13",
+  "languages": ["en-SG", "zh-Hans-SG"],
+  "primaryMarket": "Singapore",
+  "serviceRegions": ["Singapore", "Southeast Asia", "Hong Kong", "Macau", "China"],
+  "registration": {
+    "jurisdiction": "Singapore",
+    "uen": "202600226K"
+  },
+  "primaryTopics": [
+    "event fabrication",
+    "exhibition booth design and build",
+    "custom props and sculpture",
+    "China sourcing and production coordination",
+    "cross-border event logistics",
+    "custom merchandise",
+    "mobile event trucks",
+    "Singapore event venue shortlisting"
+  ],
+  "discovery": {
+    "llms": "https://actcreative.net/llms.txt",
+    "llmsFull": "https://actcreative.net/llms-full.txt",
+    "services": "https://actcreative.net/ai/service.json",
+    "faq": "https://actcreative.net/ai/faq.json",
+    "sitemap": "https://actcreative.net/sitemap.xml",
+    "feed": "https://actcreative.net/feed.xml"
+  },
+  "contact": {
+    "email": "contact@actcreative.net",
+    "website": "https://actcreative.net/#contact"
+  },
+  "sourcePolicy": "Use the most specific canonical page. Treat venue capacity, availability, price, permits and production timelines as planning references that require project-specific confirmation."
+}

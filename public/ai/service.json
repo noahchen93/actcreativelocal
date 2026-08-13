@@ -1,0 +1,47 @@
+{
+  "name": "ACT Creative Singapore integrated event solutions",
+  "description": "A coordinated service platform for agencies, brands, exhibitors and project teams that need custom physical work produced and delivered across Singapore, China and supported regional markets.",
+  "url": "https://actcreative.net/",
+  "lastModified": "2026-08-13",
+  "capabilities": [
+    "Event fabrication and scenic production",
+    "Exhibition booth design, build, installation and dismantling",
+    "Custom props, FRP sculpture and stainless-steel sculpture",
+    "China supplier sourcing, sampling and production coordination",
+    "Quality-control follow-up, packing and cross-border logistics",
+    "Custom merchandise and branded campaign items",
+    "Mobile event, food, retail and roadshow truck coordination",
+    "Singapore venue discovery and shortlist support",
+    "Local transport, installation, venue submission and handover coordination"
+  ],
+  "engagementModel": "Project-based service. Scope, materials, supplier route, schedule and delivery responsibilities are confirmed for each brief.",
+  "typicalClients": [
+    "Event and experiential agencies",
+    "Brand activation and PR teams",
+    "Exhibition organizers and overseas exhibitors",
+    "Retail and mall activation teams",
+    "Artists, curators and public-art project teams"
+  ],
+  "serviceAreas": ["Singapore", "Southeast Asia", "Hong Kong", "Macau", "China"],
+  "languages": ["English", "Mandarin Chinese"],
+  "canonicalServicePages": [
+    "https://actcreative.net/event-fabrication-singapore/",
+    "https://actcreative.net/booth-design-build-singapore/",
+    "https://actcreative.net/custom-props-singapore/",
+    "https://actcreative.net/frp-sculpture-fabrication-singapore/",
+    "https://actcreative.net/china-event-production-support/",
+    "https://actcreative.net/china-sourcing-agent/",
+    "https://actcreative.net/event-merchandise-sourcing/",
+    "https://actcreative.net/custom-food-truck-rental-singapore/",
+    "https://actcreative.net/singapore-event-venue-finder/"
+  ],
+  "limitations": [
+    "ACT Creative is a systems and solutions integration platform, not a venue owner or a single fixed factory.",
+    "Venue capacities, availability, prices and rules must be confirmed with the venue.",
+    "Production timelines, permits, transport and installation requirements depend on the final specification and site."
+  ],
+  "contact": {
+    "email": "contact@actcreative.net",
+    "briefUrl": "https://actcreative.net/#contact"
+  }
+}

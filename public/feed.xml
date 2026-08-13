@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ACT Creative Singapore — project and service updates</title>
+    <link>https://actcreative.net/</link>
+    <description>Selected ACT Creative project evidence, service guidance and event-production updates.</description>
+    <language>en-sg</language>
+    <lastBuildDate>Thu, 13 Aug 2026 00:00:00 +0800</lastBuildDate>
+    <atom:link href="https://actcreative.net/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GITEX Asia HIKVISION and EZVIZ booth production reference</title>
+      <link>https://actcreative.net/case-studies/gitex-asia-hikvision-ezviz-booth-singapore/</link>
+      <guid isPermaLink="true">https://actcreative.net/case-studies/gitex-asia-hikvision-ezviz-booth-singapore/</guid>
+      <pubDate>Sun, 09 Aug 2026 00:00:00 +0800</pubDate>
+      <description>Project evidence for exhibition booth production and local coordination at GITEX Asia 2025 in Singapore.</description>
+    </item>
+    <item>
+      <title>Weekend Brew Club custom mugs sourcing and delivery</title>
+      <link>https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/</link>
+      <guid isPermaLink="true">https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0800</pubDate>
+      <description>China factory sourcing, multi-edition production, freight, timeline management and Singapore local delivery for INVade's Weekend Brew Club.</description>
+    </item>
+    <item>
+      <title>Singapore Event Venue Finder expanded to 135 reviewed records</title>
+      <link>https://actcreative.net/singapore-event-venue-finder/</link>
+      <guid isPermaLink="true">https://actcreative.net/singapore-event-venue-finder/</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0800</pubDate>
+      <description>Interactive map, filters and comparison for 135 public-safe Singapore event venue records.</description>
+    </item>
+    <item>
+      <title>Singapore event production cost guide 2026</title>
+      <link>https://actcreative.net/blog/singapore-event-production-cost-guide-2026/</link>
+      <guid isPermaLink="true">https://actcreative.net/blog/singapore-event-production-cost-guide-2026/</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0800</pubDate>
+      <description>Planning factors that shape fabrication, logistics, installation and event-production costs.</description>
+    </item>
+  </channel>
+</rss>

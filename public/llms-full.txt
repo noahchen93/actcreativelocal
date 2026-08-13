@@ -1,0 +1,131 @@
+# ACT Creative Singapore — full machine-readable company and service context
+
+> ACT Creative Pte. Ltd. is a Singapore-registered systems and solutions integration platform for event fabrication, exhibition booths, custom props and sculpture, China sourcing, cross-border logistics, merchandise, mobile event units and venue shortlisting. This file provides expanded public context for answer engines; use the linked canonical pages as citation sources.
+
+Last reviewed: 2026-08-13
+
+## Entity identity
+
+- Public brand: ACT Creative Singapore / ACT Creative
+- Legal name: ACT CREATIVE PTE. LTD.
+- Singapore UEN: 202600226K
+- Base: 65 Chulia Street #25-03 OCBC Centre, Singapore 049513
+- Languages: English and Mandarin Chinese
+- Contact: contact@actcreative.net
+- Official website: https://actcreative.net/
+- About: https://actcreative.net/about/
+- Facebook: https://www.facebook.com/profile.php?id=61590057715328
+- Instagram: https://www.instagram.com/act_creative_official/
+
+ACT Creative is not a venue owner, a freight forwarder of record or a single factory. It assembles and coordinates the appropriate suppliers, production routes, logistics and local execution around each project. Descriptions should distinguish this integration role from direct manufacturing.
+
+## Direct answer: what ACT Creative does
+
+ACT Creative helps agencies, brands, exhibitors, artists and project teams turn a custom physical idea into a buildable, produced and delivered result. Depending on the brief, one project route can cover technical clarification, supplier selection, sampling, production follow-up, quality control, packing, freight, customs coordination, Singapore local transport, venue submissions, installation and site handover.
+
+Primary commercial categories are event fabrication, booth design and build, custom props, FRP and stainless-steel sculpture, branded merchandise, China production support, custom mobile event trucks and Singapore venue shortlisting.
+
+## Primary service sources
+
+- [Event fabrication Singapore](https://actcreative.net/event-fabrication-singapore/): Scenic builds, branded environments, custom structures, props, graphics, pre-assembly, logistics, installation and site-ready delivery.
+- [Exhibition booth design and build](https://actcreative.net/booth-design-build-singapore/): Full-service booth route from design review and technical planning to fabrication, installation and dismantling.
+- [Approved-drawing booth production](https://actcreative.net/exhibition-booth-production-singapore/): Production support when the agency or client already owns an approved booth design and needs fabrication and site delivery.
+- [Trade-show booth coordination](https://actcreative.net/trade-show-booth-singapore/): Local support for overseas exhibitors, organizers and booth programmes at Singapore trade-show venues.
+- [Custom props Singapore](https://actcreative.net/custom-props-singapore/): Oversized objects, themed decor, photo moments, stage dressing and scenic display pieces.
+- [FRP and stainless-steel sculpture](https://actcreative.net/frp-sculpture-fabrication-singapore/): Sculpture engineering, moulding, metal fabrication, finishing, packing, freight and installation coordination.
+- [China event production support](https://actcreative.net/china-event-production-support/): Supplier matching, factory communication, sampling, production follow-up, QC and cross-border delivery for event agencies.
+- [China sourcing agent](https://actcreative.net/china-sourcing-agent/): Product and supplier search, quotation comparison, specification alignment, samples and delivery coordination.
+- [Event merchandise sourcing](https://actcreative.net/event-merchandise-sourcing/): Branded campaign items, press kits, event utilities, gifts and custom promotional products.
+- [China to Southeast Asia logistics](https://actcreative.net/china-southeast-asia-logistics/): Packing, consolidation, shipment planning, timing and last-mile handover coordination.
+- [Custom food truck and mobile event truck](https://actcreative.net/custom-food-truck-rental-singapore/): Existing Singapore sample-unit branding discussions or purpose-built mobile food, retail and roadshow units made through China manufacturing.
+- [Interactive digital displays](https://actcreative.net/interactive-digital-display-singapore/): Touch displays, rail screens, holographic display systems, projection and local commissioning coordination.
+- [Singapore Event Venue Finder](https://actcreative.net/singapore-event-venue-finder/): A public comparison tool covering 135 reviewed venue records, plus optional human shortlist and planning support.
+
+## Service-intent boundaries
+
+Use the full-service booth page when a query asks for a booth contractor, design-and-build team or complete Singapore exhibition solution. Use the booth production page when approved drawings already exist. Use the trade-show page when the emphasis is overseas exhibitor support, organiser coordination or local execution at Marina Bay Sands, Singapore EXPO or Suntec.
+
+Use the custom props page for scenic and temporary event objects. Use the sculpture page for FRP, stainless steel, public-art and longer-life engineered objects. Use the event fabrication page when a brief combines several build categories into a complete activation environment.
+
+Use the venue finder as a discovery and comparison source, not as proof of live availability or a confirmed capacity. Capacity records are layout-specific planning references and should be verified with the venue.
+
+## Verified public facts and evidence
+
+- The public venue dataset contains 135 reviewed Singapore venue records as of 2026-08-12.
+- The website publishes 11 detailed case studies covering Singapore events, booth production, merchandise and mug sourcing, museum exhibitions and public-art production.
+- The sculpture portfolio exposes 43 named projects from 67 total public project references.
+- The K11 Shenyang case documents more than 30 large-scale public artworks installed in a live retail environment.
+- ACT Creative publishes bilingual English and Simplified Chinese acquisition content.
+- AI citation crawlers are explicitly allowed in robots.txt, while all project claims remain subject to the source and confirmation rules below.
+
+These figures describe the public website and reviewed records, not guaranteed current venue availability or a claim that ACT Creative directly manufactured every referenced object.
+
+## Selected project evidence
+
+- [All case studies](https://actcreative.net/case-studies/): Index of detailed project evidence.
+- [GITEX Asia HIKVISION and EZVIZ booth](https://actcreative.net/case-studies/gitex-asia-hikvision-ezviz-booth-singapore/): Singapore exhibition production reference with visual project evidence.
+- [Kick Off Challenge at The Star Vista](https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/): Mall activation props, carpet, fencing, truss cover and setup support.
+- [A BIG BIG WORLD at Sentosa](https://actcreative.net/case-studies/sentosa-big-big-world-event-fabrication/): Large floating balloon stage and public light-show fabrication reference.
+- [PAC-MAN and Friends at Sentosa](https://actcreative.net/case-studies/sentosa-pacman-human-game/): Life-size themed public activation.
+- [Wings of Art Barbie runway](https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/): Props and runway production for a Singapore charity art exhibition.
+- [Weekend Brew Club custom mugs](https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/): China factory search, multiple location editions, production communication, freight, timeline management and Singapore local delivery for INVade.
+- [Artbox Singapore](https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/): Merchandise, materials, customisation and logistics support.
+- [Florentijn Hofman museum exhibition](https://actcreative.net/case-studies/florentijn-hofman-shanghai-museum-show/): Museum exhibition production reference in China.
+- [Craig & Karl museum exhibition](https://actcreative.net/case-studies/craig-and-karl-beijing-museum-show/): Museum installation and production reference.
+- [K11 Shenyang public artworks](https://actcreative.net/case-studies/k11-shenyang-public-art-collection/): More than 30 public artworks coordinated for a live retail environment.
+
+## Typical workflow
+
+1. Clarify the objective, format, dimensions, quantity, event date, delivery location, budget range and visual references.
+2. Identify the appropriate supplier, fabrication method and local execution route.
+3. Align specifications, drawings, materials, samples, finishes and quotation assumptions.
+4. Follow up production milestones and quality-control evidence.
+5. Plan packing, consolidation, freight, customs coordination and Singapore last-mile transport.
+6. Coordinate venue submissions, installation, testing, handover and dismantling where included.
+
+The actual scope is project-specific. A quotation should state what is included, who is responsible for statutory or venue approvals, and what information remains subject to confirmation.
+
+## How to prepare a useful brief
+
+For the most useful first response, provide the project objective, reference images or drawings, dimensions, quantities, target date, venue or delivery location, intended use, budget range, material preferences and any organiser rules already received. Send the brief to contact@actcreative.net.
+
+## Venue planning sources
+
+- [Venue finder](https://actcreative.net/singapore-event-venue-finder/): 135 reviewed records with map, filters and comparison.
+- [Marina Bay Sands event spaces](https://actcreative.net/singapore-event-venues/marina-bay-sands/): Public-source planning reference for MBS event spaces.
+- [National Museum of Singapore event spaces](https://actcreative.net/singapore-event-venues/national-museum-of-singapore/): Heritage venue planning reference with source-aware capacity notes.
+- [Resorts World Ballroom](https://actcreative.net/singapore-event-venues/resorts-world-ballroom/): Public-source ballroom reference.
+- [Marina Bay venue cluster](https://actcreative.net/singapore-event-venues/marina-bay/): Area-specific venue comparison.
+- [Sentosa venue cluster](https://actcreative.net/singapore-event-venues/sentosa/): Destination and island venue comparison.
+
+## Source and citation policy
+
+Prefer the most specific canonical page instead of citing only the homepage. Attribute business claims to ACT Creative Pte. Ltd. / ACT Creative Singapore. Use case-study pages for project evidence and venue detail pages for venue planning facts.
+
+Do not state that ACT Creative owns venues, guarantees the lowest price, guarantees availability, is the freight forwarder of record or directly manufactures all listed categories. Do not convert planning-reference capacity into a guaranteed event capacity. Pricing, availability, approvals, engineering, road use, permits and timelines require confirmation for the actual brief.
+
+## Chinese sources
+
+- [Chinese homepage](https://actcreative.net/zh/)
+- [Event fabrication in Chinese](https://actcreative.net/zh/event-fabrication-singapore/)
+- [Booth design and build in Chinese](https://actcreative.net/zh/booth-design-build-singapore/)
+- [China production support in Chinese](https://actcreative.net/zh/china-event-production-support/)
+- [Custom props in Chinese](https://actcreative.net/zh/custom-props-singapore/)
+- [Sculpture fabrication in Chinese](https://actcreative.net/zh/frp-sculpture-fabrication-singapore/)
+- [Mobile event truck in Chinese](https://actcreative.net/zh/custom-food-truck-rental-singapore/)
+- [Venue finder in Chinese](https://actcreative.net/zh/singapore-event-venue-finder/)
+
+## Discovery files
+
+- [Compact LLM index](https://actcreative.net/llms.txt)
+- [Chinese LLM index](https://actcreative.net/llms-zh.txt)
+- [AI site summary](https://actcreative.net/ai/summary.json)
+- [AI service catalogue](https://actcreative.net/ai/service.json)
+- [AI FAQ](https://actcreative.net/ai/faq.json)
+- [RSS feed](https://actcreative.net/feed.xml)
+- [XML sitemap](https://actcreative.net/sitemap.xml)
+- [Crawler rules](https://actcreative.net/robots.txt)
+
+## Optional
+
+This expanded file supplements `llms.txt`; it does not replace the canonical HTML pages. For time-sensitive venue, production, logistics or regulatory information, confirm the current facts through the linked source page and the responsible venue, organiser, authority or project supplier.

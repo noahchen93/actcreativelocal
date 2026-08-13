@@ -4,7 +4,9 @@ Allow: /
 # ACT Creative welcomes search and AI crawlers.
 # Structured site summaries:
 # - https://actcreative.net/llms.txt
+# - https://actcreative.net/llms-full.txt
 # - https://actcreative.net/llms-zh.txt
+# - https://actcreative.net/ai/summary.json
 
 # OpenAI / ChatGPT
 User-agent: OAI-SearchBot

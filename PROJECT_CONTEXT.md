@@ -1,6 +1,6 @@
 # ACT Creative Website Project Context
 
-Last updated: 2026-08-12, Asia/Singapore.
+Last updated: 2026-08-13, Asia/Singapore.
 
 This file is the living handoff document for `actcreativelocal`. Update it in the same commit as every meaningful website, content, data, AI, deployment, or operations change. If another tool or developer continues this project, read this file first.
 
@@ -398,6 +398,14 @@ The git history shows these major phases:
    - Improved Search Console opportunity pages: aligned the exhibition booth, event fabrication and mobile event truck titles/H1s/snippets with search intent; added a direct mobile-event-truck answer and FAQ; refreshed the National Museum venue title/description; and aligned the English and Chinese venue finder to the exact reviewed count of 135.
    - Made the venue finder validator data-driven instead of hard-coding `100+`, refreshed affected sitemap dates/descriptions, and preserved distinct intent boundaries between full-service booth design/build, approved-drawing production, and trade-show coordination.
    - Verification passed: `npm run validate:venue-finder`, `npm run seo:check`, `npm run build`, `npm run smoke:venue-finder`, the source/build AI retirement guard, `npm audit`, and `git diff --check`. The build contains 71 static pages, 11 case studies, 26 venue pages and 75 sitemap URLs. No push or production deployment was performed.
+
+28. GEO / AI answer-engine discovery optimization on 2026-08-13 (Codex; branch `codex/security-seo-ai-retirement`, local only at handoff).
+   - Installed and applied the user-specified Auriti Labs GEO Optimizer skill. The public production baseline scored 73/100; the final local production build scored 91/100, with citability improving from 83 to 100.
+   - Added `/.well-known/ai.txt`, `/ai/summary.json`, `/ai/faq.json`, `/ai/service.json`, `/llms-full.txt` and `/feed.xml`. The files provide canonical service and evidence links, claim limitations, RSS discovery and source-aware answers without restoring the retired website assistant.
+   - Added homepage RSS discovery, entity freshness, aligned Organization/meta descriptions, raw About discovery, evidence figures and visible author/publisher attribution. Reduced unnecessary repetition while preserving dedicated service-page query intent.
+   - Added `scripts/check-geo-discovery.mjs` and wired it into SEO, prebuild and postbuild checks so discovery files, JSON validity, RSS, freshness, canonical sources and the public venue count cannot silently regress.
+   - Deliberately omitted fake knowledge-graph profiles, a false all-site `SearchAction` and score-only WebMCP declarations. Details and category deltas are recorded in `docs/geo-optimizer-audit-2026-08-13.md`.
+   - Verification passed: `npm run geo:check`, `npm run seo:check`, `npm run build`, source/build AI retirement checks, GEO Optimizer local-build audit and `git diff --check`. The user approved a signed commit, remote push and production deployment on 2026-08-13; the production result is recorded in the follow-up entry below.
 
 ## AI Assistant Operating Notes
 

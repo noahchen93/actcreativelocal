@@ -135,3 +135,11 @@ For a fabrication or sourcing brief, send drawings, reference images, target dat
 
 - [Sitemap XML](https://actcreative.net/sitemap.xml)
 - [Robots](https://actcreative.net/robots.txt)
+
+## Optional
+
+- [Expanded company, service, evidence and citation context](https://actcreative.net/llms-full.txt)
+- [Machine-readable site summary](https://actcreative.net/ai/summary.json)
+- [Machine-readable service catalogue](https://actcreative.net/ai/service.json)
+- [Machine-readable service FAQ](https://actcreative.net/ai/faq.json)
+- [Project and service update feed](https://actcreative.net/feed.xml)
