@@ -407,6 +407,13 @@ The git history shows these major phases:
    - Deliberately omitted fake knowledge-graph profiles, a false all-site `SearchAction` and score-only WebMCP declarations. Details and category deltas are recorded in `docs/geo-optimizer-audit-2026-08-13.md`.
    - Verification passed: `npm run geo:check`, `npm run seo:check`, `npm run build`, source/build AI retirement checks, GEO Optimizer local-build audit and `git diff --check`. The user approved a signed commit, remote push and production deployment on 2026-08-13; the production result is recorded in the follow-up entry below.
 
+29. GEO production release on 2026-08-13 (Codex; branch `codex/security-seo-ai-retirement`).
+   - Created and verified signed commit `b559271` (`Improve GEO discovery and AI citability`) and pushed the branch to `origin/codex/security-seo-ai-retirement`.
+   - Built preview deployment `dpl_BsemqVrTJ7tp3WXjePr3pHHPTrYP` and verified it through Vercel's authenticated request path because anonymous preview access is protected. Homepage, four AI discovery endpoints, `llms-full.txt` and RSS returned the expected content and response types; `/api/chat/` returned `410 retired`.
+   - Promoted the validated artifact to production deployment `dpl_3q4SsJyPKZvRAKdFdJW3vDFXzced`, aliased to `https://actcreative.net` and `https://www.actcreative.net`. Previous production rollback point: `dpl_2EqRYWfPaxJdnUC2wbY9VkdA9nTE`.
+   - Public verification confirmed homepage and discovery endpoints at HTTP 200, no production `noindex`, active security headers, correct JSON/text/RSS content types, and `/api/chat/` still retired at HTTP 410.
+   - The public GEO Optimizer audit scored 91/100 (Excellent), with all tested citation crawlers accessible, citability 100/100, Perplexity readiness 85 and Google AI readiness 90. The first-hour Vercel error-log scan returned no errors.
+
 ## AI Assistant Operating Notes
 
 The service is retired. Expected state:

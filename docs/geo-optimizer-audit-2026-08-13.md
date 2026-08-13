@@ -60,4 +60,4 @@ Additional modeled results:
 - GEO Optimizer final local-build audit
 - `git diff --check`
 
-The final 91 score represents the local production build. A new public audit should be run after deployment to confirm Vercel headers, CDN access and every discovery endpoint on the canonical domain.
+The final public production audit on 2026-08-13 confirmed the 91/100 score on `https://actcreative.net`, Vercel CDN access, correct response types for all discovery endpoints, active security headers and HTTP `410 retired` for `/api/chat/`.
