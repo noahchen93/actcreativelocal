@@ -428,6 +428,13 @@ The git history shows these major phases:
    - Deliberately left the three booth-intent pages structurally unchanged: the full-service, approved-drawing and local trade-show support boundaries are already explicit, while additional keyword repetition is unlikely to solve the current ranking constraint.
    - Saved the reviewed data, findings and two-chart report locally outside the public commit. No website AI assistant code was restored.
 
+32. Kombi van and GSC optimization production release on 2026-08-24 (Codex; branch `codex/security-seo-ai-retirement`).
+   - Created signed commit `d8df10d` (`Improve GSC landing pages and vehicle services`), confirmed GitHub signature verification as valid, and pushed it to `origin/codex/security-seo-ai-retirement`.
+   - Kept the detailed GSC report private on the local workstation and added Git/Vercel exclusion rules so query and performance data is not uploaded to the public repository or deployment context.
+   - Built and authenticated the preview deployment `dpl_9kGVZXTFC2XA3XGJQU3WRQtNQ49F`. Verified the food truck/Kombi page, event fabrication page, Marina Bay Sands venue guide and AI discovery file at HTTP 200; `/api/chat/` remained retired at HTTP 410.
+   - Promoted the validated artifact to production deployment `dpl_F9Js4NrfwipYEHnftQCKnZRCAMTX`, aliased to `https://actcreative.net` and `https://www.actcreative.net`. Previous production rollback point: `dpl_3q4SsJyPKZvRAKdFdJW3vDFXzced`.
+   - Public content checks matched the submitted source, and the first post-release Vercel error-log scan returned no errors.
+
 ## AI Assistant Operating Notes
 
 The service is retired. Expected state:
