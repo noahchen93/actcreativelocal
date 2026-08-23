@@ -9,8 +9,9 @@
       "verifiedCapacity": {
         "space": "Sands Grand Ballroom",
         "layout": "theatre",
-        "capacity": 7000
+        "capacity": 8000
       },
+      "reviewedAt": "2026-08-23",
       "auditSummary": "The integrated resort combines large convention spaces, ballrooms, theatres, restaurants and hotel infrastructure in one Marina Bay complex.",
       "bestFor": ["Large conferences", "Gala dinners", "Exhibitions", "Product launches"],
       "planningConsiderations": ["Confirm which MICE space is being quoted rather than using a property-wide maximum.", "Check loading routes, production access windows and stage footprint early.", "Plan guest movement carefully when several spaces or hotel towers are involved."]

@@ -15,6 +15,8 @@ output/
 __pycache__/
 tmp/
 docs/search-console-exports/
+docs/gsc-seo-report-*-artifact.json
+docs/gsc-seo-report-*.html
 .secrets/
 *service-account*.json
 client_secret*.json

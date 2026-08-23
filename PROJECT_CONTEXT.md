@@ -414,6 +414,20 @@ The git history shows these major phases:
    - Public verification confirmed homepage and discovery endpoints at HTTP 200, no production `noindex`, active security headers, correct JSON/text/RSS content types, and `/api/chat/` still retired at HTTP 410.
    - The public GEO Optimizer audit scored 91/100 (Excellent), with all tested citation crawlers accessible, citability 100/100, Perplexity readiness 85 and Google AI readiness 90. The first-hour Vercel error-log scan returned no errors.
 
+30. Food truck and Kombi van service expansion on 2026-08-23 (Codex; branch `codex/security-seo-ai-retirement`, local only at handoff).
+   - Added a supplier-neutral vintage Kombi van route to the English and Chinese food truck service pages, using two approved source-material images without supplier names or logos.
+   - Split the local offer into compact commercial mobile units, vintage Kombi-style activations and purpose-built China production so visitors can distinguish vehicle character, operating limits and ownership routes.
+   - Replaced the former fixed “two sample units” claim with a prominent, date-sensitive warning that the compact silver local format normally has only one to two units in the local pool and is not secured until confirmed.
+   - Updated page metadata, structured FAQs, sitemap image entries and public AI/GEO discovery files with the same availability boundary. The retired website AI assistant remains absent.
+
+31. Latest Search Console CTR and answer-intent optimization on 2026-08-24 (Codex; branch `codex/security-seo-ai-retirement`, local only at handoff).
+   - Compared the latest 28 days with the prior period in `sc-domain:actcreative.net`. Search visibility and clicks increased and average ranking improved, while CTR declined because new visibility grew much faster than clicks. Exact query and performance data remains in a private local report and is intentionally excluded from the public repository.
+   - Re-aligned the food truck page around the high-opportunity `mobile event truck in Singapore` intent, while preserving the new Kombi route and limited-stock wording.
+   - Strengthened the event fabrication snippet and visible answer for end-to-end product-launch and brand-activation fabrication, logistics, Singapore setup and installation handover.
+   - Rechecked Marina Bay Sands against current official sources, updated Sands Grand Ballroom from 7,000 to 8,000 theatre-style guests, and added direct, source-linked answers for Roselle-Simpor Ballroom and the 2,183-seat Sands Theatre. Updated the source dataset, per-venue audit record, generator and affected category references together.
+   - Deliberately left the three booth-intent pages structurally unchanged: the full-service, approved-drawing and local trade-show support boundaries are already explicit, while additional keyword repetition is unlikely to solve the current ranking constraint.
+   - Saved the reviewed data, findings and two-chart report locally outside the public commit. No website AI assistant code was restored.
+
 ## AI Assistant Operating Notes
 
 The service is retired. Expected state:

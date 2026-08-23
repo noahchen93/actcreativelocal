@@ -220,9 +220,18 @@ async function runFeaturedVenueChecks(page) {
   await page.locator("h1").waitFor();
   assert(
     (await page.locator(".capacity-audit-card h2").textContent()).includes(
-      "7,000",
+      "8,000",
     ),
-    "Marina Bay Sands detail page must show the reviewed 7,000 benchmark",
+    "Marina Bay Sands detail page must show the reviewed 8,000 benchmark",
+  );
+  const capacityAnswer = await page
+    .locator("#mbs-capacity-answer")
+    .locator("xpath=ancestor::section[1]")
+    .textContent();
+  assert(
+    capacityAnswer.includes("Roselle-Simpor Ballroom") &&
+      capacityAnswer.includes("2,183 seats"),
+    "Marina Bay Sands detail page must show the reviewed ballroom and theatre answers",
   );
   assert(
     !(await page.locator("body").textContent()).includes("9,225"),

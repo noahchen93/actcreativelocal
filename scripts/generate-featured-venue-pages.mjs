@@ -21,11 +21,11 @@ const venueById = new Map(dataset.venues.map((venue) => [venue.id, venue]));
 const capacityFields = ["banquet", "cocktail", "theatre", "classroom"];
 const venueSeoOverrides = {
   "marina-bay-sands": {
-    title: "Marina Bay Sands Event Spaces & Capacity | ACT Creative",
+    title: "Marina Bay Sands Ballroom & Theatre Capacity Guide",
     socialTitle: "Marina Bay Sands Event Spaces & Capacity",
     description:
-      "Compare Marina Bay Sands ballrooms, theatre and event spaces, including an officially published capacity of up to 7,000, planning notes and source links.",
-    dateModified: "2026-08-09",
+      "Compare Marina Bay Sands venue capacities: Sands Grand Ballroom up to 8,000, Roselle-Simpor Ballroom up to 3,500 and Sands Theatre 2,183 seats.",
+    dateModified: "2026-08-23",
   },
   "national-museum-of-singapore": {
     title: "National Museum of Singapore Event Spaces | Venue Guide",
@@ -173,6 +173,25 @@ function renderPage(venue, venueAudit) {
   topSpaces = topSpaces.slice(0, 8);
   const related = relatedVenues(venue);
   const seo = venueSeo(venue);
+  const heroHeading =
+    venue.id === "marina-bay-sands"
+      ? "Marina Bay Sands event spaces and capacity"
+      : venue.name;
+  const venueSpecificAnswer =
+    venue.id === "marina-bay-sands"
+      ? `
+        <section class="detail-section" aria-labelledby="mbs-capacity-answer">
+          <div class="detail-section-heading">
+            <div><span class="section-kicker">Quick capacity answer</span><h2 id="mbs-capacity-answer">Marina Bay Sands ballroom and theatre capacities</h2></div>
+            <p>Published maximums assume the full named space. A stage, production equipment, camera positions and guest-flow requirements can reduce usable capacity.</p>
+          </div>
+          <div class="detail-two-column">
+            <div class="detail-panel"><h3>Roselle-Simpor Ballroom</h3><p>The official floor-plan record lists up to <strong>3,000 theatre</strong>, <strong>2,000 classroom</strong>, <strong>2,000 banquet</strong> or <strong>3,500 reception</strong> guests across the combined ballroom.</p><p><a href="https://www.marinabaysands.com/content/dam/revamp/mice/brochures/Unique_Spaces_EN.pdf" target="_blank" rel="noopener noreferrer">Open the official ballroom floor plan ↗</a></p></div>
+            <div class="detail-panel"><h3>Sands Theatre</h3><p>The official Marina Bay Sands factsheet lists <strong>2,183 seats</strong> across three levels. Confirm the production hold, sightlines and stage configuration before treating that figure as saleable capacity.</p><p><a href="https://www.marinabaysands.com/content/dam/singapore/marinabaysands/master/main/home/company-information/media-centre/factsheets/amenities/sands-theatre.pdf" target="_blank" rel="noopener noreferrer">Open the official Sands Theatre factsheet ↗</a></p></div>
+          </div>
+        </section>
+`
+      : "";
   const description = seo.description;
   const schema = {
     "@context": "https://schema.org",
@@ -284,7 +303,7 @@ function renderPage(venue, venueAudit) {
         <section class="venue-detail-hero">
           <div class="venue-detail-copy">
             <p class="eyebrow">Reviewed Singapore venue guide</p>
-            <h1>${escapeHtml(venue.name)}</h1>
+            <h1>${escapeHtml(heroHeading)}</h1>
             <p class="lede">${escapeHtml(venueAudit.auditSummary)}</p>
             <div class="venue-meta">
               <span class="tag accent">${escapeHtml(venue.primaryType)}</span>
@@ -302,7 +321,7 @@ function renderPage(venue, venueAudit) {
             <figcaption>Venue image linked to the public venue record.</figcaption>
           </figure>
         </section>
-
+${venueSpecificAnswer}
         <section class="capacity-audit-card">
           <div>
             <span class="section-kicker">${isOfficial ? "Official public benchmark" : "Capacity review status"}</span>
@@ -312,7 +331,7 @@ function renderPage(venue, venueAudit) {
           <dl>
             <div><dt>Named space</dt><dd>${escapeHtml(basis.space)}</dd></div>
             <div><dt>Layout</dt><dd>${escapeHtml(label(basis.layout))}</dd></div>
-            <div><dt>Reviewed</dt><dd>${escapeHtml(audit.reviewedAt)}</dd></div>
+            <div><dt>Reviewed</dt><dd>${escapeHtml(venueAudit.reviewedAt || audit.reviewedAt)}</dd></div>
           </dl>
           ${sourceUrl ? `<a class="venue-site-link" href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer" data-track-action="Official source opened" data-track-label="${escapeHtml(venue.id)}">Open ${isOfficial ? "capacity" : "venue"} source ↗</a>` : ""}
         </section>

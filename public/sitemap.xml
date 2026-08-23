@@ -136,14 +136,15 @@
 
   <url>
     <loc>https://actcreative.net/zh/custom-food-truck-rental-singapore/</loc>
-    <lastmod>2026-07-22</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
     <xhtml:link rel="alternate" hreflang="zh-cn" href="https://actcreative.net/zh/custom-food-truck-rental-singapore/" />
     <xhtml:link rel="alternate" hreflang="zh-hk" href="https://actcreative.net/zh/custom-food-truck-rental-singapore/" />
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
-    <image:image><image:loc>https://actcreative.net/custom-food-truck-rental-singapore/assets/singapore-sample-food-truck.webp</image:loc><image:title>新加坡餐车租赁与定制移动空间</image:title></image:image>
+    <image:image><image:loc>https://actcreative.net/custom-food-truck-rental-singapore/assets/singapore-sample-food-truck.webp</image:loc><image:title>新加坡库存有限的商业移动餐车</image:title></image:image>
+    <image:image><image:loc>https://actcreative.net/custom-food-truck-rental-singapore/assets/kombi-van-brand-activation.webp</image:loc><image:title>新加坡复古 Kombi Van 品牌快闪活动</image:title></image:image>
   </url>
 
   <url>
@@ -519,7 +520,7 @@
 
   <url>
     <loc>https://actcreative.net/custom-food-truck-rental-singapore/</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
@@ -528,8 +529,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://actcreative.net/custom-food-truck-rental-singapore/" />
     <image:image>
       <image:loc>https://actcreative.net/custom-food-truck-rental-singapore/assets/singapore-sample-food-truck.webp</image:loc>
-      <image:title>Custom food truck rental and mobile event unit in Singapore</image:title>
-      <image:caption>Singapore sample mobile unit available for rental customization discussions with ACT Creative.</image:caption>
+      <image:title>Limited-stock compact mobile food and retail unit in Singapore</image:title>
+      <image:caption>Compact silver mobile unit with a very limited local pool, subject to date and project confirmation.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/custom-food-truck-rental-singapore/assets/kombi-van-brand-activation.webp</image:loc>
+      <image:title>Vintage Kombi van brand activation in Singapore</image:title>
+      <image:caption>Vintage Kombi-style van configured as a character-led branded pop-up reference.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://actcreative.net/custom-food-truck-rental-singapore/assets/classic-kombi-van-rental.webp</image:loc>
+      <image:title>Classic Kombi van rental format</image:title>
+      <image:caption>Classic van format that can be checked for Singapore events, roadshows and photo activations.</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://actcreative.net/custom-food-truck-rental-singapore/assets/partner-final2-01.webp</image:loc>
@@ -929,7 +940,7 @@
 
   <url>
     <loc>https://actcreative.net/singapore-event-venues/marina-bay-sands/</loc>
-    <lastmod>2026-08-09</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
+    <lastmod>2026-08-24</lastmod><changefreq>monthly</changefreq><priority>0.74</priority>
     <image:image><image:loc>https://actcreative.net/singapore-event-venue-finder/assets/venues/marina-bay-sands.webp</image:loc></image:image>
   </url>
   <url>

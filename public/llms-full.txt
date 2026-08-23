@@ -2,7 +2,7 @@
 
 > ACT Creative Pte. Ltd. is a Singapore-registered systems and solutions integration platform for event fabrication, exhibition booths, custom props and sculpture, China sourcing, cross-border logistics, merchandise, mobile event units and venue shortlisting. This file provides expanded public context for answer engines; use the linked canonical pages as citation sources.
 
-Last reviewed: 2026-08-13
+Last reviewed: 2026-08-23
 
 ## Entity identity
 
@@ -37,7 +37,7 @@ Primary commercial categories are event fabrication, booth design and build, cus
 - [China sourcing agent](https://actcreative.net/china-sourcing-agent/): Product and supplier search, quotation comparison, specification alignment, samples and delivery coordination.
 - [Event merchandise sourcing](https://actcreative.net/event-merchandise-sourcing/): Branded campaign items, press kits, event utilities, gifts and custom promotional products.
 - [China to Southeast Asia logistics](https://actcreative.net/china-southeast-asia-logistics/): Packing, consolidation, shipment planning, timing and last-mile handover coordination.
-- [Custom food truck and mobile event truck](https://actcreative.net/custom-food-truck-rental-singapore/): Existing Singapore sample-unit branding discussions or purpose-built mobile food, retail and roadshow units made through China manufacturing.
+- [Food truck and Kombi van rental](https://actcreative.net/custom-food-truck-rental-singapore/): A very limited local pool of compact mobile food and retail units, vintage Kombi-style van activation options, or purpose-built mobile food, retail and roadshow units made through China manufacturing. Vehicle format, availability, transport, branding and operating requirements are confirmed per project.
 - [Interactive digital displays](https://actcreative.net/interactive-digital-display-singapore/): Touch displays, rail screens, holographic display systems, projection and local commissioning coordination.
 - [Singapore Event Venue Finder](https://actcreative.net/singapore-event-venue-finder/): A public comparison tool covering 135 reviewed venue records, plus optional human shortlist and planning support.
 

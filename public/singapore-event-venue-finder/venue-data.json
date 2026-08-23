@@ -268,9 +268,9 @@
           "name": "Sands Grand Ballroom",
           "areaSqm": 7672,
           "ceilingM": 9.5,
-          "banquet": 5000,
+          "banquet": 6600,
           "cocktail": null,
-          "theatre": 7000,
+          "theatre": 8000,
           "classroom": 5850,
           "note": "Level 5; pillarless; divisible into 16"
         },
@@ -455,7 +455,7 @@
           "note": "57F Italian + rooftop terrace"
         }
       ],
-      "maxCapacity": 7000,
+      "maxCapacity": 8000,
       "maxAreaSqm": 7672,
       "eventTypes": [
         "Product / brand launch",
@@ -482,20 +482,21 @@
       ],
       "primaryType": "Hotel",
       "image": "/singapore-event-venue-finder/assets/venues/marina-bay-sands.webp",
-      "publicNote": "Hotel in Marina Bay with 19 recorded event spaces. Sands Grand Ballroom supports up to 7,000 guests in theatre format. Planning tags include product / brand launch, conference / seminar and gala / dinner. Capacity depends on the selected space and event layout.",
+      "publicNote": "Hotel in Marina Bay with 19 recorded event spaces. Sands Grand Ballroom supports up to 8,000 guests in theatre format. Planning tags include product / brand launch, conference / seminar and gala / dinner. Capacity depends on the selected space and event layout.",
       "imageMode": "reference",
       "lat": 1.2836965,
       "lng": 103.8607226,
       "capacityBasis": {
         "space": "Sands Grand Ballroom",
         "layout": "theatre",
-        "capacity": 7000
+        "capacity": 8000
       },
       "sourceUrl": "https://marinabaysands.com/",
       "sourceType": "Official venue website",
       "imageSourceUrl": "",
       "imageSourceType": "reference",
       "lastVerified": "2026-06-21",
+      "capacityReviewedAt": "2026-08-23",
       "dataConfidence": "high",
       "featuredDetail": true,
       "capacityAuditStatus": "official",
