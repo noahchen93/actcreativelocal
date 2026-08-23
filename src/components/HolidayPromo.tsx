@@ -1,5 +1,4 @@
 import { ArrowRight, Gift, Mail } from "lucide-react";
-import { motion } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { FESTIVE_INQUIRY_MAILTO } from "../lib/contactLinks";
 
@@ -50,6 +49,7 @@ export function HolidayPromo() {
             0 0 0 1px rgba(255, 255, 255, 0.04),
             0 14px 34px -28px rgba(255, 61, 113, 0.9),
             0 14px 36px -30px rgba(53, 215, 255, 0.8);
+          animation: holiday-promo-enter 320ms ease-out both;
         }
         .holiday-promo-shell::after {
           content: "";
@@ -195,13 +195,16 @@ export function HolidayPromo() {
             display: none;
           }
         }
+        @keyframes holiday-promo-enter {
+          from { opacity: 0; transform: translateY(-6px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .holiday-promo-shell { animation: none; }
+          .holiday-promo-button { transition: none; }
+        }
       `}</style>
-      <motion.div
-        className="holiday-promo-shell"
-        initial={{ opacity: 0, y: -6 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.32 }}
-      >
+      <div className="holiday-promo-shell">
         <div className="holiday-promo-copy">
           <h2 className="holiday-promo-title">
             {t(
@@ -226,10 +229,10 @@ export function HolidayPromo() {
         </div>
         <div className="holiday-promo-media" aria-hidden="true">
           {previewImages.map((image) => (
-            <img key={image.src} src={image.src} alt={image.alt} loading="eager" decoding="async" />
+            <img key={image.src} src={image.src} alt={image.alt} width="132" height="40" loading="eager" decoding="async" />
           ))}
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

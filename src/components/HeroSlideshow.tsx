@@ -87,7 +87,7 @@ const ABSOLUTE_FILL = {
 };
 
 export function HeroSlideshow() {
-  const [orderedSlides, setOrderedSlides] = useState(() => shuffleSlides(slides));
+  const [orderedSlides, setOrderedSlides] = useState(() => [...slides]);
   const [idx, setIdx] = useState(0);
   const [loadedIndexes, setLoadedIndexes] = useState<Set<number>>(
     () => new Set([0, 1]),
@@ -147,7 +147,8 @@ export function HeroSlideshow() {
             src={s.src}
             alt={isActive ? s.alt : ""}
             aria-hidden={!isActive}
-            loading={i === 0 ? "eager" : "lazy"}
+            loading={i === 0 && idx === 0 ? "eager" : "lazy"}
+            {...{ fetchpriority: i === 0 && idx === 0 ? "high" : "auto" }}
             decoding="async"
             style={{
               ...ABSOLUTE_FILL,

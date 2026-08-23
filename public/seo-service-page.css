@@ -271,6 +271,9 @@ p strong, li strong { color: var(--text); }
   align-items: center;
   margin: 52px 0 30px;
 }
+.service-hero-grid > * {
+  min-width: 0;
+}
 .service-hero-grid .eyebrow {
   margin-top: 0;
 }
@@ -3215,6 +3218,14 @@ p strong, li strong { color: var(--text); }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
   .sourcing-chain .chain-node,
   .sourcing-chain .chain-node span,
   .sourcing-blueprint .blueprint-step,
@@ -3231,6 +3242,11 @@ p strong, li strong { color: var(--text); }
   .case-scroll-track {
     animation: none;
   }
+}
+
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 /* === Action buttons and signals === */

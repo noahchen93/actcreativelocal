@@ -1,7 +1,6 @@
 import { Button } from "./ui/button";
 import { Menu, Globe, Mail } from "lucide-react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { scrollToSection } from "../lib/scrollToSection";
 import { PROJECT_INQUIRY_MAILTO } from "../lib/contactLinks";
@@ -189,6 +188,10 @@ export function Header() {
           gap: 0.65rem;
           color: #fff;
           flex-shrink: 0;
+          transition: transform 180ms ease;
+        }
+        .act-brand-link:hover {
+          transform: scale(1.02);
         }
         .act-brand-name {
           font-size: 0.86rem;
@@ -526,6 +529,29 @@ export function Header() {
         }
         .act-mobile-nav {
           display: block;
+          animation: act-mobile-nav-in 180ms ease-out both;
+        }
+        .act-mobile-control {
+          min-width: 44px;
+          min-height: 44px;
+          transition: transform 120ms ease, border-color 180ms ease;
+        }
+        .act-mobile-control:active {
+          transform: scale(0.94);
+        }
+        .act-mobile-control:focus-visible,
+        .act-brand-link:focus-visible {
+          outline: 2px solid #CCFF00;
+          outline-offset: 3px;
+        }
+        @keyframes act-mobile-nav-in {
+          from { opacity: 0; transform: translateY(-8px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .act-mobile-nav { animation: none; }
+          .act-brand-link,
+          .act-mobile-control { transition: none; }
         }
         @media (max-width: 639px) {
           .act-brand-name {
@@ -655,14 +681,13 @@ export function Header() {
       `}</style>
       <div className="act-header-container container mx-auto">
         <div className="act-header-row flex items-center justify-between">
-          <motion.a
+          <a
             href="/"
             className="act-brand-link"
-            whileHover={{ scale: 1.02 }}
           >
             <img src={logo} alt="ACT Creative logo — Singapore event solutions and fabrication partner" className="h-12 w-auto" />
             <span className="act-brand-name">ACT CREATIVE</span>
-          </motion.a>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="act-desktop-nav" aria-label="Primary navigation">
@@ -783,35 +808,30 @@ export function Header() {
           {/* Mobile Menu Button */}
           <div className="act-mobile-actions items-center gap-2">
             {/* Mobile Language Toggle */}
-            <motion.button
+            <button
               onClick={switchLanguage}
               aria-label={language === "zh" ? "Switch to English" : "切换到中文"}
-              className="p-2 rounded-lg bg-[#1a1a1a] border border-[#CCFF00]/20"
-              whileTap={{ scale: 0.9 }}
+              className="act-mobile-control p-2 rounded-lg bg-[#1a1a1a] border border-[#CCFF00]/20"
             >
               <span className="text-sm text-[#CCFF00]">{languageLabel}</span>
-            </motion.button>
+            </button>
 
-            <motion.button
-              className="p-2 rounded-lg bg-[#1a1a1a]"
+            <button
+              className="act-mobile-control p-2 rounded-lg bg-[#1a1a1a]"
               aria-label={isMenuOpen ? t("关闭菜单", "Close menu") : t("打开菜单", "Open menu")}
               aria-expanded={isMenuOpen}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              whileTap={{ scale: 0.9 }}
             >
               <Menu className="w-6 h-6 text-[#CCFF00]" />
-            </motion.button>
+            </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.nav
+        {isMenuOpen && (
+            <nav
               className="act-mobile-nav py-4 border-t border-[#CCFF00]/20"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
+              aria-label="Mobile navigation"
             >
               <div className="flex flex-col space-y-4">
                 <div className="act-mobile-project-block">
@@ -892,9 +912,8 @@ export function Header() {
                   </a>
                 </Button>
               </div>
-            </motion.nav>
-          )}
-        </AnimatePresence>
+            </nav>
+        )}
       </div>
     </header>
   );
