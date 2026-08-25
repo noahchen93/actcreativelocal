@@ -28,6 +28,16 @@
       "source": "/singapore-event-venue-sourcing/",
       "destination": "/singapore-event-venue-finder/",
       "permanent": true
+    },
+    {
+      "source": "/event-fabrication-hong-kong",
+      "destination": "/china-sourcing-agent/",
+      "permanent": true
+    },
+    {
+      "source": "/event-fabrication-hong-kong/",
+      "destination": "/china-sourcing-agent/",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -85,8 +95,6 @@
     { "source": "/event-merchandise-sourcing/", "destination": "/event-merchandise-sourcing/index.html" },
     { "source": "/trade-show-booth-singapore", "destination": "/trade-show-booth-singapore/index.html" },
     { "source": "/trade-show-booth-singapore/", "destination": "/trade-show-booth-singapore/index.html" },
-    { "source": "/event-fabrication-hong-kong", "destination": "/event-fabrication-hong-kong/index.html" },
-    { "source": "/event-fabrication-hong-kong/", "destination": "/event-fabrication-hong-kong/index.html" },
     { "source": "/roadshow-production-singapore", "destination": "/roadshow-production-singapore/index.html" },
     { "source": "/roadshow-production-singapore/", "destination": "/roadshow-production-singapore/index.html" },
     { "source": "/retail-mall-activation-singapore", "destination": "/retail-mall-activation-singapore/index.html" },

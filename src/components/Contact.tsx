@@ -49,7 +49,11 @@ const projectTypes: BriefOption[] = [
 const locations: BriefOption[] = [
   { id: "singapore", zh: "新加坡", en: "Singapore" },
   { id: "sea", zh: "东南亚", en: "Southeast Asia" },
-  { id: "hong-kong", zh: "香港 / 澳门", en: "Hong Kong / Macau" },
+  {
+    id: "export",
+    zh: "其他地区（仅生产与出口）",
+    en: "Other market (production/export only)",
+  },
   { id: "china", zh: "中国大陆", en: "Mainland China" },
 ];
 
@@ -378,6 +382,12 @@ export function Contact() {
                   </button>
                 ))}
               </div>
+              <p className="mt-3 text-xs leading-relaxed text-gray-500">
+                {t(
+                  "香港项目仅可在逐案确认后协调中国工厂生产及出口；ACT Creative 在香港没有办公室或本地团队，不提供香港现场安装、仓储或活动执行。",
+                  "Hong Kong briefs may be considered case by case for China-side production and export only. ACT Creative has no Hong Kong office or local crew and does not provide on-site installation, warehousing or event execution in Hong Kong.",
+                )}
+              </p>
             </div>
 
             <div className="brief-field">

@@ -22,7 +22,7 @@
     "Retail and mall activation teams",
     "Artists, curators and public-art project teams"
   ],
-  "serviceAreas": ["Singapore", "Southeast Asia", "Hong Kong", "Macau", "China"],
+  "serviceAreas": ["Singapore", "supported Southeast Asian markets", "China-side production networks"],
   "languages": ["English", "Mandarin Chinese"],
   "canonicalServicePages": [
     "https://actcreative.net/event-fabrication-singapore/",
@@ -37,6 +37,7 @@
   ],
   "limitations": [
     "ACT Creative is a systems and solutions integration platform, not a venue owner or a single fixed factory.",
+    "ACT Creative has no Hong Kong office or local crew and does not provide on-site installation, warehousing or event execution in Hong Kong. Hong Kong briefs may only be considered case by case for China-side production and export.",
     "Venue capacities, availability, prices and rules must be confirmed with the venue.",
     "Production timelines, permits, transport and installation requirements depend on the final specification and site."
   ],

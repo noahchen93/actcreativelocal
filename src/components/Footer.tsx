@@ -157,11 +157,6 @@ export function Footer() {
             <h4 className="text-white mb-4">{t("联系我们", "Contact Us")}</h4>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="/event-fabrication-hong-kong/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  Event Fabrication Hong Kong
-                </a>
-              </li>
-              <li>
                 <a href="/case-studies/sentosa-pacman-human-game/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
                   PACMAN Sentosa Case Study
                 </a>

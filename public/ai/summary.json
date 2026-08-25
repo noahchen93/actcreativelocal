@@ -7,7 +7,7 @@
   "lastModified": "2026-08-23",
   "languages": ["en-SG", "zh-Hans-SG"],
   "primaryMarket": "Singapore",
-  "serviceRegions": ["Singapore", "Southeast Asia", "Hong Kong", "Macau", "China"],
+  "serviceRegions": ["Singapore", "supported Southeast Asian markets", "China-side production networks"],
   "registration": {
     "jurisdiction": "Singapore",
     "uen": "202600226K"

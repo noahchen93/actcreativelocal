@@ -62,12 +62,6 @@ const cards = [
     subtitle: 'Custom booth design, fabrication and on-site setup for major Singapore venues.',
   },
   {
-    slug: 'event-fabrication-hong-kong',
-    image: sources.craigKarl,
-    title: 'Event Fabrication Hong Kong',
-    subtitle: 'Custom props, scenic builds and Greater Bay Area production support.',
-  },
-  {
     slug: 'roadshow-production-singapore',
     image: sources.pacman,
     title: 'Roadshow Production Singapore',

@@ -8,10 +8,10 @@
     The homepage is a React app served at /. Service and case-study pages
     are static SEO landing pages. lastmod reflects the latest social identity,
     structured data, and navigation content update.
-    hreflang tags signal regional coverage:
+    hreflang tags identify language and audience variants; they do not imply local staffing or service availability:
     - en-SG (primary)
-    - en-HK, en-MY, en-TH, en-ID, en-PH, en-VN (Southeast Asia + HK)
-    - zh-CN, zh-HK (Greater China)
+    - en-HK, en-MY, en-TH, en-ID, en-PH, en-VN
+    - zh-CN, zh-HK
   -->
   <url>
     <loc>https://actcreative.net/</loc>
@@ -606,18 +606,6 @@
     <priority>0.85</priority>
     <image:image>
       <image:loc>https://actcreative.net/og/trade-show-booth-singapore.png</image:loc>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://actcreative.net/event-fabrication-hong-kong/</loc>
-    <lastmod>2026-05-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en-hk" href="https://actcreative.net/event-fabrication-hong-kong/" />
-    <xhtml:link rel="alternate" hreflang="en-sg" href="https://actcreative.net/event-fabrication-singapore/" />
-    <image:image>
-      <image:loc>https://actcreative.net/og/event-fabrication-hong-kong.png</image:loc>
     </image:image>
   </url>
 
