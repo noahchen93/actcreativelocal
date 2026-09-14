@@ -119,7 +119,7 @@
     { "source": "/case-studies/craig-and-karl-beijing-museum-show/", "destination": "/case-studies/craig-and-karl-beijing-museum-show/index.html" },
     { "source": "/case-studies/k11-shenyang-public-art-collection", "destination": "/case-studies/k11-shenyang-public-art-collection/index.html" },
     { "source": "/case-studies/k11-shenyang-public-art-collection/", "destination": "/case-studies/k11-shenyang-public-art-collection/index.html" },
-    { "source": "/((?!.*\\..*|api/).*)", "destination": "/index.html" }
+    { "source": "/", "destination": "/index.html" }
   ],
   "headers": [
     {

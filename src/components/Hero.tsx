@@ -3,7 +3,6 @@ import { ArrowRight, Award, Facebook, Instagram, Mail } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { HeroSlideshow } from "./HeroSlideshow";
 import { scrollToSection } from "../lib/scrollToSection";
-import { PROJECT_INQUIRY_MAILTO } from "../lib/contactLinks";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -12,7 +11,7 @@ export function Hero() {
     <section
       id="home"
       className="relative overflow-hidden bg-black"
-      style={{ paddingTop: "3.75rem", paddingBottom: "4rem" }}
+      style={{ paddingTop: "2rem", paddingBottom: "2.5rem" }}
     >
       {/* Hero-scoped CSS */}
       <style>{`
@@ -124,6 +123,9 @@ export function Hero() {
           outline: none;
         }
         @media (max-width: 639px) {
+          .hero-social-row, .hero-stats { display: none; }
+          .hero-grid { gap: 1.25rem; }
+          .hero-slideshow-wrap { height: 300px; }
           .hero-social-link {
             min-width: calc(50% - 0.4rem);
           }
@@ -155,7 +157,7 @@ export function Hero() {
               className="hero-eyebrow"
               style={{ marginBottom: "1.25rem" }}
             >
-              {t("供应商采购 · 制作 · 运输 · 落地", "Sourcing · Production · Logistics · Delivery")}
+              {t("新加坡 · 创意制作与交付", "Singapore · Creative production & delivery")}
             </div>
 
             {/* H1 */}
@@ -170,12 +172,12 @@ export function Hero() {
               }}
             >
               <span style={{ color: "#CCFF00" }}>
-                {t("活动、展览与定制项目", "One-stop solutions")}
+                {t("定制创意，", "Custom event ideas.")}
               </span>
               <br />
               {t(
-                "一站式解决方案",
-                "for events, exhibitions & custom projects",
+                "一站式交付。",
+                "One team to deliver.",
               )}
             </h1>
 
@@ -191,7 +193,7 @@ export function Hero() {
             >
               {t(
                 "立足新加坡的创意制作伙伴。为活动机构、品牌团队与艺术项目交付定制道具、展陈装置、活动搭建与跨境生产支持。",
-                "Tell us what needs to happen. We compare specialist suppliers and coordinate production, international shipping, customs clearance, local installation, permits and compliance through one project team.",
+                "Custom props, exhibition booths and event builds. ACT Creative coordinates specialist production, logistics and Singapore setup around your brief.",
               )}
             </p>
 
@@ -206,9 +208,9 @@ export function Hero() {
                 className="group bg-[#CCFF00] hover:bg-[#b8e600] text-black shadow-2xl hover:shadow-[#CCFF00]/40 transition-all text-base h-auto"
                 style={{ paddingInline: "1.75rem", paddingBlock: "0.95rem" }}
               >
-                <a href={PROJECT_INQUIRY_MAILTO}>
+                <a href="#contact">
                   <Mail className="w-4 h-4 mr-2" />
-                  {t("邮件发送项目需求", "Email Your Brief")}
+                  {t("整理项目需求", "Plan your project")}
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>

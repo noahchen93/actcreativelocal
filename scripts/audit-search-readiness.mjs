@@ -70,6 +70,11 @@ for (const file of htmlFiles) {
 
   if (titleCount !== 1) failures.push(`${relativePath}: expected one <title>, found ${titleCount}`);
   if (h1Count !== 1) failures.push(`${relativePath}: expected one <h1>, found ${h1Count}`);
+  if (relativePath === "404.html") {
+    if (!/<meta\b[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html)) failures.push("404.html: error page must be noindex");
+    if (canonicalCount !== 0) failures.push("404.html: must not canonicalize an error to a content page");
+    continue;
+  }
   if (canonicalCount !== 1) failures.push(`${relativePath}: expected one canonical, found ${canonicalCount}`);
   if (jsonLdBlocks.length === 0) failures.push(`${relativePath}: missing JSON-LD`);
   if (!html.includes('src="/site-analytics.js"')) failures.push(`${relativePath}: missing site-analytics.js`);
@@ -98,6 +103,7 @@ for (const file of htmlFiles) {
 const sitemapPath = path.join(outputDirectory, "sitemap.xml");
 const sitemap = await readFile(sitemapPath, "utf8");
 const sitemapUrls = [...sitemap.matchAll(/<loc>(https:\/\/actcreative\.net\/[^<]*)<\/loc>/g)].map((match) => match[1]);
+if (sitemapUrls.some(url => /\/404(?:\.html)?\/?$/.test(url))) failures.push("sitemap.xml: must not include the error page");
 
 for (const url of sitemapUrls) {
   try {

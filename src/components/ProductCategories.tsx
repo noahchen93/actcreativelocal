@@ -199,7 +199,7 @@ export function ProductCategories() {
   const [showAllCategories, setShowAllCategories] = useState(false);
   const visibleCategories = showAllCategories
     ? productCategories
-    : productCategories.slice(0, 6);
+    : productCategories.slice(0, 3);
 
   return (
     <section id="products" className="py-14 md:py-20 bg-[#0a0a0a] relative overflow-hidden">
@@ -221,13 +221,13 @@ export function ProductCategories() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-4xl text-white mb-4 tracking-wide">
-            {t("或许你正在寻找这些", "Perhaps You're Looking for These")}
+            {t("更多制作类型", "More production formats")}
           </h2>
           <div className="w-32 h-1 bg-[#CCFF00] mx-auto mb-6"></div>
           <p className="text-gray-400">
             {t(
-              "这是我们做过的一部分内容，当然我们可以接受任何定制或者采购的需求，只需要把你的需求发给我们",
-              "These are some of the projects we've completed. Of course, we can accommodate any custom or procurement needs - just send us your requirements"
+              "浏览制作与采购参考。具体方案、供应和交付范围以项目确认为准。",
+              "Explore production and sourcing references. Feasibility, availability and delivery scope are confirmed for each project."
             )}
           </p>
         </motion.div>
@@ -247,12 +247,11 @@ export function ProductCategories() {
               
               {/* Card */}
               <div 
-                className={`relative h-full transition-all border rounded-lg overflow-hidden cursor-pointer ${
+                className={`relative h-full transition-all border rounded-lg overflow-hidden ${
                   expandedCategory === index 
                     ? 'border-[#CCFF00]/50 bg-[#1a1a1a]' 
                     : 'border-[#CCFF00]/20 bg-[#1a1a1a]/90 hover:border-[#CCFF00]/40'
                 }`}
-                onClick={() => setExpandedCategory(expandedCategory === index ? null : index)}
               >
                 {/* Image Header */}
                 <div className="relative">
@@ -291,7 +290,7 @@ export function ProductCategories() {
                   </p>
                   
                   {/* Expand/Collapse Indicator */}
-                  <div className="flex items-center justify-center gap-2 text-xs text-[#CCFF00] mb-2">
+                  <button type="button" aria-expanded={expandedCategory === index} aria-controls={`category-details-${index}`} onClick={() => setExpandedCategory(expandedCategory === index ? null : index)} className="flex items-center justify-center gap-2 text-xs text-[#CCFF00] mb-2 min-h-11 w-full">
                     {expandedCategory === index ? (
                       <>
                         <ChevronUp className="w-4 h-4" />
@@ -303,10 +302,12 @@ export function ProductCategories() {
                         <span>{t("展开详情", "Expand details")}</span>
                       </>
                     )}
-                  </div>
+                  </button>
                   
                   {/* Expandable Features */}
                   <motion.div
+                    id={`category-details-${index}`}
+                    hidden={expandedCategory !== index}
                     initial={false}
                     animate={{ 
                       height: expandedCategory === index ? 'auto' : 0,

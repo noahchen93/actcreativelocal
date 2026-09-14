@@ -61,12 +61,14 @@
             "vite": "^6.4.3"
       },
       "scripts": {
+            "navigation:sync": "node scripts/sync-core-navigation.mjs",
+            "architecture:check": "node scripts/check-site-architecture.mjs",
             "dev": "vite",
             "ai:insights": "node scripts/analyze-ai-conversations.mjs",
             "ai:insights:preview": "node scripts/analyze-ai-conversations.mjs --min-topic-count=2",
             "ai:retirement-check": "node scripts/check-ai-retirement.mjs",
             "geo:check": "node scripts/check-geo-discovery.mjs",
-            "prebuild": "npm run ai:retirement-check && npm run geo:check && npm run sculpture:seo-index && npm run content:guard",
+            "prebuild": "npm run architecture:check && npm run ai:retirement-check && npm run geo:check && npm run sculpture:seo-index && npm run content:guard",
             "build": "vite build",
             "sculpture:seo-index": "node scripts/generate-sculpture-seo-index.mjs",
             "content:guard": "node scripts/check-content-integrity.mjs",

@@ -373,7 +373,7 @@
     if (!href) return;
 
     if (href.indexOf("wa.me/" + PHONE) !== -1) {
-      if (link.dataset.actWhatsappPreserve !== "true" && isProminentLink(link)) {
+      if (document.body.dataset.contactRouting !== "explicit" && link.dataset.actWhatsappPreserve !== "true" && isProminentLink(link)) {
         convertWhatsAppButtonToEmail(link, href);
         link.dataset.actInquiryEnhanced = "true";
         link.addEventListener("click", function () {
@@ -390,7 +390,7 @@
       return;
     }
 
-    if (isEmailFirstIntent(link) && href.charAt(0) !== "#") {
+    if (document.body.dataset.contactRouting !== "explicit" && isEmailFirstIntent(link) && /^mailto:/i.test(href)) {
       link.setAttribute("href", createIntentMailto(link.textContent.trim()));
       link.removeAttribute("target");
       link.removeAttribute("rel");

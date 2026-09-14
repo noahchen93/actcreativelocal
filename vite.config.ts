@@ -41,7 +41,7 @@
       const zhIndexPath = path.join(zhDir, 'index.html');
       const zhTitle = '及物创意 ACT Creative | 新加坡跨境活动制作与中国生产支持伙伴';
       const zhDescription =
-        '及物创意 ACT Creative 为活动机构、品牌团队与艺术项目提供定制道具、展陈装置、活动搭建与中国端生产支持，服务新加坡、东南亚、香港、澳门与中国市场。';
+        '及物创意 ACT Creative 为活动机构与品牌团队提供定制道具、展陈装置、活动搭建及中国端生产支持，立足新加坡，按项目确认生产、运输与现场交付范围。';
       const zhKeywords =
         '新加坡活动制作, 新加坡道具定制, 中国端生产支持, 活动搭建, 展会展台制作, FRP雕塑制作, 活动周边采购, 东南亚活动制作';
 

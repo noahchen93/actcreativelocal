@@ -435,6 +435,23 @@ The git history shows these major phases:
    - Promoted the validated artifact to production deployment `dpl_F9Js4NrfwipYEHnftQCKnZRCAMTX`, aliased to `https://actcreative.net` and `https://www.actcreative.net`. Previous production rollback point: `dpl_3q4SsJyPKZvRAKdFdJW3vDFXzced`.
    - Public content checks matched the submitted source, and the first post-release Vercel error-log scan returned no errors.
 
+33. Landing-page clarity and venue-to-service handoff on 2026-09-12 (Codex; local only, not committed or deployed).
+   - Refined the English booth page's title and description, aligned social and WebPage metadata, replaced search-keyword commentary with buyer-facing build scope, and linked approved-drawing enquiries to the existing production page. The three booth-service intent boundaries remain unchanged.
+   - Preserved the recently revised event fabrication search title and description; aligned its social/schema summaries and clarified the single-project-contact model and information needed for a scoped estimate.
+   - Aligned MBS capacity-guide headings and metadata, explicitly qualified ballroom maxima as theatre-style capacities, and added tracked links to booth design and event fabrication with separate venue-booking/approval boundaries. Updated the venue generator and generated MBS page together; other venue pages were unchanged.
+   - Updated only these three sitemap modification dates. No new capacity claims, venue audit review dates, supplier identities, overseas local-service promises, assistant code or private analytics data were added.
+   - Evaluate the copy and internal-link hypothesis after an approved release; no CTR uplift or enquiry causation is established by these edits.
+   - Verification passed: `npm run seo:check`, `npm run build`, source/build AI retirement and GEO guards, and `git diff --check`. Targeted checks confirmed title/description/schema agreement, single H1s, existing internal-link targets, tracked MBS handoffs and matching sitemap modification dates for the three edited pages.
+
+34. Core navigation and mobile experience refactor on 2026-09-14 (Codex; local only, no commit/push/deployment).
+   - Replaced the expansive homepage menus with Solutions, Projects, About and a real in-page brief route. Six bilingual service destinations share one JSON source with the four English core service-page headers; `npm run navigation:sync` refreshes those static headers and footers without editing venue pages.
+   - Simplified the promotional strip and homepage lead, added service-selection cards, reduced the delivery explanation to four steps, moved the catalogue below the brief builder and limited its initial display to three formats. All catalogue options remain expandable. Product disclosure uses a keyboard-accessible button and hides collapsed contents from focus.
+   - Added real prop-project imagery and shared heading/button treatments to the core pages. Email-first CTA destinations are now explicit in those HTML pages; legacy pages retain their email-first WhatsApp compatibility rule, but ordinary internal Contact links are no longer rewritten to email.
+   - Fixed lazy-section hash activation and bounded layout stabilization with user-scroll cancellation. Removed the catch-all homepage rewrite and added a noindex 404 page. Confirm actual Vercel 404 status after an approved deployment; the Vite development fallback is not a production routing test.
+   - Removed obsolete Hong Kong coverage wording from the Chinese-homepage build template. Added architecture regression checks for navigation targets, shared-page structure, images, contact destinations, 404 routing and the metadata service-area boundary.
+   - Browser checks used the in-app browser because agent-browser CLI is unavailable. Verified desktop rendering, 390px mobile layout across all four core pages without overflow, collapsed menu, repeat hash navigation and props image loading without sending enquiries. Final `architecture:check`, `seo:check`, `build`, source/build GEO and AI-retirement guards, and `git diff --check` all passed. The main JS chunk is 53.36 kB / 18.82 kB gzip; this is a bundle measurement, not a field Core Web Vitals claim.
+   - The concurrent weekly analytics review remains separate from this unreleased UI work: do not attribute current production metrics to these local changes. Vercel Analytics browser access requires login; do not substitute deployment or request counts for visitor analytics.
+
 ## AI Assistant Operating Notes
 
 The service is retired. Expected state:

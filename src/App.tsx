@@ -3,6 +3,7 @@ import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { HolidayPromo } from "./components/HolidayPromo";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { ServiceRoutes } from "./components/ServiceRoutes";
 
 const CaseStudies = lazy(() =>
   import("./components/CaseStudies").then((module) => ({
@@ -61,6 +62,14 @@ function DeferredSection({
   });
 
   useEffect(() => {
+    const onHashChange = () => {
+      if (window.location.hash.slice(1) === targetId) setShouldRender(true);
+    };
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, [targetId]);
+
+  useEffect(() => {
     if (shouldRender) return;
     const marker = markerRef.current;
     if (!marker || !("IntersectionObserver" in window)) {
@@ -82,7 +91,7 @@ function DeferredSection({
   }, [shouldRender]);
 
   return (
-    <div ref={markerRef} style={{ minHeight }}>
+    <div ref={markerRef} id={targetId ? `section-${targetId}` : undefined} style={{ minHeight }}>
       {shouldRender ? children : null}
     </div>
   );
@@ -90,26 +99,50 @@ function DeferredSection({
 
 function HashScrollRestorer() {
   useEffect(() => {
-    if (!window.location.hash) return;
-
-    const targetId = decodeURIComponent(window.location.hash.slice(1));
     let frameId = 0;
-    let attempts = 0;
-
-    const scrollWhenReady = () => {
-      const target = document.getElementById(targetId);
-      if (target) {
-        target.scrollIntoView({ behavior: "auto", block: "start" });
-      }
-
-      attempts += 1;
-      if (attempts < 120) {
-        frameId = window.requestAnimationFrame(scrollWhenReady);
-      }
+    let layoutObserver: ResizeObserver | undefined;
+    let settleTimer: number | undefined;
+    const stopRestoring = () => {
+      window.cancelAnimationFrame(frameId);
+      layoutObserver?.disconnect();
+      window.clearTimeout(settleTimer);
     };
-
-    frameId = window.requestAnimationFrame(scrollWhenReady);
-    return () => window.cancelAnimationFrame(frameId);
+    const restore = () => {
+      stopRestoring();
+      let targetId: string;
+      try { targetId = decodeURIComponent(window.location.hash.slice(1)); }
+      catch { return; }
+      if (!targetId) return;
+      const alignTarget = () => document.getElementById(targetId)?.scrollIntoView({ behavior: "auto", block: "start" });
+      const main = document.querySelector("main");
+      if (main && "ResizeObserver" in window) {
+        layoutObserver = new ResizeObserver(alignTarget);
+        layoutObserver.observe(main);
+        settleTimer = window.setTimeout(stopRestoring, 5000);
+      }
+      let attempts = 0;
+      const scrollWhenReady = () => {
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: "auto", block: "start" });
+          return;
+        }
+        if (++attempts < 300) frameId = window.requestAnimationFrame(scrollWhenReady);
+      };
+      frameId = window.requestAnimationFrame(scrollWhenReady);
+    };
+    restore();
+    window.addEventListener("hashchange", restore);
+    window.addEventListener("wheel", stopRestoring, { passive: true });
+    window.addEventListener("touchstart", stopRestoring, { passive: true });
+    window.addEventListener("keydown", stopRestoring);
+    return () => {
+      stopRestoring();
+      window.removeEventListener("hashchange", restore);
+      window.removeEventListener("wheel", stopRestoring);
+      window.removeEventListener("touchstart", stopRestoring);
+      window.removeEventListener("keydown", stopRestoring);
+    };
   }, []);
 
   return null;
@@ -120,19 +153,19 @@ export default function App() {
     <LanguageProvider>
       <style>{`
         .site-shell {
-          --holiday-promo-height: 72px;
-          --site-header-height: 86px;
+          --holiday-promo-height: 40px;
+          --site-header-height: 72px;
         }
         .site-main {
-          padding-top: calc(var(--holiday-promo-height) + var(--site-header-height));
+          padding-top: 0;
         }
         .site-main > section,
         .site-main > div > section {
-          scroll-margin-top: calc(var(--holiday-promo-height) + var(--site-header-height) + 1rem);
+          scroll-margin-top: calc(var(--site-header-height) + 1rem);
         }
         @media (min-width: 768px) {
           .site-shell {
-            --holiday-promo-height: 58px;
+            --holiday-promo-height: 40px;
           }
         }
       `}</style>
@@ -141,18 +174,14 @@ export default function App() {
         <Header />
         <main className="site-main">
           <Hero />
+          <ServiceRoutes />
           <DeferredSection minHeight="48rem" targetId="cases">
             <Suspense fallback={<SectionFallback minHeight="48rem" />}>
               <CaseStudies />
             </Suspense>
           </DeferredSection>
-          <DeferredSection minHeight="48rem" targetId="products">
-            <Suspense fallback={<SectionFallback minHeight="48rem" />}>
-              <ProductCategories />
-            </Suspense>
-          </DeferredSection>
-          <DeferredSection minHeight="48rem" targetId="services">
-            <Suspense fallback={<SectionFallback minHeight="48rem" />}>
+          <DeferredSection minHeight="22rem" targetId="process">
+            <Suspense fallback={<SectionFallback minHeight="22rem" />}>
               <Services />
             </Suspense>
           </DeferredSection>
@@ -160,6 +189,11 @@ export default function App() {
             <Suspense fallback={<SectionFallback minHeight="40rem" />}>
               <Contact />
               <Toaster />
+            </Suspense>
+          </DeferredSection>
+          <DeferredSection minHeight="24rem" targetId="products">
+            <Suspense fallback={<SectionFallback minHeight="24rem" />}>
+              <ProductCategories />
             </Suspense>
           </DeferredSection>
         </main>

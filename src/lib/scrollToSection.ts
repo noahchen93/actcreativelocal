@@ -1,6 +1,7 @@
 export function scrollToSection(id: string) {
   const element = document.getElementById(id);
   if (!element) {
+    window.location.hash = id;
     return;
   }
 

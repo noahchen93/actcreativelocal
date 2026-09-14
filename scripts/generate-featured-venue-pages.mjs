@@ -22,10 +22,10 @@ const capacityFields = ["banquet", "cocktail", "theatre", "classroom"];
 const venueSeoOverrides = {
   "marina-bay-sands": {
     title: "Marina Bay Sands Ballroom & Theatre Capacity Guide",
-    socialTitle: "Marina Bay Sands Event Spaces & Capacity",
+    socialTitle: "Marina Bay Sands Ballroom & Theatre Capacity Guide",
     description:
-      "Compare Marina Bay Sands venue capacities: Sands Grand Ballroom up to 8,000, Roselle-Simpor Ballroom up to 3,500 and Sands Theatre 2,183 seats.",
-    dateModified: "2026-08-23",
+      "Compare MBS ballroom layouts: Sands Grand Ballroom up to 8,000 theatre-style, Roselle-Simpor up to 3,000 theatre-style, plus Sands Theatre's 2,183 seats.",
+    dateModified: "2026-09-12",
   },
   "national-museum-of-singapore": {
     title: "National Museum of Singapore Event Spaces | Venue Guide",
@@ -175,7 +175,7 @@ function renderPage(venue, venueAudit) {
   const seo = venueSeo(venue);
   const heroHeading =
     venue.id === "marina-bay-sands"
-      ? "Marina Bay Sands event spaces and capacity"
+      ? "Marina Bay Sands ballroom and theatre capacity guide"
       : venue.name;
   const venueSpecificAnswer =
     venue.id === "marina-bay-sands"
@@ -370,7 +370,8 @@ ${venueSpecificAnswer}
           <div class="detail-panel">
             <span class="section-kicker">Before shortlisting</span>
             <h2>Planning considerations</h2>
-            <ul class="detail-check-list">${venueAudit.planningConsiderations.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
+            <ul class="detail-check-list">${venueAudit.planningConsiderations.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>${venue.id === "marina-bay-sands" ? `
+            <p>Planning a build at MBS? Explore <a href="/booth-design-build-singapore/" data-track-action="Venue service opened" data-track-label="mbs_booth_design">exhibition booth design and build</a> or <a href="/event-fabrication-singapore/" data-track-action="Venue service opened" data-track-label="mbs_event_fabrication">custom event fabrication</a>. Share the hall or room, organiser manual and build-up dates so ACT Creative can review production access and setup requirements. Venue booking and approvals must be confirmed separately.</p>` : ""}
           </div>
         </section>
 
