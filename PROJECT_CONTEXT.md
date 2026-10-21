@@ -205,6 +205,23 @@ Operations:
 
 ## Development History
 
+### 2026-10-21 release authorization
+
+- User requested publication and production deployment of the contact consistency and brief-builder work. Release includes the previously local October 5 brief changes and the October 21 CTA fixes.
+- Target verified: GitHub `noahchen93/actcreativelocal`, existing branch `codex/security-seo-ai-retirement`; Vercel project `actcreativelocal`, project ID `prj_1yzUrOsA30ZpejjROeBVhmieckAR`, team `team_0HhVtai5ohDD9jVDAAcvpsGK`, production domain `actcreative.net`.
+- Previous production deployment: `dpl_9vWU8qv7f6bo434f9XaJgmK9XEUY`, commit `662df9873263249ea34be337309f9ca0da3d9fee`. Production sitemap comparison passed before release (74 URLs); no protected venue or case page omitted.
+- CLI token was expired; the authenticated Vercel connector remains available. Release outcome and exact deployment ID must be verified after the remote build, not inferred from a push.
+
+### 2026-10-21 contact consistency and service-page handoff (local, not released)
+
+- Fixed the food-truck “WhatsApp ACT Creative” link pointing to email. Preserved the email-first policy; did not redirect email buttons back to WhatsApp.
+- Updated the core-navigation generator to normalize complete anchors, including stale WhatsApp text and event labels; added idempotence and explicit-preservation tests.
+- Added `contact:check` to prebuild and postbuild: scans HTML contact protocols, wording and channel labels, including malformed `/mailto:` paths. The anomalous path seen in analytics was not found as a literal source link; its origin remains unconfirmed.
+- Added short service-specific handoff guidance and a brief-builder link near core service CTAs. Existing real case studies are retained; no new delivery claims, response-time guarantees or vehicle availability promises were added.
+- Vercel custom-event reporting was unavailable on the current plan on 2026-10-21. `docs/inquiry-measurement.md` records the gap, event definitions and manual received-inquiry workflow; no paid plan or new telemetry provider was activated.
+- Preserved the pre-existing October 5 brief-builder changes. No commit, push or deployment in this optimization step.
+- Verification: `contact:check`, `brief:check`, `architecture:check`, `seo:check`, `build` and `git diff --check` passed. Built HTML check covered 74 pages and 200 contact links. Browser preview verified the food-truck email destination, retained WhatsApp floating link and navigation to the existing brief builder with source context. No message was sent. This was a desktop preview, not a full mobile visual audit.
+
 The git history shows these major phases:
 
 1. Figma-origin React site foundation.
@@ -453,6 +470,15 @@ The git history shows these major phases:
    - The concurrent weekly analytics review remains separate from this unreleased UI work: do not attribute current production metrics to these local changes. Vercel Analytics browser access requires login; do not substitute deployment or request counts for visitor analytics.
 
 ## AI Assistant Operating Notes
+
+### 2026-10-05 inquiry handoff improvement (local, not released)
+
+- The September navigation/SEO changes above were released and pushed as signed commit `662df98` on September 14. Current inquiry changes are separate and have not been committed, pushed or deployed.
+- Simplified the bilingual brief builder with native project/budget/stage selects, optional production details, food-truck/interactive/seasonal categories, and a direct-email bypass. Unknown details remain allowed; no minimum-order rule or response-time promise was introduced.
+- Added structured email subjects, quantity/dimensions, stage and reference-attachment guidance. Export-only selection removes installation from both controls and generated scope. Email actions explicitly open a draft, not a server-side submission or confirmed delivery.
+- Copy failures select the preview for manual copying. Email opening no longer copies the email address or emits an extra copy-intent event. Brief-start tracking requires editing rather than touching the preview; copied events follow successful clipboard writes. Added brief-entry and missing service-route tracking without sending free-text inputs as analytics event properties.
+- Added `npm run brief:check` (Node 22 type stripping), pure brief formatting/encoding tests and attribution event tests. Brief, architecture, SEO and full build checks passed, as did source/build AI-retirement and GEO guards and diff whitespace checks. Browser checks covered English/Chinese, 390px no-overflow layout, generated mailto contents, successful copy and export-scope exclusion. No test enquiry was sent; actual email delivery is not observable by this static site.
+- `docs/inquiry-reply-playbook.md` is an internal-use, generic bilingual response guide, not a public landing page. No automatic replies, mail account rules or CRM were configured. A deployment still requires explicit authorization.
 
 The service is retired. Expected state:
 

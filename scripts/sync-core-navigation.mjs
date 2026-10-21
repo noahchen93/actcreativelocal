@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { normalizeEmailFirstAnchor } from './lib/contact-routing.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const routes = JSON.parse(await fs.readFile(path.join(root, 'src/data/site-navigation.json'), 'utf8'));
@@ -17,14 +18,7 @@ for (const slug of pages) {
   if (!html.includes('href="/core-navigation.css"')) html = html.replace('</head>', '  <link rel="stylesheet" href="/core-navigation.css" />\n  </head>');
   html = html.replace(/<body(?:\s[^>]*)?>/, '<body data-contact-routing="explicit">');
   // Preserve the existing email-first policy as real HTML, not runtime text inference.
-  html = html.replace(/<a\b[^>]*>/g, tag => {
-    if (!/class="[^"]*(?:button|nav-cta)/.test(tag)) return tag;
-    return tag.replace(/href="(https:\/\/wa\.me\/6584515268[^" ]*)"/, (_, href) => {
-      const url = new URL(href.replaceAll('&amp;', '&'));
-      const params = new URLSearchParams({subject:'Project inquiry — ACT Creative', body:url.searchParams.get('text') || 'Hi ACT Creative, I would like to discuss a project.'});
-      return `href="mailto:contact@actcreative.net?${escape(params.toString())}"`;
-    });
-  });
+  html = html.replace(/<a\b[^>]*>[\s\S]*?<\/a>/g, normalizeEmailFirstAnchor);
   await fs.writeFile(file, html);
   console.log(`Synced core navigation: ${slug}`);
 }

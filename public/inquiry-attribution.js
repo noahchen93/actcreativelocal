@@ -419,12 +419,15 @@
     }
 
     var href = link.getAttribute("href") || "";
-    if (!href || href.charAt(0) === "#") return null;
+    if (!href) return null;
 
     var pathname;
     try {
       var url = new URL(href, window.location.href);
       if (url.origin !== window.location.origin) return null;
+      if (url.hash === "#contact" && (url.pathname === "/" || url.pathname === "/zh/")) {
+        return { name: "Brief entry opened", label: url.pathname + "#contact" };
+      }
       pathname = url.pathname;
     } catch {
       return null;
@@ -437,7 +440,7 @@
       return { name: "Venue explored", label: pathname };
     }
     if (
-      /\/(event-fabrication|custom-props|booth-design-build|frp-sculpture|interactive-digital-display|event-merchandise|china-event-production)/.test(
+      /\/(event-fabrication|custom-props|custom-food-truck-rental|booth-design-build|frp-sculpture|interactive-digital-display|event-merchandise|china-event-production|china-sourcing-agent|holiday-decorations)/.test(
         pathname,
       )
     ) {

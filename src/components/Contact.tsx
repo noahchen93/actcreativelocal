@@ -10,8 +10,9 @@ import {
   Send,
 } from "lucide-react";
 import { Button } from "./ui/button";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
+import { formatProjectBrief, projectBriefMailto, projectBriefSubject } from "../lib/projectBrief";
 
 const EMAIL = "contact@actcreative.net";
 const MAILTO_SUBJECT = "Project Inquiry - ACT Creative";
@@ -39,11 +40,21 @@ type BriefOption = {
 };
 
 const projectTypes: BriefOption[] = [
+  { id: "not-sure", zh: "需要建议", en: "Need advice" },
   { id: "event-buildout", zh: "活动搭建", en: "Event buildout" },
   { id: "custom-props", zh: "定制道具", en: "Custom props" },
   { id: "booth", zh: "展台制作", en: "Booth production" },
   { id: "sculpture", zh: "雕塑装置", en: "Sculpture / installation" },
   { id: "merchandise", zh: "活动周边", en: "Event merchandise" },
+  { id: "food-truck", zh: "餐车与移动活动", en: "Food truck / mobile activation" },
+  { id: "interactive", zh: "互动展示", en: "Interactive display" },
+  { id: "seasonal", zh: "节庆装饰", en: "Seasonal decoration" },
+];
+
+const stages: BriefOption[] = [
+  { id: "exploring", zh: "初步了解 / 需要建议", en: "Exploring / need advice" },
+  { id: "budgeting", zh: "方案已有，正在做预算", en: "Concept ready / budgeting" },
+  { id: "ready", zh: "图纸或需求已定，准备采购", en: "Brief / drawings ready to source" },
 ];
 
 const locations: BriefOption[] = [
@@ -66,7 +77,8 @@ const scopes: BriefOption[] = [
 
 const budgets: BriefOption[] = [
   { id: "advice", zh: "需要建议", en: "Need advice" },
-  { id: "under-20k", zh: "S$20k 以下", en: "Under S$20k" },
+  { id: "under-5k", zh: "S$5k 以下", en: "Under S$5k" },
+  { id: "5k-20k", zh: "S$5k - S$20k", en: "S$5k - S$20k" },
   { id: "20k-50k", zh: "S$20k - S$50k", en: "S$20k - S$50k" },
   { id: "50k-plus", zh: "S$50k 以上", en: "S$50k+" },
 ];
@@ -105,36 +117,28 @@ export function Contact() {
   const [copiedBrief, setCopiedBrief] = useState(false);
   const [projectType, setProjectType] = useState(projectTypes[0].id);
   const [location, setLocation] = useState(locations[0].id);
-  const [scopeIds, setScopeIds] = useState<string[]>(["fabrication", "install"]);
+  const [scopeIds, setScopeIds] = useState<string[]>([]);
   const [budget, setBudget] = useState(budgets[0].id);
   const [timeline, setTimeline] = useState("");
   const [notes, setNotes] = useState("");
+  const [stage, setStage] = useState(stages[0].id);
+  const [specifications, setSpecifications] = useState("");
+  const [emailOpened, setEmailOpened] = useState(false);
+  const previewRef = useRef<HTMLTextAreaElement>(null);
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
   const briefStarted = useRef(false);
+  useEffect(() => () => timers.current.forEach(clearTimeout), []);
 
-  const selectedScopes = scopes.filter((scope) => scopeIds.includes(scope.id));
-
-  const briefMessage = useMemo(() => {
-    const rows = [
-      "Hi ACT Creative, I'd like to discuss a project.",
-      "",
-      `Project type: ${getOption(projectTypes, projectType).en}`,
-      `Location: ${getOption(locations, location).en}`,
-      `Timeline: ${timeline.trim() || "To be confirmed"}`,
-      `Scope: ${
-        selectedScopes.length
-          ? selectedScopes.map((scope) => scope.en).join(", ")
-          : "To be confirmed"
-      }`,
-      `Budget: ${getOption(budgets, budget).en}`,
-    ];
-
-    const trimmedNotes = notes.trim();
-    if (trimmedNotes) {
-      rows.push(`Notes: ${trimmedNotes}`);
-    }
-
-    return rows.join("\n");
-  }, [budget, location, notes, projectType, selectedScopes, timeline]);
+  const availableScopes = scopes.filter(scope => location !== "export" || scope.id !== "install");
+  const selectedScopes = availableScopes.filter(scope => scopeIds.includes(scope.id));
+  const brief = {
+    projectType: getOption(projectTypes, projectType).en,
+    location: getOption(locations, location).en,
+    timeline, budget: getOption(budgets, budget).en,
+    stage: getOption(stages, stage).en,
+    scope: selectedScopes.map(scope => scope.en), specifications, notes,
+  };
+  const briefMessage = formatProjectBrief(brief);
 
   const toggleScope = (id: string) => {
     setScopeIds((current) =>
@@ -147,20 +151,18 @@ export function Contact() {
   const trackBriefStart = () => {
     if (briefStarted.current) return;
     briefStarted.current = true;
-    trackSiteAction("Brief started", "homepage_brief_builder", {
-      project_type: projectType,
-    });
+    trackSiteAction("Brief started", "homepage_brief_builder");
   };
 
   const copyEmail = async () => {
-    trackInquiryIntent("email_copy", "contact_email_copy");
     try {
       await navigator.clipboard.writeText(EMAIL);
+      trackInquiryIntent("email_copy", "contact_email_copy");
       setCopiedEmail(true);
       toast.success(t("邮箱已复制到剪贴板", "Email copied to clipboard"), {
         description: EMAIL,
       });
-      setTimeout(() => setCopiedEmail(false), 2200);
+      timers.current.push(setTimeout(() => setCopiedEmail(false), 2200));
     } catch {
       toast(t("请手动复制邮箱", "Please copy the email manually"), {
         description: EMAIL,
@@ -169,28 +171,28 @@ export function Contact() {
   };
 
   const copyBrief = async () => {
-    trackSiteAction("Brief copied", "homepage_brief_builder", {
-      project_type: projectType,
-      location: location,
-    });
     try {
-      await navigator.clipboard.writeText(briefMessage);
+      await navigator.clipboard.writeText(`${briefMessage}${getAttributionLines("brief_copy")}`);
+      trackSiteAction("Brief copied", "homepage_brief_builder", {
+        project_type: projectType, location, stage,
+      });
       setCopiedBrief(true);
       toast.success(t("项目需求已复制", "Project brief copied"));
-      setTimeout(() => setCopiedBrief(false), 2200);
+      timers.current.push(setTimeout(() => setCopiedBrief(false), 2200));
     } catch {
+      previewRef.current?.focus();
+      previewRef.current?.select();
       toast(t("请手动复制项目需求", "Please copy the project brief manually"));
     }
   };
 
   const handleEmail = () => {
-    const subject = encodeURIComponent(MAILTO_SUBJECT);
-    const body = encodeURIComponent(
-      `${briefMessage}${getAttributionLines("email")}\n\nBest,\n`,
-    );
     trackInquiryIntent("email", "contact_brief_builder");
-    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-    copyEmail();
+    trackSiteAction("Brief email opened", "homepage_brief_builder", {
+      project_type: projectType, location, stage,
+      has_date: Boolean(timeline.trim()), has_specs: Boolean(specifications.trim()),
+    });
+    setEmailOpened(true);
   };
 
   return (
@@ -284,7 +286,9 @@ export function Contact() {
           color: rgba(255,255,255,0.38);
         }
         .brief-preview {
-          min-height: 220px;
+          width: 100%;
+          min-height: 330px;
+          resize: vertical;
           white-space: pre-wrap;
           border-radius: 0.65rem;
           border: 1px solid rgba(204,255,0,0.16);
@@ -294,6 +298,10 @@ export function Contact() {
           font-size: 0.86rem;
           line-height: 1.6;
         }
+        .brief-help { color: #b9b9b9; font-size: .875rem; line-height: 1.6; }
+        .brief-status { margin-top: 1rem; padding: .85rem; border: 1px solid #CCFF00; border-radius: .5rem; }
+        .brief-option-grid, .brief-panel { min-width: 0; }
+        .brief-preview:focus-visible { outline: 2px solid #CCFF00; outline-offset: 3px; }
         .contact-social-link {
           display: inline-flex;
           min-height: 44px;
@@ -349,12 +357,19 @@ export function Contact() {
             {t("发送项目需求", "SEND A PROJECT BRIEF")}
           </h2>
           <div className="w-32 h-1 bg-[#CCFF00] mx-auto"></div>
+          <p className="brief-help mt-5 max-w-2xl mx-auto">
+            {t("把已知的需求放在一起，方便我们判断制作范围与档期。不确定的项目可以留空；参考图可在邮件中附上。", "Share what you know so we can review scope and timing. Unsure details can stay blank; attach reference images in your email.")}
+          </p>
+          <p className="brief-help mt-3">
+            {t("已有完整需求？", "Already have a brief?")} {" "}
+            <a className="text-[#CCFF00] underline" href={`mailto:${EMAIL}?subject=${encodeURIComponent(MAILTO_SUBJECT)}`}>
+              {t("直接发邮件", "Email us directly")}
+            </a>
+          </p>
         </motion.div>
 
         <div
           className="brief-shell max-w-6xl mx-auto"
-          onFocusCapture={trackBriefStart}
-          onPointerDown={trackBriefStart}
         >
           <motion.div
             initial={{ opacity: 0, x: -24 }}
@@ -362,32 +377,18 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="brief-panel p-5 md:p-7"
+            onChangeCapture={trackBriefStart}
           >
             <div className="brief-field">
               <div className="brief-label">
-                <span>{t("项目类型", "Project type")}</span>
+                <label htmlFor="brief-type">{t("项目类型", "Project type")}</label>
                 <Send className="w-4 h-4 text-[#CCFF00]" />
               </div>
-              <div className="brief-option-grid">
+              <select id="brief-type" className="brief-input" value={projectType} onChange={event => setProjectType(event.target.value)}>
                 {projectTypes.map((option) => (
-                  <button
-                    key={option.id}
-                    type="button"
-                    className="brief-option"
-                    data-active={projectType === option.id}
-                    aria-pressed={projectType === option.id}
-                    onClick={() => setProjectType(option.id)}
-                  >
-                    {t(option.zh, option.en)}
-                  </button>
+                  <option key={option.id} value={option.id}>{t(option.zh, option.en)}</option>
                 ))}
-              </div>
-              <p className="mt-3 text-xs leading-relaxed text-gray-500">
-                {t(
-                  "香港项目仅可在逐案确认后协调中国工厂生产及出口；ACT Creative 在香港没有办公室或本地团队，不提供香港现场安装、仓储或活动执行。",
-                  "Hong Kong briefs may be considered case by case for China-side production and export only. ACT Creative has no Hong Kong office or local crew and does not provide on-site installation, warehousing or event execution in Hong Kong.",
-                )}
-              </p>
+              </select>
             </div>
 
             <div className="brief-field">
@@ -403,60 +404,71 @@ export function Contact() {
                     className="brief-option"
                     data-active={location === option.id}
                     aria-pressed={location === option.id}
-                    onClick={() => setLocation(option.id)}
+                    onClick={() => {
+                      trackBriefStart();
+                      setLocation(option.id);
+                      if (option.id === "export") setScopeIds(ids => ids.filter(id => id !== "install"));
+                    }}
                   >
                     {t(option.zh, option.en)}
                   </button>
                 ))}
               </div>
+              <p className="brief-help mt-3">
+                {t("现场服务按地点及项目逐案确认；其他地区选项仅为生产与出口。", "On-site services depend on location and project review. Other markets: production and export only.")}
+              </p>
+              {location === "export" && <p className="brief-help mt-3">
+                {t(
+                  "香港项目仅可在逐案确认后协调中国工厂生产及出口；ACT Creative 在香港没有办公室或本地团队，不提供香港现场安装、仓储或活动执行。",
+                  "Hong Kong briefs may be considered case by case for China-side production and export only. ACT Creative has no Hong Kong office or local crew and does not provide on-site installation, warehousing or event execution in Hong Kong.",
+                )}
+              </p>}
             </div>
 
             <div className="brief-field grid md:grid-cols-2 gap-4">
               <div>
-                <div className="brief-label">
-                  <span>{t("时间", "Timeline")}</span>
-                </div>
+                <label className="brief-label" htmlFor="brief-timeline">{t("需要交付的日期", "Required date")}</label>
                 <input
+                  id="brief-timeline"
                   className="brief-input"
+                  maxLength={80}
                   value={timeline}
                   onChange={(event) => setTimeline(event.target.value)}
-                  placeholder={t("例如：2026 年 8 月", "e.g. August 2026")}
+                  placeholder={t("活动日期 / 进场日期 / 待定", "Event date / setup date / TBC")}
                 />
               </div>
               <div>
-                <div className="brief-label">
-                  <span>{t("预算", "Budget")}</span>
-                </div>
-                <div className="brief-option-grid">
+                <label className="brief-label" htmlFor="brief-budget">{t("预算", "Budget")}</label>
+                <select id="brief-budget" className="brief-input" value={budget} onChange={event => setBudget(event.target.value)}>
                   {budgets.map((option) => (
-                    <button
-                      key={option.id}
-                      type="button"
-                      className="brief-option"
-                      data-active={budget === option.id}
-                      aria-pressed={budget === option.id}
-                      onClick={() => setBudget(option.id)}
-                    >
-                      {t(option.zh, option.en)}
-                    </button>
+                    <option key={option.id} value={option.id}>{t(option.zh, option.en)}</option>
                   ))}
-                </div>
+                </select>
               </div>
             </div>
 
             <div className="brief-field">
+              <label className="brief-label" htmlFor="brief-stage">{t("项目进度", "Project stage")}</label>
+              <select id="brief-stage" className="brief-input" value={stage} onChange={event => setStage(event.target.value)}>
+                {stages.map(option => <option key={option.id} value={option.id}>{t(option.zh, option.en)}</option>)}
+              </select>
+            </div>
+
+            <details className="brief-field">
+              <summary className="text-[#CCFF00] cursor-pointer py-3">{t("补充制作细节（选填）", "Add production details (optional)")}</summary>
+            <div className="brief-field mt-3">
               <div className="brief-label">
                 <span>{t("服务范围", "Scope")}</span>
               </div>
               <div className="brief-option-grid">
-                {scopes.map((option) => (
+                {availableScopes.map((option) => (
                   <button
                     key={option.id}
                     type="button"
                     className="brief-option"
                     data-active={scopeIds.includes(option.id)}
                     aria-pressed={scopeIds.includes(option.id)}
-                    onClick={() => toggleScope(option.id)}
+                    onClick={() => { trackBriefStart(); toggleScope(option.id); }}
                   >
                     {t(option.zh, option.en)}
                   </button>
@@ -465,10 +477,14 @@ export function Contact() {
             </div>
 
             <div className="brief-field">
-              <div className="brief-label">
-                <span>{t("补充说明", "Notes")}</span>
-              </div>
+              <label className="brief-label" htmlFor="brief-specifications">{t("数量与尺寸", "Quantity / dimensions")}</label>
+              <input id="brief-specifications" className="brief-input" maxLength={160} value={specifications} onChange={event => setSpecifications(event.target.value)} placeholder={t("例如：2 件，每件高 1.5 米 / 1 辆车，使用 3 天", "e.g. 2 props, 1.5m tall / 1 vehicle for 3 days")} />
+            </div>
+            <div className="brief-field">
+              <label className="brief-label" htmlFor="brief-notes">{t("补充说明", "Notes")}</label>
               <textarea
+                id="brief-notes"
+                maxLength={1000}
                 className="brief-textarea"
                 value={notes}
                 onChange={(event) => setNotes(event.target.value)}
@@ -478,6 +494,7 @@ export function Contact() {
                 )}
               />
             </div>
+            </details>
           </motion.div>
 
           <motion.div
@@ -493,7 +510,7 @@ export function Contact() {
                   {t("需求预览", "Brief preview")}
                 </p>
                 <p className="text-gray-400 text-sm">
-                  {t("快速整理成可发送信息", "Formatted for a faster reply")}
+                  {t("草稿预览，尚未发送", "Draft preview — not sent yet")}
                 </p>
               </div>
               <button
@@ -506,18 +523,25 @@ export function Contact() {
               </button>
             </div>
 
-            <div className="brief-preview" aria-live="polite">
-              {briefMessage}
-            </div>
+            <p className="brief-help mb-3" style={{ overflowWrap: "anywhere" }}>{t("邮件主题：", "Subject: ")}{projectBriefSubject(brief)}</p>
+            <textarea ref={previewRef} className="brief-preview" aria-label={t("项目需求预览", "Project brief preview")} value={briefMessage} readOnly />
+            <p className="brief-help mt-3">{t("需求不会自动发送；自由填写的文字不会作为分析事件上传。打开邮件后请附上参考图，再点击发送。", "Your brief is not sent automatically. Free-text details are not included in analytics events. Open your email app, attach references, then send.")}</p>
 
             <div className="mt-5">
               <Button
-                onClick={handleEmail}
+                asChild
                 className="w-full bg-[#CCFF00] hover:bg-[#b8e600] text-black h-12"
               >
+                <a href={projectBriefMailto(brief, getAttributionLines("email"))} onClick={handleEmail} data-act-inquiry-enhanced="true">
                 <Mail className="w-4 h-4 mr-2" />
-                {t("通过邮件发送需求", "Email This Brief")}
+                {t("打开邮件草稿", "Open email draft")}
+                </a>
               </Button>
+              <button type="button" onClick={copyBrief} className="contact-social-link w-full mt-3">
+                <Copy className="w-4 h-4" />{t("复制需求，粘贴到邮件或 WhatsApp", "Copy brief for email or WhatsApp")}
+              </button>
+              <p className="brief-help mt-3">{t("没有打开邮件软件？复制上方需求，用常用邮箱发送至 contact@actcreative.net。", "No email app opened? Copy the brief and send it from your usual inbox to contact@actcreative.net.")}</p>
+              {emailOpened && <p className="brief-help brief-status" role="status">{t("已尝试打开邮件草稿；网站无法确认邮件是否已发出。请在邮件软件中完成发送。", "We tried to open your email draft. The website cannot confirm delivery; please send it from your email app.")}</p>}
             </div>
 
             <div className="mt-6 pt-6 border-t border-[#CCFF00]/10">
@@ -530,6 +554,10 @@ export function Contact() {
                   <Mail className="w-4 h-4 text-[#CCFF00]" />
                 </a>
               </div>
+              <button type="button" onClick={copyEmail} className="contact-social-link mt-3">
+                {copiedEmail ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}{t("复制邮箱地址", "Copy email address")}
+              </button>
+              <p className="brief-help mt-4">{t("收到邮件后，我们会先核对需求、档期与可承接范围，再确认下一步。提交需求不代表已接受订单或预留档期。", "After receiving your email, we review scope, timing and feasibility before confirming next steps. An enquiry does not reserve capacity or confirm an order.")}</p>
             </div>
 
             <div className="mt-6 pt-6 border-t border-[#CCFF00]/10">

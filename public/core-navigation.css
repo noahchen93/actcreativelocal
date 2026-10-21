@@ -27,6 +27,9 @@ body[data-contact-routing="explicit"] .button{border-radius:6px;min-height:46px;
 .core-footer{max-width:1280px;margin:32px auto 0;padding:28px 24px 88px;border-top:1px solid #333;display:flex;flex-wrap:wrap;gap:16px;color:#aaa;font:14px/1.6 Inter,system-ui,sans-serif}
 .core-footer a{color:#ddd;text-decoration:underline;text-underline-offset:4px}
 .core-footer span{margin-right:auto}
+.core-contact-help{max-width:65ch;margin:14px 0 20px;padding:12px 16px;border-left:3px solid #ccff00;background:#151515;color:#ccc;font:14px/1.65 Inter,system-ui,sans-serif;overflow-wrap:anywhere}
+.core-contact-help a{color:#e1ff80;text-decoration:underline;text-underline-offset:3px}
+.core-contact-help a:focus-visible{outline:2px solid #ccff00;outline-offset:4px}
 .solution-routes{max-width:1200px;margin:auto;padding:48px 24px;color:#eee;scroll-margin-top:88px}
 .solution-routes h2{font-size:clamp(26px,3vw,36px);line-height:1.2;margin:0 0 12px}
 .solution-routes>p{color:#bbb;margin:0 0 28px;max-width:680px}
