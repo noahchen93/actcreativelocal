@@ -205,6 +205,14 @@ Operations:
 
 ## Development History
 
+### 2026-10-23 client-drawing festive procurement and installation
+
+- At the user's request, added explicit client-drawing procurement and Singapore installation support to `/holiday-decorations-singapore/`, which covers Christmas trees, New Year and Lunar New Year projects.
+- Updated the hero introduction, inquiry copy/checklist and matching Service structured-data description. Clients can engage procurement and installation without a new design commission; feasibility, site requirements and scope are reviewed before quotation.
+- No new supplier names, delivery guarantees or Hong Kong local-service claims. Initially implemented locally; user subsequently authorized committing and deploying this update to the existing production project and branch.
+- Verification passed: targeted hero/inquiry/JSON-LD copy checks, `seo:check`, `build` (including architecture/contact/AI-retirement guards) and `git diff --check`.
+- Pre-release production baseline verified: `0e01c12`, deployment `dpl_3C4NgZjgMkhefYWKk7VVE5PnBrJz`. Final release SHA and production verification are recorded in shared memory after deployment completes.
+
 ### 2026-10-23 contextual brief release authorization
 
 - User explicitly requested committing and deploying the contextual brief and mobile-input improvements. Target remains the existing GitHub branch `codex/security-seo-ai-retirement` and Vercel production project `actcreativelocal` / `actcreative.net`.
