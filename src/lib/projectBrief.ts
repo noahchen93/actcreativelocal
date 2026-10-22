@@ -11,6 +11,12 @@ export type ProjectBrief = {
 
 const singleLine = (value: string) => value.replace(/[\r\n]+/g, " ").trim();
 
+// Only known option IDs may prefill the form; never accept customer text from a URL.
+export function projectTypeFromSearch(search: string, allowedTypes: readonly string[]) {
+  const values = new URLSearchParams(search).getAll("service");
+  return values.length === 1 && allowedTypes.includes(values[0]) ? values[0] : "not-sure";
+}
+
 export function formatProjectBrief(brief: ProjectBrief) {
   return [
     "Hi ACT Creative, I'd like to discuss a project.",

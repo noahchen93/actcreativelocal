@@ -12,7 +12,7 @@ import {
 import { Button } from "./ui/button";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
-import { formatProjectBrief, projectBriefMailto, projectBriefSubject } from "../lib/projectBrief";
+import { formatProjectBrief, projectBriefMailto, projectBriefSubject, projectTypeFromSearch } from "../lib/projectBrief";
 
 const EMAIL = "contact@actcreative.net";
 const MAILTO_SUBJECT = "Project Inquiry - ACT Creative";
@@ -115,7 +115,11 @@ export function Contact() {
   const { t } = useLanguage();
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedBrief, setCopiedBrief] = useState(false);
-  const [projectType, setProjectType] = useState(projectTypes[0].id);
+  // Read once on entry, so rerenders never overwrite a visitor's manual selection.
+  const [projectType, setProjectType] = useState(() => projectTypeFromSearch(
+    typeof window === "undefined" ? "" : window.location.search,
+    projectTypes.map(option => option.id),
+  ));
   const [location, setLocation] = useState(locations[0].id);
   const [scopeIds, setScopeIds] = useState<string[]>([]);
   const [budget, setBudget] = useState(budgets[0].id);
@@ -332,6 +336,9 @@ export function Contact() {
           }
         }
         @media (max-width: 639px) {
+          .brief-input, .brief-textarea, .brief-preview {
+            font-size: 16px;
+          }
           .brief-option-grid {
             grid-template-columns: 1fr;
           }

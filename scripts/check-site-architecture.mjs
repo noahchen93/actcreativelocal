@@ -7,6 +7,7 @@ import { load } from 'cheerio';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const routes = JSON.parse(read('src/data/site-navigation.json'));
+const briefRoutes = JSON.parse(read('src/data/brief-entry-routes.json'));
 assert.equal(new Set(routes.map(route => route.href)).size, routes.length);
 for (const route of routes) for (const href of [route.href, route.hrefZh]) {
   assert.ok(fs.existsSync(path.join(root, 'public', href, 'index.html')), `Missing navigation target: ${href}`);
@@ -16,7 +17,11 @@ for (const slug of ['custom-props-singapore', 'event-fabrication-singapore', 'bo
   assert.equal($('header.core-header').length, 1, `${slug}: shared header`);
   assert.equal($('footer.core-footer').length, 1, `${slug}: shared footer`);
   assert.equal($('body').attr('data-contact-routing'), 'explicit', `${slug}: contact policy`);
-  assert.equal($('header .core-brief[href="/#contact"]').length, 2, `${slug}: brief route`);
+  const briefHref = `/?service=${briefRoutes[slug]}#contact`;
+  assert.equal($(`header .core-brief[href="${briefHref}"]`).length, 2, `${slug}: contextual brief route`);
+  assert.equal($(`footer a[href="${briefHref}"]`).length, 1, `${slug}: footer brief route`);
+  assert.ok($(`main a[href="${briefHref}"]`).length >= 1, `${slug}: inline brief route`);
+  assert.equal($('a[href="/#contact"]').length, 0, `${slug}: brief link lost service context`);
   assert.equal($('link[href="/core-navigation.css"]').length, 1);
   assert.equal($('h1').length, 1);
   for (const route of routes) assert.equal($(`header a[href="${route.href}"]`).length, 2, `${slug}: stale service menu`);

@@ -5,7 +5,8 @@ import { normalizeEmailFirstAnchor } from './lib/contact-routing.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const routes = JSON.parse(await fs.readFile(path.join(root, 'src/data/site-navigation.json'), 'utf8'));
-const pages = ['custom-props-singapore', 'event-fabrication-singapore', 'booth-design-build-singapore', 'custom-food-truck-rental-singapore'];
+const briefRoutes = JSON.parse(await fs.readFile(path.join(root, 'src/data/brief-entry-routes.json'), 'utf8'));
+const pages = Object.keys(briefRoutes);
 const escape = text => text.replaceAll('&', '&amp;').replaceAll('"', '&quot;');
 const menu = `<details class="core-service-menu"><summary>Solutions</summary><div class="core-service-links">${routes.map(item => `<a href="${item.href}">${escape(item.en)}</a>`).join('')}<a href="/frp-sculpture-fabrication-singapore/">Sculpture &amp; art installations</a><a href="/holiday-decorations-singapore/">Seasonal decorations</a><a href="/#products">More production formats</a></div></details><a href="/case-studies/">Projects</a><a href="/about/">About</a><a class="core-brief" href="/#contact">Plan your brief</a>`;
 for (const slug of pages) {
@@ -19,6 +20,7 @@ for (const slug of pages) {
   html = html.replace(/<body(?:\s[^>]*)?>/, '<body data-contact-routing="explicit">');
   // Preserve the existing email-first policy as real HTML, not runtime text inference.
   html = html.replace(/<a\b[^>]*>[\s\S]*?<\/a>/g, normalizeEmailFirstAnchor);
+  html = html.replace(/href="\/(?:\?service=[a-z-]+)?#contact"/g, `href="/?service=${briefRoutes[slug]}#contact"`);
   await fs.writeFile(file, html);
   console.log(`Synced core navigation: ${slug}`);
 }

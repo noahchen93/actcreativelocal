@@ -1,6 +1,6 @@
 # ACT Creative Website Project Context
 
-Last updated: 2026-08-13, Asia/Singapore.
+Last updated: 2026-10-23, Asia/Singapore.
 
 This file is the living handoff document for `actcreativelocal`. Update it in the same commit as every meaningful website, content, data, AI, deployment, or operations change. If another tool or developer continues this project, read this file first.
 
@@ -204,6 +204,22 @@ Operations:
 - `.env.local` exists locally and must not be committed.
 
 ## Development History
+
+### 2026-10-23 contextual brief release authorization
+
+- User explicitly requested committing and deploying the contextual brief and mobile-input improvements. Target remains the existing GitHub branch `codex/security-seo-ai-retirement` and Vercel production project `actcreativelocal` / `actcreative.net`.
+- Pre-release checks rerun successfully: `brief:check`, `seo:check`, `build` (including architecture, contact routing, AI retirement and GEO guards), `git diff --check`, and production sitemap comparison (74 URLs). Remote branch matched local HEAD before the new commit.
+- Verified previous production: `dpl_64v7YHn4yQiQ9eFzatuFnWd2JZHi`, commit `812a96d03ae84db34fb6857279cabfb3e863b4d4`. The earlier implementation entry below is historical; record final release SHA, deployment status and live checks in shared memory after deployment, not before remote verification.
+
+### 2026-10-23 contextual brief entry (local, not released)
+
+- Started from a clean workspace at released commit `812a96d`. The October 21 release is recorded as production-ready in shared memory (`dpl_64v7YHn4yQiQ9eFzatuFnWd2JZHi`); the historical "local, not released" entry below describes the earlier implementation stage, not the current release status.
+- Four English core service pages now carry an allowlisted `service` query parameter into the existing homepage brief builder. Header, mobile navigation, inline and footer links share `src/data/brief-entry-routes.json`; `navigation:sync` maintains the mapping.
+- Brief project type is initialized once, following React lazy-state initialization guidance. Visitor edits are not overwritten on rerender. Unknown, empty or duplicate service parameters fall back to "Need advice"; no free-text customer data is accepted as a prefill or persisted by this feature.
+- Mobile brief controls use 16px text. This reduces small-text/auto-zoom risk; a 390×844 browser viewport test confirmed the computed font size and no horizontal overflow, but is not a physical iOS keyboard/zoom test.
+- Regression coverage checks all four mappings, malformed/duplicate inputs, existing mailto safety, contextual brief-entry analytics and generated core-page destinations.
+- Passed `brief:check`, `architecture:check`, `seo:check`, `build` and `git diff --check`; build checks covered 74 HTML pages and 200 contact links. Browser verified food-truck service entry → correct preselection → manual change to custom props → updated preview/mailto subject and body. No message sent; no browser error/warning logs captured.
+- No new metrics claim: only two days since the previous release, insufficient to infer an inquiry impact. No commit, push or deployment in this step. AI retirement, supplier privacy and Hong Kong service boundaries remain unchanged.
 
 ### 2026-10-21 release authorization
 

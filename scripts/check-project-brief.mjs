@@ -1,7 +1,19 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
-import { formatProjectBrief, projectBriefSubject, projectBriefMailto } from '../src/lib/projectBrief.ts';
+import { formatProjectBrief, projectBriefSubject, projectBriefMailto, projectTypeFromSearch } from '../src/lib/projectBrief.ts';
+
+const contactSource = readFileSync(new URL('../src/components/Contact.tsx', import.meta.url), 'utf8');
+const projectTypesBlock = contactSource.split('const projectTypes: BriefOption[] = [')[1].split('];')[0];
+const allowedTypes = [...projectTypesBlock.matchAll(/id: "([a-z-]+)"/g)].map(match => match[1]);
+const briefRoutes = JSON.parse(readFileSync(new URL('../src/data/brief-entry-routes.json', import.meta.url), 'utf8'));
+for (const service of Object.values(briefRoutes)) {
+  assert.equal(projectTypeFromSearch(`?service=${service}`, allowedTypes), service);
+}
+for (const query of ['', '?service=', '?service=unknown', '?service=%3Cscript%3E', '?service=food-truck&service=booth', '?notes=private&service=FOOD-TRUCK']) {
+  assert.equal(projectTypeFromSearch(query, allowedTypes), 'not-sure');
+}
+assert.equal(projectTypeFromSearch('?utm_source=google&service=food-truck&notes=private', allowedTypes), 'food-truck');
 
 const brief = {
   projectType: 'Food truck / mobile activation', location: 'Singapore',
@@ -22,7 +34,7 @@ assert.ok(!mail.searchParams.get('subject').includes(special.notes));
 
 // Exercise the shipped attribution script with DOM stubs. Do not send analytics.
 const handlers = new Map();
-const hrefs = ['/#contact', '#contact', '/custom-food-truck-rental-singapore/', '/china-sourcing-agent/', '/holiday-decorations-singapore/'];
+const hrefs = ['/#contact', '#contact', '/?service=food-truck#contact', '/zh/?service=booth#contact', '/custom-food-truck-rental-singapore/', '/china-sourcing-agent/', '/holiday-decorations-singapore/'];
 const links = hrefs.map(href => ({
   dataset: {}, textContent: 'Test link', getAttribute: key => key === 'href' ? href : '',
   matches: () => false, addEventListener: (name, fn) => handlers.set(href, fn),
@@ -47,6 +59,6 @@ vm.runInNewContext(readFileSync(new URL('../public/inquiry-attribution.js', impo
 });
 ready();
 for (const href of hrefs) handlers.get(href)();
-assert.deepEqual(events.map(event => event.name), ['Brief entry opened', 'Brief entry opened', 'Service explored', 'Service explored', 'Service explored']);
+assert.deepEqual(events.map(event => event.name), ['Brief entry opened', 'Brief entry opened', 'Brief entry opened', 'Brief entry opened', 'Service explored', 'Service explored', 'Service explored']);
 assert.ok(events.every(event => !('notes' in event.data)));
-console.log('Project brief checks passed: empty fields, structured subjects, Unicode, safe mailto encoding and core funnel events.');
+console.log('Project brief checks passed: allowlisted service context, safe fallbacks, empty fields, structured subjects, Unicode, safe mailto encoding and core funnel events.');
