@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#F4F2EC" />
     <link rel="stylesheet" href="/core-navigation.css" />
     <style>
       html,
@@ -11,8 +11,10 @@
       #root {
         min-height: 100%;
         margin: 0;
-        background: #000;
+        background: var(--home-startup-background, #F4F2EC);
       }
+      html[data-home-theme="dark"] { --home-startup-background: #171D1A; color-scheme: dark; }
+      html[data-home-theme="light"] { color-scheme: light; }
 
       .seo-fallback {
         display: none;
@@ -26,6 +28,14 @@
       </style>
     </noscript>
     <script>
+      // Resolve before first paint, using the same local-time schedule as the app.
+      var homePreference = "auto";
+      try { homePreference = localStorage.getItem("act-home-theme-v1") || "auto"; } catch (_) {}
+      var homeHour = new Date().getHours();
+      var homeMode = homePreference === "light" || homePreference === "dark"
+        ? homePreference : homeHour >= 7 && homeHour < 19 ? "light" : "dark";
+      document.documentElement.dataset.homeTheme = homeMode;
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", homeMode === "dark" ? "#171D1A" : "#F4F2EC");
       document.documentElement.lang =
         location.pathname === "/zh" || location.pathname.startsWith("/zh/")
           ? "zh-Hans-SG"

@@ -4,6 +4,8 @@ import { Hero } from "./components/Hero";
 import { HolidayPromo } from "./components/HolidayPromo";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ServiceRoutes } from "./components/ServiceRoutes";
+import "./styles/home-theme.css";
+import { HomeThemeProvider, useHomeTheme } from "./contexts/HomeThemeContext";
 
 const CaseStudies = lazy(() =>
   import("./components/CaseStudies").then((module) => ({
@@ -40,7 +42,7 @@ function SectionFallback({ minHeight = "18rem" }: { minHeight?: string }) {
   return (
     <div
       aria-hidden="true"
-      className="bg-[#0a0a0a]"
+      className="home-section-placeholder"
       style={{ minHeight }}
     />
   );
@@ -149,8 +151,13 @@ function HashScrollRestorer() {
 }
 
 export default function App() {
+  return <LanguageProvider><HomeThemeProvider><Homepage /></HomeThemeProvider></LanguageProvider>;
+}
+
+function Homepage() {
+  const { theme } = useHomeTheme();
   return (
-    <LanguageProvider>
+    <>
       <style>{`
         .site-shell {
           --holiday-promo-height: 40px;
@@ -169,7 +176,7 @@ export default function App() {
           }
         }
       `}</style>
-      <div className="site-shell min-h-screen bg-black">
+      <div className="site-shell home-theme min-h-screen" data-theme={theme}>
         <HolidayPromo />
         <Header />
         <main className="site-main">
@@ -204,6 +211,6 @@ export default function App() {
         </DeferredSection>
         <HashScrollRestorer />
       </div>
-    </LanguageProvider>
+    </>
   );
 }

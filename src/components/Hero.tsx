@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-black"
+      className="home-hero relative overflow-hidden"
       style={{ paddingTop: "2rem", paddingBottom: "2.5rem" }}
     >
       {/* Hero-scoped CSS */}
@@ -133,7 +133,7 @@ export function Hero() {
       `}</style>
 
       {/* Subtle background */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="hero-decoration absolute inset-0 pointer-events-none">
         <div
           className="absolute -top-32 -right-40 w-[480px] h-[480px] bg-[#CCFF00] rounded-full filter blur-3xl"
           style={{ opacity: 0.05 }}
@@ -162,7 +162,7 @@ export function Hero() {
 
             {/* H1 */}
             <h1
-              className="text-white"
+              className="hero-title"
               style={{
                 fontSize: "clamp(2rem, 3.6vw, 3.125rem)",
                 lineHeight: 1.1,
@@ -171,7 +171,7 @@ export function Hero() {
                 marginBottom: "1.5rem",
               }}
             >
-              <span style={{ color: "#CCFF00" }}>
+              <span className="hero-title-accent">
                 {t("定制创意，", "Custom event ideas.")}
               </span>
               <br />
@@ -183,7 +183,7 @@ export function Hero() {
 
             {/* Description */}
             <p
-              className="text-gray-300"
+              className="hero-description"
               style={{
                 fontSize: "clamp(0.95rem, 1.05vw, 1.0625rem)",
                 lineHeight: 1.65,
@@ -205,7 +205,7 @@ export function Hero() {
               <Button
                 asChild
                 size="lg"
-                className="group bg-[#CCFF00] hover:bg-[#b8e600] text-black shadow-2xl hover:shadow-[#CCFF00]/40 transition-all text-base h-auto"
+                className="hero-primary group bg-[#CCFF00] hover:bg-[#b8e600] text-black transition-all text-base h-auto"
                 style={{ paddingInline: "1.75rem", paddingBlock: "0.95rem" }}
               >
                 <a href="#contact">
@@ -218,7 +218,7 @@ export function Hero() {
                 size="lg"
                 variant="outline"
                 onClick={() => scrollToSection("cases")}
-                className="border-2 border-[#CCFF00] text-[#CCFF00] hover:bg-[#CCFF00] hover:text-black backdrop-blur-xl text-base h-auto bg-transparent transition-all"
+                className="hero-secondary text-base h-auto transition-all"
                 style={{ paddingInline: "1.75rem", paddingBlock: "0.95rem" }}
               >
                 <Award className="w-4 h-4 mr-2" />

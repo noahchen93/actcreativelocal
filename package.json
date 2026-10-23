@@ -61,6 +61,7 @@
             "vite": "^6.4.3"
       },
       "scripts": {
+            "theme:check": "node --experimental-strip-types scripts/check-home-theme.mjs",
             "contact:check": "node scripts/check-contact-routing.mjs",
             "brief:check": "node --experimental-strip-types scripts/check-project-brief.mjs",
             "navigation:sync": "node scripts/sync-core-navigation.mjs",

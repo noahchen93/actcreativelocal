@@ -416,7 +416,7 @@ export function CaseStudies() {
                     </div>
                   )}
                   {project.client && (
-                    <div className="md:hidden p-4 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
+                    <div className="case-card-mobile md:hidden p-4 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
                       <div className="flex items-center justify-between gap-3">
                         <span className="min-w-0 text-xs text-gray-400 truncate">
                           {project.client}
@@ -573,7 +573,7 @@ export function CaseStudies() {
                     </div>
                   )}
                   {project.client && (
-                    <div className="md:hidden p-4 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
+                    <div className="case-card-mobile md:hidden p-4 bg-[#0a0a0a] border-t border-[#CCFF00]/10">
                       <div className="flex items-center justify-between gap-3">
                         <span className="min-w-0 text-xs text-gray-400 truncate">
                           {project.client}

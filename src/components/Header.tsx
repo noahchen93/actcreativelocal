@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import services from "../data/site-navigation.json";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export function Header() {
   const { language, setLanguage, t } = useLanguage();
@@ -35,6 +36,7 @@ export function Header() {
     <div className="core-header-inner">
       <a className="core-brand" href={language === "zh" ? "/zh/" : "/"} aria-label="ACT Creative home"><img src="/favicon-192.png" alt="" width="36" height="36" /><span>ACT Creative</span></a>
       <nav className="core-desktop" aria-label={t("主导航", "Primary navigation")}>{links}</nav>
+      <ThemeSwitcher />
       <button type="button" className="core-language" onClick={switchLanguage} aria-label={language === "zh" ? "Switch to English" : "切换到中文"}>{language === "zh" ? "EN" : "中文"}</button>
       <details className="core-mobile" ref={mobileMenu} onClick={event => { if ((event.target as HTMLElement).closest("a")) closeMenu(); }}>
         <summary>{t("菜单", "Menu")}</summary>

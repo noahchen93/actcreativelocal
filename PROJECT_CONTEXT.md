@@ -205,6 +205,38 @@ Operations:
 
 ## Development History
 
+### 2026-10-23 unified homepage theme release
+
+- User approved the final homepage design and requested committing and deploying it. Release scope includes the warm-light homepage, four real hero cases with manual controls, refined appearance popover, local-time Auto mode and unified contact/footer colours. The intermediate always-dark sections and gradient bridges were removed before release.
+- Target: existing `codex/security-seo-ai-retirement` branch in `noahchen93/actcreativelocal`, Vercel project `prj_1yzUrOsA30ZpejjROeBVhmieckAR` under `team_0HhVtai5ohDD9jVDAAcvpsGK`, production `actcreative.net`.
+- Verified previous production deployment `dpl_52ZbyAu9dfGtyw3rtPzPSDXXRkut`, SHA `a41f4383caf1128e268a46f427fdb0ff0f6c3855`. All earlier local-preview entries below describe implementation stages; this entry records authorization to release the final result. Exact new SHA and verified production outcome are recorded in shared memory after deployment.
+
+### 2026-10-23 unified theme and compact appearance menu (local preview)
+
+- User revised the visual direction: each mode should apply throughout the homepage, including contact and footer; no light/dark section transitions. This supersedes the gradient bridges and always-dark contact/footer described in the earlier preview entry.
+- Removed the gradient elements/styles. Contact panels, fields, previews, controls, footer headings/text/icons and footer background now use the active theme's surface/text tokens. Kept the footer's content spacing.
+- Replaced the native appearance select with a compact sun/moon pill and a themed popover offering Auto/Light/Dark with icons and selection marks. Native details/summary supports keyboard interaction; Escape and outside click close it, selecting a mode restores focus to its trigger. The existing local-time schedule and saved preferences remain in place.
+- Browser confirmed light contact/footer and field text/background, dark contact/footer, preserved typed delivery date across switching and Escape dismissal. No messages sent. Build, theme/brief checks and existing production guards passed. Still local; production remains `a41f438`.
+
+### 2026-10-23 homepage spacing, transitions and day/night modes (local preview)
+
+- User requested more space above dark-section icons/text, softer light/dark boundaries and automatic day/night appearance. Continued the existing uncommitted homepage preview.
+- Theme styles now live in `src/styles/home-theme.css` under `.home-theme`, with light/dark surface and text tokens. Footer content has 48–88px top padding after a 72–128px gradient bridge; contact has matching entry/exit bridges. Footer secondary text contrast increased.
+- Default Auto follows the visitor's local clock: 07:00 inclusive to 19:00 exclusive is light, otherwise dark. Header offers Auto/Light/Dark (localized); a manual selection is stored under `act-home-theme-v1`. Auto refreshes each minute and on focus/visibility, and preference changes sync across tabs. Storage failure leaves the switch usable.
+- An early head script sets the initial background/theme colour before React loads. `HomeThemeProvider` uses the same schedule; the existing toast component now receives the resolved homepage theme. Static service pages remain unchanged.
+- Added `npm run theme:check` for exact time boundaries, explicit overrides, invalid/blocked storage and agreement between the first-paint script and React's resolver. This extends the earlier warm-light preview; no new dependencies, commit, push or deployment.
+- Validation passed: production build and its architecture/contact/AI-retirement/GEO guards, `seo:check`, `brief:check`, `theme:check` and diff checks. Browser verified 1440px/320px layouts, Chinese controls and menu, remembered dark mode after navigation, Auto selection, footer padding/gradient, and retention of a typed delivery date across a theme switch with a matching mailto preview. No mail sent; browser warning/error scan was empty. Preview server runs on `127.0.0.1:3000`; screenshots are `/private/tmp/act-footer-soft-transition.jpg` and `/private/tmp/act-home-night-mode.jpg`.
+
+### 2026-10-23 warm-light homepage preview (local, awaiting visual approval)
+
+- User approved trying the first proposed visual direction after finding the existing site too dark. This is a homepage preview only; do not publish until explicitly requested.
+- Added homepage-scoped theme styles (now `src/styles/home-theme.css`): warm paper `#F4F2EC`, charcoal `#1C211F`, readable olive links and lime primary CTAs. Navigation, service cards, case background and catalog are light; contact and footer retain charcoal. Static service-page styles remain untouched.
+- Homepage heading colour is now a section token (dark in light sections, white in contact); startup background and browser theme colour match the new paper palette. Photo-overlay titles remain white.
+- Hero now shows four existing delivered projects with real titles and case links. Kick Off Challenge leads, nighttime Big Big World remains selectable. Replaced automatic random/catalog-image rotation with manual accessible numbered controls; unvisited images are not loaded. Existing source photos are unmodified.
+- Retained lazy-loaded sections, bilingual navigation, inquiry state/attribution and mailto behaviour. No new dependencies, backend or external telemetry.
+- Verification: `build`, `seo:check`, `brief:check`, architecture/contact/AI-retirement/GEO guards and diff checks passed. All four hero image paths/case links exist. Browser checked 1440px and 390px with no document overflow, English/Chinese switching, mobile menu close-on-language-change, photo control/image loading, case anchor and contact mailto preview. No message sent.
+- Local preview: `http://127.0.0.1:3000/`. No commit, push or deployment. Production remains festive-copy release `a41f438`.
+
 ### 2026-10-23 client-drawing festive procurement and installation
 
 - At the user's request, added explicit client-drawing procurement and Singapore installation support to `/holiday-decorations-singapore/`, which covers Christmas trees, New Year and Lunar New Year projects.

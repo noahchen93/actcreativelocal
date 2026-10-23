@@ -2782,7 +2782,7 @@ html, body, button, input, select, textarea {
   max-width: 1120px;
   margin-left: auto !important;
   margin-right: auto !important;
-  color: #ffffff !important;
+  color: var(--section-heading, #ffffff) !important;
   font-size: clamp(2.25rem, 7.5vw, 3.2rem) !important;
   line-height: 1.05 !important;
   font-weight: 800 !important;

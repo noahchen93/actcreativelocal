@@ -19,12 +19,12 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-black text-gray-300 relative overflow-hidden border-t border-[#CCFF00]/20">
+    <footer className="home-footer bg-black text-gray-300 relative overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-[#CCFF00] rounded-full mix-blend-screen filter blur-3xl opacity-5"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#CCFF00] rounded-full mix-blend-screen filter blur-3xl opacity-5"></div>
 
-      <div className="container mx-auto px-4 py-10 md:py-12 relative z-10">
+      <div className="home-footer-content container mx-auto relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 mb-8">
           {/* 公司信息 */}
           <motion.div
