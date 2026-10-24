@@ -15,6 +15,9 @@ LLMs-Full: https://actcreative.net/llms-full.txt
 Chinese-Index: https://actcreative.net/llms-zh.txt
 Site-Summary: https://actcreative.net/ai/summary.json
 Service-Catalog: https://actcreative.net/ai/service.json
+Service-Evidence-Directory: https://actcreative.net/ai/catalog.json
+English-Service-Text: https://actcreative.net/ai/services.en.md
+Chinese-Service-Text: https://actcreative.net/ai/services.zh.md
 FAQ: https://actcreative.net/ai/faq.json
 Sitemap: https://actcreative.net/sitemap.xml
 Feed: https://actcreative.net/feed.xml

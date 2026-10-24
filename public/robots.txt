@@ -7,6 +7,11 @@ Allow: /
 # - https://actcreative.net/llms-full.txt
 # - https://actcreative.net/llms-zh.txt
 # - https://actcreative.net/ai/summary.json
+# - https://actcreative.net/ai/catalog.json
+# - https://actcreative.net/ai/services.en.md
+# - https://actcreative.net/ai/services.zh.md
+# Public HTML, text and JSON share the same factual sources. No login is needed.
+# Access permission is not a guarantee of indexing or agent recommendations.
 
 # OpenAI / ChatGPT
 User-agent: OAI-SearchBot

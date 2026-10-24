@@ -160,6 +160,14 @@
       "headers": [{ "key": "Content-Type", "value": "application/json; charset=utf-8" }]
     },
     {
+      "source": "/ai/:file.md",
+      "headers": [{ "key": "Content-Type", "value": "text/markdown; charset=utf-8" }]
+    },
+    {
+      "source": "/llms-zh.txt",
+      "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+    },
+    {
       "source": "/feed.xml",
       "headers": [{ "key": "Content-Type", "value": "application/rss+xml; charset=utf-8" }]
     }

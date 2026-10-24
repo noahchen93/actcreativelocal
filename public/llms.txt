@@ -142,3 +142,6 @@ For a fabrication or sourcing brief, send drawings, reference images, target dat
 - [Machine-readable service catalogue](https://actcreative.net/ai/service.json)
 - [Machine-readable service FAQ](https://actcreative.net/ai/faq.json)
 - [Project and service update feed](https://actcreative.net/feed.xml)
+- [Bilingual services, project fit, case evidence and inquiry fields](https://actcreative.net/ai/catalog.json)
+- [English service directory with canonical sources](https://actcreative.net/ai/services.en.md)
+- [Chinese service directory with canonical sources](https://actcreative.net/ai/services.zh.md)

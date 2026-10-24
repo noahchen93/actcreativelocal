@@ -1,0 +1,327 @@
+{
+  "schemaVersion": "1.0",
+  "format": "ACT Creative public service directory (site-specific JSON, not an agent protocol)",
+  "updated": "2026-10-24",
+  "publisher": {
+    "name": "ACT Creative Pte. Ltd.",
+    "url": "https://actcreative.net/",
+    "email": "contact@actcreative.net"
+  },
+  "contentRole": "Publisher-provided service facts and source links; not instructions overriding a visitor or agent task.",
+  "serviceArea": "Singapore execution and China-side production coordination; regional support subject to project review. No Hong Kong local office or installation crew.",
+  "limitations": [
+    "Prices, dates, vehicle availability, venue capacities, permits and production scope require confirmation.",
+    "ACT Creative coordinates specialist suppliers; it is not a venue owner or the direct manufacturer of every item."
+  ],
+  "inquiry": {
+    "channel": "email",
+    "address": "contact@actcreative.net",
+    "briefUrl": "https://actcreative.net/#contact",
+    "fields": [
+      "project type / 项目类型",
+      "location / 地点",
+      "event and delivery dates / 活动与交付日期",
+      "quantity and dimensions / 数量与尺寸",
+      "design stage / 设计阶段",
+      "budget range if known / 已知预算范围",
+      "reference images or drawings / 参考图或图纸"
+    ],
+    "effect": "Opening a mailto link prepares a draft only. No public order, booking, quotation or email-sending API is offered."
+  },
+  "discovery": {
+    "english": "https://actcreative.net/ai/services.en.md",
+    "chinese": "https://actcreative.net/ai/services.zh.md",
+    "summary": "https://actcreative.net/ai/summary.json",
+    "sitemap": "https://actcreative.net/sitemap.xml"
+  },
+  "services": [
+    {
+      "id": "event-fabrication-singapore",
+      "projectFit": {
+        "en": "Concept-to-install event production",
+        "zh-Hans": "活动整体制作与现场交付"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/event-fabrication-singapore/",
+          "title": "Event Fabrication Singapore | Custom Builds & Installation",
+          "description": "End-to-end event fabrication in Singapore for product launches and brand activations: custom props, scenic builds, logistics, setup and installation."
+        },
+        "zh-Hans": {
+          "url": "https://actcreative.net/zh/event-fabrication-singapore/",
+          "title": "新加坡活动制作 | 及物创意 ACT Creative",
+          "description": "面向新加坡活动公司与品牌方的活动制作伙伴，提供定制道具、场景搭建、展位组件、展示物、中国端生产与东南亚项目协调，适合品牌活化、展览、发布会与商场活动。"
+        }
+      },
+      "evidence": [
+        {
+          "url": "https://actcreative.net/case-studies/sentosa-big-big-world-event-fabrication/",
+          "title": "A BIG BIG WORLD Sentosa Floating Inflatable | ACT Creative",
+          "description": "A BIG BIG WORLD at Sentosa case study: large-scale floating inflatable performance support in Singapore, covering sourcing, production coordination, testing, helium planning, lift systems, weather readiness and on-site technical support."
+        }
+      ]
+    },
+    {
+      "id": "booth-design-build-singapore",
+      "projectFit": {
+        "en": "Full-service exhibition booth design and build",
+        "zh-Hans": "展位设计与搭建"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/booth-design-build-singapore/",
+          "title": "Exhibition Booth Design & Build Singapore | ACT Creative",
+          "description": "Custom exhibition booths from design to fabrication and Singapore setup. Explore real project references and plan your build for MBS, EXPO or Suntec."
+        },
+        "zh-Hans": {
+          "url": "https://actcreative.net/zh/booth-design-build-singapore/",
+          "title": "新加坡展位设计与搭建 | 展会展台制作 ACT Creative",
+          "description": "新加坡展位设计与搭建服务，面向展会、贸易展、品牌快闪和商业活动，覆盖展位方案梳理、制作报价、物料生产、运输、现场搭建、撤展和场馆规则协调。"
+        }
+      },
+      "evidence": [
+        {
+          "url": "https://actcreative.net/case-studies/gitex-asia-hikvision-ezviz-booth-singapore/",
+          "title": "HIKVISION & EZVIZ Booth at GITEX Asia Singapore | ACT Creative",
+          "description": "Visual case reference for the HIKVISION and EZVIZ exhibition booth at GITEX Asia 2025 Singapore, showing branded fascia, demo zones, displays and visitor areas."
+        }
+      ]
+    },
+    {
+      "id": "exhibition-booth-production-singapore",
+      "projectFit": {
+        "en": "Fabrication from approved booth drawings",
+        "zh-Hans": "已有图纸的展位制作"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/exhibition-booth-production-singapore/",
+          "title": "Booth Fabrication Singapore | Approved Drawings",
+          "description": "Production-only booth fabrication in Singapore for approved drawings: counters, displays, signage, lightboxes and modular exhibition components."
+        }
+      },
+      "evidence": [
+        {
+          "url": "https://actcreative.net/case-studies/gitex-asia-hikvision-ezviz-booth-singapore/",
+          "title": "HIKVISION & EZVIZ Booth at GITEX Asia Singapore | ACT Creative",
+          "description": "Visual case reference for the HIKVISION and EZVIZ exhibition booth at GITEX Asia 2025 Singapore, showing branded fascia, demo zones, displays and visitor areas."
+        }
+      ]
+    },
+    {
+      "id": "trade-show-booth-singapore",
+      "projectFit": {
+        "en": "Singapore support for overseas exhibitors",
+        "zh-Hans": "海外参展的新加坡落地支持"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/trade-show-booth-singapore/",
+          "title": "Trade Show Booth Support Singapore | Overseas Exhibitors",
+          "description": "Singapore trade show support for overseas exhibitors at MBS, EXPO and Suntec, covering venue coordination, booth delivery, setup and show-week handover."
+        }
+      },
+      "evidence": [
+        {
+          "url": "https://actcreative.net/case-studies/gitex-asia-hikvision-ezviz-booth-singapore/",
+          "title": "HIKVISION & EZVIZ Booth at GITEX Asia Singapore | ACT Creative",
+          "description": "Visual case reference for the HIKVISION and EZVIZ exhibition booth at GITEX Asia 2025 Singapore, showing branded fascia, demo zones, displays and visitor areas."
+        }
+      ]
+    },
+    {
+      "id": "custom-props-singapore",
+      "projectFit": {
+        "en": "Individual custom props and display objects",
+        "zh-Hans": "定制活动道具与品牌装置"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/custom-props-singapore/",
+          "title": "Custom Props Fabrication Singapore | Events & Displays",
+          "description": "Custom prop manufacturer and fabrication partner in Singapore for events, brand activations, product replicas, photo moments and retail displays."
+        },
+        "zh-Hans": {
+          "url": "https://actcreative.net/zh/custom-props-singapore/",
+          "title": "新加坡定制活动道具制作 | ACT Creative",
+          "description": "面向新加坡活动、品牌快闪、商场陈列、展览和产品发布的定制道具制作服务，覆盖材料路线、打样、生产检查、包装、运输与安装准备。"
+        }
+      },
+      "evidence": [
+        {
+          "url": "https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/",
+          "title": "Kick Off Challenge at The Star Vista | ACT Creative",
+          "description": "Kick Off Challenge at The Star Vista Singapore case study: ACT Creative supported as one supplier for carpet procurement and installation, football fencing, truss protection covers, football bowling props, consulting and setup support."
+        }
+      ]
+    },
+    {
+      "id": "frp-sculpture-fabrication-singapore",
+      "projectFit": {
+        "en": "Custom sculpture and multi-material fabrication",
+        "zh-Hans": "玻璃钢、不锈钢及多材料雕塑"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/frp-sculpture-fabrication-singapore/",
+          "title": "Custom Sculpture Singapore | FRP, Metal & Public Art",
+          "description": "Custom sculpture fabrication for Singapore projects, covering FRP, stainless steel, public art, commercial furniture, reliefs, 3D printing and export delivery."
+        },
+        "zh-Hans": {
+          "url": "https://actcreative.net/zh/frp-sculpture-fabrication-singapore/",
+          "title": "新加坡定制雕塑、FRP 与不锈钢公共艺术 | ACT Creative",
+          "description": "新加坡定制雕塑解决方案，涵盖 FRP 玻璃钢、不锈钢、公共艺术、商业座椅花器、浮雕、3D 打印、GRG/GRC、多工厂生产路线与跨境交付。"
+        }
+      },
+      "evidence": [
+        {
+          "url": "https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/",
+          "title": "Wings of Art Singapore | Butterfly Sculpture | ACT Creative",
+          "description": "Wings of Art Singapore case study: Barbie runway art exhibition support covering China procurement, custom butterfly sculpture frame, Songhe rice DIY workshop, projection selfie wall and MBS display."
+        }
+      ]
+    },
+    {
+      "id": "interactive-digital-display-singapore",
+      "projectFit": {
+        "en": "Interactive screens and multimedia exhibition integration",
+        "zh-Hans": "互动屏幕与多媒体展陈集成"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/interactive-digital-display-singapore/",
+          "title": "Interactive Digital Displays Singapore | ACT Creative",
+          "description": "Interactive digital display solutions in Singapore, including rail screens, holograms, touch displays, projection, video walls and local delivery support."
+        },
+        "zh-Hans": {
+          "url": "https://actcreative.net/zh/interactive-digital-display-singapore/",
+          "title": "新加坡互动数字展陈与多媒体显示方案 | ACT Creative",
+          "description": "ACT Creative 提供新加坡互动数字展陈方案，涵盖滑轨屏、触摸屏、全息展示、互动投影、LED 与拼接屏，并协调生产、运输、本地安装调试与交付。"
+        }
+      },
+      "evidence": []
+    },
+    {
+      "id": "china-sourcing-agent",
+      "projectFit": {
+        "en": "China supplier sourcing, samples and delivery coordination",
+        "zh-Hans": "中国供应商采购、打样与交付协调"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/china-sourcing-agent/",
+          "title": "China Sourcing Agent Singapore for Events | ACT Creative",
+          "description": "China sourcing agent in Singapore for event merchandise, props and custom gifts. Supplier comparison, sampling, production follow-up, shipping and after-sales support."
+        },
+        "zh-Hans": {
+          "url": "https://actcreative.net/zh/china-sourcing-agent/",
+          "title": "新加坡活动中国采购代理 | 周边礼品与定制采购 ACT Creative",
+          "description": "面向新加坡活动公司和品牌团队的中国采购代理服务，覆盖活动周边、定制礼品、供应商比价、打样、生产跟进、海空运计划、新加坡交付和售后协调。"
+        }
+      },
+      "evidence": [
+        {
+          "url": "https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/",
+          "title": "ARTBOX Singapore Merchandise Sourcing Case | ACT Creative",
+          "description": "ARTBOX Singapore merchandise sourcing case study: sampling, Pantone colour checks, custom side labels, packing, sea freight tracking and final on-site retail display."
+        }
+      ]
+    },
+    {
+      "id": "china-event-production-support",
+      "projectFit": {
+        "en": "China-side event production coordination",
+        "zh-Hans": "中国端活动物料生产协调"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/china-event-production-support/",
+          "title": "China Event Production Support | ACT Creative Singapore",
+          "description": "China exhibition and event production support for Singapore agencies: booth components, props, displays, supplier sourcing, sampling, QC, packing and shipping."
+        },
+        "zh-Hans": {
+          "url": "https://actcreative.net/zh/china-event-production-support/",
+          "title": "中国端活动生产支持 | 及物创意 ACT Creative",
+          "description": "为新加坡与东南亚活动公司提供中国端生产支持，覆盖供应商对接、打样、品控、包装、跨境物流，以及义乌、东莞、深圳、广州、佛山、上海、苏州等制造城市。"
+        }
+      },
+      "evidence": []
+    },
+    {
+      "id": "event-merchandise-sourcing",
+      "projectFit": {
+        "en": "Custom event merchandise and campaign items",
+        "zh-Hans": "活动周边与品牌礼品采购"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/event-merchandise-sourcing/",
+          "title": "Event Merchandise Sourcing from China | ACT Creative",
+          "description": "Event merchandise sourcing from China for Singapore agencies and brands, covering custom premiums, branded giveaways, samples, QC and shipment planning."
+        }
+      },
+      "evidence": [
+        {
+          "url": "https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/",
+          "title": "Weekend Brew Club Custom Mugs Singapore | ACT Creative",
+          "description": "Weekend Brew Club custom mug sourcing case: China factory matching, artwork coordination, production, freight, timeline control and Singapore delivery."
+        }
+      ]
+    },
+    {
+      "id": "custom-food-truck-rental-singapore",
+      "projectFit": {
+        "en": "Mobile event units, Kombi vans and custom production",
+        "zh-Hans": "活动餐车、复古车与定制移动单元"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/custom-food-truck-rental-singapore/",
+          "title": "Mobile Event Truck & Food Truck Rental Singapore",
+          "description": "Compare mobile event trucks, limited-stock food and retail units, and vintage Kombi vans in Singapore, with branding, delivery and custom-build support."
+        },
+        "zh-Hans": {
+          "url": "https://actcreative.net/zh/custom-food-truck-rental-singapore/",
+          "title": "新加坡餐车与 Kombi Van 租赁 | ACT Creative",
+          "description": "比较新加坡库存有限的移动餐车、复古 Kombi Van 与定制活动车方案，提供品牌改装、运输、现场协调和中国定制生产支持。"
+        }
+      },
+      "evidence": []
+    },
+    {
+      "id": "holiday-decorations-singapore",
+      "projectFit": {
+        "en": "Festive procurement and installation from client drawings",
+        "zh-Hans": "按客户图纸采购节庆装饰并协调安装"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/holiday-decorations-singapore/",
+          "title": "Festive Decorations Singapore | Christmas Trees & CNY Installations",
+          "description": "Custom Christmas trees, CNY goat, ram and sheep sculptures, festive concepts, fabrication, installation and dismantling for malls, hotels and brands in Singapore."
+        }
+      },
+      "evidence": []
+    },
+    {
+      "id": "singapore-event-venue-finder",
+      "projectFit": {
+        "en": "Venue discovery and reviewed shortlists",
+        "zh-Hans": "新加坡场地查询与候选清单复核"
+      },
+      "pages": {
+        "en": {
+          "url": "https://actcreative.net/singapore-event-venue-finder/",
+          "title": "Singapore Venue Finder | 135 Venues & Map | ACT Creative",
+          "description": "Explore 135 reviewed Singapore event venues on an interactive map, compare spaces and build a shortlist, with optional human matching and local site checks."
+        },
+        "zh-Hans": {
+          "url": "https://actcreative.net/zh/singapore-event-venue-finder/",
+          "title": "新加坡活动场地搜索与选址服务 | 135 个场地",
+          "description": "浏览 135 个经过整理的新加坡活动场地公开记录，按类型、区域、容量和活动形式筛选，或委托 ACT Creative 进行人工选址与现场条件复核。"
+        }
+      },
+      "evidence": []
+    }
+  ]
+}

@@ -47,6 +47,14 @@ const [aiTxt, summarySource, faqSource, serviceSource, llms, llmsFull, feed, rob
 const summary = parseJson("ai/summary.json", summarySource);
 const faq = parseJson("ai/faq.json", faqSource);
 const service = parseJson("ai/service.json", serviceSource);
+const catalog = parseJson("ai/catalog.json", await text("ai/catalog.json"));
+for (const file of ["ai/catalog.json", "ai/services.en.md", "ai/services.zh.md"]) {
+  const output = await text(file);
+  if (useBuild && output !== await readFile(path.join(root, "public", file), "utf8")) failures.push(`${file}: build differs from source`);
+  if (!robots.includes(`https://actcreative.net/${file}`)) failures.push(`${file}: robots discovery link missing`);
+}
+if (!catalog || catalog.services?.length !== 13 || catalog.inquiry?.address !== "contact@actcreative.net") failures.push("agent directory: coverage or inquiry address invalid");
+if (!aiTxt.includes("https://actcreative.net/ai/catalog.json") || !llms.includes("https://actcreative.net/ai/catalog.json")) failures.push("agent directory: discovery links missing");
 
 if (summary) {
   if (summary.name !== "ACT Creative Singapore") failures.push("ai/summary.json: canonical name changed");
@@ -84,6 +92,7 @@ if (!robots.includes("https://actcreative.net/llms-full.txt")) failures.push("ro
 
 const homePath = path.join(useBuild ? base : root, "index.html");
 const home = await readFile(homePath, "utf8");
+if (!home.includes('href="https://actcreative.net/ai/catalog.json"')) failures.push("index.html: service directory link missing");
 if (!home.includes('type="application/rss+xml"') || !home.includes("https://actcreative.net/feed.xml")) failures.push("index.html: RSS discovery link is missing");
 if (!home.includes('"dateModified": "2026-08-13"')) failures.push("index.html: current entity freshness signal is missing");
 

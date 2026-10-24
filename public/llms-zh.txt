@@ -100,3 +100,6 @@ ACT Creative Singapore 是一家位于新加坡的双语活动制作与中国供
 - [新加坡活动场地搜索与选址服务](https://actcreative.net/zh/singapore-event-venue-finder/)：可浏览 135 个经过整理的公开场地记录，并申请人工复核的候选场地清单。
 
 以上页面均明确区分公开资料、可协调服务与需要项目确认的条件。价格、档期、许可、结构、运输和现场限制应以最终项目审核与相关方确认为准。
+- [中英文服务与案例结构化目录](https://actcreative.net/ai/catalog.json)
+- [中文服务与案例纯文本](https://actcreative.net/ai/services.zh.md)
+- [英文服务与案例纯文本](https://actcreative.net/ai/services.en.md)

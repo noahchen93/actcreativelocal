@@ -61,6 +61,8 @@
             "vite": "^6.4.3"
       },
       "scripts": {
+            "agent:catalog": "node scripts/generate-agent-catalog.mjs",
+            "agent:check": "node scripts/generate-agent-catalog.mjs --check",
             "theme:check": "node --experimental-strip-types scripts/check-home-theme.mjs",
             "contact:check": "node scripts/check-contact-routing.mjs",
             "brief:check": "node --experimental-strip-types scripts/check-project-brief.mjs",
@@ -70,7 +72,7 @@
             "ai:insights": "node scripts/analyze-ai-conversations.mjs",
             "ai:insights:preview": "node scripts/analyze-ai-conversations.mjs --min-topic-count=2",
             "ai:retirement-check": "node scripts/check-ai-retirement.mjs",
-            "geo:check": "node scripts/check-geo-discovery.mjs",
+            "geo:check": "node scripts/generate-agent-catalog.mjs --check && node scripts/check-geo-discovery.mjs",
             "prebuild": "npm run contact:check && npm run architecture:check && npm run ai:retirement-check && npm run geo:check && npm run sculpture:seo-index && npm run content:guard",
             "build": "vite build",
             "sculpture:seo-index": "node scripts/generate-sculpture-seo-index.mjs",

@@ -1,6 +1,6 @@
 # ACT Creative Website Project Context
 
-Last updated: 2026-10-23, Asia/Singapore.
+Last updated: 2026-10-24, Asia/Shanghai.
 
 This file is the living handoff document for `actcreativelocal`. Update it in the same commit as every meaningful website, content, data, AI, deployment, or operations change. If another tool or developer continues this project, read this file first.
 
@@ -526,6 +526,13 @@ The git history shows these major phases:
    - The concurrent weekly analytics review remains separate from this unreleased UI work: do not attribute current production metrics to these local changes. Vercel Analytics browser access requires login; do not substitute deployment or request counts for visitor analytics.
 
 ## AI Assistant Operating Notes
+
+### 2026-10-24 personal-agent discovery
+
+- Added a source-derived directory for 13 services at `/ai/catalog.json`, `/ai/services.en.md` and `/ai/services.zh.md`, including canonical metadata, available translations, case references and email brief fields.
+- Linked resources through existing discovery files and homepage head with UTF-8 Markdown types. `agent:catalog` regenerates metadata; `agent:check` detects drift through GEO/prebuild checks.
+- Official mechanisms and uncertainties are recorded in `docs/agent-discovery-2026-10-24.md`. WorkBuddy, TRAE and Claude Code names were confirmed by the owner. No hidden prompt injection, claimed registration, restored assistant or outbound message was introduced.
+- Retrievability is checked locally; indexing and recommendation uplift require separate post-release observation.
 
 ### 2026-10-05 inquiry handoff improvement (local, not released)
 
