@@ -9,7 +9,7 @@ const steps = [
 export function Services() {
   const { t } = useLanguage();
   return <section id="process" className="solution-routes">
-    <h2>{t("一位项目联系人，统筹制作与交付", "One project contact, from brief to delivery")}</h2>
+    <h2>{t("从需求到交付", "From brief to delivery")}</h2>
     <p>{t("我们整合合适的专业合作伙伴，按确认的项目范围推进。", "We coordinate the specialist partners your project needs, with responsibilities agreed before production.")}</p>
     <div className="solution-grid">{steps.map(([zh,en,zhDetail,enDetail],index)=><div className="solution-card" key={en}><span>0{index+1}</span><h3>{t(zh,en)}</h3><p>{t(zhDetail,enDetail)}</p></div>)}</div>
   </section>;

@@ -5,6 +5,7 @@ import { HolidayPromo } from "./components/HolidayPromo";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { ServiceRoutes } from "./components/ServiceRoutes";
 import "./styles/home-theme.css";
+import "./styles/mobile-home.css";
 import { HomeThemeProvider, useHomeTheme } from "./contexts/HomeThemeContext";
 
 const CaseStudies = lazy(() =>
@@ -93,7 +94,7 @@ function DeferredSection({
   }, [shouldRender]);
 
   return (
-    <div ref={markerRef} id={targetId ? `section-${targetId}` : undefined} style={{ minHeight }}>
+    <div ref={markerRef} id={targetId ? `section-${targetId}` : undefined} style={{ minHeight: shouldRender ? undefined : minHeight }}>
       {shouldRender ? children : null}
     </div>
   );

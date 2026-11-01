@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import services from "../data/site-navigation.json";
 import { ThemeSwitcher } from "./ThemeSwitcher";
@@ -7,6 +7,20 @@ export function Header() {
   const { language, setLanguage, t } = useLanguage();
   const mobileMenu = useRef<HTMLDetailsElement>(null);
   const closeMenu = () => { if (mobileMenu.current) mobileMenu.current.open = false; };
+  const headerRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const dismiss = (event: PointerEvent) => {
+      if (!headerRef.current?.contains(event.target as Node)) closeMenu();
+    };
+    const desktop = window.matchMedia("(min-width: 801px)");
+    const onResize = () => { if (desktop.matches) closeMenu(); };
+    document.addEventListener("pointerdown", dismiss);
+    desktop.addEventListener("change", onResize);
+    return () => {
+      document.removeEventListener("pointerdown", dismiss);
+      desktop.removeEventListener("change", onResize);
+    };
+  }, []);
   const switchLanguage = () => {
     const next = language === "zh" ? "en" : "zh";
     setLanguage(next);
@@ -27,7 +41,7 @@ export function Header() {
     <a href="/about/">{t("关于我们", "About")}</a>
     <a className="core-brief" href="#contact">{t("整理项目需求", "Plan your brief")}</a>
   </>;
-  return <header className="core-header" onKeyDown={event => {
+  return <header ref={headerRef} className="core-header" onKeyDown={event => {
     if (event.key === "Escape") {
       const details = (event.target as HTMLElement).closest("details");
       if (details) { details.open = false; details.querySelector("summary")?.focus(); }

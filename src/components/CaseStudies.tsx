@@ -306,7 +306,7 @@ export function CaseStudies() {
           {/* Section Header */}
           <div className="case-section-heading text-center">
             <h2 className="text-3xl md:text-4xl text-white mb-4 tracking-wide">
-              {t("新加坡精选项目", "SELECTED PROJECTS IN SINGAPORE")}
+              {t("新加坡精选项目", "Singapore projects")}
             </h2>
             <div className="w-32 h-1 bg-[#CCFF00] mx-auto"></div>
           </div>
@@ -463,7 +463,7 @@ export function CaseStudies() {
           {/* Section Header */}
           <div className="case-section-heading text-center">
             <h2 className="text-3xl md:text-4xl text-white mb-4 tracking-wide">
-              {t("精选区域项目", "SELECTED REGIONAL PROJECTS")}
+              {t("精选区域项目", "Regional projects")}
             </h2>
             <div className="w-32 h-1 bg-[#CCFF00] mx-auto"></div>
           </div>

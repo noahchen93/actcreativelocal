@@ -111,12 +111,12 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a href={localizedHref("/booth-design-build-singapore/", "/zh/booth-design-build-singapore/")} className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("展位设计和搭建", "Exhibition Booth Design & Build Singapore")}
+                  {t("展位设计和搭建", "Booth design & build")}
                 </a>
               </li>
               <li>
                 <a href={localizedHref("/event-fabrication-singapore/", "/zh/event-fabrication-singapore/")} className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("活动制作服务", "Event Fabrication Services Singapore")}
+                  {t("活动制作服务", "Event fabrication")}
                 </a>
               </li>
               <li>
@@ -126,22 +126,22 @@ export function Footer() {
               </li>
               <li>
                 <a href={localizedHref("/china-sourcing-agent/", "/zh/china-sourcing-agent/")} className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("国际供应商采购", "International Supplier Sourcing")}
+                  {t("国际供应商采购", "Supplier sourcing")}
                 </a>
               </li>
               <li>
                 <a href="/custom-merchandise-props-consulting/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("文创礼品与道具咨询", "Merchandise & Props Consulting")}
+                  {t("文创礼品与道具咨询", "Merchandise & props")}
                 </a>
               </li>
               <li>
                 <a href="/china-southeast-asia-logistics/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("跨境运输与清关", "Cross-Border Logistics & Customs")}
+                  {t("跨境运输与清关", "Logistics & customs")}
                 </a>
               </li>
               <li>
                 <a href="/art-exhibition-planning-installation/" className="text-gray-400 hover:text-[#CCFF00] transition-colors">
-                  {t("艺术展览策划与布展", "Art Exhibition Planning & Installation")}
+                  {t("艺术展览策划与布展", "Art exhibitions")}
                 </a>
               </li>
             </ul>

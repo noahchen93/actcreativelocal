@@ -63,6 +63,7 @@
       "scripts": {
             "agent:catalog": "node scripts/generate-agent-catalog.mjs",
             "agent:check": "node scripts/generate-agent-catalog.mjs --check",
+            "mobile:check": "node scripts/check-mobile-ui.mjs",
             "theme:check": "node --experimental-strip-types scripts/check-home-theme.mjs",
             "contact:check": "node scripts/check-contact-routing.mjs",
             "brief:check": "node --experimental-strip-types scripts/check-project-brief.mjs",

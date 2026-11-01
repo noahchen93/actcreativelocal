@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 // Real delivered work only; catalog references remain in the product section.
@@ -13,9 +13,30 @@ export function HeroSlideshow() {
   const { t } = useLanguage();
   const [index, setIndex] = useState(0);
   const [visited, setVisited] = useState(() => new Set([0]));
+  const gesture = useRef<{ x: number; y: number } | null>(null);
+  const selectSlide = (next: number) => {
+    setVisited(previous => new Set([...previous, next]));
+    setIndex(next);
+  };
   const current = slides[index];
   return <div className="hero-project">
-    <div className="hero-project-image">
+    <div className="hero-project-image"
+      onPointerDown={event => {
+        if (event.pointerType === "mouse") return;
+        gesture.current = { x: event.clientX, y: event.clientY };
+        event.currentTarget.setPointerCapture(event.pointerId);
+      }}
+      onPointerCancel={() => { gesture.current = null; }}
+      onPointerUp={event => {
+        const start = gesture.current;
+        gesture.current = null;
+        if (!start) return;
+        const dx = event.clientX - start.x;
+        if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(event.clientY - start.y) * 1.4) {
+          selectSlide((index + (dx < 0 ? 1 : -1) + slides.length) % slides.length);
+        }
+      }}
+    >
       {slides.map((slide, i) => visited.has(i) ? <img
         key={slide.src} src={slide.src} alt={i === index ? slide.alt : ""}
         aria-hidden={i !== index} loading="eager" decoding="async"
@@ -24,14 +45,14 @@ export function HeroSlideshow() {
       /> : null)}
     </div>
     <div className="hero-project-caption">
-      <div>
+      <div aria-live="polite" aria-atomic="true">
         <a href={current.href}>{current.title} <span aria-hidden="true">↗</span></a>
         <p>{current.location}</p>
       </div>
       <div className="hero-project-controls" role="group" aria-label={t("精选案例图片", "Featured project images")}>
         {slides.map((slide, i) => <button key={slide.src} type="button"
           aria-label={t(`查看 ${slide.title}`, `Show ${slide.title}`)} aria-pressed={i === index}
-          onClick={() => { setVisited(previous => new Set([...previous, i])); setIndex(i); }}
+          onClick={() => selectSlide(i)}
         >0{i + 1}</button>)}
       </div>
     </div>

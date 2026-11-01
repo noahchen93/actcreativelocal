@@ -150,3 +150,47 @@
 @media (max-width: 360px) {
   .home-theme .core-brand span { display: none; }
 }
+
+/* Touch layouts share the same paper, spacing and comfortable tap targets. */
+.home-theme .hero-project-image { touch-action: pan-y pinch-zoom; }
+.home-theme .hero-project-image img { transition: opacity 200ms ease; }
+@media (max-width: 800px) {
+  .home-theme .core-header-inner { min-height: 64px; padding: 10px 16px; }
+  .home-theme .core-brand { gap: 7px; }
+  .home-theme .core-brand img { width: 30px; height: 30px; }
+  .home-theme .core-brand span { font-size: 13px; }
+  .home-theme .theme-switcher > summary { width: 44px; }
+  .home-theme .core-language { min-width: 44px; border-radius: 12px; }
+  .home-theme .core-mobile > summary { min-width: 54px; border: 1px solid var(--home-line); border-radius: 12px; text-align: center; }
+  .home-theme .core-mobile[open] > summary { background: var(--home-soft); }
+  .home-theme .core-mobile > nav { left: 12px; right: 12px; top: calc(100% + 8px); padding: 12px 12px max(16px, env(safe-area-inset-bottom)); border: 1px solid var(--home-line); border-radius: 18px; max-height: calc(100dvh - 150px); overscroll-behavior: contain; }
+  .home-theme .core-mobile nav > a { border-radius: 10px; padding: 14px 12px; }
+  .home-theme .core-mobile .core-service-menu > summary { padding: 14px 12px; }
+  .home-theme .core-mobile .core-service-links { box-shadow: none; margin: 4px 0 8px; border-radius: 12px; background: var(--home-paper); }
+  .home-theme .core-mobile .core-service-links a { min-height: 44px; display: flex; align-items: center; }
+  .home-theme .core-mobile .core-brief { width: 100%; }
+}
+@media (max-width: 639px) {
+  .home-theme { --site-header-height: 64px; }
+  .home-theme .home-hero > .container { max-width: 100% !important; padding-inline: 20px; }
+  .home-theme .hero-eyebrow { font-size: 10px; letter-spacing: .12em; gap: 10px; margin-bottom: 16px !important; }
+  .home-theme .hero-eyebrow::after { flex: 1; min-width: 12px; width: 24px; }
+  .home-theme .hero-title { font-size: clamp(30px, 8vw, 42px) !important; line-height: 1.14 !important; margin-bottom: 18px !important; text-wrap: balance; }
+  .home-theme .hero-description { font-size: 15px !important; line-height: 1.75 !important; margin-bottom: 22px !important; }
+  .home-theme :is(.hero-primary,.hero-secondary) { min-height: 50px; border-radius: 12px; }
+  .home-theme .hero-project { border-radius: 18px; }
+  .home-theme .hero-project-image { min-height: 0; flex: none; aspect-ratio: 4 / 3; }
+  .home-theme .hero-project-caption { gap: 12px; }
+  .home-theme .hero-project-controls { align-self: stretch; justify-content: space-between; border-top: 1px solid var(--home-line); padding-top: 6px; }
+  .home-theme .hero-project-controls button { flex: 1; min-width: 44px; border-radius: 6px; }
+  .home-theme .hero-project-controls button[aria-pressed="true"] { background: var(--home-soft); }
+  .home-theme .solution-routes { padding: 32px 20px; }
+  .home-theme .solution-grid { grid-template-columns: 1fr; gap: 12px; }
+  .home-theme .solution-card { padding: 20px; border-radius: 16px; }
+  .home-theme .solution-card h3 { font-size: 18px; }
+  .home-theme .solution-card p { font-size: 14px; line-height: 1.65; }
+  .home-theme #contact :is(input,textarea,select) { font-size: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-theme .hero-project-image img { transition: none; }
+}

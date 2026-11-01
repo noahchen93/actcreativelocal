@@ -1,0 +1,117 @@
+/* Content-led mobile layouts for Safari and Chromium; no device sniffing. */
+.home-theme .mobile-copy { display: none; }
+.home-theme .solution-card h3 > span { margin: 0; color: inherit; font: inherit; }
+.home-theme .brief-preview-disclosure > summary { min-height: 48px; padding: 12px 0; color: var(--home-link); cursor: pointer; }
+@media (max-width: 800px) {
+  .home-theme .core-header-inner { flex-wrap: wrap; gap: 6px; padding-inline: max(12px, env(safe-area-inset-left)) max(12px, env(safe-area-inset-right)); }
+  .home-theme .core-brand { min-width: 0; }
+  .home-theme .core-brand img { flex-shrink: 0; }
+  .home-theme .core-brand span { white-space: normal; }
+  .home-theme :is(.core-language,.core-mobile > summary) { min-width: 48px; min-height: 48px; }
+  .home-theme .theme-switcher > summary { width: 48px; height: 48px; }
+  .home-theme .core-mobile > nav { max-height: calc(100vh - 160px); max-height: calc(100dvh - 160px); }
+  .home-theme .core-mobile .core-service-links a { min-height: 48px; }
+}
+@media (max-width: 639px) {
+  .home-theme .desktop-copy, .home-theme .solution-card h3 > .desktop-copy { display: none; }
+  .home-theme .mobile-copy { display: inline; }
+  .home-theme select.mobile-copy { display: block; }
+  .home-theme .core-brand { flex-shrink: 0; }
+  .home-theme .core-brand span { display: inline; }
+  .home-theme .hero-eyebrow { font-size: 11px; letter-spacing: .08em; }
+  .home-theme .hero-title { font-size: clamp(2rem, 8.5vw, 2.5rem) !important; overflow-wrap: anywhere; }
+  .home-theme .hero-description { font-size: 16px !important; line-height: 1.6 !important; }
+  .home-theme .hero-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .home-theme .hero-actions :is(a,button) { padding: 12px 10px !important; white-space: normal; line-height: 1.4; gap: 6px; }
+  .home-theme .hero-actions svg { margin: 0; }
+  .home-theme .hero-primary svg:last-child { display: none; }
+  .home-theme .hero-project-caption { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 8px; padding: 12px; }
+  .home-theme .hero-project-caption > div:first-child { flex: 1 1 140px; }
+  .home-theme .hero-project-controls { flex: 1 1 192px; border-top: 0; padding: 0; }
+  .home-theme .hero-project-controls button { min-width: 48px; min-height: 48px; }
+  /* Override the legacy global !important section rules, scoped to mobile. */
+  .home-theme :is(#services,#cases,#products,#contact) { padding-block: 32px !important; }
+  .home-theme :is(#services,#cases,#products,#contact,#process) h2 { font-size: 1.5rem !important; line-height: 1.25 !important; letter-spacing: -.02em !important; text-wrap: balance; }
+  .home-theme :is(#cases,#products,#contact) h2 + div { height: 3px !important; margin-block: 12px 20px !important; box-shadow: none; }
+  .home-theme :is(#services,#process) > p { margin-bottom: 20px; font-size: 16px; line-height: 1.6; }
+  .home-theme #services .solution-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .home-theme #services .solution-card { padding: 16px 14px; display: flex; flex-direction: column; gap: 10px; }
+  .home-theme #services .solution-card h3 { font-size: 16px; line-height: 1.4; margin: 0; }
+  .home-theme #services .solution-card p { display: none; }
+  .home-theme #services .solution-card > span { margin-top: auto; font-size: 14px; }
+  .home-theme .case-section-heading { margin-bottom: 20px; }
+  .home-theme .case-study-block + .case-study-block { margin-top: 28px; padding-top: 28px; }
+  .home-theme .case-rail { scroll-snap-type: x proximity; }
+  .home-theme .case-item { scroll-snap-align: start; }
+  .home-theme .case-rail-arrow { width: 48px; height: 48px; }
+  .home-theme #process { padding: 32px 20px; }
+  .home-theme #process .solution-grid { gap: 10px; }
+  .home-theme #process .solution-card { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 4px 12px; padding: 14px; }
+  .home-theme #process .solution-card > span { grid-row: 1 / 3; margin: 0; font-size: 16px; }
+  .home-theme #process .solution-card h3 { font-size: 16px; margin: 0; }
+  .home-theme #process .solution-card p { grid-column: 2; font-size: 15px; }
+  .home-theme #contact .desktop-location-options { display: none; }
+  .home-theme #contact .brief-label { letter-spacing: .04em; font-size: 14px; }
+  .home-theme #contact .brief-input { min-height: 48px; height: auto; padding-block: 12px; }
+  .home-theme #contact .brief-option { min-height: 48px; }
+  .home-theme #contact .brief-shell { gap: 16px; }
+  .home-theme #contact .brief-preview { min-height: 240px; }
+  .home-theme #contact .contact-social-link { min-height: 48px; padding: 12px; white-space: normal; line-height: 1.4; }
+  .home-theme #contact .brief-panel:last-child > div:last-child > .flex { flex-direction: row; }
+  .home-theme #contact .contact-social-link { min-width: 0; }
+  .home-theme #products .product-grid { gap: 12px; margin-bottom: 20px; }
+  .home-theme #products .product-card { display: grid; grid-template-columns: 80px minmax(0, 1fr); }
+  .home-theme #products .product-image { background: var(--home-soft); }
+  .home-theme #products .product-image > div { height: 100% !important; min-height: 128px; }
+  .home-theme #products .product-copy { padding: 12px; min-width: 0; }
+  .home-theme #products .product-title { margin-bottom: 0; }
+  .home-theme #products .product-title > div:first-child { min-width: 0; }
+  .home-theme #products .product-title > div:first-child > div, .home-theme #products .product-title > div:last-child, .home-theme #products .product-description { display: none; }
+  .home-theme #products .product-title h3 { font-size: 16px; line-height: 1.4; }
+  .home-theme #products .product-copy > button { min-height: 48px; margin: 4px 0 0; justify-content: flex-start; font-size: 14px; }
+  .home-theme #products .product-card[data-expanded="true"] { display: block; }
+  .home-theme #products .product-card[data-expanded="true"] .product-image > div { height: 180px !important; }
+  .home-theme #products .product-copy .mobile-copy { display: block; font-size: 16px; line-height: 1.6; }
+  .home-theme #products .product-copy a { white-space: normal; }
+  .home-theme .home-footer-content { padding: 32px 20px max(28px, env(safe-area-inset-bottom)); }
+  .home-theme .home-footer-content > .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
+  .home-theme .home-footer-content > .grid > div:first-child, .home-theme .home-footer-content > .grid > div:last-child { grid-column: 1 / -1; }
+  .home-theme .home-footer-content :is(nav,ul) :is(a,button) { display: flex; align-items: center; min-height: 48px; overflow-wrap: anywhere; }
+  .home-theme .home-footer-content a[aria-label] { width: 48px; height: 48px; }
+  .home-theme .home-footer-content :is(h1,h2,h3,h4,p,button,a) { overflow-wrap: anywhere; }
+
+  .home-theme #contact button[aria-label] { min-width: 48px; min-height: 48px; }
+  .home-theme #products > .container > div:last-child h3 { font-size: 20px; line-height: 1.3; }
+  .home-theme #products > .container > div:last-child .flex > .flex { flex-wrap: wrap; justify-content: center; }
+
+  .home-theme :is(.solution-card h3,.product-title h3,.core-mobile nav,.brief-panel p) { overflow-wrap: anywhere; }
+  .home-theme #process .solution-card { grid-template-columns: 1.8em minmax(0, 1fr); }
+  .home-theme .case-card-mobile > .flex { flex-wrap: wrap; }
+  .home-theme .case-card-mobile span { white-space: normal; overflow: visible; text-overflow: clip; overflow-wrap: anywhere; }
+  .home-theme #contact :is(a,button) { white-space: normal; overflow-wrap: anywhere; }
+  .home-theme #contact a > span { min-width: 0; }
+  .home-theme #contact [data-slot="button"] { height: auto; min-height: 48px; padding: 12px; }
+
+  .home-theme #contact select.brief-input {
+    -webkit-appearance: none;
+    appearance: none;
+    padding-right: 36px;
+    background-image: linear-gradient(45deg, transparent 50%, var(--home-muted) 50%), linear-gradient(135deg, var(--home-muted) 50%, transparent 50%);
+    background-position: calc(100% - 19px) center, calc(100% - 14px) center;
+    background-size: 5px 5px;
+    background-repeat: no-repeat;
+  }
+}
+@media (max-width: 359px) {
+  .home-theme .core-brand span { display: none; }
+  .home-theme .hero-actions { grid-template-columns: 1fr; }
+  .home-theme #services .solution-grid { grid-template-columns: 1fr; }
+  .home-theme .home-footer-content > .grid { grid-template-columns: 1fr; }
+}
+
+/* Let enlarged text grow naturally instead of clipping inside fixed controls. */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-theme :is(#cases,#products,#contact) [style*="transform"] { transform: none !important; }
+}
+

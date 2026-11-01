@@ -157,7 +157,7 @@ export function Hero() {
               className="hero-eyebrow"
               style={{ marginBottom: "1.25rem" }}
             >
-              {t("新加坡 · 创意制作与交付", "Singapore · Creative production & delivery")}
+              {t("新加坡 · 创意制作与交付", "Singapore · Creative production")}
             </div>
 
             {/* H1 */}
@@ -172,13 +172,12 @@ export function Hero() {
               }}
             >
               <span className="hero-title-accent">
-                {t("定制创意，", "Custom event ideas.")}
+                <span className="desktop-copy">{t("定制创意，", "Custom event ideas.")}</span>
+                <span className="mobile-copy">{t("定制创意，", "Custom builds.")}</span>
               </span>
               <br />
-              {t(
-                "一站式交付。",
-                "One team to deliver.",
-              )}
+              <span className="desktop-copy">{t("一站式交付。", "One team to deliver.")}</span>
+              <span className="mobile-copy">{t("一站式交付。", "One team.")}</span>
             </h1>
 
             {/* Description */}
@@ -191,15 +190,16 @@ export function Hero() {
                 marginBottom: "1.75rem",
               }}
             >
-              {t(
+              <span className="desktop-copy">{t(
                 "立足新加坡的创意制作伙伴。为活动机构、品牌团队与艺术项目交付定制道具、展陈装置、活动搭建与跨境生产支持。",
                 "Custom props, exhibition booths and event builds. ACT Creative coordinates specialist production, logistics and Singapore setup around your brief.",
-              )}
+              )}</span>
+              <span className="mobile-copy">{t("道具、展位与活动搭建，统筹制作、运输与新加坡落地。", "Props, booths and event builds. Production, freight and Singapore setup, coordinated.")}</span>
             </p>
 
             {/* CTAs */}
             <div
-              className="flex flex-col sm:flex-row gap-3"
+              className="hero-actions flex flex-col sm:flex-row gap-3"
               style={{ marginBottom: "1rem" }}
             >
               <Button
@@ -210,7 +210,8 @@ export function Hero() {
               >
                 <a href="#contact">
                   <Mail className="w-4 h-4 mr-2" />
-                  {t("整理项目需求", "Plan your project")}
+                  <span className="desktop-copy">{t("整理项目需求", "Plan your project")}</span>
+                  <span className="mobile-copy">{t("整理需求", "Start a brief")}</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
               </Button>

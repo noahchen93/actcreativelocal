@@ -128,6 +128,7 @@ export function Contact() {
   const [stage, setStage] = useState(stages[0].id);
   const [specifications, setSpecifications] = useState("");
   const [emailOpened, setEmailOpened] = useState(false);
+  const previewDisclosureRef = useRef<HTMLDetailsElement>(null);
   const previewRef = useRef<HTMLTextAreaElement>(null);
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
   const briefStarted = useRef(false);
@@ -184,6 +185,7 @@ export function Contact() {
       toast.success(t("项目需求已复制", "Project brief copied"));
       timers.current.push(setTimeout(() => setCopiedBrief(false), 2200));
     } catch {
+      if (previewDisclosureRef.current) previewDisclosureRef.current.open = true;
       previewRef.current?.focus();
       previewRef.current?.select();
       toast(t("请手动复制项目需求", "Please copy the project brief manually"));
@@ -403,7 +405,14 @@ export function Contact() {
                 <span>{t("地点", "Location")}</span>
                 <MapPin className="w-4 h-4 text-[#CCFF00]" />
               </div>
-              <div className="brief-option-grid">
+              <select className="brief-input mobile-copy" aria-label={t("地点", "Location")} value={location} onChange={event => {
+                trackBriefStart();
+                setLocation(event.target.value);
+                if (event.target.value === "export") setScopeIds(ids => ids.filter(id => id !== "install"));
+              }}>
+                {locations.map(option => <option key={option.id} value={option.id}>{option.id === "export" ? t("其他地区 · 仅生产出口", "Other market · export only") : t(option.zh, option.en)}</option>)}
+              </select>
+              <div className="brief-option-grid desktop-location-options">
                 {locations.map((option) => (
                   <button
                     key={option.id}
@@ -530,9 +539,12 @@ export function Contact() {
               </button>
             </div>
 
+            <details ref={previewDisclosureRef} className="brief-preview-disclosure">
+              <summary>{t("查看完整需求预览", "Review your brief")}</summary>
             <p className="brief-help mb-3" style={{ overflowWrap: "anywhere" }}>{t("邮件主题：", "Subject: ")}{projectBriefSubject(brief)}</p>
             <textarea ref={previewRef} className="brief-preview" aria-label={t("项目需求预览", "Project brief preview")} value={briefMessage} readOnly />
-            <p className="brief-help mt-3">{t("需求不会自动发送；自由填写的文字不会作为分析事件上传。打开邮件后请附上参考图，再点击发送。", "Your brief is not sent automatically. Free-text details are not included in analytics events. Open your email app, attach references, then send.")}</p>
+            </details>
+            <p className="brief-help mt-3">{t("不会自动发送，填写内容不上传分析。请在邮件中附图并发送。", "Nothing is sent automatically. Your text stays out of analytics. Attach references in your email, then send.")}</p>
 
             <div className="mt-5">
               <Button
@@ -545,7 +557,7 @@ export function Contact() {
                 </a>
               </Button>
               <button type="button" onClick={copyBrief} className="contact-social-link w-full mt-3">
-                <Copy className="w-4 h-4" />{t("复制需求，粘贴到邮件或 WhatsApp", "Copy brief for email or WhatsApp")}
+                <Copy className="w-4 h-4" />{t("复制项目需求", "Copy project brief")}
               </button>
               <p className="brief-help mt-3">{t("没有打开邮件软件？复制上方需求，用常用邮箱发送至 contact@actcreative.net。", "No email app opened? Copy the brief and send it from your usual inbox to contact@actcreative.net.")}</p>
               {emailOpened && <p className="brief-help brief-status" role="status">{t("已尝试打开邮件草稿；网站无法确认邮件是否已发出。请在邮件软件中完成发送。", "We tried to open your email draft. The website cannot confirm delivery; please send it from your email app.")}</p>}

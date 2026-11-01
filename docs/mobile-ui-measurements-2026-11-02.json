@@ -1,0 +1,1584 @@
+{
+  "measured_at": "2026-11-02 Asia/Singapore",
+  "method": "Fully loaded homepage, default collapsed state. Before: Chromium. After: Chromium and WebKit. Browser emulation, not real-device certification.",
+  "before": [
+    {
+      "width": 375,
+      "language": "en",
+      "height": 10330,
+      "sections": {
+        "home": 866,
+        "services": 1383,
+        "cases": 1327,
+        "process": 924,
+        "contact": 2395,
+        "products": 2134
+      },
+      "headings": [
+        {
+          "text": "Custom event ideas.\nOne team to deliver.",
+          "lines": 2
+        },
+        {
+          "text": "What are you planning?",
+          "lines": 2
+        },
+        {
+          "text": "SELECTED PROJECTS IN SINGAPORE",
+          "lines": 3
+        },
+        {
+          "text": "SELECTED REGIONAL PROJECTS",
+          "lines": 2
+        },
+        {
+          "text": "One project contact, from brief to delivery",
+          "lines": 2
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 2
+        },
+        {
+          "text": "More production formats",
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "language": "zh",
+      "height": 9491,
+      "sections": {
+        "home": 840,
+        "services": 1207,
+        "cases": 1210,
+        "process": 808,
+        "contact": 2229,
+        "products": 1936
+      },
+      "headings": [
+        {
+          "text": "定制创意，\n一站式交付。",
+          "lines": 2
+        },
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "一位项目联系人，统筹制作与交付",
+          "lines": 2
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "language": "en",
+      "height": 10298,
+      "sections": {
+        "home": 880,
+        "services": 1359,
+        "cases": 1301,
+        "process": 924,
+        "contact": 2397,
+        "products": 2136
+      },
+      "headings": [
+        {
+          "text": "Custom event ideas.\nOne team to deliver.",
+          "lines": 2
+        },
+        {
+          "text": "What are you planning?",
+          "lines": 2
+        },
+        {
+          "text": "SELECTED PROJECTS IN SINGAPORE",
+          "lines": 2
+        },
+        {
+          "text": "SELECTED REGIONAL PROJECTS",
+          "lines": 2
+        },
+        {
+          "text": "One project contact, from brief to delivery",
+          "lines": 2
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 2
+        },
+        {
+          "text": "More production formats",
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "language": "zh",
+      "height": 9490,
+      "sections": {
+        "home": 854,
+        "services": 1185,
+        "cases": 1231,
+        "process": 808,
+        "contact": 2230,
+        "products": 1921
+      },
+      "headings": [
+        {
+          "text": "定制创意，\n一站式交付。",
+          "lines": 2
+        },
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "一位项目联系人，统筹制作与交付",
+          "lines": 2
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "language": "en",
+      "height": 10389,
+      "sections": {
+        "home": 855,
+        "services": 1383,
+        "cases": 1341,
+        "process": 924,
+        "contact": 2416,
+        "products": 2169
+      },
+      "headings": [
+        {
+          "text": "Custom event ideas.\nOne team to deliver.",
+          "lines": 2
+        },
+        {
+          "text": "What are you planning?",
+          "lines": 2
+        },
+        {
+          "text": "SELECTED PROJECTS IN SINGAPORE",
+          "lines": 3
+        },
+        {
+          "text": "SELECTED REGIONAL PROJECTS",
+          "lines": 3
+        },
+        {
+          "text": "One project contact, from brief to delivery",
+          "lines": 2
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 2
+        },
+        {
+          "text": "More production formats",
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "language": "zh",
+      "height": 9506,
+      "sections": {
+        "home": 829,
+        "services": 1207,
+        "cases": 1191,
+        "process": 808,
+        "contact": 2251,
+        "products": 1958
+      },
+      "headings": [
+        {
+          "text": "定制创意，\n一站式交付。",
+          "lines": 2
+        },
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "一位项目联系人，统筹制作与交付",
+          "lines": 2
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ]
+    },
+    {
+      "width": 412,
+      "language": "en",
+      "height": 10226,
+      "sections": {
+        "home": 875,
+        "services": 1363,
+        "cases": 1337,
+        "process": 924,
+        "contact": 2334,
+        "products": 2093
+      },
+      "headings": [
+        {
+          "text": "Custom event ideas.\nOne team to deliver.",
+          "lines": 2
+        },
+        {
+          "text": "What are you planning?",
+          "lines": 2
+        },
+        {
+          "text": "SELECTED PROJECTS IN SINGAPORE",
+          "lines": 2
+        },
+        {
+          "text": "SELECTED REGIONAL PROJECTS",
+          "lines": 2
+        },
+        {
+          "text": "One project contact, from brief to delivery",
+          "lines": 2
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 2
+        },
+        {
+          "text": "More production formats",
+          "lines": 2
+        }
+      ]
+    },
+    {
+      "width": 412,
+      "language": "zh",
+      "height": 9503,
+      "sections": {
+        "home": 875,
+        "services": 1187,
+        "cases": 1263,
+        "process": 808,
+        "contact": 2210,
+        "products": 1900
+      },
+      "headings": [
+        {
+          "text": "定制创意，\n一站式交付。",
+          "lines": 2
+        },
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "一位项目联系人，统筹制作与交付",
+          "lines": 2
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ]
+    }
+  ],
+  "after": [
+    {
+      "engine": "chromium",
+      "name": "reflow",
+      "width": 320,
+      "height": 568,
+      "language": "en",
+      "pageHeight": 8071,
+      "heroLines": 2,
+      "introLines": 3,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 777,
+        "services": 788,
+        "cases": 973,
+        "process": 731,
+        "contact": 1808,
+        "products": 1143
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "reflow",
+      "width": 320,
+      "height": 568,
+      "language": "zh",
+      "pageHeight": 7533,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 752,
+        "services": 762,
+        "cases": 973,
+        "process": 631,
+        "contact": 1652,
+        "products": 1015
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "iphone-se",
+      "width": 375,
+      "height": 667,
+      "language": "en",
+      "pageHeight": 7083,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 733,
+        "services": 540,
+        "cases": 1043,
+        "process": 681,
+        "contact": 1700,
+        "products": 1066
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "iphone-se",
+      "width": 375,
+      "height": 667,
+      "language": "zh",
+      "pageHeight": 6624,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 733,
+        "services": 470,
+        "cases": 1015,
+        "process": 581,
+        "contact": 1568,
+        "products": 977
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "iphone",
+      "width": 390,
+      "height": 844,
+      "language": "en",
+      "pageHeight": 7002,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 747,
+        "services": 492,
+        "cases": 1033,
+        "process": 681,
+        "contact": 1700,
+        "products": 1028
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "iphone",
+      "width": 390,
+      "height": 844,
+      "language": "zh",
+      "pageHeight": 6632,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 747,
+        "services": 470,
+        "cases": 1033,
+        "process": 557,
+        "contact": 1568,
+        "products": 977
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "android-small",
+      "width": 360,
+      "height": 800,
+      "language": "en",
+      "pageHeight": 7128,
+      "heroLines": 2,
+      "introLines": 3,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 747,
+        "services": 563,
+        "cases": 1024,
+        "process": 681,
+        "contact": 1700,
+        "products": 1093
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "android-small",
+      "width": 360,
+      "height": 800,
+      "language": "zh",
+      "pageHeight": 6616,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 722,
+        "services": 470,
+        "cases": 996,
+        "process": 581,
+        "contact": 1590,
+        "products": 977
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "android-large",
+      "width": 412,
+      "height": 915,
+      "language": "en",
+      "pageHeight": 6914,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 768,
+        "services": 470,
+        "cases": 1061,
+        "process": 656,
+        "contact": 1655,
+        "products": 1004
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "android-large",
+      "width": 412,
+      "height": 915,
+      "language": "zh",
+      "pageHeight": 6630,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 768,
+        "services": 444,
+        "cases": 1061,
+        "process": 532,
+        "contact": 1568,
+        "products": 977
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "landscape",
+      "width": 844,
+      "height": 390,
+      "language": "en",
+      "pageHeight": 7389,
+      "heroLines": 2,
+      "introLines": 3,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 1012,
+        "services": 700,
+        "cases": 1177,
+        "process": 584,
+        "contact": 1534,
+        "products": 1573
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "landscape",
+      "width": 844,
+      "height": 390,
+      "language": "zh",
+      "pageHeight": 7104,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 987,
+        "services": 628,
+        "cases": 1177,
+        "process": 537,
+        "contact": 1490,
+        "products": 1477
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "desktop",
+      "width": 1280,
+      "height": 900,
+      "language": "en",
+      "pageHeight": 5960,
+      "heroLines": 2,
+      "introLines": 3,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 586,
+        "services": 688,
+        "cases": 1286,
+        "process": 573,
+        "contact": 1073,
+        "products": 1181
+      }
+    },
+    {
+      "engine": "chromium",
+      "name": "desktop",
+      "width": 1280,
+      "height": 900,
+      "language": "zh",
+      "pageHeight": 5666,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 545,
+        "services": 643,
+        "cases": 1286,
+        "process": 504,
+        "contact": 1006,
+        "products": 1109
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "reflow",
+      "width": 320,
+      "height": 568,
+      "language": "en",
+      "pageHeight": 8070,
+      "heroLines": 2,
+      "introLines": 3,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 777,
+        "services": 788,
+        "cases": 973,
+        "process": 731,
+        "contact": 1808,
+        "products": 1143
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "reflow",
+      "width": 320,
+      "height": 568,
+      "language": "zh",
+      "pageHeight": 7508,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 751,
+        "services": 762,
+        "cases": 973,
+        "process": 606,
+        "contact": 1652,
+        "products": 1016
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "iphone-se",
+      "width": 375,
+      "height": 667,
+      "language": "en",
+      "pageHeight": 7083,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 732,
+        "services": 540,
+        "cases": 1042,
+        "process": 681,
+        "contact": 1700,
+        "products": 1066
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "iphone-se",
+      "width": 375,
+      "height": 667,
+      "language": "zh",
+      "pageHeight": 6624,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 732,
+        "services": 470,
+        "cases": 1014,
+        "process": 581,
+        "contact": 1568,
+        "products": 978
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "iphone",
+      "width": 390,
+      "height": 844,
+      "language": "en",
+      "pageHeight": 7001,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 746,
+        "services": 492,
+        "cases": 1033,
+        "process": 681,
+        "contact": 1700,
+        "products": 1028
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "iphone",
+      "width": 390,
+      "height": 844,
+      "language": "zh",
+      "pageHeight": 6632,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 746,
+        "services": 470,
+        "cases": 1033,
+        "process": 557,
+        "contact": 1568,
+        "products": 978
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "android-small",
+      "width": 360,
+      "height": 800,
+      "language": "en",
+      "pageHeight": 7127,
+      "heroLines": 2,
+      "introLines": 3,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 747,
+        "services": 563,
+        "cases": 1024,
+        "process": 681,
+        "contact": 1700,
+        "products": 1093
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "android-small",
+      "width": 360,
+      "height": 800,
+      "language": "zh",
+      "pageHeight": 6616,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 721,
+        "services": 470,
+        "cases": 996,
+        "process": 581,
+        "contact": 1590,
+        "products": 978
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "android-large",
+      "width": 412,
+      "height": 915,
+      "language": "en",
+      "pageHeight": 6914,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 767,
+        "services": 470,
+        "cases": 1061,
+        "process": 656,
+        "contact": 1655,
+        "products": 1004
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "android-large",
+      "width": 412,
+      "height": 915,
+      "language": "zh",
+      "pageHeight": 6630,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 767,
+        "services": 444,
+        "cases": 1061,
+        "process": 532,
+        "contact": 1568,
+        "products": 978
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "landscape",
+      "width": 844,
+      "height": 390,
+      "language": "en",
+      "pageHeight": 7388,
+      "heroLines": 2,
+      "introLines": 3,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 1011,
+        "services": 700,
+        "cases": 1177,
+        "process": 584,
+        "contact": 1534,
+        "products": 1573
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "landscape",
+      "width": 844,
+      "height": 390,
+      "language": "zh",
+      "pageHeight": 7104,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 986,
+        "services": 628,
+        "cases": 1177,
+        "process": 537,
+        "contact": 1490,
+        "products": 1478
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "desktop",
+      "width": 1280,
+      "height": 900,
+      "language": "en",
+      "pageHeight": 5960,
+      "heroLines": 2,
+      "introLines": 3,
+      "headings": [
+        {
+          "text": "What are you planning?",
+          "lines": 1
+        },
+        {
+          "text": "Singapore projects",
+          "lines": 1
+        },
+        {
+          "text": "Regional projects",
+          "lines": 1
+        },
+        {
+          "text": "From brief to delivery",
+          "lines": 1
+        },
+        {
+          "text": "SEND A PROJECT BRIEF",
+          "lines": 1
+        },
+        {
+          "text": "More production formats",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 586,
+        "services": 688,
+        "cases": 1286,
+        "process": 573,
+        "contact": 1073,
+        "products": 1181
+      }
+    },
+    {
+      "engine": "webkit",
+      "name": "desktop",
+      "width": 1280,
+      "height": 900,
+      "language": "zh",
+      "pageHeight": 5666,
+      "heroLines": 2,
+      "introLines": 2,
+      "headings": [
+        {
+          "text": "你的项目需要什么？",
+          "lines": 1
+        },
+        {
+          "text": "新加坡精选项目",
+          "lines": 1
+        },
+        {
+          "text": "精选区域项目",
+          "lines": 1
+        },
+        {
+          "text": "从需求到交付",
+          "lines": 1
+        },
+        {
+          "text": "发送项目需求",
+          "lines": 1
+        },
+        {
+          "text": "更多制作类型",
+          "lines": 1
+        }
+      ],
+      "sections": {
+        "home": 545,
+        "services": 643,
+        "cases": 1286,
+        "process": 504,
+        "contact": 1006,
+        "products": 1109
+      }
+    }
+  ]
+}

@@ -232,7 +232,7 @@ export function ProductCategories() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 md:mb-12 max-w-7xl mx-auto">
+        <div id="product-grid" className="product-grid grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 md:mb-12 max-w-7xl mx-auto">
           {visibleCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -247,14 +247,15 @@ export function ProductCategories() {
               
               {/* Card */}
               <div 
-                className={`relative h-full transition-all border rounded-lg overflow-hidden ${
+                data-expanded={expandedCategory === index}
+                className={`product-card relative h-full transition-all border rounded-lg overflow-hidden ${
                   expandedCategory === index 
                     ? 'border-[#CCFF00]/50 bg-[#1a1a1a]' 
                     : 'border-[#CCFF00]/20 bg-[#1a1a1a]/90 hover:border-[#CCFF00]/40'
                 }`}
               >
                 {/* Image Header */}
-                <div className="relative">
+                <div className="product-image">
                   <motion.div 
                     className="relative overflow-hidden"
                     animate={{ height: expandedCategory === index ? 280 : 220 }}
@@ -270,9 +271,9 @@ export function ProductCategories() {
                   </motion.div>
                 </div>
                 
-                <div className="p-4">
+                <div className="product-copy p-4">
                   {/* Title Section - moved below image */}
-                  <div className="flex items-center justify-between mb-3">
+                  <div className="product-title flex items-center justify-between mb-3">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 bg-[#CCFF00] rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
                         <category.icon className="w-5 h-5 text-black" />
@@ -285,7 +286,7 @@ export function ProductCategories() {
                   </div>
                   
                   {/* Description */}
-                  <p className="text-sm text-gray-300 leading-relaxed mb-3">
+                  <p className="product-description text-sm text-gray-300 leading-relaxed mb-3">
                     {t(category.description.zh, category.description.en)}
                   </p>
                   
@@ -317,6 +318,7 @@ export function ProductCategories() {
                     className="overflow-hidden"
                   >
                     <div className="pt-3 border-t border-[#CCFF00]/20">
+                      <p className="mobile-copy text-sm mb-3">{t(category.description.zh, category.description.en)}</p>
                       <h4 className="text-xs text-gray-500 mb-3">
                         {t("产品特点:", "Features:")}
                       </h4>
@@ -345,7 +347,6 @@ export function ProductCategories() {
           ))}
         </div>
 
-        {!showAllCategories && (
           <motion.div
             className="mb-12 text-center"
             initial={{ opacity: 0, y: 12 }}
@@ -355,14 +356,14 @@ export function ProductCategories() {
           >
             <button
               type="button"
-              onClick={() => setShowAllCategories(true)}
-              className="inline-flex items-center gap-2 rounded-lg border border-[#CCFF00]/40 px-5 py-3 text-sm text-[#CCFF00] transition-all hover:bg-[#CCFF00] hover:text-black"
+              onClick={() => { setShowAllCategories(value => !value); setExpandedCategory(null); }}
+              aria-expanded={showAllCategories} aria-controls="product-grid"
+              className="product-more-button inline-flex items-center gap-2 rounded-lg border border-[#CCFF00]/40 px-5 py-3 text-sm text-[#CCFF00] transition-all hover:bg-[#CCFF00] hover:text-black"
             >
-              <ChevronDown className="w-4 h-4" />
-              {t("查看更多产品类别", "View more categories")}
+              {showAllCategories ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+              {showAllCategories ? t("收起更多类别", "Show fewer categories") : t("查看更多产品类别", "View more categories")}
             </button>
           </motion.div>
-        )}
 
         {/* Bottom CTA */}
         <motion.div 
