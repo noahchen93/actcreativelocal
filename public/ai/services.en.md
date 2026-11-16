@@ -44,7 +44,7 @@ Case reference: [HIKVISION & EZVIZ Booth at GITEX Asia Singapore | ACT Creative]
 
 [Custom Props Fabrication Singapore | Events & Displays](https://actcreative.net/custom-props-singapore/)
 
-Custom prop manufacturer and fabrication partner in Singapore for events, brand activations, product replicas, photo moments and retail displays.
+Custom event props, product replicas and branded displays for Singapore events. ACT Creative coordinates fabrication, delivery and on-site installation.
 
 Case reference: [Kick Off Challenge at The Star Vista | ACT Creative](https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/)
 
