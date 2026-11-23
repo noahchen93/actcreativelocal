@@ -74,6 +74,10 @@
       html = replaceMeta(html, 'twitter:title', zhTitle);
       html = replaceMeta(html, 'twitter:description', zhDescription);
 
+      const zhFallback = await fs.readFile(path.resolve(__dirname, 'src/data/home-fallback.zh.html'), 'utf8');
+      if (!html.includes('<!-- SEO_FALLBACK_START -->')) throw new Error('Missing localized homepage fallback marker');
+      html = html.replace(/<!-- SEO_FALLBACK_START -->[\s\S]*?<!-- SEO_FALLBACK_END -->/, () => `<!-- SEO_FALLBACK_START -->\n${zhFallback}\n<!-- SEO_FALLBACK_END -->`);
+
       await fs.mkdir(zhDir, { recursive: true });
       await fs.writeFile(zhIndexPath, html, 'utf8');
     },

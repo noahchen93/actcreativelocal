@@ -1,6 +1,6 @@
 # ACT Creative Website Project Context
 
-Last updated: 2026-10-24, Asia/Shanghai.
+Last updated: 2026-11-23, Asia/Singapore.
 
 This file is the living handoff document for `actcreativelocal`. Update it in the same commit as every meaningful website, content, data, AI, deployment, or operations change. If another tool or developer continues this project, read this file first.
 
@@ -204,6 +204,27 @@ Operations:
 - `.env.local` exists locally and must not be committed.
 
 ## Development History
+
+### 2026-11-23 core-service SEO/GEO release preparation
+
+- User authorized committing, pushing and production deployment of the accumulated changes below. Seven core services are props, sculpture, inflatables, booths, event fabrication, Christmas/New Year and cross-border sourcing; food trucks and interactive displays are supplementary.
+- Homepage service routes and bilingual fallback content reflect those priorities. Catalog now contains 14 services with explicit business roles, contextual inquiry links and source-backed descriptions; inflatables include existing Sentosa case evidence. Updated machine-readable summaries and llms discovery text without ranking guarantees.
+- Architecture, SEO and production build checks pass, including retired-assistant guards and 74-page search audit. Four mobile Chromium/WebKit English/Chinese profiles passed. The experimental public read-only service lookup is not a restored chat assistant. No Hong Kong local-team promises or supplier identities are added.
+
+### 2026-11-02 SEO and personal-agent follow-up (local, not released)
+
+- Research distinguishes Google indexing/citation eligibility from agent task completion. Sources, adoption decisions and X access limits are in `docs/seo-personal-agents-2026-11-02.md`; neutral future visibility tasks are in `docs/agent-search-evaluation-2026-11-02.json`.
+- Fixed generated `/zh/` no-JavaScript content: `src/data/home-fallback.zh.html` now supplies Chinese service/case/inquiry content, substituted only in the Chinese build by `localizedHomepagePlugin`. Root fallback markers and checks prevent English fallback silently leaking into the Chinese page. React users see the existing compact homepage.
+- Service catalog v1.1 adds source-page modification dates and language-aware, allowlisted inquiry URLs for all 13 services. `src/data/brief-entry-routes.json` is the shared routing map; `scripts/sync-core-navigation.mjs` explicitly retains its original four-page scope.
+- Homepage loads `public/agent-services.js`, an experimental feature-detected WebMCP tool `actcreative_get_services`. Supports current Document and earlier Navigator host shapes. Reads public catalog on invocation only; returns canonical facts/cases/brief links. No form access, order, quote, message sending, backend MCP/A2A endpoint, assistant UI or chat runtime is introduced.
+- `agent:check` covers source consistency, permitted types, localization, unsupported hosts, input rejection, read-only behavior, caching and transient-error recovery. Build checks validate actual Chinese output and script inclusion. Chromium/WebKit verified no-JS English/Chinese content, no overflow, contextual type preselection and simulated-host invocation through the real catalog. Native WebMCP was unavailable in the installed test browsers; no native compatibility certification or ranking uplift is claimed.
+- Existing build, SEO/content, contact, architecture and retired-assistant checks passed. `geo` CLI is unavailable; use the repository checks instead of inventing a score. GSC read-only export failed because no effective credentials were configured; query/ranking/AI-performance changes remain unmeasured.
+
+### 2026-11-02 mobile release
+
+- Released signed commit `9a95756941362bb7d8c0b8e70114230a07fd9c74` to production through Vercel deployment `dpl_CfEqRqBPP1abQj9ct4xK6tTxMQFN`; both custom domains point to it. Retained remote `1b62aaf` service-directory work before release.
+- Mobile layouts, 28 local browser profiles and 200% text stress checks are recorded in `docs/mobile-ui-review-2026-11-02.md`; production Chromium/WebKit English/Chinese checks passed. Prior production was `dpl_EKqyG23TfGtgh8VmXdVQwYffg1Ut` / `1b62aaf`.
+
 
 ### 2026-10-23 unified homepage theme release
 

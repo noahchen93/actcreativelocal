@@ -4,7 +4,7 @@
   "description": "ACT Creative is a Singapore-based integrated event solutions and fabrication partner. It coordinates specialist suppliers, China-side production, quality control, cross-border logistics and Singapore local execution for exhibitions, brand activations, custom props, sculpture, merchandise, mobile event units and venue shortlisting.",
   "url": "https://actcreative.net/",
   "about": "https://actcreative.net/about/",
-  "lastModified": "2026-10-24",
+  "lastModified": "2026-11-23",
   "languages": ["en-SG", "zh-Hans-SG"],
   "primaryMarket": "Singapore",
   "serviceRegions": ["Singapore", "supported Southeast Asian markets", "China-side production networks"],
@@ -16,12 +16,13 @@
     "event fabrication",
     "exhibition booth design and build",
     "custom props and sculpture",
+    "custom flying inflatables and technical event planning",
+    "Christmas and New Year decoration procurement and installation",
     "China sourcing and production coordination",
     "cross-border event logistics",
-    "custom merchandise",
-    "mobile event trucks and vintage Kombi van activations",
-    "Singapore event venue shortlisting"
+    "custom merchandise"
   ],
+  "additionalTopics": ["mobile event trucks and vintage Kombi van activations", "interactive displays", "Singapore event venue shortlisting"],
   "discovery": {
     "serviceEvidenceDirectory": "https://actcreative.net/ai/catalog.json",
     "englishServiceText": "https://actcreative.net/ai/services.en.md",

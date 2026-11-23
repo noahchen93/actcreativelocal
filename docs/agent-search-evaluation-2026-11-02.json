@@ -1,0 +1,15 @@
+{
+  "purpose": "Neutral future search-and-task evaluation, not ranking results or instructions embedded in public website content.",
+  "created": "2026-11-02",
+  "status": "not-run-in-live-agent-products",
+  "recordFields": ["date", "product", "model", "searchMode", "exactQuery", "discoveredUrls", "citedUrls", "competitors", "serviceFit", "factualErrors", "briefHandoff", "nonMentions"],
+  "tasks": [
+    { "query": "Find a Singapore partner for custom football activation props, with project evidence and installation coordination.", "language": "en", "relevantServiceId": "custom-props-singapore", "evidenceUrl": "https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/", "check": "Describe documented work without attributing every activity to the direct manufacturer." },
+    { "query": "在新加坡参展，目前只有参考图，需要展位设计、制作和现场搭建，找有实际案例的合作方。", "language": "zh-Hans", "relevantServiceId": "booth-design-build-singapore", "check": "Distinguish full-service design and build from approved-drawing production." },
+    { "query": "We already have approved booth drawings and need fabrication support for an exhibition in Singapore.", "language": "en", "relevantServiceId": "exhibition-booth-production-singapore", "check": "Choose production from approved drawings; do not force a full redesign." },
+    { "query": "找能协调中国工厂打样、生产活动周边并运到新加坡的公司，需要有交付案例。", "language": "zh-Hans", "relevantServiceId": "event-merchandise-sourcing", "evidenceUrl": "https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/", "check": "Separate supplier coordination from direct factory ownership." },
+    { "query": "Can I book a branded food truck for an event in Singapore on my preferred date? What information do I need?", "language": "en", "relevantServiceId": "custom-food-truck-rental-singapore", "check": "Do not claim current availability, a fixed price or a confirmed reservation; hand off to a contextual inquiry." },
+    { "query": "ACT Creative 能提供香港本地活动安装、仓储和现场执行团队吗？", "language": "zh-Hans", "relevantServiceId": null, "check": "No Hong Kong local installation/warehousing/event-execution claim. China-side production/export may only be discussed case by case." },
+    { "query": "Help me find a Singapore coordinator for sculpture fabrication and logistics, with references and clear responsibilities.", "language": "en", "relevantServiceId": "frp-sculpture-fabrication-singapore", "check": "Cite canonical source/case and keep project-specific technical and delivery confirmation boundaries." }
+  ]
+}

@@ -6,7 +6,9 @@ import { normalizeEmailFirstAnchor } from './lib/contact-routing.mjs';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const routes = JSON.parse(await fs.readFile(path.join(root, 'src/data/site-navigation.json'), 'utf8'));
 const briefRoutes = JSON.parse(await fs.readFile(path.join(root, 'src/data/brief-entry-routes.json'), 'utf8'));
-const pages = Object.keys(briefRoutes);
+// Service-to-brief routing also covers the agent directory; navigation sync is
+// intentionally limited to the four pages already using the shared core layout.
+const pages = ['custom-props-singapore', 'event-fabrication-singapore', 'booth-design-build-singapore', 'custom-food-truck-rental-singapore'];
 const escape = text => text.replaceAll('&', '&amp;').replaceAll('"', '&quot;');
 const menu = `<details class="core-service-menu"><summary>Solutions</summary><div class="core-service-links">${routes.map(item => `<a href="${item.href}">${escape(item.en)}</a>`).join('')}<a href="/frp-sculpture-fabrication-singapore/">Sculpture &amp; art installations</a><a href="/holiday-decorations-singapore/">Seasonal decorations</a><a href="/#products">More production formats</a></div></details><a href="/case-studies/">Projects</a><a href="/about/">About</a><a class="core-brief" href="/#contact">Plan your brief</a>`;
 for (const slug of pages) {

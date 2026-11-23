@@ -2,7 +2,7 @@
 
 > Singapore event production and China sourcing coordination. Public service facts below are subject to project-specific confirmation.
 
-Updated: 2026-10-24
+Updated: 2026-11-23
 
 Email: contact@actcreative.net. An email draft is not a sent inquiry, quote or booking.
 
@@ -14,6 +14,12 @@ Singapore execution and China-side production coordination; regional support sub
 
 End-to-end event fabrication in Singapore for product launches and brand activations: custom props, scenic builds, logistics, setup and installation.
 
+Business role: Core service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=event-buildout#contact
+
+Source page modified: 2026-09-12
+
 Case reference: [A BIG BIG WORLD Sentosa Floating Inflatable | ACT Creative](https://actcreative.net/case-studies/sentosa-big-big-world-event-fabrication/)
 
 ## Full-service exhibition booth design and build
@@ -21,6 +27,12 @@ Case reference: [A BIG BIG WORLD Sentosa Floating Inflatable | ACT Creative](htt
 [Exhibition Booth Design & Build Singapore | ACT Creative](https://actcreative.net/booth-design-build-singapore/)
 
 Custom exhibition booths from design to fabrication and Singapore setup. Explore real project references and plan your build for MBS, EXPO or Suntec.
+
+Business role: Core service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=booth#contact
+
+Source page modified: 2026-09-12
 
 Case reference: [HIKVISION & EZVIZ Booth at GITEX Asia Singapore | ACT Creative](https://actcreative.net/case-studies/gitex-asia-hikvision-ezviz-booth-singapore/)
 
@@ -30,6 +42,10 @@ Case reference: [HIKVISION & EZVIZ Booth at GITEX Asia Singapore | ACT Creative]
 
 Production-only booth fabrication in Singapore for approved drawings: counters, displays, signage, lightboxes and modular exhibition components.
 
+Business role: Additional service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=booth#contact
+
 Case reference: [HIKVISION & EZVIZ Booth at GITEX Asia Singapore | ACT Creative](https://actcreative.net/case-studies/gitex-asia-hikvision-ezviz-booth-singapore/)
 
 ## Singapore support for overseas exhibitors
@@ -37,6 +53,10 @@ Case reference: [HIKVISION & EZVIZ Booth at GITEX Asia Singapore | ACT Creative]
 [Trade Show Booth Support Singapore | Overseas Exhibitors](https://actcreative.net/trade-show-booth-singapore/)
 
 Singapore trade show support for overseas exhibitors at MBS, EXPO and Suntec, covering venue coordination, booth delivery, setup and show-week handover.
+
+Business role: Additional service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=booth#contact
 
 Case reference: [HIKVISION & EZVIZ Booth at GITEX Asia Singapore | ACT Creative](https://actcreative.net/case-studies/gitex-asia-hikvision-ezviz-booth-singapore/)
 
@@ -46,6 +66,12 @@ Case reference: [HIKVISION & EZVIZ Booth at GITEX Asia Singapore | ACT Creative]
 
 Custom event props, product replicas and branded displays for Singapore events. ACT Creative coordinates fabrication, delivery and on-site installation.
 
+Business role: Core service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=custom-props#contact
+
+Source page modified: 2026-09-14
+
 Case reference: [Kick Off Challenge at The Star Vista | ACT Creative](https://actcreative.net/case-studies/kick-off-challenge-star-vista-singapore/)
 
 ## Custom sculpture and multi-material fabrication
@@ -54,7 +80,25 @@ Case reference: [Kick Off Challenge at The Star Vista | ACT Creative](https://ac
 
 Custom sculpture fabrication for Singapore projects, covering FRP, stainless steel, public art, commercial furniture, reliefs, 3D printing and export delivery.
 
+Business role: Core service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=sculpture#contact
+
+Source page modified: 2026-07-31
+
 Case reference: [Wings of Art Singapore | Butterfly Sculpture | ACT Creative](https://actcreative.net/case-studies/wings-of-art-barbie-runway-singapore/)
+
+## Custom flying inflatables and technical event planning
+
+[Custom Flying Inflatables Singapore | Helium Balloons](https://actcreative.net/custom-flying-inflatables-singapore/)
+
+Custom flying inflatables for Singapore events: whales, mascots and branded helium forms. Explore real project videos, technical planning and site support.
+
+Business role: Core service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=custom-props#contact
+
+Case reference: [A BIG BIG WORLD Sentosa Floating Inflatable | ACT Creative](https://actcreative.net/case-studies/sentosa-big-big-world-event-fabrication/)
 
 ## Interactive screens and multimedia exhibition integration
 
@@ -62,11 +106,23 @@ Case reference: [Wings of Art Singapore | Butterfly Sculpture | ACT Creative](ht
 
 Interactive digital display solutions in Singapore, including rail screens, holograms, touch displays, projection, video walls and local delivery support.
 
+Business role: Additional service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=interactive#contact
+
+Source page modified: 2026-07-31
+
 ## China supplier sourcing, samples and delivery coordination
 
 [China Sourcing Agent Singapore for Events | ACT Creative](https://actcreative.net/china-sourcing-agent/)
 
 China sourcing agent in Singapore for event merchandise, props and custom gifts. Supplier comparison, sampling, production follow-up, shipping and after-sales support.
+
+Business role: Core service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=not-sure#contact
+
+Source page modified: 2026-05-29
 
 Case reference: [ARTBOX Singapore Merchandise Sourcing Case | ACT Creative](https://actcreative.net/case-studies/artbox-singapore-merchandise-materials/)
 
@@ -76,11 +132,19 @@ Case reference: [ARTBOX Singapore Merchandise Sourcing Case | ACT Creative](http
 
 China exhibition and event production support for Singapore agencies: booth components, props, displays, supplier sourcing, sampling, QC, packing and shipping.
 
+Business role: Additional service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=not-sure#contact
+
 ## Custom event merchandise and campaign items
 
 [Event Merchandise Sourcing from China | ACT Creative](https://actcreative.net/event-merchandise-sourcing/)
 
 Event merchandise sourcing from China for Singapore agencies and brands, covering custom premiums, branded giveaways, samples, QC and shipment planning.
+
+Business role: Additional service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=merchandise#contact
 
 Case reference: [Weekend Brew Club Custom Mugs Singapore | ACT Creative](https://actcreative.net/case-studies/weekend-brew-club-custom-mugs-singapore/)
 
@@ -90,17 +154,33 @@ Case reference: [Weekend Brew Club Custom Mugs Singapore | ACT Creative](https:/
 
 Compare mobile event trucks, limited-stock food and retail units, and vintage Kombi vans in Singapore, with branding, delivery and custom-build support.
 
+Business role: Additional service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=food-truck#contact
+
+Source page modified: 2026-09-14
+
 ## Festive procurement and installation from client drawings
 
 [Festive Decorations Singapore | Christmas Trees & CNY Installations](https://actcreative.net/holiday-decorations-singapore/)
 
 Custom Christmas trees, CNY goat, ram and sheep sculptures, festive concepts, fabrication, installation and dismantling for malls, hotels and brands in Singapore.
 
+Business role: Core service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=seasonal#contact
+
 ## Venue discovery and reviewed shortlists
 
 [Singapore Venue Finder | 135 Venues & Map | ACT Creative](https://actcreative.net/singapore-event-venue-finder/)
 
 Explore 135 reviewed Singapore event venues on an interactive map, compare spaces and build a shortlist, with optional human matching and local site checks.
+
+Business role: Additional service
+
+Prepare a brief (not sent automatically): https://actcreative.net/?service=not-sure#contact
+
+Source page modified: 2026-08-12
 
 ## Inquiry details
 

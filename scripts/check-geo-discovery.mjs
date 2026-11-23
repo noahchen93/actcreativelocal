@@ -53,7 +53,7 @@ for (const file of ["ai/catalog.json", "ai/services.en.md", "ai/services.zh.md"]
   if (useBuild && output !== await readFile(path.join(root, "public", file), "utf8")) failures.push(`${file}: build differs from source`);
   if (!robots.includes(`https://actcreative.net/${file}`)) failures.push(`${file}: robots discovery link missing`);
 }
-if (!catalog || catalog.services?.length !== 13 || catalog.inquiry?.address !== "contact@actcreative.net") failures.push("agent directory: coverage or inquiry address invalid");
+if (!catalog || catalog.services?.length !== 14 || catalog.inquiry?.address !== "contact@actcreative.net") failures.push("agent directory: coverage or inquiry address invalid");
 if (!aiTxt.includes("https://actcreative.net/ai/catalog.json") || !llms.includes("https://actcreative.net/ai/catalog.json")) failures.push("agent directory: discovery links missing");
 
 if (summary) {

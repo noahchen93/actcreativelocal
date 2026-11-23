@@ -42,6 +42,17 @@ for (const [engine, type, options] of [['chromium', chromium, { channel: 'chrome
       await page.goto(`${base}/${language === 'zh' ? 'zh/' : ''}`, { waitUntil: 'domcontentloaded' });
       await loadSections(page);
       await checkOverflow(page, label);
+      const primaryRoutes = await page.locator('#services > .solution-grid > a').evaluateAll(elements => elements.map(e => new URL(e.href).pathname));
+      assert.equal(primaryRoutes.length, 7, `${label}: seven core business routes`);
+      assert.ok(primaryRoutes.includes('/custom-flying-inflatables-singapore/'), `${label}: inflatables missing`);
+      assert.ok(primaryRoutes.includes('/holiday-decorations-singapore/'), `${label}: festive service missing`);
+      assert.ok(!primaryRoutes.some(route => route.includes('food-truck')), `${label}: truck promoted to core business`);
+      const additional = page.locator('.additional-solutions');
+      assert.equal(await additional.evaluate(e => e.open), false);
+      await additional.locator('summary').click();
+      assert.equal(await additional.locator('a').count(), 2);
+      await checkOverflow(page, `${label} additional services`);
+      await additional.locator('summary').click();
       const metrics = await page.evaluate(() => {
         const lines = selector => {
           const element = document.querySelector(selector);
